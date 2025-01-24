@@ -1,0 +1,11 @@
+backoff
+pydantic
+
+[all]
+llama-cpp-python
+mlx-lm
+ollama
+openai
+google-generativeai
+anthropic
+litellm
