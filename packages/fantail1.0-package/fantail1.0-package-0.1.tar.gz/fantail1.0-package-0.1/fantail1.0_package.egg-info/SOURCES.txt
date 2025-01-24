@@ -1,0 +1,7 @@
+README.md
+setup.py
+fantail1.0_package.egg-info/PKG-INFO
+fantail1.0_package.egg-info/SOURCES.txt
+fantail1.0_package.egg-info/dependency_links.txt
+fantail1.0_package.egg-info/entry_points.txt
+fantail1.0_package.egg-info/top_level.txt
