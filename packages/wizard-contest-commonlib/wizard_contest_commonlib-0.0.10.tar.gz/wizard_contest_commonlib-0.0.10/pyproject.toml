@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wizard-contest-commonlib"
+version = "0.0.10"
+authors = [
+    { name = "request3301", email = "nadare2357@gmail.com" },
+]
+description = "Common code for wizard-contest"
+readme = "README.md"
+requires-python = ">=3.13"
+
+[project.urls]
+Main = "https://github.com/request3301/wizard-contest"
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "session"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/commonlib"]
