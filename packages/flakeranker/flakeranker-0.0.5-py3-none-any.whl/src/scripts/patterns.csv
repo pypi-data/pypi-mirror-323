@@ -1,0 +1,68 @@
+regex,group,category,comments
+password.*login failed.*unauthorized,unauthorized_access,ocp_auth_failed,
+unauthorized.*authentication required,unauthorized_access,ocp_auth_required, container push issue credentials must be set
+token provided is invalid or expired,unauthorized_access,ocp_invalid_token,
+error.* username.*password,unauthorized_access,podman_login_invalid,
+x509.*certificate.*unknown authority|SSLCertVerificationError|ssl.*certificate verify failed,unauthorized_access,certificate_verif_failed, just retry
+fatal: unable to access .*git.* error. 403,unauthorized_access,repo_access_denied, https://stackoverflow.com/questions/40006690/gitlab-runner-the-requested-url-returned-error-403 could be due to not being member of the project
+requests.exceptions.JSONDecodeError. Expecting value,unauthorized_access,jwt_decode_error,flaky test https://stackoverflow.com/questions/46433492/sporadic-jsondecodeerror-during-api-request
+Error.* is forbidden. User.* cannot list resource .* in API group .* in the namespace,unauthorized_access,helm_restricted_user_permissions, could also be ci_infrastructure_issues
+timed out waiting for pod,limits_exceeded,pod_waiting_timeout,
+wait time.*exceeded,limits_exceeded,pipeline_completion_timeout,
+error.*gcloud\.auth.* refreshing .* current auth tokens|ERROR.*gcloud.*Max retries exceeded with url.*token,limits_exceeded,cloud_token_limit_exceeded,https://stackoverflow.com/questions/75455856/error-gcloud-auth-activate-service-account-there-was-a-problem-refreshing-you
+TLS handshake timeout,limits_exceeded,tls_handshake_timeout
+pod status is failed|pod .* status is .?failed.?,infrastructure_issues,runner_pod_failed,
+system failure.*unable to upgrade connection.*,infrastructure_issues,runner_instance_error, could be unauthorized or other errors
+exit code 8|curl.*22.*the requested URL returned error.*404|curl.*tar.*\n.*This does not look like a tar archive,remote_resource_errors,http_res_not_found,
+curl.*22.*the requested URL returned error.*409,remote_resource_errors,http_conflict_error,apigee https://www.googlecloudcommunity.com/gc/Apigee/Intermittent-409-CONFLICT-for-ApigeeX-management-apis/m-p/174222
+jq.*has no keys|error.*gcloud.*Could not read json file|.*is not a valid JSON Schema|Swagger.* validation failed|error.* failed to parse|parse error.*|JSONError.*\n.*Unexpected token,remote_resource_errors,invalid_file_format,
+system failure.*cannot connect to the docker daemon,container_issues,unable_connect_docker_daemon, either start docker daemon on current host or client is attempting to connect daemon on a different host which is unreachable.
+wget: missing URL|.* error.* expected one argument|required env var .* is not set,environment_variables,missing_env_variable,
+env.*valueFrom: Invalid value: "",environment_variables,misconfig_env_variable,https://github.com/kubernetes/kubernetes/issues/46861
+Initiating pull.*\$,environment_variables,misconfig_env_variable,(error.*invalid reference format) https://gitlab.tinaa.osc.tac.net/tinaa-platform/deployment/production-push-pipeline/-/jobs/141601 docker pull failed with invalid ref format
+ENOENT|FileNotFoundError,internal_repo_issues,error_fetching_ci_deps_files,Include CI files or actual code dependencies.
+Failed building wheel for .*|safe thing yum can do is fail|The command.*install.*returned a non-zero code,dependency_issues,install_dep_failed,
+npm ERR.* code ELIFECYCLE,dependency_issues,dependency_conflict,
+error.*InvocationError for command.*code 2,dependency_issues,buggy_dependency
+Error.*No matching distribution found for .*|ERROR. unable to select packages,dependency_issues,dependency_version_not_found
+can't cd to .* no such file or directory,internal_repo_issues,access_inexistent_file_or_dir_error,
+fatal.*expected.*packfile|error.* RPC failed.* HTTP 500 curl 22,transient_vcs_errors,git_cloning_error,https://forum.gitlab.com/t/gitlab-runner-unreliable-when-cloning-repository/14810
+error.*cannot lock ref .* is at .* but expected,transient_vcs_errors,git_pull_error,https://stackoverflow.com/questions/11796580/git-pull-error-error-remote-ref-is-at-but-expected
+error retrieving label for image .*,container_issues,podman_error_reading_image,
+deployment api is failed|undeploy file failed|Product creation pipeline failed|zip file validate API is failed|apigee(.|\n)*exit (status|code) 3,remote_resource_errors,api_gateway_deployment_error, mostly apigee failures
+killed .* sonar-scanner,memory_issues,static_analysis_tool_oom_error,https://github.com/travis-ci/travis-ci/issues/6903
+No space left on device,memory_issues,testing_device_oom_error,
+AssertionError: expected call not found,flaky_test,incorrect_datetime_check, e.g. https://gitlab.tinaa.osc.tac.net/tinaa/netapps/ip-top-up/ipt-controller/-/jobs/319165
+TypeError.* cannot read propert.* of .*|HeadlessChrome.*Executed.*ERROR,flaky_test,ui_testing_issues, rendering not done before test
+TimeoutError: Operation timed out,limits_exceeded,remote_call_timeout
+Device .* is invalid or failed,flaky_test,dependent_resource_failed, could also be external resource issue
+Failing scenarios.*\n.*features,flaky_test,integration_test_inconsitent
+no such container|no container found for service,container_issues,container_not_found,
+error writing blob.*server error,container_issues,writing_image_blob_error,https://github.com/containers/podman/issues/7424
+found deprecated file .*/libpod.conf,container_issues,deprecated_config_file,
+.*Client\.Timeout exceeded while awaiting headers,limits_exceeded,ocp_auth_timeout, unique case in sample?
+error.* initializing source .* reading manifest .* unknown|error.*no such image|error.*image not known|invalid.*flag.*no such image,remote_resource_errors,image_not_found, TBD
+proxy_existence_code=404,remote_resource_errors,gcloud_res_not_found,
+500.*internal server error.*registry.*|failed to read from destination repository.*internal server error|error.* pushing.* invalid status code from registry|received unexpected HTTP status. 500,remote_resource_errors,container_registry_server_error,https://access.redhat.com/solutions/6339661 | https://gitlab.com/gitlab-org/gitlab/-/issues/404326 | do a retry
+expected response .* but got 503,remote_resource_errors,service_unavailable
+fatal: unable to access .*git.* error. 500,remote_resource_errors,git_server_error,
+could not lock config file .* Permission denied|directory failed.*due to a permissions problem,internal_issues,file_dir_permission_denied,https://gitlab.com/gitlab-org/gitlab-runner/-/issues/37408 or drupal site installation failed
+ERROR.*open apk database.*Permission denied,container_issues,apk_permission_denied
+ERROR.*Renaming a container with the same name as its current name,container_issues,container_already_exists
+Error in push. Cannot overwrite digest,container_issues,concurrent_docker_requests,https://github.com/docker/for-linux/issues/727
+error creating build container,container_issues,writing_image_blob_error,could be due to VPN or proxy issues https://github.com/containers/podman/issues/12962 https://github.com/containers/podman/issues/18168
+Vulnerability threshold check results: FAIL,container_issues,image_security_scan_failed, only case found in sample 1 was a silent failure of twistcli  https://gitlab.tinaa.osc.tac.net/tinaa/tinaa-biz-srv/cs-app/evpn-svc-controller/-/jobs/382645
+UndefinedTable.* relation .* does not exist,database_issues,db_table_unexistent,
+exceptions.AMQPConnectionError,networking_issues,message_queue_connection_failed,
+Job failed: execution took longer than .* seconds,limits_exceeded,job_execution_timeout,already identified by GitLab | error on the very last line of log
+Unable to continue with .* in namespace .* exists|UPGRADE FAILED.*field is immutable,infrastructure_issues,helm_conflictual_resources, TO BE REVIEWED: https://stackoverflow.com/questions/62964532/helm-not-creating-the-resources
+Job failed.*image pull failed,infrastructure_issues,runner_image_pull_failed,https://stackoverflow.com/questions/69611221/gitlab-job-failed-image-pull-failed by Bruce Lau
+toomanyrequests: You have reached your pull rate limit,limits_exceeded,docker_pull_limit_reached,
+[Get|Post] .*https.*audit.*tlabs.ca.* dial tcp: i/o timeout,limits_exceeded,remote_call_timeout,twistcli image scan
+SSL_read: SSL_ERROR_SYSCALL.* errno 104|fatal: the remote end hung up unexpectedly|StreamLostError.*Transport indicated EOF|Connection broken.*IncompleteRead,networking_issues,connection_closed_unexpectedly,broken reset refused
+(error|failed).*Connection refused|(error|fatal).*connection reset by peer,networking_issues,connection_reset_or_refused
+error.* dial tcp: lookup .* on .* server misbehaving|error during connect.*lookup docker on .* no such host|Could not resolve host,networking_issues,host_resolution_failure, unknown host
+curl.*35.*SSL_connect. SSL_ERROR_SYSCALL in connection,networking_issues,ssl_connection_error
+error.* Command errored out with exit status 128.* git clone,remote_resource_errors,pip_vcs_access_error, check chat gpt: pip install command errored out with exit status 128
+Release file for .* is not valid yet,internal_issues,apt_timezone_issue,https://askubuntu.com/questions/1096930/sudo-apt-update-error-release-file-is-not-yet-valid
+sed. bad option in substitution expression,internal_issues,cmd_invalid_options, TDB seems not intermittent
