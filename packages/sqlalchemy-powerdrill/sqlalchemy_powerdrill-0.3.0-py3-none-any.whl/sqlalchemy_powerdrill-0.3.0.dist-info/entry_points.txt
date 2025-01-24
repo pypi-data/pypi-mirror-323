@@ -1,0 +1,2 @@
+[sqlalchemy.dialects]
+powerdrill = powerdrill.base:PowerDrillDialect
