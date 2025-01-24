@@ -1,0 +1,3 @@
+recursive-include streamlit_keywords/frontend/build *
+include README.md
+include LICENSE
