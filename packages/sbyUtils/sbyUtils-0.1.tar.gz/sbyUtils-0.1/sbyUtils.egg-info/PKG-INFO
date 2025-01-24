@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: sbyUtils
+Version: 0.1
+Summary: Some basic utils for day to day python programming
+Author: Shai Ben Yosef
+Description-Content-Type: text/markdown
+
+Some basic utils for day to day python programming
+
+## Installation
+
+```bash
+pip install sbyUtils
+```
