@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: jsz
+Version: 2025.1.24
+Summary: 金手指
+Author: jiaosenvip
+Author-Email: jiaosenvip <jiaosenvip@163.com>
+License: MIT
+Project-URL: Homepage, https://github.com/jiaosenvip/jsz
+Project-URL: Documentation, https://github.com/jiaosenvip/jsz/wiki
+Requires-Python: >=3.11
+Requires-Dist: beautifulsoup4
+Requires-Dist: diskcache
+Requires-Dist: faker
+Requires-Dist: html2text
+Requires-Dist: httpx[http2]
+Requires-Dist: ipython
+Requires-Dist: js2py
+Requires-Dist: jsonpath
+Requires-Dist: loguru
+Requires-Dist: lxml
+Requires-Dist: markdown
+Requires-Dist: pymysql
+Requires-Dist: newpool>=0.1.0
+Requires-Dist: oss2
+Requires-Dist: parsel
+Requires-Dist: pandas[excel]
+Requires-Dist: pycryptodome
+Requires-Dist: pymongo
+Requires-Dist: pypdf
+Requires-Dist: python-dateutil
+Requires-Dist: rich
+Requires-Dist: redis
+Requires-Dist: requests
+Requires-Dist: winsdk; sys_platform == "win32"
+Provides-Extra: all
+Requires-Dist: curl_cffi; extra == "all"
+Requires-Dist: fabric; extra == "all"
+Requires-Dist: dateparser; extra == "all"
+Requires-Dist: ddddocr; extra == "all"
+Requires-Dist: duckdb; extra == "all"
+Description-Content-Type: text/markdown
+
+# jsz
+
+## 安装
+
+```sh
+pip install -U jsz
+```
+
+## 使用
+
+```py
+import jsz
+```
+
+## 功能
+
+```py
+dir(jsz)
+```
