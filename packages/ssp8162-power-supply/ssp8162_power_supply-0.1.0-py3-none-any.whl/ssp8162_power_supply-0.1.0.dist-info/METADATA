@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: ssp8162_power_supply
+Version: 0.1.0
+Summary: A Python package to control the SSP-8162 power supply via serial communication.
+Home-page: https://github.com/juliansteffens/ssp8162_power_supply
+Author: Julian Steffens and Robin Binger
+Author-email: juliansf@mail.uni-paderborn.de
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyserial
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# SSP-8160 Power Supply Control Package
+
+This Python package allows you to control the SSP-8160 power supply via serial communication. It provides functions to initialize the power supply, set voltage and current, query status, and more.
+
+## Installation
+
+```bash
+pip install ssp8162_power_supply
