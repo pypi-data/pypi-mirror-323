@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: dhlibs
+Version: 0.1.8
+Summary: dhlibs - random libraries that you shouldn't care
+Author: DinhHuy2010
+Author-email: huy04052010@outlook.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: more-itertools (>=10.4.0,<11.0.0)
+Requires-Dist: typing-extensions (>=4.12.2,<5.0.0)
+Project-URL: Repository, https://github.com/DinhHuy2010/dhlibs
+Description-Content-Type: text/markdown
+
+[![Checked with pyright](https://microsoft.github.io/pyright/img/pyright_badge.svg)](https://microsoft.github.io/pyright/) [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/dhlibs/dhlibs/ci.yaml?logo=github&label=CI)  ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/dhlibs/dhlibs) ![PyPI - Implementation](https://img.shields.io/pypi/implementation/dhlibs) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dhlibs)   ![PyPI - Version](https://img.shields.io/pypi/v/dhlibs)
+
+
+dhlibs® - random libraries that you shouldn't care™
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTUxODYzMjIwNl19
+-->
