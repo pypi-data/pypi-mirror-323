@@ -1,0 +1,94 @@
+Metadata-Version: 2.3
+Name: rjango
+Version: 0.3.3
+Summary: rjango is a tool that automatically generates up and down migration files for rust sqlx
+Author: hushoujier@qq.com
+Requires-Python: >=3.10,<4
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: django (>=5.1.5,<6.0.0)
+Requires-Dist: django-environ (>=0.12.0,<0.13.0)
+Requires-Dist: typer (>=0.15.1,<0.16.0)
+Description-Content-Type: text/markdown
+
+# `rjango`
+
+**Usage**:
+
+```console
+$ rjango [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--install-completion`: Install completion for the current shell.
+* `--show-completion`: Show completion for the current shell, to copy it or customize the installation.
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `init`: Initialize the migration folder
+* `add`: Add migration file
+* `inspect`: Generate models in reverse using...
+* `debug`: Obtaining Debugging information
+
+## `rjango init`
+
+Initialize the migration folder
+
+**Usage**:
+
+```console
+$ rjango init [OPTIONS]
+```
+
+**Options**:
+
+* `--example / --no-example`: Whether to include a example file  [default: no-example]
+* `--help`: Show this message and exit.
+
+## `rjango add`
+
+Add migration file
+
+**Usage**:
+
+```console
+$ rjango add [OPTIONS]
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `rjango inspect`
+
+Generate models in reverse using database tables
+
+**Usage**:
+
+```console
+$ rjango inspect [OPTIONS]
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `rjango debug`
+
+Obtaining Debugging information
+
+**Usage**:
+
+```console
+$ rjango debug [OPTIONS]
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
