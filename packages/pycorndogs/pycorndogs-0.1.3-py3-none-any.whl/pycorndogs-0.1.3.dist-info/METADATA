@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: pycorndogs
+Version: 0.1.3
+Summary: Corndogs python gRPC client
+Project-URL: Homepage, https://github.com/catalystcommunity/corndogs
+Project-URL: Issues, https://github.com/catalystcommunity/corndogs/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# protos-corndogs
+Corndogs protos
