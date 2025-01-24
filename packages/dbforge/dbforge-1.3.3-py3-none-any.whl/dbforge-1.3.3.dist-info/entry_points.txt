@@ -1,0 +1,2 @@
+[console_scripts]
+dbforge = dbforge.cli:cli
