@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pyexeggutor
+Version: 2025.1.23.post1
+Summary: Run shell commands in Python
+Home-page: https://github.com/jolespin/pyexeggutor
+Author: Josh L. Espinoza
+Author-email: jol.espinoz@gmail.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: tqdm
+Requires-Dist: memory_profiler
