@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: my_hw
+Version: 0.1.49rc5
+Summary: A simple example CLI package
+Author-email: Carlod Azofeifa <carlos.azofeifa@github.com>
+License: Apache Software License (Apache License 2.0)
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Office/Business :: Financial :: Spreadsheet
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Widget Sets
+Requires-Python: >=3.10
+Provides-Extra: development
+Requires-Dist: pre-commit; extra == 'development'
+Requires-Dist: pytest; extra == 'development'
+Provides-Extra: snowflake
+Requires-Dist: snowflake-connector-python>=3.0.0; extra == 'snowflake'
+Requires-Dist: snowflake-sqlalchemy>=1.4.0; extra == 'snowflake'
+Description-Content-Type: text/markdown
+
+# Lab_Python-Lib
+
+Steps for Building 
+
+### Install Dependencies
+
+```
+pip3 install -r requirements.txt
+```
+
+### Build 
+
+```
+hatch build -t sdist
+hatch build -t wheel
+```
+
+### Deploy Local
+
+```bash
+pip3 install dist/my_hw-0.0.1-py3-none-any.whl --force-reinstall
+```
+
+#### Test
+
+Get Package Info: 
+```
+pip3 show my-hw
+```
+
+Execute: 
+```
+hello-world
+```
+
+> ¡Hello, world from a python package!
+
+Happy Codding 2025.

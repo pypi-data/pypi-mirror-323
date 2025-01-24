@@ -1,0 +1,180 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+  id-token: write
+
+env:
+ TWINE_VERSION: "6.0.1"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip list --verbose
+
+      - name: Fetch tags
+        run: git fetch --tags
+
+      - name: Get version from tag
+        id: get_version
+        run: |
+          if [[ $GITHUB_REF == refs/tags/* ]]; then
+            VERSION=${GITHUB_REF#refs/tags/}
+            VERSION=${VERSION#v}
+            echo "version=$VERSION" 
+          else
+            echo "GIT REF is not a tag"
+            VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
+            VERSION=${VERSION#v}
+            echo "version=$VERSION"
+          fi
+
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(rc[0-9]+)?$ ]]; then
+            echo "version=$VERSION"
+            echo "Error: No version found"
+            exit 1
+          fi
+
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Update version file
+        run: |
+          echo "__version__ = \"$VERSION\"" > my_hw/src/__version__.py
+          cat my_hw/src/__version__.py
+        env:
+          VERSION: ${{ steps.get_version.outputs.version }}
+
+      - name: Build package
+        run: |
+          hatch build
+
+      - name: Debug GitHub Variables
+        run: |
+          echo "GITHUB_SERVER_URL: ${GITHUB_SERVER_URL}"
+          echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
+          echo "GITHUB_REF: ${GITHUB_REF}"
+          echo "GITHUB_SHA: ${GITHUB_SHA}"
+          echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
+          echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
+        env:
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF: ${{ github.ref }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+          GITHUB_WORKFLOW: ${{ github.workflow }}
+
+      - name: Sign and Verify Packages
+        run: |
+          for dist in dist/*; do
+            dist_base="$(basename "${dist}")"
+            echo "dist: ${dist}"
+            echo "dist_base: ${dist_base}"
+            python -m \
+              sigstore sign "${dist}" \
+              --output-signature "${dist_base}.sig" \
+              --output-certificate "${dist_base}.crt" \
+              --bundle "${dist_base}.sigstore"
+
+            echo "Verify using .sig .crt pair"
+            echo "Verifying ${dist}..."
+            python -m \
+              sigstore verify identity "${dist}" \
+              --signature "${dist_base}.sig" \
+              --cert "${dist_base}.crt" \
+              --cert-oidc-issuer https://token.actions.githubusercontent.com \
+              --cert-identity "https://github.com/cazofeifacr/Lab_Python-Lib/.github/workflows/publish.yml@${GITHUB_REF}" 
+
+            echo "Verify using .sigstore bundle"
+            echo "Verifying ${dist}..."
+            python -m \
+              sigstore verify identity "${dist}" \
+              --bundle "${dist_base}.sigstore" \
+              --cert-oidc-issuer https://token.actions.githubusercontent.com \
+              --cert-identity "https://github.com/cazofeifacr/Lab_Python-Lib/.github/workflows/publish.yml@${GITHUB_REF}" 
+          done
+        working-directory: ${{ github.workspace }}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: py-artifacts
+          path: |
+            ./dist/*
+            ./**/dist/*
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: py-artifacts
+          path: ./dist
+
+      - name: Upload release assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for file in dist/*; do
+            echo "Uploading $file..."
+            gh release upload "${GITHUB_REF#refs/tags/}" "$file"
+          done
+        working-directory: ./dist
+
+      - name: Install twine
+        run: |
+          python -m pip install --upgrade pip
+          pip install twine==$TWINE_VERSION -q
+          pip list --verbose
+        env:
+          TWINE_VERSION: ${{ env.TWINE_VERSION }}  
+
+      - name: Debug directory structure
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Content of current directory:"
+          ls -la
+          echo "Content of dist directory:"
+          ls -la dist/
+          echo "Content recursive of dist directory:"
+          ls -laR dist/
+        working-directory: ${{ github.workspace }}
+
+      - name: Publish to PyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+          TWINE_VERBOSE: 1
+        run: |
+          echo "Checking distributions..."
+          ls -la
+          echo "Uploading to PyPI..."
+          echo "twine upload --verbose dist/*"
+          find . -name "*.whl" -o -name "*.tar.gz" | xargs twine upload --verbose
+        working-directory: ./dist
