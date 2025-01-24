@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: opengrep
+Version: 0.0.6
+Home-page: 
+Author: Zerooo
+Author-email: 
+License: MIT
+Keywords: opengrep grep
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: twine>=4.0.2; extra == "dev"
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+
+opengrep

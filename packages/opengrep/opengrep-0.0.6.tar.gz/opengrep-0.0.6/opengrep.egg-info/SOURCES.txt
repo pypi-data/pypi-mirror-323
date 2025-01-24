@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+opengrep/__init__.py
+opengrep/main.py
+opengrep.egg-info/PKG-INFO
+opengrep.egg-info/SOURCES.txt
+opengrep.egg-info/dependency_links.txt
+opengrep.egg-info/entry_points.txt
+opengrep.egg-info/not-zip-safe
+opengrep.egg-info/requires.txt
+opengrep.egg-info/top_level.txt
