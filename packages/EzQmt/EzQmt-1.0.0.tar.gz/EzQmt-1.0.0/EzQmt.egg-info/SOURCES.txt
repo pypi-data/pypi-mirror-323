@@ -1,0 +1,6 @@
+README.md
+setup.py
+EzQmt.egg-info/PKG-INFO
+EzQmt.egg-info/SOURCES.txt
+EzQmt.egg-info/dependency_links.txt
+EzQmt.egg-info/top_level.txt
