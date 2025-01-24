@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: langmem
+Version: 0.0.5rc3
+Summary: Prebuilt utilities for memory management and retrieval.
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: langchain>=0.3.15
+Requires-Dist: langchain-openai>=0.3.1
+Requires-Dist: trustcall>=0.0.28
+Requires-Dist: langgraph>=0.2.66
