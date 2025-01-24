@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_timer_context.py
+timer_context/__init__.py
+timer_context/context.py
+timer_context.egg-info/PKG-INFO
+timer_context.egg-info/SOURCES.txt
+timer_context.egg-info/dependency_links.txt
+timer_context.egg-info/requires.txt
+timer_context.egg-info/top_level.txt

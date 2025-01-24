@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "timer-context"
+dynamic = ["version"]
+description = "A simple context manager for timing blocks of Python code."
+authors = [
+    { name = "Andrew Sansom", email = "andrew@euleriancircuit.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["timing", "performance", "context-manager", "python"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Benchmark",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/qthequartermasterman/timer-context"
+"Bug Tracker" = "https://github.com/qthequartermasterman/timer-context/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["timer_context"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.setuptools.dynamic]
+version = {attr = "timer_context.__version__"}
+
+[tool.semantic_release]
+version_variables = [
+    "timer_context/__init__.py:__version__",
+]
+build_command = "python -m pip install build && python -m build"
+
+[project.optional-dependencies]
+lint = [
+    "mypy==1.14.1",
+    "ruff==0.9.3",
+    "toml-sort==0.24.2",
+]
+test=[
+    "hypothesis==6.124.2",
+    "pytest==8.3.4",
+    "pytest-cov==6.0.0",
+]
