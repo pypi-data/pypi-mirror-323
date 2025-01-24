@@ -1,0 +1,3 @@
+[console_scripts]
+run-my-script = fantailp_package.script:run_script
+
