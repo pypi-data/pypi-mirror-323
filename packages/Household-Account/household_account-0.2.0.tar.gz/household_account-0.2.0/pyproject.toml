@@ -1,0 +1,27 @@
+[project]
+name = "Household-Account"
+version = "0.2.0"
+description = "Save Money in Times of High Inflation"
+authors = [
+    { name = "heejin131", email = "journeyjean131@gmail.com" },
+]
+dependencies = [
+    "typer>=0.15.1",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+household-account = "household_account.where_now:entry_point"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
