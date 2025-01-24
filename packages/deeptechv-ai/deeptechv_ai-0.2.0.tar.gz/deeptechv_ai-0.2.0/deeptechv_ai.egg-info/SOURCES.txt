@@ -1,0 +1,12 @@
+LICENCE
+README.md
+setup.py
+deeptechv_ai/__init__.py
+deeptechv_ai/__main__.py
+deeptechv_ai/client.py
+deeptechv_ai.egg-info/PKG-INFO
+deeptechv_ai.egg-info/SOURCES.txt
+deeptechv_ai.egg-info/dependency_links.txt
+deeptechv_ai.egg-info/entry_points.txt
+deeptechv_ai.egg-info/requires.txt
+deeptechv_ai.egg-info/top_level.txt
