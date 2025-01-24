@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "sparkplug-api-feature-flags"
+version = "1.0.0"
+description = "Feature flag package for sparkplug apps"
+authors = ["Sparkplug Marcus <sparkplugmarcus@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "sparkplug_feature_flags"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+Django = "~4.2.4"
+djangorestframework = "~3.14.0"
+djangorestframework-stubs = "~1.7.0"
+django-elasticsearch-dsl = "~7.3"
+django-stubs = "~1.12.0"
+elasticsearch-dsl = "~7.4.0"
+python-decouple = "~3.8"
+sparkplug-api-core = "1.0.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+ruff = "~0.6.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
