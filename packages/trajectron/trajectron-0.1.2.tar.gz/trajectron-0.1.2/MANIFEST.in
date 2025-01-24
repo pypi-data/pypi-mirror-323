@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+global-include *.py
+recursive-include experiments *

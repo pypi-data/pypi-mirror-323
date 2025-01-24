@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: trajectron
+Version: 0.1.2
+Summary: A unofficial library for the Trajectron++ method, proposed by Tim Salzmann, Boris Ivanovic, Punarjay Chakravarty, and Marco Pavone in the entitled paper Trajectron++: Dynamically-Feasible Trajectory Forecasting With Heterogeneous Data.
+Home-page: https://github.com/StanfordASL/Trajectron-plus-plus
+Author: Matheus Vargas Volpon Berto
+Author-email: matheusvolpon.berto@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+
