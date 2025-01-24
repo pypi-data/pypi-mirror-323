@@ -1,0 +1,5 @@
+[console_scripts]
+eda-lucas = eda_lucas.cli:entry_point
+
+[gui_scripts]
+
