@@ -1,0 +1,5 @@
+boto3
+pymongo
+certifi
+numpy==1.26.3
+typesentry==0.2.7
