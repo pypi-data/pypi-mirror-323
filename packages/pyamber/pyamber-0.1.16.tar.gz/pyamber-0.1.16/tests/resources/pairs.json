@@ -1,0 +1,23 @@
+{
+  "status": 200,
+  "title": "OK",
+  "description": "Successful request",
+  "payload": {
+    "btc_eur": {
+      "bitfinex": {
+        "ticker": {
+          "startDate": 1551052800000,
+          "endDate": 1554854400000
+        },
+        "ohlc": {
+          "startDate": 1495152000000,
+          "endDate": 1554854400000
+        },
+        "trade": {
+          "startDate": 1548979200000,
+          "endDate": 1554854400000
+        }
+      }
+    }
+  }
+}
