@@ -1,0 +1,102 @@
+Metadata-Version: 2.2
+Name: combined_bukmacherska
+Version: 0.3.0
+Summary: Biblioteka łącząca funkcjonalności bukmacherska i bukmacherska_crystal
+Home-page: https://github.com/twoj_repo/combined_bukmacherska
+Author: Twoje Imię
+Author-email: twojemail@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: lightgbm
+Requires-Dist: kivy
+Requires-Dist: catboost
+Requires-Dist: xgboost
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# combined_bukmacherska
+
+combined_bukmacherska to biblioteka Ĺ‚Ä…czÄ…ca funkcjonalnoĹ›ci bibliotek `bukmacherska` i `bukmacherska_crystal`.
+
+## Funkcje
+
+### combined_library.py
+
+- `train_models_1(X_train, y_train)`: Trenuje zestaw modeli na danych treningowych.
+- `predict_with_models_1(models, X_test)`: Wykonuje predykcje dla kaĹĽdego modelu na danych testowych.
+- `plot_results_1(predictions, team1_lambda, team2_lambda, team1_avg_conceded, team2_avg_conceded)`: Wizualizacja wynikĂłw za pomocÄ… rĂłĹĽnych typĂłw wykresĂłw.
+- `gamma_function_1(x)`: Oblicza wartoĹ›Ä‡ funkcji gamma dla x.
+- `beta_function_1(x, a, b)`: Oblicza wartoĹ›Ä‡ funkcji beta.
+- `poisson_probability_1(k, lmbda)`: Oblicza prawdopodobieĹ„stwo dla rozkĹ‚adu Poissona.
+- `expected_value(alpha)`: Oblicza wartoĹ›Ä‡ oczekiwanÄ….
+- `median(alpha)`: Oblicza medianÄ™.
+- `variance(alpha)`: Oblicza wariancjÄ™.
+- `entropy(alpha)`: Oblicza entropiÄ™.
+- `oblicz_srednia_zdobytych_goli(gole_zdobyte, bezposr_spotkania)`: Oblicza Ĺ›redniÄ… zdobytych goli.
+- `oblicz_srednia_straconych_goli(gole_stracone, bezposr_spotkania)`: Oblicza Ĺ›redniÄ… straconych goli.
+- `oblicz_wynik_druzyny(gole_zdobyte, gole_stracone, bezposr_spotkania)`: Oblicza wynik druĹĽyny.
+- `okresl_typ_meczu(srednia1_zdobytych, srednia2_zdobytych)`: OkreĹ›la typ meczu.
+- `rysuj_wykresy(srednia1_zdobytych, srednia1_straconych, srednia2_zdobytych, srednia2_straconych)`: Rysuje wykresy.
+- `tabela_wartosci_gamma(start, end)`: Tworzy tabelÄ™ wartoĹ›ci funkcji gamma.
+- `drukuj_tabele_gamma(start, end)`: Drukuje tabelÄ™ wartoĹ›ci funkcji gamma.
+- `calculate_poisson_cdf(k, lmbda)`: Oblicza dystrybuantÄ™ rozkĹ‚adu Poissona.
+- `calculate_poisson_pmf(k, lmbda)`: Oblicza prawdopodobieĹ„stwo masy rozkĹ‚adu Poissona.
+- `oblicz_statystyki_druzyny(gole_zdobyte, gole_stracone, mecze)`: Oblicza statystyki druĹĽyny.
+- `analiza_statystyczna(druzyna1, druzyna2, mecze)`: Analizuje statystyki druĹĽyn.
+
+### combined_library2.py
+
+- `train_models_2(X_train, y_train)`: Trenuje zestaw 24 rĂłĹĽnych modeli na danych treningowych.
+- `predict_with_models_2(models, X_test)`: Wykonuje predykcje dla kaĹĽdego modelu na danych testowych.
+- `plot_results_2(predictions, team1_lambda, team2_lambda, team1_avg_conceded, team2_avg_conceded)`: Wizualizacja wynikĂłw za pomocÄ… rĂłĹĽnych typĂłw wykresĂłw.
+- `gamma_function_2(x)`: Oblicza wartoĹ›Ä‡ funkcji gamma dla x.
+- `beta_function_2(x, a, b)`: Oblicza wartoĹ›Ä‡ funkcji beta.
+- `poisson_probability_2(k, lmbda)`: Oblicza prawdopodobieĹ„stwo dla rozkĹ‚adu Poissona.
+- `analiza_statystyczna_2(druzyna1, druzyna2, mecze)`: Analizuje statystyki obu druĹĽyn.
+
+## Instalacja
+
+Aby zainstalowaÄ‡ bibliotekÄ™, uĹĽyj poniĹĽszego polecenia:
+
+```sh
+pip install combined_bukmacherska
+
+import combined_bukmacherska as cb
+
+# PrzykĹ‚ad uĹĽycia funkcji poisson_probability
+beta = 2
+alpha = 3
+probability = cb.poisson_probability_1(beta, alpha)
+print(f"Poisson Probability: {probability}")
+
+# Trening modeli
+X_train = ...
+y_train = ...
+models_1 = cb.train_models_1(X_train, y_train)
+models_2 = cb.train_models_2(X_train, y_train)
+
+# Predykcje
+X_test = ...
+predictions_1 = cb.predict_with_models_1(models_1, X_test)
+predictions_2 = cb.predict_with_models_2(models_2, X_test)
+
+# Rysowanie wykresĂłw
+cb.plot_results_1(predictions_1, team1_lambda, team2_lambda, team1_avg_conceded, team2_avg_conceded)
+cb.plot_results_2(predictions_2, team1_lambda, team2_lambda, team1_avg_conceded, team2_avg_conceded)
+
