@@ -1,0 +1,9 @@
+pyserial
+asyncua
+cryptography
+aiohttp
+aiocsv
+pandas
+numpy
+matplotlib
+asyncpg
