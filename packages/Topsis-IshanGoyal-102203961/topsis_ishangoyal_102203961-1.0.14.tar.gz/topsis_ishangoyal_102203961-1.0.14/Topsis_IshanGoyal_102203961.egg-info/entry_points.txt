@@ -1,0 +1,2 @@
+[console_scripts]
+Topsis_IshanGoyal_102203961 = Topsis_IshanGoyal_102203961.topsis:main
