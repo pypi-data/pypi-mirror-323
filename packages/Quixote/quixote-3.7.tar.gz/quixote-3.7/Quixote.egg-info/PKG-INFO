@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: Quixote
+Version: 3.7
+Summary: A small and flexible Python Web application framework
+Home-page: https://github.com/nascheme/quixote
+Author: The Quixote developers
+Author-email: nas-quixote@arctrix.com
+License: DFSG approved (see LICENSE.txt)
+Platform: Most
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: License :: DFSG approved
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+License-File: LICENSE.txt
+
+Quixote is a framework for developing Web applications in Python.
+The target is web applications that are developed and maintained by
+Python programmers. Quixote includes PTL, the Python Template Language for
+producing HTML with Python code.  Use of PTL is not required in Quixote
+applications.

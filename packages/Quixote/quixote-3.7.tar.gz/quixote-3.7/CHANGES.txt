@@ -1,0 +1,1359 @@
+Summary of changes
+==================
+
+v3.7
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Jan 23 16:42:52 2025 -0800
+
+    Use "rst2html" to build docs.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Jan 23 16:34:26 2025 -0800
+
+    Update URL, email, Python version.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Jan 23 16:33:43 2025 -0800
+
+    Move version to _version.py file.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Oct 8 11:34:13 2024 -0700
+
+    Avoid warning for ast.Call().
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Oct 8 11:33:45 2024 -0700
+
+    Remove usage of non-public API function.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Mar 1 12:08:57 2024 -0800
+
+    Add unit tests for the two PTL f-string bugs.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Mar 1 11:59:59 2024 -0800
+
+    Fix PTL bug in handling nested f-strings.
+    
+    The AST translation was not correctly handling nested f-strings.  E.g.
+    in a case like F'{F'<br >'}', the HTML markup was erronously escaped.
+    Change the token translate to always insert FSTRING_MIDDLE tokens as
+    markers.  That way, the AST translation can know when it should not
+    escape.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Mar 1 11:19:38 2024 -0800
+
+    Fix bug PTL tokenizer for F-strings.
+    
+    There was a bug in the token translation in case of an F-string like the
+    following: F'{foo}<bar>'.  In those kinds of cases, the "<bar>" token
+    should be wrapped with htmltext() but was not.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Sep 20 10:37:11 2023 -0700
+
+    Add support for PTL with Python 3.12.
+    
+    Python 3.12 has changed how f-strings are tokenized.  This requires
+    significant changes to Quixote's PTL in order to support them.  To
+    simplify, a number of backwards compatible PTL features have been
+    removed.  Remove support for [html] and [plain] function annotations.
+    Instead, use the @ptl_plain or @ptl_html decorators to mark PTL
+    templates.  Remove support for using "h" as a prefix for PTL strings.
+    The only supported f-string prefix for PTL strings is "F".
+    
+    Using decorators and the "F" prefix has the advantage that PTL files
+    will compile as regular Python files.  You can use tools like Black,
+    ruff, flake8 on them.  Black does not preserve the uppercase f-string
+    prefix.  I created a fork of Black that does this:
+    
+       https://github.com/nascheme/black/tree/ptl
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Nov 30 16:37:07 2023 -0800
+
+    Remove stale links in README.txt.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Sep 5 10:50:43 2023 -0700
+
+    Avoid IsADirectoryError in StaticFile.
+    
+    If the path points to a directory rather than a file, raise a
+    TraversalError.
+
+
+v3.6
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Jun 23 14:53:55 2022 -0700
+
+    Update version to 3.6.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Jun 23 14:49:13 2022 -0700
+
+    Remove use of cgitb module.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Feb 14 16:01:09 2022 -0800
+
+    Use temporary (302) redirect for trailing slash.
+    
+    Using a permanent redirect is a bit dangerous given that browsers can
+    cache the redirect indefinitely.  If the URL space is re-arranged in
+    the future, the cached redirect could cause a problem.
+
+
+v3.6a2
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Dec 20 11:32:42 2021 -0800
+
+    Update version to 3.6a2.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Dec 20 11:31:04 2021 -0800
+
+    Cleanups based on flake8.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Dec 20 11:13:59 2021 -0800
+
+    Reformat with 'black'.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Dec 16 15:31:35 2021 -0800
+
+    Correct markup in PTL doc.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Dec 16 15:29:26 2021 -0800
+
+    Add close() to Stream class.
+    
+    Add a close() method and call it after streaming the response body.  Add
+    a method to FileStream that will close the underlying file.  This is
+    required to prevent unclosed file warnings in recent Python versions.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Sep 16 13:55:57 2021 -0700
+
+    Add long description.
+
+
+v3.6a1
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jun 28 13:48:48 2021 -0700
+
+    Update version to 3.6a1.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jun 28 13:06:51 2021 -0700
+
+    Add threaded_server module.
+    
+    This module is similar to simple_server but uses multiple threads to
+    communicate with clients.  That avoids blocking the server if clients
+    are slow or if requests are made in parallel.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Aug 3 13:20:06 2021 -0700
+
+    Add make_body_seekable() method to HTTPRequest.
+
+
+v3.5
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Jun 12 19:08:34 2021 -0700
+
+    Update version to 3.5.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Jun 12 19:07:59 2021 -0700
+
+    Use setuptools.
+
+
+v3.4
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Jun 1 12:17:24 2021 -0700
+
+    Update version to 3.4.
+
+Author: Colin 't Hart <colinthart@gmail.com>
+Date:   Mon May 24 13:10:59 2021 -0700
+
+    Fix AttributeError in util.xmlrpc().
+
+
+v3.3
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jan 25 14:28:22 2021 -0800
+
+    Update version to 3.3.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Oct 13 15:18:17 2020 -0700
+
+    Allow more cookie attributes (e.g. samesite).
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Aug 20 16:41:20 2020 -0700
+
+    Make process_inputs() safe to call multiple times.
+    
+    If a request needs to be re-tried, we need to take special care to
+    handle request.stdin.  Change process_inputs() to buffer stdin
+    unconditionally.  If process_inputs() is called again, reset the
+    position of stdin and reset the form dictionary.
+
+Author: Patrik Simons <patrik.simons@neotide.fi>
+Date:   Fri Aug 14 11:15:16 2020 -0700
+
+    Typo in session.BaseSessionManager.__delitem__.
+    
+    The argument is 'session_id' not 'session'.
+
+
+v3.2
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Aug 10 15:05:57 2020 -0700
+
+    Update version to 3.2.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Aug 10 15:02:54 2020 -0700
+
+    Remove unused imports.
+
+
+v3.2a2
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Jan 10 15:40:58 2020 -0800
+
+    Update version to 3.2a2.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Jan 10 15:38:43 2020 -0800
+
+    Use no-cache rather than must-revalidate.
+    
+    Using must-revalidate results in poor behavior from some browsers.  The
+    no-cache directive give the behavior that we want (loads from server but
+    back button still shows cached document).
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Jul 9 13:37:46 2019 -0700
+
+    Update version to 3.2a1.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jul 8 14:35:47 2019 -0700
+
+    Add support for PTL decorators, HTML f-strings.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jul 8 12:11:07 2019 -0700
+
+    Add ptl_to_py.py tool.
+
+
+v3.1
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Apr 24 09:02:16 2019 -0700
+
+    Update version to 3.1.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Mar 4 11:46:47 2019 -0800
+
+    Fix ptl_compile for Python 3.7 change.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Sep 25 09:31:45 2018 -0700
+
+    Support removal of constant node types (Str, etc).
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Sep 25 09:30:58 2018 -0700
+
+    Update PTL in demo to use h-string syntax.
+
+Author: Jonathan Corbet <corbet@lwn.net>
+Date:   Wed Aug 1 09:39:18 2018 -0700
+
+    execfile() doesn't exist in Python 3
+    
+    Config.readfile() uses execfile(), but that went away in Python 3, so
+    open-code it instead.
+
+
+v3.1b1
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jun 4 10:27:25 2018 -0700
+
+    Update version to 3.1b1.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jun 4 10:26:05 2018 -0700
+
+    Update link to mailing list, remove wiki link.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jun 4 10:17:14 2018 -0700
+
+    Improve error handling in scgi_server.
+    
+    If the web client closes the connection early, we can get an
+    IOError (broken pipe) error from close().  Add a flush() call so
+    that we don't have buffered data when close is called.  Also, catch
+    and log errors raised by close().
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jun 4 09:54:53 2018 -0700
+
+    Update PTL documentation, h-string change.
+
+
+v3.1a1
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Nov 27 10:28:22 2017 -0800
+
+    Update git URL.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Nov 27 10:23:27 2017 -0800
+
+    Classify as Python 3 only in setup.py.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Jan 11 12:48:37 2018 -0800
+
+    Update for 3.1a1.  Describe PTL h-string change.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Dec 12 14:27:57 2017 -0800
+
+    Add 'sep' argument to StaticBundle.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Dec 12 14:27:40 2017 -0800
+
+    Add Form.force_value() method.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Dec 6 14:54:32 2017 -0800
+
+    Implement h-string syntax for PTL.
+    
+    Strings inside PTL template functions are no longer htmltext by
+    default.  Instead, you have to use the 'h' prefix to denote them.
+    h-strings do string interpolation like a Python f-string.
+    
+    To convert old PTL modules, you can use tools/hstring_convert.py to
+    convert source code.  The conversion tool is quite accurate but
+    code will still need to be tested and reviewed after converting.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Dec 6 13:35:11 2017 -0800
+
+    Add __call__ to TemplateIO().
+    
+    Using _q_output(x) is more efficient than _q_output += x.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Dec 6 13:31:14 2017 -0800
+
+    Update version to 3.1a0.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Nov 24 11:02:24 2017 -0800
+
+    Add SessionStore class.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Nov 23 13:27:52 2017 -0800
+
+    Add Session.get_csrf_token() and .valid_csrf_token().
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Nov 23 13:31:02 2017 -0800
+
+    Add the BaseSessionManager class.
+    
+    This class is useful for applications that wish to implement session
+    management using some DB system that does not provide a dictionary
+    like interface.  The SessionManager class contains a lot of mapping
+    related methods that are not actually necessary to implement in order
+    to having a working session manager.  BaseSessionManager documents the
+    essential interface and serves as a more useful base class.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Nov 23 09:40:10 2017 -0800
+
+    Add quixote.util.safe_str_cmp() function.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Nov 20 15:06:16 2017 -0800
+
+    Make StaticBundle.make_path() memoize its args.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Nov 20 13:55:20 2017 -0800
+
+    Remove unused 'time' module.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Nov 20 13:39:58 2017 -0800
+
+    Add quixote.util.StaticBundle class.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Oct 25 13:39:21 2017 -0700
+
+    Update help text, use "python3 -m quixote" command.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Oct 25 13:30:38 2017 -0700
+
+    Add --app argument to server scripts.
+    
+    If provided, --factory becomes <app>.<factory>.  Change the default
+    factory argument to 'create_publisher'.  If the factory contains a dot
+    then it is assumed to be a complete path with the package name and
+    is used as-is, rather than using 'app' as a prefix.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Oct 25 12:52:54 2017 -0700
+
+    Add quixote.__main__ module.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Oct 24 11:32:27 2017 -0700
+
+    Add quixote.server.wsgi_server.
+
+
+v3.0
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Nov 27 10:28:22 2017 -0800
+
+    Update git URL, required Python version.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Nov 27 10:23:27 2017 -0800
+
+    Classify as Python 3 only in setup.py.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun Nov 26 12:37:23 2017 -0800
+
+    Handle docstring AST attribute (new in Python 3.7).
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Nov 24 11:14:28 2017 -0800
+
+    Update version to 3.0.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Oct 25 13:29:34 2017 -0700
+
+    Add 'chunked' demo page.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Nov 24 11:02:55 2017 -0800
+
+    Add dump of HTTP request to form demo page.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Oct 25 13:22:35 2017 -0700
+
+    Python 3 fixes for PTL doc.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Nov 20 13:37:55 2017 -0800
+
+    If available, use 'secrets' module for randbytes().
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Nov 23 09:51:25 2017 -0800
+
+    Revise session-mgmt.txt, session ID format has changed.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Oct 24 10:24:54 2017 -0700
+
+    Remove outdated file.
+
+
+v3.0b2
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Sep 15 10:59:01 2017 -0700
+
+    Update sendmail.py to allow SMTP AUTH and SSL/TLS.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Aug 15 09:45:52 2017 -0700
+
+    Update version to 3.0b2.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Aug 15 12:43:04 2017 -0700
+
+    Revise PTL documentation: print function, remove refs to ZODB.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Aug 11 14:55:05 2017 -0700
+
+    Remove use of utest.py module from test_ptl, use py.test.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Aug 11 14:53:57 2017 -0700
+
+    Fix _q_format() test for 'r' conversion, add 'a' conversion test.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Dec 12 10:03:12 2016 -0800
+
+    Add unit test for PTL f-string support.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Dec 9 12:55:48 2016 -0800
+
+    Add support for f-strings to PTL compiler.
+
+
+v3.0b1
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Mar 7 13:31:15 2017 -0800
+
+    Update version to 3.0b1.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Dec 9 12:55:07 2016 -0800
+
+    Remove unmaintained and probably broken server modules.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Oct 17 13:57:38 2016 -0700
+
+    Enable 'OPTIONS' method for simple_server.
+    
+    You still need to set the config option to allow the method but
+    if it is enabled then Quixote will allow it.  Implementation of
+    the method is up to the application, not Quixote.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Oct 4 13:11:38 2016 -0700
+
+    Restore ptl.ptl_compile.compile_template() function.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Oct 4 13:11:02 2016 -0700
+
+    Avoid mixed-type comparision in _py_htmltext.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Oct 4 13:07:07 2016 -0700
+
+    Modify tests to run with py.test.
+    
+    This removes a dependancy on Sancho for running tests.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Oct 4 12:55:22 2016 -0700
+
+    Make url_with_query() sort parameters.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Sep 12 17:01:39 2016 +0000
+
+    Make 'scgi' package optional.
+    
+    Add try/except around 'scgi' import so we don't require it.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Jul 14 21:58:48 2016 +0000
+
+    Use sort(key=...) to sort widget options.
+    
+    The decorate/undecorate pattern is no longer necessary and
+    can cause comparision errors in Python 3 (e.g. comparing distinct
+    types).
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Jun 24 18:08:22 2016 +0000
+
+    For simple_server.py, inherit listening socket if present.
+    
+    This adds support for getting the listening socket from
+    systemd.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu May 26 18:10:08 2016 +0000
+
+    Add --session-affinity option to scgi_server.py module.
+    
+    The Python 3 version of the scgi_server package will provide
+    this feature so allow Quixote apps to use it.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu May 26 18:08:04 2016 +0000
+
+    Refactor QuixoteHandler(), remove conn.close() call.
+    
+    We should not close the connection inside the handle_connection()
+    method, the caller will call shutdown() and then close().  Refactor
+    so that 'input' and 'output' file descriptors are closed on errors.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu May 26 18:04:27 2016 +0000
+
+    Remove erroneous 'self' parameter for source_to_code()
+    
+    PTLFileLoader.source_to_code() is a static method and should
+    not have a 'self' parameter.  Use absolute imports in ptl_compile.py
+    so it can be run as a script.
+
+
+v3.0a1
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue May 24 21:02:50 2016 +0000
+
+    Update version to 3.0a1.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue May 24 17:25:27 2016 +0000
+
+    Overhaul sendmail.py module to handle Unicode text.
+    
+    The built-in smtp module requires byte strings.  Change
+    quixote.sendmail to accept Unicode strings and apply the correct
+    encoding and charset declarations to produce proper messages.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue May 17 20:25:09 2016 +0000
+
+    Rewrite ptl_compile to work with Python 3.
+    
+    Support new compiled module layout (__pycache__).  Fix
+    compile_package() so it can be used for backwards compatibility
+    with Quixote applications using it.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Apr 20 21:43:10 2016 +0000
+
+    Properly handle __future__ statements if there is a docstring.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Apr 7 19:39:35 2016 +0000
+
+    Use byte literal in a few places as needed.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Apr 5 16:14:42 2016 +0000
+
+    Remove stray characters.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Apr 5 16:13:58 2016 +0000
+
+    Port _c_htmltext module to Python 3.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Apr 4 17:47:00 2016 +0000
+
+    Fix make_safe_filename() to work with unicode strings.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Apr 4 17:46:27 2016 +0000
+
+    Use 'encoding' parameter of unquote_plus(), catch errors.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Apr 4 17:45:47 2016 +0000
+
+    Replace use of has_key() with 'in'.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Apr 4 17:01:39 2016 +0000
+
+    Return a str() from _encode_base64(), not bytes().
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Apr 4 17:00:49 2016 +0000
+
+    Detect source code encoding in .ptl files.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Apr 4 16:11:56 2016 +0000
+
+    Add 'errors' parameter to _open_log(), handle strange characters.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Mar 31 21:17:39 2016 +0000
+
+    Python 3 changes: use ast module to compile, importlib hooks.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Mar 31 21:17:06 2016 +0000
+
+    More Python 3 fixes.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Mar 31 20:40:32 2016 +0000
+
+    Changes for Python 3: str/bytes fixes mostly.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Mar 31 16:30:32 2016 +0000
+
+    Remove insecure randbytes() fallbacks, str/bytes fixes.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Mar 31 16:29:35 2016 +0000
+
+    Python 3 support: use base64 module.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Mar 24 22:25:53 2016 +0000
+
+    Trival changes to support Python 3.
+
+
+v2.9.2
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Feb 23 15:02:48 2021 -0800
+
+    Update version to 2.9.2.
+
+
+v2.9.2a1
+--------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jan 25 14:14:16 2021 -0800
+
+    Update version.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Oct 13 15:18:17 2020 -0700
+
+    Allow more cookie attributes (e.g. samesite).
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Jan 10 15:38:43 2020 -0800
+
+    Use no-cache rather than must-revalidate.
+    
+    Using must-revalidate results in poor behavior from some browsers.  The
+    no-cache directive give the behavior that we want (loads from server but
+    back button still shows cached document).
+
+
+v2.9.1
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Apr 18 17:32:24 2016 +0000
+
+    Prepare 2.9.1 release.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Apr 18 17:10:25 2016 +0000
+
+    Add itervalues() and iteritems() methods to SessionManager.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Apr 18 16:53:27 2016 +0000
+
+    Allow unicode strings passed to redirect().
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Apr 7 20:48:05 2016 +0000
+
+    Fix handling of __future__ import statements in PTL.
+
+
+v2.9
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Dec 8 11:21:09 2015 -0800
+
+    Prepare 2.9 release.
+    
+    There was a packaging error for 2.8.  It included files not intended
+    to be released which broke the 'ptl' package.  This release repairs
+    that error and includes a small change to random session tokens.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Dec 8 11:16:30 2015 -0800
+
+    Use 128-bit random tokens for session keys and form tokens.
+    
+    Our previous 64-bit values should still be more than secure
+    for web applications but recommended best practice is currently
+    128-bit.  We use URL-safe base64 encoding so the length of
+    the tokens is only a bit longer.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Dec 8 11:08:40 2015 -0800
+
+    Use base64 instead of hex encoding for util.randbytes()
+
+
+v2.8
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Jan 17 15:27:42 2014 -0600
+
+    Update version number to 2.8.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun Aug 25 08:42:32 2013 -0600
+
+    Don't set duplicate ID attributes on radio inputs.
+
+Author: Patrik Simons <patrik.simons@neotide.fi>
+Date:   Thu Aug 1 16:05:44 2013 +0300
+
+    ptl_import recompiles ptl files
+    
+    Since stat.st_mtime is a float in linux, _load_pyc will almost always
+    recompile the ptl files.  Here's a patch to make the logic follow
+    compile.c in python.
+
+
+v2.8b2
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Jul 20 14:28:29 2013 -0600
+
+    Update version to 2.8b2.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Jul 20 14:25:43 2013 -0600
+
+    Set lineno attribute on generated Stmt node.
+    
+    This fixes some problems with incorrect line numbers in
+    tracebacks.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Mar 16 19:26:06 2011 -0600
+
+    Implement support for "Transfer-Encoding: chunked".
+    
+    Use chunked transfer encoding if there is no content length
+    available and it's supported by the protocol (i.e. HTTP 1.1).
+    Stream responses without a length can now be compressed.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Nov 23 10:35:37 2012 -0600
+
+    Make StaticFile handle errors from os.stat().
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Nov 23 10:34:28 2012 -0600
+
+    Support current twisted library.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Nov 23 10:33:53 2012 -0600
+
+    Add quixote.get_param().
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Nov 17 13:46:25 2012 -0600
+
+    Safer behavior for Directory meta-class.
+    
+    Only mess with the _q_exports attribute if the export()
+    and subdir() decorators have been used.  This will hopefull
+    avoid any backwards compatibility surprises.
+
+
+v2.8b1
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jan 2 13:58:30 2012 -0600
+
+    Update version to 2.8b1.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jan 2 13:49:37 2012 -0600
+
+    Remove generated HTML docs from the version control system.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jan 2 13:38:24 2012 -0600
+
+    Update documentation for 2.8 changes.
+    
+    Mention the export() decorator.  Simplify the explaination of
+    the mini demo.  Suggest starting the server using python -m
+    <module> since that avoids platform dependant paths.  Explain
+    how to make simple_server listen on a public interface.  Include
+    the latest docutils stylesheet.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jan 2 13:30:23 2012 -0600
+
+    Use the export() and subdir() decorators for the demo.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jan 2 13:24:00 2012 -0600
+
+    Improve the formatting of Quixote generated pages.
+    
+    Introduce the errors.format_page() function and use it to generate
+    all HTML pages produced by Quixote.  It provides a single location
+    to "monkey-patch" if applications want to customize the look of the
+    pages.  Improve the wording of the messages on some of the error
+    pages.  Provide some basic CSS rules to make the pages look a little
+    more modern.  Use the HTML 5 doctype.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jan 2 13:19:06 2012 -0600
+
+    Enable stricter HTTP request method checking.
+    
+    By default, only allow GET, HEAD, and POST.  Allowed methods
+    can be set by the ALLOWED_METHODS config.  All methods can
+    be allowed by setting ALLOWED_METHODS to None.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jan 2 01:04:17 2012 -0600
+
+    Add export() and subdir() decorators for managing _q_exports.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun Jan 1 22:22:28 2012 -0600
+
+    Have simple_server.py use Quixote access logger.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun Jan 1 22:21:10 2012 -0600
+
+    Increase resolution of elapsed time in access log.
+    
+    To save space, prepend 's', instead of 'sec'.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun Jan 1 22:18:21 2012 -0600
+
+    Add js_escape() utility.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun Jan 1 21:24:09 2012 -0600
+
+    Use Form.is_submitted() to check if Widget should parse.
+    
+    Pass a reference to the form object to widgets.  Use
+    Form.is_submitted() to check if form has been submitted.  This
+    allows query strings to be provided to forms with a POST method
+    while preventing them from erroneously parsing themselves.
+    Previously the query string would cause them to think the form
+    was submitted.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun Jan 1 20:51:11 2012 -0600
+
+    Set 'id' attribute on form input elements.
+    
+    This is useful when using Javascript to manipulate the form.  It
+    also now seems to be standard practice.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun Jan 1 20:46:10 2012 -0600
+
+    Don't auto-set 'Expires' header if it already exists.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun May 1 15:43:05 2011 -0600
+
+    Add the format() method to htmltext.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun May 1 13:28:06 2011 -0600
+
+    Change HTTPRequest to always consume request body.
+    
+    Some clients and middleware expect that the body is always consumed.
+    Previous to this change, raising a PublishError exception (for
+    example) could result in a response being sent without the body
+    being consumed.  Requiring the application code to ensure that the
+    body is always consumed seems burdensome.  Using a temporary file
+    or StringIO object seems simplest and should not significantly
+    affect performance.
+
+
+v2.7
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Mar 16 20:22:33 2011 -0600
+
+    Update version to 2.7
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Mar 16 19:30:00 2011 -0600
+
+    Relax MIME boundary pattern (some clients skip final \r\n).
+
+
+v2.7b2
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Jan 22 13:35:21 2010 -0600
+
+    Update version to 2.7b2
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Jan 22 13:32:44 2010 -0600
+
+    Use the StringIO module rather than cStringIO.
+    
+    cStringIO is gone in Python 3 and also does not handle unicode
+    strings properly.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Jan 22 13:29:46 2010 -0600
+
+    By default, set Cache-Control in addition to the Expires header.
+    
+    The Expires header is sufficient for HTTP 1.0 but for HTTP 1.1 we
+    must add a must-revalidate directive.  Clients and proxies are
+    allowed to ignore Expires in certain cases and use stale pages (RFC
+    2616 sections 13.1.5 and 14.9.4).
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Jan 22 13:28:58 2010 -0600
+
+    Disable cimport module for Python >= 2.6.
+    
+    The current version of the cimport module does not support relative
+    imports. Disable it for now.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun Dec 13 14:18:45 2009 -0600
+
+    Fix reference to compile_file function (fixes compile_dir function).
+
+
+v2.7b1
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Sep 7 00:41:44 2009 -0600
+
+    Update version for 2.7b1 release.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Sep 7 00:42:51 2009 -0600
+
+    Add session iterator.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Dec 3 14:41:05 2008 -0600
+
+    Don't use callable().
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Dec 3 12:43:38 2008 -0600
+
+    Use __contains__ instead of has_key.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Dec 3 12:41:18 2008 -0600
+
+    Use utf-8 as default encoding.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Nov 28 23:00:40 2008 -0600
+
+    Use built-in set type.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Sep 7 01:30:26 2009 -0600
+
+    Work around broken ihooks module in Python 2.6.
+    
+    Using the import hook is still the most convenient way of using PTL
+    modules.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun Apr 12 10:57:06 2009 -0600
+
+    Remove spurious kwargs from WidgetDict.__init__.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Jun 16 09:55:31 2009 -0600
+
+    Add options to sendmail so it can be used without a Quixote config.
+    
+    Also, remove broken encode() call since it can't handle Unicode properly
+    as implemented.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun May 31 19:09:53 2009 -0600
+
+    Add SESSION_COOKIE_SECURE and SESSION_COOKIE_HTTPONLY.
+    
+    Based on a suggestion from Emmanuel Dreyfus <manu@netbsd.org>, add
+    the SESSION_COOKIE_SECURE and SESSION_COOKIE_HTTPONLY options.
+    Setting them to true will cause the corresponding flag to be set
+    on the session cookie.
+
+Author: Hamish Lawson <hbl@st-andrews.ac.uk>
+Date:   Mon Feb 2 10:04:04 2009 -0600
+
+    Check for other possible values of HTTPS.
+    
+    Currently HTTPRequest only checks whether the HTTPS environment
+    variable has a value of 'on', but other possible positive values are
+    '1' (as set by mod_wsgi) and 'yes'.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Jan 6 20:16:39 2009 -0600
+
+    Avoid infinite redirect when PATH_INFO is empty.
+
+
+v2.6
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Nov 25 22:22:12 2008 -0600
+
+    Add quixote.ptl.compile_package function.
+    
+    The ihooks module is broken in Python 2.6 and will be gone in Python 3.
+    Provide compile_package() as an alternative method of compiling PTL
+    templates.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Jul 5 17:51:20 2008 -0600
+
+    Prepare for v2.6 release.
+    
+    Remove CHANGES.txt file and generate it as necessary.  Update
+    version numbers and remove setup.py version check.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Jul 5 17:50:14 2008 -0600
+
+    Improve README.txt.
+    
+    Add link to wiki.  Add instructions on how to run the mini demo.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Apr 5 20:05:33 2008 -0600
+
+    Use SCGIMount directive in documentation.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Apr 5 15:15:40 2008 -0600
+
+    Remove a reference to _q_exception_handler.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Feb 16 15:09:45 2008 -0600
+
+    Silence struck.pack warning.
+    
+    Silence struct.pack warning by forcing gzipped response CRC to be
+    a positive integer.
+
+
+v2.5
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Nov 16 16:36:30 2007 -0600
+
+    Update CHANGES.txt for 2.5 release.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Nov 16 16:35:33 2007 -0600
+
+    Fix PTL handling of __future__ statements.
+
+
+v2.5b1
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Apr 6 00:01:32 2007 -0600
+
+    Improve setup.py for 2.5b1 release.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Apr 5 23:33:22 2007 -0600
+
+    Prepare for 2.5b1 release.
+
+Author: C. Titus Brown <titus@idyll.org>
+Date:   Fri Feb 9 17:00:37 2007 -0600
+
+    Reorganize source
+    
+    Added some simple WSGI documentation; cleaned up test code a bit.
+    Added test server status check.  Moved the quixote package into the
+    quixote/ subdirectory.  Added nose+twill tests under tests/.
+
+Author: C. Titus Brown <titus@idyll.org>
+Date:   Tue Jan 30 09:25:26 2007 -0600
+
+    Add WSGI and qpy support.
+    
+    Added quixote.html.use_qpy to switch Quixote to using qpy instead of
+    htmltext (code contributed by Mike Orr).  Added quixote.cleanup()
+    to clear _publisher to support test fixtures.  Added wsgi.py,
+    quixote.get_wsgi_app() for WSGI support.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Jan 30 09:23:25 2007 -0600
+
+    In scgi_server.py, make host default to 'localhost'.
+    
+    It seems better to default to a more secure setup.  The previous code
+    caused the server to listen on all interfaces by default.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Jan 30 09:21:51 2007 -0600
+
+    Make setup.py URL point to quixote.ca site.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Sep 7 10:59:51 2006 -0600
+
+    Add comment explaining why single-select options are required.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Aug 23 20:39:49 2006 -0600
+
+    Allow setup.py to work without the "quixote" package.
+    
+    Also, improve the PyPI information.
+
+
+v2.5a1
+------
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Aug 15 12:02:13 2006 -0600
+
+    Do version check only when building source distribution.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Aug 8 20:43:03 2006 -0600
+
+    Prepare for 2.5a1 release.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Aug 7 16:19:28 2006 -0600
+
+    Have setup.py check version numbers
+    
+    Make setup.py check that quixote.__version__ matches the one in
+    CHANGES.txt.  Also, stop distributing MANIFEST since it is a pain to
+    ensure that it is up-to-date.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Aug 7 16:01:12 2006 -0600
+
+    Make PTL work with Python 2.5.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Aug 7 15:53:48 2006 -0600
+
+    Don't try to process non-ReST text files with rst2html
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Aug 7 15:51:52 2006 -0600
+
+    Make MANIFEST.in more accurate.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri May 19 11:55:30 2006 -0600
+
+    Have simple_server.py call server_close().
+    
+    Use a try/finally block to ensure that server_close() is called by
+    simple_server.py (as requested by Michele Simionato).
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri May 19 11:54:24 2006 -0600
+
+    Remove empty "name" attribute from an input field.
+    
+    Remove the empty "name" attribute from the noscript input field created
+    by OptionSelectWidget.  This change does not seem to effect behavior
+    and makes Tidy happier.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri May 19 11:51:55 2006 -0600
+
+    Add get_size() method to the Upload class.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Mar 16 19:48:55 2006 -0700
+
+    Update README and LICENSE.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Mar 16 13:18:21 2006 -0700
+
+    Remove Subversion keywords.
+
+
+v2.4
+----
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Mar 15 17:58:21 2006 -0700
+
+    Import Quixote 2.4.
+
