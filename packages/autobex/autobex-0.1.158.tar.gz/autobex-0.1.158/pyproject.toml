@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autobex"
+version = "0.1.158"
+description = "Autobex helps you find abandoned and interesting locations using OpenStreetMap data. Search by radius or polygon area to discover ruins, bunkers, and abandoned structures. Get elevation data, property ownership details, and direct links to Google Maps and Bing Maps. Designed for urban exploration and historical research, with automatic grouping of nearby locations."
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Lane Araujo", email = "lanearaujo@gmail.com"}
+]
+keywords = ["osm", "openstreetmap", "abandoned", "exploration", "geocoding"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+dependencies = [
+    "requests>=2.25.0",
+    "tqdm>=4.65.0",
+    "geopy>=2.3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/the-Drunken-coder/Autobex"
+Documentation = "https://github.com/the-Drunken-coder/Autobex#readme"
+Repository = "https://github.com/the-Drunken-coder/Autobex.git"
+Issues = "https://github.com/the-Drunken-coder/Autobex/issues"
+
+[tool.setuptools]
+packages = ["autobex"] 
