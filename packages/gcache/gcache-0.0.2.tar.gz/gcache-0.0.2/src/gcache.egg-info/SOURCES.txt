@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/celery_redis_cluster_backend/__init__.py
+src/celery_redis_cluster_backend/backend.py
+src/gcache.egg-info/PKG-INFO
+src/gcache.egg-info/SOURCES.txt
+src/gcache.egg-info/dependency_links.txt
+src/gcache.egg-info/entry_points.txt
+src/gcache.egg-info/requires.txt
+src/gcache.egg-info/top_level.txt
+tests/test_redis_cluster_backend.py

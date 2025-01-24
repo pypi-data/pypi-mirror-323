@@ -1,0 +1,3 @@
+[celery.backends]
+redis = celery_redis_cluster_backend.backend:choose_redis_backend
+rediss = celery_redis_cluster_backend.backend:choose_rediss_backend
