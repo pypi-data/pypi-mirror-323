@@ -1,0 +1,6 @@
+dependency_collector/__init__.py,sha256=ZsY5YbejrCUyAN6K2Cj7dkUK3b5N_ou4GpoEcBZcTDg,88
+dependency_collector/cli.py,sha256=v51pfYD_ElKoTz_ezXzKofCEKIL92Pe0U7zTk-bsYVM,1431
+dependency_collector-0.1.0.dist-info/METADATA,sha256=7b9Q6zYMvB3l1EM8KBaVYYRdgwX1Dw23ngTW5tlMGh0,972
+dependency_collector-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dependency_collector-0.1.0.dist-info/entry_points.txt,sha256=UdTa1lyBft8TZ_2p0vMJ0VYdjMVywKDcMdX5X4zZqVo,61
+dependency_collector-0.1.0.dist-info/RECORD,,
