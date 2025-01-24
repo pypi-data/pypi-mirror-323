@@ -1,0 +1,13 @@
+.gitignore
+.gitlab-ci.yml
+README.md
+build.txt
+setup.cfg
+setup.py
+passbolt/__init__.py
+passbolt_py.egg-info/PKG-INFO
+passbolt_py.egg-info/SOURCES.txt
+passbolt_py.egg-info/dependency_links.txt
+passbolt_py.egg-info/not-zip-safe
+passbolt_py.egg-info/requires.txt
+passbolt_py.egg-info/top_level.txt
