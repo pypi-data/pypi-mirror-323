@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+device_selector/__init__.py
+device_selector/device_selector.py
+device_selector.egg-info/PKG-INFO
+device_selector.egg-info/SOURCES.txt
+device_selector.egg-info/dependency_links.txt
+device_selector.egg-info/requires.txt
+device_selector.egg-info/top_level.txt
+test/test_device_selector.py
