@@ -1,0 +1,100 @@
+Metadata-Version: 2.2
+Name: python-decouple-nacl
+Version: 0.1
+Summary: Asymmetrisen salauksen tuki python-decouple-pakettiin
+Author-email: Antti Hautaniemi <antti.hautaniemi@pispalanit.fi>
+License: MIT
+Project-URL: Repository, https://github.com/an7oine/python-decouple-nacl.git
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: PyNaCl
+Requires-Dist: python-decouple
+
+# python-decouple-nacl
+
+Asymmetrisesti salattujen asetuksien tuki `python-decouple`-paketissa.
+
+Täydentää `python-decouple`-paketin määrittelemää `Config`-luokkaa siten, että
+- kuvioon `!{...}` täsmäävät merkkijonot asetuksen arvossa tunnistetaan salatuiksi merkkijonoiksi
+- aaltosulkeiden sisältö tulkitaan Base-64-koodattuna tavujonona
+- tavujono puretaan selväkieliseksi yksityisellä avaimella
+- kuvio korvataan tällä selväkielisellä tekstillä ennen mahdollisten `cast`- ja `default`-parametrien soveltamista.
+
+
+## Avaimet
+
+Yksityinen avain poimitaan `DECOUPLE_NACL_SK`-asetusavaimella samasta `AutoConfig`- tai `Config`-oliosta kuin purettavat asetukset.
+- avaimia voi olla useita pilkulla erotettuna
+- kunkin avaimen arvo tulkitaan Base-64-koodattuna tavujonona
+
+Mikäli myös julkinen avain on annettu asetusavaimella `DECOUPLE_NACL_PK`, tulkitaan tämäkin Base-64-tavujonona ja validoidaan yhdessä yksityisen avaimen kanssa.
+
+Mikäli yksityisiä avaimia on asetettu useita, on julkisen avaimen asetus pakollinen: käytettävä yksityinen avain valitaan tämän perusteella.
+
+
+## Asennus
+
+Paketti:
+```bash
+pip install python-decouple-nacl
+```
+
+Tuonti (kuten `python-decouple`-paketissa):
+```python
+from decouple_nacl import config, ...
+
+config(...)
+```
+
+Huomaa, että `import`-käsky tekee tarvittavat muutokset `python-decouple`-paketin
+toteuttamiin luokkiin ja funktioihin; tarvittaessa voidaan tehdä pelkkä tyhjä tuonti:
+```python
+import decouple_nacl
+```
+
+
+## Käyttöönotto
+
+Luodaan avainpari:
+```python
+sk = nacl.public.PrivateKey.generate()
+pk = pk.public_key
+```
+
+Tallennetaan yksityinen avain omaan (suojattuun) .env-tiedostoonsa:
+```python
+with open('/(1)/.env', 'w') as kahva:
+  kahva.write(
+    f'DECOUPLE_NACL_SK={base64.b64encode(sk.encode()).decode()}\n'
+  )
+```
+
+Viedään vastaava julkinen avain ja tarvittavat, salatut asetusparametrit
+erilliseen, julkisesti (git) hallinnoituun .env-tiedostoonsa:
+```python
+with open('/(2)/.env', 'w') as kahva:
+  kahva.write(
+    f'DECOUPLE_NACL_PK={base64.b64encode(pk.encode()).decode()}\n'
+  )
+  salaaja = nacl.public.SealedBox(pk)
+  kahva.write(
+    f'SALAISUUS={base64.b64encode(salaaja.encrypt('42'.encode())).decode()}\n'
+  )
+  ...
+```
+
+Esimerkki tulostiedostoista:
+```env
+# /(1)/.env
+DECOUPLE_NACL_SK=/CRP06uxYokIqZeTrnFkRxBhGMmipige8h+etn/qz2c=
+
+
+# /(2)/.env
+DECOUPLE_NACL_PK=Iuhvvgo3J4bKxDo+jMeT/J6ELzOW6+H8qElWxqJj0xc=
+SALAISUUS=!{hHUNiQieNxzIhYC8Pk2qgbT3w4hMdEAUMp9tx39gwkTp0vUuql83hl9//KCqXDnDDZA=}
+```
+
+Avainten käyttö:
+```python
+assert CONFIG('SALAISUUS', cast=int) == '42'
+```
