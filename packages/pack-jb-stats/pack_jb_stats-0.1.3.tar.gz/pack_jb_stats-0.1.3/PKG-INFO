@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: pack_jb_stats
+Version: 0.1.3
+Description-Content-Type: text/markdown
+Requires-Dist: scipy
+Requires-Dist: numpy
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+
+# Package python
+
+This project contains python functions that can be used for statistical purposes
