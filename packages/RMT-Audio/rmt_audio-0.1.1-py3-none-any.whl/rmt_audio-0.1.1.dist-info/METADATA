@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: RMT-Audio
+Version: 0.1.1
+Summary: Default template for PDM package
+Author-Email: khr0106 <kanghr990106@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# RMT-Audio
+
+- 원격 블루투스 오디오
+- remote bluetooth audio
+
+# use
+```bash
+pip install RMT-Audio
+```
