@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+gith/__init__.py
+gith/cli.py
+gith/console.py
+gith/helpers.py
+gith/messages.py
+gith.egg-info/PKG-INFO
+gith.egg-info/SOURCES.txt
+gith.egg-info/dependency_links.txt
+gith.egg-info/entry_points.txt
+gith.egg-info/requires.txt
+gith.egg-info/top_level.txt

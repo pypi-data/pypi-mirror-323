@@ -1,0 +1,2 @@
+[console_scripts]
+gith = gith.cli:app
