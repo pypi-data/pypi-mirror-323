@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: wizard-contest-commonlib
+Version: 0.0.10
+Summary: Common code for wizard-contest
+Project-URL: Main, https://github.com/request3301/wizard-contest
+Author-email: request3301 <nadare2357@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+This is a utility library for my personal project. I published it on PyPI to be able to update it seamlessly in PyCharm.
