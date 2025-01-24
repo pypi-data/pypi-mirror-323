@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/__init__.py
+src/formatting.py
+src/spcjsonutils.egg-info/PKG-INFO
+src/spcjsonutils.egg-info/SOURCES.txt
+src/spcjsonutils.egg-info/dependency_links.txt
+src/spcjsonutils.egg-info/top_level.txt

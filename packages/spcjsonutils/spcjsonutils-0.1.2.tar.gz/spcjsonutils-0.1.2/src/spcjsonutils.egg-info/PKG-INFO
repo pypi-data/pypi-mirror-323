@@ -1,0 +1,6 @@
+Metadata-Version: 2.2
+Name: spcjsonutils
+Version: 0.1.2
+Summary: JSON utility functions
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
