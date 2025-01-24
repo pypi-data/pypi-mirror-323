@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+deeply_learnable_package.egg-info/PKG-INFO
+deeply_learnable_package.egg-info/SOURCES.txt
+deeply_learnable_package.egg-info/dependency_links.txt
+deeply_learnable_package.egg-info/requires.txt
+deeply_learnable_package.egg-info/top_level.txt
