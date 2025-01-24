@@ -1,0 +1,77 @@
+[project]
+name = "autodocify-cli"
+dynamic=["version","dependencies","requires-python"]
+description = "AutoDocify is a command-line interface (CLI) tool designed to automate the generation of project documentation and placeholder test files. Leveraging the power of Large Language Models (LLMs), AutoDocify streamlines your development workflow by creating professional READMEs, basic technical documentation, and a starting point for your testing strategy"
+authors = [{name="AlexAdedeji", email= "alexadedeji15@gmail.com"},{name="Delight Fela-Steve", email= "dfelastevesocial@gmail.com"}]
+readme = "README.md"
+license = {text="Proprietary"}
+keywords = ["autodoc", "documentation", "automation", "readme", "tests", "python", "cli", "llm", "ai", "developer", "productivity", "pytest", "unittest", "devtools" ]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.12",
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Documentation"
+]
+
+[project.scripts]
+autodocify = "autodocify_cli.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/grayStone-Inc/autodocify-cli"
+Issues = "https://github.com/grayStone-Inc/autodocify-cli/issues"
+Repository="https://github.com/grayStone-Inc/autodocify-cli"
+
+[tool.poetry]
+version = "0.3.0"
+packages=[{include= "autodocify_cli"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = "^0.15.1"
+openai = "^1.59.6"
+rich = "^13.9.4"
+google-generativeai = "^0.8.3"
+pydantic-settings = "^2.7.1"
+yaspin = "^3.1.0"
+halo = "^0.0.31"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+black = "^24.10.0"
+flake8 = "^7.1.1"
+python-semantic-release = "^9.16.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+commit_message = "chore(release): v{version} [skip ci]"
+major_on_zero = false
+allow_zero_version = true
+version_toml = ["pyproject.toml:tool.poetry.version"]
+
+[tool.semantic_release.branches.main]
+match = "(main|master)"
+
+
+[tool.semantic_release.changelog.default_templates]
+changelog_file = "CHANGELOG.md"
+output_format = "md"
+mask_initial_release = false
+
+
+
+[tool.semantic_release.commit_parser_options]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
+other_allowed_tags = ["build", "chore", "ci", "docs", "style", "refactor", "test"]
+allowed_tags = ["feat", "fix", "perf", "build", "chore", "ci", "docs", "style", "refactor", "test"]
+default_bump_level = 0
+
+
