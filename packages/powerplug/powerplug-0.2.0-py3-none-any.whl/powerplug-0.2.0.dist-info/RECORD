@@ -1,0 +1,15 @@
+powerplug/__init__.py,sha256=SvUq0H4DrVj2TjwO-yPHZEYkbs1zG5FZU8BWcAwnbIM,54
+powerplug/apps.py,sha256=RpQ_1kh57WGYsxyix1L1LAVZ95ArJ521MKci-0hU_hA,405
+powerplug/config.py,sha256=mSD6JbCWbb7YaxJTs_cVKaC92KKsflWKx03Sl6CYlk4,1412
+powerplug/tasks.py,sha256=ZQaPG2yHj_ArmjHpmhr_7Cva_03VBFA-2qRmonVMdcU,337
+powerplug/version.py,sha256=Lgf9keBX7aG_JEFt6UYSyiFKcm-BYGtmk9ohpQhYpyk,20
+powerplug/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+powerplug/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+powerplug/management/commands/pluggable.py,sha256=KbPI1SF9LexGsyAavIWLLh-uh6UT5iyjH7AqtRETfpg,651
+powerplug/urls/__init__.py,sha256=7SH3KQASHSzt2BwdXg-n55f3rpfZW8YPRKhpshjHuKw,356
+powerplug/urls/rest.py,sha256=VSPAaIooP2_M1jNmUiP-_mjrnXO1Kt3eHW2HRd42Ido,479
+powerplug-0.2.0.dist-info/METADATA,sha256=7lBboEfHZlWActxsCYot0p-_hv16RKE8UHpG3AZ-Qos,244
+powerplug-0.2.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+powerplug-0.2.0.dist-info/entry_points.txt,sha256=MK9OAafW7an7bbKn2sgz0gqsuF1x5fJrVWhuSAHVQNI,39
+powerplug-0.2.0.dist-info/top_level.txt,sha256=Nt6ay7h_UFtb_T5yRETVnCXEM1YOSlG8Mxurie4rh54,10
+powerplug-0.2.0.dist-info/RECORD,,
