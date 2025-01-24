@@ -1,0 +1,150 @@
+Metadata-Version: 2.1
+Name: clipify
+Version: 0.6.0
+Summary: A powerful tool for processing video content into social media-friendly segments
+Home-page: https://github.com/adelelawady/clipify
+Author: Adel Elawady
+Author-email: adel50ali50@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy >=1.19.0
+Requires-Dist: moviepy >=1.0.3
+Requires-Dist: pydub >=0.25.1
+Requires-Dist: nltk >=3.6.0
+Requires-Dist: textblob >=0.15.3
+Requires-Dist: whisper >=1.0.0
+Requires-Dist: requests >=2.25.1
+Requires-Dist: ffmpeg-python >=0.2.0
+Requires-Dist: SpeechRecognition >=3.8.1
+Requires-Dist: vosk >=0.3.32
+Requires-Dist: transformers >=4.5.0
+Requires-Dist: torch >=1.8.0
+Requires-Dist: torchaudio >=0.8.0
+Requires-Dist: tqdm >=4.60.0
+Requires-Dist: python-dotenv >=0.17.0
+Requires-Dist: typing-extensions >=3.7.4
+Requires-Dist: pathlib >=1.0.1
+Requires-Dist: opencv-python >=4.5.0
+Requires-Dist: scipy >=1.6.0
+
+
+# Clipify
+
+A powerful Python tool for processing video content into social media-friendly segments with automated transcription, captioning, and thematic segmentation.
+
+## Features
+
+- 🎥 Video Processing
+  - Extracts audio from video files
+  - Converts speech to text with timing information
+  - Segments videos by theme and content
+  - Converts videos to mobile-friendly format (9:16 aspect ratio)
+  - Adds auto-generated captions
+
+- 🤖 AI-Powered Content Analysis
+  - Intelligent thematic segmentation
+  - Smart title generation
+  - Keyword extraction
+  - Sentiment analysis
+  - Hashtag generation
+
+- 📝 Transcript Processing
+  - Generates accurate transcripts with timing information
+  - Processes transcripts into coherent segments
+  - Maintains timing alignment for precise video cutting
+
+## Prerequisites
+
+- Python 3.8+
+- FFmpeg installed and in PATH
+- NLTK resources
+- Required Python packages (see requirements.txt)
+- API key for content processing services
+
+# Clone the repository:
+
+## Installation
+
+### install from pip
+
+```bash
+pip install clipify
+```
+
+### install from source
+
+```bash
+git clone https://github.com/adelelawady/Clipify.git
+cd Clipify
+```
+
+# Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+1. Basic video processing:
+
+```python
+from clipify.core.clipify import Clipify
+    # Initialize Clipify with Hyperbolic or OpenAI or Anthropic AI and specific model
+    clipify = Clipify(
+        provider_name="hyperbolic",
+        api_key="api-key",
+        model="deepseek-ai/DeepSeek-V3",  # Specify model
+        convert_to_mobile=True,
+        add_captions=True,
+        mobile_ratio="9:16"
+    )
+    
+    # Process a video
+    result = clipify.process_video("path/to/video.mp4")
+    
+    if result:
+        print("\nProcessing Summary:")
+        print(f"Processed video: {result['video_path']}")
+        print(f"Created {len(result['segments'])} segments")
+        
+        for segment in result['segments']:
+            print(f"\nSegment #{segment['segment_number']}: {segment['title']}")
+            if 'cut_video' in segment:
+                print(f"Cut video: {segment['cut_video']}")
+            if 'mobile_video' in segment:
+                print(f"Mobile version: {segment['mobile_video']}")
+            if 'captioned_video' in segment:
+                print(f"Captioned version: {segment['captioned_video']}")
+```
+
+## Project Structure
+
+```
+clipify/
+├── clipify/
+│ ├── init.py
+│ ├── content_processor.py
+│ ├── video_processor.py
+│ └── utils/
+│ ├── audio.py
+│ ├── captions.py
+│ └── transcription.py
+├── tests/
+├── requirements.txt
+├── setup.py
+└── README.md
+```
+
+  
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
