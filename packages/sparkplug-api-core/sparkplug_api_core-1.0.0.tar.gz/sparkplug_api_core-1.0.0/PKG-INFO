@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: sparkplug-api-core
+Version: 1.0.0
+Summary: Core package for building a Sparkplug app
+License: MIT
+Author: Sparkplug Marcus
+Author-email: sparkplugmarcus@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Django (>=4.2.4,<4.3.0)
+Requires-Dist: bleach (==6.0.0)
+Requires-Dist: channels (==4.0.0)
+Requires-Dist: channels-redis (>=4.1.0,<4.2.0)
+Requires-Dist: django-elasticsearch-dsl (>=7.3,<7.4)
+Requires-Dist: django-extensions (>=3.2.3,<3.3.0)
+Requires-Dist: django-stubs (>=1.12.0,<1.13.0)
+Requires-Dist: djangorestframework (>=3.14.0,<3.15.0)
+Requires-Dist: djangorestframework-camel-case (>=1.4.2,<1.5.0)
+Requires-Dist: djangorestframework-stubs (>=1.7.0,<1.8.0)
+Requires-Dist: elasticsearch-dsl (>=7.4.0,<7.5.0)
+Requires-Dist: python-dateutil (>=2.8.2,<2.9.0)
+Requires-Dist: python-decouple (>=3.8,<3.9)
+Requires-Dist: walrus (>=0.9.3,<0.10.0)
+Description-Content-Type: text/markdown
+
+# Sparkplug Core
+
