@@ -1,0 +1,25 @@
+[project]
+name = "SeoSportsInsight"
+version = "0.2.0"
+description = "Default template for PDM package"
+authors = [
+    { name = "<wminhyuk>", email = "<seoseo1998@gmail.com>" },
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+SeoSportsInsight = "seosportsinsight.cli:entry_point"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true

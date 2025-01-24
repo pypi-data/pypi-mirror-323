@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: SeoSportsInsight
+Version: 0.2.0
+Summary: Default template for PDM package
+Author-Email: "<wminhyuk>" <<seoseo1998@gmail.com>>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+### Dev
+```bash
+$ git clone ...
+$ pdm venv create
+$ source .venv/bin/activate
+$ pdm install
+$ pytest
