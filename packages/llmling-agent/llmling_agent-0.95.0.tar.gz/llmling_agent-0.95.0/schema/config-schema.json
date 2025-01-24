@@ -1,0 +1,5663 @@
+{
+  "$defs": {
+    "AgentConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for a single agent in the system.\n\nDefines an agent's complete configuration including its model, environment,\ncapabilities, and behavior settings. Each agent can have its own:\n- Language model configuration\n- Environment setup (tools and resources)\n- Response type definitions\n- System prompts and default user prompts\n- Role-based capabilities\n\nThe configuration can be loaded from YAML or created programmatically.",
+      "properties": {
+        "type": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "callback": "#/$defs/CallbackProviderConfig",
+                  "human": "#/$defs/HumanProviderConfig",
+                  "litellm": "#/$defs/LiteLLMProviderConfig",
+                  "pydantic_ai": "#/$defs/PydanticAIProviderConfig"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/PydanticAIProviderConfig"
+                },
+                {
+                  "$ref": "#/$defs/HumanProviderConfig"
+                },
+                {
+                  "$ref": "#/$defs/LiteLLMProviderConfig"
+                },
+                {
+                  "$ref": "#/$defs/CallbackProviderConfig"
+                }
+              ]
+            },
+            {
+              "enum": [
+                "pydantic_ai",
+                "human",
+                "litellm"
+              ],
+              "type": "string"
+            }
+          ],
+          "default": "pydantic_ai",
+          "description": "Provider configuration or shorthand type",
+          "title": "Type"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Name of the agent",
+          "title": "Name"
+        },
+        "inherits": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Name of agent config to inherit from",
+          "title": "Inherits"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional description of the agent's purpose",
+          "title": "Description"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "discriminator": {
+                "mapping": {
+                  "cost-optimized": "#/$defs/CostOptimizedMultiModel",
+                  "delegation": "#/$defs/DelegationMultiModel",
+                  "fallback": "#/$defs/FallbackMultiModel",
+                  "import": "#/$defs/ImportModel",
+                  "input": "#/$defs/InputModel",
+                  "remote-input": "#/$defs/RemoteInputModel",
+                  "remote-proxy": "#/$defs/RemoteProxyModel",
+                  "string": "#/$defs/StringModel",
+                  "test": "#/$defs/_TestModelWrapper",
+                  "token-optimized": "#/$defs/TokenOptimizedMultiModel"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/StringModel"
+                },
+                {
+                  "$ref": "#/$defs/DelegationMultiModel"
+                },
+                {
+                  "$ref": "#/$defs/CostOptimizedMultiModel"
+                },
+                {
+                  "$ref": "#/$defs/TokenOptimizedMultiModel"
+                },
+                {
+                  "$ref": "#/$defs/FallbackMultiModel"
+                },
+                {
+                  "$ref": "#/$defs/InputModel"
+                },
+                {
+                  "$ref": "#/$defs/ImportModel"
+                },
+                {
+                  "$ref": "#/$defs/_TestModelWrapper"
+                },
+                {
+                  "$ref": "#/$defs/RemoteInputModel"
+                },
+                {
+                  "$ref": "#/$defs/RemoteProxyModel"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "The model to use for this agent. Can be either a simple model name\nstring (e.g. 'openai:gpt-4') or a structured model definition.",
+          "title": "Model"
+        },
+        "environment": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "discriminator": {
+                "mapping": {
+                  "file": "#/$defs/FileEnvironment",
+                  "inline": "#/$defs/InlineEnvironment"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/FileEnvironment"
+                },
+                {
+                  "$ref": "#/$defs/InlineEnvironment"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Environment configuration (path or object)",
+          "title": "Environment"
+        },
+        "capabilities": {
+          "$ref": "#/$defs/Capabilities",
+          "description": "Current agent's capabilities."
+        },
+        "mcp_servers": {
+          "description": "List of MCP server configurations:\n- str entries are converted to StdioMCPServer\n- MCPServerConfig for full server configuration",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "discriminator": {
+                  "mapping": {
+                    "sse": "#/$defs/SSEMCPServer",
+                    "stdio": "#/$defs/StdioMCPServer"
+                  },
+                  "propertyName": "type"
+                },
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/StdioMCPServer"
+                  },
+                  {
+                    "$ref": "#/$defs/SSEMCPServer"
+                  }
+                ]
+              }
+            ]
+          },
+          "title": "Mcp Servers",
+          "type": "array"
+        },
+        "session": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/SessionQuery"
+            },
+            {
+              "$ref": "#/$defs/MemoryConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Session configuration for conversation recovery.",
+          "title": "Session"
+        },
+        "result_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "discriminator": {
+                "mapping": {
+                  "import": "#/$defs/ImportedResponseDefinition",
+                  "inline": "#/$defs/InlineResponseDefinition"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/InlineResponseDefinition"
+                },
+                {
+                  "$ref": "#/$defs/ImportedResponseDefinition"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Name of the response definition to use",
+          "title": "Result Type"
+        },
+        "retries": {
+          "default": 1,
+          "description": "Number of retries for failed operations (maps to pydantic-ai's retries)",
+          "title": "Retries",
+          "type": "integer"
+        },
+        "result_tool_name": {
+          "default": "final_result",
+          "description": "Name of the tool used for structured responses",
+          "title": "Result Tool Name",
+          "type": "string"
+        },
+        "result_tool_description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Custom description for the result tool",
+          "title": "Result Tool Description"
+        },
+        "result_retries": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Max retries for result validation",
+          "title": "Result Retries"
+        },
+        "end_strategy": {
+          "default": "early",
+          "description": "The strategy for handling multiple tool calls when a final result is found",
+          "enum": [
+            "early",
+            "exhaustive"
+          ],
+          "title": "End Strategy",
+          "type": "string"
+        },
+        "avatar": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "URL or path to agent's avatar image",
+          "title": "Avatar"
+        },
+        "system_prompts": {
+          "description": "System prompts for the agent",
+          "items": {
+            "type": "string"
+          },
+          "title": "System Prompts",
+          "type": "array"
+        },
+        "library_system_prompts": {
+          "description": "System prompts for the agent from the library",
+          "items": {
+            "type": "string"
+          },
+          "title": "Library System Prompts",
+          "type": "array"
+        },
+        "user_prompts": {
+          "description": "Default user prompts for the agent",
+          "items": {
+            "type": "string"
+          },
+          "title": "User Prompts",
+          "type": "array"
+        },
+        "model_settings": {
+          "description": "Additional settings to pass to the model",
+          "title": "Model Settings",
+          "type": "object"
+        },
+        "config_file_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Config file path for resolving environment.",
+          "title": "Config File Path"
+        },
+        "triggers": {
+          "description": "Event sources that activate this agent",
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "email": "#/$defs/EmailConfig",
+                "file": "#/$defs/FileWatchConfig",
+                "time": "#/$defs/TimeEventConfig",
+                "webhook": "#/$defs/WebhookConfig"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/FileWatchConfig"
+              },
+              {
+                "$ref": "#/$defs/WebhookConfig"
+              },
+              {
+                "$ref": "#/$defs/EmailConfig"
+              },
+              {
+                "$ref": "#/$defs/TimeEventConfig"
+              }
+            ]
+          },
+          "title": "Triggers",
+          "type": "array"
+        },
+        "knowledge": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Knowledge"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Knowledge sources for this agent."
+        },
+        "connections": {
+          "description": "Targets to forward results to.",
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "agent": "#/$defs/AgentConnectionConfig",
+                "callable": "#/$defs/CallableConnectionConfig",
+                "file": "#/$defs/FileConnectionConfig"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/AgentConnectionConfig"
+              },
+              {
+                "$ref": "#/$defs/FileConnectionConfig"
+              },
+              {
+                "$ref": "#/$defs/CallableConnectionConfig"
+              }
+            ]
+          },
+          "title": "Connections",
+          "type": "array"
+        },
+        "workers": {
+          "description": "Worker agents which will be available as tools.",
+          "items": {
+            "$ref": "#/$defs/WorkerConfig"
+          },
+          "title": "Workers",
+          "type": "array"
+        },
+        "debug": {
+          "default": false,
+          "description": "Enable debug output for this agent.",
+          "title": "Debug",
+          "type": "boolean"
+        }
+      },
+      "title": "AgentConfig",
+      "type": "object"
+    },
+    "AgentConnectionConfig": {
+      "description": "Forward messages to another agent.\n\nThis configuration defines how messages should flow from one agent to another,\nincluding:\n- Basic routing (which agent, what type of connection)\n- Message queueing and processing strategies\n- Timing controls (priority, delay)\n- Execution behavior (wait for completion)",
+      "properties": {
+        "type": {
+          "const": "agent",
+          "default": "agent",
+          "description": "Type discriminator for agent targets.",
+          "title": "Type",
+          "type": "string"
+        },
+        "wait_for_completion": {
+          "default": true,
+          "description": "Whether to wait for the result before continuing.\n\nIf True, message processing will wait for the target to complete.\nIf False, message will be forwarded asynchronously.",
+          "title": "Wait For Completion",
+          "type": "boolean"
+        },
+        "queued": {
+          "default": false,
+          "description": "Whether messages should be queued for manual processing.",
+          "title": "Queued",
+          "type": "boolean"
+        },
+        "queue_strategy": {
+          "default": "latest",
+          "description": "How to process queued messages.",
+          "enum": [
+            "concat",
+            "latest",
+            "buffer"
+          ],
+          "title": "Queue Strategy",
+          "type": "string"
+        },
+        "priority": {
+          "default": 0,
+          "description": "Priority of the task. Lower = higher priority.",
+          "title": "Priority",
+          "type": "integer"
+        },
+        "delay": {
+          "anyOf": [
+            {
+              "format": "duration",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Delay before processing.",
+          "title": "Delay"
+        },
+        "filter_condition": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "and": "#/$defs/AndCondition",
+                  "callable": "#/$defs/CallableCondition",
+                  "cost_limit": "#/$defs/CostLimitCondition",
+                  "message_count": "#/$defs/MessageCountCondition",
+                  "or": "#/$defs/OrCondition",
+                  "time": "#/$defs/TimeCondition",
+                  "token_threshold": "#/$defs/TokenThresholdCondition",
+                  "word_match": "#/$defs/WordMatchCondition"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/WordMatchCondition"
+                },
+                {
+                  "$ref": "#/$defs/MessageCountCondition"
+                },
+                {
+                  "$ref": "#/$defs/TimeCondition"
+                },
+                {
+                  "$ref": "#/$defs/TokenThresholdCondition"
+                },
+                {
+                  "$ref": "#/$defs/CostLimitCondition"
+                },
+                {
+                  "$ref": "#/$defs/CallableCondition"
+                },
+                {
+                  "$ref": "#/$defs/AndCondition"
+                },
+                {
+                  "$ref": "#/$defs/OrCondition"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to filter messages (using Talk.when()).",
+          "title": "Filter Condition"
+        },
+        "stop_condition": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "and": "#/$defs/AndCondition",
+                  "callable": "#/$defs/CallableCondition",
+                  "cost_limit": "#/$defs/CostLimitCondition",
+                  "message_count": "#/$defs/MessageCountCondition",
+                  "or": "#/$defs/OrCondition",
+                  "time": "#/$defs/TimeCondition",
+                  "token_threshold": "#/$defs/TokenThresholdCondition",
+                  "word_match": "#/$defs/WordMatchCondition"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/WordMatchCondition"
+                },
+                {
+                  "$ref": "#/$defs/MessageCountCondition"
+                },
+                {
+                  "$ref": "#/$defs/TimeCondition"
+                },
+                {
+                  "$ref": "#/$defs/TokenThresholdCondition"
+                },
+                {
+                  "$ref": "#/$defs/CostLimitCondition"
+                },
+                {
+                  "$ref": "#/$defs/CallableCondition"
+                },
+                {
+                  "$ref": "#/$defs/AndCondition"
+                },
+                {
+                  "$ref": "#/$defs/OrCondition"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to disconnect the connection.",
+          "title": "Stop Condition"
+        },
+        "exit_condition": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "and": "#/$defs/AndCondition",
+                  "callable": "#/$defs/CallableCondition",
+                  "cost_limit": "#/$defs/CostLimitCondition",
+                  "message_count": "#/$defs/MessageCountCondition",
+                  "or": "#/$defs/OrCondition",
+                  "time": "#/$defs/TimeCondition",
+                  "token_threshold": "#/$defs/TokenThresholdCondition",
+                  "word_match": "#/$defs/WordMatchCondition"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/WordMatchCondition"
+                },
+                {
+                  "$ref": "#/$defs/MessageCountCondition"
+                },
+                {
+                  "$ref": "#/$defs/TimeCondition"
+                },
+                {
+                  "$ref": "#/$defs/TokenThresholdCondition"
+                },
+                {
+                  "$ref": "#/$defs/CostLimitCondition"
+                },
+                {
+                  "$ref": "#/$defs/CallableCondition"
+                },
+                {
+                  "$ref": "#/$defs/AndCondition"
+                },
+                {
+                  "$ref": "#/$defs/OrCondition"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to exit the application (by raising SystemExit).",
+          "title": "Exit Condition"
+        },
+        "transform": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional function to transform messages before forwarding.",
+          "title": "Transform"
+        },
+        "name": {
+          "description": "Name of target agent.",
+          "title": "Name",
+          "type": "string"
+        },
+        "connection_type": {
+          "default": "run",
+          "description": "How messages should be handled by the target agent:\n- run: Execute message as a new run\n- context: Add message to agent's context\n- forward: Forward message to agent's outbox",
+          "enum": [
+            "run",
+            "context",
+            "forward"
+          ],
+          "title": "Connection Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "AgentConnectionConfig",
+      "type": "object"
+    },
+    "AndCondition": {
+      "description": "Require all conditions to be met.",
+      "properties": {
+        "type": {
+          "const": "and",
+          "default": "and",
+          "description": "Type discriminator.",
+          "title": "Type",
+          "type": "string"
+        },
+        "conditions": {
+          "description": "List of conditions to check.",
+          "items": {
+            "$ref": "#/$defs/ConnectionCondition"
+          },
+          "title": "Conditions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "conditions"
+      ],
+      "title": "AndCondition",
+      "type": "object"
+    },
+    "BasePrompt": {
+      "additionalProperties": false,
+      "description": "Base class for all prompts.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "description": {
+          "description": "Human-readable description of what this prompt does.",
+          "title": "Description",
+          "type": "string"
+        },
+        "arguments": {
+          "description": "List of arguments that this prompt accepts.",
+          "items": {
+            "$ref": "#/$defs/PromptParameter"
+          },
+          "title": "Arguments",
+          "type": "array"
+        },
+        "metadata": {
+          "description": "Additional metadata for storing custom prompt information.",
+          "title": "Metadata",
+          "type": "object"
+        }
+      },
+      "required": [
+        "description"
+      ],
+      "title": "BasePrompt",
+      "type": "object"
+    },
+    "CLIResource": {
+      "description": "Resource from CLI command execution.",
+      "properties": {
+        "type": {
+          "const": "cli",
+          "default": "cli",
+          "description": "Discriminator field identifying this as a CLI-based resource.",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "description": "Human-readable description of the resource.",
+          "title": "Description",
+          "type": "string"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Canonical URI for this resource, set during registration if unset.",
+          "title": "Uri"
+        },
+        "processors": {
+          "description": "Processing steps to apply when loading this resource.",
+          "items": {
+            "$ref": "#/$defs/ProcessingStep"
+          },
+          "title": "Processors",
+          "type": "array"
+        },
+        "watch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WatchConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Configuration for file system watching, if supported."
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "command": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          ],
+          "description": "Command to execute (string or sequence of arguments).",
+          "title": "Command"
+        },
+        "shell": {
+          "default": false,
+          "description": "Whether to run the command through a shell.",
+          "title": "Shell",
+          "type": "boolean"
+        },
+        "cwd": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Working directory for command execution.",
+          "title": "Cwd"
+        },
+        "timeout": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Maximum time in seconds to wait for command completion.",
+          "title": "Timeout"
+        }
+      },
+      "required": [
+        "command"
+      ],
+      "title": "CLIResource",
+      "type": "object"
+    },
+    "CallableCondition": {
+      "description": "Custom predicate function.",
+      "properties": {
+        "type": {
+          "const": "callable",
+          "default": "callable",
+          "description": "Type discriminator.",
+          "title": "Type",
+          "type": "string"
+        },
+        "predicate": {
+          "description": "Function to evaluate condition:\nArgs:\n    message: Current message being processed\n    stats: Current connection statistics\nReturns:\n    Whether condition is met",
+          "title": "Predicate",
+          "type": "string"
+        }
+      },
+      "required": [
+        "predicate"
+      ],
+      "title": "CallableCondition",
+      "type": "object"
+    },
+    "CallableConnectionConfig": {
+      "description": "Forward messages to a callable.\n\nThe callable can be either sync or async and should have the signature:\ndef process_message(message: ChatMessage[Any], **kwargs) -> Any\n\nAny additional kwargs specified in the config will be passed to the callable.",
+      "properties": {
+        "type": {
+          "const": "callable",
+          "default": "callable",
+          "title": "Type",
+          "type": "string"
+        },
+        "wait_for_completion": {
+          "default": true,
+          "description": "Whether to wait for the result before continuing.\n\nIf True, message processing will wait for the target to complete.\nIf False, message will be forwarded asynchronously.",
+          "title": "Wait For Completion",
+          "type": "boolean"
+        },
+        "queued": {
+          "default": false,
+          "description": "Whether messages should be queued for manual processing.",
+          "title": "Queued",
+          "type": "boolean"
+        },
+        "queue_strategy": {
+          "default": "latest",
+          "description": "How to process queued messages.",
+          "enum": [
+            "concat",
+            "latest",
+            "buffer"
+          ],
+          "title": "Queue Strategy",
+          "type": "string"
+        },
+        "priority": {
+          "default": 0,
+          "description": "Priority of the task. Lower = higher priority.",
+          "title": "Priority",
+          "type": "integer"
+        },
+        "delay": {
+          "anyOf": [
+            {
+              "format": "duration",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Delay before processing.",
+          "title": "Delay"
+        },
+        "filter_condition": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "and": "#/$defs/AndCondition",
+                  "callable": "#/$defs/CallableCondition",
+                  "cost_limit": "#/$defs/CostLimitCondition",
+                  "message_count": "#/$defs/MessageCountCondition",
+                  "or": "#/$defs/OrCondition",
+                  "time": "#/$defs/TimeCondition",
+                  "token_threshold": "#/$defs/TokenThresholdCondition",
+                  "word_match": "#/$defs/WordMatchCondition"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/WordMatchCondition"
+                },
+                {
+                  "$ref": "#/$defs/MessageCountCondition"
+                },
+                {
+                  "$ref": "#/$defs/TimeCondition"
+                },
+                {
+                  "$ref": "#/$defs/TokenThresholdCondition"
+                },
+                {
+                  "$ref": "#/$defs/CostLimitCondition"
+                },
+                {
+                  "$ref": "#/$defs/CallableCondition"
+                },
+                {
+                  "$ref": "#/$defs/AndCondition"
+                },
+                {
+                  "$ref": "#/$defs/OrCondition"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to filter messages (using Talk.when()).",
+          "title": "Filter Condition"
+        },
+        "stop_condition": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "and": "#/$defs/AndCondition",
+                  "callable": "#/$defs/CallableCondition",
+                  "cost_limit": "#/$defs/CostLimitCondition",
+                  "message_count": "#/$defs/MessageCountCondition",
+                  "or": "#/$defs/OrCondition",
+                  "time": "#/$defs/TimeCondition",
+                  "token_threshold": "#/$defs/TokenThresholdCondition",
+                  "word_match": "#/$defs/WordMatchCondition"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/WordMatchCondition"
+                },
+                {
+                  "$ref": "#/$defs/MessageCountCondition"
+                },
+                {
+                  "$ref": "#/$defs/TimeCondition"
+                },
+                {
+                  "$ref": "#/$defs/TokenThresholdCondition"
+                },
+                {
+                  "$ref": "#/$defs/CostLimitCondition"
+                },
+                {
+                  "$ref": "#/$defs/CallableCondition"
+                },
+                {
+                  "$ref": "#/$defs/AndCondition"
+                },
+                {
+                  "$ref": "#/$defs/OrCondition"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to disconnect the connection.",
+          "title": "Stop Condition"
+        },
+        "exit_condition": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "and": "#/$defs/AndCondition",
+                  "callable": "#/$defs/CallableCondition",
+                  "cost_limit": "#/$defs/CostLimitCondition",
+                  "message_count": "#/$defs/MessageCountCondition",
+                  "or": "#/$defs/OrCondition",
+                  "time": "#/$defs/TimeCondition",
+                  "token_threshold": "#/$defs/TokenThresholdCondition",
+                  "word_match": "#/$defs/WordMatchCondition"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/WordMatchCondition"
+                },
+                {
+                  "$ref": "#/$defs/MessageCountCondition"
+                },
+                {
+                  "$ref": "#/$defs/TimeCondition"
+                },
+                {
+                  "$ref": "#/$defs/TokenThresholdCondition"
+                },
+                {
+                  "$ref": "#/$defs/CostLimitCondition"
+                },
+                {
+                  "$ref": "#/$defs/CallableCondition"
+                },
+                {
+                  "$ref": "#/$defs/AndCondition"
+                },
+                {
+                  "$ref": "#/$defs/OrCondition"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to exit the application (by raising SystemExit).",
+          "title": "Exit Condition"
+        },
+        "transform": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional function to transform messages before forwarding.",
+          "title": "Transform"
+        },
+        "callable": {
+          "description": "Import path to the message processing function.",
+          "title": "Callable",
+          "type": "string"
+        },
+        "connection_type": {
+          "const": "run",
+          "default": "run",
+          "title": "Connection Type",
+          "type": "string"
+        },
+        "kw_args": {
+          "description": "Additional kwargs to pass to the callable.",
+          "title": "Kw Args",
+          "type": "object"
+        }
+      },
+      "required": [
+        "callable"
+      ],
+      "title": "CallableConnectionConfig",
+      "type": "object"
+    },
+    "CallableResource": {
+      "description": "Resource from executing a Python callable.",
+      "properties": {
+        "type": {
+          "const": "callable",
+          "default": "callable",
+          "description": "Discriminator field identifying this as a callable-based resource.",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "description": "Human-readable description of the resource.",
+          "title": "Description",
+          "type": "string"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Canonical URI for this resource, set during registration if unset.",
+          "title": "Uri"
+        },
+        "processors": {
+          "description": "Processing steps to apply when loading this resource.",
+          "items": {
+            "$ref": "#/$defs/ProcessingStep"
+          },
+          "title": "Processors",
+          "type": "array"
+        },
+        "watch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WatchConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Configuration for file system watching, if supported."
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "import_path": {
+          "description": "Dotted import path to the callable to execute.",
+          "title": "Import Path",
+          "type": "string"
+        },
+        "keyword_args": {
+          "description": "Keyword arguments to pass to the callable.",
+          "title": "Keyword Args",
+          "type": "object"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "CallableResource",
+      "type": "object"
+    },
+    "CallbackProviderConfig": {
+      "description": "Configuration for callback-based provider.\n\nAllows defining processor functions through:\n- Import path to callback function\n- Generic type for result validation",
+      "properties": {
+        "type": {
+          "const": "callback",
+          "default": "callback",
+          "description": "Type discriminator for callback provider.",
+          "title": "Type",
+          "type": "string"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional name for the provider instance.",
+          "title": "Name"
+        },
+        "callback": {
+          "description": "Import path to processor callback.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "callback"
+      ],
+      "title": "CallbackProviderConfig",
+      "type": "object"
+    },
+    "Capabilities": {
+      "description": "Defines what operations an agent is allowed to perform.",
+      "properties": {
+        "can_list_agents": {
+          "default": false,
+          "description": "Whether the agent can discover other available agents.",
+          "title": "Can List Agents",
+          "type": "boolean"
+        },
+        "can_delegate_tasks": {
+          "default": false,
+          "description": "Whether the agent can delegate tasks to other agents.",
+          "title": "Can Delegate Tasks",
+          "type": "boolean"
+        },
+        "can_observe_agents": {
+          "default": false,
+          "description": "Whether the agent can monitor other agents' activities.",
+          "title": "Can Observe Agents",
+          "type": "boolean"
+        },
+        "history_access": {
+          "default": "none",
+          "description": "Level of access to conversation history.",
+          "enum": [
+            "none",
+            "own",
+            "all"
+          ],
+          "title": "History Access",
+          "type": "string"
+        },
+        "stats_access": {
+          "default": "none",
+          "description": "Level of access to usage statistics.",
+          "enum": [
+            "none",
+            "own",
+            "all"
+          ],
+          "title": "Stats Access",
+          "type": "string"
+        },
+        "can_load_resources": {
+          "default": false,
+          "description": "Whether the agent can load and access resource content.",
+          "title": "Can Load Resources",
+          "type": "boolean"
+        },
+        "can_list_resources": {
+          "default": false,
+          "description": "Whether the agent can discover available resources.",
+          "title": "Can List Resources",
+          "type": "boolean"
+        },
+        "can_register_tools": {
+          "default": false,
+          "description": "Whether the agent can register importable functions as tools.",
+          "title": "Can Register Tools",
+          "type": "boolean"
+        },
+        "can_register_code": {
+          "default": false,
+          "description": "Whether the agent can create new tools from provided code.",
+          "title": "Can Register Code",
+          "type": "boolean"
+        },
+        "can_install_packages": {
+          "default": false,
+          "description": "Whether the agent can install Python packages for tools.",
+          "title": "Can Install Packages",
+          "type": "boolean"
+        },
+        "can_chain_tools": {
+          "default": false,
+          "description": "Whether the agent can chain multiple tool calls into one.",
+          "title": "Can Chain Tools",
+          "type": "boolean"
+        },
+        "can_execute_code": {
+          "default": false,
+          "description": "Whether the agent can execute Python code (WARNING: No sandbox).",
+          "title": "Can Execute Code",
+          "type": "boolean"
+        },
+        "can_execute_commands": {
+          "default": false,
+          "description": "Whether the agent can execute CLI commands (use at your own risk).",
+          "title": "Can Execute Commands",
+          "type": "boolean"
+        },
+        "can_create_workers": {
+          "default": false,
+          "description": "Whether the agent can create worker agents (as tools).",
+          "title": "Can Create Workers",
+          "type": "boolean"
+        },
+        "can_create_delegates": {
+          "default": false,
+          "description": "Whether the agent can spawn temporary delegate agents.",
+          "title": "Can Create Delegates",
+          "type": "boolean"
+        },
+        "can_add_agents": {
+          "default": false,
+          "description": "Whether the agent can add aother agents to the pool.",
+          "title": "Can Add Agents",
+          "type": "boolean"
+        },
+        "can_ask_agents": {
+          "default": false,
+          "description": "Whether the agent can ask other agents of the pool.",
+          "title": "Can Ask Agents",
+          "type": "boolean"
+        }
+      },
+      "title": "Capabilities",
+      "type": "object"
+    },
+    "ConnectionCondition": {
+      "description": "Base class for connection control conditions.",
+      "properties": {
+        "type": {
+          "description": "Discriminator for condition types.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "ConnectionCondition",
+      "type": "object"
+    },
+    "ConversionConfig": {
+      "description": "Global conversion configuration.",
+      "properties": {
+        "providers": {
+          "anyOf": [
+            {
+              "items": {
+                "discriminator": {
+                  "mapping": {
+                    "docling": "#/$defs/DoclingConverterConfig",
+                    "markitdown": "#/$defs/MarkItDownConfig",
+                    "plain": "#/$defs/PlainConverterConfig"
+                  },
+                  "propertyName": "type"
+                },
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/DoclingConverterConfig"
+                  },
+                  {
+                    "$ref": "#/$defs/MarkItDownConfig"
+                  },
+                  {
+                    "$ref": "#/$defs/PlainConverterConfig"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of configured converter providers.",
+          "title": "Providers"
+        },
+        "default_provider": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Name of default provider for conversions.",
+          "title": "Default Provider"
+        },
+        "max_size": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Global size limit for all converters.",
+          "title": "Max Size"
+        }
+      },
+      "title": "ConversionConfig",
+      "type": "object"
+    },
+    "CostLimitCondition": {
+      "description": "Disconnect when cost limit is reached.",
+      "properties": {
+        "type": {
+          "const": "cost_limit",
+          "default": "cost_limit",
+          "description": "Type discriminator.",
+          "title": "Type",
+          "type": "string"
+        },
+        "max_cost": {
+          "description": "Maximum cost in USD before triggering.",
+          "title": "Max Cost",
+          "type": "number"
+        }
+      },
+      "required": [
+        "max_cost"
+      ],
+      "title": "CostLimitCondition",
+      "type": "object"
+    },
+    "CostOptimizedMultiModel": {
+      "additionalProperties": false,
+      "description": "Multi-model that selects based on cost and token limits.",
+      "properties": {
+        "type": {
+          "const": "cost-optimized",
+          "default": "cost-optimized",
+          "title": "Type",
+          "type": "string"
+        },
+        "models": {
+          "description": "List of models to use.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Models",
+          "type": "array"
+        },
+        "max_input_cost": {
+          "description": "Maximum allowed cost in USD per request",
+          "exclusiveMinimum": 0.0,
+          "title": "Max Input Cost",
+          "type": "number"
+        },
+        "strategy": {
+          "default": "best_within_budget",
+          "description": "Strategy for model selection.",
+          "enum": [
+            "cheapest_possible",
+            "best_within_budget"
+          ],
+          "title": "Strategy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "models",
+        "max_input_cost"
+      ],
+      "title": "CostOptimizedMultiModel",
+      "type": "object"
+    },
+    "CustomToolsetConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for custom toolsets.",
+      "properties": {
+        "namespace": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional namespace prefix for tool names",
+          "title": "Namespace"
+        },
+        "type": {
+          "const": "custom",
+          "default": "custom",
+          "description": "Discriminator field identifying this as a custom toolset.",
+          "title": "Type",
+          "type": "string"
+        },
+        "import_path": {
+          "description": "Dotted import path to the custom toolset implementation class.",
+          "title": "Import Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "CustomToolsetConfig",
+      "type": "object"
+    },
+    "DelegationMultiModel": {
+      "additionalProperties": false,
+      "description": "Meta-model that dynamically selects models based on a user prompt.\n\nExample YAML configuration:\n    ```yaml\n    model:\n      type: delegation\n      selector_model: openai:gpt-4-turbo\n      models:\n        - openai:gpt-4\n        - openai:gpt-3.5-turbo\n      selection_prompt: |\n        Pick gpt-4 for complex tasks, gpt-3.5-turbo for simple queries.\n    ```",
+      "properties": {
+        "type": {
+          "const": "delegation",
+          "default": "delegation",
+          "title": "Type",
+          "type": "string"
+        },
+        "models": {
+          "description": "List of models to use.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Models",
+          "type": "array"
+        },
+        "selector_model": {
+          "description": "Model to use for delegation.",
+          "title": "Selector Model",
+          "type": "string"
+        },
+        "selection_prompt": {
+          "description": "Instructions for model selection based on task type.",
+          "title": "Selection Prompt",
+          "type": "string"
+        },
+        "model_descriptions": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model Descriptions"
+        }
+      },
+      "required": [
+        "models",
+        "selector_model",
+        "selection_prompt"
+      ],
+      "title": "DelegationMultiModel",
+      "type": "object"
+    },
+    "DoclingConverterConfig": {
+      "description": "Configuration for docling-based converter.",
+      "properties": {
+        "type": {
+          "const": "docling",
+          "default": "docling",
+          "description": "Type discriminator for docling converter.",
+          "title": "Type",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "description": "Whether this converter is currently active.",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "max_size": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional size limit in bytes.",
+          "title": "Max Size"
+        }
+      },
+      "title": "DoclingConverterConfig",
+      "type": "object"
+    },
+    "DynamicPrompt": {
+      "additionalProperties": false,
+      "description": "Dynamic prompt loaded from callable.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "description": {
+          "description": "Human-readable description of what this prompt does.",
+          "title": "Description",
+          "type": "string"
+        },
+        "arguments": {
+          "description": "List of arguments that this prompt accepts.",
+          "items": {
+            "$ref": "#/$defs/PromptParameter"
+          },
+          "title": "Arguments",
+          "type": "array"
+        },
+        "metadata": {
+          "description": "Additional metadata for storing custom prompt information.",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "import_path": {
+          "description": "Dotted import path to the callable that generates the prompt.",
+          "title": "Import Path",
+          "type": "string"
+        },
+        "template": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional template string for formatting the callable's output.",
+          "title": "Template"
+        },
+        "completions": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional mapping of argument names to completion functions.",
+          "title": "Completions"
+        },
+        "type": {
+          "const": "function",
+          "default": "function",
+          "description": "Discriminator field identifying this as a function-based prompt.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "import_path"
+      ],
+      "title": "DynamicPrompt",
+      "type": "object"
+    },
+    "EmailConfig": {
+      "description": "Email event source configuration.\n\nMonitors an email inbox for new messages and converts them to events.",
+      "properties": {
+        "type": {
+          "const": "email",
+          "default": "email",
+          "description": "Type discriminator for email sources.",
+          "title": "Type",
+          "type": "string"
+        },
+        "name": {
+          "description": "Unique identifier for this event source.",
+          "title": "Name",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "description": "Whether this event source is active.",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "template": {
+          "default": "\n{%- if include_timestamp %}at {{ timestamp }}{% endif %}\nEvent from {{ source }}:\n{%- if include_metadata %}\nMetadata:\n{% for key, value in metadata.items() %}\n{{ key }}: {{ value }}\n{% endfor %}\n{% endif %}\n{{ content }}\n",
+          "description": "Jinja2 template for formatting events.",
+          "title": "Template",
+          "type": "string"
+        },
+        "include_metadata": {
+          "default": true,
+          "description": "Control metadata visibility in template.",
+          "title": "Include Metadata",
+          "type": "boolean"
+        },
+        "include_timestamp": {
+          "default": true,
+          "description": "Control timestamp visibility in template.",
+          "title": "Include Timestamp",
+          "type": "boolean"
+        },
+        "host": {
+          "description": "IMAP server hostname",
+          "title": "Host",
+          "type": "string"
+        },
+        "port": {
+          "default": 993,
+          "description": "Server port (defaults to 993 for IMAP SSL)",
+          "title": "Port",
+          "type": "integer"
+        },
+        "username": {
+          "description": "Email account username/address",
+          "title": "Username",
+          "type": "string"
+        },
+        "password": {
+          "description": "Account password or app-specific password",
+          "format": "password",
+          "title": "Password",
+          "type": "string",
+          "writeOnly": true
+        },
+        "folder": {
+          "default": "INBOX",
+          "description": "Folder/mailbox to monitor",
+          "title": "Folder",
+          "type": "string"
+        },
+        "ssl": {
+          "default": true,
+          "description": "Whether to use SSL/TLS connection",
+          "title": "Ssl",
+          "type": "boolean"
+        },
+        "check_interval": {
+          "default": 60,
+          "description": "Seconds between inbox checks",
+          "exclusiveMinimum": 0,
+          "title": "Check Interval",
+          "type": "integer"
+        },
+        "mark_seen": {
+          "default": true,
+          "description": "Whether to mark processed emails as seen",
+          "title": "Mark Seen",
+          "type": "boolean"
+        },
+        "filters": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Email filtering criteria",
+          "title": "Filters",
+          "type": "object"
+        },
+        "max_size": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Maximum email size in bytes",
+          "title": "Max Size"
+        }
+      },
+      "required": [
+        "name",
+        "host",
+        "username",
+        "password"
+      ],
+      "title": "EmailConfig",
+      "type": "object"
+    },
+    "EntryPointToolsetConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for entry point toolsets.",
+      "properties": {
+        "namespace": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional namespace prefix for tool names",
+          "title": "Namespace"
+        },
+        "type": {
+          "const": "entry_points",
+          "default": "entry_points",
+          "description": "Discriminator field identifying this as an entry point toolset.",
+          "title": "Type",
+          "type": "string"
+        },
+        "module": {
+          "description": "Python module path",
+          "title": "Module",
+          "type": "string"
+        }
+      },
+      "required": [
+        "module"
+      ],
+      "title": "EntryPointToolsetConfig",
+      "type": "object"
+    },
+    "FallbackMultiModel": {
+      "additionalProperties": false,
+      "description": "Tries models in sequence until one succeeds.\n\nExample YAML configuration:\n    ```yaml\n    model:\n      type: fallback\n      models:\n        - openai:gpt-4  # Try this first\n        - openai:gpt-3.5-turbo  # Fall back to this if gpt-4 fails\n        - ollama:llama2  # Last resort\n    ```",
+      "properties": {
+        "type": {
+          "const": "fallback",
+          "default": "fallback",
+          "title": "Type",
+          "type": "string"
+        },
+        "models": {
+          "description": "List of models to use.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Models",
+          "type": "array"
+        }
+      },
+      "required": [
+        "models"
+      ],
+      "title": "FallbackMultiModel",
+      "type": "object"
+    },
+    "FileConnectionConfig": {
+      "description": "Write messages to a file using a template.\n\nThe template receives the full message object for formatting.\nAvailable fields include:\n- timestamp: When the message was created\n- name: Name of the sender\n- content: Message content\n- role: Message role (user/assistant/system)\n- model: Model used (if any)\n- cost_info: Token usage and cost info\n- forwarded_from: Chain of message forwarding",
+      "properties": {
+        "type": {
+          "const": "file",
+          "default": "file",
+          "title": "Type",
+          "type": "string"
+        },
+        "wait_for_completion": {
+          "default": true,
+          "description": "Whether to wait for the result before continuing.\n\nIf True, message processing will wait for the target to complete.\nIf False, message will be forwarded asynchronously.",
+          "title": "Wait For Completion",
+          "type": "boolean"
+        },
+        "queued": {
+          "default": false,
+          "description": "Whether messages should be queued for manual processing.",
+          "title": "Queued",
+          "type": "boolean"
+        },
+        "queue_strategy": {
+          "default": "latest",
+          "description": "How to process queued messages.",
+          "enum": [
+            "concat",
+            "latest",
+            "buffer"
+          ],
+          "title": "Queue Strategy",
+          "type": "string"
+        },
+        "priority": {
+          "default": 0,
+          "description": "Priority of the task. Lower = higher priority.",
+          "title": "Priority",
+          "type": "integer"
+        },
+        "delay": {
+          "anyOf": [
+            {
+              "format": "duration",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Delay before processing.",
+          "title": "Delay"
+        },
+        "filter_condition": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "and": "#/$defs/AndCondition",
+                  "callable": "#/$defs/CallableCondition",
+                  "cost_limit": "#/$defs/CostLimitCondition",
+                  "message_count": "#/$defs/MessageCountCondition",
+                  "or": "#/$defs/OrCondition",
+                  "time": "#/$defs/TimeCondition",
+                  "token_threshold": "#/$defs/TokenThresholdCondition",
+                  "word_match": "#/$defs/WordMatchCondition"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/WordMatchCondition"
+                },
+                {
+                  "$ref": "#/$defs/MessageCountCondition"
+                },
+                {
+                  "$ref": "#/$defs/TimeCondition"
+                },
+                {
+                  "$ref": "#/$defs/TokenThresholdCondition"
+                },
+                {
+                  "$ref": "#/$defs/CostLimitCondition"
+                },
+                {
+                  "$ref": "#/$defs/CallableCondition"
+                },
+                {
+                  "$ref": "#/$defs/AndCondition"
+                },
+                {
+                  "$ref": "#/$defs/OrCondition"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to filter messages (using Talk.when()).",
+          "title": "Filter Condition"
+        },
+        "stop_condition": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "and": "#/$defs/AndCondition",
+                  "callable": "#/$defs/CallableCondition",
+                  "cost_limit": "#/$defs/CostLimitCondition",
+                  "message_count": "#/$defs/MessageCountCondition",
+                  "or": "#/$defs/OrCondition",
+                  "time": "#/$defs/TimeCondition",
+                  "token_threshold": "#/$defs/TokenThresholdCondition",
+                  "word_match": "#/$defs/WordMatchCondition"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/WordMatchCondition"
+                },
+                {
+                  "$ref": "#/$defs/MessageCountCondition"
+                },
+                {
+                  "$ref": "#/$defs/TimeCondition"
+                },
+                {
+                  "$ref": "#/$defs/TokenThresholdCondition"
+                },
+                {
+                  "$ref": "#/$defs/CostLimitCondition"
+                },
+                {
+                  "$ref": "#/$defs/CallableCondition"
+                },
+                {
+                  "$ref": "#/$defs/AndCondition"
+                },
+                {
+                  "$ref": "#/$defs/OrCondition"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to disconnect the connection.",
+          "title": "Stop Condition"
+        },
+        "exit_condition": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "and": "#/$defs/AndCondition",
+                  "callable": "#/$defs/CallableCondition",
+                  "cost_limit": "#/$defs/CostLimitCondition",
+                  "message_count": "#/$defs/MessageCountCondition",
+                  "or": "#/$defs/OrCondition",
+                  "time": "#/$defs/TimeCondition",
+                  "token_threshold": "#/$defs/TokenThresholdCondition",
+                  "word_match": "#/$defs/WordMatchCondition"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/WordMatchCondition"
+                },
+                {
+                  "$ref": "#/$defs/MessageCountCondition"
+                },
+                {
+                  "$ref": "#/$defs/TimeCondition"
+                },
+                {
+                  "$ref": "#/$defs/TokenThresholdCondition"
+                },
+                {
+                  "$ref": "#/$defs/CostLimitCondition"
+                },
+                {
+                  "$ref": "#/$defs/CallableCondition"
+                },
+                {
+                  "$ref": "#/$defs/AndCondition"
+                },
+                {
+                  "$ref": "#/$defs/OrCondition"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to exit the application (by raising SystemExit).",
+          "title": "Exit Condition"
+        },
+        "transform": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional function to transform messages before forwarding.",
+          "title": "Transform"
+        },
+        "connection_type": {
+          "const": "run",
+          "default": "run",
+          "title": "Connection Type",
+          "type": "string"
+        },
+        "path": {
+          "description": "Path to output file. Supports variables: {date}, {time}, {agent}",
+          "title": "Path",
+          "type": "string"
+        },
+        "template": {
+          "default": "\n[{{ message.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}] {{ message.name }}: {{ message.content }}\n{%- if message.forwarded_from %}\n(via: {{ message.forwarded_from|join(' -> ') }})\n{%- endif %}\n",
+          "description": "Jinja2 template for message formatting.",
+          "title": "Template",
+          "type": "string"
+        },
+        "encoding": {
+          "default": "utf-8",
+          "description": "File encoding to use.",
+          "title": "Encoding",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "title": "FileConnectionConfig",
+      "type": "object"
+    },
+    "FileEnvironment": {
+      "description": "File-based environment configuration.\n\nLoads environment settings from external YAML files, supporting:\n- Reusable environment configurations\n- Separation of concerns\n- Environment sharing between agents\n- Version control of environment settings",
+      "properties": {
+        "type": {
+          "const": "file",
+          "default": "file",
+          "title": "Type",
+          "type": "string"
+        },
+        "uri": {
+          "description": "Path to environment file",
+          "minLength": 1,
+          "title": "Uri",
+          "type": "string"
+        },
+        "config_file_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Config File Path"
+        }
+      },
+      "required": [
+        "uri"
+      ],
+      "title": "FileEnvironment",
+      "type": "object"
+    },
+    "FilePrompt": {
+      "additionalProperties": false,
+      "description": "Prompt loaded from a file.\n\nThis type of prompt loads its content from a file, allowing for longer or more\ncomplex prompts to be managed in separate files. The file content is loaded\nand parsed according to the specified format.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "description": {
+          "description": "Human-readable description of what this prompt does.",
+          "title": "Description",
+          "type": "string"
+        },
+        "arguments": {
+          "description": "List of arguments that this prompt accepts.",
+          "items": {
+            "$ref": "#/$defs/PromptParameter"
+          },
+          "title": "Arguments",
+          "type": "array"
+        },
+        "metadata": {
+          "description": "Additional metadata for storing custom prompt information.",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "format": "path",
+              "type": "string"
+            }
+          ],
+          "description": "Path to the file containing the prompt content.",
+          "title": "Path"
+        },
+        "format": {
+          "default": "text",
+          "description": "Format of the file content (text, markdown, or jinja2 template).",
+          "enum": [
+            "text",
+            "markdown",
+            "jinja2"
+          ],
+          "title": "Format",
+          "type": "string"
+        },
+        "type": {
+          "const": "file",
+          "default": "file",
+          "description": "Discriminator field identifying this as a file-based prompt.",
+          "title": "Type",
+          "type": "string"
+        },
+        "watch": {
+          "default": false,
+          "description": "Whether to watch the file for changes and reload automatically.",
+          "title": "Watch",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "description",
+        "path"
+      ],
+      "title": "FilePrompt",
+      "type": "object"
+    },
+    "FileStorageConfig": {
+      "description": "File storage configuration.",
+      "properties": {
+        "type": {
+          "const": "file",
+          "default": "file",
+          "title": "Type",
+          "type": "string"
+        },
+        "log_messages": {
+          "default": true,
+          "description": "Whether to log messages",
+          "title": "Log Messages",
+          "type": "boolean"
+        },
+        "agents": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array",
+              "uniqueItems": true
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional set of agent names to include. If None, logs all agents.",
+          "title": "Agents"
+        },
+        "log_conversations": {
+          "default": true,
+          "description": "Whether to log conversations",
+          "title": "Log Conversations",
+          "type": "boolean"
+        },
+        "log_tool_calls": {
+          "default": true,
+          "description": "Whether to log tool calls",
+          "title": "Log Tool Calls",
+          "type": "boolean"
+        },
+        "log_commands": {
+          "default": true,
+          "description": "Whether to log command executions",
+          "title": "Log Commands",
+          "type": "boolean"
+        },
+        "log_context": {
+          "default": true,
+          "description": "Whether to log context messages.",
+          "title": "Log Context",
+          "type": "boolean"
+        },
+        "path": {
+          "description": "Path to storage file (extension determines format unless specified)",
+          "title": "Path",
+          "type": "string"
+        },
+        "format": {
+          "anyOf": [
+            {
+              "enum": [
+                "yaml",
+                "toml",
+                "json",
+                "ini"
+              ],
+              "type": "string"
+            },
+            {
+              "const": "auto",
+              "type": "string"
+            }
+          ],
+          "default": "auto",
+          "description": "Storage format (auto=detect from extension)",
+          "title": "Format"
+        },
+        "encoding": {
+          "default": "utf-8",
+          "description": "File encoding",
+          "title": "Encoding",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "title": "FileStorageConfig",
+      "type": "object"
+    },
+    "FileWatchConfig": {
+      "description": "File watching event source.\n\nMonitors file system changes and triggers agent actions when:\n- Files are created\n- Files are modified\n- Files are deleted",
+      "properties": {
+        "type": {
+          "const": "file",
+          "default": "file",
+          "description": "Type discriminator for file watch sources.",
+          "title": "Type",
+          "type": "string"
+        },
+        "name": {
+          "description": "Unique identifier for this event source.",
+          "title": "Name",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "description": "Whether this event source is active.",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "template": {
+          "default": "\n{%- if include_timestamp %}at {{ timestamp }}{% endif %}\nEvent from {{ source }}:\n{%- if include_metadata %}\nMetadata:\n{% for key, value in metadata.items() %}\n{{ key }}: {{ value }}\n{% endfor %}\n{% endif %}\n{{ content }}\n",
+          "description": "Jinja2 template for formatting events.",
+          "title": "Template",
+          "type": "string"
+        },
+        "include_metadata": {
+          "default": true,
+          "description": "Control metadata visibility in template.",
+          "title": "Include Metadata",
+          "type": "boolean"
+        },
+        "include_timestamp": {
+          "default": true,
+          "description": "Control timestamp visibility in template.",
+          "title": "Include Timestamp",
+          "type": "boolean"
+        },
+        "paths": {
+          "description": "Paths or patterns to watch for changes.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Paths",
+          "type": "array"
+        },
+        "extensions": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "File extensions to monitor (e.g. ['.py', '.md']).",
+          "title": "Extensions"
+        },
+        "ignore_paths": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Paths or patterns to ignore.",
+          "title": "Ignore Paths"
+        },
+        "recursive": {
+          "default": true,
+          "description": "Whether to watch subdirectories.",
+          "title": "Recursive",
+          "type": "boolean"
+        },
+        "debounce": {
+          "default": 1600,
+          "description": "Minimum time (ms) between trigger events.",
+          "title": "Debounce",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "paths"
+      ],
+      "title": "FileWatchConfig",
+      "type": "object"
+    },
+    "GlobalSettings": {
+      "additionalProperties": false,
+      "description": "Global settings that apply to all components.",
+      "properties": {
+        "timeout": {
+          "default": 30,
+          "description": "Maximum time in seconds to wait for operations",
+          "title": "Timeout",
+          "type": "integer"
+        },
+        "max_retries": {
+          "default": 3,
+          "description": "Maximum number of retries for failed operations",
+          "title": "Max Retries",
+          "type": "integer"
+        },
+        "requirements": {
+          "description": "List of package requirments for the functions used in this file.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Requirements",
+          "type": "array"
+        },
+        "pip_index_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Alternative PyPI index URL for package installation",
+          "title": "Pip Index Url"
+        },
+        "extra_paths": {
+          "description": "Additional import paths",
+          "items": {
+            "type": "string"
+          },
+          "title": "Extra Paths",
+          "type": "array"
+        },
+        "scripts": {
+          "description": "PEP723 scripts (can be imported and will be scanned for dependencies)",
+          "items": {
+            "type": "string"
+          },
+          "title": "Scripts",
+          "type": "array"
+        },
+        "prefer_uv": {
+          "default": false,
+          "description": "Explicitely use uv for package installation / management ",
+          "title": "Prefer Uv",
+          "type": "boolean"
+        },
+        "log_level": {
+          "default": "INFO",
+          "description": "Log level for LLMling core.",
+          "enum": [
+            "DEBUG",
+            "INFO",
+            "WARNING",
+            "ERROR",
+            "CRITICAL"
+          ],
+          "title": "Log Level",
+          "type": "string"
+        },
+        "jinja_environment": {
+          "$ref": "#/$defs/Jinja2Config",
+          "description": "Jinja2 environment configuration"
+        },
+        "llm_capabilities": {
+          "$ref": "#/$defs/LLMCapabilitiesConfig",
+          "description": "Control which system capabilities are exposed to LLMs."
+        }
+      },
+      "title": "GlobalSettings",
+      "type": "object"
+    },
+    "HumanProviderConfig": {
+      "description": "Configuration for human-in-the-loop provider.\n\nThis provider enables direct human interaction for responses and decisions.\nUseful for testing, training, and oversight of agent operations.",
+      "properties": {
+        "type": {
+          "const": "human",
+          "default": "human",
+          "description": "Type discriminator for human provider.",
+          "title": "Type",
+          "type": "string"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional name for the provider instance.",
+          "title": "Name"
+        },
+        "timeout": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Timeout in seconds for human response. None means wait indefinitely.",
+          "title": "Timeout"
+        },
+        "show_context": {
+          "default": true,
+          "description": "Whether to show conversation context to human.",
+          "title": "Show Context",
+          "type": "boolean"
+        }
+      },
+      "title": "HumanProviderConfig",
+      "type": "object"
+    },
+    "ImportModel": {
+      "additionalProperties": false,
+      "description": "Model that imports and delegates to other models.\n\nUseful to allow using \"external\" models via YAML in LLMling-Agent",
+      "properties": {
+        "type": {
+          "const": "import",
+          "default": "import",
+          "title": "Type",
+          "type": "string"
+        },
+        "model": {
+          "description": "Model class to import and use.",
+          "title": "Model",
+          "type": "string"
+        },
+        "kw_args": {
+          "description": "Keyword arguments for the imported model class.",
+          "title": "Kw Args",
+          "type": "object"
+        }
+      },
+      "required": [
+        "model"
+      ],
+      "title": "ImportModel",
+      "type": "object"
+    },
+    "ImportedResponseDefinition": {
+      "additionalProperties": false,
+      "description": "Response definition that imports an existing Pydantic model.\n\nAllows using externally defined Pydantic models as response types.\nBenefits:\n- Reuse existing model definitions\n- Full Python type support\n- Complex validation logic\n- IDE support for imported types\n\nExample:\n    responses:\n      AnalysisResult:\n        type: import\n        import_path: myapp.models.AnalysisResult",
+      "properties": {
+        "type": {
+          "const": "import",
+          "default": "import",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "A description for this response definition.",
+          "title": "Description"
+        },
+        "result_tool_name": {
+          "default": "final_result",
+          "description": "The tool name for the Agent tool to create the structured response.",
+          "title": "Result Tool Name",
+          "type": "string"
+        },
+        "result_tool_description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "The tool description for the Agent tool to create the structured response.",
+          "title": "Result Tool Description"
+        },
+        "result_retries": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Retry override. How often the Agent should try to validate the response.",
+          "title": "Result Retries"
+        },
+        "import_path": {
+          "description": "The path to the pydantic model to use as the response type.",
+          "title": "Import Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "ImportedResponseDefinition",
+      "type": "object"
+    },
+    "InlineEnvironment": {
+      "additionalProperties": true,
+      "description": "Direct environment configuration without external files.\n\nAllows embedding complete environment settings directly in the agent\nconfiguration instead of referencing external files. Useful for:\n- Self-contained configurations\n- Testing and development\n- Simple agent setups",
+      "properties": {
+        "version": {
+          "default": "1.0",
+          "description": "Version string for this configuration format.",
+          "title": "Version",
+          "type": "string"
+        },
+        "global_settings": {
+          "$ref": "#/$defs/GlobalSettings"
+        },
+        "context_processors": {
+          "additionalProperties": {
+            "$ref": "#/$defs/ProcessorConfig"
+          },
+          "description": "Content processors available for resource transformation.",
+          "title": "Context Processors",
+          "type": "object"
+        },
+        "resources": {
+          "additionalProperties": {
+            "discriminator": {
+              "mapping": {
+                "callable": "#/$defs/CallableResource",
+                "cli": "#/$defs/CLIResource",
+                "path": "#/$defs/PathResource",
+                "source": "#/$defs/SourceResource",
+                "text": "#/$defs/TextResource"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/PathResource"
+              },
+              {
+                "$ref": "#/$defs/TextResource"
+              },
+              {
+                "$ref": "#/$defs/CLIResource"
+              },
+              {
+                "$ref": "#/$defs/SourceResource"
+              },
+              {
+                "$ref": "#/$defs/CallableResource"
+              }
+            ]
+          },
+          "description": "Resource definitions keyed by name.",
+          "title": "Resources",
+          "type": "object"
+        },
+        "resource_groups": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "description": "Groups of resources for logical organization.",
+          "title": "Resource Groups",
+          "type": "object"
+        },
+        "tools": {
+          "additionalProperties": {
+            "$ref": "#/$defs/ToolConfig"
+          },
+          "description": "Tool definitions keyed by name.",
+          "title": "Tools",
+          "type": "object"
+        },
+        "toolsets": {
+          "additionalProperties": {
+            "discriminator": {
+              "mapping": {
+                "custom": "#/$defs/CustomToolsetConfig",
+                "entry_points": "#/$defs/EntryPointToolsetConfig",
+                "openapi": "#/$defs/OpenAPIToolsetConfig"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/OpenAPIToolsetConfig"
+              },
+              {
+                "$ref": "#/$defs/EntryPointToolsetConfig"
+              },
+              {
+                "$ref": "#/$defs/CustomToolsetConfig"
+              }
+            ]
+          },
+          "description": "Toolset configurations for extensible tool collections.",
+          "title": "Toolsets",
+          "type": "object"
+        },
+        "prompts": {
+          "additionalProperties": {
+            "discriminator": {
+              "mapping": {
+                "file": "#/$defs/FilePrompt",
+                "function": "#/$defs/DynamicPrompt",
+                "text": "#/$defs/StaticPrompt"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/StaticPrompt"
+              },
+              {
+                "$ref": "#/$defs/DynamicPrompt"
+              },
+              {
+                "$ref": "#/$defs/FilePrompt"
+              }
+            ]
+          },
+          "description": "Prompt definitions keyed by name.",
+          "title": "Prompts",
+          "type": "object"
+        },
+        "type": {
+          "const": "inline",
+          "default": "inline",
+          "title": "Type",
+          "type": "string"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional identifier for this configuration",
+          "title": "Uri"
+        },
+        "config_file_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Path to agent config file for resolving relative paths",
+          "title": "Config File Path"
+        }
+      },
+      "title": "InlineEnvironment",
+      "type": "object"
+    },
+    "InlineResponseDefinition": {
+      "additionalProperties": false,
+      "description": "Inline definition of an agent's response structure.\n\nAllows defining response types directly in the configuration using:\n- Field definitions with types and descriptions\n- Optional validation constraints\n- Custom field descriptions\n\nExample:\n    responses:\n      BasicResult:\n        type: inline\n        fields:\n          success: {type: bool, description: \"Operation success\"}\n          message: {type: str, description: \"Result details\"}",
+      "properties": {
+        "type": {
+          "const": "inline",
+          "default": "inline",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "A description for this response definition.",
+          "title": "Description"
+        },
+        "result_tool_name": {
+          "default": "final_result",
+          "description": "The tool name for the Agent tool to create the structured response.",
+          "title": "Result Tool Name",
+          "type": "string"
+        },
+        "result_tool_description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "The tool description for the Agent tool to create the structured response.",
+          "title": "Result Tool Description"
+        },
+        "result_retries": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Retry override. How often the Agent should try to validate the response.",
+          "title": "Result Retries"
+        },
+        "fields": {
+          "additionalProperties": {
+            "$ref": "#/$defs/ResponseField"
+          },
+          "description": "A dictionary containing all fields.",
+          "title": "Fields",
+          "type": "object"
+        }
+      },
+      "required": [
+        "fields"
+      ],
+      "title": "InlineResponseDefinition",
+      "type": "object"
+    },
+    "InputModel": {
+      "additionalProperties": false,
+      "description": "Model that delegates responses to human input.",
+      "properties": {
+        "type": {
+          "const": "input",
+          "default": "input",
+          "title": "Type",
+          "type": "string"
+        },
+        "prompt_template": {
+          "default": "\ud83d\udc64 Please respond to: {prompt}",
+          "description": "Template for showing the prompt to the human.",
+          "title": "Prompt Template",
+          "type": "string"
+        },
+        "show_system": {
+          "default": true,
+          "description": "Whether to show system messages to the human.",
+          "title": "Show System",
+          "type": "boolean"
+        },
+        "input_prompt": {
+          "default": "Your response: ",
+          "description": "Prompt to show when requesting input.",
+          "title": "Input Prompt",
+          "type": "string"
+        },
+        "handler": {
+          "default": "llmling_models:DefaultInputHandler",
+          "description": "Input handler class to use.",
+          "title": "Handler",
+          "type": "string"
+        }
+      },
+      "title": "InputModel",
+      "type": "object"
+    },
+    "Jinja2Config": {
+      "additionalProperties": false,
+      "description": "Configuration for Jinja2 environment.\n\nSee: https://jinja.palletsprojects.com/en/3.1.x/api/#jinja2.Environment",
+      "properties": {
+        "block_start_string": {
+          "default": "{%",
+          "description": "String denoting the beginning of a block (default: '{%').",
+          "title": "Block Start String",
+          "type": "string"
+        },
+        "block_end_string": {
+          "default": "%}",
+          "description": "String denoting the end of a block (default: '%}').",
+          "title": "Block End String",
+          "type": "string"
+        },
+        "variable_start_string": {
+          "default": "{{",
+          "description": "String denoting the beginning of a variable (default: '{{').",
+          "title": "Variable Start String",
+          "type": "string"
+        },
+        "variable_end_string": {
+          "default": "}}",
+          "description": "String denoting the end of a variable (default: '}}').",
+          "title": "Variable End String",
+          "type": "string"
+        },
+        "comment_start_string": {
+          "default": "{#",
+          "description": "String denoting the beginning of a comment (default: '{#').",
+          "title": "Comment Start String",
+          "type": "string"
+        },
+        "comment_end_string": {
+          "default": "#}",
+          "description": "String denoting the end of a comment (default: '#}').",
+          "title": "Comment End String",
+          "type": "string"
+        },
+        "line_statement_prefix": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Prefix that begins a line-based statement (e.g., '#' for line statements).",
+          "title": "Line Statement Prefix"
+        },
+        "line_comment_prefix": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Prefix that begins a line-based comment.",
+          "title": "Line Comment Prefix"
+        },
+        "trim_blocks": {
+          "default": false,
+          "description": "Remove first newline after a block (affects whitespace control).",
+          "title": "Trim Blocks",
+          "type": "boolean"
+        },
+        "lstrip_blocks": {
+          "default": false,
+          "description": "Remove leading spaces and tabs from the start of a line to a block.",
+          "title": "Lstrip Blocks",
+          "type": "boolean"
+        },
+        "newline_sequence": {
+          "default": "\n",
+          "description": "Sequence that starts a newline (default: '\n').",
+          "enum": [
+            "\n",
+            "\r\n",
+            "\r"
+          ],
+          "title": "Newline Sequence",
+          "type": "string"
+        },
+        "keep_trailing_newline": {
+          "default": false,
+          "description": "Preserve the trailing newline when rendering templates.",
+          "title": "Keep Trailing Newline",
+          "type": "boolean"
+        },
+        "extensions": {
+          "description": "List of Jinja2 extensions to load (e.g., 'jinja2.ext.do').",
+          "items": {
+            "type": "string"
+          },
+          "title": "Extensions",
+          "type": "array"
+        },
+        "undefined": {
+          "default": "default",
+          "description": "Behavior when accessing undefined variables (default, strict, debug, chainable).",
+          "enum": [
+            "default",
+            "strict",
+            "debug",
+            "chainable"
+          ],
+          "title": "Undefined",
+          "type": "string"
+        },
+        "filters": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Custom filters as mapping of names to import paths.",
+          "title": "Filters",
+          "type": "object"
+        },
+        "tests": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Custom tests as mapping of names to import paths.",
+          "title": "Tests",
+          "type": "object"
+        },
+        "globals": {
+          "description": "Global variables available to all templates.",
+          "title": "Globals",
+          "type": "object"
+        }
+      },
+      "title": "Jinja2Config",
+      "type": "object"
+    },
+    "Job": {
+      "description": "A task is a piece of work that can be executed by an agent.\n\nRequirements:\n- The agent must have compatible dependencies (required_dependency)\n- The agent must produce the specified result type (required_return_type)\n\nEquipment:\n- The task provides necessary tools for execution (tools)\n- Tools are temporarily available during task execution",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration)",
+          "title": "Name"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Human-readable description of what this task does",
+          "title": "Description"
+        },
+        "prompt": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/BasePrompt"
+            }
+          ],
+          "description": "The task instruction/prompt.",
+          "title": "Prompt"
+        },
+        "required_return_type": {
+          "default": "str",
+          "description": "Expected type of the task result.",
+          "title": "Required Return Type",
+          "type": "string"
+        },
+        "required_dependency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Dependencies or context data needed for task execution",
+          "title": "Required Dependency"
+        },
+        "requires_vision": {
+          "default": false,
+          "description": "Whether the agent requires vision",
+          "title": "Requires Vision",
+          "type": "boolean"
+        },
+        "knowledge": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Knowledge"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional knowledge sources for this task:\n- Simple file/URL paths\n- Rich resource definitions\n- Prompt templates"
+        },
+        "tools": {
+          "description": "Tools needed for this task.",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "$ref": "#/$defs/ToolConfig"
+              }
+            ]
+          },
+          "title": "Tools",
+          "type": "array"
+        },
+        "min_context_tokens": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Minimum amount of required context size.",
+          "title": "Min Context Tokens"
+        }
+      },
+      "required": [
+        "prompt"
+      ],
+      "title": "Job",
+      "type": "object"
+    },
+    "Knowledge": {
+      "description": "Collection of context sources for an agent.\n\nSupports both simple paths and rich resource types for content loading,\nplus LLMling's prompt system for dynamic content generation.",
+      "properties": {
+        "paths": {
+          "description": "Quick access to files and URLs.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Paths",
+          "type": "array"
+        },
+        "resources": {
+          "description": "Rich resource definitions supporting:\n- PathResource: Complex file patterns, watching\n- TextResource: Raw content\n- CLIResource: Command output\n- RepositoryResource: Git repos\n- SourceResource: Python source\n- CallableResource: Function results",
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "callable": "#/$defs/CallableResource",
+                "cli": "#/$defs/CLIResource",
+                "path": "#/$defs/PathResource",
+                "source": "#/$defs/SourceResource",
+                "text": "#/$defs/TextResource"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/PathResource"
+              },
+              {
+                "$ref": "#/$defs/TextResource"
+              },
+              {
+                "$ref": "#/$defs/CLIResource"
+              },
+              {
+                "$ref": "#/$defs/SourceResource"
+              },
+              {
+                "$ref": "#/$defs/CallableResource"
+              }
+            ]
+          },
+          "title": "Resources",
+          "type": "array"
+        },
+        "prompts": {
+          "description": "Prompts for dynamic content generation:\n- StaticPrompt: Fixed message templates\n- DynamicPrompt: Python function-based\n- FilePrompt: File-based with template support",
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "file": "#/$defs/FilePrompt",
+                "function": "#/$defs/DynamicPrompt",
+                "text": "#/$defs/StaticPrompt"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/StaticPrompt"
+              },
+              {
+                "$ref": "#/$defs/DynamicPrompt"
+              },
+              {
+                "$ref": "#/$defs/FilePrompt"
+              }
+            ]
+          },
+          "title": "Prompts",
+          "type": "array"
+        },
+        "convert_to_markdown": {
+          "default": false,
+          "description": "Whether to convert content to markdown when possible.",
+          "title": "Convert To Markdown",
+          "type": "boolean"
+        }
+      },
+      "title": "Knowledge",
+      "type": "object"
+    },
+    "LLMCapabilitiesConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for LLM system capabilities.",
+      "properties": {
+        "load_resource": {
+          "default": false,
+          "description": "Whether the LLM can load and access resource content.",
+          "title": "Load Resource",
+          "type": "boolean"
+        },
+        "get_resources": {
+          "default": false,
+          "description": "Whether the LLM can discover available resources.",
+          "title": "Get Resources",
+          "type": "boolean"
+        },
+        "install_package": {
+          "default": false,
+          "description": "Whether the LLM can install new Python packages for future tools.",
+          "title": "Install Package",
+          "type": "boolean"
+        },
+        "register_tool": {
+          "default": false,
+          "description": "Whether the LLM can register importable functions as new tools.",
+          "title": "Register Tool",
+          "type": "boolean"
+        },
+        "register_code_tool": {
+          "default": false,
+          "description": "Whether the LLM can create new tools from provided Python code.",
+          "title": "Register Code Tool",
+          "type": "boolean"
+        },
+        "chain_tools": {
+          "default": false,
+          "description": "Whether the LLM gains capability to chain multiple tool calls into one.",
+          "title": "Chain Tools",
+          "type": "boolean"
+        }
+      },
+      "title": "LLMCapabilitiesConfig",
+      "type": "object"
+    },
+    "LiteLLMProviderConfig": {
+      "description": "Configuration for LiteLLM-based provider.\n\nThis provider uses LiteLLM for handling model interactions, tool calls,\nand structured outputs. It provides fine-grained control over model behavior\nand validation.",
+      "properties": {
+        "type": {
+          "const": "litellm",
+          "default": "litellm",
+          "description": "Type discriminator for AI provider.",
+          "title": "Type",
+          "type": "string"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional name for the provider instance.",
+          "title": "Name"
+        },
+        "retries": {
+          "default": 1,
+          "description": "Maximum retries for model calls.",
+          "title": "Retries",
+          "type": "integer"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional model name to use. If not specified, uses default model.",
+          "title": "Model"
+        },
+        "model_settings": {
+          "description": "Additional model-specific settings passed to PydanticAI.",
+          "title": "Model Settings",
+          "type": "object"
+        }
+      },
+      "title": "LiteLLMProviderConfig",
+      "type": "object"
+    },
+    "MarkItDownConfig": {
+      "description": "Configuration for MarkItDown-based converter.",
+      "properties": {
+        "type": {
+          "const": "markitdown",
+          "default": "markitdown",
+          "description": "Type discriminator for MarkItDown converter.",
+          "title": "Type",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "description": "Whether this converter is currently active.",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "max_size": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional size limit in bytes.",
+          "title": "Max Size"
+        }
+      },
+      "title": "MarkItDownConfig",
+      "type": "object"
+    },
+    "MemoryConfig": {
+      "description": "Configuration for agent memory and history handling.",
+      "properties": {
+        "enable": {
+          "default": true,
+          "description": "Whether to enable history tracking.",
+          "title": "Enable",
+          "type": "boolean"
+        },
+        "max_tokens": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Maximum number of tokens to keep in context window.",
+          "title": "Max Tokens"
+        },
+        "max_messages": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Maximum number of messages to keep in context window.",
+          "title": "Max Messages"
+        },
+        "session": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SessionQuery"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Query configuration for loading previous session."
+        },
+        "provider": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Override default storage provider for this agent.\nIf None, uses manifest's default provider or first available.",
+          "title": "Provider"
+        }
+      },
+      "title": "MemoryConfig",
+      "type": "object"
+    },
+    "MemoryStorageConfig": {
+      "description": "In-memory storage configuration for testing.",
+      "properties": {
+        "type": {
+          "const": "memory",
+          "default": "memory",
+          "title": "Type",
+          "type": "string"
+        },
+        "log_messages": {
+          "default": true,
+          "description": "Whether to log messages",
+          "title": "Log Messages",
+          "type": "boolean"
+        },
+        "agents": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array",
+              "uniqueItems": true
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional set of agent names to include. If None, logs all agents.",
+          "title": "Agents"
+        },
+        "log_conversations": {
+          "default": true,
+          "description": "Whether to log conversations",
+          "title": "Log Conversations",
+          "type": "boolean"
+        },
+        "log_tool_calls": {
+          "default": true,
+          "description": "Whether to log tool calls",
+          "title": "Log Tool Calls",
+          "type": "boolean"
+        },
+        "log_commands": {
+          "default": true,
+          "description": "Whether to log command executions",
+          "title": "Log Commands",
+          "type": "boolean"
+        },
+        "log_context": {
+          "default": true,
+          "description": "Whether to log context messages.",
+          "title": "Log Context",
+          "type": "boolean"
+        }
+      },
+      "title": "MemoryStorageConfig",
+      "type": "object"
+    },
+    "MessageContent": {
+      "description": "Content item in a message.",
+      "properties": {
+        "type": {
+          "enum": [
+            "text",
+            "resource",
+            "image_url",
+            "image_base64"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "content": {
+          "title": "Content",
+          "type": "string"
+        },
+        "alt_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Alt Text"
+        }
+      },
+      "required": [
+        "type",
+        "content"
+      ],
+      "title": "MessageContent",
+      "type": "object"
+    },
+    "MessageCountCondition": {
+      "description": "Disconnect after N messages.",
+      "properties": {
+        "type": {
+          "const": "message_count",
+          "default": "message_count",
+          "description": "Type discriminator.",
+          "title": "Type",
+          "type": "string"
+        },
+        "max_messages": {
+          "description": "Maximum number of messages before triggering.",
+          "title": "Max Messages",
+          "type": "integer"
+        },
+        "count_mode": {
+          "default": "total",
+          "description": "How to count messages:\n- total: All messages in conversation\n- per_agent: Messages from each agent separately",
+          "enum": [
+            "total",
+            "per_agent"
+          ],
+          "title": "Count Mode",
+          "type": "string"
+        }
+      },
+      "required": [
+        "max_messages"
+      ],
+      "title": "MessageCountCondition",
+      "type": "object"
+    },
+    "OpenAPIToolsetConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for OpenAPI toolsets.",
+      "properties": {
+        "namespace": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional namespace prefix for tool names",
+          "title": "Namespace"
+        },
+        "type": {
+          "const": "openapi",
+          "default": "openapi",
+          "description": "Discriminator field identifying this as an OpenAPI toolset.",
+          "title": "Type",
+          "type": "string"
+        },
+        "spec": {
+          "description": "URL or path to the OpenAPI specification document.",
+          "title": "Spec",
+          "type": "string"
+        },
+        "base_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional base URL for API requests, overrides the one in spec.",
+          "title": "Base Url"
+        }
+      },
+      "required": [
+        "spec"
+      ],
+      "title": "OpenAPIToolsetConfig",
+      "type": "object"
+    },
+    "OrCondition": {
+      "description": "Require any condition to be met.",
+      "properties": {
+        "type": {
+          "const": "or",
+          "default": "or",
+          "description": "Type discriminator.",
+          "title": "Type",
+          "type": "string"
+        },
+        "conditions": {
+          "description": "List of conditions to check.",
+          "items": {
+            "$ref": "#/$defs/ConnectionCondition"
+          },
+          "title": "Conditions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "conditions"
+      ],
+      "title": "OrCondition",
+      "type": "object"
+    },
+    "PathResource": {
+      "description": "Resource loaded from a file or URL.",
+      "properties": {
+        "type": {
+          "const": "path",
+          "default": "path",
+          "description": "Discriminator field identifying this as a path-based resource.",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "description": "Human-readable description of the resource.",
+          "title": "Description",
+          "type": "string"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Canonical URI for this resource, set during registration if unset.",
+          "title": "Uri"
+        },
+        "processors": {
+          "description": "Processing steps to apply when loading this resource.",
+          "items": {
+            "$ref": "#/$defs/ProcessingStep"
+          },
+          "title": "Processors",
+          "type": "array"
+        },
+        "watch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WatchConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Configuration for watching the file for changes."
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "format": "path",
+              "type": "string"
+            }
+          ],
+          "description": "Path to the file or URL to load.",
+          "title": "Path"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "title": "PathResource",
+      "type": "object"
+    },
+    "PlainConverterConfig": {
+      "description": "Configuration for plain text fallback converter.",
+      "properties": {
+        "type": {
+          "const": "plain",
+          "default": "plain",
+          "description": "Type discriminator for plain text converter.",
+          "title": "Type",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "description": "Whether this converter is currently active.",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "force": {
+          "default": false,
+          "description": "Whether to attempt converting any file type.",
+          "title": "Force",
+          "type": "boolean"
+        }
+      },
+      "title": "PlainConverterConfig",
+      "type": "object"
+    },
+    "ProcessingStep": {
+      "description": "Configuration for a processing step.",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "parallel": {
+          "default": false,
+          "title": "Parallel",
+          "type": "boolean"
+        },
+        "required": {
+          "default": true,
+          "title": "Required",
+          "type": "boolean"
+        },
+        "kwargs": {
+          "title": "Kwargs",
+          "type": "object"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "ProcessingStep",
+      "type": "object"
+    },
+    "ProcessorConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for content processors.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "import_path": {
+          "title": "Import Path",
+          "type": "string"
+        },
+        "async_execution": {
+          "default": false,
+          "title": "Async Execution",
+          "type": "boolean"
+        },
+        "timeout": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Timeout"
+        },
+        "cache_results": {
+          "default": false,
+          "title": "Cache Results",
+          "type": "boolean"
+        },
+        "metadata": {
+          "title": "Metadata",
+          "type": "object"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "ProcessorConfig",
+      "type": "object"
+    },
+    "PromptConfig": {
+      "description": "Complete prompt configuration.",
+      "properties": {
+        "system_prompts": {
+          "additionalProperties": {
+            "$ref": "#/$defs/SystemPrompt"
+          },
+          "description": "Mapping of system prompt identifiers to their definitions.",
+          "title": "System Prompts",
+          "type": "object"
+        },
+        "template": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional template for combining prompts.\nHas access to prompts grouped by type.",
+          "title": "Template"
+        }
+      },
+      "title": "PromptConfig",
+      "type": "object"
+    },
+    "PromptMessage": {
+      "description": "A message in a prompt template.",
+      "properties": {
+        "role": {
+          "enum": [
+            "system",
+            "user",
+            "assistant",
+            "tool"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "content": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/MessageContent"
+            },
+            {
+              "items": {
+                "$ref": "#/$defs/MessageContent"
+              },
+              "type": "array"
+            }
+          ],
+          "default": "",
+          "title": "Content"
+        }
+      },
+      "required": [
+        "role"
+      ],
+      "title": "PromptMessage",
+      "type": "object"
+    },
+    "PromptParameter": {
+      "description": "Prompt argument with validation information.",
+      "properties": {
+        "name": {
+          "description": "Name of the argument as used in the prompt.",
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Human-readable description of the argument.",
+          "title": "Description"
+        },
+        "required": {
+          "default": false,
+          "description": "Whether this argument must be provided when formatting the prompt.",
+          "title": "Required",
+          "type": "boolean"
+        },
+        "type_hint": {
+          "default": "str",
+          "description": "Type annotation for the argument, defaults to str.",
+          "title": "Type Hint",
+          "type": "string"
+        },
+        "default": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Default value if argument is optional.",
+          "title": "Default"
+        },
+        "completion_function": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional function to provide argument completions.",
+          "title": "Completion Function"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "PromptParameter",
+      "type": "object"
+    },
+    "PydanticAIProviderConfig": {
+      "description": "Configuration for PydanticAI-based provider.\n\nThis provider uses PydanticAI for handling model interactions, tool calls,\nand structured outputs. It provides fine-grained control over model behavior\nand validation.",
+      "properties": {
+        "type": {
+          "const": "pydantic_ai",
+          "default": "pydantic_ai",
+          "description": "Type discriminator for AI provider.",
+          "title": "Type",
+          "type": "string"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional name for the provider instance.",
+          "title": "Name"
+        },
+        "end_strategy": {
+          "default": "early",
+          "description": "How to handle tool calls when final result found:\n- early: Stop when valid result found\n- complete: Run all requested tools\n- confirm: Ask user what to do",
+          "enum": [
+            "early",
+            "exhaustive"
+          ],
+          "title": "End Strategy",
+          "type": "string"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "discriminator": {
+                "mapping": {
+                  "cost-optimized": "#/$defs/CostOptimizedMultiModel",
+                  "delegation": "#/$defs/DelegationMultiModel",
+                  "fallback": "#/$defs/FallbackMultiModel",
+                  "import": "#/$defs/ImportModel",
+                  "input": "#/$defs/InputModel",
+                  "remote-input": "#/$defs/RemoteInputModel",
+                  "remote-proxy": "#/$defs/RemoteProxyModel",
+                  "string": "#/$defs/StringModel",
+                  "test": "#/$defs/_TestModelWrapper",
+                  "token-optimized": "#/$defs/TokenOptimizedMultiModel"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/StringModel"
+                },
+                {
+                  "$ref": "#/$defs/DelegationMultiModel"
+                },
+                {
+                  "$ref": "#/$defs/CostOptimizedMultiModel"
+                },
+                {
+                  "$ref": "#/$defs/TokenOptimizedMultiModel"
+                },
+                {
+                  "$ref": "#/$defs/FallbackMultiModel"
+                },
+                {
+                  "$ref": "#/$defs/InputModel"
+                },
+                {
+                  "$ref": "#/$defs/ImportModel"
+                },
+                {
+                  "$ref": "#/$defs/_TestModelWrapper"
+                },
+                {
+                  "$ref": "#/$defs/RemoteInputModel"
+                },
+                {
+                  "$ref": "#/$defs/RemoteProxyModel"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional model name to use. If not specified, uses default model.",
+          "title": "Model"
+        },
+        "result_retries": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Maximum retries for result validation.\nNone means use the global retry setting.",
+          "title": "Result Retries"
+        },
+        "defer_model_check": {
+          "default": false,
+          "description": "Whether to defer model evaluation until first run.\nTrue can speed up initialization but might fail later.",
+          "title": "Defer Model Check",
+          "type": "boolean"
+        },
+        "model_settings": {
+          "description": "Additional model-specific settings passed to PydanticAI.",
+          "title": "Model Settings",
+          "type": "object"
+        },
+        "validation_enabled": {
+          "default": true,
+          "description": "Whether to validate model outputs against schemas.",
+          "title": "Validation Enabled",
+          "type": "boolean"
+        },
+        "allow_text_fallback": {
+          "default": true,
+          "description": "Whether to accept plain text when structured output fails.",
+          "title": "Allow Text Fallback",
+          "type": "boolean"
+        }
+      },
+      "title": "PydanticAIProviderConfig",
+      "type": "object"
+    },
+    "RemoteInputModel": {
+      "additionalProperties": false,
+      "description": "Model that connects to a remote human operator.\n\nExample YAML configuration:\n    ```yaml\n    models:\n      remote-human:\n        type: remote-input\n        url: ws://localhost:8000/v1/chat/stream  # or http://localhost:8000/v1/chat\n        api_key: your-api-key\n    ```",
+      "properties": {
+        "type": {
+          "const": "remote-input",
+          "default": "remote-input",
+          "description": "Discriminator field for model type.",
+          "title": "Type",
+          "type": "string"
+        },
+        "url": {
+          "default": "ws://localhost:8000/v1/chat/stream",
+          "description": "URL of the remote input server.",
+          "title": "Url",
+          "type": "string"
+        },
+        "api_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "API key for authentication.",
+          "title": "Api Key"
+        }
+      },
+      "title": "RemoteInputModel",
+      "type": "object"
+    },
+    "RemoteProxyModel": {
+      "additionalProperties": false,
+      "description": "Model that proxies requests to a remote model server.\n\nExample YAML configuration:\n    ```yaml\n    models:\n      remote-gpt4:\n        type: remote-proxy\n        url: ws://model-server:8000/v1/completion  # or http://\n        api_key: your-api-key\n    ```",
+      "properties": {
+        "type": {
+          "const": "remote-proxy",
+          "default": "remote-proxy",
+          "description": "Discriminator field for model type.",
+          "title": "Type",
+          "type": "string"
+        },
+        "url": {
+          "default": "ws://localhost:8000/v1/completion/stream",
+          "description": "URL of the remote model server.",
+          "title": "Url",
+          "type": "string"
+        },
+        "api_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "API key for authentication.",
+          "title": "Api Key"
+        }
+      },
+      "title": "RemoteProxyModel",
+      "type": "object"
+    },
+    "ResponseField": {
+      "additionalProperties": false,
+      "description": "Field definition for inline response types.\n\nDefines a single field in an inline response definition, including:\n- Data type specification\n- Optional description\n- Validation constraints\n\nUsed by InlineResponseDefinition to structure response fields.",
+      "properties": {
+        "type": {
+          "description": "Data type of the response field",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional description of what this field represents",
+          "title": "Description"
+        },
+        "constraints": {
+          "description": "Optional validation constraints for the field",
+          "title": "Constraints",
+          "type": "object"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "ResponseField",
+      "type": "object"
+    },
+    "SQLStorageConfig": {
+      "description": "SQL database storage configuration.",
+      "properties": {
+        "type": {
+          "const": "sql",
+          "default": "sql",
+          "title": "Type",
+          "type": "string"
+        },
+        "log_messages": {
+          "default": true,
+          "description": "Whether to log messages",
+          "title": "Log Messages",
+          "type": "boolean"
+        },
+        "agents": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array",
+              "uniqueItems": true
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional set of agent names to include. If None, logs all agents.",
+          "title": "Agents"
+        },
+        "log_conversations": {
+          "default": true,
+          "description": "Whether to log conversations",
+          "title": "Log Conversations",
+          "type": "boolean"
+        },
+        "log_tool_calls": {
+          "default": true,
+          "description": "Whether to log tool calls",
+          "title": "Log Tool Calls",
+          "type": "boolean"
+        },
+        "log_commands": {
+          "default": true,
+          "description": "Whether to log command executions",
+          "title": "Log Commands",
+          "type": "boolean"
+        },
+        "log_context": {
+          "default": true,
+          "description": "Whether to log context messages.",
+          "title": "Log Context",
+          "type": "boolean"
+        },
+        "url": {
+          "description": "Database URL (e.g. sqlite:///history.db)",
+          "title": "Url",
+          "type": "string"
+        },
+        "pool_size": {
+          "default": 5,
+          "description": "Connection pool size",
+          "title": "Pool Size",
+          "type": "integer"
+        },
+        "auto_migration": {
+          "default": true,
+          "description": "Whether to automatically add missing columns",
+          "title": "Auto Migration",
+          "type": "boolean"
+        }
+      },
+      "title": "SQLStorageConfig",
+      "type": "object"
+    },
+    "SSEMCPServer": {
+      "description": "MCP server using Server-Sent Events transport.\n\nConnects to a server over HTTP with SSE for real-time communication.",
+      "properties": {
+        "type": {
+          "const": "sse",
+          "default": "sse",
+          "description": "Type discriminator for SSE servers.",
+          "title": "Type",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "description": "Whether this server is currently enabled.",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "environment": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Environment variables to pass to the server process.",
+          "title": "Environment"
+        },
+        "url": {
+          "description": "URL of the SSE server endpoint.",
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "SSEMCPServer",
+      "type": "object"
+    },
+    "SessionQuery": {
+      "description": "Query configuration for session recovery.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Session identifier to match.",
+          "title": "Name"
+        },
+        "agents": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array",
+              "uniqueItems": true
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Filter by agent names.",
+          "title": "Agents"
+        },
+        "since": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Time period to look back (e.g. \"1h\", \"2d\").",
+          "title": "Since"
+        },
+        "until": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Time period to look up to.",
+          "title": "Until"
+        },
+        "contains": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Filter by message content.",
+          "title": "Contains"
+        },
+        "roles": {
+          "anyOf": [
+            {
+              "items": {
+                "enum": [
+                  "user",
+                  "assistant",
+                  "system"
+                ],
+                "type": "string"
+              },
+              "type": "array",
+              "uniqueItems": true
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Only include specific message roles.",
+          "title": "Roles"
+        },
+        "limit": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Maximum number of messages to return.",
+          "title": "Limit"
+        },
+        "include_forwarded": {
+          "default": true,
+          "description": "Whether to include messages forwarded through agents.",
+          "title": "Include Forwarded",
+          "type": "boolean"
+        }
+      },
+      "title": "SessionQuery",
+      "type": "object"
+    },
+    "SourceResource": {
+      "description": "Resource from Python source code.",
+      "properties": {
+        "type": {
+          "const": "source",
+          "default": "source",
+          "description": "Discriminator field identifying this as a source code resource.",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "description": "Human-readable description of the resource.",
+          "title": "Description",
+          "type": "string"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Canonical URI for this resource, set during registration if unset.",
+          "title": "Uri"
+        },
+        "processors": {
+          "description": "Processing steps to apply when loading this resource.",
+          "items": {
+            "$ref": "#/$defs/ProcessingStep"
+          },
+          "title": "Processors",
+          "type": "array"
+        },
+        "watch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WatchConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Configuration for file system watching, if supported."
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "import_path": {
+          "description": "Dotted import path to the Python module or object.",
+          "title": "Import Path",
+          "type": "string"
+        },
+        "recursive": {
+          "default": false,
+          "description": "Whether to include submodules recursively.",
+          "title": "Recursive",
+          "type": "boolean"
+        },
+        "include_tests": {
+          "default": false,
+          "description": "Whether to include test files and directories.",
+          "title": "Include Tests",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "SourceResource",
+      "type": "object"
+    },
+    "StaticPrompt": {
+      "additionalProperties": false,
+      "description": "Static prompt defined by message list.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "description": {
+          "description": "Human-readable description of what this prompt does.",
+          "title": "Description",
+          "type": "string"
+        },
+        "arguments": {
+          "description": "List of arguments that this prompt accepts.",
+          "items": {
+            "$ref": "#/$defs/PromptParameter"
+          },
+          "title": "Arguments",
+          "type": "array"
+        },
+        "metadata": {
+          "description": "Additional metadata for storing custom prompt information.",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "messages": {
+          "description": "List of messages that make up this prompt.",
+          "items": {
+            "$ref": "#/$defs/PromptMessage"
+          },
+          "title": "Messages",
+          "type": "array"
+        },
+        "type": {
+          "const": "text",
+          "default": "text",
+          "description": "Discriminator field identifying this as a static text prompt.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "messages"
+      ],
+      "title": "StaticPrompt",
+      "type": "object"
+    },
+    "StdioMCPServer": {
+      "description": "MCP server started via stdio.\n\nUses subprocess communication through standard input/output streams.",
+      "properties": {
+        "type": {
+          "const": "stdio",
+          "default": "stdio",
+          "description": "Type discriminator for stdio servers.",
+          "title": "Type",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "description": "Whether this server is currently enabled.",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "environment": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Environment variables to pass to the server process.",
+          "title": "Environment"
+        },
+        "command": {
+          "description": "Command to execute (e.g. \"pipx\", \"python\", \"node\").",
+          "title": "Command",
+          "type": "string"
+        },
+        "args": {
+          "description": "Command arguments (e.g. [\"run\", \"some-server\", \"--debug\"]).",
+          "items": {
+            "type": "string"
+          },
+          "title": "Args",
+          "type": "array"
+        }
+      },
+      "required": [
+        "command"
+      ],
+      "title": "StdioMCPServer",
+      "type": "object"
+    },
+    "StorageConfig": {
+      "description": "Global storage configuration.",
+      "properties": {
+        "providers": {
+          "anyOf": [
+            {
+              "items": {
+                "discriminator": {
+                  "mapping": {
+                    "file": "#/$defs/FileStorageConfig",
+                    "memory": "#/$defs/MemoryStorageConfig",
+                    "sql": "#/$defs/SQLStorageConfig",
+                    "text_file": "#/$defs/TextLogConfig"
+                  },
+                  "propertyName": "type"
+                },
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/SQLStorageConfig"
+                  },
+                  {
+                    "$ref": "#/$defs/FileStorageConfig"
+                  },
+                  {
+                    "$ref": "#/$defs/TextLogConfig"
+                  },
+                  {
+                    "$ref": "#/$defs/MemoryStorageConfig"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Providers"
+        },
+        "default_provider": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Default Provider"
+        },
+        "agents": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array",
+              "uniqueItems": true
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Agents"
+        },
+        "filter_mode": {
+          "default": "and",
+          "enum": [
+            "and",
+            "override"
+          ],
+          "title": "Filter Mode",
+          "type": "string"
+        },
+        "log_messages": {
+          "default": true,
+          "title": "Log Messages",
+          "type": "boolean"
+        },
+        "log_conversations": {
+          "default": true,
+          "title": "Log Conversations",
+          "type": "boolean"
+        },
+        "log_tool_calls": {
+          "default": true,
+          "title": "Log Tool Calls",
+          "type": "boolean"
+        },
+        "log_commands": {
+          "default": true,
+          "title": "Log Commands",
+          "type": "boolean"
+        },
+        "log_context": {
+          "default": true,
+          "title": "Log Context",
+          "type": "boolean"
+        }
+      },
+      "title": "StorageConfig",
+      "type": "object"
+    },
+    "StringModel": {
+      "additionalProperties": false,
+      "description": "Wrapper for string model names.",
+      "properties": {
+        "type": {
+          "const": "string",
+          "default": "string",
+          "title": "Type",
+          "type": "string"
+        },
+        "identifier": {
+          "title": "Identifier",
+          "type": "string"
+        }
+      },
+      "required": [
+        "identifier"
+      ],
+      "title": "StringModel",
+      "type": "object"
+    },
+    "SystemPrompt": {
+      "description": "Individual system prompt definition.",
+      "properties": {
+        "content": {
+          "description": "The actual prompt text.",
+          "title": "Content",
+          "type": "string"
+        },
+        "type": {
+          "default": "role",
+          "description": "Categorization for template organization.",
+          "enum": [
+            "role",
+            "methodology",
+            "quality",
+            "task"
+          ],
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "content"
+      ],
+      "title": "SystemPrompt",
+      "type": "object"
+    },
+    "TestModel": {
+      "properties": {
+        "call_tools": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "const": "all",
+              "type": "string"
+            }
+          ],
+          "default": "all",
+          "title": "Call Tools"
+        },
+        "custom_result_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Custom Result Text"
+        },
+        "custom_result_args": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Custom Result Args"
+        },
+        "seed": {
+          "default": 0,
+          "title": "Seed",
+          "type": "integer"
+        },
+        "agent_model_function_tools": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/ToolDefinition"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Agent Model Function Tools"
+        },
+        "agent_model_allow_text_result": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Agent Model Allow Text Result"
+        },
+        "agent_model_result_tools": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/ToolDefinition"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Agent Model Result Tools"
+        }
+      },
+      "title": "TestModel",
+      "type": "object"
+    },
+    "TextLogConfig": {
+      "description": "Text log configuration.",
+      "properties": {
+        "type": {
+          "const": "text_file",
+          "default": "text_file",
+          "title": "Type",
+          "type": "string"
+        },
+        "log_messages": {
+          "default": true,
+          "description": "Whether to log messages",
+          "title": "Log Messages",
+          "type": "boolean"
+        },
+        "agents": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array",
+              "uniqueItems": true
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional set of agent names to include. If None, logs all agents.",
+          "title": "Agents"
+        },
+        "log_conversations": {
+          "default": true,
+          "description": "Whether to log conversations",
+          "title": "Log Conversations",
+          "type": "boolean"
+        },
+        "log_tool_calls": {
+          "default": true,
+          "description": "Whether to log tool calls",
+          "title": "Log Tool Calls",
+          "type": "boolean"
+        },
+        "log_commands": {
+          "default": true,
+          "description": "Whether to log command executions",
+          "title": "Log Commands",
+          "type": "boolean"
+        },
+        "log_context": {
+          "default": true,
+          "description": "Whether to log context messages.",
+          "title": "Log Context",
+          "type": "boolean"
+        },
+        "path": {
+          "description": "Path to log file",
+          "title": "Path",
+          "type": "string"
+        },
+        "format": {
+          "default": "chronological",
+          "description": "Log format template to use",
+          "enum": [
+            "chronological",
+            "conversations"
+          ],
+          "title": "Format",
+          "type": "string"
+        },
+        "template": {
+          "anyOf": [
+            {
+              "enum": [
+                "chronological",
+                "conversations"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": "chronological",
+          "description": "Template to use: either predefined name or path to custom template",
+          "title": "Template"
+        },
+        "encoding": {
+          "default": "utf-8",
+          "description": "File encoding",
+          "title": "Encoding",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "title": "TextLogConfig",
+      "type": "object"
+    },
+    "TextResource": {
+      "description": "Raw text resource.",
+      "properties": {
+        "type": {
+          "const": "text",
+          "default": "text",
+          "description": "Discriminator field identifying this as a text-based resource.",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "description": "Human-readable description of the resource.",
+          "title": "Description",
+          "type": "string"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Canonical URI for this resource, set during registration if unset.",
+          "title": "Uri"
+        },
+        "processors": {
+          "description": "Processing steps to apply when loading this resource.",
+          "items": {
+            "$ref": "#/$defs/ProcessingStep"
+          },
+          "title": "Processors",
+          "type": "array"
+        },
+        "watch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WatchConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Configuration for file system watching, if supported."
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "content": {
+          "description": "The actual text content of the resource.",
+          "title": "Content",
+          "type": "string"
+        }
+      },
+      "required": [
+        "content"
+      ],
+      "title": "TextResource",
+      "type": "object"
+    },
+    "TimeCondition": {
+      "description": "Disconnect after time period.",
+      "properties": {
+        "type": {
+          "const": "time",
+          "default": "time",
+          "description": "Type discriminator.",
+          "title": "Type",
+          "type": "string"
+        },
+        "duration": {
+          "description": "How long the connection should stay active.",
+          "format": "duration",
+          "title": "Duration",
+          "type": "string"
+        }
+      },
+      "required": [
+        "duration"
+      ],
+      "title": "TimeCondition",
+      "type": "object"
+    },
+    "TimeEventConfig": {
+      "description": "Time-based event source configuration.",
+      "properties": {
+        "type": {
+          "const": "time",
+          "default": "time",
+          "description": "Type discriminator for time events.",
+          "title": "Type",
+          "type": "string"
+        },
+        "name": {
+          "description": "Unique identifier for this event source.",
+          "title": "Name",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "description": "Whether this event source is active.",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "template": {
+          "default": "\n{%- if include_timestamp %}at {{ timestamp }}{% endif %}\nEvent from {{ source }}:\n{%- if include_metadata %}\nMetadata:\n{% for key, value in metadata.items() %}\n{{ key }}: {{ value }}\n{% endfor %}\n{% endif %}\n{{ content }}\n",
+          "description": "Jinja2 template for formatting events.",
+          "title": "Template",
+          "type": "string"
+        },
+        "include_metadata": {
+          "default": true,
+          "description": "Control metadata visibility in template.",
+          "title": "Include Metadata",
+          "type": "boolean"
+        },
+        "include_timestamp": {
+          "default": true,
+          "description": "Control timestamp visibility in template.",
+          "title": "Include Timestamp",
+          "type": "boolean"
+        },
+        "schedule": {
+          "description": "Cron expression for scheduling (e.g. '0 9 * * 1-5' for weekdays at 9am)",
+          "title": "Schedule",
+          "type": "string"
+        },
+        "prompt": {
+          "description": "Prompt to send to the agent when the schedule triggers.",
+          "title": "Prompt",
+          "type": "string"
+        },
+        "timezone": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Timezone for schedule (defaults to system timezone)",
+          "title": "Timezone"
+        },
+        "skip_missed": {
+          "default": false,
+          "description": "Whether to skip executions missed while agent was inactive",
+          "title": "Skip Missed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "schedule",
+        "prompt"
+      ],
+      "title": "TimeEventConfig",
+      "type": "object"
+    },
+    "TokenOptimizedMultiModel": {
+      "additionalProperties": false,
+      "description": "Multi-model that selects based on input token count.\n\nExample YAML configuration:\n    ```yaml\n    model:\n      type: token-optimized\n      models:\n        - openai:gpt-4  # 8k context\n        - openai:gpt-4-32k  # 32k context\n        - openai:gpt-3.5-turbo-16k  # 16k context\n      strategy: efficient  # Use smallest sufficient context window\n    ```",
+      "properties": {
+        "type": {
+          "const": "token-optimized",
+          "default": "token-optimized",
+          "title": "Type",
+          "type": "string"
+        },
+        "models": {
+          "description": "List of models to use.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Models",
+          "type": "array"
+        },
+        "strategy": {
+          "default": "efficient",
+          "description": "Model selection strategy.",
+          "enum": [
+            "efficient",
+            "maximum_context"
+          ],
+          "title": "Strategy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "models"
+      ],
+      "title": "TokenOptimizedMultiModel",
+      "type": "object"
+    },
+    "TokenThresholdCondition": {
+      "description": "Disconnect after token threshold is reached.",
+      "properties": {
+        "type": {
+          "const": "token_threshold",
+          "default": "token_threshold",
+          "description": "Type discriminator.",
+          "title": "Type",
+          "type": "string"
+        },
+        "max_tokens": {
+          "description": "Maximum number of tokens allowed.",
+          "title": "Max Tokens",
+          "type": "integer"
+        },
+        "count_type": {
+          "default": "total",
+          "description": "What tokens to count:\n- total: All tokens used\n- prompt: Only prompt tokens\n- completion: Only completion tokens",
+          "enum": [
+            "total",
+            "prompt",
+            "completion"
+          ],
+          "title": "Count Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "max_tokens"
+      ],
+      "title": "TokenThresholdCondition",
+      "type": "object"
+    },
+    "ToolConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for a tool.",
+      "properties": {
+        "import_path": {
+          "description": "Import path to the tool implementation (e.g. 'mymodule.tools.MyTool')",
+          "title": "Import Path",
+          "type": "string"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional override for the tool's display name",
+          "title": "Name"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional override for the tool's description",
+          "title": "Description"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "ToolConfig",
+      "type": "object"
+    },
+    "ToolDefinition": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "parameters_json_schema": {
+          "title": "Parameters Json Schema",
+          "type": "object"
+        },
+        "outer_typed_dict_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Outer Typed Dict Key"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "parameters_json_schema"
+      ],
+      "title": "ToolDefinition",
+      "type": "object"
+    },
+    "WatchConfig": {
+      "additionalProperties": false,
+      "description": "Watch configuration for resources.",
+      "properties": {
+        "enabled": {
+          "default": false,
+          "description": "Whether the watch is enabled",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "patterns": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of pathspec patterns (.gitignore style)",
+          "title": "Patterns"
+        },
+        "ignore_file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Path to .gitignore-style file",
+          "title": "Ignore File"
+        }
+      },
+      "title": "WatchConfig",
+      "type": "object"
+    },
+    "WebhookConfig": {
+      "description": "Webhook event source.\n\nListens for HTTP requests and triggers agent actions when:\n- POST requests are received at the configured endpoint\n- Request content matches any defined filters",
+      "properties": {
+        "type": {
+          "const": "webhook",
+          "default": "webhook",
+          "description": "Type discriminator for webhook sources.",
+          "title": "Type",
+          "type": "string"
+        },
+        "name": {
+          "description": "Unique identifier for this event source.",
+          "title": "Name",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "description": "Whether this event source is active.",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "template": {
+          "default": "\n{%- if include_timestamp %}at {{ timestamp }}{% endif %}\nEvent from {{ source }}:\n{%- if include_metadata %}\nMetadata:\n{% for key, value in metadata.items() %}\n{{ key }}: {{ value }}\n{% endfor %}\n{% endif %}\n{{ content }}\n",
+          "description": "Jinja2 template for formatting events.",
+          "title": "Template",
+          "type": "string"
+        },
+        "include_metadata": {
+          "default": true,
+          "description": "Control metadata visibility in template.",
+          "title": "Include Metadata",
+          "type": "boolean"
+        },
+        "include_timestamp": {
+          "default": true,
+          "description": "Control timestamp visibility in template.",
+          "title": "Include Timestamp",
+          "type": "boolean"
+        },
+        "port": {
+          "description": "Port to listen on.",
+          "title": "Port",
+          "type": "integer"
+        },
+        "path": {
+          "description": "URL path to handle requests.",
+          "title": "Path",
+          "type": "string"
+        },
+        "secret": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional secret for request validation.",
+          "title": "Secret"
+        }
+      },
+      "required": [
+        "name",
+        "port",
+        "path"
+      ],
+      "title": "WebhookConfig",
+      "type": "object"
+    },
+    "WordMatchCondition": {
+      "description": "Disconnect when word/phrase is found in message.",
+      "properties": {
+        "type": {
+          "const": "word_match",
+          "default": "word_match",
+          "description": "Type discriminator.",
+          "title": "Type",
+          "type": "string"
+        },
+        "words": {
+          "description": "Words or phrases to match in messages.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Words",
+          "type": "array"
+        },
+        "case_sensitive": {
+          "default": false,
+          "description": "Whether to match case-sensitively.",
+          "title": "Case Sensitive",
+          "type": "boolean"
+        },
+        "mode": {
+          "default": "any",
+          "description": "Match mode:\n- any: Trigger if any word matches\n- all: Require all words to match",
+          "enum": [
+            "any",
+            "all"
+          ],
+          "title": "Mode",
+          "type": "string"
+        }
+      },
+      "required": [
+        "words"
+      ],
+      "title": "WordMatchCondition",
+      "type": "object"
+    },
+    "WorkerConfig": {
+      "description": "Configuration for a worker agent.\n\nWorker agents are agents that are registered as tools with a parent agent.\nThis allows building hierarchies and specializations of agents.",
+      "properties": {
+        "name": {
+          "description": "Name of the agent to use as a worker",
+          "title": "Name",
+          "type": "string"
+        },
+        "reset_history_on_run": {
+          "default": true,
+          "description": "Whether to clear worker's conversation history before each run.\nTrue (default): Fresh conversation each time\nFalse: Maintain conversation context between runs",
+          "title": "Reset History On Run",
+          "type": "boolean"
+        },
+        "pass_message_history": {
+          "default": false,
+          "description": "Whether to pass parent agent's message history to worker.\nTrue: Worker sees parent's conversation context\nFalse (default): Worker only sees current request",
+          "title": "Pass Message History",
+          "type": "boolean"
+        },
+        "share_context": {
+          "default": false,
+          "description": "Whether to share parent agent's context/dependencies with worker.\nTrue: Worker has access to parent's context data\nFalse (default): Worker uses own isolated context",
+          "title": "Share Context",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "WorkerConfig",
+      "type": "object"
+    },
+    "_TestModelWrapper": {
+      "additionalProperties": false,
+      "description": "Wrapper for TestModel.",
+      "properties": {
+        "type": {
+          "const": "test",
+          "default": "test",
+          "title": "Type",
+          "type": "string"
+        },
+        "model": {
+          "$ref": "#/$defs/TestModel"
+        }
+      },
+      "required": [
+        "model"
+      ],
+      "title": "_TestModelWrapper",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Complete agent configuration manifest defining all available agents.\n\nThis is the root configuration that:\n- Defines available response types (both inline and imported)\n- Configures all agent instances and their settings\n- Sets up custom role definitions and capabilities\n- Manages environment configurations\n\nA single manifest can define multiple agents that can work independently\nor collaborate through the orchestrator.",
+  "properties": {
+    "INHERIT": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Inheritance references.",
+      "title": "Inherit"
+    },
+    "agents": {
+      "additionalProperties": {
+        "$ref": "#/$defs/AgentConfig"
+      },
+      "description": "Mapping of agent IDs to their configurations",
+      "title": "Agents",
+      "type": "object"
+    },
+    "storage": {
+      "$ref": "#/$defs/StorageConfig",
+      "description": "Storage provider configuration."
+    },
+    "conversion": {
+      "$ref": "#/$defs/ConversionConfig",
+      "description": "Document conversion configuration."
+    },
+    "responses": {
+      "additionalProperties": {
+        "discriminator": {
+          "mapping": {
+            "import": "#/$defs/ImportedResponseDefinition",
+            "inline": "#/$defs/InlineResponseDefinition"
+          },
+          "propertyName": "type"
+        },
+        "oneOf": [
+          {
+            "$ref": "#/$defs/InlineResponseDefinition"
+          },
+          {
+            "$ref": "#/$defs/ImportedResponseDefinition"
+          }
+        ]
+      },
+      "description": "Mapping of response names to their definitions",
+      "title": "Responses",
+      "type": "object"
+    },
+    "jobs": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Job"
+      },
+      "description": "Pre-defined jobs, ready to be used by agents.",
+      "title": "Jobs",
+      "type": "object"
+    },
+    "mcp_servers": {
+      "description": "List of MCP server configurations:\n- str entries are converted to StdioMCPServer\n- MCPServerConfig for full server configuration",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "discriminator": {
+              "mapping": {
+                "sse": "#/$defs/SSEMCPServer",
+                "stdio": "#/$defs/StdioMCPServer"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/StdioMCPServer"
+              },
+              {
+                "$ref": "#/$defs/SSEMCPServer"
+              }
+            ]
+          }
+        ]
+      },
+      "title": "Mcp Servers",
+      "type": "array"
+    },
+    "prompts": {
+      "$ref": "#/$defs/PromptConfig"
+    }
+  },
+  "title": "AgentsManifest",
+  "type": "object"
+}
