@@ -1,0 +1,2 @@
+[console_scripts]
+topsis = Topsis_Abhiraj_Singh_Jhajj_102217094.main:main
