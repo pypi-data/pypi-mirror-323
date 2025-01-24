@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: mrscrub
+Version: 0.3.1
+Summary: MR data deidentifer
+Home-page: https://github.com/harvard-nrg/mrscrub
+Author: Neuroinformatics Research Group
+Author-email: info@neuroinfo.org
+License-File: LICENSE
+Requires-Dist: pydicom
+Requires-Dist: pyyaml
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
