@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+structured_logprobs/__init__.py
+structured_logprobs/helpers.py
+structured_logprobs/main.py
+structured_logprobs.egg-info/PKG-INFO
+structured_logprobs.egg-info/SOURCES.txt
+structured_logprobs.egg-info/dependency_links.txt
+structured_logprobs.egg-info/requires.txt
+structured_logprobs.egg-info/top_level.txt
+tests/test_main.py
