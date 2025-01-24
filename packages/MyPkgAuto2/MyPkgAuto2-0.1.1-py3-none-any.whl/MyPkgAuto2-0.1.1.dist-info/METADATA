@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: MyPkgAuto2
+Version: 0.1.1
+Summary: A simple Python package that says Hello, World!
+Home-page: https://github.com/yourusername/helloworld
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# MyPkgAuto2
+
+This is a simple Python package that prints "Hello, World!".
+
+## Installation
+
+`pip install MyPkgAuto2`
+
+## Usage
+```
+from MyPkgAuto2 import auto2_say_hello
+auto2_say_hello()
+```
+
+# Changelog
+
+## [0.1.0] - 2025-01-24
+- 初始版本，功能包括简单的 `auto2_say_hello()`。

@@ -1,0 +1,2 @@
+MyPkgAuto2
+tests
