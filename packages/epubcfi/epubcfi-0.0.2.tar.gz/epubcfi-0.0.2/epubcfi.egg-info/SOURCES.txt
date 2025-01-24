@@ -1,0 +1,7 @@
+README.md
+setup.py
+epubcfi/__init__.py
+epubcfi.egg-info/PKG-INFO
+epubcfi.egg-info/SOURCES.txt
+epubcfi.egg-info/dependency_links.txt
+epubcfi.egg-info/top_level.txt
