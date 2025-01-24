@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+G4_Lib/G4_Lib.py
+G4_Lib/__init__.py
+G4_Lib.egg-info/PKG-INFO
+G4_Lib.egg-info/SOURCES.txt
+G4_Lib.egg-info/dependency_links.txt
+G4_Lib.egg-info/requires.txt
+G4_Lib.egg-info/top_level.txt
