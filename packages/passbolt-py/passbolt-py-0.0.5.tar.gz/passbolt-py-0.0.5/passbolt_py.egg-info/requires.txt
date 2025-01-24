@@ -1,0 +1,13 @@
+PGPy==0.6.0
+httpx==0.26.0
+python-gnupg==0.5.2
+
+[all]
+pycodestyle
+pytest-cov
+pytest>=6.2.2
+
+[test]
+pycodestyle
+pytest-cov
+pytest>=6.2.2
