@@ -1,0 +1,13 @@
+setup.py
+SuperBrowserAPI.egg-info/PKG-INFO
+SuperBrowserAPI.egg-info/SOURCES.txt
+SuperBrowserAPI.egg-info/dependency_links.txt
+SuperBrowserAPI.egg-info/requires.txt
+SuperBrowserAPI.egg-info/top_level.txt
+superbrowserapi/__init__.py
+superbrowserapi/_code.py
+superbrowserapi.egg-info/PKG-INFO
+superbrowserapi.egg-info/SOURCES.txt
+superbrowserapi.egg-info/dependency_links.txt
+superbrowserapi.egg-info/requires.txt
+superbrowserapi.egg-info/top_level.txt
