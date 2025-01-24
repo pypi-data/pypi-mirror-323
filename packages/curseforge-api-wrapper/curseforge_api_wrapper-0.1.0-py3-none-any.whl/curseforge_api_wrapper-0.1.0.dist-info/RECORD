@@ -1,0 +1,9 @@
+curseforge_api_wrapper/__init__.py,sha256=WHxQ9FSnG4xdg-tAokYIxTpPnLjjyA0L3tHJ4qU973s,461
+curseforge_api_wrapper/client.py,sha256=Qo6ou8VWxahDwUfb2sdsFkVoyIT4GVVseyq3I0HvQZI,6546
+curseforge_api_wrapper/expections.py,sha256=Sjj0r27dhRB1K3HEC8nZcCXqRmeavBAyHLdYEec0bOs,3037
+curseforge_api_wrapper/models.py,sha256=ThcqgM0m6l3jZNfYRZtKPIP5jXMDGSnoAsX-E_5fldY,4697
+curseforge_api_wrapper/network.py,sha256=Lh-c7Pi_rszrUeNMUBAmDqQBon__rRkSPC40qKhOKjI,2414
+curseforge_api_wrapper-0.1.0.dist-info/METADATA,sha256=DLeqmTmglAPq2Razi_HMXur4m6oreouFe0Q8Biqhss4,1400
+curseforge_api_wrapper-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+curseforge_api_wrapper-0.1.0.dist-info/licenses/LICENSE,sha256=owVq0ba3tXdk4OOpgehj94p2OuWOxMGSqnFYbedjDE8,1083
+curseforge_api_wrapper-0.1.0.dist-info/RECORD,,
