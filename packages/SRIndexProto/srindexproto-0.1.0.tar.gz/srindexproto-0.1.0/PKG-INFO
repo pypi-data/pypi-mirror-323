@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: SRIndexProto
+Version: 0.1.0
+Summary: Default template for PDM package
+Author-Email: nunininu <sgcho0907@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# SRIndexProto
+Prototype for calculating Social Relationship Index 
+
+# Use
+```bash
+# nuni-org <money> <gift> <celebration> <freq-call> <freq-msg>
+
+```
+
+## Requirements:
