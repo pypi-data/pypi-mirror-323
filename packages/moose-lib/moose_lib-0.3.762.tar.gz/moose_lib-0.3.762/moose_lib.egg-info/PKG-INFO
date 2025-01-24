@@ -1,0 +1,5 @@
+Metadata-Version: 2.2
+Name: moose_lib
+Version: 0.3.762
+Requires-Dist: pyjwt[crypto]==2.9.0
+Dynamic: requires-dist
