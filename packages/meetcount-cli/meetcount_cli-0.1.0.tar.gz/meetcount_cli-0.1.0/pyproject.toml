@@ -1,0 +1,21 @@
+[project]
+name = "meetcount-cli"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "et.abbey",email = "abbeyemmanueltetteh@gmail.com"}
+]
+
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "typer (>=0.15.1,<0.16.0)",
+    "certbot (>=3.1.0,<4.0.0)"
+]
+
+[project.scripts]
+meetocunt-cli = "meetcount_cli.main:app"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
