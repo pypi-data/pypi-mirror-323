@@ -1,0 +1,102 @@
+#region modules
+from fp.flows.fullgridflow import FullGridFlow
+from fp.flows.flow_manage import FlowManage
+from fp.jobs.relax import RelaxJob
+from fp.jobs.scf import ScfJob
+from fp.jobs.md import MdJob
+from fp.jobs.abacus import AbacusJob
+from fp.jobs.dfpt import DfptJob
+from fp.jobs.phonopy import PhonopyJob
+from fp.jobs.phbands import PhbandsJob
+from fp.jobs.phdos import PhdosJob
+from fp.jobs.phmodes import PhmodesJob
+from fp.jobs.dos import DosJob
+from fp.jobs.pdos import PdosJob
+from fp.jobs.dftelbands import DftelbandsJob
+from fp.jobs.kpdos import KpdosJob
+from fp.jobs.wannier import WannierJob
+from fp.jobs.wfngeneral import WfnJob
+from fp.jobs.wfngeneral import WfnqJob
+from fp.jobs.epw import EpwJob
+from fp.jobs.elph import ElphJob
+from fp.jobs.wfngeneral import WfnfiJob
+from fp.jobs.wfngeneral import WfnqfiJob
+from fp.jobs.epsilon import EpsilonJob
+from fp.jobs.sigma import SigmaJob
+from fp.jobs.inteqp import InteqpJob
+from fp.jobs.kernel import KernelJob
+from fp.jobs.abs import AbsorptionJob
+from fp.jobs.abs import PlotxctJob
+from fp.jobs.bseq import BseqJob
+from fp.jobs.xctph import XctPhJob
+from fp.jobs.ste import SteJob
+# from fp.jobs.xctpol import XctPolJob
+from fp.jobs.convergence import ConvergenceJob
+from ase import Atoms
+from ase.io import read, write
+import numpy as np
+import os
+#endregion
+
+#region variables
+#endregion
+
+#region functions
+def main():
+    list_of_steps = [
+        RelaxJob,
+        ScfJob,
+        AbacusJob,
+        # GpawJob,
+        # PyscfJob,
+        DfptJob,
+        PhbandsJob,
+        PhdosJob,
+        PhmodesJob,
+        DftelbandsJob,
+        KpdosJob,
+        DosJob,
+        PdosJob,
+        WannierJob,
+        WfnJob,
+        EpwJob,
+        ElphJob,
+        WfnqJob,
+        # WfnfiJob,
+        # WfnqfiJob,
+        PhonopyJob,
+        # MdJob,
+        EpsilonJob,
+        SigmaJob,
+        InteqpJob,
+        KernelJob,
+        AbsorptionJob,
+        PlotxctJob,
+        BseqJob,
+        XctPhJob,
+        # EsfJob,
+        # XctPolJob,
+        SteJob,
+        # EsdJob,
+        # ConvergenceJob,
+    ]
+
+    FullGridFlow.create_from_list(
+        source_flowfile='./flow.yml',
+        source_input_dict=None,
+        list_of_steps=list_of_steps,
+        dest_directory='./',
+        create_interactive=True,
+        copy_additional=[],
+        # start_idx=0,
+        # stop_idx=-1,
+    )
+#endregion
+
+#region classes
+#endregion
+
+#region main
+if __name__=='__main__':
+    main()
+#endregion
