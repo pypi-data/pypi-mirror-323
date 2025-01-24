@@ -1,0 +1,9 @@
+skewnorm/__init__.py,sha256=HzW_NeiEjwtfdJc3VWde7fS3JQtfVlEp2vcIW6hCAL8,233
+skewnorm/normalization.py,sha256=My_B5vqrTBZk01uTJoNsDWtfvv1Ias2W4MRkyl4jVCA,2488
+tests/__init__.py,sha256=BaodzxLjOONVax1WNQwtnfnbRRv0rXiwJwV4dEwRBa0,98
+tests/test_normalization.py,sha256=fmNpu_dG_k2-gXQOGsyEF08-sPMPpI8ZCwmi3b7mL9U,1510
+skewnormlib-0.1.0.dist-info/LICENSE,sha256=3fWyBgXe9Y6MVeGBxzMMY-lYAoLkPvmn3oTM3bwXtWE,1093
+skewnormlib-0.1.0.dist-info/METADATA,sha256=N34cHJSmo_pSp6RVUdkXw995tA-jgniuQuE8XRqLW2o,6024
+skewnormlib-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+skewnormlib-0.1.0.dist-info/top_level.txt,sha256=1Mq0mqixSVRIwEsiIyoYBf_GCIJMdtVBug0nT-xeGwQ,15
+skewnormlib-0.1.0.dist-info/RECORD,,
