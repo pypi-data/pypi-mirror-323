@@ -1,0 +1,5 @@
+[console_scripts]
+household-account = household_account.where_now:entry_point
+
+[gui_scripts]
+
