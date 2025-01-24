@@ -1,0 +1,2 @@
+[console_scripts]
+ewoksweb = ewoksserver.__main__:main

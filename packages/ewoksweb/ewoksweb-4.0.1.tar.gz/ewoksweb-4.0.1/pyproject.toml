@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=46.4"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ewoksweb"
+version = "4.0.1"
+authors = [{ name = "ESRF", email = "dau-pydev@esrf.fr" }]
+description = "Web-based frontend for creating, visualizing and executing ewoks workflows."
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE.md" }
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.8"
+dependencies = ["ewoksserver[frontend] >=2.0.0rc1,<3"]
+
+[project.urls]
+Homepage = "https://gitlab.esrf.fr/workflow/ewoks/ewoksweb"
+Documentation = "https://workflow.gitlab-pages.esrf.fr/ewoks/ewoksweb"
+Repository = "https://gitlab.esrf.fr/workflow/ewoks/ewoksweb"
+Issues = "https://gitlab.esrf.fr/workflow/ewoks/ewoksweb/issues"
+Changelog = "https://gitlab.esrf.fr/workflow/ewoks/ewoksweb/-/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = ["black >=22", "flake8 >=4"]
+doc = ["sphinx >=4.5", "pydata_sphinx_theme"]
+
+[tool.setuptools]
+package-dir = { "" = "pysrc" }
+
+[tool.setuptools.packages.find]
+where = ["pysrc"]
+
+[tool.setuptools.package-data]
+"ewoksweb" = [
+  'static/*',
+  'static/*/*.*',
+  'static/*/*/*.*',
+  'tests/resources/icons/*',
+  'tests/resources/workflows/*',
+]
+
+[project.scripts]
+ewoksweb = "ewoksserver.__main__:main"

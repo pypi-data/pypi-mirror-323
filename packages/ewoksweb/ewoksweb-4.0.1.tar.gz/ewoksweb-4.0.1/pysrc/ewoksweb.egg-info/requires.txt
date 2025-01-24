@@ -1,0 +1,9 @@
+ewoksserver[frontend]<3,>=2.0.0rc1
+
+[dev]
+black>=22
+flake8>=4
+
+[doc]
+sphinx>=4.5
+pydata_sphinx_theme

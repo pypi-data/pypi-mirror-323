@@ -1,0 +1,66 @@
+{
+  "graph": {
+    "id": "Ewoks-Tasks",
+    "label": "Ewoks-Tasks",
+    "input_nodes": [
+      {
+        "id": "In0",
+        "node": "taskSkeleton0",
+        "link_attributes": {
+          "map_all_data": true,
+          "on_error": false
+        },
+        "uiProps": {
+          "position": {
+            "x": -525,
+            "y": -930
+          },
+          "label": "graphInput",
+          "withImage": true,
+          "markerEnd": "arrowclosed",
+          "animated": false
+        }
+      }
+    ],
+    "output_nodes": [
+      {
+        "id": "Out0",
+        "node": "taskSkeleton0",
+        "link_attributes": {
+          "map_all_data": true,
+          "on_error": false
+        },
+        "uiProps": {
+          "position": {
+            "x": 135,
+            "y": -795
+          },
+          "label": "graphOutput",
+          "withImage": true,
+          "markerEnd": "arrowclosed",
+          "animated": false
+        }
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "taskSkeleton0",
+      "label": "taskSkeleton",
+      "task_type": "ppfmethod",
+      "task_identifier": "taskSkeleton",
+      "task_generator": "",
+      "default_error_node": false,
+      "uiProps": {
+        "icon": "orange2.svg",
+        "position": {
+          "x": -180,
+          "y": -825
+        },
+        "moreHandles": false,
+        "withImage": true
+      }
+    }
+  ],
+  "links": []
+}
