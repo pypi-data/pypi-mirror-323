@@ -1,0 +1,26 @@
+[project]
+name = "pylwr"
+version = "1.1.2"
+description = "各种包使用的二次封装"
+authors = [
+  { name="linwr", email="953297255@qq.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "GPL-3.0-only" }  # 使用 SPDX 标准格式
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://gitee.com/linwanrui/pylwr"
+"Bug Tracker" = "https://gitee.com/linwanrui/pylwr/issues"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+license-files = ["LICENSE"]  # 确保正确包含许可证文件
