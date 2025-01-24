@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "discordemojiparser"
+version = "1.0.1"
+description = "Provides utilities for parsing and accessing Discord emojis."
+authors = ["DJ Stomp <85457381+DJStompZone@users.noreply.github.com>"]
+readme = "README.md"
+repository = "https://github.com/djstompzone/discordemojiparser"
+license = "MIT"
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
