@@ -1,0 +1,45 @@
+[project]
+name = "jerreda"
+version = "0.4.1"
+description = "EDA"
+authors = [
+    { name = "vhzkclq0705", email = "dhwns1513@gmail.com" },
+]
+dependencies = [
+    "pandas>=2.2.3",
+    "president-speech>=0.9.1",
+    "typer>=0.15.1",
+    "pytest-cov>=6.0.0",
+    "matplotlib>=3.10.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+jerreda = "jerreda.cli:entry_point"
+jerreda-cnt = "jerreda.cli:entry_point_cnt"
+jerreda-dict = "jerreda.cli:entry_point_dict"
+
+[project.urls]
+Homepage = "https://github.com/vhzkclq0705/jerreda"
+Issues = "https://github.com/vhzkclq0705/jerreda/issues"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[dependency-groups]
+eda = [
+    "jupyterlab>=4.3.4",
+]
+test = [
+    "pytest>=8.3.4",
+]
