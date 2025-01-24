@@ -1,0 +1,526 @@
+Metadata-Version: 2.2
+Name: tensorflowtools
+Version: 0.1.1
+Summary: A small package with various tensorflow uitlities independent of Tensorflow Addons
+Author-email: Rihaan Meher <meherrihaan@gmail.com>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+           
+Project-URL: Homepage, https://github.com/sharktide/tftools
+Project-URL: Issues, https://github.com/sharktide/tftools/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# TFtools 0.1.1
+
+
+### TFtools Latest
+
+
+    pip install --upgrade tensorflowtools
+
+
+### TFtools Nightly
+
+
+    pip install --upgrade -i https://test.pypi.org/simple/ tensorflowtools
+
+
+This is a small package with various utilites to do with tensorflow.
+
+
+
+
+
+
+**Disclaimer**: This package is not affiliated with or endorsed by TensorFlow, Google, or Huggingface. It is an independent open-source project built to integrate TensorFlow with various tools.
+
+
+## License
+
+
+Copyright 2025 Rihaan Meher
+
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+## Dependencies
+
+
+This project uses the following open-source libraries:
+
+
+- **TensorFlow**: Licensed under the Apache 2.0 License.
+- **Hugging Face Hub**: Licensed under the Apache 2.0 License.
+- **setuptools**: Licensed under the MIT License (https://opensource.org/licenses/MIT).
+- **pathlib**: Part of Python (Standard Library).
+- **warnings** Part of Python (Standard Library)
+- **os**: Part of Python (Standard Library).
+
+
+
+
+
+
+# Submodules
+
+
+## hftools
+
+
+<details>
+<summary>Functions</summary>
+
+
+---
+
+
+<details>
+<summary>download_model_from_huggingface(username, repository, model_id)</summary>
+
+
+This downloads a model named tf_model.h5 or tf_model.keras from huggingface to the tensorflowtools data directory. It can be used with the load_from_hf_cache function in the kerastools submodule
+
+
+##### Example
+
+
+    import tensorflowtools
+    tensorflowtools.hftools.download_model_from_huggingface("sharktide", "recyclebot0", "sharktide/recyclebot0")
+    model = tensorflowtools.kerastools.load_from_hf_cache("sharktide", "recyclebot0", "tf_model.h5")
+    model.summary
+
+
+</details>
+
+
+<details>
+<summary>clear_model_cache()</summary>
+
+
+This clears the model cache; all downloaded models and configuration files will be deleted
+
+
+##### Example
+
+
+    import tensorflowtools
+    tensorflowtools.hftools.download_model_from_huggingface("sharktide", "recyclebot0", "sharktide/recyclebot0")
+    model = tensorflowtools.kerastools.load_from_hf_cache("sharktide", "recyclebot0", "tf_model.h5")
+    model.summary
+    tensorflowtools.hftools.clear_model_cache()
+    try:
+        model = tensorflowtools.kerastools.load_from_hf_cache("sharktide", "recyclebot0", "tf_model.h5")
+    except:
+        print("It worked!")
+
+
+</details>
+
+
+</details>
+
+
+## kerastools
+
+
+<details>
+<summary>Functions</summary>
+
+
+---
+
+
+<details>
+<summary>load_from_hf_cache(username, repository, filename)</summary>
+
+
+This loads a model using tf.keras.models.load_model() from tensorflowtools's cache. Use with the hftools submodule to download a model to the cache.
+
+Warning: This does not currently work in google colab. We are working to resolve this issue.
+
+
+##### Example
+
+
+    import tensorflowtools
+    tensorflowtools.hftools.download_model_from_huggingface("sharktide", "recyclebot0", "sharktide/recyclebot0")
+    model = tensorflowtools.kerastools.load_from_hf_cache("sharktide", "recyclebot0", "tf_model.h5")
+    model.summary
+</details>
+
+
+<details>
+<summary>default_image_augmentation(rate)</summary>
+
+
+This returns a sequential model of some basic image augmentation. The rate float is the amount of augmentation that should be applied. An average rate is 0.2.
+
+
+##### Example
+
+
+    import tensorflowtools
+
+
+    model = tf.keras.Sequential([
+        tensorflowtools.kerastools.default_image_augmentation(0.2),
+        #rest of your layers here
+    ])
+
+
+</details>
+
+
+<details>
+<summary>basic_ffnn(input_dim, output_dim, loss, compile_model=True)</summary>
+
+
+This returns a very basic fully connected neural network. The input dimensions are the dimensions for the first dense layer, the output dimensions are the dimensions for the last dense layer, the loss is the loss function to be used if compile_model is set to true. If you aren't planning to compile the model, still pick as loss function.
+
+
+##### Example
+
+
+    # Example usage of the basic FFNN
+    from tensorflow.keras.datasets import mnist
+    from tensorflow.keras.utils import to_categorical
+
+
+    # Load and preprocess data
+    (x_train, y_train), (x_test, y_test) = mnist.load_data()
+    x_train = x_train.reshape(-1, 28*28) / 255.0
+    x_test = x_test.reshape(-1, 28*28) / 255.0
+    y_train = to_categorical(y_train, 10)
+    y_test = to_categorical(y_test, 10)
+
+
+    # Create and compile the model
+    model = basic_ffnn(input_dim=28*28, output_dim=10, 'categorical_crossentropy')
+
+
+    # Train the model
+    model.fit(x_train, y_train, epochs=10, batch_size=32)
+
+
+</details>
+
+
+<details>
+<summary>basic_cnn(input_shape, num_classes, loss, compile_model=True)</summary>
+
+
+This returns a basic convolutional neural network for image classification. The input dimensions are the dimensions for the first convolutional layer, the number of classes is used in the last dense layer. the actication of the last layer will automatically be switched between sigmoid and softmax depending on the type of classification.
+
+
+##### Example
+
+
+    # Example usage of the basic CNN
+    from tensorflow.keras.datasets import mnist
+    from tensorflow.keras.utils import to_categorical
+
+
+    # Load and preprocess data
+    (x_train, y_train), (x_test, y_test) = mnist.load_data()
+    x_train = x_train.reshape(-1, 28, 28, 1) / 255.0
+    x_test = x_test.reshape(-1, 28, 28, 1) / 255.0
+    y_train = to_categorical(y_train, 10)
+    y_test = to_categorical(y_test, 10)
+
+
+    # Create and compile the model
+    model = basic_cnn(input_shape=(28, 28, 1), num_classes=10, 'sparse_categorical_crossentropy')
+
+
+    # Train the model
+    model.fit(x_train, y_train, epochs=10, batch_size=32)
+
+
+</details>
+
+
+<details>
+<summary>basic_lstm(input_shape, output_dim, loss, activation, compile_model=True)</summary>
+
+
+Gives basic starter architecture for a lstm model.
+:param input_shape: Input shape for the first lstm layer
+:param output_dim: Output dimensions of final dense.
+:param loss: Loss function
+:param activation: The activation function for the last dense layer.
+:param compile_model: Optionally compiles the model.
+:return: Generated lstm model with optional compilation.
+
+
+##### Example
+
+
+    # Example usage of the basic LSTM model
+    from tensorflow.keras.datasets import imdb
+    from tensorflow.keras.preprocessing.sequence import pad_sequences
+
+
+    # Load and preprocess data
+    (x_train, y_train), (x_test, y_test) = imdb.load_data()
+    x_train = pad_sequences(x_train, maxlen=500)
+    x_test = pad_sequences(x_test, maxlen=500)
+
+
+    # Create and compile the model
+    model = basic_lstm(input_shape=(500, ), output_dim=1, 'categorical_crossentropy', 'softmax')
+
+
+    # Train the model
+    model.fit(x_train, y_train, epochs=5, batch_size=64)
+
+
+</details>
+
+
+<details>
+<summary>basic_autoencoder(input_shape, compile_model=True)</summary>
+
+
+Gives basic starter architecture for a basic autencoder model.
+:param input_shape: Input shape for the first conv2d layer
+:param compile_model: Optionally compiles the model with mse loss.
+:return: Generated lstm model with optional compilation.
+
+
+##### Example
+    # Example usage of the basic Autoencoder
+    from tensorflow.keras.datasets import mnist
+
+
+    # Load and preprocess data
+    (x_train, _), (x_test, _) = mnist.load_data()
+    x_train = x_train.reshape(-1, 28, 28, 1) / 255.0
+    x_test = x_test.reshape(-1, 28, 28, 1) / 255.0
+
+
+    # Create and compile the model
+    model = basic_autoencoder(input_shape=(28, 28, 1))
+
+
+    # Train the model
+    model.fit(x_train, x_train, epochs=10, batch_size=128)
+
+
+</details>
+
+
+
+
+</details>
+
+
+
+
+---
+
+
+
+
+## Contributing
+
+
+If you’d like to contribute to this package, feel free to fork the repository, make your changes, and submit a pull request. We welcome improvements, bug fixes, and additional models.
+
+
+If you have a feature request, write a comment in the discussion for the latest version or rasie an issue.
+
+
+
+
+
