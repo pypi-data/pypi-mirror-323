@@ -1,0 +1,39 @@
+
+##############################################
+# Odatix settings for simulations
+##############################################
+---
+
+# overwrite existing results
+overwrite:        No
+
+# prompt 'Continue? (Y/n)' after settings checks
+ask_continue:     Yes
+
+# exit monitor when all jobs are done
+exit_when_done:   No
+
+# size of the log history per job in the monitor
+log_size_limit:   300
+
+# maximum number of parallel simulations
+nb_jobs:          12
+
+# targeted simulations
+simulations: 
+
+#--------------------------------------------#
+# Add your own designs!
+#--------------------------------------------#
+
+  #- Your_Simulation:
+  #  - Your_Design/Your_1st_Configuration
+  #  - Your_Design/Your_2nd_Configuration
+  #  - Your_Design/Your_3rd_Configuration
+
+  # or 
+
+  #- Your_Simulation:
+  # - Your_Design/*
+
+...
