@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[project]
+name = "pyveritas"
+version = "0.1.1"
+description = "A Python testing tool that combines fuzzing and traditional unit tests."
+authors = [
+    { name = "Tim McCallum", email = "mistermac2008@gmail.com" }
+]
+license = { text = "Apache 2" }
+readme = "README.md"
+dependencies = ["pytest >=7.0"]
