@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asf-snow"
+version = "0.1.20"
+requires-python = ">=3.8"
+authors = [
+    {name="CRREL Team", email="jzhu4@alaska.edu"},
+]
+description = "Snow depths calculation"
+license = {text = "BSD-3-Clause"}
+classifiers=[
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",	
+]
+dependencies = [
+  "pip",
+  "spicy-snow==0.2.1",
+  "metloom",	
+  "folium",	
+  "shapely",
+  "scipy",
+  "netcdf4",
+  "timezonefinder",
+  "utm",
+  "rasterstats",
+  "geopandas",
+  "xvec",
+  "geodatasets",
+  "jupyter"		
+]
+dynamic = ["readme"]
+
+[project.optional-dependencies]
+develop = [
+    "flake8",
+    "flake8-import-order",
+    "flake8-blind-except",
+    "flake8-builtins",
+    "pytest",
+    "pytest-cov",
+    "pytest-console-scripts",
+]
+
+[project.urls]
+Homepage = "https://github.com/asfadmin/asf-snow.git"
+#Documentation = ""
+
+[project.scripts]
+sentinel1_snow = "asf_snow.sentinel1_snow:main"
+investigate_s1_snotel = "asf_snow.utils.investigate_s1_snotel:main"
+
+[tool.pytest.ini_options]
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md"], content-type = "text/markdown"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+

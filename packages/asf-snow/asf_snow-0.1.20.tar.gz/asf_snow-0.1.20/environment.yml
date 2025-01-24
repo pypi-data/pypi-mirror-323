@@ -1,0 +1,24 @@
+name: asf-snow
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12.*
+  - libgdal-core=3.9.*  
+  - pip
+  - pip:
+      - -r requirements.txt
+      - metloom
+  #for running
+  - folium
+  - shapely
+  - scipy
+  - netcdf4
+  - jupyter
+  #for analysis
+  - timezonefinder
+  - utm
+  - rasterstats
+  - geopandas
+  - xvec
+  - geodatasets
