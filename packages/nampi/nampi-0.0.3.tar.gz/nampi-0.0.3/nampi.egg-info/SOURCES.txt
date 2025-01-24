@@ -1,0 +1,6 @@
+setup.cfg
+setup.py
+nampi.egg-info/PKG-INFO
+nampi.egg-info/SOURCES.txt
+nampi.egg-info/dependency_links.txt
+nampi.egg-info/top_level.txt
