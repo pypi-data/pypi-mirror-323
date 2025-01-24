@@ -1,0 +1,9 @@
+simple_xlsx_writer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_xlsx_writer/common.py,sha256=-xY-oE7-4TIV3_Cz9zJQjdUaRKP8HRGuYoRn9beJEks,2570
+simple_xlsx_writer/oracle_handler.py,sha256=DzcK1YAJI3oUwWny_vPRb0VTsFNjKMlQ2rMjpArlBFM,1375
+simple_xlsx_writer/postgresql_handler.py,sha256=H5IIx5kqbauBnhwwDs6hmqvhE60RnjXYAgMfP6G-sWo,1431
+simple_xlsx_writer/writer.py,sha256=tT_M7d4ryEXBfmkG_6pW8HHt1aPmgAgYj1cUHEx8F2s,16594
+simple_xlsx_writer-0.3.0.dist-info/METADATA,sha256=0OODhtuB9GoZvDNUAoFChUKSkf8Cpa_zD1DDWbd1rHs,10947
+simple_xlsx_writer-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+simple_xlsx_writer-0.3.0.dist-info/licenses/LICENSE,sha256=69EUTO4jvkUbakqaDuuMgsl3z3rX2BmpRXaMA_kVUlQ,1092
+simple_xlsx_writer-0.3.0.dist-info/RECORD,,
