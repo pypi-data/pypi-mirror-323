@@ -1,0 +1,9 @@
+README.md
+setup.py
+Tejas_package.egg-info/PKG-INFO
+Tejas_package.egg-info/SOURCES.txt
+Tejas_package.egg-info/dependency_links.txt
+Tejas_package.egg-info/entry_points.txt
+Tejas_package.egg-info/top_level.txt
+my_package/__init__.py
+my_package/script.py
