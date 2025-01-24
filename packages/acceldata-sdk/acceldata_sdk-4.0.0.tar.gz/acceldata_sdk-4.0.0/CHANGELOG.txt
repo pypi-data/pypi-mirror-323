@@ -1,0 +1,9 @@
+Version Log
+==========
+4.0.0 (24/01/2025)
+-------------------
+- 4.0.0 version of acceldata_sdk. Updated the implementation to consume the optimized pipeline listing API.
+
+
+
+
