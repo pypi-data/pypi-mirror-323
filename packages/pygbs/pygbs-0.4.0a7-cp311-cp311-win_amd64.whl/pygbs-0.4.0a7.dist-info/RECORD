@@ -1,0 +1,13 @@
+pygbs/__init__.py,sha256=VLVijZDoLoHzrtu1_n6oGK3rN9JIriq8B1DnJNuLoSc,42
+pygbs/analysis.cp311-win_amd64.pyd,sha256=pIHtgtk6t6-rF5N-aeNGFPM-FX_sJuEDt7OG93vNUWU,605184
+pygbs/bsCurveEditor.py,sha256=N1DncXbjaIxm-J2yDRyWNHPxCfoiCcuYUnM_INfP6XY,2736
+pygbs/core.cp311-win_amd64.pyd,sha256=yEMMzTkcx_HG4rSBsDfTOSWOueCGoui_lt3Y8UtEbhQ,1378816
+pygbs/gbs/__init__.py,sha256=i3ek26vyRjoC4DwRliNEnVDXkhnU1nVHM3iunMRUrH8,243
+pygbs/interpolate.cp311-win_amd64.pyd,sha256=-kReXik1rD894fBfIeBOS1RittMFWji3yMPbg2JJmWs,808960
+pygbs/plotlyplot.py,sha256=vRcL5dqg1Cn_0bpRaOEJu2BhyboaR0pQe4gjsGn28m4,4836
+pygbs/tools.cp311-win_amd64.pyd,sha256=Of85sP5X5ZhH1nWmICqaXgU6nJe9UkO-qmysfO9_71Y,786432
+pygbs/transform.cp311-win_amd64.pyd,sha256=TMmriXyq_yutYWpA1HYXkZl_SnFaZGk4T9xJV2g804A,172544
+pygbs-0.4.0a7.dist-info/METADATA,sha256=X-s3N6WJvTTDo_kQF5na0mXbmdRD_5FdmkHIZfxlEaY,497
+pygbs-0.4.0a7.dist-info/WHEEL,sha256=kXCl1J14PkmxQKXf5U_5vxmme_OmC3Ydcral7u0yA3M,106
+pygbs-0.4.0a7.dist-info/licenses/LICENSE,sha256=O29c9jiLeA95aRocYKyVsn-3N91S9codPYA7c3XnObc,8358
+pygbs-0.4.0a7.dist-info/RECORD,,
