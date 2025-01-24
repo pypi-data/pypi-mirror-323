@@ -1,0 +1,65 @@
+name: CI Tests
+
+on:
+  push:
+    branches:
+    - main
+    - 1.1.x
+    tags:
+    - '*'
+  pull_request:
+
+jobs:
+  initial_checks:
+    # Mandatory checks before CI tests
+    uses: OpenAstronomy/github-actions-workflows/.github/workflows/tox.yml@v1
+    with:
+      coverage: false
+      envs: |
+        # Code style
+        - linux: codestyle
+
+  tests:
+    needs: initial_checks
+    uses: OpenAstronomy/github-actions-workflows/.github/workflows/tox.yml@v1
+    with:
+      display: true
+      libraries: |
+        apt:
+          - '^libxcb.*-dev'
+          - libxkbcommon-x11-dev
+          - libegl1
+          - libglx-mesa0 
+          - libopenblas-dev
+          - libgfortran5
+          - libhdf5-dev
+        brew:
+          - enchant
+
+      envs: |
+        # Standard tests
+        - linux: py39-test-pyqt515
+        - linux: py39-test-pyside63
+        - linux: py310-test-pyside63
+        - linux: py311-test-pyqt64
+
+        - macos: py38-test-pyqt514
+        - macos: py39-test-pyside63
+        - macos: py310-test-pyside63
+        - macos: py311-test-pyqt64
+
+        - windows: py38-test-pyqt514
+        - windows: py38-test-pyqt515
+        - windows: py310-test-pyqt64
+
+  publish:
+    needs: tests
+    uses: OpenAstronomy/github-actions-workflows/.github/workflows/publish_pure_python.yml@v1
+    with:
+      # Setup PyQt5 deps and headless X server as per pyvista/setup-headless-display-action@v1
+      libraries: '^libxcb.*-dev libxkbcommon-x11-dev libegl1 libglx-mesa0 libopenblas-dev libhdf5-dev xvfb'
+      test_extras: 'test,qt5'
+      test_command: Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 & sleep 3; DISPLAY=:99.0 pytest --pyargs glue_genes 
+      python-version: '3.10'
+    secrets:
+      pypi_token: ${{ secrets.pypi_api_token }}

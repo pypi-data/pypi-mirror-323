@@ -1,0 +1,110 @@
+Metadata-Version: 2.2
+Name: glue-genes
+Version: 1.2.3
+Summary: Multidimensional data visualization for genomics
+Home-page: https://gluesolutions.github.io/glue-genes/
+Author: glue solutions inc.
+Author-email: jfoster@gluesolutions.io
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: BSD License
+Provides: glue_genes
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: glue-core>=1.15
+Requires-Dist: glue-qt>=0.3
+Requires-Dist: qtpy>=1.9
+Requires-Dist: anndata>=0.8
+Requires-Dist: scanpy>=1.9
+Requires-Dist: enrichrpy>=0.1
+Requires-Dist: pyranges>=0.0.120
+Requires-Dist: squidpy
+Requires-Dist: zarr>=2
+Requires-Dist: ome-zarr
+Requires-Dist: tifffile
+Requires-Dist: numba
+Requires-Dist: glue-heatmap
+Requires-Dist: glue-small-multiples
+Requires-Dist: glue-vispy-viewers
+Provides-Extra: docs
+Requires-Dist: sphinx<7; extra == "docs"
+Requires-Dist: sphinx-automodapi; extra == "docs"
+Requires-Dist: sphinxcontrib-spelling; extra == "docs"
+Requires-Dist: numpydoc; extra == "docs"
+Requires-Dist: sphinx-book-theme; extra == "docs"
+Requires-Dist: sphinx_design; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-faulthandler; extra == "test"
+Requires-Dist: pytest-flake8; extra == "test"
+Requires-Dist: mock; extra == "test"
+Provides-Extra: qt5
+Requires-Dist: PyQt5>=5.15; extra == "qt5"
+Provides-Extra: qt6
+Requires-Dist: PyQt6==6.4.*; extra == "qt6"
+Requires-Dist: pyqt6-qt6==6.4.*; extra == "qt6"
+Provides-Extra: openslide
+Requires-Dist: openslide-python; extra == "openslide"
+Requires-Dist: napari-lazy-openslide; extra == "openslide"
+Dynamic: provides
+
+![glue_genes_logo_stacked](https://user-images.githubusercontent.com/3639698/137145077-2c2c9011-68bd-4770-9d58-494bf7632a33.png)
+
+
+The glue-genes meta-package
+===========================
+
+[glue genes](https://github.com/gluesolutions/glue-genes) is a custom version of the [glue software](https://glueviz.org) for the 
+visual exploration of genomics data, developed in partnership with [The Jackson Laboratory](https://jax.org).
+
+### Features
+
+glue genes provides all the core features of glue:
+
+* Interactive, linked statistical graphics
+* A user interface for 'glueing' together multiple datasets with complicated relationships
+* A highly scriptable and extendable environment
+
+In addition, glue genes provides:
+
+* Data loaders for genomics data file formats, including multiresolution images and transcriptomics data.
+* Viewers including: 2D Heatmap, Small Multiples, QTL Viewer
+* Menubar plug-ins to facilitate analysis of single-cell and spatial transcriptomics data
+
+### Install
+
+See [the glue genes documentation](https://glue-genes.readthedocs.io/en/latest/how-to/installation.html) for installation help.
+
+We recommend installing into a new virtual environment. To install the current stable version use:
+
+`pip install glue-genes[qt6]`
+
+or 
+
+`pip install glue-genes[qt5]`
+
+depending on which version of Qt you would like to use.
+
+To install the latest development version we recommend the following procedure in a new virtual environment:
+
+`pip install "glue-genes[qt6]@git+https://git@github.com/gluesolutions/glue-genes.git"`
+
+### Usage
+
+After installation, glue (with the glue genes plug-ins loaded) can be invoked at the terminal:
+`glue`
+
+
+### Development
+
+glue genes is under active development. Please file all bug reports as github issues. 
