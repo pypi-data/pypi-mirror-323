@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/wecom_bot_svr/__init__.py
+src/wecom_bot_svr/app.py
+src/wecom_bot_svr/req_msg.py
+src/wecom_bot_svr/req_msg_str.py
+src/wecom_bot_svr/rsp_msg.py
+src/wecom_bot_svr.egg-info/PKG-INFO
+src/wecom_bot_svr.egg-info/SOURCES.txt
+src/wecom_bot_svr.egg-info/dependency_links.txt
+src/wecom_bot_svr.egg-info/requires.txt
+src/wecom_bot_svr.egg-info/top_level.txt
