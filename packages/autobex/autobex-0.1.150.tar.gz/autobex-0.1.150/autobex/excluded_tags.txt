@@ -1,0 +1,3 @@
+demolished=yes
+highway
+surface=asphalt
