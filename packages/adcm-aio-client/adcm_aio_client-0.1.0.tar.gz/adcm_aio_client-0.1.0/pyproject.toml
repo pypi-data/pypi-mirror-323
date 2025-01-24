@@ -1,0 +1,113 @@
+[project]
+name = "adcm-aio-client"
+description = "Asynchronous HTTP Client for ADCM (Arenadata Cluster Manager)"
+authors = [
+    { name = "Aleksandr Alferov", email = "<aas@arenadata.io>" },
+    { name = "Egor Araslanov", email = "<aer@arenadata.io>" },
+    { name = "Daniil Skrynnik", email = "<d.skrynnik@arenadata.io>" },
+    { name = "Artem Starovoitov", email = "<a.starovoitov@arenadata.io>" },
+    { name = "Vasiliy Chudasov", email = "<v.chudasov@arenadata.io>" }
+]
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["ADCM"]
+dependencies = [
+    "httpx (>=0.27.2, <1.0.0)",
+    "asyncstdlib (>=3.13.0, <4.0.0)",
+    "adcm-version (>=1.0.3, <2.0.0)"
+]
+dynamic = ["version", "classifiers"]
+
+[project.urls]
+homepage = "https://github.com/arenadata/adcm-aio-client"
+repository = "https://github.com/arenadata/adcm-aio-client"
+
+[tool.poetry]
+version = "0.1.0"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.7.1"
+pyright = "^1.1.387"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.3"
+pytest-asyncio = "^0.24.0"
+testcontainers = "^4.8.2"
+pyyaml = "^6.0.2"
+pytest-timeout = "^2.3.1"
+docker = "^7.1.0"
+pytest-xdist = "^3.6.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+timeout = 300
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+length-sort-straight = true
+order-by-type = true
+
+[tool.ruff.lint]
+select = [
+    # Pyflakes
+    "F",
+    # Pycodestyle
+    "E", "W",
+    # isort
+    "I",
+    # "COM" - The following rules may cause conflicts when used with the formatter: `COM812`.
+    # To avoid unexpected behavior, we recommend disabling these rules
+    "N", "UP", "YTT", "ANN",
+    "S", "BLE", "FBT", "B", "COM", "A", "C4",
+    "DTZ", "ICN", "PIE", "Q", "RET",
+    "SIM", "ARG", "PTH", "PLE", "TRY"
+]
+
+ignore = [
+    "COM812",
+    "S101",
+    "TRY003",
+]
+
+[tool.pyright]
+include = [
+    "adcm_aio_client", "tests"
+]
+
+executionEnvironments = [
+    { root = "." },
+    { root = "tests", extraPaths = ["."] },
+]
+
+typeCheckingMode = "standard"
+reportUnnecessaryTypeIgnoreComment = true
+
+reportMissingImports = "error"
+reportMissingTypeStubs = false
+
+pythonVersion = "3.12"
+pythonPlatform = "Linux"
