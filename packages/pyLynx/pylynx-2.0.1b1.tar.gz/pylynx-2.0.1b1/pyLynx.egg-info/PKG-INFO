@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: pyLynx
+Version: 2.0.1b1
+Summary: lynx: Next generation high performance testcase tool set for OI / ACM contests. - 新一代信息学竞赛数据生成工具集
+Author: AlfredChester
+Author-email: fredbao1126@gmail.com
+License: MIT
+Keywords: olympic informatics testcase testcase-tools tools
+Platform: any
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Click
+Requires-Dist: cyaron
+Requires-Dist: tqdm
+Requires-Dist: PyYAML
+Dynamic: author
+Dynamic: author-email
+Dynamic: keywords
+Dynamic: license
+Dynamic: platform
+Dynamic: requires-dist
+Dynamic: summary
+
+# Lynx
+
+[中文帮助指南](./README_CN.md)
+
+A testcase toolset repository powered by [Cyaron](https://github.com/luogu-dev/cyaron/)
