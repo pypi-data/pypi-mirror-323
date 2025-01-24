@@ -1,0 +1,5 @@
+[console_scripts]
+eda-nijin = eda_nijin.cli:entry_point
+
+[gui_scripts]
+
