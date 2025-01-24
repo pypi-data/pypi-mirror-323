@@ -1,0 +1,2 @@
+[console_scripts]
+catenator = catenator.catenator:main
