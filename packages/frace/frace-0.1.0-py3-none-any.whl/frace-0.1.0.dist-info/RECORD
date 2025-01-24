@@ -1,0 +1,8 @@
+frace-0.1.0.dist-info/METADATA,sha256=bwjG8xPZ7GIExVvwcdOH3KYN7aMBb1L66nQzlvxEriQ,4279
+frace-0.1.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+frace-0.1.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+frace/__init__.py,sha256=DOb0pazeYz179vFAMsTnvQrXulISPYCqcUBr97YRx90,96
+frace/main.py,sha256=evcZ8Z20DFbg2yBfpFxpcrC11b9mjKTWKdW2PiYMprU,8826
+frace/models.py,sha256=9nw3XucYAO90NJNOuPQ8yXZrTi2GxzdVbwF8HAX4PH8,1386
+frace/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frace-0.1.0.dist-info/RECORD,,
