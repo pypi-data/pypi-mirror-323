@@ -1,0 +1,29 @@
+[project]
+name='evomeai_utils'
+version='0.1.5'
+authors = [
+    {name="flowithwind", email="flowithwind@gmail.com"}
+]
+description = "evomeai_utils is a python package for evomeai project."
+readme = "README.md"
+requires-python = ">=3.8"
+requires = [
+  "logging","json","time","sys"
+ ]
+
+[project.urls]
+HomePage="https://gitee.com/footoo/utils"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.git",
+  "/.idea"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/evomeai_utils"]

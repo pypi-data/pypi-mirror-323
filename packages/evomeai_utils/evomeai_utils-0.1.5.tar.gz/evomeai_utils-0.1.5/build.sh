@@ -1,0 +1,1 @@
+hatch build && hatch publish
