@@ -1,0 +1,21 @@
+[package]
+name = "aedat"
+version = "2.2.0"
+edition = "2021"
+resolver = "2"
+
+[lib]
+name = "aedat"
+crate-type = ["cdylib"]
+
+[dependencies]
+flatbuffers = "24.12.23"
+lz4 = "1.28.0"
+numpy = "0.23.0"
+pyo3 = {version = "0.23.4", features = ["extension-module"]}
+roxmltree = "0.20.0"
+zstd = "0.13.2"
+
+[profile.release]
+lto = true
+codegen-units = 1
