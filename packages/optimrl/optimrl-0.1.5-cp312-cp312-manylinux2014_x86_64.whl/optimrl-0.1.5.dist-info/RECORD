@@ -1,0 +1,10 @@
+optimrl/__init__.py,sha256=gX8xjy9DmfzuhC64JiM5V1eB3lP0yxXzK8X7SLfufqY,189
+optimrl/_version.py,sha256=jxQism7KLIhMLLzTIJHZigaYt8JHp3U20Spj89nO8io,497
+optimrl/core.py,sha256=8lkNdEfG39ProM5LD5kKEeKj-v641NpLDmfHnn1hHWU,6383
+optimrl/c_src/grpo.c,sha256=x7S2hLsA9v-2b0XSjToyWHDoHdnlDhjV4_ktreNez1c,4179
+optimrl/c_src/grpo.h,sha256=EGZGodsvC9vAP0GM5mGAaijD-d3EETE8Y3QjNMTVT1Q,964
+optimrl/c_src/libgrpo.cpython-312-x86_64-linux-gnu.so,sha256=Ks11rkI6dEUueuePL1Q6dB8umwbeLyRrtR8_d-makgw,24520
+optimrl-0.1.5.dist-info/METADATA,sha256=UR4A0tMPoKDsovFo0e69cMMgk0aj6tmdskTDE11Ey3o,6346
+optimrl-0.1.5.dist-info/WHEEL,sha256=rzMhMUpXnGUfRPFfS9tBseuWBWpY-IFt68OXEtiGbcI,112
+optimrl-0.1.5.dist-info/top_level.txt,sha256=o9BsWn_smNO4UYmEMWScnFjZsDLHjtgA7fx7oNL2ycc,8
+optimrl-0.1.5.dist-info/RECORD,,
