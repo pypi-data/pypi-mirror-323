@@ -1,0 +1,2 @@
+[console_scripts]
+dj = dj_shortwalk.DjangoShortwalkApp:main

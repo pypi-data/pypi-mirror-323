@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+dj_short_walk.egg-info/PKG-INFO
+dj_short_walk.egg-info/SOURCES.txt
+dj_short_walk.egg-info/dependency_links.txt
+dj_short_walk.egg-info/entry_points.txt
+dj_short_walk.egg-info/top_level.txt
