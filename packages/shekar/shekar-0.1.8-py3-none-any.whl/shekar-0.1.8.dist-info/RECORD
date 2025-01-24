@@ -1,0 +1,9 @@
+shekar/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shekar/autocorrect.py,sha256=gjVGCWtqWDCTrCj9AqC3Ivmm0zzuVtywxt4MBTzi7TU,2693
+shekar/normalizer.py,sha256=_9f0ToptzDnnIELPjSJLX7l-ptytpkvDE1us5DZdNfA,10802
+shekar/tokenizers.py,sha256=3YLGHKauGT8bzmi_34sKg-CbZ8mjd8A592QMrkAAcU8,1607
+shekar/utils.py,sha256=Zfl5cp4LP6_cL3pF7LgT2V_BxVVX1ZmHuF3LEox_sCA,3287
+shekar-0.1.8.dist-info/METADATA,sha256=TjadisVUDzEgZcbhx9t-T6BGGcOBiIa-y-xDkPHXmgg,3106
+shekar-0.1.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+shekar-0.1.8.dist-info/licenses/LICENSE,sha256=Sn0Hjv2Csp6yjcxXM1TwtqI16-lk4-LvOoMrFaQvU5Q,1074
+shekar-0.1.8.dist-info/RECORD,,
