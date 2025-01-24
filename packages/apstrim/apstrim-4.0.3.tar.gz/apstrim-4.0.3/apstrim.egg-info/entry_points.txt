@@ -1,0 +1,3 @@
+[console_scripts]
+apstrim = apstrim.__main__:main
+
