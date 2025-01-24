@@ -1,0 +1,7 @@
+hyperpocket_openai/__init__.py,sha256=AR2rwM90xFRpxqAhQ3Xhsyt-xaZh4x4uZCDbaZseTWc,85
+hyperpocket_openai/pocket_openai.py,sha256=4k8uXxC7ENlignieACSABZhtlTC8W8n_bYm5VL0MzkY,3617
+hyperpocket_openai/util/__init__.py,sha256=cARMEogyhAsyIi-Dqf0d7hy9gxIZA4HvZatM8SmEjww,114
+hyperpocket_openai/util/tool_to_open_ai_spec.py,sha256=nS0ijIiVZwijiswRNsFqkiPUrjow6J3czFfsylq6J5U,673
+hyperpocket_openai-0.1.10.dist-info/METADATA,sha256=Yk2pQNG5tSFund-L1lHPmdtPi_uoGSBg7kxt7JguW9U,3702
+hyperpocket_openai-0.1.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hyperpocket_openai-0.1.10.dist-info/RECORD,,
