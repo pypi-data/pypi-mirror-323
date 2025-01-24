@@ -1,0 +1,2 @@
+[console_scripts]
+chinese-holidays = chinese_holidays:main
