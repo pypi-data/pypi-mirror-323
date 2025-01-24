@@ -1,0 +1,9 @@
+csdfgen.cpython-39-x86_64-linux-gnu.so,sha256=zutCJ2JxFvErCqmjS-n7xNCUVlnh5cLQowNoD7FuXXM,4062152
+libcsdfgen.so,sha256=zutCJ2JxFvErCqmjS-n7xNCUVlnh5cLQowNoD7FuXXM,4062152
+sdfgen/module.py,sha256=0GRj6SwRDtubbjCQB26u-wcUCX25m1kSggrz2XyMCoA,33066
+sdfgen/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdfgen/__init__.py,sha256=_d7GGV8GhadIAEYP8uiJlez0yKtXnHMHdRkRzVMKS3c,143
+sdfgen-0.15.1.dist-info/WHEEL,sha256=Ow737bME6FQkAQJzNiaUZEQcT9ZFROk48LeB1NAtjn0,216
+sdfgen-0.15.1.dist-info/RECORD,,
+sdfgen-0.15.1.dist-info/top_level.txt,sha256=M3gUW9vTMij10peQKgv1Qs0jZkdsk_PG0REFxuv6jNY,15
+sdfgen-0.15.1.dist-info/METADATA,sha256=A2A40ZfZ4oa0BqgTq5n4iyAigQLteSKbqoEnYL2mcT4,4561
