@@ -1,0 +1,3 @@
+[console_scripts]
+krane = krane.cli.commands:cli
+krane-web = krane.web.app:start_server
