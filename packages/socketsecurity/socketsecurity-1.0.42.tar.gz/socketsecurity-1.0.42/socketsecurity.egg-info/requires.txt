@@ -1,0 +1,6 @@
+requests
+mdutils
+prettytable
+GitPython
+packaging
+socket-sdk-python<2.0.0,>=1.0.15
