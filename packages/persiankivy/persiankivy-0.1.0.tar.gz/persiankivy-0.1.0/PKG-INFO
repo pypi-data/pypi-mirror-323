@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: persiankivy
+Version: 0.1.0
+Summary: A program to correctly display Persian and Arabic words in kivy
+Author: Farhad KHodavirdizadeh
+Author-email: farhadvb@gmail.com
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+arabic-reshaper==3.0.0
+python-bidi==0.6.3
+
+
