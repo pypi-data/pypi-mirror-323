@@ -1,0 +1,18 @@
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.1.0
+
+# Building and Publishing
+build>=1.0.0
+twine>=4.0.0
+setuptools>=75.0.0
+
+# Type checking
+mypy>=1.0.0
+
+# Code formatting
+black>=23.0.0
+isort>=5.12.0
+
+# Linting
+flake8>=6.0.0 
