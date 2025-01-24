@@ -1,0 +1,65 @@
+Metadata-Version: 2.2
+Name: Topsis_Abhiraj_Singh_Jhajj_102217094
+Version: 1.0.0
+Summary: A Python package for performing TOPSIS analysis.
+Author: Abhiraj Singh Jhajj
+License: MIT
+Project-URL: Documentation, https://github.com/abhirajsinghjhajj/Topsis_Abhiraj_Singh_Jhajj_102217094/blob/main/README.md
+Project-URL: Source, https://github.com/Topsis_Abhiraj_Singh_Jhajj_102217094/Topsis-Package
+Keywords: topsis multi-criteria decision-making ranking analysis
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: numpy>=1.19.0
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Title
+A Python package to perform TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) analysis.
+
+# Description
+This package implements the TOPSIS method for Multi-Criteria Decision-Making (MCDM). It takes an input dataset, weights, and impacts to calculate scores and ranks for the provided alternatives, helping users to make better decisions.
+
+# Features
+Implements the TOPSIS method for decision-making.
+Supports both positive and negative impacts.
+Provides a simple command-line interface for easy usage.
+
+# Installation
+Explain how users can install your package. Include steps for installation via pip.
+
+pip install Topsis-YourName-RollNumber
+
+If the package isn’t uploaded to PyPI yet, include instructions for installing it from the source code:
+git clone https://github.com/abhirajsinghjhajj/Topsis_Abhiraj_Singh_Jhajj_102217094.git
+cd Topsis_Abhiraj_Singh_Jhajj_102217094
+pip install .
+
+# Usage
+Provide examples of how to use the package or run the program. Include command-line usage examples.
+Example:
+python 101556.py 101556-data.csv "1,1,1,2" "+,+,-,+" 101556-result.csv
+
+Explain what each parameter means:
+101556.py: The Python script file.
+101556-data.csv: The input file containing the data.
+"1,1,1,2": Weights for each criterion.
+"+,+,-,+": Impacts for each criterion (+ for benefit, - for cost).
+101556-result.csv: The output file to save the result.
