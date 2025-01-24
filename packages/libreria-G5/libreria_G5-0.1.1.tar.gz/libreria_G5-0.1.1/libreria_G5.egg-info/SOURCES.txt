@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+libreria_G5/__init__.py
+libreria_G5/libreriaG5.py
+libreria_G5.egg-info/PKG-INFO
+libreria_G5.egg-info/SOURCES.txt
+libreria_G5.egg-info/dependency_links.txt
+libreria_G5.egg-info/requires.txt
+libreria_G5.egg-info/top_level.txt
