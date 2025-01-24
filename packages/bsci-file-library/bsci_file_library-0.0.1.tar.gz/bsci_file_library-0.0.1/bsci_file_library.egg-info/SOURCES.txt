@@ -1,0 +1,6 @@
+setup.py
+bsci_file_library/__init__.py
+bsci_file_library.egg-info/PKG-INFO
+bsci_file_library.egg-info/SOURCES.txt
+bsci_file_library.egg-info/dependency_links.txt
+bsci_file_library.egg-info/top_level.txt
