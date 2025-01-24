@@ -1,0 +1,5 @@
+[console_scripts]
+coin-proto = coin_proto.where_now:entry_point
+
+[gui_scripts]
+
