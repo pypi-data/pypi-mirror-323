@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: ejni
+Version: 0.1.1
+Summary: Add your description here
+Author-email: kin9-0rz <kin9-0rz@outlook.com>
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: apkutils>=2.0.0
+Description-Content-Type: text/markdown
+
+# ejni
+
+ejni 是 extract JNI 的简称， 基于 [evilpan/jni_helper](https://github.com/evilpan/jni_helper/blob/master/extract_jni.py) 修改。
+
+## 功能
+
+将 Dex 中的 native 方法，全部提取出来，转成 JNI 函数签名，以便在 Ghidra 等工具进行自动化处理 JNI 函数。
+
+## 为什么
+
+- 移除 androguard 库，减少依赖。
+- 发布到 pypi，方便使用。
+
+## 安装
+
+以下任意一种方式都可以：
+
+```sh
+pip install ejni
+pipx install ejni
+rye install ejni
+```
+
+## 使用
+
+```sh
+ejni demo.apk -o demo_jni.json
+```
+
+之后，利用 [evilpan/jni_helper](https://github.com/evilpan/jni_helper/) 提供的插件，进行处理即可。
