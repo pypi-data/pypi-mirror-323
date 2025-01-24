@@ -1,0 +1,7 @@
+ai-models>=0.7.4
+dm-tree
+dm-haiku
+xarray<=2024.11.0
+
+[dev]
+pre-commit

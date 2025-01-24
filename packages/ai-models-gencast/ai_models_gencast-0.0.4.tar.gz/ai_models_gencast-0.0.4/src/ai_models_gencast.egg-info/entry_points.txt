@@ -1,0 +1,6 @@
+[ai_models.model]
+gencast = ai_models_gencast.model:GenCast0p25deg
+gencast-0.25 = ai_models_gencast.model:GenCast0p25deg
+gencast-0.25-Oper = ai_models_gencast.model:GenCast0p25degOper
+gencast-1.0 = ai_models_gencast.model:GenCast1p0deg
+gencast-1.0-Mini = ai_models_gencast.model:GenCast1p0degMini
