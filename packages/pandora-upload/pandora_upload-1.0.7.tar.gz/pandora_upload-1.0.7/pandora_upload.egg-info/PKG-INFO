@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pandora-upload
+Version: 1.0.7
+Summary: pandora-upload is a commandline uploader for pan.do/ra
+Home-page: https://code.0x2620.org/0x2620/pandora-upload
+Author: j
+Author-email: j@mailb.org
+License: GPLv3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Description-Content-Type: text/markdown
+Requires-Dist: ox>=3
+Requires-Dist: lxml
+
+# pandora-upload
+
+pandora_upload is a commandline client for pan.do/ra.
+You can use it to upload one or more files to your pandora instance.
+No conversion is done on the client side.
+To upload/sync large repositories use pandora_client
+
+Upload a file from the command line:
+
+``` sh
+pandora-upload -p http://pandora/api/ -m "title=This is an example" -m "director=[Jane Doe]" -m "date=2021-11-15" /home/example/Videos/video.mp4
+```
+
+or you can use pandora-upload in a python script:
+
+``` python
+import pandora_upload
+item_id = pandora_upload.upload(
+    'http://pandora/api/',
+    ['/home/example/Videos/video.mp4'],
+    {
+        'title': 'This is an example',
+        'date': '2021-11-15'
+    }
+)
+```
