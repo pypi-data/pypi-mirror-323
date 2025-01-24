@@ -1,0 +1,60 @@
+Metadata-Version: 2.2
+Name: gaussian-viewer
+Version: 0.1.0
+Summary: A lightweight WebGL-based viewer for 3D Gaussian Splatting models
+Home-page: https://github.com/LiXin97/gaussian-viewer
+Author: Xin Li
+Author-email: lixin.1997.lixin@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: websockets
+Requires-Dist: numpy
+Requires-Dist: plyfile
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Gaussian Viewer
+
+A lightweight WebGL-based viewer for 3D Gaussian Splatting models. This viewer allows you to interactively visualize and navigate through 3D Gaussian Splat models in your web browser.
+
+## Features
+
+- Real-time rendering of 3D Gaussian Splats
+- Interactive camera controls (orbit, pan, zoom)
+- Support for PLY file format
+- Fast C-optimized data processing
+- WebGL-based rendering
+- Dynamic model switching
+- Multiple navigation modes (keyboard, mouse, touch, gamepad)
+
+## Installation
+
+```bash
+pip install -e .
+```
+or 
+```bash
+pip install gaussian-viewer
+```
+
+## Usage
+
+Basic usage example:
+
+```

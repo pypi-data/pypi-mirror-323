@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+gaussian_viewer/__init__.py
+gaussian_viewer/_splat_writer.c
+gaussian_viewer/server.py
+gaussian_viewer/viewer.py
+gaussian_viewer.egg-info/PKG-INFO
+gaussian_viewer.egg-info/SOURCES.txt
+gaussian_viewer.egg-info/dependency_links.txt
+gaussian_viewer.egg-info/requires.txt
+gaussian_viewer.egg-info/top_level.txt
+gaussian_viewer/web/index.html
+gaussian_viewer/web/main.js
