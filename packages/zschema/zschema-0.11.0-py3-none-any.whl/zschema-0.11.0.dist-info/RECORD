@@ -1,0 +1,14 @@
+zschema/__init__.py,sha256=TJ-h3EOLXzfzuETYpaTb4azyqgPE1NWZ-eJur1V-u4g,217
+zschema/__main__.py,sha256=BMVFtrVzSLbxvcM6_Xd6QOSU4Ii-EFURpY3FJRi-U-4,3481
+zschema/compounds.py,sha256=SRS8DN08yc52iGfkx_Txi5SGR2Fk1JoOj5astQ6jCMM,20146
+zschema/example.py,sha256=83sTmyO6vpRYT3ZluNQVJ8ah-rUHu5FXvjH-zK3icrQ,553
+zschema/keys.py,sha256=zCBd4EmdnNsfdzBnGqGE2UlwIaTwOgnqjb2KdsepEt4,12316
+zschema/leaves.py,sha256=0AWzuove2RGlSCW440mO6hqOaZ2HQLv0zVpareZFLEk,17870
+zschema/registry.py,sha256=HqjPVP0ug9malkWHIDSskCHJECkzvwu_7gxU3O8rAdI,558
+zschema/test_zschema.py,sha256=i8rS5jJQc2Gj6b7tjbW7LLZ4TvxOQ5zqHyAs69po3wY,38890
+zschema-0.11.0.dist-info/LICENSE,sha256=oCxRdPVYHbzYt6ugKxtcrYvU9fVkl8YIpYF33S5Dp6g,11368
+zschema-0.11.0.dist-info/METADATA,sha256=jDOIYTHDzkOyL0XyFRtyYFItdBXmlP6WO8WaA5kVtMw,450
+zschema-0.11.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+zschema-0.11.0.dist-info/entry_points.txt,sha256=z0dU1FZvHSVzZOQ7OjcrA-IZiwVt5c7J5W44-dO23hc,50
+zschema-0.11.0.dist-info/top_level.txt,sha256=Iao1Pr86vPBgeVo6riCyRy9dw_V_i6Z5lKxbxp8tojY,8
+zschema-0.11.0.dist-info/RECORD,,
