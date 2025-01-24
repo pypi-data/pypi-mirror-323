@@ -1,0 +1,22 @@
+[project]
+name = "LiveSatProto"
+version = "0.1.0"
+description = "Prototype for tracking real-time satellite positions in orbit."
+authors = [
+    { name = "ppabam", email = "tom@diginori.com" },
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "GPL-3.0 license"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
