@@ -1,0 +1,11 @@
+selOpe/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+selOpe/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+selOpe/client/client_common.py,sha256=VW4AWvQi9IgDxrTTSr_9SFaonmtJUdSmmCcev8QO1C4,1980
+selOpe/client/client_operator.py,sha256=a9eR-jzG1U15_I0RX-0j2YPqkLfChQyzLUZ_N4adiPY,3168
+selOpe/web/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+selOpe/web/driver_config.py,sha256=7Me0R21H0myuBTa2ELfgUOKx_Fj7Y5um-yVogrESMnc,1877
+selOpe/web/web_operator.py,sha256=xsMp_JkTsCVv8u1Bpr9yJsfd6RfCun0yh_vNPJrvKXQ,12078
+selOp-2.1.dist-info/METADATA,sha256=940ZzWe6vF-36sR3qLFzU0XOllhTqrpz2yH46mmffYM,707
+selOp-2.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+selOp-2.1.dist-info/top_level.txt,sha256=ah44-HmdC9r6DQvgjzOTe8q-PqafvldZ8ZSqKVDlUZg,7
+selOp-2.1.dist-info/RECORD,,
