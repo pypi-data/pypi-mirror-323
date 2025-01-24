@@ -1,0 +1,8 @@
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli/main.py,sha256=QsiYeX9e5OKZypU9WoTqveuSpLsfjEkQziwfOzNO8Vc,810
+cli/pmcli.py,sha256=a9ieySlh-92PcjburfQJ4e1bnP19wDTjvryrB5gJN_Q,3762
+productmap_cli-0.1.11.dist-info/METADATA,sha256=wI5DwHG49chdfO7APEO4CrbWZFzEwWzVU42TI1PDLk8,1723
+productmap_cli-0.1.11.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+productmap_cli-0.1.11.dist-info/entry_points.txt,sha256=XkH4ZeJ6sUP1O3xSJJdi_jzdC-gD6WHyIaSd33j3-TA,45
+productmap_cli-0.1.11.dist-info/top_level.txt,sha256=2ImG917oaVHlm0nP9oJE-Qrgs-fq_fGWgba2H1f8fpE,4
+productmap_cli-0.1.11.dist-info/RECORD,,
