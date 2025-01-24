@@ -1,0 +1,17 @@
+oborpc/__init__.py,sha256=SSicKJiRiKw50XmN_dWa5cyRkVg6cXowKV-1_WNjhH0,81
+oborpc/decorator.py,sha256=aGKi5pp0KJ5DmeCyRHrsyTTTSz5PuxBJ3jqcKUV2EUs,902
+oborpc/exception.py,sha256=lKnt4LQPC2jf6taSyoqjZcGtdXgq1HPGBWdb7et35uM,355
+oborpc/security.py,sha256=rdq6EFpQZpjK4O-v0p2E7Gtg7gP0tqrXKiqn5alzSJ8,657
+oborpc/base/__init__.py,sha256=tZ-kG24m_WRNOR1Vl31aCXoQlHw6ArhCKQhmBHbwZog,45
+oborpc/base/meta.py,sha256=Z1ZPjhl3PvS6tj6xq1VsQLvd_VEqNF7ombSXP--OtB8,768
+oborpc/builder/__init__.py,sha256=hPXHmeVAhxia4jOG_o3kmLM4u3Y71TOLNlQfyaIfL9U,93
+oborpc/builder/_base.py,sha256=37Gu1n2OL2B7-l680dz2bpD8O9LK0ZkUEOp-rP5Yzf0,1232
+oborpc/builder/_client.py,sha256=rghlK8a22cIFoqEsBpHmt0gPcUgKkGRqUH8tKn34LpE,11527
+oborpc/builder/_server.py,sha256=mbEmz2lRbi7iElYzWWwC4JzTx1NsRzZ1spThdJyaVTY,7094
+oborpc/builder/fastapi.py,sha256=_mDBJkrQbNJNtyXreEeWoE6J59EzyXH1SNhMD5LcRas,6276
+oborpc/builder/flask.py,sha256=gpJ71qp6lYgvId4xScV9NVmAUcS7H1N2VYKBDj-aa7Y,2166
+oborpc-0.3.1.dist-info/LICENSE,sha256=xFFnDS41V_Mf40VM-czas3d9rBYvhgyp4kjmDtvJYIM,1072
+oborpc-0.3.1.dist-info/METADATA,sha256=zKMy-TrPJOgBCh2HxFdUyN-sAbp74GZ-Owt3Y2fPemc,3839
+oborpc-0.3.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+oborpc-0.3.1.dist-info/top_level.txt,sha256=gN5pKx6Dm5mZqfnoGv0mFXtG9xPayOrNoLeJ3I6LQd0,7
+oborpc-0.3.1.dist-info/RECORD,,
