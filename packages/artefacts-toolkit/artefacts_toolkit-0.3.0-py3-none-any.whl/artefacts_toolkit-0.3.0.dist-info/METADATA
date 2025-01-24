@@ -1,0 +1,91 @@
+Metadata-Version: 2.2
+Name: artefacts_toolkit
+Version: 0.3.0
+Author-email: FD <fabian@artefacts.com>, AGC <alejandro@artefacts.com>, TN <tomo@artefacts.com>, EP <eric@artefacts.com>
+Project-URL: Homepage, https://github.com/art-e-fact/artefacts-toolkit
+Project-URL: Bug Tracker, https://github.com/art-e-fact/artefacts-toolkit
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: artefacts-toolkit-rosbag
+Requires-Dist: artefacts-toolkit-config
+Requires-Dist: artefacts-toolkit-gazebo
+Requires-Dist: artefacts-toolkit-chart
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: pyre-check; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-env; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: setuptools-scm; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# Artefacts Toolkit
+
+## artefacts_toolkit.chart
+
+```
+from artefacts_toolkit.chart import make_chart
+```
+
+* make_chart(filepath, topic_x, topic_y, field_unit=None, output_dir="output", chart_name="chart", file_type="rosbag")
+    * Creates an html chart based on two provided topics. The user may also denote "Time" as one of the topics to plot one topic against time. Currently only creates charts from a provided Rosbag.
+
+## artefacts_toolkit.config
+
+```
+from artefacts_toolkit.config import get_artefacts_param
+```
+
+* get_artefacts_param(param_type, param_name, is_ros=True)
+    * Returns a parameter set in the `artefacts.yaml` file. If `param_type` is set to `launch`, it will be returned as type `string` so that it can be used as a ros launch argument.
+
+## artefacts_toolkit.gazebo
+
+```
+from artefacts_toolkit.gazebo import bridge, gz
+```
+
+_Note: Gazebo helpers are designed to work with Gazebo versions Garden and above_
+
+### bridge
+
+* bridge.get_camera_bridge(topic_name, condition=None)
+    * Creates a gazebo /ros2 topic bridge for a given camera topic `topic_name`. Returns `camera_bridge` (`Node`)
+
+### gz
+
+* gz.get_sim_objects(world_file: str)
+    * Searches through a given world file, and returns the name (and pose if available) of all `model`s in the simulation.
+    * Returns a list of dicts in the format `{"name": "<model_name>", "pose": "0 0 0 0 0 0"}`as well as a dict in the format `"<model_name>": "0 0 0 0 0 0"`
+
+* gz.get_model_location(model_name):
+    * Returns the `x, y, z` location of a _currently running_ gazebo simulation
+
+* gz.kill_gazebo():
+    * Kills the currently running gazebo process.
+
+## artefacts_toolkit.rosbag
+
+```
+from artefacts_toolkit.rosbag import image_topics, message_topics, rosbag
+```
+
+### image_topics
+
+* extract_camera_image(rosbag_file_path, camera_topic, output_dir="output")
+    * Returns the last recorded image from a given camera topic
+
+### message_topics
+
+* get_final_message(rosbag_filepath, topic)
+    * Returns the last recorded message from a given topic
+
+### rosbag_topics
+
+* get_bag_recorder(topic_names, use_sim_time=False):
+    * Returns a `bag_recorder` process, as well as the `rosbag_filepath`. `bag_recorder` can then be added to your `LaunchDescription`
