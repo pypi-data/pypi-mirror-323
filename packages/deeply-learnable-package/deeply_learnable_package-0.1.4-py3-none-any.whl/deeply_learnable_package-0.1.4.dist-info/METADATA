@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: deeply_learnable_package
+Version: 0.1.4
+Summary: A package for regression, image processing, and classification
+Author: Konstantin
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn>=0.24.0
+Dynamic: author
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
