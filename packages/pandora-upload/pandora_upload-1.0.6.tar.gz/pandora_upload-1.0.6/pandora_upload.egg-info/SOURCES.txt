@@ -1,0 +1,10 @@
+README.md
+setup.py
+pandora_upload/__init__.py
+pandora_upload/__main__.py
+pandora_upload.egg-info/PKG-INFO
+pandora_upload.egg-info/SOURCES.txt
+pandora_upload.egg-info/dependency_links.txt
+pandora_upload.egg-info/entry_points.txt
+pandora_upload.egg-info/requires.txt
+pandora_upload.egg-info/top_level.txt
