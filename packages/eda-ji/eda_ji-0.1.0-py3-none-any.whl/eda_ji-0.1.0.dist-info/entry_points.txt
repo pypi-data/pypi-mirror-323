@@ -1,0 +1,5 @@
+[console_scripts]
+eda-ji = eda_ji.cli:entry_point
+
+[gui_scripts]
+
