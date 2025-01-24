@@ -1,0 +1,27 @@
+[project]
+name = "retan"
+version = "0.1.0"
+description = "A cli helper tool that helps with day to day cli commands and automates software development"
+authors = [
+    {name = "tanveer", email = "tanvoid0@gmail.com"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+
+dependencies = [
+    "click",
+    "colorama",       # You can omit version if version flexibility is desired
+    "textual",        # You can omit version if version flexibility is desired
+    "ollama"          # You can omit version if version flexibility is desired
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pilot = "retan:cli"
+
+[tool.poetry]
+exclude = ['assets']
