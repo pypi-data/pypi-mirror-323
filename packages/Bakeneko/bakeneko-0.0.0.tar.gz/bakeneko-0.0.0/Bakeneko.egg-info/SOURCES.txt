@@ -1,0 +1,7 @@
+setup.py
+Bakeneko.egg-info/PKG-INFO
+Bakeneko.egg-info/SOURCES.txt
+Bakeneko.egg-info/dependency_links.txt
+Bakeneko.egg-info/top_level.txt
+Bakeneko.egg-info/zip-safe
+bakeneko/__init__.py
