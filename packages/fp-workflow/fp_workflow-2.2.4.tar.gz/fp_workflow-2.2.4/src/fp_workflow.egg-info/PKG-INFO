@@ -1,0 +1,53 @@
+Metadata-Version: 2.2
+Name: fp_workflow
+Version: 2.2.4
+Summary: First priciples workflow and utilities
+Author: Krishnaa Vadivel
+Author-email: krishnaa.vadivel@yale.edu
+Requires: numpy
+Requires: scipy
+Requires: ase
+Requires: dill
+Requires: pyyaml
+Requires: cython
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires
+Dynamic: summary
+
+# First-principles workflow
+
+Supported software:
+- Quantum Espresso
+- BerkeleyGW
+
+Jobs:
+- relax
+- scf
+- dfpt
+- phbands
+- phdos
+- phmodes
+- md
+- dos
+- pdos
+- dftelbands
+- kpdos
+- wannier
+- wfn
+- epw
+- elph
+- wfnq
+- wfnfi
+- wfnqfi
+- epsilon
+- sigma
+- kernel
+- absorption
+- plotxct
+- bseq
+- xctph
+- esf

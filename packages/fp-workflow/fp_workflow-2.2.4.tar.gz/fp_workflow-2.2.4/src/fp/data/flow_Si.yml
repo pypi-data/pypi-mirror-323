@@ -1,0 +1,607 @@
+# scheduler. 
+scheduler:
+  frontera:
+    node_info:
+      cores: 56
+      threads_per_core: 1
+      gpus:
+    header:
+      account: 'PHY20032'
+      partition: 'development'
+      job-name: 'struct_job'
+      mail-type: 'all'
+      mail-user: 'krishnaa.vadivel@yale.edu'
+    header_commands:
+    mpi: 'srun'
+    launch: 'sbatch'
+    options:
+      is_interactive: false
+      is_gpu: false
+    interactive:
+      launch: 'srun'
+      args:
+        account: 'PHY20032'
+        partition: 'normal'
+        pty:
+        job-name: 'struct_job'
+        nodes: 1 
+        time: '00:20:00'
+      extra_string: '/bin/bash -l'
+  perlmutter_gpu:
+    node_info:
+      cores: 64
+      threads_per_core: 2
+      gpus: 4
+    header:
+      account: 'm3571'
+      qos: 'debug'
+      constraint: 'gpu'
+      job-name: 'struct_job'
+      mail-type: 'all'
+      mail-user: 'krishnaa.vadivel@yale.edu'
+    header_commands:
+    mpi: 'srun'
+    launch: 'sbatch'
+    options:
+      is_interactive: false
+      is_gpu: true
+    inteactive:
+      launch: 'salloc'
+      args:
+        account: 'm3571'
+        qos: 'interactive'
+        job-name: 'struct_job'
+        constraint: 'gpu'
+        nodes: 1 
+        time: '00:20:00'
+      extra_string: ''
+  perlmutter_cpu:
+    node_info:
+      cores: 128
+      threads_per_core: 2
+      gpus:
+    header:
+      account: 'm3571'
+      qos: 'debug'
+      constraint: 'cpu'
+      job-name: 'struct_job'
+      mail-type: 'all'
+      mail-user: 'krishnaa.vadivel@yale.edu'
+    header_commands:
+    mpi: 'srun'
+    launch: 'sbatch'
+    options:
+      is_interactive: false
+      is_gpu: false
+    interactive:
+      launch: 'salloc'
+      args:
+        account: 'm3571'
+        qos: 'interactive'
+        job-name: 'struct_job'
+        constraint: 'cpu'
+        nodes: 1 
+        time: '00:20:00'
+      extra_string: ''
+  mac_mini:
+    node_info:
+      cores: 8
+      threads_per_core: 1
+      gpus:
+    header:
+    header_commands: |
+      # Necessary for running some docker aliases that I have.
+      shopt -s expand_aliases
+      alias abacus="docker run --rm -v ./:/scratch -w /scratch krishnaa42342/fp:testing-arm64 abacus"
+      alias wannier90.x="docker run --rm -v ./:/scratch -w /scratch krishnaa42342/fp:testing-arm64 wannier90.x"
+    mpi: ''     # Could be mpirun.
+    launch: ''
+    options:
+      is_interactive: true
+      is_gpu: false
+  mainrun: 'mac_mini'
+  dryrun: 'mac_mini'
+
+# jobs. 
+job_types:
+  single_task:
+    nodes: 1
+    ntasks: 1
+    time: "00:45"
+  single_node:
+    nodes: 1
+    ntasks: 1
+    time: "00:45"
+  para:
+    nodes: 1
+    ntasks: 1
+    time: "00:45"
+  para_k:
+    nodes: 1
+    ntasks: 1
+    time: "00:45"
+  big_para:
+    nodes: 1
+    ntasks: 1
+    time: "00:45"
+  big_para_k:
+    nodes: 1
+    ntasks: 1
+    time: "00:45"
+  para_epwk:
+    nodes: 1
+    ntasks: 1
+    nk: 1
+    time: "00:45"
+
+# atoms. 
+atoms:
+  # file: 'atoms.xsf'
+  write_cell_units: 'angstrom' # Options are 'angstrom', 'bohr', 'alat'
+  write_position_units: 'angstrom' # Options are 'angstrom', 'bohr', 'crystal', 'alat'
+  read:
+    cell:
+      units: 'alat'   # Options are 'angstrom', 'bohr', 'alat'
+      alat_info:
+        ibrav: 'fcc'
+        A: 5.48
+        # B: 1.2
+        # C: 1.2
+      vectors:
+        - [1.0, 0.0, 0.0]
+        - [0.0, 1.0, 0.0]
+        - [0.0, 0.0, 1.0]
+      # file: 'relaxed_cell_parameters.txt'  # TODO: Read relaxed_cell_parameters with alat change under vcrelax.
+    positions:
+      units: 'crystal'  # Options are 'angstrom', 'bohr', 'crystal', 'alat'.
+      vectors:
+        - ['Si', 0.00, 0.00, 0.00]
+        - ['Si', 0.25, 0.25, 0.25]
+      # file: 'relaxed_atomic_positions.txt'
+  pseudos:
+    # doping:
+    #   - mixing_atoms: ['Si', 'Ag']
+    #     replacement_atom: 'Ag'
+    #     fraction: 0.2
+    # override:
+    #   - atom: 'Cs'
+    #     source_fileloc: './Cs-Na.upf'
+    #     dest_filename: 'Cs.upf'
+
+# paths. 
+path:
+  special_points:
+    - 'L'
+    - 'G'
+    - 'X'
+    # - 'W'
+    # - 'L'
+    # - 'K'
+    # - 'G'
+  npoints_segment: 20
+
+# relax. 
+relax:
+  type: 'vcrelax'  # Options are: relax, vcrelax, cdft-relax, cdft-vcrelax.  
+  args_type: 'extra'  # Options are 'override' or 'extra'
+  args:
+  job_info: 'single_task'
+  update_files: # Update relax output to these files if they exist.
+    - scf.in
+    - md.in
+    - wfndos.in
+    - dftelbands.in
+    - wfnwan.in
+    - wfn.in
+    - wfnq.in
+    - wfnfi.in
+    - wfnqfi.in
+
+# scf. 
+scf:
+  kdim:
+    - 2
+    - 2
+    - 2
+  cutoff: 20.0
+  is_spinorbit: false
+  xc_type: 'lda'
+  args_type: 'extra'
+  args:
+  job_info: 'single_task'
+  update_files:
+    - 'job_dfpt.sh'
+
+# md.
+md:
+  time_step: 20     # 20 a.u. a.u = 48 as.  
+  number_steps: 100
+  temperature: 300
+  args_type: 'extra'
+  args:
+  job_info: 'single_task'
+
+# abacus.
+abacus:
+  common:
+    kdim:
+      - 2
+      - 2
+      - 2
+    cutoff: 20.0
+    scf_threshold: '1e-4'
+    is_spinorbit: false
+    abacus_exec:                # If provided, set it, else default is abacus.
+    job_info: 'single_task'
+  calculations: 
+    - basis: 'lcao'
+      type: 'scf'
+      args_type: 'extra'
+      args:
+        input:
+          out_chg: 1
+          out_wfc_lcao: 1
+        structure:
+        kpts:
+      
+# gpaw.
+gpaw:
+  common:
+    kdim:
+      - 2
+      - 2
+      - 2
+    cutoff: 20.0
+    scf_threshold: '1e-4'
+    is_spinorbit: false
+    abacus_exec:                # If provided, set it, else default is abacus.
+    job_info: 'single_task'
+  calculations: 
+    - basis: 'lcao'
+      type: 'scf'
+      args_type: 'extra'
+      args:
+        input:
+          out_chg: 1
+          out_wfc_lcao: 1
+        structure:
+        kpts:
+
+# pyscf.
+pyscf:
+  common:
+    kdim:
+      - 2
+      - 2
+      - 2
+    cutoff: 20.0
+    scf_threshold: '1e-4'
+    is_spinorbit: false
+    abacus_exec:                # If provided, set it, else default is abacus.
+    job_info: 'single_task'
+  calculations: 
+    - basis: 'lcao'
+      type: 'scf'
+      args_type: 'extra'
+      args:
+        input:
+          out_chg: 1
+          out_wfc_lcao: 1
+        structure:
+        kpts:
+
+# dfpt, phbands, phdos, phmodes. 
+dfpt:
+  qdim:
+    - 2
+    - 2
+    - 2
+  conv_threshold: '1.0d-16'
+  args_type: 'extra'
+  args:
+  job_info: 'single_task'
+phbands:
+  q2r_args_type: 'extra'
+  q2r_args:
+  matdyn_args_type: 'extra'
+  matdyn_args:
+  job_info: 'single_task'
+phdos:
+  qdim:
+    - 2
+    - 2
+    - 2
+  q2r_args_type: 'extra'
+  q2r_args:
+  matdyn_args_type: 'extra'
+  matdyn_args:
+  job_info: 'single_task'
+phmodes:
+  qpt_idx: 1
+  args_type: 'extra'
+  args:
+  job_info: 'single_task'
+
+# dos, pdos.
+dos:
+  kdim:
+    - 2
+    - 2
+    - 2
+  num_cond_bands: 4 
+  wfn_args_type: 'extra'
+  wfn_args:
+  args_type: 'extra'
+  args:
+  job_info: 'single_task'
+pdos:
+  args_type: 'extra'
+  args:
+  job_info: 'single_task'
+
+# dftelbands, kpdos, wannier. Creates WFN_dftelbands, WFN_dftelbands.h5.
+dftelbands:
+  num_cond_bands: 4
+  args_type: 'extra'
+  args:
+  pw2bgw_args_type: 'extra'
+  pw2bgw_args:
+  job_info: 'single_task'
+  job_pw2bgw_info: 'single_task'
+kpdos:
+  args_type: 'extra'
+  args:
+  job_info: 'single_task'
+wannier:
+  kdim:
+    - 2
+    - 2
+    - 2
+  num_cond_bands: 10
+  num_val_bands: 4
+  args_type: 'extra'
+  args:
+    wfnwan:
+    wan:
+    pw2wan:
+  job_info: 'single_task'
+
+# wfn. reates WFN_coo, WFN_parabands.h5.
+wfn:
+  kdim:
+    - 2
+    - 2
+    - 2
+  sym: false
+  num_cond_bands: 10
+  num_parabands_cond_bands: 201
+  args_type: 'extra'            # Options are 'override' or 'extra'
+  args:
+  pw2bgw_args_type: 'extra'     # Options are 'override' or 'extra'
+  pw2bgw_args:
+  parabands_args_type: 'extra'  # Options are 'override' or 'extra'
+  parabands_args: 
+    maps:
+      wfn_io_mpiio_mode: 1
+  job_info: 'single_task'
+  job_pw2bgw_info: 'single_task'
+  job_parabands_info: 'single_task'
+
+# epw, elph.
+epw:
+  exec_loc: 'epw.x' # Options include: '$APP/qe-cpu/bin/epw.x'.
+  args_type: 'extra'  # Options are 'override' or 'extra'
+  args: 
+  job_info: 'para_epwk'
+elph:
+  job_info: 'single_task'
+
+# wfnq. Creates WFNq_coo, WFNq_coo.h5.
+wfnq:
+  qshift:
+    - 0.000
+    - 0.000
+    - 0.001
+  kdim:
+    - 2
+    - 2
+    - 2
+  sym: false
+  num_cond_bands: 10
+  args_type: 'extra'
+  args:
+  pw2bgw_args_type: 'extra'     # Options are 'override' or 'extra'
+  pw2bgw_args:
+  job_info: 'single_task'
+  job_pw2bgw_info: 'single_task'
+
+# wfnfi. Creates WFN_fii, WFN_fii.h5.
+wfnfi:
+  kdim:
+   - 2
+   - 2
+   - 2
+  sym: false
+  num_cond_bands: 10
+  args_type: 'extra'
+  args:
+  pw2bgw_args_type: 'extra'     # Options are 'override' or 'extra'
+  pw2bgw_args:
+  job_info: 'single_task'
+  job_pw2bgw_info: 'single_task'
+
+# wfnqfi. Creates WFNq_fii, WFNq_fii.h5.
+wfnqfi:
+  kdim:
+    - 2
+    - 2
+    - 2
+  sym: false
+  num_cond_bands: 10
+  args_type: 'extra'
+  args:
+  pw2bgw_args_type: 'extra'     # Options are 'override' or 'extra'
+  pw2bgw_args:
+  job_info: 'single_task'
+  job_pw2bgw_info: 'single_task'
+
+# epsilon. 
+eps:
+  cutoff: 10.0
+  num_cond_bands: 200
+  wfnlink: 'WFN_parabands.h5'
+  wfnqlink: 'WFNq_coo.h5'
+  args_type: 'extra' # Options are 'override' or 'extra'
+  args:
+  job_info: 'single_task'
+
+# sigma. 
+sig:
+  cutoff: 10.0
+  total_cond_bands: 200
+  se_val_bands: 4
+  se_cond_bands: 10
+  wfninner_link: 'WFN_parabands.h5'
+  args_type: 'extra' # Options are 'override' or 'extra'
+  args:
+  job_info: 'single_task'
+
+# inteqp. 
+inteqp:
+  num_val_bands: 4
+  wfnco_link: 'WFN_coo'
+  wfnfi_link: 'WFN_dftelbands'
+  args_type: 'extra' # Options are 'override' or 'extra'
+  args:
+  job_info: 'single_task'
+
+# absorption. 
+ker:
+  args_type: 'extra' # Options are 'override' or 'extra'
+  args:
+    maps:
+      dont_check_norms: ''
+  job_info: 'single_task'
+abs:
+  Qshift: [0.0, 0.0, 0.0]
+  num_val_bands: 4
+  num_cond_bands: 10
+  num_evecs: 10
+  pol_dir:
+    - 0.000
+    - 0.000
+    - 0.001
+  wfnco_link: 'WFN_parabands.h5'
+  wfnqco_link: 'WFN_parabands.h5'
+  wfnfi_link: 'WFN_parabands.h5'
+  wfnqfi_link: 'WFN_parabands.h5'
+  args_type: 'extra' # Options are 'override' or 'extra'
+  args:
+    maps:
+      dont_check_norms: ''
+  job_info: 'single_task'
+
+# plotxct. 
+plotxct:
+  hole_position:
+    - 0.25
+    - 0.25
+    - 0.25
+  supercell_size:
+    - 2
+    - 2
+    - 2
+  xct_state: 1
+  wfnfi_link: 'WFN_parabands.h5'
+  wfnqfi_link: 'WFNq_coo.h5'
+  args_type: 'extra' # Options are 'override' or 'extra'
+  args:
+  job_info: 'single_task'
+
+# bseq. 
+bseq:
+  Qdim:
+    - 2
+    - 2
+    - 2
+  job_info: 'single_task'
+
+# xctph, xctpol, ste, esf, esd. 
+xctph:
+  num_evecs: 10
+  job_info:
+    nodes: 1
+    ntasks: 6
+    time: 01:45:00 
+xctpol:
+  temp: 300
+  max_error: 0.1
+  max_steps: 10
+  job_info: 'single_task'
+ste:
+  temp: 300
+  max_error: 0.1
+  max_steps: 10
+  job_info: 'single_task'
+esf:
+  max_error: 0.1
+  max_steps: 10
+  job_info: 'single_task'
+esd:
+  max_error: 0.1
+  max_steps: 10
+  job_info: 'single_task'
+
+# convergence.
+convergence:
+  add_to_job_list: false
+  copy_additional:    # glob patterns to copy.
+    - 'atoms.xsf'
+    # - 'read_cell_parameters.txt'
+    # - 'read_atomic_positions.txt'
+  dft:
+    - scf:
+        cutoff: 10.0
+        kdim: [2, 2, 2]
+    - scf:
+        cutoff: 20.0
+        kdim: [2, 2, 2]
+  dfpt:
+    - scf:
+        kdim: [2, 2, 2]
+      dfpt:
+        qdim: [2, 2, 2]
+        conv_threshold: '1.0d-14'
+    - scf:
+        kdim: [2, 2, 2]
+      dfpt:
+        qdim: [2, 2, 2]
+        conv_threshold: '1.0d-16'
+  gw:
+    # - scf:
+    #     kdim: [2, 2, 2]
+    #   eps:
+    #     cutoff: 5.0
+    #   sig:
+    #     cutoff: 5.0
+    # - scf:
+    #     kdim: [2, 2, 2]
+    #   eps:
+    #     cutoff: 10.0
+    #   sig:
+    #     cutoff: 10.0
+    #   reuse:
+    #     turn_off_jobs:
+    #       - ScfJob
+    #       - WfnJob
+    #       - WfnqJob
+    #     copy_files:
+    #       - folder: gw
+    #         idx: 0
+    #         files:
+    #           - 'WFN_coo.h5'
+    #           - 'WFNq_coo.h5'
+  bse:
+    # - abs:
+    #     num_cond_bands: 2
+    #     num_val_bands: 2
