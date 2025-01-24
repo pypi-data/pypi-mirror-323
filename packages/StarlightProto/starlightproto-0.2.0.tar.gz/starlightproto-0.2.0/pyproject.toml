@@ -1,0 +1,25 @@
+[project]
+name = "StarlightProto"
+version = "0.2.0"
+description = "Default template for PDM package"
+authors = [
+    { name = "cho6019", email = "j01040864205@gmail.com" },
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+cho-test = "starlightproto.stella:example"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
