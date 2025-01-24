@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+effort_zero_commit.egg-info/PKG-INFO
+effort_zero_commit.egg-info/SOURCES.txt
+effort_zero_commit.egg-info/dependency_links.txt
+effort_zero_commit.egg-info/entry_points.txt
+effort_zero_commit.egg-info/requires.txt
+effort_zero_commit.egg-info/top_level.txt
+ezcommit/__init__.py
+ezcommit/cli.py
+ezcommit/commit_generator.py
+tests/test_commit_generator.py

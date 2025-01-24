@@ -1,0 +1,5 @@
+gitpython
+groq
+python-dotenv
+click
+json-with-comments
