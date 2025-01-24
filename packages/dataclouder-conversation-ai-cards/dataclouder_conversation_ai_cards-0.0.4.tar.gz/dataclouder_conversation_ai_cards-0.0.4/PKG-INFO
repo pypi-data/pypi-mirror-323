@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: dataclouder-conversation-ai-cards
+Version: 0.0.4
+Summary: A library for managing AI conversations and character cards
+Project-URL: Homepage, https://dataclouder.dev
+Project-URL: Bug Tracker, https://github.com/dataclouder/dc-conversations/issues
+Author-email: adamo figueroa <adamo@dataclouder.com>
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: fastapi>=0.100.0
+Requires-Dist: pydantic-ai>=0.0.19
+Description-Content-Type: text/markdown
+
+# DC Conversations WIP
+
+Note: this is experimental project and not ready for production.
+
+
+### Description
+
+This library is used to manage AI conversations and character cards. is backend for UI interface.
+
+## Build
+
+if you have source code you can build the package with make command:
+```bash
+make build
+```
