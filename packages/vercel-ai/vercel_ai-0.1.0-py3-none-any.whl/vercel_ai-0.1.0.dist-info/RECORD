@@ -1,0 +1,12 @@
+vercel_ai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vercel_ai/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vercel_ai/adapter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vercel_ai/adapter/manager.py,sha256=EGnnkhFwSGDgaWALCLVfmUloxbosQFt71KpftGrGt5I,1984
+vercel_ai/adapter/messages.py,sha256=hjhQ11YfP3pOwDqi0Ql1YGkxE-54RmChlXa48R7tOb8,1820
+vercel_ai/adapter/parts.py,sha256=3MuEWAf-VkdSQdq6EvSzZG9m9vJZsRT9B3TvqfUXvdQ,3302
+vercel_ai/fastapi/__init__.py,sha256=ro13h9hj1hXXVoZgvijVLssDsH45GZ1Ndwal-rXlXvE,695
+vercel_ai/providers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vercel_ai/providers/openai.py,sha256=DpfaCvNtpsbFWksvKap5KVgal6Vp86vhGKG85QS_0BU,1628
+vercel_ai-0.1.0.dist-info/METADATA,sha256=RgnvG8-VUAKSQ1n8bvyz1jD9sI6__uS0O23qwz3yaQs,319
+vercel_ai-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vercel_ai-0.1.0.dist-info/RECORD,,
