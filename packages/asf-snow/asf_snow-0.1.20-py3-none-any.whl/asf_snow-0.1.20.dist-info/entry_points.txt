@@ -1,0 +1,3 @@
+[console_scripts]
+investigate_s1_snotel = asf_snow.utils.investigate_s1_snotel:main
+sentinel1_snow = asf_snow.sentinel1_snow:main
