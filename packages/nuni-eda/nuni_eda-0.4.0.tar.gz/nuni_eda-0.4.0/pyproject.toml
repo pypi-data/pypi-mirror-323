@@ -1,0 +1,41 @@
+[project]
+name = "nuni-eda"
+version = "0.4.0"
+description = "Default template for PDM package"
+authors = [
+    { name = "nunininu", email = "sgcho0907@gmail.com" },
+]
+dependencies = [
+    "president-speech>=0.9.1",
+    "pandas>=2.2.3",
+    "typer>=0.15.1",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+nuni-eda = "nuni_eda.cli:entry_point"
+
+[project.urls]
+Homepage = "https://github.com/nunininu/nuni-eda"
+Issues = "https://github.com/nunininu/nuni-eda/issues"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[dependency-groups]
+test = [
+    "pytest>=8.3.4",
+]
+eda = [
+    "jupyterlab>=4.3.4",
+]
