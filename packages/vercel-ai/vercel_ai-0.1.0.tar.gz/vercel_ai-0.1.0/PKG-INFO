@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: vercel-ai
+Version: 0.1.0
+Summary: Python Adapter for Vercel's AI SDK
+Author-email: ajac-zero <ajcardoza2000@gmail.com>
+Requires-Python: >=3.10
+Requires-Dist: openai>=1.59.7
+Requires-Dist: pydantic>=2.10.5
+Provides-Extra: fastapi
+Requires-Dist: fastapi[standard]>=0.115.6; extra == 'fastapi'
