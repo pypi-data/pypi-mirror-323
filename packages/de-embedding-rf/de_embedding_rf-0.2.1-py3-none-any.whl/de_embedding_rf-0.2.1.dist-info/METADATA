@@ -1,0 +1,105 @@
+Metadata-Version: 2.2
+Name: de_embedding_rf
+Version: 0.2.1
+Summary: methods for de-embedding process: T-R-L, L-L and T-VR-L
+Home-page: https://github.com/aplatag/project_SL_regression_quality.git
+Author: Aplata
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-rf
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# De-embedding in Free Space Using the T-VR-L Method:
+<div align="justify">
+Free-space measurements require the use of identical antennas and a material under test (MUT). During this process, the obtained results include the effects of the error box, which comprises the effects of the antennas and the separation distance between them (see Figure 1). Therefore, a post-measurement de-embedding process is essential to isolate and extract only the S-parameters of the MUT.
+</div>
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/aplatag/project_SL_regression_quality/main/images/RlinealMW.jpeg" alt="methodology" width="500" >
+</p>
+<div align="center">
+Figure 1. Measurement Scenario.
+</div>
+
+
+## Table of Contents
+- [Calibration standards](#Calibration-Standards)
+- [Required Measurements](#Required-Measurements)
+- [Internal Data](#Internal-Data)
+- [Installation](#installation)
+- [Code Example](#code-Example)
+
+
+## Calibration Standards:
+
+1.  **Thru**: It is constructed by uniformly separating both antennas at a distance d1.
+2.	**Line**: It is constructed by moving only one antenna backward by a distance of λ/4.
+
+## Required Measurements
+
+1.	**Embedded DUT**: It is necessary to save the data in a .s2p file.
+2.	**Thru**: It is necessary to save the data in a .s2p file.
+3.	**Line**: It is necessary to save the data in a .s2p file. 
+
+
+## Internal Data
+<div align="justify">
+The "regression_quality" program includes three example simulations named Thru.s2p, DUT.s2p, and Line.s2p, designed to implement and validate the T-VR-L method. Additionally, it features a simulation of a reflect standard, named open.s1p, which enables the application of the conventional T-R-L method.
+</div>
+
+
+## Installation
+
+Instructions on how to install the project. For example:
+```bash
+
+pip install sl-regression-quality
+```
+## Code Example
+For instance, the following code can be executed in Google Colab. Simply copy and paste it into a new Colab notebook.
+```bash
+
+#--------------------------------------------------------------------------------
+# 1) Load libraries:
+import pandas as pd
+from sl_regression_quality.main_routine import regression_quality
+from sl_regression_quality.load_data import load_csv, load_csv_example
+
+#--------------------------------------------------------------------------------
+# 2) Load data . 
+# 2 a) uncomment the following line to load data included in the project (as an example)
+
+#dataset_x = load_csv_example('data_x_example.csv') # example data (uncomment line)
+#dataset_y = load_csv_example('data_y_example.csv') # example data (uncomment line)
+
+# 2 a) uncomment the following line to load the user's data by using the .csv file (described in the Database Structure section)
+
+#dataset_x = load_csv('your_data.csv') # example for your data (uncomment line)
+#dataset_y = load_csv('your_data.csv') # example for your data (uncomment line)
+
+
+alpha = 0.05 # significance level
+dL = 1.055 # dL
+dU = 1.211 # dU
+
+#--------------------------------------------------------------------------------
+# 3) Run analysis
+regression_quality(dataset_x,dataset_y,alpha,dL,dU)
+
+```
+
+         
+
+
+
+        
