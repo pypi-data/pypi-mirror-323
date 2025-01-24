@@ -1,0 +1,23 @@
+name: pre-commit
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout [${{ github.repository }}]
+      uses: actions/checkout@v4
+
+    - uses: cvxgrp/.github/actions/uv/coverage@v2.0.6
+      with:
+        source-folder: 'pyamber'
+
+    - name: Coveralls GitHub Action
+      uses: coverallsapp/github-action@v2
+      with:
+        files: artifacts/tests/coverage/coverage.info
+        format: lcov
