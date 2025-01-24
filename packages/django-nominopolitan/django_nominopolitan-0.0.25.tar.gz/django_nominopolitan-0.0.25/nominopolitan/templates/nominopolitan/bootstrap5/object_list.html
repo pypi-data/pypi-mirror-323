@@ -1,0 +1,98 @@
+{% extends base_template_path %}
+{% load partials %}
+{% load nominopolitan %}
+
+{% block content %}
+{% partial content %}
+{% endblock %}
+
+{% partialdef content %}
+    <title id="header_title">{{header_title}}</title>
+    <div class="d-flex flex-column m-2 p-2">
+        <h1 class="flex-grow-1 fw-bold h4">{{ object_verbose_name_plural|capfirst }}</h1>
+
+        {% if create_view_url %}
+        <div class="mt-2">
+            {% if use_htmx and htmx_target %}
+            <a class="btn btn-primary" href="{{ create_view_url }}" hx-get="{{ create_view_url }}"
+                hx-target="{{htmx_target}}"
+                {% if use_modal %}data-bs-toggle="modal" data-bs-target="#nominopolitanBaseModal"{% endif %}>
+                Add a new {{ object_verbose_name }}
+            </a>
+            {% else %}
+            <a class="btn btn-primary" href="{{ create_view_url }}">
+                Add a new {{ object_verbose_name }}
+            </a>
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        {% if object_list %}
+            {% object_list object_list view %}
+            {% partial pagination %}
+        {% else %}
+            <p class="mt-4">There are no {{ object_verbose_name_plural }}. Create one now?</p>
+        {% endif %}
+    </div>
+    <hr>
+    <div id="crud_target"></div>
+
+{# Bootstrap modal #}
+<div class="modal fade" id="nominopolitanBaseModal" 
+    tabindex="-1" style="z-index: 1055"
+    aria-labelledby="modalTitle" aria-hidden="true"
+    data-bs-backdrop="false">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="z-index: 1056">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="modalTitle">{{ header_title }}</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="nominopolitanModalContent">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endpartialdef content %}
+
+{% partialdef pagination %}
+{% if is_paginated %}
+<nav aria-label="Page navigation" class="mt-4">
+    <ul class="pagination pagination-sm justify-content-center">
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" {% if use_htmx and original_target %}
+                hx-get="?page={{ page_obj.previous_page_number }}" hx-target="{{original_target}}" hx-replace-url="true"
+                hx-push-url="true" {% endif %}>Previous</a>
+        </li>
+        {% endif %}
+
+        {% get_proper_elided_page_range paginator page_obj.number as page_range %}
+        {% for i in page_range %}
+        {% if i == "..." %}
+        <li class="page-item disabled"><span class="page-link">&hellip;</span></li>
+        {% else %}
+        <li class="page-item {% if page_obj.number == i %}active{% endif %}">
+            <a class="page-link" href="?page={{ i }}" {% if use_htmx and original_target %} hx-get="?page={{ i }}"
+                hx-target="{{original_target}}" hx-replace-url="true" hx-push-url="true" {% endif %}>{{ i }}
+            </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}" {% if use_htmx and original_target %}
+                hx-get="?page={{ page_obj.next_page_number }}" hx-target="{{original_target}}" hx-replace-url="true"
+                hx-push-url="true" {% endif %}>Next</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+{% endpartialdef pagination %}
