@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    background-color: #1a1a1a;
+    display: flex;
+    overflow-x: hidden;
+}
+
+/* Menu Lateral Responsivo */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #004d00;
+    padding: 20px 0;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar-header {
+    padding: 0 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-header h1 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.close-menu {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+.nav-item {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #00b300;
+}
+
+.nav-item.active {
+    background-color: #00b300;
+}
+
+/* Mobile Menu Trigger */
+.mobile-menu-trigger {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    background-color: #004d00;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Área de Conteúdo Principal */
+.main-content {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.content-section {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.metric-card {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    color: #00b300;
+    margin: 10px 0;
+}
+
+h2 {
+    color: #00b300;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    overflow-x: auto;
+    display: block;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #004d00;
+    color: white;
+}
+
+.chart-container {
+    background-color: #333;
+    padding: 5px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .mobile-menu-trigger {
+        display: block;
+    }
+    canvas {
+        width: 100% ;
+        height: auto ;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        left: -100%;
+    }
+
+    .close-menu {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 70px 10px 20px;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-container {
+        height: 300px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* Melhorias de rolagem para dispositivos móveis */
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Estilos para rolagem personalizada */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00b300;
+    border-radius: 3px;
+}

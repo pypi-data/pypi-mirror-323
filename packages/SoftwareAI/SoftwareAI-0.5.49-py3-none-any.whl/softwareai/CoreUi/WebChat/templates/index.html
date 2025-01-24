@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareAI Chat Interface</title>
+    
+    <!-- Prism CSS (tema dark) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <!-- Prism JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/clipboard/prism-clipboard.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .chat-input {
+            border: 1px solid #E0E0E0;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #F7F7F7;
+            color: black;
+            font-family: Arial;
+            font-size: 14px;
+        }
+        .text-before-code, .text-after-code {
+            margin: 8px 0;
+            font-size: 14px;
+            color: #f8f8f2;
+            line-height: 1.5;
+        }
+        /* Estilos personalizados */
+        pre {
+            background-color: #2d2d2d; /* Fundo cinza escuro */
+            color: #f8f8f2;
+            padding: 16px;
+            border-radius: 8px;
+            position: relative;
+            overflow-x: auto;
+        }
+        #chat-area-container {
+            max-width: 700px; /* Limite de largura */
+            margin: 0 auto; /* Centraliza a área de chat */
+            padding: 20px; /* Ajuste do padding para espaçamento */
+            overflow-y: auto; /* Permite rolagem vertical */
+        }
+        code {
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 14px;
+        }
+
+        /* Estilo do cabeçalho do código */
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e1e1e; /* Fundo cinza mais escuro */
+            padding: 8px 12px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            color: #f8f8f2;
+            font-size: 14px;
+        }
+
+        /* Rótulo da linguagem */
+        .language-label {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #c5c8c6;
+        }
+
+        /* Botão de copiar */
+        .copy-btn {
+            background-color: transparent;
+            border: none;
+            color: #c5c8c6;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .copy-btn:hover {
+            color: #ffffff;
+        }
+
+        /* Ícone opcional ao lado do botão */
+        .copy-btn::before {
+            content: '📋'; /* Ícone de copiar */
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        .copy-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
+        .action-button {
+            background-color: white;
+            border-radius: 13px;
+            color: black;
+            font-size: 13px;
+        }
+        
+        .action-button:hover {
+            background-color: #EDEDED;
+        }
+        
+        .side-menu {
+            background-color: white;
+            border-right: 1px solid #E0E0E0;
+        }
+        
+
+        .message {
+            padding: 10px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            max-width: 75%;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background-color: #D1E7DD;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .bot-message {
+            background-color: #F8D7DA;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .window-control {
+            background-color: transparent;
+            border: none;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div id="main-container" class="flex h-screen">
+        <!-- Side Menu -->
+        <div id="side-menu" class="side-menu w-14 flex flex-col items-center py-4 space-y-4">
+            <button id="menu-toggle" class="action-button p-2">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button id="settings" class="action-button p-2">
+                <i class="fas fa-cog"></i>
+            </button>
+            <button id="analytics" class="action-button p-2">
+                <i class="fas fa-chart-line"></i>
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div id="main-content" class="flex-1 flex flex-col">
+            <!-- Header -->
+            <div id="header" class="flex justify-between items-center p-4 border-b">
+                <div id="agent-selector-container" class="flex items-center">
+                    <span id="software-ai-agent" class="mr-2">SoftwareAI Agent:</span>
+                    <select id="agent-selector" class="border rounded p-2 bg-gray-50">
+                        <option id="select-agent-option">Select Agent</option>
+                    </select>
+                </div>
+                <div id="window-controls" class="flex space-x-2">
+                    <button id="minimize" class="window-control">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button id="maximize" class="window-control">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    <button id="close" class="window-control">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Thread Info -->
+            <div id="thread-info" class="flex justify-between items-center px-4 py-2">
+                <div id="thread-tokens" class="flex items-center">
+                    <span id="thread-label" class="mr-2">Thread:</span>
+                    <span id="token-count">0 tokens</span>
+                </div>
+                <button id="database-button" class="action-button p-2">
+                    <i class="fas fa-database"></i>
+                </button>
+            </div>
+
+            <!-- Chat Area -->
+            <div id="chat-area-container" class="flex-1 p-4 overflow-auto">
+                <div id="chat-area" class="chat-area"></div>
+            </div>
+
+            <!-- Input Area -->
+            <div id="input-area" class="p-4 border-t">
+                <div id="input-controls" class="flex space-x-2 items-center">
+                    <textarea id="message-input" class="chat-input flex-1 h-12 resize-none" placeholder="Message..."></textarea>
+                    <button id="send-message" class="action-button p-2">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <button id="microphone" class="action-button p-2">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button id="attach-file" class="action-button p-2">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button id="code-toggle" class="action-button p-2">
+                        <i class="fas fa-code"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar (Initially Hidden) -->
+        <div id="right-sidebar" class="side-menu w-64 p-4 hidden">
+            <div id="thread-files-section" class="mb-8">
+                <h3 id="thread-files-header" class="text-gray-600 mb-4">Thread's files</h3>
+                <div id="file-search-section" class="flex justify-between items-center mb-2">
+                    <span id="file-search-label">File search</span>
+                    <button id="add-file" class="action-button p-2">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="message-files-section">
+                <h3 id="message-files-header" class="text-gray-600 mb-4">Message files</h3>
+                <div id="message-file-list" class="space-y-4">
+                    <div id="file-search-item" class="flex justify-between items-center">
+                        <span id="file-search-item-label">File search</span>
+                        <button id="add-file-search" class="action-button p-2">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div id="code-interpreter-item" class="flex justify-between items-center">
+                        <span id="code-interpreter-label">Code interpreter</span>
+                        <button id="add-code-interpreter" class="action-button p-2">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div id="image-for-vision-item" class="flex justify-between items-center">
+                        <span id="image-for-vision-label">Image for vision</span>
+                        <button id="add-image" class="action-button p-2">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Controlar a exibição do menu lateral
+        const databaseButton = document.getElementById('database-button');
+        const rightSidebar = document.getElementById('right-sidebar');
+
+        // Exibir ou ocultar a barra lateral direita quando o botão "database-button" for clicado
+        databaseButton.addEventListener('click', () => {
+            rightSidebar.classList.toggle('hidden');
+        });
+
+        // Enviar mensagem para o backend e receber a resposta
+        const sendMessageButton = document.getElementById('send-message');
+        const messageInput = document.getElementById('message-input');
+        const chatArea = document.getElementById('chat-area');
+
+        sendMessageButton.addEventListener('click', async () => {
+            const message = messageInput.value.trim();
+            if (message === '') return;
+
+            // Coleta o valor do agente selecionado
+            const selectedAgent = agentSelector.value;
+
+            // Exibir a mensagem do usuário no chat
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.classList.add('message', 'user-message');
+            userMessageDiv.textContent = message;
+            chatArea.appendChild(userMessageDiv);
+            messageInput.value = ''; // Limpar o campo de entrada
+
+            try {
+                // Enviar a mensagem e o agente selecionado para o backend via AJAX
+                const response = await fetch('http://127.0.0.1:5555/api/send_message', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: message, agent: selectedAgent })
+                });
+
+                const data = await response.json();
+
+                // Exibir a resposta do backend no chat
+                const botResponseDiv = document.createElement('div');
+                botResponseDiv.classList.add('message', 'bot-message');
+
+                // Verifica se a resposta contém um bloco de código (```python)
+                const codeMatch = data.response.match(/```python([\s\S]*?)```/);
+                if (codeMatch) {
+                    // Texto antes do bloco de código
+                    const textBeforeCode = data.response.split('```python')[0]?.trim();
+                    // Bloco de código
+                    const code = codeMatch[1].trim();
+                    // Texto após o bloco de código
+                    const textAfterCode = data.response.split('```python')[1].split('```')[1]?.trim();
+
+                    // Exibe o texto antes do código (se existir)
+                    if (textBeforeCode) {
+                        const textBeforeCodeDiv = document.createElement('div');
+                        textBeforeCodeDiv.textContent = textBeforeCode;
+                        textBeforeCodeDiv.classList.add('text-before-code');
+                        botResponseDiv.appendChild(textBeforeCodeDiv);
+                    }
+
+                    // Cria o bloco de código destacado com estilo
+                    const preElement = document.createElement('pre');
+                    const codeElement = document.createElement('code');
+                    codeElement.classList.add('language-python');
+                    codeElement.textContent = code;
+
+                    // Adiciona o cabeçalho ao bloco de código
+                    const codeHeader = document.createElement('div');
+                    codeHeader.classList.add('code-header');
+
+                    // Exibe o nome da linguagem
+                    const languageLabel = document.createElement('span');
+                    languageLabel.textContent = 'python'; // Linguagem padrão
+                    languageLabel.classList.add('language-label');
+                    codeHeader.appendChild(languageLabel);
+
+                    // Adiciona o botão de copiar ao cabeçalho
+                    const copyButton = document.createElement('button');
+                    copyButton.textContent = 'Copiar código';
+                    copyButton.classList.add('copy-btn');
+                    codeHeader.appendChild(copyButton);
+
+                    // Evento de copiar
+                    copyButton.addEventListener('click', () => {
+                        navigator.clipboard.writeText(code)
+                            .then(() => alert('Código copiado!'))
+                            .catch(err => console.error('Erro ao copiar o código', err));
+                    });
+
+                    // Adiciona o cabeçalho e o código ao elemento principal
+                    preElement.appendChild(codeHeader);
+                    preElement.appendChild(codeElement);
+                    botResponseDiv.appendChild(preElement);
+
+                    // Exibe o texto após o código (se existir)
+                    if (textAfterCode) {
+                        const textAfterCodeDiv = document.createElement('div');
+                        textAfterCodeDiv.textContent = textAfterCode;
+                        textAfterCodeDiv.classList.add('text-after-code');
+                        botResponseDiv.appendChild(textAfterCodeDiv);
+                    }
+                } else {
+                    // Se não houver código, exibe a resposta normalmente
+                    botResponseDiv.textContent = data.response;
+                }
+
+                // Adiciona a resposta ao chat
+                chatArea.appendChild(botResponseDiv);
+
+                // Atualiza o Prism.js para destacar o código
+                Prism.highlightAll();
+
+
+            } catch (error) {
+                console.error('Error sending message:', error);
+
+                // Exibe uma mensagem de erro no chat
+                const errorDiv = document.createElement('div');
+                errorDiv.classList.add('message', 'error-message');
+                errorDiv.textContent = 'Erro ao enviar a mensagem. Tente novamente.';
+                chatArea.appendChild(errorDiv);
+            }
+
+        });
+
+
+
+    </script>
+
+    <script>
+        // Adiciona evento ao selecionar um agente
+        const agentSelector = document.getElementById('agent-selector');
+        
+        
+        agentSelector.addEventListener('change', async () => {
+            const selectedAgent = agentSelector.value;
+
+            if (selectedAgent === 'Select Agent') {
+                console.log('Nenhum agente selecionado.');
+                return;
+            }
+
+            try {
+                // Solicita as threads associadas ao agente selecionado
+                const responseThreads = await fetch(`http://127.0.0.1:5555/api/threads/${selectedAgent}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (!responseThreads.ok) {
+                    throw new Error('Erro ao carregar threads');
+                }
+
+                const threads = await responseThreads.json();
+
+                // Solicita as mensagens associadas ao agente selecionado
+                const responseMessages = await fetch(`http://127.0.0.1:5555/api/messages/${selectedAgent}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (!responseMessages.ok) {
+                    throw new Error('Erro ao carregar mensagens');
+                }
+
+                const messages = await responseMessages.json();
+
+                // Exibe as threads no console
+                console.log('Threads:', threads);
+
+                // Exibe as mensagens no console
+                console.log('Mensagens:', messages);
+
+                // Atualiza o total de tokens
+                const threadTokens = document.getElementById('thread-tokens');
+                if (threadTokens) {
+                    threadTokens.innerHTML = `<p><strong>Total Tokens:</strong> ${threads.total_tokens}</p>`;
+                }
+
+
+                const chatArea = document.getElementById('chat-area');
+                chatArea.innerHTML = ''; // Limpar as mensagens anteriores
+
+                if (messages.length > 0) {
+                    messages.forEach(item => {
+                        // Exibe a pergunta do usuário
+                        const userMessageDiv = document.createElement('div');
+                        userMessageDiv.classList.add('message', 'user-message');
+                        userMessageDiv.textContent = item.user_message;
+                        chatArea.appendChild(userMessageDiv);
+
+                        // Exibe a resposta do bot
+                        const botResponseDiv = document.createElement('div');
+                        botResponseDiv.classList.add('message', 'bot-message');
+
+
+                        // Verifica se a resposta contém um bloco de código (```python)
+                        const codeMatch = item.agent_response.match(/```python([\s\S]*?)```/);
+                        if (codeMatch) {
+                            // Texto antes do bloco de código
+                            const textBeforeCode = item.agent_response.split('```python')[0].trim();
+                            // Bloco de código
+                            const code = codeMatch[1].trim();
+                            // Texto após o bloco de código
+                            const textAfterCode = item.agent_response.split('```python')[1].split('```')[1]?.trim();
+
+                            // Exibe o texto antes do código (se existir)
+                            if (textBeforeCode) {
+                                const textBeforeCodeDiv = document.createElement('div');
+                                textBeforeCodeDiv.textContent = textBeforeCode;
+                                botResponseDiv.appendChild(textBeforeCodeDiv);
+                            }
+
+                            // Cria o bloco de código destacado com estilo
+                            const preElement = document.createElement('pre');
+                            const codeElement = document.createElement('code');
+                            codeElement.classList.add('language-python');
+                            codeElement.textContent = code;
+
+                            // Adiciona o cabeçalho ao bloco de código
+                            const codeHeader = document.createElement('div');
+                            codeHeader.classList.add('code-header');
+
+                            // Exibe o nome da linguagem
+                            const languageLabel = document.createElement('span');
+                            languageLabel.textContent = 'python'; // Linguagem padrão
+                            languageLabel.classList.add('language-label');
+                            codeHeader.appendChild(languageLabel);
+
+                            // Adiciona o botão de copiar ao cabeçalho
+                            const copyButton = document.createElement('button');
+                            copyButton.textContent = 'Copiar código';
+                            copyButton.classList.add('copy-btn');
+                            codeHeader.appendChild(copyButton);
+
+                            // Evento de copiar
+                            copyButton.addEventListener('click', () => {
+                                navigator.clipboard.writeText(code)
+                                    .then(() => alert('Código copiado!'))
+                                    .catch(err => console.error('Erro ao copiar o código', err));
+                            });
+
+                            // Adiciona o cabeçalho e o código ao elemento principal
+                            preElement.appendChild(codeHeader);
+                            preElement.appendChild(codeElement);
+                            botResponseDiv.appendChild(preElement);
+
+                            // Exibe o texto após o bloco de código (se existir)
+                            if (textAfterCode) {
+                                const textAfterCodeDiv = document.createElement('div');
+                                textAfterCodeDiv.textContent = textAfterCode;
+                                botResponseDiv.appendChild(textAfterCodeDiv);
+                            }
+                        } else {
+                            // Se não houver código, exibe a resposta normalmente
+                            botResponseDiv.textContent = item.agent_response;
+                        }
+
+                        // Adiciona a resposta ao chat
+                        chatArea.appendChild(botResponseDiv);
+
+                        // Atualiza o Prism.js para destacar o código
+                        Prism.highlightAll();
+
+
+
+                    });
+                } else {
+                    chatArea.innerHTML = `<div class="message">Nenhuma mensagem encontrada.</div>`;
+                }
+
+            } catch (error) {
+                console.error('Erro ao carregar threads ou mensagens:', error);
+            }
+        });
+
+        // Função para verificar se uma string é um JSON válido
+        function isValidJSON(str) {
+            try {
+                JSON.parse(str);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+
+
+        // Função para carregar agentes (já existente)
+        async function loadAgents() {
+            try {
+                const response = await fetch('http://127.0.0.1:5555/api/agents', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar agentes');
+                }
+
+                const agents = await response.json();
+                const agentSelector = document.getElementById('agent-selector');
+
+                agentSelector.innerHTML = '<option id="select-agent-option">Select Agent</option>';
+                agents.forEach(agentKey => {
+                    const option = document.createElement('option');
+                    option.value = agentKey;
+                    option.textContent = agentKey;
+                    agentSelector.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar agentes:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadAgents);
+    </script>
+
+</body>
+</html>
