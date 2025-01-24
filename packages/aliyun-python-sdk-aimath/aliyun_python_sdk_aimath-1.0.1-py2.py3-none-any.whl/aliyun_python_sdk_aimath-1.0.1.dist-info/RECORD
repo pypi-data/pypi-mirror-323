@@ -1,0 +1,16 @@
+aliyunsdkaimath/__init__.py,sha256=bMIenWosteoeUs51RbaWVZetIuzRhWymuyy-n0rfK0I,21
+aliyunsdkaimath/request/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aliyunsdkaimath/request/v20241114/ChatMessageRequest.py,sha256=Nbjj8MAZh8u5qfNUuDXKTfoOwBpFZPbyJyMB3nhRHrI,1547
+aliyunsdkaimath/request/v20241114/CreateConversationRequest.py,sha256=kF6Y60iTHLzIq1KMPoAIbfoUdIWR1S_EiUJV2TNFPys,2262
+aliyunsdkaimath/request/v20241114/CreateRelatedConversationRequest.py,sha256=mCKGm6QjOeTr0gDNqTSXTLOqEapZ7A_87eNu7nYETg4,1616
+aliyunsdkaimath/request/v20241114/GenAnalysisRequest.py,sha256=GBQZXzZ7NjA7MBUOWX4bhP4t679UYY4CNCiz_Dd011k,1215
+aliyunsdkaimath/request/v20241114/GenStepRequest.py,sha256=aSOaVJD77783-2NKr11o_u6J1H2A54MHLRgcP8JQhCs,1189
+aliyunsdkaimath/request/v20241114/GlobalConfirmRequest.py,sha256=nXI6wxpjVJvDybURUHrSzyQU1wusqaQ1sAU6x8gQEBM,1384
+aliyunsdkaimath/request/v20241114/UpdateAnalysisRequest.py,sha256=VW7VDBg84ZlKrcjOxz40O5QxVPIohCElBKb1WPw1TLg,1606
+aliyunsdkaimath/request/v20241114/UpdateStepRequest.py,sha256=P1aj02GM5TGk0EuvfLeHZMmSd9mkL6t0dkKpW_vnno0,1598
+aliyunsdkaimath/request/v20241114/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aliyun_python_sdk_aimath-1.0.1.dist-info/LICENSE,sha256=CvyZB4el1cZGT3cy9OYoITxta_Ea2maondKqmi8EcpU,575
+aliyun_python_sdk_aimath-1.0.1.dist-info/METADATA,sha256=yLAbmCx3Np6sAjIp2w7rqFrcd2xPawFU4OwK0cUECVo,1469
+aliyun_python_sdk_aimath-1.0.1.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+aliyun_python_sdk_aimath-1.0.1.dist-info/top_level.txt,sha256=G15CC9RK48J-wRSMfTBbqWzJTiqhhWu1zyCR3W3-2nw,16
+aliyun_python_sdk_aimath-1.0.1.dist-info/RECORD,,
