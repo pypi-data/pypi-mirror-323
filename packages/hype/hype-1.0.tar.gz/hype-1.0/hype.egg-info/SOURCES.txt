@@ -1,0 +1,6 @@
+README.rst
+setup.py
+hype.egg-info/PKG-INFO
+hype.egg-info/SOURCES.txt
+hype.egg-info/dependency_links.txt
+hype.egg-info/top_level.txt

@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: hype
+Version: 1.0
+Summary: Yet another resource mapper.
+Home-page: https://github.com/balanced/hype/
+Author: balancedpayments.com
+Author-email: dev@balancedpayments.com
+License: MIT
+Description: ====
+        hype
+        ====
+        
+        A Python library for flexible resource mapping and API development. Hype provides a powerful way to define, traverse, and transform resources with support for multiple output formats including JSON, WAC-JSON, and URL-encoded forms.
+        
+        Features
+        --------
+        
+        * Resource mapping and traversal with cycle detection
+        * Multiple output format support (JSON, WAC-JSON, API-JSON, URL-encoded)
+        * Field-based resource definition with type validation
+        * Automatic URL generation and linking between resources
+        * Pagination support with cursor-based navigation
+        * Flexible resource transformation pipeline
+        * Thread-safe global context management
+        
+        Installation
+        ------------
+        
+        .. code-block:: bash
+        
+            pip install hype
+        
+        Requirements
+        ------------
+        
+        * Python 2.7
+        
+        Usage
+        -----
+        
+        Here's a quick example of defining and transforming a resource:
+        
+        .. code-block:: python
+        
+            from hype import Resource, fields
+            
+            class User(Resource):
+                name = fields.String()
+                email = fields.String()
+                profile = fields.Link(endpoint='profile.show')
+            
+            # Transform to JSON
+            from hype.mime import application_json
+            
+            def url_for(ref):
+                return f'/api/{ref.name}/{ref.params["id"]}'
+            
+            user = User(name='John Doe', email='john@example.com')
+            json_output = application_json.serialize(user, url_for=url_for)
+        
+        Documentation
+        -------------
+        
+        Full documentation is available at https://github.com/balanced/hype/
+        
+        Contributing
+        ------------
+        
+        Contributions are welcome! Please feel free to submit a Pull Request.
+        
+        License
+        -------
+        
+        This project is licensed under the ISC License - see the LICENSE file for details.
+        
+        Author
+        ------
+        
+        Balanced Developers (dev@balancedpayments.com)
+        @bninja
+        @mahmoudimus
+        @mjallday
+        
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Description-Content-Type: text/x-rst
