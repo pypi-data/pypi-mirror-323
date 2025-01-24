@@ -1,0 +1,6 @@
+[console_scripts]
+wminhyuk-eda = wminhyuk_eda.cli:group_by_count
+wminhyuk-eda-olympic = wminhyuk_eda_olympic.cli:group_by_count
+
+[gui_scripts]
+
