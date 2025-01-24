@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: samplesheetutils
+Version: 1.1
+Summary: Collection of utilities for creating and transforming samplesheets and samples
+Home-page: UNKNOWN
+Author: Nathan Glades
+Author-email: n.glades@unsw.edu.au
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyyaml (==6.0.1)
+
+UNKNOWN
+
+

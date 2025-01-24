@@ -1,0 +1,14 @@
+samplesheetutils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+samplesheetutils/binaries/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+samplesheetutils/binaries/create_samplesheet.py,sha256=06v3aj2Zz9w4H6srrVvulFUT0dq484glz6TswE3v7Cg,9694
+samplesheetutils/binaries/sample_name.py,sha256=qG52a6G0s7c2DBgKg-Xf94VtEKvpB7yN5wQ9Zj_nDRc,2875
+samplesheetutils/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+samplesheetutils/utils/fasta.py,sha256=mzPGMo5QvRItuxcnsG3h5QlbbfgAuRRXgfylVm9JQ9M,2050
+samplesheetutils/utils/input.py,sha256=Hhq4MH_8Krvenz1hszUj8ZLbvEG33xIdqhCExPxaSQ0,222
+samplesheetutils/utils/output.py,sha256=CK7ZsV61n9vP6265QwZBhcCdbquJRZZOVVpkVWc2-6g,1087
+samplesheetutils/utils/sample.py,sha256=6ac2aLIZPNavkntJ1bKQlw_kAkO3xQJxzNBsCeyei_E,458
+samplesheetutils-1.1.dist-info/METADATA,sha256=gH7cMdle8V82Jyjjt84eaPD0dpqFG7V77kyRmqhh0MQ,300
+samplesheetutils-1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+samplesheetutils-1.1.dist-info/entry_points.txt,sha256=IvVhTK2sV3OtW5N4fb4da5cz0BahQGnBfdK6-vdYJg4,168
+samplesheetutils-1.1.dist-info/top_level.txt,sha256=_SGYiU6UeResH9UdAuJGy4TkYzKWA79YzluoC8KJ9MU,17
+samplesheetutils-1.1.dist-info/RECORD,,
