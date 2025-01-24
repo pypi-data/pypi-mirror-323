@@ -1,0 +1,7 @@
+hyperpocket_anthropic/__init__.py,sha256=XZl2uODSPMjSOO1LwrJOVMUD1qmGCuykx9SDePN7gLo,98
+hyperpocket_anthropic/pocket_anthropic.py,sha256=UViv8vIWJ88eItWMAIGUBhCXZQWCn2PYc2EuQdgoAPs,3263
+hyperpocket_anthropic/util/__init__.py,sha256=U8x3PBHTFMpbtbAA5-pQVsggQ3Yph4oeC13wfyzK21I,123
+hyperpocket_anthropic/util/tool_to_anthropic_spec.py,sha256=Lnxs-RMdHkpswjG1aJeEXGuJe8vQfWsbZccsbdPb3_U,749
+hyperpocket_anthropic-0.1.9.dist-info/METADATA,sha256=W9Tc1Ltb1bNVCE3SWqk2MYWy8O-6x1xH0_46u3e9Jqw,4826
+hyperpocket_anthropic-0.1.9.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hyperpocket_anthropic-0.1.9.dist-info/RECORD,,
