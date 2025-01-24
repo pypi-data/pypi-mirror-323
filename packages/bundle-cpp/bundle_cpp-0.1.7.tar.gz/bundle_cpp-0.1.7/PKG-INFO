@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: bundle-cpp
+Version: 0.1.7
+Summary: expand includes and create a single file
+License: MIT
+Author: kagemeka
+Author-email: kagemeka1@gmail.com
+Requires-Python: ==3.12.*
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# bundle_cpp_v1
+```sh
+pip install bundle-cpp
+bundle main.cpp -I lib/ src/main.cpp > src/main_bundle.cpp
+```
+

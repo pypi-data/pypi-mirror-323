@@ -1,0 +1,29 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "bundle-cpp"
+version = "0.1.7"
+description = "expand includes and create a single file"
+authors = ["kagemeka <kagemeka1@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "bundle_cpp" }]
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "8.2.0"
+
+[tool.poetry.scripts]
+bundle = "bundle_cpp.__main__:cli"
+
+[tool.pytest.ini_options]
+# https://docs.pytest.org/en/stable/reference/customize.html
+# https://docs.pytest.org/en/stable/reference/reference.html#ini-options-ref
+python_files = ["*.py"]
+python_functions = ["_test*", "test*"]
+python_classes = ["_Tests*", "Tests*"]
+addopts = "--doctest-modules -v"
