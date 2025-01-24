@@ -1,0 +1,125 @@
+{
+    "send_sms": {
+        "trigger_word": [
+            "send a message", 
+            "set a demo", 
+            "set up a demo", 
+            "send sms", 
+            "appointment", 
+            "schedule a demo", 
+            "send a text", 
+            "notify via SMS", 
+            "text someone", 
+            "arrange a demo",
+            "send an SMS", 
+            "text a friend", 
+            "initiate a message", 
+            "deliver a text", 
+            "message someone", 
+            "arrange a meeting", 
+            "book an appointment", 
+            "notify someone", 
+            "send a notification", 
+            "remind via text"
+        ],
+        "sample_payload": {
+            "name": "string",
+            "message body": "string"
+        },
+        "prerequisite": null
+    },
+    "google_search": {
+        "trigger_word": [
+            "search on Google", 
+            "google search", 
+            "find information", 
+            "look up", 
+            "search web", 
+            "browse the internet", 
+            "google it", 
+            "find details online", 
+            "search for info", 
+            "do a web search",
+            "check online", 
+            "find resources", 
+            "get information", 
+            "online search", 
+            "look up information", 
+            "find data", 
+            "internet lookup", 
+            "get search results", 
+            "web query", 
+            "explore online"
+        ],
+        "sample_payload": {
+            "engine": "string",
+            "query": "string",
+            "location": "string",
+            "num": "string"
+        },
+        "prerequisite": null
+    },
+    "generate_financial_report": {
+        "trigger_word": [
+            "generate company report",
+            "summarize stock performance",
+            "compile financial insights",
+            "create market analysis",
+            "get company overview",
+            "review stock trends",
+            "build financial summary",
+            "generate portfolio report",
+            "view financial breakdown",
+            "fetch financial summary",
+            "analyze stock performance",
+            "report on company data",
+            "produce stock summary",
+            "compile stock metrics",
+            "obtain financial overview",
+            "show company performance",
+            "prepare investment summary",
+            "check stock movement report",
+            "generate profit analysis",
+            "overview of financial stats"
+        ],
+        "sample_payload": {
+            "ticker": "string",
+            "save_pdf": "bool",
+            "send_email": "bool",
+            "to_email": "string"
+        },
+        "prerequisite": null
+    },
+    "generate_word_document": {
+        "trigger_word": [
+            "create a document",
+            "generate a report",
+            "make a word file",
+            "write a letter",
+            "build a document",
+            "prepare a report",
+            "write a document",
+            "generate a letter",
+            "make a report",
+            "write a report",
+            "build a report",
+            "prepare a letter",
+            "generate a document",
+            "make a letter",
+            "write a file",
+            "build a letter",
+            "prepare a file",
+            "generate a file",
+            "make a file",
+            "write a document"
+        ],
+        "sample_payload": {
+            "header": "string",
+            "paragraph": "string",
+            "save_docx": "bool",
+            "send_email": "bool",
+            "to_email": "string"
+        },
+        "prerequisite": null
+    }
+}
