@@ -1,0 +1,59 @@
+# streamlit_slb_gallery
+
+Streamlit component that allows user display images and video gallery
+
+## Installation instructions
+
+```sh
+pip install streamlit_slb_gallery
+```
+
+## Release Notes
+
+1.0.0
+
+- Initial Release
+
+  1.0.1
+
+- Fix Release Issue
+
+  1.0.2
+
+- Fix load card issue
+
+  1.0.3
+
+- Fix load card issue
+
+  1.0.4
+
+- Fix to load other types of events
+
+  1.0.5
+
+- Add feature for gallery paging and delays
+
+  1.0.6
+
+- Add environment Condition
+
+  1.0.7
+
+- Change input date from epoch to string
+
+  1.0.8
+
+- Fix the issue where gallery not refresh when user change the date
+
+  1.0.10
+
+- Fix the gallery pagination. load details only for selected events per page
+
+  1.1.0
+
+- stable version and able to customize the height
+
+  1.1.1
+
+- fix date format for alert time to yyyy-MM-dd HH:mm:ss
