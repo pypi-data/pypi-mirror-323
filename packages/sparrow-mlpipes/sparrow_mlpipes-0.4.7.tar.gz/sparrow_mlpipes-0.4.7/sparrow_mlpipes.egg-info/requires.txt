@@ -1,0 +1,9 @@
+numpy==1.24.4
+
+[dev]
+dvc[s3]
+fire
+jupyter
+opencv-python-headless
+sparrow-datums
+uv
