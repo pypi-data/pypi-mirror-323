@@ -1,0 +1,181 @@
+# loam-ai
+
+A command-line interface (CLI) tool for interacting with AWS Bedrock foundation models and inference profiles. LoamAI provides a streamlined way to invoke AI models, generate embeddings, and manage conversations through AWS Bedrock.
+
+## Features
+
+- List available foundation models and inference profiles
+- Generate text and image embeddings
+- Stream model responses for real-time output
+- Support for conversation-based model interactions
+- Manage multiple AWS profiles and regions
+- Rich terminal output formatting
+
+## Installation
+
+Requires Python 3.10 or higher.
+
+```bash
+pip install loam-ai
+```
+
+## Configuration
+
+### AWS SSO Login
+
+If you're using AWS SSO, first configure your AWS profile and log in:
+
+```bash
+export AWS_PROFILE=your-sso-profile
+aws sso login
+```
+
+After successful login, you can run loam-ai commands using your SSO credentials.
+
+## Usage
+
+### List Available Models
+
+```bash
+loam list-models
+```
+
+Filter by provider or output type:
+
+```bash
+loam list-models --provider anthropic
+loam list-models --output TEXT
+```
+
+### Check Session Information
+
+```bash
+loam session
+```
+
+### Generate Embeddings
+
+Generate text embeddings:
+
+```bash
+loam generate-embeddings \
+    --model-id amazon.titan-embed-text-v2:0 \
+    --input-file texts.txt
+```
+
+Generate image embeddings:
+
+```bash
+loam generate-embeddings \
+    --model-id amazon.titan-embed-image-v1 \
+    --image image.jpg \
+    --texts "Image description"
+```
+
+### Invoke Models
+
+Simple text generation:
+
+```bash
+loam invoke \
+    -m amazon.nova-lite-v1:0 \
+    -p "What are the benefits of renewable energy?"
+```
+
+### Conversation Mode
+
+Use conversation mode for chat-based interactions:
+
+```bash
+loam converse \
+    --model-id "anthropic.claude-3-sonnet-20240229-v1:0" \
+    --messages-file conversation.json
+```
+
+Example messages file format:
+
+```json
+[
+  {
+    "role": "user",
+    "content": [{ "text": "What is the capital of France?" }]
+  }
+]
+```
+
+### List Inference Profiles
+
+```bash
+loam list-inference-profiles
+```
+
+## Command Options
+
+### Global Options
+
+- `--profile`: AWS profile name
+- `--region`: AWS region
+- `--debug`: Enable debug output
+
+### Model Invocation Options
+
+- `--temperature`: Control response randomness (0-1)
+- `--max-tokens`: Maximum response length
+- `--top-p`: Control response diversity (0-1)
+
+## Error Handling
+
+LoamAI provides clear error messages with rich terminal formatting. Common issues include:
+
+- Invalid AWS credentials
+- Unsupported model configurations
+- Rate limiting
+- Input validation errors
+
+## Python Usage
+
+LoamAI can also be used as a Python library. First make sure you have run `pip install loam-ai` in your Python environment. Here's an example setting up a client and invoking a model with streaming output:
+
+```python
+from loam_ai.client import BedrockClient
+
+client = BedrockClient(profile_name="default", region_name="us-east-1")
+model_id = "amazon.nova-lite-v1:0"
+
+response = client.invoke_model(
+    model_id=model_id,
+    prompt="Write a poem about the sea",
+    temperature=0.7,
+    max_tokens=200,
+    stream=True
+)
+for chunk in response:
+    print(chunk, end="")
+
+# Beneath the boundless azure sky,
+# The sea unfolds her silent plea,
+# A vast expanse where dreams can fly,
+# And secrets whispered tenderly.
+
+# Her waves, like ancient, rhythmic prose,
+# Converse in tones both soft and strong,
+# A timeless dance, a mystic flow,
+# Where endless stories are prolong.
+
+# The sea, a canvas of the blue,
+# With brushstrokes of the silver moon,
+# A tapestry of hues anew,
+# As daylight yields to night's cocoon.
+```
+
+## Development
+
+Built with:
+
+- [Click](https://click.palletsprojects.com/) for CLI interface
+- [Rich](https://rich.readthedocs.io/) for terminal formatting
+- [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) for AWS SDK
+
+## License
+
+MIT License - See LICENSE file for details.
