@@ -1,0 +1,9 @@
+pyproject.toml
+src/__init__.py
+src/__main__.py
+src/run.py
+src/forevervm.egg-info/PKG-INFO
+src/forevervm.egg-info/SOURCES.txt
+src/forevervm.egg-info/dependency_links.txt
+src/forevervm.egg-info/entry_points.txt
+src/forevervm.egg-info/top_level.txt
