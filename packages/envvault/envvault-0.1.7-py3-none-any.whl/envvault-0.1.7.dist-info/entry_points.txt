@@ -1,0 +1,3 @@
+[console_scripts]
+envvault=envvault.cli:cli
+
