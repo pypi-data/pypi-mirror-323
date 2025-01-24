@@ -1,0 +1,137 @@
+#
+# Python build system configuration
+# https://peps.python.org/pep-0518/
+#
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "picata"
+version = "0.0.2"
+description = "Ada's Wagtail-based CMS & blog"
+keywords = ["cms", "blog", "django", "wagtail"]
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+license-files = ["LICENSE.md"]
+authors = [{ name = "Ada Wright", email = "ada@hpk.io" }]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Framework :: Django CMS",
+  "Framework :: Wagtail :: 6",
+]
+dependencies = [
+  "wagtail~=6.2",
+  "gunicorn~=23.0.0",
+  "psycopg~=3.2.3",
+  "psutil~=6.1.0",
+  "python-slugify~=8.0.4",
+  "wagtail-modeladmin~=2.1.0",
+  "pygments~=2.18.0",
+  "lxml~=5.3.0",
+]
+
+[project.urls]
+# Homepage      = "https://hipikat.org/"
+Documentation = "https://github.com/hipikat/picata#readme"
+Issues        = "https://github.com/hipikat/picata/issues"
+Source        = "https://github.com/hipikat/picata"
+
+[dependency-groups]
+dev = [
+  "django-debug-toolbar>=4.4.6",
+  "django-extensions>=3.2.3",
+  "django-stubs[compatible-mypy]>=5.1.2",
+  "ipython>=8.29.0",
+  "mypy>=1.14.0",
+  "pre-commit>=4.0.1",
+  "py-spy>=0.4.0",
+  "ruff>=0.7.3",
+  "watchdog>=6.0.0",
+  "werkzeug>=3.1.3",
+]
+test = ["pytest-django>=4.9.0", "pytest-xdist>=3.6.1"]
+
+[tool.hatch.build.targets.wheel]
+sources = ["src"]
+include = [
+    "README.md",
+    "LICENSE.md",
+    "src/**",
+]
+
+[tool.hatch.build.targets.sdist]
+sources = ["src"]
+include = [
+    "README.md",
+    "LICENSE.md",
+    "src/**",
+]
+
+[tool.mypy]
+exclude = [
+  '^(.git|.pytest_cache|.ruff_cache|.venv)/.*',
+  '^(build|dist|infra|lib|logs|media|node_modules|snapshots|static)/.*',
+]
+mypy_path = "$MYPY_CONFIG_FILE_DIR/src"
+plugins = ["mypy_django_plugin.main"]
+ignore_missing_imports = true
+
+[tool.django-stubs]
+django_settings_module = "picata.settings.mypy"
+
+[tool.ruff]
+include     = ["*.py"]
+line-length = 100
+cache-dir   = "~/.cache/ruff"
+exclude     = [".venv", "lib/"]
+extend-exclude = ["**/migrations/*"]
+fix          = true
+show-fixes   = true
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+  "ALL", # Enable all linting rules.
+]
+extend-select = [
+  "E501", # Enforce line length limits
+]
+ignore = [
+  "D203",   # One blank line required before class docstring
+  "COM812", # Avoid unreferenced module-level imports (may ignore imports in __init__.py)
+  "ISC001", # Avoid implicit string concatenation (allowed for convenience in tests, etc.)
+  "ARG002", # Allow unused method arguments (Hello, **kwargs!)
+  "EM101",  # Allow string literals in Exception("Messages")
+  "EM102",  # Allow f-string literals in Exception(f"{messages}")
+  "TRY003", # Allow stings of more than a few characters in Exception("Messages")
+  "G004",   # Allow logging statements to use f-strings, FFS
+]
+fixable = [
+  "ALL", # All fixable rules will be automatically corrected.
+]
+
+[tool.ruff.format]
+docstring-code-format = true # Reformat code blocks in docstrings.
+
+[tool.ruff.lint.pydocstyle]
+convention = "google" # Use Google's docstring conventions.
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+  "INP001", # Suppress warnings for implicit namespace packages in test directories.
+  "S101",   # Allow usage of `assert` in tests.
+]
+"**/migrations/*" = [
+  "RUF012", # Ignore `__future__` imports in migration files.
+  "D100",   # Allow missing docstrings in module-level migration files.
+  "D101",   # Allow missing docstrings in migration class definitions.
+  "D104",   # Allow missing docstrings in empty migration modules.
+  "Q000",   # Ignore smart quotes in migration files.
+  "E501",   # Allow long lines in migration files.
+]
