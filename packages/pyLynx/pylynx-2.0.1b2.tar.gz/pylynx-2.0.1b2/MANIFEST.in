@@ -1,0 +1,10 @@
+include testlib/*
+include testlib/checkers/*
+include testlib/validators/*
+
+# CPP templates
+include Lynx/templates*
+include Lynx/templates/cpp/*
+include Lynx/templates/cpp/additional_file/*
+include Lynx/templates/cpp/programs/*
+include Lynx/templates/cpp/testdata/*
