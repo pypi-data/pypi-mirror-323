@@ -1,0 +1,3 @@
+class FFMPEGNotInstalled(Exception):
+    pass
+
