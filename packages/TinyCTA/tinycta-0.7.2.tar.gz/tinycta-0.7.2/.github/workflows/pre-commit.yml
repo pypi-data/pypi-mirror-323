@@ -1,0 +1,19 @@
+name: pre-commit
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cvxgrp/.github/actions/uv/coverage@v2.0.6
+        with:
+          source-folder: 'tinycta'
+
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v2
+        with:
+          files: artifacts/tests/coverage/coverage.info
+          format: lcov
