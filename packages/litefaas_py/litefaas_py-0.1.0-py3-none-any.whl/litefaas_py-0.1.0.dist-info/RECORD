@@ -1,0 +1,17 @@
+litefaas_py/.gitignore,sha256=dLYgMsCesNNu5ctiBU6H8srczfuMxmlG2P-9bGIVqww,4
+litefaas_py/__init__.py,sha256=UuQM6m583Tk_QKzZvin4bVDe1pwMDpxJ860Qiugxe5U,126
+litefaas_py/core.py,sha256=5mELBmtyIP1eZLrEYifYNluJTk1RMVPjgYFVfvh7Zfs,3729
+litefaas_py/Dockerfile,sha256=c7IkKcHJlWnaH2EkynMar8k2WIeNF7GJLpIZZjwYyE0,395
+litefaas_py/requirements.txt,sha256=q-UgHXg8YWUEOvAllik0AKY4FonF2JZl4udotSdk-vo,7
+litefaas_py/test/async_server.py,sha256=iXKSy1UqOg5z_x3JsJgLUEEzFwWnJ54eMI5bPvbzd9A,3715
+litefaas_py/test/cpu_async_server.py,sha256=Bk2x1JnZ9zF2I9EgKtDllkPEIfUDqHoGwLw8QVW4AEc,3713
+litefaas_py/test/cpu_process_server.py,sha256=mHOHe_VGTL7Ze_exaN4GcYxyLPpm5OwWzfdfHP2Mv8M,3645
+litefaas_py/test/cpu_test_client.py,sha256=FQKv0vQ_EGNyh0sIz-ZQG4JTEtUyfpRqzCxB5nLxoE0,3159
+litefaas_py/test/cpu_thread_server.py,sha256=W-OO16uVtULh6M3bdpeKYTZaNtJSHBl_W679dSsAgko,4149
+litefaas_py/test/example_client_simple.py,sha256=A4MUX-AIX0tWiRiRH8BaDbrJWACzjTvu34jwiI3UQJA,1225
+litefaas_py/test/main.py,sha256=xOhyUNGqxfjJ7eNqxennpuZy3pHjloQHNoN6uYs78wE,1094
+litefaas_py/test/test_client.py,sha256=pq_fURsf8UZmU89y59kmczyjO-4CmIV-ua0nNhnfNe8,1483
+litefaas_py/test/thread_server.py,sha256=DN1ZXDBzaOebf9JgfRjhWmx0M7webi6RChL63QcyLXk,4149
+litefaas_py-0.1.0.dist-info/METADATA,sha256=0Ew6Jo9bgjfD8BavdXbdM3yTLzJp-uY1xHhIqyjHLps,411
+litefaas_py-0.1.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+litefaas_py-0.1.0.dist-info/RECORD,,
