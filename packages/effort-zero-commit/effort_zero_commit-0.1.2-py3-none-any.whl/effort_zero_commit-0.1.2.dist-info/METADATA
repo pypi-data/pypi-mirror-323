@@ -1,0 +1,79 @@
+Metadata-Version: 2.2
+Name: effort-zero-commit
+Version: 0.1.2
+Summary: Automated Git commit message generator using AI
+Home-page: https://github.com/abderrahmanyouabd/ezcommit
+Author: Abderrahman Youabd
+Author-email: youabd50@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gitpython
+Requires-Dist: groq
+Requires-Dist: python-dotenv
+Requires-Dist: click
+Requires-Dist: json-with-comments
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# EffortZeroCommit
+
+Automated Git commit message generator using AI.
+
+## Dependencies
+
+- Git must be installed on your system. You can download it from [git-scm.com](https://git-scm.com/)
+
+## Installation
+
+```bash
+pip install effort-zero-commit
+```
+
+## Usage
+
+1. Stage your desired files:
+```bash
+git add .
+```
+
+2. Generate commit messages and commit:
+```bash
+ezcommit -run
+```
+
+## Configuration
+
+Using your terminal, export your Groq API key and model name:
+```env
+# Windows (Command Prompt):
+set GROQ_API_KEY=your_groq_api_key_here
+set MODEL_NAME=mixtral-8x7b-32768
+
+# Windows (PowerShell):
+$env:GROQ_API_KEY="your_groq_api_key_here"
+$env:MODEL_NAME="mixtral-8x7b-32768"
+
+# Linux/macOS:
+export GROQ_API_KEY=your_groq_api_key_here
+export MODEL_NAME=mixtral-8x7b-32768
+```
+
+## License
+
+[MIT License](LICENSE)
