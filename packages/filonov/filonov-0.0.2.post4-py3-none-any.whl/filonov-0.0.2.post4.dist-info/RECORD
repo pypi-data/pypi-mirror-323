@@ -1,0 +1,15 @@
+filonov/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+filonov/creative_map.py,sha256=UZSa96fn9zFtsUfeudEXqpGFDlE4uS-COsSmn880EWg,4637
+filonov/entrypoints/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+filonov/entrypoints/cli.py,sha256=krmhIQ3_jRrxeV78KxNscls1U5NJS6WuyW8FyCcEdp8,5750
+filonov/entrypoints/utils.py,sha256=TAeEAvnaWDY1a5qkxj_Ig9BSeMATBPx_oEnr3NpwHnc,1944
+filonov/inputs/__init_.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+filonov/inputs/google_ads.py,sha256=0aCCBRQw9Xe8RP-ErEakc8E89D8jCqKz8iIyWhn75I8,10702
+filonov/inputs/interfaces.py,sha256=1dLVX-p-qpsyj_iWilVWQIQ3rI9GwukPJJGDOq-YSGY,2748
+filonov/inputs/queries.py,sha256=-d-P52Qg1v0er9DPRUS9pH203-ToMHQRb34g-mRXv2k,10389
+filonov/inputs/youtube.py,sha256=ETCQ48Beb4C5IOKs2knV-jusB6DvIg3NJUo4SvDrvoQ,2937
+filonov-0.0.2.post4.dist-info/METADATA,sha256=Op6Gsw5HJOqOlrOq8vTLOE9wd7gHXM6k9vYcRFpTQjI,3612
+filonov-0.0.2.post4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+filonov-0.0.2.post4.dist-info/entry_points.txt,sha256=WKyH3Nn3reQmfTA4hUoKjXK7_jOZs5qe-W_srS04PY4,57
+filonov-0.0.2.post4.dist-info/top_level.txt,sha256=pSACwAjL1GHMY1KPKuKVL-8LesHXhXTJTZYaOyEKlTo,8
+filonov-0.0.2.post4.dist-info/RECORD,,
