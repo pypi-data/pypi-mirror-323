@@ -1,0 +1,12 @@
+**/__pycache__/*
+**/_build/*
+**/build/
+**/*.ipynb
+*.egg-info
+.coverage
+.pytest_cache/*
+.vscode/*
+coverage.*
+dist/
+docs/build/*
+docs/source/generated/*
