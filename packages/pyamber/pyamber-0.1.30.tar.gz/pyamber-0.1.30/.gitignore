@@ -1,0 +1,27 @@
+ *.pyc
+.idea
+.task
+
+tmp
+*.log
+build
+html-coverage
+html-report
+
+
+*.dot
+*.svg
+
+*.doctrees
+artifacts
+index
+
+.pytest_cache
+
+
+*.egg-info
+dist
+config/settings.cfg
+
+.coverage
+__pycache__
