@@ -1,0 +1,9 @@
+setup.py
+QwantAI/__init__.py
+QwantAI/core.py
+QwantAI/websocket_handler.py
+QwantAI.egg-info/PKG-INFO
+QwantAI.egg-info/SOURCES.txt
+QwantAI.egg-info/dependency_links.txt
+QwantAI.egg-info/requires.txt
+QwantAI.egg-info/top_level.txt
