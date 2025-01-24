@@ -1,0 +1,6 @@
+Version Log
+==========
+
+4.0.0 (24/01/2025)
+-------------------
+- 4.0.0 version of acceldata_airflow_sdk
