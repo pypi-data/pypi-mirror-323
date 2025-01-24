@@ -1,0 +1,4 @@
+include README.md
+recursive-include ddpapertrail/templates *
+recursive-include ddpapertrail/templatetags *
+recursive-include ddpapertrail/migrations *
