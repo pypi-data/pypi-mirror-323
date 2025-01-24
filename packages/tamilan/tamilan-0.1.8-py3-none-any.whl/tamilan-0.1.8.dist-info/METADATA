@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: tamilan
+Version: 0.1.8
+Summary: This module is for Gemini Api Intraction, TwoSum operations and subsequence checks
+Home-page: https://github.com/sivasarans/2sum
+Author: Sivasaran
+Author-email: sivasaran354@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Tamilan Python Library
+
+A Python library for interacting with the Gemini API, performing `TwoSum` operations, checking for subsequences, and chatting with an AI-powered chatbot.
+
+## Features
+
+- **AI Class**: Uses the Gemini API to generate text responses based on a given prompt.
+- **TwoSumK & TwoSum Functions**: Efficient solutions to find pairs of numbers in a sorted list that sum to a target.
+- **Subsequence Check**: Verifies if one string is a subsequence of another.
+- **Bot Class**: A chatbot powered by the Gemini API that interacts with users.
+
+## Installation
+
+To install the library, you can use pip:
+
+```bash
+pip install tamilan
