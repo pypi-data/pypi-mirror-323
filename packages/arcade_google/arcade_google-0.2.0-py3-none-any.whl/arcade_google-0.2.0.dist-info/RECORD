@@ -1,0 +1,12 @@
+arcade_google/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arcade_google/tools/__init__.py,sha256=MXM0xOEislCvl1UgwJC_Nqme83KjkQsaiUj4VKP0Q9s,49
+arcade_google/tools/calendar.py,sha256=VoxazDhi4WBpiuBv_tYo2Z7ryLwMbIoT59XWJKXsAqk,12542
+arcade_google/tools/docs.py,sha256=eeqd5G7TdvnH4q_i3I5uTmzer38amxdlYna5FsePM2o,5378
+arcade_google/tools/drive.py,sha256=Y9-kIR1v7tQppBAxHH42ffI3AS7_UC-tzBPTbEKimek,3295
+arcade_google/tools/gmail.py,sha256=STnf_9x9qWu_T_uyN8vRyfMLJz_4e0q8YcSi-7EIXzg,16304
+arcade_google/tools/models.py,sha256=EwpOFPr8WoUONX5VB9S0uhgh5PrIyvHKBYRZIEWDchw,10166
+arcade_google/tools/utils.py,sha256=r_D8OGc-EeITzt7BGjPrpOHlnvZa0jv5J8DEn2a3jJA,9479
+arcade_google-0.2.0.dist-info/LICENSE,sha256=108KqUBZubw2RlcTUyNL3IdivNNLKjXoONGFEmzoaeo,1067
+arcade_google-0.2.0.dist-info/METADATA,sha256=pnL-8nr6ZolWvQZfQw96t-PcVBhRIChGJmnysAdf8h8,799
+arcade_google-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+arcade_google-0.2.0.dist-info/RECORD,,
