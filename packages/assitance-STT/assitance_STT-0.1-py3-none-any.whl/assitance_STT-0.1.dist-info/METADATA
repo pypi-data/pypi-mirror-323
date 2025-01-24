@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: assitance-STT
+Version: 0.1
+Summary: This is a speech-to-text package created by Prime Vivek. It helps with voice commands and more.
+Author: Prime Vivek
+Author-email: vivekbadiger666@gmail.com
+Requires-Python: >=3.6
+Requires-Dist: selenium
+Requires-Dist: webdriver-manager
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
