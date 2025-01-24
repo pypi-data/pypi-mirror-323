@@ -1,0 +1,16 @@
+glue-core
+glue-qt
+scipy
+
+[glue]
+glue-core
+glue-qt
+
+[qt]
+PyQt6
+
+[test]
+pytest
+pytest-qt
+pytest-faulthandler
+mock
