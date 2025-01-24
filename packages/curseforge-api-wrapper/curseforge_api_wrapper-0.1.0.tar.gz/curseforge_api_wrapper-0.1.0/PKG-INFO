@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: curseforge-api-wrapper
+Version: 0.1.0
+Summary: Python wrapper for Curseforge API with Pydantic Model
+Project-URL: Homepage, https://github.com/mcmod-info-mirror/curseforge-api-wrapper
+Project-URL: Documentation, https://github.com/mcmod-info-mirror/curseforge-api-wrapper
+Project-URL: Repository, https://github.com/mcmod-info-mirror/curseforge-api-wrapper
+Project-URL: Issues, https://github.com/mcmod-info-mirror/curseforge-api-wrapper/issues
+Author-email: z0z0r4 <z0z0r4@outlook.com>
+License: MIT
+License-File: LICENSE
+Keywords: api,curseforge,mcinecraft,python,wrapper
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pydantic>=2.10.5
+Description-Content-Type: text/markdown
+
+# curseforge-api-wrapper
+ Python wrapper for Curseforge API with Pydantic Model
