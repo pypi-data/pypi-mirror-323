@@ -1,0 +1,3 @@
+[console_scripts]
+bundle=bundle_cpp.__main__:cli
+
