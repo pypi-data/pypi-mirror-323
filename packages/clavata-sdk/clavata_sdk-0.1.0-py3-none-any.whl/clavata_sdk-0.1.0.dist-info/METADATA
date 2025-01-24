@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: clavata-sdk
+Version: 0.1.0
+Summary: Clavata SDK for Python
+Author: Brett Levenson
+Author-email: brett@clavata.ai
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: grpcio (>=1.62.0,<2.0.0)
