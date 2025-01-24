@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: StarlightProto
+Version: 0.2.0
+Summary: Default template for PDM package
+Author-Email: cho6019 <j01040864205@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# StarlightProto
+
+Search for constellation's info.
+
+# Use
+```bash
+$ stella-proto <location> <constellation>
+
+```

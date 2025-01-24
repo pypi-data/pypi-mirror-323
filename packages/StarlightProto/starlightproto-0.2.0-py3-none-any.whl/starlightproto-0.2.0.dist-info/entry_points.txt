@@ -1,0 +1,5 @@
+[console_scripts]
+cho-test = starlightproto.stella:example
+
+[gui_scripts]
+
