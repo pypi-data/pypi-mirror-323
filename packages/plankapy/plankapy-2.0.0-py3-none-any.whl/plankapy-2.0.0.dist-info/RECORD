@@ -1,0 +1,9 @@
+cli/__init__.py,sha256=3B6mR32O75CicBtj4V9QN8nCucykaL8xjFtpwkZE8RM,3774
+tests/__init__.py,sha256=3J4hIZgL-ZFSd5oA4xN8esOAunWAbc7morSVK5lpfmM,392
+tests/interface_tests.py,sha256=svlAmtaoiEui7oZJb-PLmLQUP36js_AsBRiPrfHsL9Q,2464
+tests/model_tests.py,sha256=82_Gl2hZafqzsHyZKVIsr7r4wLmijWWAZY_GVwpBiIQ,988
+plankapy-2.0.0.dist-info/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+plankapy-2.0.0.dist-info/METADATA,sha256=4C96KR43MIh5MPnyUL0A35YqAkJfSChL6RWizudM5uY,5142
+plankapy-2.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+plankapy-2.0.0.dist-info/top_level.txt,sha256=Vj2uoDLTvyrBTgd15he9psaltKtSsF5Vz4jFpifytOk,10
+plankapy-2.0.0.dist-info/RECORD,,
