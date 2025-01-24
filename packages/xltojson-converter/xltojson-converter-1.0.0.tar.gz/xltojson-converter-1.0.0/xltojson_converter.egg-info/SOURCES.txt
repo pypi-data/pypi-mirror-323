@@ -1,0 +1,9 @@
+setup.py
+xltojson/__init__.py
+xltojson/xltojson1.py
+xltojson_converter.egg-info/PKG-INFO
+xltojson_converter.egg-info/SOURCES.txt
+xltojson_converter.egg-info/dependency_links.txt
+xltojson_converter.egg-info/entry_points.txt
+xltojson_converter.egg-info/requires.txt
+xltojson_converter.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+xltojson = xltojson.xltojson1:xltojson_cli
+
