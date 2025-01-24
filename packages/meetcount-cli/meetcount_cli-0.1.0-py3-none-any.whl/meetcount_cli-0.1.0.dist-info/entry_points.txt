@@ -1,0 +1,3 @@
+[console_scripts]
+meetocunt-cli=meetcount_cli.main:app
+
