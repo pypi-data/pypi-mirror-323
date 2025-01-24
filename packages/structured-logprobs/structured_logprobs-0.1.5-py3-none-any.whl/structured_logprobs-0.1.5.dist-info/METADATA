@@ -1,0 +1,126 @@
+Metadata-Version: 2.2
+Name: structured-logprobs
+Version: 0.1.5
+Summary: Logprobs for OpenAI Structured Outputs
+Author-email: Sarus Technologies <nicolas.grislain@gmail.com>
+Project-URL: Homepage, https://arena-ai.github.io/structured-logprobs/
+Project-URL: Repository, https://github.com/arena-ai/structured-logprobs
+Project-URL: Documentation, https://arena-ai.github.io/structured-logprobs/
+Keywords: python
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: <4.0,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai~=1.58.1
+Requires-Dist: pydantic~=2.10.4
+Requires-Dist: lark~=1.2.2
+
+![GitHub Tag](https://img.shields.io/github/v/tag/arena-ai/structured-logprobs)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/structured-logprobs)
+[![Main Workflow](https://github.com/arena-ai/structured-logprobs/actions/workflows/main.yml/badge.svg)](https://github.com/arena-ai/structured-logprobs/actions/workflows/main.yml)
+[![Release Workflow](https://github.com/arena-ai/structured-logprobs/actions/workflows/on-release-main.yml/badge.svg)](https://github.com/arena-ai/structured-logprobs/actions/workflows/on-release-main.yml)
+
+![structured-logprobs](https://github.com/arena-ai/structured-logprobs/blob/main/docs/images/logo.png?raw=true)
+
+This Python library is designed to enhance OpenAI chat completion responses by adding detailed information about token log probabilities.
+This library works with OpenAI [Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs), which is a feature that ensures the model will always generate responses that adhere to your supplied JSON Schema, so you don't need to worry about the model omitting a required key, or hallucinating an invalid enum value.
+It provides utilities to analyze and incorporate token-level log probabilities into structured outputs, helping developers understand the reliability of structured data extracted from OpenAI models.
+
+## Objective
+
+![structured-logprobs](https://github.com/arena-ai/structured-logprobs/blob/main/docs/images/pitch.png?raw=true)
+
+The primary goal of **structured-logprobs** is to provide insights into the reliability of extracted data. By analyzing token-level log probabilities, the library helps assess how likely each value generated from an LLM's structured outputs is.
+
+## Key Features
+
+The module contains a function for mapping characters to token indices (`map_characters_to_token_indices`) and two methods for incorporating log probabilities:
+
+1. Adding log probabilities as a separate field in the response (`add_logprobs`).
+2. Embedding log probabilities inline within the message content (`add_logprobs_inline`).
+
+## Example
+
+To use this library, first create a chat completion response with the OpenAI Python SDK, then enhance the response with log probabilities.
+Here is an example of how to do that:
+
+```python
+from openai import OpenAI
+from openai.types import ResponseFormatJSONSchema
+from structured_logprobs import add_logprobs, add_logprobs_inline
+
+# Initialize the OpenAI client
+client = OpenAI(api_key="your-api-key")
+
+schema_path = "path-to-your-json-schema"
+with open(schema_path) as f:
+        schema_content = json.load(f)
+
+# Validate the schema content
+response_schema = ResponseFormatJSONSchema.model_validate(schema_content)
+
+# Create a chat completion request
+completion = client.chat.completions.create(
+    model="gpt-4o-2024-08-06",
+    messages = [
+            {
+                "role": "system",
+                "content": (
+                    "I have three questions. The first question is: What is the capital of France? "
+                    "The second question is: Which are the two nicest colors? "
+                    "The third question is: Can you roll a die and tell me which number comes up?"
+                ),
+            }
+        ],
+    logprobs=True,
+    response_format=response_schema.model_dump(by_alias=True),
+)
+
+chat_completion = add_logprobs(completion)
+chat_completion_inline = add_logprobs_inline(completion)
+print(chat_completion.log_probs[0])
+{'capital_of_France': -5.5122365e-07, 'the_two_nicest_colors': [-0.0033997903, -0.011364183612649998], 'die_shows': -0.48048785}
+print(chat_completion_inline.choices[0].message.content)
+{"capital_of_France": "Paris", "capital_of_France_logprob": -6.704273e-07, "the_two_nicest_colors": ["blue", "green"], "die_shows": 5.0, "die_shows_logprob": -2.3782086}
+```
+
+## Example JSON Schema
+
+The `response_format` in the request body is an object specifying the format that the model must output. Setting to { "type": "json_schema", "json_schema": {...} } ensures the model will match your supplied [JSON schema](https://json-schema.org/overview/what-is-jsonschema).
+
+Below is the example of the JSON file that defines the schema used for validating the responses.
+
+```python
+{
+    "type": "json_schema",
+    "json_schema": {
+        "name": "answears",
+        "description": "Response to questions in JSON format",
+        "schema": {
+            "type": "object",
+            "properties": {
+                "capital_of_France": { "type": "string" },
+                "the_two_nicest_colors": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": ["red", "blue", "green", "yellow", "purple"]
+                    }
+                },
+                "die_shows": { "type": "number" }
+            },
+            "required": ["capital_of_France", "the_two_nicest_colors", "die_shows"],
+            "additionalProperties": false
+        },
+        "strict": true
+    }
+}
+```
