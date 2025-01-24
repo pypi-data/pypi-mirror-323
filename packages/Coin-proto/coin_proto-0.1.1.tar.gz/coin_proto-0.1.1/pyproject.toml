@@ -1,0 +1,22 @@
+[project]
+name = "Coin-proto"
+version = "0.1.1"
+description = "This prototype is a cryptocurrency trading automation system."
+authors = [
+    { name = "lucas_hub12", email = "hyeonggyunbae@gmail.com" },
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
