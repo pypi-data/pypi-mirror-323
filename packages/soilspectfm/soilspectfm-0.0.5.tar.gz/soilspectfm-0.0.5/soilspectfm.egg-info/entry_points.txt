@@ -1,0 +1,2 @@
+[nbdev]
+soilspectfm = soilspectfm._modidx:d

@@ -1,0 +1,9 @@
+fastcore
+scikit-learn
+matplotlib
+PyWavelets
+
+[dev]
+soilspecdata
+nbdev
+ipykernel
