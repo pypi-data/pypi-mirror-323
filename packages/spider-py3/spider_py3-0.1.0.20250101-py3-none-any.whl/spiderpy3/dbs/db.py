@@ -1,0 +1,20 @@
+from typing import Any
+from abc import ABC, abstractmethod
+
+
+class DB(ABC):
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        super().__init__(*args, **kwargs)
+
+        self._open()
+
+    def __del__(self) -> None:
+        self._close()
+
+    @abstractmethod
+    def _open(self) -> None:
+        pass
+
+    @abstractmethod
+    def _close(self) -> None:
+        pass
