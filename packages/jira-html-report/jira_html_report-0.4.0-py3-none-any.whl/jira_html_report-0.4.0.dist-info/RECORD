@@ -1,0 +1,10 @@
+jira_html_report/__init__.py,sha256=bbEOeQoBHW2xr9i2NTpiNwn8EmsgV8ycVc-HPUSaCGQ,296
+jira_html_report/data.py,sha256=IpvKpLLaUKdPb1JBqHhF1CQQWolTJgXH2qfes7lTg5Q,4658
+jira_html_report/report.py,sha256=HaGI0DvgMFGvsUU5iFspebznoRbflWk064MtwbumeHM,5223
+jira_html_report/html_templates/chart_template.j2,sha256=J_kAJJacScjSVIqVTXidr_vf_dQsSoNdZUaeOg4fyOw,247
+jira_html_report/html_templates/report_template.j2,sha256=3F4u92Xv4XW6F0lGW0Yy--XwfYG6pmP2FL6SYPQ7C4Q,1988
+jira_html_report/html_templates/table_template.j2,sha256=JWTJ-ei1MGg_-2ZVTZc9xGfsAteHGLo3LUG6vp6kVFI,494
+jira_html_report-0.4.0.dist-info/METADATA,sha256=zOhmnO7mQ2hTw04pY5cMQuqne9Xmn4_qm07Or6bNX_Q,4971
+jira_html_report-0.4.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+jira_html_report-0.4.0.dist-info/top_level.txt,sha256=o1PMDIRueY5ylib7rvcmC19XpvcHj171dsfpAQLEd6M,17
+jira_html_report-0.4.0.dist-info/RECORD,,
