@@ -1,0 +1,31 @@
+[project]
+name = "SRIndexProto"
+version = "0.2.0"
+description = "Default template for PDM package"
+authors = [
+    { name = "nunininu", email = "sgcho0907@gmail.com" },
+]
+dependencies = [
+    "typer>=0.15.1",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+srindex = "srindexproto.cli:entry_point"
+
+[project.urls]
+Homepage = "https://github.com/nuni-org/SRIndexProto"
+Issues = "https://github.com/nuni-org/SRIndexProto/issues"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
