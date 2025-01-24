@@ -1,0 +1,3 @@
+[glue.plugins]
+glue_genomics_data = glue_genes.glue_genomics_data:setup
+glue_single_cell = glue_genes.glue_single_cell:setup
