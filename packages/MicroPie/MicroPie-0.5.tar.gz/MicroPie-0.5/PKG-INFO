@@ -1,0 +1,48 @@
+Metadata-Version: 1.1
+Name: MicroPie
+Version: 0.5
+Summary: A ultra micro web framework w/ Jinja2.
+Home-page: http://github.com/patx/micropie
+Author: Harrison Erd
+Author-email: harrisonerd@gmail.com
+License: three-clause BSD
+Description: 
+        MicroPie
+        --------
+        
+        MicroPie is lightweight, fast, and simple micro WSGI framework inspired by CherryPy. And it's BSD licensed!
+        
+        
+        MicroPie is Fun
+        ```````````````
+        
+        ::
+        
+            from MicroPie import Server
+        
+            class MyApp(Server):
+        
+                def index(self):
+                    return 'Hello world!'
+        
+            MyApp().run()
+        
+        
+        And Easy to Install
+        ```````````````````
+        
+        ::
+        
+            $ pip install micropie
+        
+        
+        Links
+        `````
+        
+        * `Website <https://patx.github.io/micropie>`_
+        * `Github Repo <https://github.com/patx/micropie>`_
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
