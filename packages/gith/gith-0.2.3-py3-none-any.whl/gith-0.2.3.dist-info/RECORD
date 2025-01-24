@@ -1,0 +1,11 @@
+gith/__init__.py,sha256=GtUcJNx8XzAtHaVanlG0R8yju_uq6CiCyPgCvxmP7h0,59
+gith/cli.py,sha256=L7AnJlNWaC6BYulObMGt70VHoj-cz3My_4s3LjtwqkA,3785
+gith/console.py,sha256=rKbt7Uc9WY9k-Cdm97IGW5s-NZFR0aSAfUH0ipU9TFQ,3056
+gith/helpers.py,sha256=-1HZTrGiWCOpN0rB8qas9XMbXy7uvL0Y53xUNJQEkG8,8071
+gith/messages.py,sha256=x5YBvCkm6ENuwGz_fUY_xoy1c3lz344n4esxZpDjMhU,1916
+gith-0.2.3.dist-info/LICENSE,sha256=tZChbAGnueFSyzkcippl9dlVvX8HY3xrL15ZGwIQAKk,1078
+gith-0.2.3.dist-info/METADATA,sha256=4MldTntTrweUKM2Od6a28OmkydATZLvWhqXaJepd7Ds,21467
+gith-0.2.3.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+gith-0.2.3.dist-info/entry_points.txt,sha256=078OcdmiCpkxBOFgDCDpOo1dZ3pJQyJCWGd52eJZNy4,38
+gith-0.2.3.dist-info/top_level.txt,sha256=KBSLns37WWAGc12UvRlhcYBLVPCiBYpej8Wnpz_AHew,5
+gith-0.2.3.dist-info/RECORD,,
