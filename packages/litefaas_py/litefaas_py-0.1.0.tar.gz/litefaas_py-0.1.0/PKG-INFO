@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: litefaas_py
+Version: 0.1.0
+Summary: 
+Author: hyeonho cho
+Author-email: 111675679+aesthetics-of-record@users.noreply.github.com
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: nats-py (>=2.9.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+
