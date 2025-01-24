@@ -1,0 +1,20 @@
+[project]
+name = "chinese-holidays"
+version = "0.1.10"
+description = "Query information about Chinese holidays"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+ "httpx>=0.28.1",
+ "mcp>=1.2.0",
+]
+[[project.authors]]
+name = "OSpoon"
+email = "zxin088@gmail.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+chinese-holidays = "chinese_holidays:main"
