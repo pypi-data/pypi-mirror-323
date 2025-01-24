@@ -1,0 +1,89 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyllments"
+dynamic = ["version"]
+url = "https://github.com/Prudent-Patterns/pyllments"
+author = "Dmitriy Leybel"
+author_email = "dmleybel@gmail.com"
+description = """
+A Python framework for building modular, extensible LLM applications through composable Elements 
+in a flow-based architecture. Pyllments enables developers to create both graphical and API-based 
+LLM applications by connecting specialized Elements through a flexible port system, with built-in 
+support for UI components and LLM integrations.
+"""
+license = "Apache-2.0"
+license_file = "LICENSE"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "python-dotenv",
+    "bokeh",
+    "panel",
+    "langchain",
+    "langchain-openai",
+    "langchain-community",
+    "langchain-chroma",
+    "langchain-anthropic",
+    "sentence-transformers",
+    "openai",
+    "jsonlines",
+    "opencv-python",
+    "pdfminer.six",
+    "pikepdf",
+    "nbconvert",
+    "tiktoken",
+    "chromadb",
+    "unstructured",
+    "pillow-heif",
+    "pytesseract",
+    "ruamel.yaml",
+    "duckdb",
+    "fastapi[standard]",
+    "bokeh-fastapi",
+    "loguru",
+    "lancedb",
+    "typer",
+    "litellm>=1.57.3",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter_bokeh",
+    "ipykernel",
+    "ipython",
+    "ipywidgets",
+]
+
+[project.scripts]
+pyllments = "pyllments.__main__:typer_app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pyllments"]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "dev",
+    "docs",
+    "examples",
+    ".devcontainer",
+    ".vscode",
+    ".cursorrules",
+    ".cursorignore",
+    ".gitignore",
+    ".gitattributes",
+    ".venv",
+    ".env",
+    "*.py[cod]",
+    "__pycache__/*"
+]
+
+[tool.hatch.version]
+source = "vcs"
+tag-pattern = '^(?!docs-)(?:[\w-]+-)?(?P<version>[vV]?\d+(?:\.\d+){0,2}[^+]*)(?:\+.*)?$'
+fallback-version = "0.0.1"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "_version.py"
