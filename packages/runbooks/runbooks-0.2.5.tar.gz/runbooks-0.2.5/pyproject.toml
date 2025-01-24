@@ -1,0 +1,160 @@
+[project.urls]
+"Homepage" = "https://cloudops.oceansoft.io"
+"Repository" = "https://github.com/1xOps/CloudOps-Runbooks"
+"Documentation" = "https://cloudops.oceansoft.io/runbooks/"
+"Issues" = "https://github.com/nnthanh101/template/issues"
+
+[project]
+## Metadata: https://docs.astral.sh/uv/concepts/projects/config/
+name = "runbooks"
+## Incremented for new release
+version = "0.2.5"
+description = "CloudOps Automation Toolkit for DevOps and SRE teams."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [
+  { name = "Runbooks Maintainers", email = "nnthanh101@gmail.com" },
+]
+keywords = ["runbooks", "automation", "DevOps", "SRE", "CloudOps"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+## Core Dependencies
+dependencies = [
+    "requests>=2.32.3",
+    "loguru>=0.7.3",
+    "tqdm>=4.67.1",
+    "fastapi>=0.115.6",
+    "tabulate>=0.9.0",
+    
+    ## Documentation Tools (MkDocs and Plugins)
+    "diagrams>=0.24.1",
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings",
+    "mkdocstrings[python]",
+    "mkdocs-drawio-exporter",
+    "mkdocs-glightbox",
+    "mkdocs-mermaid2-plugin",
+    "mkdocs-rss-plugin",
+    "pymdown-extensions",
+    "pygments",
+    "mkdocs-techdocs-core",
+    
+    ## JupyterLab and AI/ML Tools
+    "gunicorn>=23.0.0",
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.5",
+    ## downgrade ipython to a version compatible with prompt-toolkit<3.0.39 (used by awscli)
+    # "ipython>=8.12.0,<8.31.0",
+    # "jupyter-ai>=2.28.4",
+    # "jupyter-ai[all]>=2.28.4",
+    "jupyterlab>=4.3.4",
+    "jupyterlab-git>=0.50.2",
+    # jupyter-resource-usage
+    # jupyter_scheduler
+
+    ## CloudOps
+    # "ansible>=11.1.0",
+    # "awscli @ git+https://github.com/aws/aws-cli@v2",
+    # "moto>=5.0.25",
+    "azure-cli",
+    "boto3>=1.35.90",
+    "botocore>=1.35.95",
+    "jmespath>=1.0.1",
+    "python-dateutil>=2.9.0",
+    "s3transfer>=0.10.4",
+    "six>=1.17.0",
+    "urllib3~=2.3.0",
+
+    ## AI & Visual Analytics
+    "openai>=1.58.1",
+    "pydantic>=2.10.4",
+    "pydantic-ai>=0.0.16",
+    "openpyxl>=3.1.5",
+    "pandas>=2.2.3",
+    "plotly>=5.24.1",
+    "vizro>=0.1.30",
+    "vizro-ai>=0.3.2",
+
+    ## 1xOps/CloudOps-Runbooks: https://pypi.org/project/runbooks/
+    "runbooks>=0.2.5"
+]
+
+[dependency-groups]
+## Development Dependencies
+dev = [
+    ## Testing Tools
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.8.4",
+    # "black>=23.11.0",
+    # "pre-commit>=3.5.0",
+    "typer>=0.15.1",
+    "versioningit",
+]
+
+[build-system]
+requires = [
+  "setuptools>=75",
+  "wheel",
+  "build"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+license-files = []
+# license-files = ["LICENSE"]
+package-dir = {"" = "src"}    ## Tells setuptools that code is in `src/`
+include-package-data = true   ## If you want non-.py files, such as .json, included too
+
+[tool.setuptools.package-data]
+"runbooks.security_baseline" = ["*.json", "*.html"]
+
+[tool.setuptools.packages.find]
+where = ["src"]                     ## Look inside `src` for packages
+include = ["runbooks*"]             ## Include runbooks and its subpackages
+# exclude = ["tests*"]              ## DON'T Exclude test folders
+
+[tool.versioningit]
+vcs = "git"
+tag2version = "v{base}"
+default-version = "0.2.5"
+
+[tool.pytest.ini_options]
+## Test Configuration
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "--cov=src/runbooks --cov-report=term-missing --verbose"
+
+
+[project.scripts]
+## CLI Commands
+runbooks-aws = "runbooks.aws:run_script"
+runbooks-security = "runbooks.security_baseline.run_script:main"
+
+
+[tool.ruff]
+## Linting and Formatting Configurations
+## https://docs.astral.sh/ruff/configuration/
+target-version = "py312"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I"]
+ignore = ["F401", "E501", "F811"] 
+fixable = ["I"]
+unfixable = []
+
+[tool.ruff.format]
+line-ending = "lf"
