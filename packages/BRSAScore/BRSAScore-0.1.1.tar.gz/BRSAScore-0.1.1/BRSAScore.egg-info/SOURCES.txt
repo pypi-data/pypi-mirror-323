@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+BRSAScore/BRSAScore.py
+BRSAScore/__init__.py
+BRSAScore.egg-info/PKG-INFO
+BRSAScore.egg-info/SOURCES.txt
+BRSAScore.egg-info/dependency_links.txt
+BRSAScore.egg-info/not-zip-safe
+BRSAScore.egg-info/requires.txt
+BRSAScore.egg-info/top_level.txt
+BRSAScore/pickle/BRScores_uspto_emolecules.pkl.gz
+BRSAScore/pickle/BScores_emolecules.pkl.gz
+BRSAScore/pickle/RScores_uspto.pkl.gz
