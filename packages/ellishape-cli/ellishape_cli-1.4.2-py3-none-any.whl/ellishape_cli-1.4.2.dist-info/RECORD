@@ -1,0 +1,14 @@
+ellishape_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ellishape_cli/__main__.py,sha256=KiQbBvKgMB2i8CPJjeVJpKttCJRwVVm4drqXbqxu1Sc,86
+ellishape_cli/cli.py,sha256=kc7-t0QT7O4QP3vbtE-rOpAKjmM5msmGWp9byFJ2mj0,32532
+ellishape_cli/e_dist.nwk,sha256=ng-N_RqdAt2mKABmuWZ-dxNaX55rRqdKTpsCHrIvjLk,794
+ellishape_cli/e_dist.pdf,sha256=KOukieMD5i9FTTNxgZ-znC3rhZCg0YJhHZVo7CgVnm0,15558
+ellishape_cli/global_vars.py,sha256=O0i3iaRXFH0H3Ci9XTh6GN_YB_IAVhQcqyWL_q8tr3Q,554
+ellishape_cli/h_dist.nwk,sha256=WRg7_eAa02j3EiBZoXYgbVGthOuccmHjlTZN2_lV0tY,794
+ellishape_cli/h_dist.pdf,sha256=4CJFqkMid3ZfvaoFb77gkVNCG4a6thgUJSPxkNdzD4w,15526
+ellishape_cli/s_dist.nwk,sha256=r2InQ0qDJtNYLiNTb3tGQB_0nuXU1oNcCrwmHjlPzOQ,794
+ellishape_cli/s_dist.pdf,sha256=YLNc1u6i3fIU5m7Bk6J6l0e1ZevJIutQokTrou8VpQI,15588
+ellishape_cli/tree.py,sha256=35FBQ-JN7FBL151cG1Pt0YeegprAaPzWPBEkqGB-dE0,12326
+ellishape_cli-1.4.2.dist-info/METADATA,sha256=zQGbdpPPeox9Do75yQzaWx1C-ShNQA0Bu6BkIJism5E,783
+ellishape_cli-1.4.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ellishape_cli-1.4.2.dist-info/RECORD,,
