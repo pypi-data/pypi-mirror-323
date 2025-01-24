@@ -1,0 +1,77 @@
+[project]
+name = "dyu"
+dynamic = []
+description = "A wrapper click script for setting up everything related to dyumnin semiconductors projects."
+keywords = [
+    "copier-template",
+    "full-development-lifecycle",
+    "project-template",
+    "serious-scaffold",
+]
+authors = [
+    { email = "jahagirdar.vs@gmail.com", name = "Vijayvithal Jahagirdar" },
+]
+dependencies = [
+    "copier>=9.3.1",
+    "pydantic-settings",
+    "typer[all]",
+    "xdg_base_dirs",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+version = "0.0.1.post2"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+dyu = "dyu.cli:app"
+
+[project.urls]
+Documentation = "https://dyumnin.github.io/dyu"
+Issue = "https://github.com/dyumnin/dyu/issues"
+Repository = "https://github.com/dyumnin/dyu"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.version]
+source = "scm"
+version_format = "version:format_version"
+
+[tool.pdm.dev-dependencies]
+doc = [
+    "Sphinx",
+    "autodoc-pydantic",
+    "coverage",
+    "furo",
+    "mypy[reports]",
+    "myst-parser",
+    "pytest",
+    "sphinx-click",
+    "sphinx-design",
+]
+lint = [
+    "mypy",
+    "ruff",
+]
+test = [
+    "coverage",
+    "pytest",
+]
