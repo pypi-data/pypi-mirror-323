@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: powerplug
+Version: 0.2.0
+Summary: Add your description here
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: Django>4.2
+Requires-Dist: importlib_metadata>=4.11.4; python_version < "3.12"
