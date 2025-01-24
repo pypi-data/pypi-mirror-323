@@ -1,0 +1,7 @@
+device_selector/__init__.py,sha256=Dr4MM-L8Z52XXQNmWN9ueQQndxFsToNEdd0pu8J21uY,95
+device_selector/device_selector.py,sha256=fcENL81ulODvg1AU73RI2ZEhagKO_NWUJvyWOcz_Ecg,2423
+test/test_device_selector.py,sha256=-bTZIf0x4m4N4n2Ilhaus2_TcVRj8WIRB909PrLd1IM,4762
+device_selector-0.1.0.dist-info/METADATA,sha256=_sGqY6700i1jUdOhfjaWqJC4FOIT9xXksdHDg-1UmKk,1309
+device_selector-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+device_selector-0.1.0.dist-info/top_level.txt,sha256=wZ32aitn53EhC_3dUY4ICLyRjiZI2GbPLfVLg9ucOTk,21
+device_selector-0.1.0.dist-info/RECORD,,
