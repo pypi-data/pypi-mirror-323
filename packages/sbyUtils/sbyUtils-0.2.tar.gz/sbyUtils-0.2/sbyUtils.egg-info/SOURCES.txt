@@ -1,0 +1,8 @@
+README.md
+setup.py
+sbyUtils/__init__.py
+sbyUtils/sbyUtils.py
+sbyUtils.egg-info/PKG-INFO
+sbyUtils.egg-info/SOURCES.txt
+sbyUtils.egg-info/dependency_links.txt
+sbyUtils.egg-info/top_level.txt
