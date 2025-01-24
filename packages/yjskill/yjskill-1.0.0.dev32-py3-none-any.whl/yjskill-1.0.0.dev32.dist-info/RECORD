@@ -1,0 +1,11 @@
+skill/__init__.py,sha256=58CvTlhRY6mphoyhaNrOfg2JXQ_uL0JiNZjTmOCwZn0,184
+skill/skillv1/__init__.py,sha256=58CvTlhRY6mphoyhaNrOfg2JXQ_uL0JiNZjTmOCwZn0,184
+skill/skillv1/skill_api_skill.py,sha256=N3y2ANn8b_iZ1auuIvdJk5PmeEqag9fV_GyOrpZBZYQ,3759
+skill/skillv1/skill_api_skill_test.py,sha256=Dzj2a7FJyGg1lafI2v_osadtYlui-wMnbetnMrZ-gXI,4078
+skill/skillv1/skill_client.py,sha256=3LjJA1ac8urYOnaG_e7mRuc6ri9oZXsX_tmKZdTuS34,1212
+skill/skillv1/sync_skill.py,sha256=zlaqCBVVTD3OGmIHZarT8kpvvf6ww-BDj7M0WOZ_ncQ,32648
+skill/skillv1/sync_skill_test.py,sha256=V03C6UVP488SVoQiHYod3karI4clrNJgW0bXJdRDZD0,12972
+yjskill-1.0.0.dev32.dist-info/METADATA,sha256=PF5GNRpY7xzDCoVxZwEVaamSVlim1M_a4rOmxrfk1X0,733
+yjskill-1.0.0.dev32.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+yjskill-1.0.0.dev32.dist-info/top_level.txt,sha256=MIjltgd5qVOJ5O0I0uzubqrCMRxZDas_LkvrMJClTwA,6
+yjskill-1.0.0.dev32.dist-info/RECORD,,
