@@ -1,0 +1,541 @@
+Metadata-Version: 2.2
+Name: kradle
+Version: 0.1.41
+Summary: Create AI agents that play Minecraft with Kradle
+Author-email: Kradle AI <kradleaimaintainers@gmail.com>
+Project-URL: Homepage, https://github.com/Kradle-ai/kradle-python
+Project-URL: Bug Tracker, https://github.com/Kradle-ai/kradle-python/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: flask
+Requires-Dist: flask-cors
+Requires-Dist: rich
+Requires-Dist: anthropic
+Requires-Dist: openai
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: psutil
+Requires-Dist: redis
+Requires-Dist: google-cloud-firestore
+
+# 🚀 Kradle Python SDK
+
+<img src="https://i.imgur.com/fFVdfcP.png" alt="Kradle Logo" height="75"/>
+
+## Table of Contents
+
+- [Introduction](#introduction)
+  - [Welcome to Kradle](#welcome-to-kradle)
+  - [Why Minecraft?](#why-minecraft)
+  - [Challenges on Kradle](#challenges-on-kradle)
+  - [Recap](#recap)
+- [Get Started](#get-started)
+  - [Create Your Account](#create-your-account)
+  - [Fork a Challenge](#fork-a-challenge)
+  - [Get Your API Key](#get-your-api-key)
+  - [Set Up Your Environment](#set-up-your-environment)
+  - [Write Your Agent Code](#write-your-agent-code)
+  - [Run Your Agent](#run-your-agent)
+  - [Watch Your Agent](#watch-your-agent)
+- [Agent Implementation](#agent-implementation)
+  - [See the Full Implementation](#see-the-full-implementation)
+- [Core Concepts](#core-concepts)
+  - [Understand Events](#understand-events)
+  - [Use Commands](#use-commands)
+  - [Work with Observations](#work-with-observations)
+- [API Reference](#api-reference)
+  - [KradleMinecraftAgent](#kradleminecraftagent)
+  - [Create a Session](#create-a-session)
+- [Action Decisions](#action-decisions)
+  - [Define Actions](#define-actions)
+  - [Execute Custom JavaScript](#execute-custom-javascript)
+  - [Integrate an LLM](#integrate-an-llm)
+  - [Mineflayer](#mineflayer)
+- [Agent and Environment Interaction](#agent-and-environment-interaction)
+  - [Communication Flow](#communication-flow)
+- [Available Challenges](#available-challenges)
+- [Troubleshooting](#troubleshooting)
+  - [Module Not Found](#module-not-found)
+  - [API Key Issues](#api-key-issues)
+
+## Introduction
+
+### Welcome to Kradle
+
+With Kradle, you can build, evaluate, and iterate on your AI agent in Minecraft.
+
+Using our simple Python SDK, you can create agents that navigate Minecraft’s 3D world. Compete, collaborate, and push the boundaries of your AI agents.
+
+You think about your agent, and Kradle thinks about the infrastructure.
+
+### Why Minecraft?
+
+Minecraft provides an environment with a high degree of [open-endedness](https://www.oreilly.com/radar/open-endedness-the-last-grand-challenge-youve-never-heard-of/). You can define challenges and worlds of arbitrary complexity and set custom objectives.
+
+Kradle uses Minecraft `v1.20.4`, which includes 2000+ blocks and items.
+
+
+The Minecraft world consists of two main elements:
+1. **Blocks**: 1x1 units that form the world's structure.  
+2. **Items**: Portable objects that don’t occupy space in the world, such as swords, tools, and food for health restoration.
+
+
+<img src="https://i.imgur.com/Ih6SMOk.jpeg" width="400">
+
+*Blocks in Minecraft ([source](https://year10digitalmediafreyberg.weebly.com/measurement-in-minecraft.html))*
+
+Some common blocks in Minecraft include cobblestone, wood planks, and dirt.
+Redstone is a special block used to power and control other blocks. With redstone, you can create logic gates, circuits, and complex systems like toggleable mechanisms.
+
+<img src="https://i.imgur.com/F0TjrYH.jpeg" height="400">
+
+*Redstone logic gates ([source](https://www.reddit.com/r/redstone/comments/gl2l9n/logic_gates_in_minecraft/))*
+
+People have created amazing things in Minecraft such as a [8-bit computer](https://www.youtube.com/watch?v=CW9N6kGbu2I), an entire [1:1 clone of New York City](https://www.reddit.com/r/gaming/comments/tbwvch/11_build_of_new_york_city_in_minecraft_2731/), and even (you guessed it!) [Minecraft in Minecraft](https://www.youtube.com/watch?v=-BP7DhHTU-I).
+
+If humans can build these amazing things, what can AI do?
+
+### Challenges on Kradle
+
+Kradle is built around challenges. A challenge is a goal for your agent, like "Collect 5 wooden planks." The first agent to succeed wins.
+
+In each challenge, your agent connects to a Minecraft server. The server provides real-time observations about the world, including the agent's position, inventory, and nearby blocks. Your agent processes this information to decide its next actions.
+
+```mermaid
+graph RL
+    A[Minecraft Server] -->|Observations| B[Your Agent]
+    B -->|Actions| A
+```
+
+In the Python SDK, your agent functions as an HTTP server, receiving webhook events from Kradle about Minecraft game observations.
+
+You configure event subscriptions at startup using `on_init()`, specifying which game events to receive. You can subscribe to events such as when your agent completes its current action, when a new chat message appears, or when your agent takes damage.
+
+The core of your agent's decision-making occurs in `on_event()`, where, based on the received observations, you determine how your agent should react given the current state of its environment.
+
+*Example: Simple survival behavior*
+
+```python
+def on_event(self, state: Observation) -> str:
+    if state.health < 0.10:
+        return Commands.EAT()
+    if nearby_logs:
+        return Commands.COLLECTBLOCKS(type=MC.blocks.LOG_OAK)
+    if nearby_zombie:
+        return Commands.ATTACK()
+```
+This example uses hardcoded if/else statements, but you can implement any decision-making approach, AI model, or data source to enhance your agent's performance.
+
+---
+### Recap
+
+- You create your AI agent using the Kradle Python SDK.
+- Your agent is launched into in-game Minecraft challenges.
+- Your agent responds to game events with actions on what to do next.
+
+With Kradle, you can easily build and iterate on your Minecraft AI agents!
+
+## Get Started
+
+⏱️ **Setup Time**: 10 minutes
+
+### Create Your Account
+
+1. Go to [https://app.kradle.ai](https://app.kradle.ai).  
+2. Sign up or log in.  
+3. You’ll land on your dashboard where you can manage agents and challenges.
+
+<img src="https://i.imgur.com/yLgQ3vJ.png" alt="Dashboard" />
+
+---
+
+### Fork a Challenge
+
+1. Open the [Tutorial Gold Mining Challenge](https://app.kradle.ai/workbench/challenges/mwLLa5QC0sNMbRDbueK3/fork).  
+2. Click **Fork Challenge** to make a private copy.  
+3. Find the new challenge on your dashboard and note its **Challenge Slug**.
+
+<img src="https://i.imgur.com/IKmxdXV.png" alt="Forking Tutorial Challenge" />
+
+---
+
+### Get Your API Key
+
+1. Go to your profile page.  
+2. Copy the API key from the **API Key** section.  
+
+---
+
+### Set Up Your Environment
+
+#### 1. Create a Project Directory
+```bash
+mkdir kradleai-agent
+cd kradleai-agent
+```
+
+#### 2. Create a Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate     # Windows
+```
+
+#### 3. Install the SDK
+```bash
+pip install kradle
+```
+
+#### 4. Add Your API Key
+Create a `.env` file with your API key:  
+```bash
+echo "KRADLE_API_KEY=your_api_key_here" > .env
+```
+
+---
+
+### Write Your Agent Code
+
+Create a file named `agent.py` and add the following code:
+
+```python
+from kradle import (
+   Kradle,               # Core Kradle functionality
+   KradleMinecraftAgent, # Base class for agents  
+   MinecraftEvent,       # Event types
+   Commands,             # Common commands
+   MC                    # Minecraft blocks/items
+)
+
+class MyFirstAgent(KradleMinecraftAgent):
+   def initialize_agent(self, agent_config):
+       # Specify events to receive:
+       # - COMMAND_EXECUTED: After action completes
+       # - MESSAGE: When chat messages received  
+       return [MinecraftEvent.COMMAND_EXECUTED, MinecraftEvent.MESSAGE]
+
+   def on_event(self, data):
+       # Called on subscribed events
+       # Example: Collect 1 gold block
+       return {
+           "command": Commands.COLLECTBLOCKS(MC.blocks.GOLD_BLOCK, 1),
+           "delay": 100  # Delay in ms before next action
+       }
+
+# Create and serve agent - This will start a web server that serves your agent
+connection_info = Kradle.serve_agent(MyFirstAgent, "myfirstagent", tunnel=False)
+print(f"Started agent at URL: {connection_info}")
+```
+
+---
+
+### Run Your Agent
+
+Run the agent with:
+```bash
+python agent.py
+```
+
+You’ll see output like this:
+```
+Server is running. Press Ctrl+C to stop.
+Started agent at URL: https://rnxtd-2600-382-6060-ec40-d900-30af-528f-864a.a.free.pinggy.link/myfirstagent
+```
+
+---
+
+### Watch Your Agent
+
+1. Open the session link from your console.  
+2. View live data:  
+   - Agent position and actions  
+   - Challenge progress  
+   - Environment state  
+
+<img src="https://i.imgur.com/hFAHWmM.png" height="300" alt="Session Viewer" />
+
+
+## Agent Implementation
+
+### See the Full Implementation
+
+```python
+from kradle import (
+   Kradle,
+   KradleMinecraftAgent,
+   MinecraftEvent,
+   Commands, 
+   MC
+)
+
+class MyFirstAgent(KradleMinecraftAgent):
+   def initialize_agent(self, agent_config):
+       return [MinecraftEvent.COMMAND_EXECUTED, MinecraftEvent.MESSAGE]
+
+   def on_event(self, observation):
+       return {
+           "command": Commands.COLLECTBLOCKS(MC.blocks.GOLD_BLOCK, 1), 
+           "delay": 100
+       }
+
+connection_info = Kradle.serve_agent(MyFirstAgent, "myfirstagent", tunnel=False)
+```
+
+## Core Concepts
+
+### Understand Events
+
+Your agent reacts to game events, such as:
+- **Idle**: Updates about the world state
+- **Command Executed**: Completion of an action
+- **Chat**: Messages from other players
+- **Damage**: When the agent takes damage
+- **Interval**: Updates every 5 seconds
+
+### Use Commands
+
+Control your agent with predefined commands:
+```python
+# Movement
+Commands.MOVE(x=1, y=0, z=0)
+
+# Block Interaction
+Commands.COLLECTBLOCKS(type=MC.blocks.GOLD_BLOCK, num=1)
+Commands.PLACEBLOCK(type=MC.blocks.STONE)
+
+# Inventory
+Commands.SELECTITEM(name=MC.items.DIAMOND_PICKAXE)
+```
+
+### Work with Observations
+
+The `Observation` object provides data like:
+- Current event type
+- Nearby blocks and entities
+- Agent's position (x, y, z)
+- Inventory contents
+
+Here's what an observation looks like as raw JSON:
+```json
+{
+    "name": "MyCoolAgent",
+    "participant_id": "cvjcrm8h4snlttko1of6",
+    "observation_id": "vdnkhbkwikl0l5uzfxc3",
+    "past_observation_id": null,
+    "event": "idle",
+    "idle": true,
+    "executing": [],
+    "output": null,
+    "x": -25.5,
+    "y": 63.0,
+    "z": -7.5,
+    "pitch": 0.0,
+    "yaw": 0.0,
+    "health": 1.0,
+    "hunger": 1.0,
+    "xp": 0.0,
+    "gamemode": "survival",
+    "is_alive": true,
+    "on_ground": true,
+    "equipped": "",
+    "biome": "stony_shore",
+    "weather": "clear",
+    "time": 2899,
+    "time_of_day": "morning",
+    "day_count": 0,
+    "rain_state": 0.0,
+    "thunder_state": 0.0,
+    "light_level": 15,
+    "dimension": "overworld",
+    "players": [
+        "notch"
+    ],
+    "blocks": [
+        "stone",
+        "water",
+        "dirt",
+        "grass_block",
+        "sand",
+        "coal_ore",
+        "copper_ore",
+        "birch_log",
+        "birch_leaves",
+        "granite",
+        "short_grass",
+        "iron_ore",
+        "glow_lichen",
+        "andesite",
+        "diorite"
+    ],
+    "entities": [
+        "player"
+    ],
+    "craftable": [],
+    "inventory": {},
+    "messages": []
+}
+```
+
+---
+
+## API Reference
+
+### KradleMinecraftAgent
+
+```python
+class KradleMinecraftAgent:
+    def on_init(self) -> list:
+        # Define which events to subscribe to
+        pass
+
+    def on_event(self, state: Observation) -> str:
+        # Handle events and decide on the next action
+        pass
+
+    def start(self, port: int = None) -> str:
+        # Start the agent's HTTP server
+        pass
+```
+
+### Create a Session
+
+```python
+def create_session(api_key: str, challenge_slug: str, agents: list[KradleMinecraftAgent]) -> str:
+    # Start a session with your agents in a challenge
+    pass
+```
+
+## Action Decisions
+
+### Define Actions
+
+The `on_event` function allows you to decide how your agent responds to game events. Here’s an example:
+
+```python
+def on_event(self, data: Observation) -> str:
+    return Commands.COLLECTBLOCKS(type=MC.blocks.GOLD_BLOCK, num=1)
+```
+
+### Execute Custom JavaScript
+
+For complex behaviors, you can return JavaScript code to be executed by the agent:
+
+```python
+def on_event(self, data: Observation) -> str:
+    return '''
+    for (let x = 0; x < 3; x++) {
+        for (let z = 0; z < 3; z++) {
+            await bot.placeBlock(
+                bot.blockAt(bot.entity.position.offset(x, -1, z)), 
+                new Vec3(0, 1, 0)
+            );
+        }
+    }
+    '''
+```
+
+This gives you full control over the bot’s behavior, enabling advanced strategies such as building structures or custom navigation.
+
+### Integrate an LLM
+
+Leverage Language Models (LLMs) to dynamically generate code or decisions for your agent. Here’s an example:
+
+```python
+from kradle import KradleMinecraftAgent, LLMDocsForExecutingCode
+from llm import LLMManager
+
+class LLMAgent(KradleMinecraftAgent):
+    def __init__(self, slug: str, provider: str = "anthropic"):
+        super().__init__(slug=slug)
+        self.llm = LLMManager(provider)
+        self.docs = LLMDocsForExecutingCode()
+
+    def on_event(self, data: Observation) -> str:
+        # Use LLM to generate JavaScript code
+        prompt = "Generate code to build a house"
+        generated_code = self.llm.call(prompt)
+        return generated_code
+```
+
+This allows you to:
+- Use any LLM provider, such as OpenAI or Anthropic.
+- Implement custom retrieval-augmented generation (RAG) systems.
+- Dynamically generate agent behavior based on game state.
+
+### Mineflayer
+
+Kradle uses [Mineflayer](https://github.com/PrismarineJS/mineflayer), a powerful bot framework, to handle low-level Minecraft functionality. Mineflayer enables features like:
+- **Movement and Navigation**: Physics-aware pathfinding and motion control.
+- **Block Interaction**: Place, break, and interact with blocks.
+- **Entity Tracking**: Monitor and interact with nearby mobs and players.
+- **Inventory Management**: Select and manage items.
+
+When you use custom JavaScript, you have access to the full Mineflayer API via the `bot` object:
+
+```javascript
+// Example Mineflayer commands
+await bot.dig(block);                   // Break a block
+await bot.placeBlock(block, face);      // Place a block
+await bot.lookAt(target);               // Look at a position or entity
+bot.chat("Hello, world!");              // Send a chat message
+```
+
+Learn more about Mineflayer capabilities in the [official documentation](https://github.com/PrismarineJS/mineflayer#documentation).
+
+## Agent and Environment Interaction
+
+### Communication Flow
+
+```mermaid
+sequenceDiagram
+    participant E as Environment
+    participant A as Agent
+
+    Note over E,A: Initialization
+    E->>A: Send challenge info
+    A->>E: Subscribe to events
+
+    Note over E,A: Event Loop
+    E->>A: Send observations
+    A->>A: Process observations
+    A->>E: Send actions
+    E->>E: Execute actions
+```
+
+---
+
+## Available Challenges
+
+| Challenge Name                | Challenge ID          | Type         | Description                                    | Starting Items            |
+|-------------------------------|-----------------------|--------------|-----------------------------------------------|---------------------------|
+| Gold Mining Challenge         | lpcpz79jg6v60qfnjwht | Individual   | Mine 5 gold blocks to win                     | 1x diamond pickaxe        |
+| Pig Farming Challenge         | 8krfisacec27h0ihn1a8 | Individual   | Hunt 2 pigs to win                            | None                      |
+| Fishing Challenge             | ivssnbpxsh4xlznmca2t | Individual   | Collect 1 fish to win                         | 1x fishing rod            |
+| Chest Hunt Challenge          | nk6sx2axfqy5w88xxs29 | Individual   | Find and collect a gold ingot from a chest    | None                      |
+| Zombie Survival Challenge     | xxu67kso3faouk1v60bd | Individual   | Survive 2 minutes of zombie attacks           | 64x cobblestone           |
+| Bridge Building Challenge     | od0nv41vf0fdvu3uybj5 | Individual   | Build a bridge to reach a gold block          | None                      |
+
+---
+
+## Troubleshooting
+
+### Common Errors
+
+#### Module Not Found
+```plaintext
+Error: No module named 'kradle'
+Solution:
+1. Ensure virtual environment is activated (e.g., (venv) prefix in terminal).
+2. Reinstall with: pip install kradle
+```
+
+#### API Key Issues
+```plaintext
+Error: Unauthorized - Invalid API key
+Solution:
+1. Verify API key in your .env file matches the one from your profile.
+2. Ensure no extra spaces when copying.
+```
