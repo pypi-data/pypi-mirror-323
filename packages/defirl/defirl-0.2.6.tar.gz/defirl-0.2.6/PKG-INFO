@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: defirl
+Version: 0.2.6
+Summary: A reinforcement learning package for predicting buy and sell signals
+Home-page: https://nkrtech.com
+Author: Nicolus Rotich
+Author-email: nicholas.rotich@gmail.com
+License: MIT
+Download-URL: https://github.com/moinonin/defirl/archive/refs/heads/main.zip
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# NLP project
+This is an attempt to build a reinforcement learning model for generating trading signals. It uses a limited vocabulary such as 'go-long', 'go-short' and 'do-nothing'.
+## Usage
+Install the project with:
+```
+pip install defirl
+```
+Then:
+```
+from defirl.defi import main as RLmodel
+```
+
+# Warning
+This is not financial advise. NLP project is entirely on its preliminary stages. Use it at your own risk.
+
+
