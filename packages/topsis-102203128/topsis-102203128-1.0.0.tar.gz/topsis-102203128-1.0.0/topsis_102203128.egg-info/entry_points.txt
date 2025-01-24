@@ -1,0 +1,2 @@
+[console_scripts]
+topsis = rishika_102203128:main
