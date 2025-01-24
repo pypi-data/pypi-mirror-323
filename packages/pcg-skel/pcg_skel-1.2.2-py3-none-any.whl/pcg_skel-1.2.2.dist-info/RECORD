@@ -1,0 +1,14 @@
+pcg_skel/__init__.py,sha256=4qfUnK36pz0Gygv2RxHBfr4rz7CzHd61DbZdTNBg1iM,187
+pcg_skel/chunk_cache.py,sha256=vbQS1BRhSLbwUluB9HO9wQgdm28uQj-6NtL1HT8hyvY,2455
+pcg_skel/chunk_tools.py,sha256=MM1GWwearaN5P4cqfBNkVB3BPDiB7hhTcxNVJCwpaxs,15334
+pcg_skel/features.py,sha256=zZ9aNVokD5IY4OOhqrgosjw_uGLm4mxTmrh5oOLz6i8,18605
+pcg_skel/nocache.py,sha256=9J5DVu5X5XZUQcilPQR0uSyuwpRhngknGQ9ecrDAR5w,23437
+pcg_skel/pcg_anno.py,sha256=uztIg2sfZ3QrNaJaM6P-W27BGpBaeAUyFvDAdmnzC9k,8034
+pcg_skel/pcg_skel.py,sha256=6kH_G62TRkV7R6MAo_xHa76d5JXKbnFDciF-buh-4Tw,27041
+pcg_skel/service.py,sha256=BXFx72BjU9dn35_cJ32pTUId9RXN9XgzTUuA21jeFKU,5953
+pcg_skel/skel_utils.py,sha256=9sKKIM2Trj9ES3Z1aIwoQoQs5ipwHueKXnSDxTsK8dI,3190
+pcg_skel/utils.py,sha256=m_F7qjhiGs0lucLwRZNAoL_AL7JJuPfjHAwrGhF0ubA,2868
+pcg_skel-1.2.2.dist-info/METADATA,sha256=EV9SORmUhv0s9lKA-ZOGIwIVFhj-sHpoEoqgH_fxeRo,2436
+pcg_skel-1.2.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pcg_skel-1.2.2.dist-info/licenses/LICENSE,sha256=iMfFsqcrnSvghFgwGsXcOhqs-WjRrqcoiMsAbcNG6EQ,1061
+pcg_skel-1.2.2.dist-info/RECORD,,
