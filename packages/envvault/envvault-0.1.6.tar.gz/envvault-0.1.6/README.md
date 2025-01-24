@@ -1,0 +1,179 @@
+# EnvVault
+
+EnvVault is a Python package for encrypting and managing `.env` files, similar to Rails Credentials. It allows you to securely store sensitive information (such as API keys, database passwords, etc.) and decrypt and use this information at runtime.
+
+## Features
+
+- **Encrypt `.env` files**: Encrypt plaintext `.env` files into `.env.enc` files.
+- **Decrypt `.env.enc` files**: Decrypt `.env.enc` files at runtime and load environment variables.
+- **Multi-environment support**: Create separate encrypted files for different environments (e.g., `development`, `production`).
+- **Dynamic field support**: Automatically define fields in `Settings` based on the contents of `.env.enc`.
+- **Type inference**: Automatically infer field types (e.g., `str`, `int`, `bool`) from environment variable values.
+- **CLI tool**: Provides a command-line interface for managing encrypted files.
+- **Integration with `pydantic_settings`**: Supports managing decrypted environment variables using `pydantic_settings`.
+
+---
+
+### **Dynamic Field Support**
+
+EnvVault dynamically creates `Settings` fields based on the contents of the `.env.enc` file. For example, if your `.env.enc` file contains:
+
+```yaml
+API_KEY=your_api_key_here
+DATABASE_URL=your_database_url_here
+DEBUG=true
+PORT=8080
+```
+
+EnvVault will automatically create the following fields in the `Settings` class:
+
+- `API_KEY` (string)
+- `DATABASE_URL` (string)
+- `DEBUG` (boolean)
+- `PORT` (integer)
+
+---
+
+### **Type Inference**
+
+EnvVault supports automatic type inference for environment variables. For example:
+
+- `DEBUG=true` → `DEBUG` is inferred as a boolean.
+- `PORT=8080` → `PORT` is inferred as an integer.
+- `API_KEY=your_api_key_here` → `API_KEY` is inferred as a string.
+
+---
+
+## Installation
+
+Install using Poetry:
+
+```bash
+poetry add envvault
+
+# Or install using pip:
+pip install envvault
+```
+
+## Usage
+
+### 1. Initialize
+
+Initialize the `master key` and an empty `.env.enc` file:
+
+```bash
+envvault init --env development
+```
+
+This will generate the following files:
+- `master.key`: The master key used for encryption and decryption.
+- `.env.development.enc`: An empty encrypted file.
+
+---
+
+### 2. Edit Encrypted File
+
+Edit the `.env.enc` file using your default editor:
+
+```bash
+envvault edit --env development
+```
+
+The editor will open a temporary file. After editing, the content will be re-encrypted and saved to `.env.development.enc`.
+
+---
+
+### 3. View Decrypted Environment Variables
+
+Decrypt and view the contents of the `.env.enc` file:
+
+```bash
+envvault view --env development
+```
+
+Enter the following content in the editor:
+
+```yaml
+API_KEY=your_api_key_here
+DATABASE_URL=your_database_url_here
+DEBUG=true
+PORT=8080
+```
+
+---
+### 4. Regenerate master.key
+
+Regenerate the master key for the `development` environment:
+
+```bash
+envvault rekey --env development
+```
+
+---
+
+### 5. Use in Code
+
+Load decrypted environment variables in your code:
+
+```python
+from envvault.settings import Settings
+
+# Load configuration for the development environment
+settings = Settings.from_credentials(env_name="development")
+print("API Key:", settings.API_KEY)
+print("Database URL:", settings.DATABASE_URL)
+```
+
+### or
+
+```python
+from envvault.settings import get_settings
+
+# Load configuration for the current environment
+envvault = get_settings()
+print("API Key:", envvault.API_KEY)
+print("Database URL:", envvault.DATABASE_URL)
+```
+
+---
+
+## Configuration
+
+### Default Editor
+
+You can set the default editor using the `EDITOR` environment variable. For example:
+
+```bash
+export EDITOR=code  # Use VS Code
+export EDITOR=nano  # Use Nano
+export EDITOR=vim   # Use Vim
+```
+
+---
+
+### Master Key Retrieval
+
+EnvVault retrieves the master key value first from the `MASTER_KEY` environment variable, and if not found, from the `master.key` file. This allows for flexibility in managing the master key.
+
+---
+
+### Multi-Environment Support
+
+EnvVault supports creating separate encrypted files for different environments. For example:
+
+- `.env.development.enc`: Development environment.
+- `.env.enc`: Production environment.
+
+Specify the environment name using the `--env` parameter in CLI commands.
+
+---
+
+## Contributing
+
+Issues and Pull Requests are welcome!
+
+---
+
+## License
+
+MIT
