@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: aerosim
+Version: 0.0.1
+Summary: Main python package for AeroSim
+Author-email: Praveen Palanisamy <4770482+praveen-palanisamy@users.noreply.github.com>
+License-Expression: MIT AND Apache-2.0
+License-File: LICENSE
+License-File: LICENSE-APACHE
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# AeroSim
+
+The `aerosim` python package is part of the AeroSim project.
