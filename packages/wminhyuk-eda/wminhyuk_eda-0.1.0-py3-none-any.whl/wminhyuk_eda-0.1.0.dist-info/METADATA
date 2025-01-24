@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: wminhyuk-eda
+Version: 0.1.0
+Summary: Default template for PDM package
+Author-Email: "<wminhyuk>" <<seoseo1998@gmail.com>>
+License: MIT
+Project-URL: Homepage, https://github.com/wminhyuk/wminhyuk-eda
+Project-URL: Issues, https://github.com/wminhyuk/wminhyuk-eda/issues
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# wminhyuk-eda
