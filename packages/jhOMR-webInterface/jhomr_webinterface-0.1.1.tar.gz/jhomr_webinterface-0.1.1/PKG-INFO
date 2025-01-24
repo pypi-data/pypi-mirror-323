@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: jhOMR_webInterface
+Version: 0.1.1
+Summary: OMR format to be used in KUET. This program supports using of Web Interface making use of fastAPI
+Author: Md Nur Kutubul Alam
+Author-email: alamjhilam@gmail.com
+Requires-Python: >=3.7
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: opencv-python
+Requires-Dist: openpyxl
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: requests
+Requires-Dist: Jinja2
+Requires-Dist: python-multipart
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

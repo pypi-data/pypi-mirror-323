@@ -1,0 +1,9 @@
+numpy
+pandas
+opencv-python
+openpyxl
+fastapi
+uvicorn
+requests
+Jinja2
+python-multipart
