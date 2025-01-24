@@ -1,0 +1,2 @@
+[console_scripts]
+cyaudit = cyaudit:main
