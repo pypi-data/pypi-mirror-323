@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: tamilan
+Version: 0.1.6
+Summary: This module is for Gemini Api Intraction, TwoSum operations and subsequence checks
+Home-page: https://github.com/sivasarans/2sum
+Author: Sivasaran
+Author-email: sivasaran354@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
