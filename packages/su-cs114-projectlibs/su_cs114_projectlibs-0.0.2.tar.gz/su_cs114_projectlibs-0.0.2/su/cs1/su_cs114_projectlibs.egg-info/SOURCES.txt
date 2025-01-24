@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+su/cs1/qrcodelib.py
+su/cs1/su_cs114_projectlibs.egg-info/PKG-INFO
+su/cs1/su_cs114_projectlibs.egg-info/SOURCES.txt
+su/cs1/su_cs114_projectlibs.egg-info/dependency_links.txt
+su/cs1/su_cs114_projectlibs.egg-info/not-zip-safe
+su/cs1/su_cs114_projectlibs.egg-info/requires.txt
+su/cs1/su_cs114_projectlibs.egg-info/top_level.txt

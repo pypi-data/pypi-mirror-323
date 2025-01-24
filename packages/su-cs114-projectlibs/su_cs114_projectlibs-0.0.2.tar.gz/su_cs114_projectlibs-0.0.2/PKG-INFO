@@ -1,0 +1,70 @@
+Metadata-Version: 2.2
+Name: su-cs114-projectlibs
+Version: 0.0.2
+Summary: Stellenbosch University Python 3 code for 2025 CS114 semester project.
+Author: Marcel Dunaiski
+Author-email: marceldunaiski@sun.ac.za
+License: GNU General Public License v3 (GPLv3)
+Platform: any
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: coveralls; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: platform
+Dynamic: provides-extra
+Dynamic: requires-python
+Dynamic: summary
+
+# SU project libs for Python 3 for CS113/4
+
+`su-cs114-projectlibs` is a support library for 2025 CS113/4 semester project conducted in computer science department at Stellenbosch University.
+
+## Installation
+
+This library requires a functioning Python 3 environment.
+
+### With pip
+For Python versions 3.8 - 3.10, due to compatability infeasibilities, the current safest option is to install most requirements manually before installing this package.
+
+```bash
+python3 -m pip --upgrade pip
+python3 -m pip --upgrade wheel
+python3 -m pip --upgrade setuptools
+```
+
+After the above commands execute sucessfully, install `su-cs114-projectlibs` simply with
+```bash
+python3 -m pip install --upgrade su-cs114-projectlibs
+```
+
+To test that you have installed the library correctly, run this command:
+```bash
+python3 -c 'from qrcodelib import get_format_information_bits; print(get_format_information_bits("00", "000"))'
+```
+This should print a list of integer of length 15.
+
+## Contributors
+
+- Marcel Dunaiski
+
+## License
+
+This project is licensed. See the [LICENSE](LICENSE) file for details.
