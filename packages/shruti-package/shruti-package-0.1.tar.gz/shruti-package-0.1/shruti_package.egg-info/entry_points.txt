@@ -1,0 +1,3 @@
+[console_scripts]
+run-my-script = shruti_package.script:run_script
+

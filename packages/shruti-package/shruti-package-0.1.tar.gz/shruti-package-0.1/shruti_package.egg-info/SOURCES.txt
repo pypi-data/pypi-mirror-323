@@ -1,0 +1,9 @@
+README.md
+setup.py
+shruti-package/__init__.py
+shruti-package/script.py
+shruti_package.egg-info/PKG-INFO
+shruti_package.egg-info/SOURCES.txt
+shruti_package.egg-info/dependency_links.txt
+shruti_package.egg-info/entry_points.txt
+shruti_package.egg-info/top_level.txt
