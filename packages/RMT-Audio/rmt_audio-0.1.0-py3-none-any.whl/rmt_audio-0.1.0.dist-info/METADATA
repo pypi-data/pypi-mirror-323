@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: RMT-Audio
+Version: 0.1.0
+Summary: Default template for PDM package
+Author-Email: khr0106 <kanghr990106@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# RMT-Audio
