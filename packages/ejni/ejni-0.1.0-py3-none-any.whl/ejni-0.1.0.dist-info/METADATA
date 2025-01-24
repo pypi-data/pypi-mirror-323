@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: ejni
+Version: 0.1.0
+Summary: Add your description here
+Author-email: kin9-0rz <kin9-0rz@outlook.com>
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: apkutils>=2.0.0
+Description-Content-Type: text/markdown
+
+# ejni
+
+将 Dex 中的 native 方法，全部提取出来，转成 JNI 函数签名，以便在 Ghidra 等工具进行自动化处理 JNI 函数。
+
+## 说明
+
+- 基于 [evilpan/jni_helper](https://github.com/evilpan/jni_helper/blob/master/extract_jni.py) 修改。
+- 移除 androguard 这种非常笨重的库，使用 apkutils 代替。
+- 其实，也利用第三方工具，如 dexdump、apktools、jadx 等。
