@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: DataFollowers-MBTI
+Version: 0.2.0
+Summary: Default template for PDM package
+Author-Email: vhzkclq0705 <vhzkclq0705@naver.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: typer>=0.15.1
+Description-Content-Type: text/markdown
+
+# MBTI
+
+[![LGTM](https://lgtm.lol/p/394)](https://lgtm.lol/i/394)
+
+### DEV
+```bash
+$ source .venv/bin/activate
+$ pdm add jupyterlab
+$ pdm add -dG test pytest
+
+$ git add .
+$ git commit -a
+$ git push
+
+View at:
+https://pypi.org/project/DataFollowers-MBTI/
+```
+
+### EDA
+- run jupyterlab
+```bash
+$ jupyter lab
+```
+
+### TEST
+```bash
+$ pytest
+$ pytest -s
+$ pytest --cov
+```
