@@ -1,0 +1,49 @@
+
+# G5 Library
+This library contains different functions to facilitate data preprocessing.
+
+## How to Install the Library
+Installing the library is very simple. In the terminal, run:
+
+```bash
+pip install libreria-G5==0.1.3
+```
+to make sure you install de last version
+> ** Note:**  
+> To use this library, keep in mind that the following libraries need to be installed: pandas, numpy, sklearn, matplotlib, seaborn
+
+## How to Use the Library
+The first step is to import the library:
+```bash
+from libreria_G5 import *
+```
+to import all functions, or
+```bash
+from libreria_G5 import Structure
+```
+to import only the model.
+
+To use the functions, we need to call the model, and we can assign it any name we want:
+```bash
+modelo = Structure()
+```
+> ** Note:**  
+> If no additional parameters are specified, the model will use its default values.
+#### Library Variables
+Structure( valor_limite = 65, metodo_object = 'moda', metodo_number = 'mean', quantile_min = 0.15, quantile_max = 0.75, mantener_columna = 'no')
+
+- limit_value: Defines the maximum percentage of missing values a column can have. If it exceeds this limit, the column will be removed. It can range between 0 and 100.
+- method_object: The method used for imputing missing values in object-type variables. It can be mode, forward fill (previous value), or backward fill (next value).
+- method_number: The method used for imputing missing values in numerical variables. Options include mode, mean, median, maximum, minimum, previous value, or next value.
+- quantile_min: Defines the minimum quantile, i.e., the lower limit for data considered too low. It can range between 0 and 1.
+- quantile_max: Defines the maximum quantile, i.e., the upper limit for data considered too high. It can range between 0 and 1.
+- keep_column: Determines whether, when using the encoder, the original column should be kept and a new one created or if the existing column should be replaced. It can be "yes" or "no".
+
+### Functions in the Library
+Once the model is set up, we can use its functions. The model includes various functions:
+
+- .processing(_df_): This function takes a dataset as input and returns a cleaned dataset. It removes columns with a higher percentage of missing values than the defined limit and uses the selected imputation methods to fill in missing values in the remaining columns.
+- .remove_outliers(_df, columns_): This function removes outliers. The limits are set based on quantile variables, and values outside these limits are eliminated.
+- .normalize(_df_): This function normalizes the data using a MinMaxScaler.
+- .string_to_number(_df_): Uses a LabelEncoder to convert object-type data into numerical data. If mantener_columna is set to "yes," a new column will be created with the original column name + '_encoded'. If set to "no," the existing column will be replaced.
+- .visual_analysis_of_numerical_variables(_df_): Generates a graph showing the distribution of each numerical column and a heatmap displaying the relationships between columns.
