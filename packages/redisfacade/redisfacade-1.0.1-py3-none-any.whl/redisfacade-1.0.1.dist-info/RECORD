@@ -1,0 +1,8 @@
+facade/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+facade/facade.py,sha256=Gg_h626U5rS3WZisLtDLbC9zLgjStH2blDQF8UiMaR4,3504
+facade/singleton.py,sha256=GsHigAWx_Rts-BX4k0UkCgW25EOC2XKjG6H4VeksV-0,1902
+redisfacade-1.0.1.dist-info/LICENSE,sha256=gv6XIZGrGekO4kCHP9DQbaRPYw_dT66BbG8uZYgtfL8,1077
+redisfacade-1.0.1.dist-info/METADATA,sha256=wzJNaa5FCm1Vke0dFVC2ZVYy8Mi7RMKFd_TuK7va9sU,3319
+redisfacade-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+redisfacade-1.0.1.dist-info/top_level.txt,sha256=tO-EfYTmaSl14umJbRbFNH47PdkGqFnh-05M2_nJQAk,7
+redisfacade-1.0.1.dist-info/RECORD,,
