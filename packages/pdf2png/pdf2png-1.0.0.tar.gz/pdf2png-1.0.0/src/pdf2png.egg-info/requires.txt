@@ -1,0 +1,14 @@
+click==8.1.8
+rich==13.9.4
+pypdf==5.1.0
+Wand==0.6.13
+
+[build]
+setuptools==75.8.0
+setuptools-scm==8.1.0
+build==1.2.2.post1
+twine==6.1.0
+
+[test]
+mypy==1.14.1
+ruff==0.9.3
