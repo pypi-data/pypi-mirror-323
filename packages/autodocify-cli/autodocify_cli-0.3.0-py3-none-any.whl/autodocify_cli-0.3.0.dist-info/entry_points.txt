@@ -1,0 +1,3 @@
+[console_scripts]
+autodocify=autodocify_cli.cli:app
+
