@@ -1,0 +1,15 @@
+pygments
+requests
+xmltodict
+
+[dev]
+pytest
+black
+flake8
+sphinx>=1.7
+pre-commit
+
+[style]
+matplotlib
+seaborn
+gdal
