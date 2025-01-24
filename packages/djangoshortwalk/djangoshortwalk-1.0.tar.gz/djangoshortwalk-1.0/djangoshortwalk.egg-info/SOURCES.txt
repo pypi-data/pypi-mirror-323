@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+dj_shortwalk/__init__.py
+dj_shortwalk/dj_shortwalk.py
+djangoshortwalk.egg-info/PKG-INFO
+djangoshortwalk.egg-info/SOURCES.txt
+djangoshortwalk.egg-info/dependency_links.txt
+djangoshortwalk.egg-info/entry_points.txt
+djangoshortwalk.egg-info/top_level.txt
