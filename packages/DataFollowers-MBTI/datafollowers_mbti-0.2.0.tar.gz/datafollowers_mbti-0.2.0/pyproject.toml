@@ -1,0 +1,27 @@
+[project]
+name = "DataFollowers-MBTI"
+version = "0.2.0"
+description = "Default template for PDM package"
+authors = [
+    { name = "vhzkclq0705", email = "vhzkclq0705@naver.com" },
+]
+dependencies = [
+    "typer>=0.15.1",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+mbti-check-type = "mbti.cli:entry_point"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
