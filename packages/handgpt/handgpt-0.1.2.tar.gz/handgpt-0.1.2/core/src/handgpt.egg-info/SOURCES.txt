@@ -1,0 +1,10 @@
+LICENSE
+README.md
+core/src/handgpt/__init__.py
+core/src/handgpt/config.py
+core/src/handgpt/handgpt.py
+core/src/handgpt.egg-info/PKG-INFO
+core/src/handgpt.egg-info/SOURCES.txt
+core/src/handgpt.egg-info/dependency_links.txt
+core/src/handgpt.egg-info/requires.txt
+core/src/handgpt.egg-info/top_level.txt
