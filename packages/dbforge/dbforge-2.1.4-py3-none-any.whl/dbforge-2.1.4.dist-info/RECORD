@@ -1,0 +1,10 @@
+dbforge/cli.py,sha256=iVyu1OZXH8FOC6zyagjZ6H4hL_ZGs1Z_ly-dRmszoDY,442
+dbforge/version.yaml,sha256=VutlCz5QB5PRtf74tDopvzjMzt3d9mAO8hjaYW9acb0,17
+dbforge/databases/commands/pg_cmds.py,sha256=Ln1YMSAQ2S9KsBHoSP7KJWTc3p-aULz7vlpaAUUTFJE,8416
+dbforge/databases/postgres/pg.py,sha256=CKIRjBPEWmWV7D1BR6o14EE0X2O1YG2_4UAHoiHXLys,15770
+dbforge/system/dbforge_docker.py,sha256=Y9KvXuC2MgVilWiYQefQ2qCjV1iS0cUxOop3mGdoh-0,10433
+dbforge/system/dbforge_help.py,sha256=JMLUVVsuKOIhHg3X6uw_piyTmIVyGqgmr862ctW5UIE,3001
+dbforge-2.1.4.dist-info/METADATA,sha256=h1ri-Vd1dhhMiUiH_faHLDzUOWvT5tBFaNqY3b1kp_E,502
+dbforge-2.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dbforge-2.1.4.dist-info/entry_points.txt,sha256=SfK6UZG2EhKt3ckHmzaFSclfE4Hl5KLQqR4JWgetBiQ,44
+dbforge-2.1.4.dist-info/RECORD,,
