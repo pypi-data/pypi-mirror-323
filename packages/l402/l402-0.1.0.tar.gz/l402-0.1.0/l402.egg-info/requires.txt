@@ -1,0 +1,7 @@
+fastcore
+fastlite
+
+[dev]
+claudette
+fastapi
+uvicorn
