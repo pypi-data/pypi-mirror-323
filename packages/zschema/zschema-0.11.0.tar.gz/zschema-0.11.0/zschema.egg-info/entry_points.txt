@@ -1,0 +1,2 @@
+[console_scripts]
+zschema = zschema.__main__:main

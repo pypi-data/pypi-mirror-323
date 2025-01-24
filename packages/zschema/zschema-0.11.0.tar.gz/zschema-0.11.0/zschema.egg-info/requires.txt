@@ -1,0 +1,7 @@
+future
+python-dateutil
+pytz
+six
+
+[tests]
+pytest

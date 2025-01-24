@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: zschema
+Version: 0.11.0
+Summary: A schema language for JSON documents that allows validation and compilation into various database engines
+Author: ZMap Team
+License: Apache License, Version 2.0
+Keywords: python,json,schema,bigquery,elasticsearch
+License-File: LICENSE
+Requires-Dist: future
+Requires-Dist: python-dateutil
+Requires-Dist: pytz
+Requires-Dist: six
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
