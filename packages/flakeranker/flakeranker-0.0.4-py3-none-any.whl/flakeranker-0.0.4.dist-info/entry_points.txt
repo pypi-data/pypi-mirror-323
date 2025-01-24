@@ -1,0 +1,3 @@
+[console_scripts]
+flakeranker=src.flakeranker.cli.main:cli
+
