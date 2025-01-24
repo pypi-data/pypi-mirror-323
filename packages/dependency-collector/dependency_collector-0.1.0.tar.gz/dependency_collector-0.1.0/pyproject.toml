@@ -1,0 +1,22 @@
+[project]
+name = "dependency-collector"
+version = "0.1.0"
+description = "Python software for local retrieval of project dependencies."
+readme = "README.md"
+authors = [
+    { name = "Simon Delmas", email = "delmas.simon@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "artifacts-keyring>=0.4.0",
+    "click>=8.1.8",
+    "keyring>=25.6.0",
+    "pip>=24.3.1",
+]
+
+[project.scripts]
+collect = "dependency_collector.cli:collect"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
