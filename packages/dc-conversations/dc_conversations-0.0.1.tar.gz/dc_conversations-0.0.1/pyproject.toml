@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dc-conversations"
+version = "0.0.1"
+authors = [
+    { name="adamo figueroa", email="adamo@dataclouder.com" },
+]
+description = "A library for managing AI conversations and character cards"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "fastapi>=0.68.0",
+]
+
+[project.urls]
+"Homepage" = "https://dataclouder.dev"
+"Bug Tracker" = "https://github.com/dataclouder/dc-conversations/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dc_conversations"] 

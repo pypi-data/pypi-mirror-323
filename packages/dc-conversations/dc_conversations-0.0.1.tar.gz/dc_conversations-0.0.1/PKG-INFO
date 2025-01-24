@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: dc-conversations
+Version: 0.0.1
+Summary: A library for managing AI conversations and character cards
+Project-URL: Homepage, https://dataclouder.dev
+Project-URL: Bug Tracker, https://github.com/dataclouder/dc-conversations/issues
+Author-email: adamo figueroa <adamo@dataclouder.com>
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: fastapi>=0.68.0
+Requires-Dist: pydantic>=2.0.0
+Description-Content-Type: text/markdown
+
+# DC Conversations
