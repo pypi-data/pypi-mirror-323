@@ -1,0 +1,3 @@
+[console_scripts]
+runbooks-aws = runbooks.aws:run_script
+runbooks-security = runbooks.security_baseline.run_script:main
