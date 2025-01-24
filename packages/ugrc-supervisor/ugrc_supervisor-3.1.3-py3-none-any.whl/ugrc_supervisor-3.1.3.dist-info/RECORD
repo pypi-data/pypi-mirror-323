@@ -1,0 +1,11 @@
+supervisor/__init__.py,sha256=B4MITO--shStCBupHssCmCHB-QZOeWGnscBRpqaZw9g,144
+supervisor/example.py,sha256=vTKBNkSNM8emKpeFK7RKhy6e_oJ1In82usDAL5UUG54,2539
+supervisor/message_handlers.py,sha256=BwP50mNAs2Yu-k1f4kckSPBnFXbgglGYxiDLLGAebgo,15843
+supervisor/models.py,sha256=_Nphr4BebW1kILXQz99n3zdWIVoyPcRERmEVwSDBMPA,4254
+supervisor/version.py,sha256=IMgU3ZPojVbVvCRZAQfEQHZbvIOUG8KxWIx5e_IoddY,114
+ugrc_supervisor-3.1.3.dist-info/LICENSE,sha256=jxvpvqK42axhZ3jBYDbWRArH69YTI2_nweOEt6HsaA4,1061
+ugrc_supervisor-3.1.3.dist-info/METADATA,sha256=s8-3QVdaO-uzt6vasgRLfH_mAtYnT2QVCuSLmVR2Q3E,1090
+ugrc_supervisor-3.1.3.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+ugrc_supervisor-3.1.3.dist-info/top_level.txt,sha256=QrimZwgGskzghujPtQnTLSEFYXAWSPHaOVaL8TQxjmE,11
+ugrc_supervisor-3.1.3.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ugrc_supervisor-3.1.3.dist-info/RECORD,,
