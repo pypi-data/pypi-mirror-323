@@ -1,0 +1,7 @@
+[console_scripts]
+jerreda = jerreda.cli:entry_point
+jerreda-cnt = jerreda.cli:entry_point_cnt
+jerreda-dict = jerreda.cli:entry_point_dict
+
+[gui_scripts]
+
