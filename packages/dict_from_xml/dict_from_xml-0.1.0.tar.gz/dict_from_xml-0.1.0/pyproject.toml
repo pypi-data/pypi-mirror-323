@@ -1,0 +1,17 @@
+[project]
+name = "dict_from_xml"
+version = "0.1.0"
+description = "This package converts xml files and xml strings to python dictionary objects."
+authors = [{ name = "kkerber", email = "thekkerber@gmail.com" }]
+license = { text = "[MIT]" }
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pytest (>=8.3.4,<9.0.0)"]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"

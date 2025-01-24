@@ -1,0 +1,67 @@
+Metadata-Version: 2.3
+Name: dict_from_xml
+Version: 0.1.0
+Summary: This package converts xml files and xml strings to python dictionary objects.
+License: [MIT]
+Author: kkerber
+Author-email: thekkerber@gmail.com
+Requires-Python: >=3.10
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pytest (>=8.3.4,<9.0.0)
+Description-Content-Type: text/markdown
+
+# xml_dict
+
+A Python package for converting XML documents and XML strings to dictionaries.
+
+## Installation
+
+```bash
+pip install xml_dict
+```
+
+## Usage
+
+### Basic Example
+
+```python
+from xml_dict import xfile, xstring
+
+# Convert XML file to dictionary
+xml_file = "/path/to/file.xml"
+result.dict = xfile(xml_file)
+
+# Convert XML string to dictionary
+xml_string = """
+<root>
+    <person>
+        <name>John</name>
+        <age>30</age>
+    </person>
+</root>
+"""
+result_dict = xstring(xml_string)
+
+## Main Functions
+
+### xstring(xml_string)
+Converts XML string to dictionary.
+
+- `xml_string`: XML string
+- Returns: Dictionary object representation of XML string
+
+### xfile(path)
+Converts XML in file to dictionary.
+
+- `path`: absolute or relative path to a xml file
+- Returns: Dictionary object representation of XML in file
+
+## License
+
+This project is licensed under the MIT License.
+
