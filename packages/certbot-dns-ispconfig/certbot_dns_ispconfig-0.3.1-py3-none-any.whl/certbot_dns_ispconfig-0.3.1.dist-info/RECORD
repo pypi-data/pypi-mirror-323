@@ -1,0 +1,7 @@
+certbot_dns_ispconfig/__init__.py,sha256=QtTbz0i7NQKW2W1yAjU-H81_-25lo70xKojWuW97z20,3271
+certbot_dns_ispconfig/dns_ispconfig.py,sha256=Gy44YQg_tyaBh_9aFmNfkonv8ViyqRcLnK1MxcLxJIE,10482
+certbot_dns_ispconfig/dns_ispconfig_test.py,sha256=kAPTSbh1ZTicx2AYmpxFyI-JHTtzHHP--bqO-bOD8Jo,5843
+certbot_dns_ispconfig-0.3.1.dist-info/LICENSE.txt,sha256=LMXecVrlqXbwhvukkwiAyeQhkUFz_IURG_9RTUdXEj8,10786
+certbot_dns_ispconfig-0.3.1.dist-info/METADATA,sha256=fg-BEk9fbkQjxYyl5Cn2jeUKY4lXaONwsOAZOSyTtfk,5792
+certbot_dns_ispconfig-0.3.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+certbot_dns_ispconfig-0.3.1.dist-info/RECORD,,
