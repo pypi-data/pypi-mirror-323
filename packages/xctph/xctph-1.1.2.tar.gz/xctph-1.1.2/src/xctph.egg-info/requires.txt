@@ -1,0 +1,6 @@
+numpy
+scipy
+h5py
+xmltodict
+setuptools
+fp_workflow

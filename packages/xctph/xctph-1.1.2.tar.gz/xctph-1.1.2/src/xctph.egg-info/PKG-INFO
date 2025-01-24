@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: xctph
+Version: 1.1.2
+Summary: Package for computing exciton phonon matrix elements.
+Author: Krishnaa Vadivel
+Author-email: krishnaa.vadivel@yale.edu
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: h5py
+Requires-Dist: xmltodict
+Requires-Dist: setuptools
+Requires-Dist: fp_workflow
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: requires-dist
+Dynamic: summary
+
+Package for computing exciton phonon matrix elements.
