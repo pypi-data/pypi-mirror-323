@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Household-Account
+Version: 0.1.0
+Summary: Save Money in Times of High Inflation
+Author-Email: heejin131 <journeyjean131@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Household-Account
+Save Money in Times of High Inflation
+
+# USE
+```bash
+
+$ Household-Account <Expense> <Amount> <Caregory>
+
+```
+
+
