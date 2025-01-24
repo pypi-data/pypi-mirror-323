@@ -1,0 +1,435 @@
+Metadata-Version: 2.2
+Name: runbooks
+Version: 0.2.2
+Summary: CloudOps Automation Toolkit for DevOps and SRE teams.
+Author-email: runbooks maintainers <nnthanh101@gmail.com>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright (c) 2025, Nhat-Thanh Nguyen <nnthanh101@gmail.com>
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Keywords: runbooks,automation,DevOps,SRE,CloudOps
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.32.3
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: fastapi>=0.115.6
+Requires-Dist: tabulate>=0.9.0
+Requires-Dist: diagrams>=0.24.1
+Requires-Dist: mkdocs
+Requires-Dist: mkdocs-material
+Requires-Dist: mkdocstrings
+Requires-Dist: mkdocstrings[python]
+Requires-Dist: mkdocs-drawio-exporter
+Requires-Dist: mkdocs-glightbox
+Requires-Dist: mkdocs-mermaid2-plugin
+Requires-Dist: mkdocs-rss-plugin
+Requires-Dist: pymdown-extensions
+Requires-Dist: pygments
+Requires-Dist: mkdocs-techdocs-core
+Requires-Dist: gunicorn>=23.0.0
+Requires-Dist: ipykernel>=6.29.5
+Requires-Dist: ipywidgets>=8.1.5
+Requires-Dist: jupyterlab>=4.3.4
+Requires-Dist: jupyterlab-git>=0.50.2
+Requires-Dist: azure-cli
+Requires-Dist: boto3>=1.35.90
+Requires-Dist: botocore>=1.35.95
+Requires-Dist: jmespath>=1.0.1
+Requires-Dist: python-dateutil>=2.9.0
+Requires-Dist: s3transfer>=0.10.4
+Requires-Dist: six>=1.17.0
+Requires-Dist: urllib3~=2.3.0
+Requires-Dist: openai>=1.58.1
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: pydantic-ai>=0.0.16
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: plotly>=5.24.1
+Requires-Dist: vizro>=0.1.30
+Requires-Dist: vizro-ai>=0.3.2
+Requires-Dist: runbooks>=0.2.2
+
+# 🔥 CloudOps Automation at Scale 🦅
+
+🌟 You can use [CloudOps Automation Runbooks](https://cloudops.oceansoft.io), built on Jupyter Notebooks, to quickly create SRE RunBooks for Runbook Automation and Cloud Infrastructure Management! 🌐
+
+> [!IMPORTANT]
+> **🏆 Mission**: Our mission is to simplify CloudOps Automation for DevOps and SRE teams by providing an extensive, community-driven repository of actions and runbooks that streamline day-to-day operations. 
+
+> [!NOTE]
+> **👁️ Vision**: Our vision is to be the 🥇 One-Stop Multi-Cloud Platform Engineering & Best Practices Solution for all CloudOps Automation needs, allowing DevOps and SRE teams to automate their workflows with ease, improve efficiency, and minimize toil.
+
+[![🐍 Runbooks PyPI version](https://img.shields.io/pypi/v/runbooks)](https://pypi.org/project/runbooks/) ![🦾 GitHub Container Registry](https://img.shields.io/github/v/tag/nnthanh101/runbooks:latest?label=GHCR%20Version&color=blue&logo=docker)
+
+
+<div align="left">
+  <a href="https://www.linkedin.com/in/nnthanh" target="blank"><img align="center" src="https://img.shields.io/badge/-nnthanh-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/nnthanh/" alt="Nhat-Thanh Nguyen" height="25" width="100" /></a>
+  <a href="https://github.com/nnthanh101/" target="blank"><img align="center" src="https://img.shields.io/github/followers/nnthanh101?label=Follow&style=social&link=https://github.com/nnthanh101/" alt="Thanh Nguyen" height="25" width="100" /></a>
+  <a href="https://www.facebook.com/groups/platformengineering" target="blank"><img align="center" src="https://img.shields.io/badge/Facebook-blue?style=flat-square&logo=facebook&logoColor=white&link=[https://www.linkedin.com/in/nnthanh/](https://www.facebook.com/groups/platformengineering)" alt="Nhat-Thanh Nguyen" height="25" width="100" /></a>  
+</div>
+
+---
+
+## 🛠️ Features
+
+* 🥉 ✅**Lightning-Fast Toolchain**: Powered by 📦 `uv` - Next-generation Python dependency and build management, 💅 `ruff` - Linting and formatting at blazing speed, and 🧪 pytest - Robust testing framework with coverage reports.
+* 🥈 ✅**Effortless CI/CD Pipelines**: 🛠️ Taskfile Automation - Say goodbye to manual SDLC repetitive tasks, 🐳 Containerized Workflows – 🛡️ Security-first practices and Multi-stage Wolfi-based Docker builds for scalable production-ready environments, and ⚙️ Auto-publish to `PyPI` and GitHub Container Registry (`GHCR`) with GitHub Actions.
+* 🥇 ☑️**CloudOps Automation and FinOps Toolkit** – Pre-configured hybrid-cloud workflows and seamlessly integrations (jupyterlab, mkdocs, boto3, moto) for managing cloud infrastructure 🌐.  
+
+| **Feature**              | **Toolchain**                            | **Purpose**                                        |
+|--------------------------|-------------------------------------|----------------------------------------------------|
+| 🛠️ Configuration         | `pyproject.toml`                 | Centralized configuration for dependencies, testing, and linting.  |
+| 🧹 Task Automation       | [`Taskfile`](https://taskfile.dev/) | Automates repetitive tasks like linting, testing, and publishing.  |
+| 📦 Python Dependencies   | [`uv`](https://docs.astral.sh/uv/)  | Lightning-fast dependency resolution, caching, and builds. |
+| 💅 Linting & Formatting  | [`ruff`](https://docs.astral.sh/ruff/) | Enforces code quality standards, auto-formatting, and import sorting.  |
+| 🧪 Testing Framework     | [`pytest`](https://docs.pytest.org/)  | Comprehensive unit tests, integration tests with coverage reporting.    |
+| 🐳 Docker Integration    | Dockerfile + [`DevContainer`](https://containers.dev/)  | Optimized wolfi-based multi-stage builds for CI/CD and local development environments. |
+| 🦾 CI/CD Pipelines       | [`GitHub Actions`](https://github.com/features/actions) | Automated builds, tests, and deployments to PyPI and GHCR. |
+| 📝 Security Compliance   | [`chainguard/wolfi-base`](https://hub.docker.com/r/chainguard/wolfi-base) + SBOM + Attestations | Ensures compliance, vulnerability scanning, and security transparency. |
+
+---
+
+### WIP
+
+- [ ] 📚 auto doc generation
+- [ ] **CLI Tools** – Typer simplifies automation for AWS resources.  
+- [ ] **Logging** – Loguru ensures structured logs for debugging. 
+- [x] 🐳 CI/CD Optimized Docker Image runs when a new *release* is created pushing to gh registry
+- [x] 🦾 GitHub actions:
+    - [x] auto publish to [`pypi`](https://pypi.org/) on push on `main`
+    - [ ] auto creating a new tag on push on `main`, sync versions
+    - [x] run `tests` and `lint` on `dev` and `main` when a PR is open
+
+## 🚀 Quick Start
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/nnthanh101/runbooks.git
+cd runbooks
+```
+
+### 2. Install Dependencies and Run CI/CD Pipelines
+
+```bash
+echo "Install Python dependencies using UV"
+task install
+
+echo "Run CI/CD pipeline tasks: clean, lint, format, test, and build"
+task ci
+
+echo "Publish the project package to PyPI"
+task publish
+```
+
+### 3. Run in DevContainer 🐳
+
+1. Open the project in **VSCode**.  
+2. Install the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.  
+3. **Reopen in Container**:  
+   **Command Palette `Ctrl+Shift+P` → Reopen in Container**.  
+
+---
+
+## Project Structure
+
+> 🛠 End-to-end Production-grade project structure for successful 💎 CloudOps Automation and Visual Analytics FinOps projects 🚀
+
+```
+cloudops-automation/
+├── .devcontainer/     ## Dev Container configurations
+│   └── Dockerfile     ## Container image build file
+├── .github/           ## CI/CD workflows
+│   ├── workflows/     ## GitHub Actions workflows
+│   └── templates/     ## Workflow templates
+├── .vscode/           ## IDE-specific configurations
+├── config/            ## Configuration files (YAML, JSON)
+├── data               🔍 Where all your raw and processed data files are stored.
+│   ├── external       <- Data from third-party sources.
+│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── processed      <- The final, canonical data sets for modeling.
+│   └── raw            <- The original, unprocessed, immutable data dump.
+│
+├── docs               📓 A default mkdocs project; see mkdocs.org for details
+│   ├── api/                 ## API documentation
+│   ├── architecture/        ## Architecture diagrams
+│   ├── tutorials/           ## Tutorials and guides
+│   ├── getting-started.md   ## Quickstart guide
+│   └── index.md             ## Overview documentation
+│
+├── logs/                    ## Log files for debugging
+|
+├── models             🧠 Store your trained and serialized models for easy access and versioning.
+│
+├── notebooks          💻 Jupyter notebooks for experiments and visualization.
+│   ├── data_exploration.ipynb
+│   ├── data_preprocessing.ipynb
+│   ├── model_training.ipynb
+│   └── model_evaluation.ipynb
+│
+├── pyproject.toml     <- Project configuration file with package metadata for 
+│                         runbooks and configuration for tools like black
+│
+├── src/                            ## 🧩 Source code for use in this project.
+│   ├── runbooks/                   ## Main module for CloudOps Runbooks automation
+│   │   ├── __init__.py             ## Package initializer
+│   │   ├── calculator.py           ## [Python101] Calculator
+│   │   ├── config.py
+│   │   ├── exceptions.py
+│   │   ├── utils.py                ## Utility scripts (logging, configs)
+│   │   └── cleanup.py              ## Cleanup automation runbook
+│   ├── main.py     
+├── test/                           ## Unit and integration tests
+│   ├── conftest.py
+│   ├── __init__.py
+│   ├── test_calculator.py          ## [Python101] Test cases for calculator
+│   ├── test_utils.py               ## Test cases for utils
+│   └── test_exceptions.py         
+├── templates/                      ## Terraform and CloudFormation templates
+├── tools/                          ## Developer tools and scripts
+├── .dockerignore                   ## Docker ignore file
+├── .env                            ## Environment variables
+├── .gitignore                      ## Git ignore file
+├── .python-version                 ## Python version management
+├── .gitignore
+├── mkdocs.yml                      # Documentation generator configuration
+├── README.md          🤝 Explain your project and its structure for better collaboration.
+├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+│
+├── reports            📊 Generated analysis (reports, charts, and plots) as HTML, PDF, LaTeX.
+│   └── figures        <- Generated graphics and figures to be used in reporting
+│
+├── requirements.txt   🛠 The requirements file for reproducing the analysis environment, for easy environment setup.
+└── Taskfile           <- Taskfile with convenience commands like `task data` or `task train`
+
+```
+
+### [Github Container Registry to store and manage Docker and OCI images](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
+
+1. Check if the image exists in GitHub Packages:
+
+```
+docker pull ghcr.io/nnthanh101/runbooks:latest
+```
+
+2. If the image doesn't exist, build and push it:
+
+```
+docker build -t ghcr.io/nnthanh101/runbooks:latest .
+docker login ghcr.io -u nnthanh -p GH_TOKEN
+docker push ghcr.io/nnthanh101/runbooks:latest
+```
+
+3. Inspect
+
+```
+docker inspect ghcr.io/nnthanh101/runbooks:latest
+```
