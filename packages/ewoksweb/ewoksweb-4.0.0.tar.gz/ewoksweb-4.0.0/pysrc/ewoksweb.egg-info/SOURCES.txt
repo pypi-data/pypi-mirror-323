@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+pyproject.toml
+pysrc/ewoksweb.egg-info/PKG-INFO
+pysrc/ewoksweb.egg-info/SOURCES.txt
+pysrc/ewoksweb.egg-info/dependency_links.txt
+pysrc/ewoksweb.egg-info/entry_points.txt
+pysrc/ewoksweb.egg-info/requires.txt
+pysrc/ewoksweb.egg-info/top_level.txt
