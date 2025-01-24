@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: lazy-toolkit
+Version: 0.0.3
+Summary: A small example package
+Author-email: Example Author <author@example.com>
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytz
+Requires-Dist: aiohttp
+Requires-Dist: jsonpickle
+Requires-Dist: requests
+Requires-Dist: pillow
