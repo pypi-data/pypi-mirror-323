@@ -1,0 +1,28 @@
+[project]
+name = "plankapy"
+version = "2.0.1"
+
+# Contributors can add their info here
+authors = [
+  { name="Hayden Welch", email="hwelch@finelines-engineering.com" },
+]
+
+description = "A Python interface for Plankanban"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["plankapy*"]
+
+[project.urls]
+Homepage = "https://github.com/hwelch-fle/plankapy"
+Documentation = "https://hwelch-fle.github.io/plankapy/plankapy.html"
+Issues = "https://github.com/hwelch-fle/plankapy/issues"
+Discussions = "https://github.com/hwelch-fle/plankapy/discussions"
