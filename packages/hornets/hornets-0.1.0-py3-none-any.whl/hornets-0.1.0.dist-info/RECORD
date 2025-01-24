@@ -1,0 +1,7 @@
+hornets/__init__.py,sha256=l8QlKuXqCy7txfwNfMTC6E5Ok7YK8MIUV2SfM1NlLb4,228
+hornets/dataset.py,sha256=5LYWPL_SYq9S6aTiv5sK3YtBMN0HVfWB7jSb_b1K2Dc,2018
+hornets/model.py,sha256=umwS_BL_bS93EIrGCR9ehRmCT6kqiVI_6nE6CWWcTIo,4130
+hornets/sklearn_classifier.py,sha256=OiJCVcigAWTu5J9gRnwmHSkuKpElAKRYV4dENIcK0Ik,12315
+hornets-0.1.0.dist-info/METADATA,sha256=YmE_oRfcsM7btyAWk6wUpmsfx8vmtt4PZwgIFrTiYYU,884
+hornets-0.1.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+hornets-0.1.0.dist-info/RECORD,,
