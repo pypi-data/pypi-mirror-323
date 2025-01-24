@@ -1,0 +1,3 @@
+[console_scripts]
+pymodins = pymodins.__main__:main
+pymodins-creator = pymodins.installer:creator

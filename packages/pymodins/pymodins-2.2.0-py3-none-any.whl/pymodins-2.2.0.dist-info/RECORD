@@ -1,0 +1,11 @@
+pymodins/__init__.py,sha256=pGjEN6fBYafuxTcAYxakoT5PWq9T7Lj4x2yXp4M5ATA,1378
+pymodins/__main__.py,sha256=rg56O0wvQolpoBMpjCLF496Iv2dcO98qqu1tc-CunL8,461
+pymodins/installer.py,sha256=dyYCRNQmatKD-Ql7gx1pG8qgLYgsSTNlnF4aylx8ibM,92917
+pymodins/linux.py,sha256=XuA9Xur6txQFizhTbjQSDp3UkMwC2TlYn0FjKBzUZDM,26750
+pymodins/testing.py,sha256=D5FDl3R8GzHl_-vtxO9qDWW6EcCGpkVT3BLFesCo3fI,24138
+pymodins-2.2.0.dist-info/LICENSE,sha256=RgQujcIVN5tzjAwmHXK65S4YuShNx2QdNqWYP6Qi7TI,1133
+pymodins-2.2.0.dist-info/METADATA,sha256=ZAr4dA6pDmnYgoSIqQl9EqToK1c4q4k1mH8sN5LUA7Q,6052
+pymodins-2.2.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+pymodins-2.2.0.dist-info/entry_points.txt,sha256=ifIemsBI05oYKwW7bfJUfhkXZfzvlvsCmsWoQQsAlBU,98
+pymodins-2.2.0.dist-info/top_level.txt,sha256=AYEZiqp2eVTFgYCXGYUuye7r_aIUOKskr89VAV2nqYk,9
+pymodins-2.2.0.dist-info/RECORD,,
