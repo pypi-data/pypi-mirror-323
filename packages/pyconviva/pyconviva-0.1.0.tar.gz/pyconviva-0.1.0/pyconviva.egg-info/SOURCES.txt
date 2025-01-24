@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+pyconviva/__init__.py
+pyconviva/pyconviva.py
+pyconviva.egg-info/PKG-INFO
+pyconviva.egg-info/SOURCES.txt
+pyconviva.egg-info/dependency_links.txt
+pyconviva.egg-info/requires.txt
+pyconviva.egg-info/top_level.txt
+tests/test_pyconviva.py
