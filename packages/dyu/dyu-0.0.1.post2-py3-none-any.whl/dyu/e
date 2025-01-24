@@ -1,0 +1,20 @@
+2024-01-01 open Income:USD:Veevx INR
+2024-01-01 open Assets:INR:Cash:IDFC:Current INR
+2024-01-01 open Assets:INR:ExchangeGain INR
+2024-01-01 open Assets:INR:GST:ITC:CGST INR
+2024-01-01 open Assets:INR:GST:ITC:SGST INR
+2024-01-01 open Expense:USD:Commission  INR
+
+2024-03-01 * "Veevx Txn" " Income for April"
+	Income:USD:Veevx -5 USD @ 83.12 INR
+	Assets:INR:Cash:IDFC:Current 340.0
+	Assets:INR:ExchangeGain
+	Assets:INR:GST:ITC:CGST     20.0 INR
+	Assets:INR:GST:ITC:SGST     20.0 INR
+balance
+2024-03-03 * "Veevx commission" "No free payments "
+	Assets:INR:Cash:IDFC:Current 40.0
+        Expense:USD:Commission 1 USD @85.1 INR
+	Assets:INR:ExchangeGain
+	Assets:INR:GST:ITC:CGST     2.0 INR
+	Assets:INR:GST:ITC:SGST     2.0 INR
