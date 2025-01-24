@@ -1,0 +1,7 @@
+release-date = "2025-01-24"
+
+[[entries]]
+id = "cf9d8ba9-a543-421f-87a4-867f14c1a696"
+type = "breaking change"
+description = "Fix finalize hook typing and interface, it actually shares all the fields with the sync request/response in addition to the finalizing and finalized field"
+author = "@NiklasRosenstein"

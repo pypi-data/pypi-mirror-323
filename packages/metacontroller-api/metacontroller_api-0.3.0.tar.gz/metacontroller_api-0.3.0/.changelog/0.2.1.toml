@@ -1,0 +1,7 @@
+release-date = "2025-01-23"
+
+[[entries]]
+id = "1cf62f0c-11ad-44a5-8a8c-098a35828012"
+type = "fix"
+description = "Fixed passing `load_dotenv` parameter to `Flask.run()` method"
+author = "@NiklasRosenstein"

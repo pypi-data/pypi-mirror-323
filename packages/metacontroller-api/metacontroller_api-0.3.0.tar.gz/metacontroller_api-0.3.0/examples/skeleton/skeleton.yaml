@@ -1,0 +1,27 @@
+apiVersion: metacontroller.k8s.io/v1alpha1
+kind: DecoratorController
+metadata:
+  name: my-controller
+spec:
+  resources:
+    - apiVersion: apps/v1
+      resource: statefulsets
+      annotationSelector:
+        matchExpressions:
+          - { key: my-custom-label, operator: Exists }
+  attachments:
+    - apiVersion: v1
+      resource: services
+  hooks:
+    customize:
+      webhook:
+        url: http://mycontroller.mynamespace/customize
+        timeout: 10s
+    sync:
+      webhook:
+        url: http://mycontroller.mynamespace/sync
+        timeout: 10s
+    finalize:
+      webhook:
+        url: http://mycontroller.mynamespace/finalize
+        timeout: 10s
