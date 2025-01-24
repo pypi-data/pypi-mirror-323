@@ -1,0 +1,10 @@
+LICENSE
+setup.cfg
+setup.py
+GetInformationUserID/GetInformationUserID.py
+GetInformationUserID/__init__.py
+GetInformationUserID.egg-info/PKG-INFO
+GetInformationUserID.egg-info/SOURCES.txt
+GetInformationUserID.egg-info/dependency_links.txt
+GetInformationUserID.egg-info/requires.txt
+GetInformationUserID.egg-info/top_level.txt
