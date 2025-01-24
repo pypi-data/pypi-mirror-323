@@ -1,0 +1,28 @@
+[project]
+name = "wminhyuk-eda"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    { name = "<wminhyuk>", email = "<seoseo1998@gmail.com>" },
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/wminhyuk/wminhyuk-eda"
+Issues = "https://github.com/wminhyuk/wminhyuk-eda/issues"
+
+[project.scripts]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
