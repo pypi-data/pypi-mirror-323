@@ -1,0 +1,6 @@
+[console_scripts]
+cob-eda = cob_eda.cli:entry_point
+cob-eda-akc = cob_eda.cli:entry_point_akc
+
+[gui_scripts]
+
