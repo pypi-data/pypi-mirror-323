@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: CytoBulk
+Version: 0.1.9
+Summary: Integrating transcriptional data to decipher the tumor microenvironment with the graph frequency domain model
+Home-page: https://github.com/kristaxying/CytoBulk
+Author: Xueying WANG
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: anndata >=0.10.0
+Requires-Dist: cellpose >=3.0.10
+Requires-Dist: imageio
+Requires-Dist: matplotlib
+Requires-Dist: numpy >=1.23.0
+Requires-Dist: openslide-python
+Requires-Dist: ortools ==9.3.10497
+Requires-Dist: pandas >=2.2.0
+Requires-Dist: Pillow
+Requires-Dist: POT ==0.9.5
+Requires-Dist: rpy2 >=3.5.0
+Requires-Dist: scanpy
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: torch >2.1.0
+Requires-Dist: torchvision
+Requires-Dist: tqdm
+Requires-Dist: requests
+Requires-Dist: openslide-bin
+Requires-Dist: scikit-image
+Requires-Dist: igraph
+Requires-Dist: leidenalg
+
+# CytoBulk
+The algorithm for mapping bulk data to spatial HE image.
+
+
+## Usage
+
+For testing the CytoBulk class, you may refer the test.py file.
+- CytoBulk is the major class which contains the full framework.
+- graph_deconv offer the function of deconvolution and mapping sc to bulk file.
+- image_prediction could predict the cell type and expression from HE image.
+- spatial_mapping use spot data and mapped sc data to reconstruct the spot data at single cell resolution. Then will refine the single cell coordinates based on HE cell segmentation results.
+- utils give the basic functions.
+
+- to check the doc, run
+```bash
+pip install mkdocs mkdocs-material
+mkdocs serve
+```
+
+## 
+
+
+
+
+### Maintainer
+WANG Xueying xywang85-c@my.cityu.edu.hk
+
+WANG Yian yianwang5-c@my.cityu.edu.hk
