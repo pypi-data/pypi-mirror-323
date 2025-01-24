@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: owl_ab_test
+Version: 0.1.5
+Summary: A Python package for A/B testing statistical analysis
+Home-page: https://github.com/yourusername/owl_ab_test
+Author: owl_ab_test
+Author-email: Anika Ranginani <planet.anika@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/anika-academia/owl_ab_test
+Project-URL: Bug Tracker, https://github.com/anika-academia/owl_ab_test/issues
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# owl_ab_test
+
+A Python package for A/B testing statistical analysis. This package provides tools for analyzing the results of A/B tests with a focus on proportion testing.
+
+## Installation
+

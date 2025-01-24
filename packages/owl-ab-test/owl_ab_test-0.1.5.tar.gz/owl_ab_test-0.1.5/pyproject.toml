@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "owl_ab_test"
+version = "0.1.5"
+authors = [
+  { name = "Anika Ranginani", email = "planet.anika@gmail.com" },
+]
+description = "A Python package for A/B testing statistical analysis"
+readme = "README.md"
+requires-python = ">=3.9.2"
+dependencies = [
+]
+license = { text = "MIT" }
+
+[tool.setuptools]
+license-files = ["LICENSE"]  # Corrected, see explanation below
+
+[project.urls]
+"Homepage" = "https://github.com/anika-academia/owl_ab_test"
+"Bug Tracker" = "https://github.com/anika-academia/owl_ab_test/issues"
