@@ -1,0 +1,33 @@
+Metadata-Version: 2.2
+Name: embedding-utils
+Version: 0.1.3
+Summary: A library for text embeddings with caching.
+Author-email: Daniel Ariza <danielarizae@gmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: <3.12,>=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: torch<3.0,>=2.0
+Requires-Dist: sentence-transformers<4.0,>=2.2
+Requires-Dist: device-selector>=0.1.0
+Provides-Extra: test
+Requires-Dist: pytest>=7.0; extra == "test"
+
+# embedding-utils
+
+A lightweight Python library providing a convenient wrapper around [Sentence Transformers](https://www.sbert.net/) for generating text embeddings with caching. Perfect for projects that need repeated embeddings of the same texts without re-computation, or that want a straightforward API for embedding-based similarity.
+
+## Features
+
+- **Easy Embedding**: Encode batches of texts into vector embeddings with a single method.
+- **Built-in Caching**: Prevents re-computation for texts previously embedded; saves and loads from disk.
+- **Device Management**: Optionally integrates with [device-selector](https://github.com/darizae/device-selector) or falls back to CPU/GPU detection.
+- **Cosine Similarity**: Utility method to compute similarity between two embedding vectors.
+
+## Installation
+
+```bash
+pip install embedding-utils==0.1.3
