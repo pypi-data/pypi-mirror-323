@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+deeply_learnable_package/__init__.py
+deeply_learnable_package/classification.py
+deeply_learnable_package/images.py
+deeply_learnable_package/regression.py
+deeply_learnable_package.egg-info/PKG-INFO
+deeply_learnable_package.egg-info/SOURCES.txt
+deeply_learnable_package.egg-info/dependency_links.txt
+deeply_learnable_package.egg-info/requires.txt
+deeply_learnable_package.egg-info/top_level.txt
