@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: cocotbext-dvi
+Version: 0.2.0
+Summary: DVI modules for cocotb
+Home-page: https://github.com/daxzio/cocotbext-dvi
+Download-URL: https://github.com/daxzio/cocotbext-dvi/tarball/master
+Author: Dave Keeshan
+Author-email: dkeeshan@daxzio.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/daxzio/cocotbext-dvi/issues
+Project-URL: Source Code, https://github.com/daxzio/cocotbext-dvi
+Keywords: dvi,cocotb
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: cocotb
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+License-File: LICENSE
+
+# DVI and RGB interface modules for Cocotb
+
+GitHub repository: https://github.com/daxzio/cocotbext-dvi
+
+## Introduction
+
+DVI and RGB simulation models for [cocotb](https://github.com/cocotb/cocotb).
+
+## Installation
+
+Installation from git (latest development version, potentially unstable):
+
+    $ pip install https://github.com/daxzio/cocotbext-dvi/archive/master.zip
+
+Installation for active development:
+
+    $ git clone https://github.com/daxzio/cocotbext-dvi
+    $ pip install -e cocotbext-dvi
+
+## Documentation and usage examples
+
+See the `tests` directory for complete testbenches using these modules.
+
+        image_file = "/home/dkeeshan/projects/cocotbext-dvi/tests/images/160x120.bmp"
+        self.dvi_in = DVIDriver(dut, image_file)
+    def __init__(self, dut, image_file=None, dvi_prefix="tmds_in", clk_freq=25.0):
+
+
+        image_file = "/home/dkeeshan/projects/cocotbext-dvi/tests/images/160x120.bmp"
+        self.dvi_out = DVISink(dut, image_file)
+    def __init__(self, dut, image_file=None, dvi_prefix="tmds_out"):
+
+    def __init__(self, clk, image_file=None, vsync=None, hsync=None, data_valid=None, data0=None, data1=None, data2=None, logging_enabled=True):
