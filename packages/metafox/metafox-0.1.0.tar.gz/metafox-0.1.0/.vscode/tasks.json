@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "transpile",
+            "type": "shell",
+            "command": "sass ./src/mnemosyne/index.scss:./dev/profile/chrome/userChrome.css",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Transpile SASS theme to CSS."
+        },
+    ]
+}
