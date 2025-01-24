@@ -1,0 +1,9 @@
+README.md
+setup.py
+fantel_package/__init__.py
+fantel_package/script.py
+fantel_package.egg-info/PKG-INFO
+fantel_package.egg-info/SOURCES.txt
+fantel_package.egg-info/dependency_links.txt
+fantel_package.egg-info/entry_points.txt
+fantel_package.egg-info/top_level.txt

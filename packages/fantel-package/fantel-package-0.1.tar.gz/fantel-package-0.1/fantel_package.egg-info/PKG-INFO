@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: fantel-package
+Version: 0.1
+Summary: A brief description of your package
+Home-page: UNKNOWN
+Author: Your Name
+Author-email: your.email@example.com
+License: UNKNOWN
+Description: # My Package
+        
+        This package does XYZ.
+        
+        ## Installation
+        
+        You can install this package using pip:
+        
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
