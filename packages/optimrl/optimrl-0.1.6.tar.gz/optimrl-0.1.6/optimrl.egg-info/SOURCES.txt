@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+versioneer.py
+optimrl/__init__.py
+optimrl/_version.py
+optimrl/core.py
+optimrl.egg-info/PKG-INFO
+optimrl.egg-info/SOURCES.txt
+optimrl.egg-info/dependency_links.txt
+optimrl.egg-info/requires.txt
+optimrl.egg-info/top_level.txt
+optimrl/c_src/grpo.c
+optimrl/c_src/grpo.h
+tests/test_grpo.py
