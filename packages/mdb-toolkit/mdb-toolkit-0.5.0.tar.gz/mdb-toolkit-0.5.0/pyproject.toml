@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mdb-toolkit"
+version = "0.5.0"
+description = "Custom MongoDB client with vector search capabilities, embeddings management, and more."
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+authors = [
+  { name = "Fabian Valle", email = "oblivio.company@gmail.com" }
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+keywords = ["mongodb", "vector search", "embeddings", "pymongo", "custom client"]
+
+dependencies = [
+  "pymongo>=3.11",
+]
+
+[project.urls]
+homepage = "https://github.com/ranfysvalle02/mdb_toolkit"
+issue_tracker = "https://github.com/ranfysvalle02/mdb_toolkit/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
