@@ -1,0 +1,2 @@
+[jac]
+splice_orc = jac_splice_orc.plugin.splice_plugin:SpliceOrcPlugin
