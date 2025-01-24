@@ -1,0 +1,69 @@
+Metadata-Version: 2.2
+Name: ksaa
+Version: 2025.1.24
+Summary: Kotones Auto Assistant
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: opencv-python==4.10.0.84
+Requires-Dist: rapidocr_onnxruntime==1.4.3
+Requires-Dist: av==14.0.1
+Requires-Dist: scikit-image==0.25.0
+Requires-Dist: thefuzz==0.22.1
+Requires-Dist: adbutils==2.8.0
+Requires-Dist: fastapi==0.115.6
+Requires-Dist: uvicorn==0.34.0
+Requires-Dist: python-multipart==0.0.20
+Requires-Dist: websockets==14.1
+Requires-Dist: numpy==2.2.1
+Requires-Dist: psutil==6.1.1
+Requires-Dist: gradio==5.12.0
+Requires-Dist: pydantic==2.10.4
+Requires-Dist: typing-extensions==4.12.2
+
+# Kotone's Auto Assistant 琴音小助手
+## 功能
+* 自动日常，包括
+    * 领取礼物（邮件）
+    * 领取活动费
+    * 领取工作奖励并自动重新安排工作
+    * 自动竞赛挑战
+* 低配版自动培育（目前仅限 Ruglar 模式）
+
+## 安装&使用
+对模拟器的要求：
+* 分辨率：目前必须是 1280x720
+* 系统版本：Android 10+（Q，API 29），这是游戏的要求
+
+
+TODO
+
+## 开发
+> [!NOTE]
+> 建议使用 VSCode 进行开发。
+
+首先安装 [just](https://github.com/casey/just#packages)，然后：
+```bash
+git clone https://github.com/XcantloadX/KotonesAutoAssistant.git
+cd KotonesAutoAssistant
+just env
+```
+然后打开 VSCode 设置，搜索“SupportRestructured Text”并勾选。
+
+### 打包
+```bash
+just package <版本号>
+```
+
+### 截图
+建议使用 [XnView MP](https://www.xnview.com/en/xnviewmp/) 进行截图裁剪工作。
+
+XnView MP 可以方便的完成“打开图片 → 选区 → 裁剪图片 → 另存选取为文件”这一操作。
+只需要提前设置好右键菜单：
+![XnView MP 设置1](./images/xnview_setup1.png)
+
+## 清单
+- [ ] 提高课程/考试中检测推荐卡的准确率
+- [ ] 微调 OCR 模型。目前 OCR 识别结果不太准确
+- [ ] 支持多分辨率
+- [ ] 尝试支持汉化版
+- [ ] 截图：AI 辅助自动裁剪 + 命名文件
