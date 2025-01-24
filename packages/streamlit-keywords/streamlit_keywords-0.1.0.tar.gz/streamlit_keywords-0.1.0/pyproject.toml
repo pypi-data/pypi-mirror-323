@@ -1,0 +1,60 @@
+# pyproject.toml
+
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streamlit-keywords"
+version = "0.1.0"
+description = "A Streamlit custom component that provides enhanced usage over standard streamlit.multiselect. Users can enter free form text which will appear as separate keyword chips."
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [
+    { name = "Tyler House", email = "26489166+tahouse@users.noreply.github.com" },
+]
+license =  {file = "LICENSE"}
+requires-python = ">=3.7"
+keywords = [
+    "streamlit",
+    "component",
+    "multiselect",
+    "input",
+    "keywords",
+    "chips",
+    "material ui",
+    "tags",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Topic :: Desktop Environment",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Software Development :: User Interfaces",
+]
+urls = {"Homepage" = "https://github.com/tahouse/streamlit-keywords","Documentation" = "https://github.com/tahouse/streamlit-keywords/blob/main/README.md","Issue Tracker" = "https://github.com/tahouse/streamlit-keywords/issues"}
+
+dependencies = [
+    "streamlit>=0.63",
+]
+
+[project.optional-dependencies]
+devel = [
+    "wheel",
+    "setuptools==69.0.3",
+    "pytest==7.4.0",
+    "twine~=5.1",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["streamlit_keywords"]
