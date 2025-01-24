@@ -1,0 +1,2 @@
+[console_scripts]
+dj = dj_shortwalk.dj_shortwalk:main
