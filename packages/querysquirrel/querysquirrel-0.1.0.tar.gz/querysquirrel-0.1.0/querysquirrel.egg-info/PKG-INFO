@@ -1,0 +1,121 @@
+Metadata-Version: 2.2
+Name: querysquirrel
+Version: 0.1.0
+Summary: A library for building and testing NLP models with PyTorch and Transformers
+Home-page: https://github.com/sarahlawlis/esci-shopping-queries
+Author: Will Armstrong, Thomas Burns. Caroline Cordes, Sarah Lawlis
+Author-email: wma002@uark.edu
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=1.9.0
+Requires-Dist: transformers>=4.12.0
+Requires-Dist: sentence-transformers>=2.2.2
+Requires-Dist: scikit-learn>=0.24.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: matplotlib>=3.4.3
+Requires-Dist: seaborn>=0.11.2
+Requires-Dist: dask[dataframe]>=2021.10.0
+Requires-Dist: pyarrow>=5.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# SearchGenius
+SearchGenius is a Python library designed for building and testing NLP models using PyTorch and Transformers.
+
+# Features
+Implements deep learning models like FullyConnected and MLPsoftmax.
+
+Provides utilities for embedding generation, dataset handling, and model evaluation.
+
+Compatible with modern NLP frameworks like HuggingFace's Transformers.
+
+# Installation
+To install SearchGenius on your local machine, follow these steps:
+
+1. Install from PyPI
+
+Run the following command to install SearchGenius via pip: pip install searchgenius
+
+# Usage
+Once installed, you can import SearchGenius in your Python projects like this:
+
+from searchgenius import myfunctions
+
+# Development and Testing
+Development and Testing
+
+To set up the library locally for development:
+
+1. Clone the Repository
+
+git clone https://github.com/yourusername/searchgenius.git
+cd searchgenius
+
+2. Set Up a Virtual Environment
+
+python -m venv venv
+source venv/bin/activate  # For macOS/Linux
+venv\Scripts\activate     # For Windows
+
+3. Install Dependencies
+
+pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt
+
+4. Build and Test Locally
+
+Build the Package
+
+python setup.py sdist bdist_wheel
+
+Test the Package
+
+Run the following test file:
+
+python tests/test_myfunctions.py pytest
+
+Expected Output:
+
+Testing FullyConnected...
+FullyConnected passed.
+Testing MLPsoftmax...
+MLPsoftmax passed.
+Testing ESCIDataset...
+ESCIDataset passed.
+Testing training loop...
+Training loop passed.
+Testing evaluation loop...
+Accuracy: 0.4
+Evaluation loop passed.
+
+# Uploading to PyPI
+
+1. Ensure Your .pypirc File is Set Up
+
+Create or update your ~/.pypirc file with the following content:
+
+[pypi]
+username = __token__
+password = pypi-<your-api-token>
+
+2. Use Twine to Upload
+
+Run the following command from your package directory:
+
+twine upload dist/*
+
+If successful, your package will be live on PyPI. You can find it at:
+
+https://pypi.org/project/searchgenius/
+
+# Key Commands
+pip install searchgenius 
+
+python test_myfunctions.py pytest
