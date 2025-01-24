@@ -1,0 +1,9 @@
+README.md
+setup.py
+fantailp_package/__init__.py
+fantailp_package/script.py
+fantailp_package.egg-info/PKG-INFO
+fantailp_package.egg-info/SOURCES.txt
+fantailp_package.egg-info/dependency_links.txt
+fantailp_package.egg-info/entry_points.txt
+fantailp_package.egg-info/top_level.txt
