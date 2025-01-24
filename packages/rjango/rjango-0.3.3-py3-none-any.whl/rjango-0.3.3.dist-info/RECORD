@@ -1,0 +1,17 @@
+rjango/__init__.py,sha256=t-wafhnA1AMVwPUVg1Bh8mAJcADoi1B61rEWXSt2Cag,202
+rjango/core/__init__.py,sha256=t-wafhnA1AMVwPUVg1Bh8mAJcADoi1B61rEWXSt2Cag,202
+rjango/core/apps.py,sha256=kbfNc-xznnmX1-CYnP4japxuvCRKd8tYbRnJZw1cMIk,385
+rjango/core/commands/__init__.py,sha256=t-wafhnA1AMVwPUVg1Bh8mAJcADoi1B61rEWXSt2Cag,202
+rjango/core/commands/inspectdb.py,sha256=pSekcv6Abjp0RA3CEIQd6LYptRkWWkY9T0bhC7cEDUg,14416
+rjango/core/commands/sqlmigrate.py,sha256=SQfurypwMC-BNWvnCEkUk4iiLmFrgpLRCap_njU2nOY,2803
+rjango/core/decorators.py,sha256=BWhx7B69ZXsVeFn8ap7KqDic1kyd1kXW6Mi7j-ALAJw,601
+rjango/core/schema.py,sha256=YjP40z7EuwB9ID2HM8uI7R0TOSSTmQg09WTJwqC36GY,1962
+rjango/core/settings.py,sha256=mZWh1C19z4rrUWHsB_jOyQ577sql7elON-VTrv_UUd4,747
+rjango/core/setup.py,sha256=w_dwyCLrVvs0Zs3wRphOzU9VioiH8RSKiEeNnQPQNwM,389
+rjango/main.py,sha256=aKKBbmsS55KGF9Nq__4KbsPLcpzrKwtmpaxnGVjiBAE,3008
+rjango/utils/__init__.py,sha256=vGx-3n9yMPXT6E0d75mXelmH6bu7hr0J2sb-3PzsoZA,260
+rjango/utils/common.py,sha256=yejuMU9DqMUIOvvkOnQZofbtSP2hsBNp_UDk8Yx0iUg,653
+rjango-0.3.3.dist-info/METADATA,sha256=KTWdgy6eXmtPyUEczwHxO7uuSxWzNuS_6zFP9GrzQP4,1832
+rjango-0.3.3.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+rjango-0.3.3.dist-info/entry_points.txt,sha256=0oN6FS8hTp5cDZkDYZMDpK64prPUujs0RVcZE15bmlA,50
+rjango-0.3.3.dist-info/RECORD,,
