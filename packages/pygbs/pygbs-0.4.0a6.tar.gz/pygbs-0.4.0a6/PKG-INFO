@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pygbs
+Version: 0.4.0a6
+Summary: Python bindings for the GBS library
+Author-Email: Sebastien Raymond <sebastien@ssg-aero.com>
+License: GNU GPL3.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
