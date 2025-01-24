@@ -1,0 +1,11 @@
+nvidia/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nvidia/nccl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nvidia/nccl/include/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nvidia/nccl/include/nccl.h,sha256=8o6LmHiGFQ8u2-pG1R_oKV0BTvcrLDTYxZVzsWBCKrU,20384
+nvidia/nccl/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nvidia/nccl/lib/libnccl.so.2,sha256=6qbNqoHwKs6GkthzVbhuykWXG02_4TGsoNYQQ-GVACg,273123224
+nvidia_nccl_cu12-2.25.1.dist-info/License.txt,sha256=DwF0prTgszrCY3W_cpUzB1sy9MUaW2gCo9dC19zcmnY,1895
+nvidia_nccl_cu12-2.25.1.dist-info/METADATA,sha256=38hBOeZ7MxJ_pVjM7Bsk9lACkPkAS0x0znEa9RaUD8o,1822
+nvidia_nccl_cu12-2.25.1.dist-info/WHEEL,sha256=IvfN1v08VCv2w-UIoqjCw8-SNy-zng3tJSJweAUVhdg,146
+nvidia_nccl_cu12-2.25.1.dist-info/top_level.txt,sha256=fTkAtiFuL16nUrB9ytDDtpytz2t0B4NvYTnRzwAhO14,7
+nvidia_nccl_cu12-2.25.1.dist-info/RECORD,,
