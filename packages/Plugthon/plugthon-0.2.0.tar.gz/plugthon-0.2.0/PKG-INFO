@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: Plugthon
+Version: 0.2.0
+Summary: Plugthon is a developer-friendly library for building modular and scalable Telegram bots.
+Home-page: https://github.com/Plugthon/Plugthon
+Author: iniridwanul
+Author-email: iniridwanul@gmail.com
+License: AGPL
+Keywords: Plugthon,Python,Telethon,Telegram bots,Userbot,Telegram
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Telethon
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+<p align="center">
+<a href="https://github.com/Plugthon/Plugthon"><img src="https://raw.githubusercontent.com/Plugthon/Plugthon/refs/heads/master/assets/plugthon.png" height="128" width="128" alt="Plugthon"/></a>
+</p>
+
+<p align="center">
+<b>Plugthon</b><br/>
+Plugthon is a developer-friendly library for building modular and scalable Telegram bots.
+</p>
+
+<h2>About Plugthon</h2>
+<p title="Plugthon">Create highly customizable Telegram bots by combining pre-built and custom plugins with Plugthon.</p>

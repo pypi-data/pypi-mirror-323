@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+Plugthon/__init__.py
+Plugthon/__version__.py
+Plugthon.egg-info/PKG-INFO
+Plugthon.egg-info/SOURCES.txt
+Plugthon.egg-info/dependency_links.txt
+Plugthon.egg-info/requires.txt
+Plugthon.egg-info/top_level.txt
+Plugthon/plugins/__init__.py
+Plugthon/plugins/hello.py
