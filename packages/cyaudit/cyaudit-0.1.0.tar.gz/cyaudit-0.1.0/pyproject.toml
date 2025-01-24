@@ -1,0 +1,65 @@
+[project]
+name = "cyaudit"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "gql>=3.5.0",
+    "pandocfilters>=1.5.1",
+    "pygithub>=2.5.0",
+    "python-dateutil>=2.9.0.post0",
+    "requests-toolbelt>=1.0.0",
+    "tomli-w>=1.2.0",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License", # Match this to your license
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+]
+keywords = [
+    "audit",
+    "github",
+    "cyfrin",
+]
+
+
+[tool.uv]
+dev-dependencies = [
+    "mypy>=1.14.1",
+    "pytest>=8.3.4",
+    "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+"cyaudit" = "cyaudit:main"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "cyaudit",
+]
+include = [
+    "/cyaudit/templates/**/*", # Include template files
+]
+
+[tool.mypy]
+disable_error_code = 'type-arg, attr-defined'
+ignore_missing_imports = true
+exclude = [
+    'tests/',            # Excludes all files in the tests directory
+    '(^|/)test_.*\.py$', # Excludes files that start with test_
+]
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true
