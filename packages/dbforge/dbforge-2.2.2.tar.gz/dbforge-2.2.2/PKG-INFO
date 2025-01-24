@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: dbforge
+Version: 2.2.2
+Summary: A command-line tool for managing databases
+Author: Andrew Wade
+Requires-Python: >=3.8
+Requires-Dist: click>=8.0.0
+Requires-Dist: psycopg2-binary>=2.9.0
+Requires-Dist: pyyaml>=6.0.0
+Requires-Dist: rich>=10.0.0
+Requires-Dist: tomli>=2.0.0
+Description-Content-Type: text/markdown
+
+# dbforge
+
+a command-line tool for managing databases with ease. 
+
+## Installation
+
+```bash
+pip3 install dbforge
+```
+
+## Usage
+
+```bash
+# Show help
+dbforge help
+```
