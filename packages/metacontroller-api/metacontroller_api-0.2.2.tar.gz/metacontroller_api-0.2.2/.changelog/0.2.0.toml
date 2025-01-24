@@ -1,0 +1,13 @@
+release-date = "2025-01-23"
+
+[[entries]]
+id = "eb37cc1b-5247-43f0-b92b-b43e03654660"
+type = "improvement"
+description = "Add `metacontroller_apicontrib.flask.serve()` function"
+author = "@NiklasRosenstein"
+
+[[entries]]
+id = "142277bd-85c8-444a-a933-e6faebc81512"
+type = "docs"
+description = "Add examples/ directory including `DecoratorController` manifest"
+author = "@NiklasRosenstein"

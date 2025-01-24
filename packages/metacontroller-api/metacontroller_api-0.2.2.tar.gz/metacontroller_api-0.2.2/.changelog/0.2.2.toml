@@ -1,0 +1,7 @@
+release-date = "2025-01-24"
+
+[[entries]]
+id = "ad67795a-8bc6-4a4d-a974-a1d03c584a92"
+type = "improvement"
+description = "Add more fields to the `Resource` type"
+author = "@NiklasRosenstein"

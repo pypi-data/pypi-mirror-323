@@ -1,0 +1,7 @@
+release-date = "2025-01-23"
+
+[[entries]]
+id = "27ddb2f5-75bf-4543-a011-98bd96057a0d"
+type = "fix"
+description = "`contrib.flask`: Set handler function `__name__` to propagate into Flask view name"
+author = "@NiklasRosenstein"
