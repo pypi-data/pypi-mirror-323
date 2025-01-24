@@ -1,0 +1,9 @@
+fiftyone_devicedetection_shared/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fiftyone_devicedetection_shared/constants.py,sha256=Ni3XRUSvkqRlv9Yn5RswvOpWEHJ_RqPnox-DA6cpyNo,2295
+fiftyone_devicedetection_shared/example_constants.py,sha256=exh8AUcuoC3oO_g8mRu_XWm5sCPT--h_-uUY8q3H2Xo,6212
+fiftyone_devicedetection_shared/key_utils.py,sha256=IDCN9tzENlxptivh_dS-2Vj6-BL05Z0B0VUIndpKaCU,2083
+fiftyone_devicedetection_shared/utils.py,sha256=ALoucdFk_eP_SZbKKJpsddCNg71kskqu70AR_RmiBUU,2305
+fiftyone_devicedetection_shared-4.5.0a4.dist-info/METADATA,sha256=eT9Y4H6ZL32_6cnFocvV_xLxgTYmFnwE9Bl-JQFL6-s,2477
+fiftyone_devicedetection_shared-4.5.0a4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+fiftyone_devicedetection_shared-4.5.0a4.dist-info/top_level.txt,sha256=9-mG58K11dtI0tfiA4bngHTeRK1ZkiJ5l5pUjbReGOU,32
+fiftyone_devicedetection_shared-4.5.0a4.dist-info/RECORD,,
