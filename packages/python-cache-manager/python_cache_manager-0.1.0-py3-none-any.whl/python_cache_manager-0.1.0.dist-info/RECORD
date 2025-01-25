@@ -1,0 +1,11 @@
+cache_manager/__init__.py,sha256=o3T_o0ApIPC9ber-yH6oweYpCLuJpDgMQ-ncDThrYyk,89
+cache_manager/cache_manager.py,sha256=KwXnQmXrRzfavLl921j3UQHZugmDfACvzvuZtNn4nUE,462
+cache_manager/cache_manager_factory.py,sha256=xTlKpZPCA176Z4jl1qwMa02IEbVIsclv7cMeoobJiDw,1350
+cache_manager/adapters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cache_manager/adapters/memcached_cache_manager.py,sha256=SSuQoOYDI_Dzq61Jcteea_08Cb0Bgw5sZny_o51tpvU,2100
+cache_manager/adapters/redis_cache_manager.py,sha256=nHzYNkXCzcSHBrN2caIyIorp8X1KBbQsT2OfoY5AP2Y,2540
+python_cache_manager-0.1.0.dist-info/LICENSE,sha256=kJTZaIMwb89FALtq6063ivjkfYLL7cEh-75DPhZoQ4E,1130
+python_cache_manager-0.1.0.dist-info/METADATA,sha256=Pben89imBf1M5TZUwTv0If16Zj3_yxzaYdd73lCAqk0,494
+python_cache_manager-0.1.0.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+python_cache_manager-0.1.0.dist-info/top_level.txt,sha256=kchcceb7VpNsVJv_ZSgDbcZYwn_UZG_rAoEU8EzprMU,14
+python_cache_manager-0.1.0.dist-info/RECORD,,
