@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: parquet2lance
+Version: 0.5.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+License-File: LICENSE
+Summary: The Python wrapper for the Rust parquet2lance
+Keywords: arrow,lance,parquet
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/haoxins/parquet2lance
+
+
+- Convert parquet files to [lance](https://github.com/lancedb/lance)
+
+```py
+from parquet2lance import p2l
+
+p2l("gs://cloud-samples-data/bigquery/us-states/", "test.lance")
+```
+
