@@ -1,0 +1,4 @@
+[console_scripts]
+cleanup = dar_backup.cleanup:main
+dar-backup = dar_backup.dar_backup:main
+manager = dar_backup.manager:main

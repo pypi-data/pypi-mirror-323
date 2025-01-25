@@ -1,0 +1,13 @@
+dar_backup/.darrc,sha256=3d9opAnnZGU9XLyQpTDsLtgo6hqsvZ3JU-yMLz-7_f0,2110
+dar_backup/__about__.py,sha256=_f8whmZJ36ZCTk0Zldzy3KONxDBm0bxyKt7pCSHC3cE,21
+dar_backup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dar_backup/cleanup.py,sha256=DgmxSUwKrLLIQuYSIY_yTRhIuOMgI6ivjlQuH4u3wX4,9057
+dar_backup/config_settings.py,sha256=CBMUhLOOZ-x7CRdS3vBDk4TYaGqC4N1Ot8IMH-qPaI0,3617
+dar_backup/dar_backup.py,sha256=YZoVu9NJX3_WIkQIG8EMLSK3-VWdslI0c2XKrM2Un38,32214
+dar_backup/manager.py,sha256=2qTcn1HiDrejc6S7dLpkylURGzMQ0QqTaSl2KQQ58Uw,19198
+dar_backup/util.py,sha256=SSSJYM9lQZfubhTUBlX1xDGWmCpYEF3ePARmlY544xM,11283
+dar_backup-0.6.5.dist-info/METADATA,sha256=z0xQGBCg2sGMi93gtNCK0DXINE1ZgsohQbQh0zutlD4,63802
+dar_backup-0.6.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dar_backup-0.6.5.dist-info/entry_points.txt,sha256=x9vnW-JEl8mpDJC69f_XBcn0mBSkV1U0cyvFV-NAP1g,126
+dar_backup-0.6.5.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dar_backup-0.6.5.dist-info/RECORD,,
