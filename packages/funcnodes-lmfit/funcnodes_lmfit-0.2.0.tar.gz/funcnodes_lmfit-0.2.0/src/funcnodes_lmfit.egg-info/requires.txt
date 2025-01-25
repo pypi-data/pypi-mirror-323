@@ -1,0 +1,3 @@
+funcnodes
+lmfit
+tqdm>=4.67.1
