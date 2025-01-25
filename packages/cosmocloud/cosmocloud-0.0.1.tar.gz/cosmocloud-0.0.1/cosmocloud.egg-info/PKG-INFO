@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: cosmocloud
+Version: 0.0.1
+Summary: Cosmocloud CLI to interact with Cosmocloud Deploy platform using comand line and in CI/CD pipelines.
+Author-email: Shrey Batra <contact@cosmocloud.io>
+License: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/cosmocloud/cosmocloud-cli
+Project-URL: Issues, https://github.com/cosmocloud/cosmocloud-cli/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+License-File: LICENSE
+Requires-Dist: requests==2.32.3
+Requires-Dist: click==8.1.8
+Requires-Dist: importlib-metadata; python_version >= "3.12"
