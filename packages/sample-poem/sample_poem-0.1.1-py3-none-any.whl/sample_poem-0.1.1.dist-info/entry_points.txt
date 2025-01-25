@@ -1,0 +1,3 @@
+[console_scripts]
+sample-poem=sample_poem:main
+
