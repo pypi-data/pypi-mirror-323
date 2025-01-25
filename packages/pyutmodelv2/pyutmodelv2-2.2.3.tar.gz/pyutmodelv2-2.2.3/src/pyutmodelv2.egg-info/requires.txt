@@ -1,0 +1,13 @@
+
+[deploy]
+wheel==0.45.1
+setuptools==75.6.0
+twine==6.0.1
+build==1.2.2.post1
+
+[test]
+mypy==1.14.0
+mypy-extensions==1.0.0
+types-Deprecated==1.2.9.20240311
+html-testRunner~=1.2.1
+codeallybasic==1.8.0
