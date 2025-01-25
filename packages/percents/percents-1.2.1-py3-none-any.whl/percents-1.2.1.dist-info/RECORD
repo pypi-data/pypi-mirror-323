@@ -1,0 +1,8 @@
+percents/__init__.py,sha256=lgdZS3-4-07k5-VJGiPtjc_P0PCi1miU6ldWeoDrvyM,48
+percents/percent_type.py,sha256=E6TtuZSoxCnr3zezSVpSkchKe702ldeVNnG-ffZJ9Jg,1917
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_percent.py,sha256=OxPhzfN5ebKO5AqMkB1zToplLKVY1nu5Wai3DCbuIyU,1543
+percents-1.2.1.dist-info/METADATA,sha256=cwkdokPu7nuKojHFeh_g3N--0PTMh2_4U-Fuwlc5OIE,1880
+percents-1.2.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+percents-1.2.1.dist-info/top_level.txt,sha256=d-vw5_6m4f1QQ3LZYhe1hvJUpiWVqj4oMH-s1c7u-PM,15
+percents-1.2.1.dist-info/RECORD,,
