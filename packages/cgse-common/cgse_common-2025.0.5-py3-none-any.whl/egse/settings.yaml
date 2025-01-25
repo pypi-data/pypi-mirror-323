@@ -1,0 +1,7 @@
+SITE:
+    ID:                            XXX
+    SSH_SERVER:              localhost         # The IP address of the SSH server on your site
+    SSH_PORT:                       22         # The TCP/IP port on which the SSH server is listening
+
+PROCESS:
+    METRICS_INTERVAL:              10
