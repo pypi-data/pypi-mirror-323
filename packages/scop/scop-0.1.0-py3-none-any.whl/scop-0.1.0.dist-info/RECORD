@@ -1,0 +1,10 @@
+scop/__init__.py,sha256=P5S5WgXozOfr_aE0ha2AxtPMXnprhWmTvuQBJb8JO48,429
+scop/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scop/scop-linux,sha256=JQSoh_7MBPhVf8xuMqGRqFe3MpdrPnZap3k70rt8jFk,128087
+scop/scop-mac,sha256=gtl1fpqUrggRW3Fv75a0ojpRUfwTHZvcq60-Njvs-r4,368372
+scop/scop-win.exe,sha256=CmANcN3IfTimSeO2zZjoDLGEgZU1tTFuHTk93Nc8O54,320512
+scop/scop.py,sha256=VQYxBNVlUghBqiwRIPZHGD63OfsphG9i2TdA7gEF7DI,26960
+scop-0.1.0.dist-info/METADATA,sha256=Sh2RQ7pRnAR9oUlSWL_uWRBLwlnluXfIHsFEAAGb1g0,2366
+scop-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+scop-0.1.0.dist-info/licenses/LICENSE,sha256=dZbk9FhcqUUkhf6r2hGCi7VqYXt--i1LafDlkF1PUBk,10758
+scop-0.1.0.dist-info/RECORD,,
