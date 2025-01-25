@@ -1,0 +1,12 @@
+EasyGram/__init__.py,sha256=vc9TBTJ8y1QDb2JWSAkjgcNkaR3JENTuQtuA6UQVLY8,45966
+EasyGram/exception.py,sha256=xMWSdr5o1941DeV4MyadKQm_Fwn95V8Ax3haEOFj6bk,197
+EasyGram/state.py,sha256=cQGN731QSp3tCmc-ZxbAjMeFwR_cCBPr9CLM1Q67a6w,3257
+EasyGram/types.py,sha256=1S38iev5P4tkgPKZs6Iu6mARUCryQbRR-y4EU_A3XL4,18913
+EasyGram/utils.py,sha256=pJmi_sAKN-Pw1Izt8UqTeWkrEKWda9q0Glh2H5HJ-BA,235
+EasyGram/Async/__init__.py,sha256=JBx5w33nehim-enPplubYXKBfceSKgondQ-xxUutPOU,51720
+EasyGram/Async/types.py,sha256=KKX9YVwTA6PDwP14R4VWEFRZrRqy73-y85NnSevnvTA,11869
+EasyGram/imitation/__init__.py,sha256=tnF4hAAcyVz6k0Qc5QZfjq9_m9I_pVONovGrSGqzYfA,11803
+EasyGram-0.0.3.dist-info/METADATA,sha256=UHQAC_fLrl-0X4EGVRSo_vaeMghdMclEmTFGwFJ7Ijs,4196
+EasyGram-0.0.3.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+EasyGram-0.0.3.dist-info/top_level.txt,sha256=Aq2Yl2gbo0kqSt7kbRVnY0Z2uZsb6c-7_Z-t9fPWOVo,9
+EasyGram-0.0.3.dist-info/RECORD,,
