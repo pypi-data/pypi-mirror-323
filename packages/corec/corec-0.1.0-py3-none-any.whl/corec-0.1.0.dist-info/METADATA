@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: corec
+Version: 0.1.0
+Summary: Context-aware recommender systems framework
+Author-email: Jaime Gimillo <jaimegimillo@gmail.com>
+License: LICENSE
+Keywords: recommender,context-aware,evaluation,framework
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ==3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic
+Provides-Extra: evaluator
+Requires-Dist: ranx; extra == "evaluator"
+Provides-Extra: recommender
+
