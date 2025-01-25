@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: autowing
+Version: 0.1.0
+Summary: auto-wing is a tool that uses LLM to assist automated testing.
+Author: defnngj
+Author-email: defnngj@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: dashscope (>=1.22.1,<2.0.0)
+Requires-Dist: openai (>=1.60.1,<2.0.0)
+Requires-Dist: pytest-playwright (>=0.6.2,<0.7.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: selenium (>=4.28.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+# auto-wing
+
+![](auto-wing.png)
+
+> auto-wing is a tool that uses LLM to assist automated testing, give your automated testing wings.
+
+auto-wing是一个利用LLM辅助自动化测试的工具, 为你的自动化测试插上翅膀。
+
+
+### Features
+
+⭐ 支持多种操作：`ai_action`、`ai_query`、`ai_assert`等。
+
+⭐ 支持多模型：`openai`、`qwen` 和 `deepseek`。
+
+⭐ 支持 `playwright`、`selenium`等。
+
+⭐ 方便的和现有自动化项目集成。
+
+### 安装
+
