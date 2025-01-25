@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/fastahold/__init__.py
+src/fastahold/__main__.py
+src/fastahold.egg-info/PKG-INFO
+src/fastahold.egg-info/SOURCES.txt
+src/fastahold.egg-info/dependency_links.txt
+src/fastahold.egg-info/top_level.txt
+src/fastahold/core/__init__.py
+src/fastahold/tests/__init__.py
+src/fastahold/tests/test_1984.py
