@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: create_lilypad_module
+Version: 0.1.18
+Summary: A CLI tool to quickly scaffold and initialize new Lilypad module projects with boilerplate code and configuration.
+Author-email: Devlin Rocha <devlin@devlinrocha.com>
+Maintainer-email: Devlin Rocha <devlin@devlinrocha.com>
+Project-URL: Homepage, https://github.com/DevlinRocha/create-lilypad-module
+Project-URL: Bug Tracker, https://github.com/DevlinRocha/create-lilypad-module/issues
+Project-URL: Documentation, https://github.com/DevlinRocha/create-lilypad-module#readme
+Project-URL: Source, https://github.com/DevlinRocha/create-lilypad-module
+Keywords: Lilypad,Lilypad Network,Lilypad module,module-generator,project-generator,boilerplate-generator,scaffolding-tool,project scaffolding,CLI
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
