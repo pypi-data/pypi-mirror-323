@@ -1,0 +1,10 @@
+drug_named_entity_recognition/__init__.py,sha256=gIubV4lx1xait16Y89oC6v6XAKzS37kPm-mbA6bwyHU,1410
+drug_named_entity_recognition/drug_ner_dictionary.pkl.bz2,sha256=PzHsg8Om87YxammAkDvEkeRLB7UyBF0A8g9AhZCT9hc,1318448
+drug_named_entity_recognition/drugs_finder.py,sha256=gpnyHkVov-swaoTFruSggo_t7KNhNZC8rxwU_-_Racg,10684
+drug_named_entity_recognition/structure_file_downloader.py,sha256=E5AchBjHoEjoaNAnrBMX6NP_RoX372_Cd1bEITo8Ua8,3084
+drug_named_entity_recognition/util.py,sha256=3OmPQvHdW0-NdbDYSbjhSLywzliG_swZUbhS3eZAv1M,18592
+drug_named_entity_recognition-2.0.5.dist-info/LICENSE,sha256=vGUS02R7ryagjTyVSFA4RtSoF_PBJSMMfgFvNLeff4M,1220
+drug_named_entity_recognition-2.0.5.dist-info/METADATA,sha256=cOR-tZPwNz4yiyYTFi58qv68z2io8RdTdi-19Riapzo,22281
+drug_named_entity_recognition-2.0.5.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+drug_named_entity_recognition-2.0.5.dist-info/top_level.txt,sha256=6HkNeiryvgi7z1kDeMWLvm7yY2Fl-DE40xXcMkD2Xtg,30
+drug_named_entity_recognition-2.0.5.dist-info/RECORD,,
