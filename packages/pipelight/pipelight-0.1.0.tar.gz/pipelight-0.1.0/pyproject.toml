@@ -1,0 +1,56 @@
+[project]
+name = "pipelight"
+version = "0.1.0"
+description = "✨ Change smart lights based on CI pipeline status"
+readme = "README.md"
+authors = [{name = "Brie Carranza"}]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "certifi==2024.12.14",
+    "charset-normalizer==3.4.1",
+    "click==8.1.8",
+    "emoji==2.14.1",
+    "idna==3.10",
+    "python-dotenv==1.0.1",
+    "python-gitlab==5.3.1",
+    "requests==2.32.3",
+    "requests-toolbelt==1.0.0",
+    "urllib3==2.3.0"
+]
+
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://pipelight.brie.dev"
+Changelog = "https://gitlab.com/brie/pipelight/releases"
+Issues = "https://github.com/bbbbbrie/pipelight/issues"
+
+[project.scripts]
+pipelight = "pipelight.cli:cli"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools]
+license-files = []
+#
+#[[tool.uv.index]]
+#name = "testpypi"
+#url = "https://test.pypi.org/simple/"
+#publish-url = "https://test.pypi.org/legacy/"
