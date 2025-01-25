@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: terrascope-api
+Version: 1.0.56.6
+Summary: Terrascope API Client
+Home-page: https://github.com/orbitalinsight/oi_papi
+License-File: LICENSE
+Requires-Dist: grpcio
+Requires-Dist: grpcio-status
+Requires-Dist: requests
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
