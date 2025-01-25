@@ -1,0 +1,84 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      xml:lang="en"
+      i18n:domain="plone"
+>
+
+  <body>
+
+    <metal:main fill-slot="main">
+
+      <style media="screen"
+             type="text/css"
+      >
+        #portal-top { margin-top: 1em; }
+        #portal-footer-wrapper { background-color: unset; color: unset; text-align: left; padding: 0; }
+        #plone-toolbar { padding-top: 1em; }
+        #plone-toolbar .card-header { color: #000; }
+        #plone-toolbar .card-body { background-color: #333; }
+        #plone-toolbar .d-flex { display: block; }
+        #plone-toolbar .btn { margin: 5px 5px 0 0; }
+        .hiddenViewlet .card {
+            --bs-card-border-color: var(--bs-gray-300);
+        }
+        @media (min-width: 768px) {
+          body.plone-toolbar-top {
+            padding-top:0;
+          }
+          body.plone-toolbar-top #edit-zone {
+            position:static;
+            height:auto;
+          }
+          body.plone-toolbar-top #plone-toolbar .card-body .card-body {
+            /* redefine horizontal styles */
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+          }
+        }
+      </style>
+
+      <div class="xcontainer">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle"></div>
+
+        <div class="container my5">
+          <h1 class=""
+              i18n:translate="label_title"
+          >
+              Title
+          </h1>
+        </div>
+
+        <div tal:replace="structure provider:plone.belowcontenttitle"></div>
+
+        <div class="container my-5">
+          <div class="lead"
+               i18n:translate="label_description"
+          >
+              Summary
+          </div>
+        </div>
+
+        <div tal:replace="structure provider:plone.abovecontentbody"></div>
+
+        <div class="container my-5">
+          <div id="content-core">
+            <p i18n:translate="">
+                  This item does not have any body text, click the edit tab to change it.
+            </p>
+          </div>
+        </div>
+
+        <div tal:replace="structure provider:plone.belowcontentbody"></div>
+
+      </div>
+
+    </metal:main>
+
+  </body>
+</html>

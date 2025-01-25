@@ -1,0 +1,13 @@
+Products.GenericSetup
+Products.CMFCore
+Zope
+persistent
+setuptools
+zope.contentprovider
+zope.viewlet
+
+[test]
+Products.CMFPlone
+plone.app.testing
+plone.testing
+zope.publisher
