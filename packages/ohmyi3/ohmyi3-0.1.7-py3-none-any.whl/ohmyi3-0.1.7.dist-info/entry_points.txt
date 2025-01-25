@@ -1,0 +1,3 @@
+[console_scripts]
+i3ctl=ohmyi3.commands.entrypoint:cli
+
