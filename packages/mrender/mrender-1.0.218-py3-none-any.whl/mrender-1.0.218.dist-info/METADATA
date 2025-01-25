@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: mrender
+Version: 1.0.218
+Project-URL: Documentation, https://github.com/mbodiai/mrender#readme
+Project-URL: Issues, https://github.com/mbodiai/mrender/issues
+Project-URL: Source, https://github.com/mbodiai/mrender
+Author: mbodiai
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: beautifulsoup4
+Requires-Dist: html2text
+Requires-Dist: markdownify
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: rich-click>=1.8.5
+Provides-Extra: all
+Requires-Dist: rich-click>=1.8.5; extra == 'all'
+Description-Content-Type: text/markdown
+
+# mrender
+
+
+
+## Installation
+
+```bash
+pip install mrender
+```
