@@ -1,0 +1,13 @@
+jaxqualin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jaxqualin/data.py,sha256=YCJmgdh0d7QSUC2OXyndo2bxn9MQCQ1Jqwthvav-ycI,8325
+jaxqualin/fit.py,sha256=T_5wM7oecb6p1wdF8Q1SAVZpToqvDmXnPp2M-k5VncQ,64427
+jaxqualin/plot.py,sha256=C9HdEBmfA_ig0IuVYrebKLMaNo5Iy-b9WinizeEBsFU,64706
+jaxqualin/postprocess.py,sha256=YB_B5Q8clPI5Z--9nZcq0yBn699TMeNUKe7QeDGIAGM,15536
+jaxqualin/qnmode.py,sha256=g6MQ5Vfzw-DnICBnEE9lKbSQbsi2ui0A6zhFxEeEGLc,18744
+jaxqualin/selection.py,sha256=rl_mjhBIYVeK8lTvo0KO1hHSep82e8jqnSliBq1gd6c,40992
+jaxqualin/utils.py,sha256=FtplYBmOd_AQie8ESBGEtQmylj4yyUNd3IdukafZL1c,1181
+jaxqualin/waveforms.py,sha256=GkUUCo2XgRznXCBgjVMbxjf-o2uCMKHnOpG-tmTjs7Y,24958
+jaxqualin-0.0.6.dist-info/METADATA,sha256=YgEfvKIF7bDO74WSipxDdDuxtPWnIFZds7qG1_DHJRA,4135
+jaxqualin-0.0.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jaxqualin-0.0.6.dist-info/licenses/LICENSE,sha256=WgxgDPlhsh-4iwW4aYDgdcWyOCfwaIYBjtBGqp4zhIE,1075
+jaxqualin-0.0.6.dist-info/RECORD,,
