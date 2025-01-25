@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+vcsvgenie/__init__.py
+vcsvgenie/read.py
+vcsvgenie/transient_waveform.py
+vcsvgenie.egg-info/PKG-INFO
+vcsvgenie.egg-info/SOURCES.txt
+vcsvgenie.egg-info/dependency_links.txt
+vcsvgenie.egg-info/requires.txt
+vcsvgenie.egg-info/top_level.txt
