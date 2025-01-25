@@ -1,0 +1,2 @@
+redis==4.4.0
+pymemcache==4.0.0

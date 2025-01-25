@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: python-cache-manager
+Version: 0.1.0
+Summary: A cache manager supporting Redis and Memcached
+Home-page: UNKNOWN
+Author: mstfsu
+Author-email: su.mustafa@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+
+UNKNOWN
+

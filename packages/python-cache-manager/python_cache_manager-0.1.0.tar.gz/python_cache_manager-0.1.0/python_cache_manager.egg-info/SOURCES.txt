@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+cache_manager/__init__.py
+cache_manager/cache_manager.py
+cache_manager/cache_manager_factory.py
+cache_manager/adapters/__init__.py
+cache_manager/adapters/memcached_cache_manager.py
+cache_manager/adapters/redis_cache_manager.py
+python_cache_manager.egg-info/PKG-INFO
+python_cache_manager.egg-info/SOURCES.txt
+python_cache_manager.egg-info/dependency_links.txt
+python_cache_manager.egg-info/requires.txt
+python_cache_manager.egg-info/top_level.txt
