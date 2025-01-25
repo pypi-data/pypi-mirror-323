@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+dualkey/__init__.py
+dualkey/main.py
+dualkey.egg-info/PKG-INFO
+dualkey.egg-info/SOURCES.txt
+dualkey.egg-info/dependency_links.txt
+dualkey.egg-info/entry_points.txt
+dualkey.egg-info/top_level.txt
