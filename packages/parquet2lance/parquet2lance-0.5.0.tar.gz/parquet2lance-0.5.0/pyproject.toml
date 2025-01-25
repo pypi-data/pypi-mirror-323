@@ -1,0 +1,24 @@
+[project]
+name = "parquet2lance"
+description = "The Python wrapper for the Rust parquet2lance"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+classifiers = [
+  "Programming Language :: Rust",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+keywords = [
+  "arrow",
+  "lance",
+  "parquet",
+]
+dynamic = ["version"]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+manifest-path = "python/Cargo.toml"
+
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
