@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+decodify/__init__.py
+decodify.egg-info/PKG-INFO
+decodify.egg-info/SOURCES.txt
+decodify.egg-info/dependency_links.txt
+decodify.egg-info/requires.txt
+decodify.egg-info/top_level.txt
