@@ -1,0 +1,10 @@
+README.md
+setup.py
+nbprg_auth/__init__.py
+nbprg_auth/mail.py
+nbprg_auth/main.py
+nbprg_auth.egg-info/PKG-INFO
+nbprg_auth.egg-info/SOURCES.txt
+nbprg_auth.egg-info/dependency_links.txt
+nbprg_auth.egg-info/requires.txt
+nbprg_auth.egg-info/top_level.txt

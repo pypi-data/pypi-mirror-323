@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: nbprg_auth
+Version: 0.0.2
+Summary: Hey There 👋
+Author: Saifur Rahman
+Author-email: novbh091@gmail.com
+License: MIT
+Requires-Dist: requests
+Requires-Dist: bs4
+Requires-Dist: fake_useragent
+Requires-Dist: names
+Dynamic: author
+Dynamic: author-email
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
