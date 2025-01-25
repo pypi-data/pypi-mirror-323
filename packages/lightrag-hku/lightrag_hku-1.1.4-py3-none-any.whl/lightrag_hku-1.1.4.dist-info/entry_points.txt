@@ -1,0 +1,2 @@
+[console_scripts]
+lightrag-server = lightrag.api.lightrag_server:main [api]
