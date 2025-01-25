@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+dependencies = [
+  "qrcode[pil] >= 8.0",
+  "beautifulsoup4 >= 4.12.3",
+  "blabel >= 0.1.6",
+  "PyMuPDF >= 1.25.2",
+]
+name = "mcm-label"
+version = "0.0.1"
+authors = [{ name = "Aaron Goldstein", email = "aaron@sirrom.systems" }]
+description = "A command line utility to create scannable labels for McMaster parts"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.scripts]
+mcm-label = "mcm_label.cli:main"
