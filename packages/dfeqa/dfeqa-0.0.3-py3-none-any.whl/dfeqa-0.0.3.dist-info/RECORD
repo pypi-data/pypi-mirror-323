@@ -1,0 +1,9 @@
+dfeqa/__init__.py,sha256=RgllhDfqEjPxNgXxB4NWz98qaMIBdSz62yWErHsGsGk,205
+dfeqa/data_transformation.py,sha256=mJOLwaHjPyIdWA7tP70ROHUYk2bv_tWwZut425cVsWk,581
+dfeqa/data_validation.py,sha256=5bn_1f4JV5UdHUxQQLoEQ2NjdB6a7ykroNrUkDj3fZY,1085
+dfeqa/db.py,sha256=z7_fKi6B3ik3IAt2cUNHObo21xeN9g26pQI_0FGDki4,1493
+dfeqa/summaries.py,sha256=DyMBIPsE_vhZ_6366L0aujRZUsFJeJBkwnxX9NvyZA0,5282
+dfeqa-0.0.3.dist-info/METADATA,sha256=MBhPBtxCH8P11IlmzrXj169XSOI40DvrTeCJeYkb1e0,5247
+dfeqa-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dfeqa-0.0.3.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+dfeqa-0.0.3.dist-info/RECORD,,
