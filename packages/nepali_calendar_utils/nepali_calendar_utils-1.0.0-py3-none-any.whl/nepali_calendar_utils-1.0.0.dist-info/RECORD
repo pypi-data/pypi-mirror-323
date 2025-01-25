@@ -1,0 +1,12 @@
+nepali_calendar_utils/__init__.py,sha256=WE_0lZ0uZ-dByeCeVgGeegBMXTZkkDuJTC99iswdiQI,589
+nepali_calendar_utils/calendar_model/date_converters.py,sha256=Nr01dNNpmnrmWytt5BdEjP7M17ob-6rJ2pbp-PKyfQ8,19464
+nepali_calendar_utils/calendar_model/nepali_calendar_defaults.py,sha256=YiCJ8Bk-pNMlnjJ5AwYowuie9guq8dAfi908ZwBBJrg,1565
+nepali_calendar_utils/calendar_model/nepali_calendar_model.py,sha256=a6TMTV-Ntrp0vma3_6IwKDvx2p4Aleux4ifPEsB6e_c,13575
+nepali_calendar_utils/calendar_model/nepali_date_converter.py,sha256=VwU97mLYEx9i61brg2cs33TjdAdujiR_HkdODWGDiuw,20591
+nepali_calendar_utils/data/custom_calendar.py,sha256=wHHiFK1wUmTY2wrASUkHLDZJAJLCe69ZNcGWAvskpag,2590
+nepali_calendar_utils/data/nepali_date_locale.py,sha256=dLQAH4_xT20u1Jr-SsqYOBWLfBeqkXjgK1JIc7Pi4hg,5647
+nepali_calendar_utils/data/nepali_year_month_map.py,sha256=gbSGoH0FLNOfWs9oMTSD5jREt3DihhraGBUpwUfUhMs,134332
+nepali_calendar_utils-1.0.0.dist-info/METADATA,sha256=YG__VRl2fYWGAnSKQcdv-d-TlUQYa4S85RNT34FU1iY,1024
+nepali_calendar_utils-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+nepali_calendar_utils-1.0.0.dist-info/licenses/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+nepali_calendar_utils-1.0.0.dist-info/RECORD,,
