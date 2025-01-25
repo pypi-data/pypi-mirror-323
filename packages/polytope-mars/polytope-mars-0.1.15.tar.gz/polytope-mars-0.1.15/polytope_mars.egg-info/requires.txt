@@ -1,0 +1,7 @@
+polytope
+covjsonkit
+xarray
+shapely
+geopandas
+pyproj
+geographiclib
