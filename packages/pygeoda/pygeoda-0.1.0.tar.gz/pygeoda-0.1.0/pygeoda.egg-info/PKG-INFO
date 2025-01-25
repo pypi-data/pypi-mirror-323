@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: pygeoda
+Version: 0.1.0
+Summary: pygeoda is a python library for spatial data analysis based on GeoDa and libgeoda.
+Home-page: https://github.com/geodacenter/pygeoda
+Author: Xun Li
+Author-email: lixun910@gmail.com
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
