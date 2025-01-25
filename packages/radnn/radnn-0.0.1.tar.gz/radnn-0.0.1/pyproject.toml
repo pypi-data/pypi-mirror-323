@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "radnn"
+version = "0.0.1"
+description = "Rapid Deep Neural Networks"
+readme = "README.md"
+authors = [
+    {name = "Pantelis I. Kaplanoglou", email = "pikaplanoglou@ihu.gr"}
+]
+license = {file = "LICENSE"}
+dependencies = [
+"numpy >= 1.26.4",
+"matplotlib >= 3.8.4",
+"pandas >= 2.2.2",
+"scikit-learn >= 1.4.2"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/my_package"
+"Documentation" = "https://my_package.readthedocs.io/"
