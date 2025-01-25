@@ -1,0 +1,6 @@
+tree-sitter-zeek==0.2.2
+tree-sitter==0.24.0
+
+[dev]
+pytest==8.3.4
+syrupy==4.8.1
