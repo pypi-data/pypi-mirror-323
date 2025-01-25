@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include requirements.txt
+include setup.py
+include setup.cfg
+include pyproject.toml
