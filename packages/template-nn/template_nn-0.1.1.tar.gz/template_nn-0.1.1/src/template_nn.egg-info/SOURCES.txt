@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/template_nn/__init__.py
+src/template_nn.egg-info/PKG-INFO
+src/template_nn.egg-info/SOURCES.txt
+src/template_nn.egg-info/dependency_links.txt
+src/template_nn.egg-info/top_level.txt
+src/template_nn/shallow/__init__.py
+src/template_nn/shallow/fnn.py
+src/template_nn/utils/__init__.py
+src/template_nn/utils/args_val.py
+src/template_nn/utils/gpu.py
+src/template_nn/utils/model_compose.py
