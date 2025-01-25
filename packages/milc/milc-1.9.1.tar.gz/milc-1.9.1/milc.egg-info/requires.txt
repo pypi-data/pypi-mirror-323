@@ -1,0 +1,6 @@
+argcomplete
+colorama
+halo
+platformdirs
+spinners
+types-colorama
