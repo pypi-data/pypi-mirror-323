@@ -1,0 +1,13 @@
+<el-form-item v-for="(value, key) in form" :prop="key" :label="nameDict[key]||key" >
+<el-input v-if="typeDict[key]=='text'" v-model="form[key]" type="textarea" autosize :disabled="constF.includes(key)"></el-input>
+<el-date-picker v-else-if="typeDict[key]=='date'" v-model="form[key]" type="date" value-format="yyyy-MM-dd" :disabled="constF.includes(key)"></el-date-picker>
+<el-date-picker v-else-if="typeDict[key]=='month'" v-model="form[key]" type="month" value-format="yyyy-MM" :disabled="constF.includes(key)"></el-date-picker>
+<el-upload v-else-if="typeDict[key]=='file'||typeDict[key]=='img'" :data="{'typename':dashid,'path':uploadpath, 'key':key}" action="/echart/upload_file/" :on-success="handleUpload" :before-upload="beforeUpload" :inline="true" :show-file-list="false" style="display: inline-block;" :disabled="constF.includes(key)">
+<el-button size="mini" style="background-color:#6e8665;border: none;color:#fff" icon="el-icon-upload2"></el-button><span>{[form[key]]}</span></el-upload>
+<el-select v-else-if="['select','selects'].includes(typeDict[key])" :remote="remoteDsDict[key]" :remote-method="(q)=>{remoteMethod(q,key)}" :loading="loadingDict[key]" v-model="form[key]" :multiple="typeDict[key]=='selects'" filterable clearable @change="selectChange(key)" :disabled="constF.includes(key)">
+<el-option v-for="item in optionDict2[key]" :key="item[0]" :label="item[0]" :value="item[0]"><span style="margin-right:5px" v-for="item1 of item">{[ item1 ]}</span></el-option></el-select>
+ <el-autocomplete v-else-if="remoteDsDict[key]" size="mini"  clearable v-model="form[key]" :fetch-suggestions="(q,c)=>{querySearch(q,c,key)}"   @change="selectChange(key)" :disabled="constF.includes(key)">
+ <template slot-scope="{ item }"><span style="margin-right:3px" v-for="item1 of item">{[item1]}</span></template></el-autocomplete>
+<el-input v-else-if="typeDict[key]=='number'" type="number" step="any" v-model="form[key]"  :disabled="constF.includes(key)"></el-input>
+<el-input v-else v-model.trim="form[key]" autocomplete="off" :disabled="constF.includes(key)" clearable></el-input>
+</el-form-item>
