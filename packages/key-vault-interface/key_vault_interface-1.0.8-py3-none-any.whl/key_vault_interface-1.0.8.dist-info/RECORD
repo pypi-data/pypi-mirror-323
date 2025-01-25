@@ -1,0 +1,10 @@
+key_vault_interface/__init__.py,sha256=p_ws-9W7HeP_RfNuGscH3UIczaDFgLeGOeDgRBhdzrc,21
+key_vault_interface/exceptions.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+key_vault_interface/key_vault_interface.py,sha256=051o-eWBAb9jg3kzhew3lYZU4iRqd594c2475NH9GS4,12323
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_key_vault_interface.py,sha256=7rTvlVpKsjftxKAOZ2AQHWddthcT9FFsD3vAFiV29rc,7348
+key_vault_interface-1.0.8.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+key_vault_interface-1.0.8.dist-info/METADATA,sha256=JQd8dNeIz0m383Ox7eNYUqkAqZBe926khCmNTewayQs,3287
+key_vault_interface-1.0.8.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+key_vault_interface-1.0.8.dist-info/top_level.txt,sha256=aq27gehLlbN_89O3rHWBop1M9RnO2WodcjeA1if3Gos,26
+key_vault_interface-1.0.8.dist-info/RECORD,,
