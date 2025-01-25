@@ -1,0 +1,30 @@
+
+package:
+  name: std
+
+  tasks:
+  - name: Message
+    pyclass: dv_flow.mgr.std.message.Message
+    with:
+      msg:
+        type: str
+        value: ""
+  - name: FileSet
+    pyclass: dv_flow.mgr.std.fileset.FileSet
+    with:
+      base:
+        type: str
+        value: ""
+      type:
+        type: str
+        value: ""
+      include:
+        type: str
+        value: ""
+      exclude:
+        type: str
+        value: ""
+#  - name: Exec
+#    pyclass: dv_flow.mgr.std.exec.Exec
+#    with: {}
+      
