@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "galileo"
+version = "0.0.1"
+description = "The Galileo Python SDK"
+authors = ["Galileo Technologies Inc. <team@rungalileo.io>"]
+packages = [{ include = "galileo", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
