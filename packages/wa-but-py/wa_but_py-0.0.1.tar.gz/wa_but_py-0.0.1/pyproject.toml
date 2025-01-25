@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "poetry"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "wa-but-py"
+version = "0.0.1"
+description = "A Python library for interacting with WhatsApp Web (unofficial API)."
+authors = ["Zaid <zaidyoutub0@gmail.com>"]
+license = "Custom License"
+homepage = "https://github.com/hacxk/wa-but-py"
+repository = "https://github.com/hacxk/wa-but-py"
+keywords = ["WhatsApp", "Web API", "Automation"]
+
+[tool.poetry.dependencies]
+python = ">=3.9.2,<4.0"
+requests = "2.32.3"
+websocket-client = "1.8.0"
+websockets = "14.1"
+attrs = "24.3.0"
+certifi = "2024.12.14"
+cffi = "1.17.1"
+charset-normalizer = "3.4.1"
+cryptography = "44.0.0"
+h11 = "0.14.0"
+idna = "3.10"
+mypy-protobuf = "3.6.0"
+outcome = "1.3.0.post0"
+protobuf = "5.29.3"
+pycparser = "2.22"
+pysocks = "1.7.1"
+setuptools = "75.8.0"
+sniffio = "1.3.1"
+sortedcontainers = "2.4.0"
+trio = "0.28.0"
+trio-websocket = "0.11.1"
+types-protobuf = "5.29.1.20241207"
+types-pyyaml = "6.0.12.20241230"
+typing-extensions = "4.12.2"
+urllib3 = "2.3.0"
+wsproto = "1.2.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^0.982"
+black = "^23.3"
+flake8 = "^5.0.4"
+pytest = "^7.1"
+
+[tool.poetry.urls]
+"Documentation" = "https://github.com/hacxk/wa-but-py"
