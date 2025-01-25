@@ -1,0 +1,93 @@
+Metadata-Version: 2.2
+Name: combined_bukmacherska
+Version: 0.6.0
+Summary: Tools for analyzing sports statistics and using machine learning to assist in betting strategies.
+Home-page: https://github.com/your-repo-url
+Author: Twoje Imię
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: xgboost
+Requires-Dist: catboost
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+ď»ż# Combined Bukmacherska
+
+**Combined Bukmacherska** is a project that provides tools for analyzing sports statistics and using machine learning to assist in betting strategies. The package offers utilities for training machine learning models, statistical analysis, and data visualization.
+
+## Features
+
+- **Train Machine Learning Models**: A suite of classifiers, including Random Forest, Gradient Boosting, SVM, and more.
+- **Statistical Analysis**: Analyze team performance metrics like average goals scored/conceded.
+- **Mathematical Utilities**: Tools for Gamma distribution, Beta distribution, and Poisson probabilities.
+- **Visualizations**: Generate line, bar, and 3D plots for data analysis.
+
+## Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone <repository-url>
+cd combined_bukmacherska
+pip install -r requirements.txt
+
+
+from combined_bukmacherska.train_models import train_models, predict_with_models
+
+# Example data
+X_train, X_test, y_train, y_test = ...  # Replace with your dataset
+models = train_models(X_train, y_train)
+predictions = predict_with_models(models, X_test)
+
+from combined_bukmacherska.statistics import analiza_statystyczna, oblicz_statystyki_druzyny
+
+druzyna1 = {'zdobyte': 30, 'stracone': 20}
+druzyna2 = {'zdobyte': 25, 'stracone': 15}
+mecze = 10
+
+statystyki1, statystyki2 = analiza_statystyczna(druzyna1, druzyna2, mecze)
+
+from combined_bukmacherska.visualizations import rysuj_wykresy
+
+rysuj_wykresy(statystyki1['Ĺ›rednia zdobytych'], statystyki1['Ĺ›rednia straconych'], 
+              statystyki2['Ĺ›rednia zdobytych'], statystyki2['Ĺ›rednia straconych'])
+
+
+
+### ZawartoĹ›Ä‡ poĹ‚Ä…czonego pliku `__init__.py`
+
+```python
+"""
+__init__.py for the combined_bukmacherska project.
+
+This package contains utilities for training machine learning models,
+statistical computations, and visualizations for sports and betting analysis.
+
+Modules:
+- `train_models`: Functions to train various classifiers.
+- `predict_with_models`: Utility to make predictions using trained models.
+- `plot_results`: Functions to visualize predictions and statistics.
+- `gamma_function`: Functions for mathematical and statistical computations.
+- `analiza_statystyczna`: High-level analysis of sports team statistics.
+"""
+
+from .train_models import train_models, predict_with_models
+from .visualizations import plot_results, rysuj_wykresy
+from .math_utils import gamma_function, beta_function, poisson_probability
+from .statistics import oblicz_statystyki_druzyny, analiza_statystyczna
