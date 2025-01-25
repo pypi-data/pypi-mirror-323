@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: arrowsqlbcpy
+Version: 0.0.1.dev0
+Summary: Fast bcp from pandas to SQL Server using .Net SqlBulkCopy
+Author-email: Russel Webber <24542073+RusselWebber@users.noreply.github.com>
+License: MIT
+Keywords: bcp,sql,pandas
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pyarrow>=19.0.0
+
+# arrowsqlbcpy
+
+A tiny library that uses .Net SqlBulkCopy to enable fast data loading to SQL Server. Apache Arrow is used to serialise data between Python and the native DLL. .Net AOT compilation is used to generate the native DLL.
