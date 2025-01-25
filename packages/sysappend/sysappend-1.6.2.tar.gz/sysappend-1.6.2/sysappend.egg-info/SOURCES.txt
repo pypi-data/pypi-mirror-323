@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+sysappend/__init__.py
+sysappend/py.typed
+sysappend/version.py
+sysappend.egg-info/PKG-INFO
+sysappend.egg-info/SOURCES.txt
+sysappend.egg-info/dependency_links.txt
+sysappend.egg-info/requires.txt
+sysappend.egg-info/top_level.txt
+tests/test_all.py
