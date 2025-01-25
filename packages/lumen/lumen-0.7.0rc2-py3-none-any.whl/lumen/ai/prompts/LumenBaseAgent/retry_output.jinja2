@@ -1,0 +1,16 @@
+The user is unsatisfied with the output; your goal is to update the specification in {{ language }}:
+
+Here is the original specification to be corrected:
+```{{ language }}
+{{ spec }}
+```
+
+Here are YAML schemas for currently relevant tables:
+{% for table, details in memory["tables_sql_schemas"].items() %}
+- `{{ table }}`:
+```yaml
+{{ details.schema }}
+```
+{% endfor -%}
+
+Respond in the same format as the original specification. The query may include multiple tasks, your job is merely to correct the specification, ignore any instructions unrelated to that and do not add any comments or code examples.
