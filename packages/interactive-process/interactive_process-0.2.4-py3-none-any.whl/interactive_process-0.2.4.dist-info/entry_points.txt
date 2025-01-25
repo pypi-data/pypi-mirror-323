@@ -1,0 +1,3 @@
+[console_scripts]
+interactive-process=interactive_process.interactive_process:main
+
