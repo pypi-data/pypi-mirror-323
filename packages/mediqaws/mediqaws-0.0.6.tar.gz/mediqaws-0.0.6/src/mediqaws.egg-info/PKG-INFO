@@ -1,0 +1,61 @@
+Metadata-Version: 2.2
+Name: mediqaws
+Version: 0.0.6
+Summary: A collection of AWS clients, and a secrets manager.
+Home-page: https://github.com/SmartMediQ/mediqaws
+Author: Smartmediq
+Author-email: dev@smartmediq.com
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: pydantic
+Requires-Dist: werkzeug
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# mediqaws
+
+A collection of AWS clients, and asecrets manager.
+
+## Install
+
+`pip install mediqaws`
+
+## Usage
+
+```python
+from mediqaws.clients import S3
+
+profile_name = "..."
+bucket_name = "..."
+object_key_prefix = "..."
+file_path = "..."
+
+with S3(profile_name=profile_name) as s3:
+  object_key = s3.upload(file_path, bucket_name, object_key_prefix)
+print(object_key)
+```
+
+```python
+from mediqaws.secrets_manager import SecretsManager
+
+secrets_manager = SecretsManager()
+secret = secrets_manager.get_secret(os.getenv("SECRET_NAME"))
+print(secret)
+```
+
+See more examples under `tests` directory.
