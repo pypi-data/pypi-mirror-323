@@ -1,0 +1,28 @@
+[project]
+name = "thinknet-application-specific-exception"
+version = "1.0.0b3"
+description = "Main error class for data-eng@thinknet"
+readme = "README.md"
+authors = [
+    { name = "TN-DE Team", email = "eakamon@thinknet.co.th" }
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Development Status :: 4 - Beta",
+    "Topic :: Software Development :: Libraries"
+]
+dependencies = [
+    "pytz>=2024.2"
+]
+
+[project.urls]
+Homepage = "https://gitlab.thinknet.co.th/data-eng/library/application-specific-exception"
+
+[project.optional-dependencies]
+dev = ["pytest"]
