@@ -1,0 +1,121 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+[project]
+name = "storynavigator"
+version = "0.1.1"
+description = "Narrative analysis add-on for the Orange 3 data mining software package."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+	{name = "Kody Moodley"},
+]
+keywords = [
+    "orange3 add-on",
+    "story analysis",
+    "narrative theory",
+    "natural language processing",
+    "text mining",
+    "story networks",
+    "character networks"
+]
+license = {text = "GPL 3.0 or later"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+]
+dependencies = [
+    "pyqt6 == 6.7.1",
+    "pyqtwebengine == 5.15.7",
+    "orange3 == 3.37",
+    "orange3-text == 1.16.1",
+    "orange3-network == 1.9.0",
+    "pandas == 2.2.2",
+    "spacy == 3.7.6",
+    "scipy == 1.12.0",
+    "dhtmlparser3 == 3.0.17",
+    "nltk == 3.9.1",
+    "textblob == 0.18.0.post0",
+    "textblob-nl == 0.0.1",
+    "pydot == 3.0.1",
+    "graphviz == 0.20.3",
+    "thefuzz == 0.22.1",
+    "beautifulsoup4 == 4.12.3",
+    "transformers == 4.44.2",
+    "torch == 2.4.0",
+    "pytest == 8.3.1"
+]
+
+[project.urls]
+homepage = "https://github.com/navigating-stories/orange-story-navigator"
+issues = "https://github.com/navigating-stories/orange-story-navigator/issues"
+documentation = "https://orange-story-navigator.readthedocs.io"
+changelog = "https://github.com/navigating-stories/orange-story-navigator/releases"
+
+[project.optional-dependencies]
+develop = [
+    'bump-my-version',
+    'coverage',
+    'pytest',
+    'sphinx',
+    'sphinx_rtd_theme',
+    'sphinx-autoapi <= 2.1.0',
+    'myst_parser',
+    'nbsphinx',
+    'black',
+    'pylint',
+]
+
+publishing = [
+    "twine",
+    "wheel",
+    "build",
+]
+
+# https://setuptools.pypa.io/en/latest/userguide/entry_point.html#entry-points-for-plugins
+[project.entry-points."orange3.addon"]
+"Story Navigator" = "storynavigation"
+
+[project.entry-points."orange.widgets"]
+"Story Navigator" = "storynavigation.widgets"
+
+[tool.setuptools]
+package-dir = {"storynavigation" = "orangecontrib/storynavigation" }
+include-package-data = true
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.coverage.run]
+source = ['orangecontrib/storynavigation']
+
+[tool.bumpversion]
+current_version = "0.1.1"
+
+[[tool.bumpversion.files]]
+filename = "orangecontrib/storynavigation/__init__.py"
+search = "__version__ = '{current_version}'"
+replace = "__version__ = '{new_version}'"
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = "version = \"{current_version}\""
+replace = "version = \"{new_version}\""
+
+[[tool.bumpversion.files]]
+filename = "CITATION.cff"
+search = 'version: "{current_version}"'
+replace = 'version: "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "doc/widgets/howtocite.md"
+search = "(Version {current_version})"
+replace = "(Version {new_version})"
