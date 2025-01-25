@@ -1,0 +1,6 @@
+setup.py
+teachers.egg-info/PKG-INFO
+teachers.egg-info/SOURCES.txt
+teachers.egg-info/dependency_links.txt
+teachers.egg-info/requires.txt
+teachers.egg-info/top_level.txt
