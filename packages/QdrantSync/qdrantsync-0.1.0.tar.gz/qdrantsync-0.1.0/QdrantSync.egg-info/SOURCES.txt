@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+qdrantsync.py
+.github/workflows/publish.yml
+QdrantSync.egg-info/PKG-INFO
+QdrantSync.egg-info/SOURCES.txt
+QdrantSync.egg-info/dependency_links.txt
+QdrantSync.egg-info/entry_points.txt
+QdrantSync.egg-info/requires.txt
+QdrantSync.egg-info/top_level.txt
