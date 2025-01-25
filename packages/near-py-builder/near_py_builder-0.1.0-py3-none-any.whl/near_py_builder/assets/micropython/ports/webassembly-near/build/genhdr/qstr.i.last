@@ -1,0 +1,18 @@
+# 1 "export_wrappers.c"
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 364 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "export_wrappers.c" 2
+
+
+void run_frozen_fn(const char *file_name, const char *fn_name);
+
+void echo() {
+  run_frozen_fn("contract.py", "echo");
+}
+
+void hello_world() {
+  run_frozen_fn("contract.py", "hello_world");
+}
