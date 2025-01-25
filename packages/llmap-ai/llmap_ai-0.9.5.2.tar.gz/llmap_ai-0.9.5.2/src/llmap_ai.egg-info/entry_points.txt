@@ -1,0 +1,2 @@
+[console_scripts]
+llmap = llmap.llmap:main
