@@ -1,0 +1,9 @@
+azure_ad_auth/__init__.py,sha256=Qu66kQ05ywF-WQd3rqC1OpgoUQQ7XfbjDZnwTKw_dQk,632
+azure_ad_auth/backends.py,sha256=uBGNJc0NJx9XJ-aVzpFKnXzY6JL92g13XkCeO_Gg1oA,3736
+azure_ad_auth/urls.py,sha256=R8GXpju2usEowuVjkiG1UAE22Xn4hU6Mx1OZ7BbE6Us,186
+azure_ad_auth/utils.py,sha256=pR0maIjvy7pUyg1KFemCFWijdT_S68I2R9ha9p0AsWY,3862
+azure_ad_auth/views.py,sha256=Wj2aiR843Pv5GoS3fOjWAbOklO0hGIkdDKu7I_0ZNrk,1744
+django_azure_ad_auth_redux-1.5.25.dist-info/LICENSE,sha256=BdIEKAOPmKxgOllZJWEsY3irVNiM-uN6-k_FELbCYRg,1588
+django_azure_ad_auth_redux-1.5.25.dist-info/METADATA,sha256=7sqCpkcgIF9eNKC2BGk4OWG6_UDDhwIpXy_Ncicozg8,3062
+django_azure_ad_auth_redux-1.5.25.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+django_azure_ad_auth_redux-1.5.25.dist-info/RECORD,,
