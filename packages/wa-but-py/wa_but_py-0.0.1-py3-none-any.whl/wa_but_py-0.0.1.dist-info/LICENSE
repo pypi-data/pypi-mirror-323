@@ -1,0 +1,32 @@
+## Custom License for wa-but-py
+
+This license governs the use of the source code and related documentation of the "wa-but-py" project (the "Software"). By using, copying, modifying, or contributing to this Software, you agree to the following terms:
+
+1. **Permitted Use**
+
+   - Users may fork, modify, and contribute to the Software's source code for personal or educational purposes.
+   - Users may use the Software to build tools or applications
+
+2. **Prohibited Use**
+
+   - Users are NOT allowed to sell, distribute, or otherwise commercialize the Software, whether modified or unmodified.
+   - All modifications to the Software must be synced with the original repository and include proper attribution to the original author.
+
+3. **Attribution**
+
+   - Users must give proper credit to the original author, Zaid, and include a reference to the original repository: https://github.com/hacxk/wa-but-py.
+
+4. **Liability Disclaimer**
+
+   - The Software is provided "AS IS" without any warranty. The use of this Software to interact with third-party services such as WhatsApp is at the user’s own risk.
+   - The author is not responsible for any account bans, violations of third-party terms of service, or other consequences resulting from the use of this Software.
+
+5. **Compliance with WhatsApp Terms**
+
+   - This Software is an unofficial tool and is not endorsed, supported, or affiliated with WhatsApp.
+   - Users are responsible for ensuring that their use of the Software complies with WhatsApp’s Terms of Service.
+
+6. **Termination**
+   - Failure to comply with the terms of this license will result in immediate termination of the user's rights to use, modify, or distribute the Software.
+
+For inquiries or permissions, contact: zaidyoutub0@gmail.com
