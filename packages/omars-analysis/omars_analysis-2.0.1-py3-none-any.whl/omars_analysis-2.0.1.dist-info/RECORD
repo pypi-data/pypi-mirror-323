@@ -1,0 +1,11 @@
+omars_analysis/.gitignore,sha256=dJUGBHAdA7SqOuU3YgVOdbeD8s4acRDAyG27tOiB2DQ,21
+omars_analysis/__init__.py,sha256=1oiKoG0w4OkmyO_k8I9uO9gwameXds5kvP2JAA_56-0,61
+omars_analysis/data/Laser_data.txt,sha256=aec0N0zsWOGV8ZBVN707ggYMzLPkI2S_GmDid_wk_6M,277
+omars_analysis/data/jn_data.txt,sha256=TaKcohhs2gfNnfkmO9qaKxbI5cnvyHKlISySG5ziHy0,447
+omars_analysis/generate_model_matrix_heredity.py,sha256=nmRxarVAxGKSpDohsn_9lbowM2IZ9scNh7PKnRfW7JA,5344
+omars_analysis/main.py,sha256=Oipq4Q6t184hHScJSM-sU33x49rzxFcMMySdqSEHfSk,10937
+omars_analysis/omars_analysis_oop.py,sha256=MkcXrhH6IpTBYnPJKiYgfAa-6O46ojS4_P07LPf_t6M,2325
+omars_analysis/subset_selection.py,sha256=-T5b0CfB2jVHzFZ5DED_n8Wcq_4LaMfI8FnzX8AUA64,3933
+omars_analysis-2.0.1.dist-info/METADATA,sha256=9GHtsd5TvpbzB4erTd8Ve4BkaQycCuygZ8O2xK5xi_o,5496
+omars_analysis-2.0.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+omars_analysis-2.0.1.dist-info/RECORD,,
