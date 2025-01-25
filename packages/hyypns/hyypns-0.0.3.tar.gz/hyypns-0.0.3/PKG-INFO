@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: hyypns
+Version: 0.0.3
+Summary: hyypns
+Author: huang yi yi
+Author-email: 363766687@qq.com
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: requires-python
+Dynamic: summary
+
+# Hyypns
