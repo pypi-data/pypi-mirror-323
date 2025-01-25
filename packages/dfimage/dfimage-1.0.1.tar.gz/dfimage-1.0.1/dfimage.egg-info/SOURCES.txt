@@ -1,0 +1,10 @@
+LICENSE
+README.md
+dfimage.py
+pyproject.toml
+dfimage.egg-info/PKG-INFO
+dfimage.egg-info/SOURCES.txt
+dfimage.egg-info/dependency_links.txt
+dfimage.egg-info/entry_points.txt
+dfimage.egg-info/requires.txt
+dfimage.egg-info/top_level.txt
