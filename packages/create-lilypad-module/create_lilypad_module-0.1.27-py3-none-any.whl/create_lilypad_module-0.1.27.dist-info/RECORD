@@ -1,0 +1,11 @@
+create_lilypad_module/__init__.py,sha256=5cK38AModeKaUHW2vzqPaYL_L1lpkPYens-HsVeQdtE,47
+create_lilypad_module/scaffold.py,sha256=fh7Vci7yWhw_jtPr6NlTmBB169CzyTocmcA_np5ioKc,5682
+create_lilypad_module/templates/config/constants.py,sha256=KDWAsmXh3fJwy9ubpDD7lN_JD8bM7xFuXy7VHECPQbo,74
+create_lilypad_module/templates/scripts/download_model.py,sha256=r-K6EfxN4-OtarB0mACk7aKPdJmVILAABay43caThDw,328
+create_lilypad_module/templates/scripts/run.py,sha256=BD7lP3rIpaU7bq2StNRWVl_o6vYEHjUOqAA7LtVWFgg,734
+create_lilypad_module/templates/src/run_inference.py,sha256=2B6MG5DVACcGftaGSy03j0O_X81UtxVKcQPVOJFQ8vc,1814
+create_lilypad_module-0.1.27.dist-info/METADATA,sha256=hWf4AwVwQFfZHswfsNwNnFe56ATqo3V1CrbWLLDi5mA,2577
+create_lilypad_module-0.1.27.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+create_lilypad_module-0.1.27.dist-info/entry_points.txt,sha256=UgEzj9lnOFRwlgV6svsTgp9Ly46AY0JDyJDDz1pFthw,69
+create_lilypad_module-0.1.27.dist-info/top_level.txt,sha256=iCT-JhPG3qZdQ3pj_3Nhn0BxzUYPu4Otw2V-evq_l1s,22
+create_lilypad_module-0.1.27.dist-info/RECORD,,
