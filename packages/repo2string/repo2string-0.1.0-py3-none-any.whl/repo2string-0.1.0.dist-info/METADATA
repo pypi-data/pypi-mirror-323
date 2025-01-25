@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: repo2string
+Version: 0.1.0
+Summary: Turn a repository's tracked files into a single text for LLM context (with token counts).
+Author-email: Your Name <you@example.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pyperclip
+Requires-Dist: pathspec
+Requires-Dist: tiktoken
