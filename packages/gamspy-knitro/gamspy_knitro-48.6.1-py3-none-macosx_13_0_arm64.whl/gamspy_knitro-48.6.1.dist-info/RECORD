@@ -1,0 +1,10 @@
+gamspy_knitro/__init__.py,sha256=CfcsNfqEJkPj9fYT_fr_z5hPNyxS6LZja9w-H-eCBJU,429
+gamspy_knitro/libknitro1410.dylib,sha256=yENwxSjYnHbNxLjH-sfhALU5IE6PyI_6xWb29JxrvgM,5707712
+gamspy_knitro/libknxcclib64.dylib,sha256=qPSO9s_TpKxXot7oYn64Zzo8CCFHDaXR7XbWF0fqAJk,388928
+gamspy_knitro/libomp.dylib,sha256=n-p43yVQkk_YUqweWchAa7Iad0JnrOhwO6EluZvYr-U,733664
+gamspy_knitro/optknitro.def,sha256=EAR2w-A6t8Yyacb0cP-CIYq1X5P-lik0juQv1dVeZ1k,51500
+gamspy_knitro/version.py,sha256=NlwiYmA-u9CB9dWiagQcD_d7rBwtpMThfkQeS2OxGJQ,22
+gamspy_knitro-48.6.1.dist-info/METADATA,sha256=zwQvknPRVYphi6uPLubFNPur6YgM-vUeLOeCUSU5p54,58
+gamspy_knitro-48.6.1.dist-info/WHEEL,sha256=1TgqNzhOMVQ9CC89JOz7UTFYrPo9i3vp-KGhAiXJYRI,111
+gamspy_knitro-48.6.1.dist-info/top_level.txt,sha256=9pwJNp8thP_p87qcDC6kMpp6stQh3CtIriAsnMw8F8Y,14
+gamspy_knitro-48.6.1.dist-info/RECORD,,
