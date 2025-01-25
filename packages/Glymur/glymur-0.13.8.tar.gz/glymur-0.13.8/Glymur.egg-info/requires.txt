@@ -1,0 +1,8 @@
+numpy
+lxml
+packaging
+
+[test]
+pytest
+pillow
+scikit-image
