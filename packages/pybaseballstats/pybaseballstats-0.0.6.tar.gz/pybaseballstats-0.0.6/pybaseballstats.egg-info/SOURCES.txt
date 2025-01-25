@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+pybaseballstats.egg-info/PKG-INFO
+pybaseballstats.egg-info/SOURCES.txt
+pybaseballstats.egg-info/dependency_links.txt
+pybaseballstats.egg-info/requires.txt
+pybaseballstats.egg-info/top_level.txt
