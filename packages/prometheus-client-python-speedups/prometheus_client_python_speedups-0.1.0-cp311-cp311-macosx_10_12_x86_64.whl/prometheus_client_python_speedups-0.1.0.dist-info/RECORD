@@ -1,0 +1,6 @@
+prometheus_client_python_speedups-0.1.0.dist-info/METADATA,sha256=3B2MQxujHkUjM02XkhTMBB8gsoc_weFNtIzNLNsUIig,976
+prometheus_client_python_speedups-0.1.0.dist-info/WHEEL,sha256=rrAVMabV-LogMGujF_FCXg7K6VL0Jl8XkPjH5-mf_Gw,106
+prometheus_client_python_speedups-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+prometheus_client_python_speedups/__init__.py,sha256=SMrZmRVBzsAeKZDy_dMYzf3v01TztcKp7ejDZbsLVf0,215
+prometheus_client_python_speedups/prometheus_client_python_speedups.cpython-311-darwin.so,sha256=kgiS4TovTpx34VRCSfjuBeEPIOZgrnCqUOj6CQ34kk0,771668
+prometheus_client_python_speedups-0.1.0.dist-info/RECORD,,
