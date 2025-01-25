@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: nanoforte
+Version: 0.0.1
+Summary: An example minimal project that compiles bindings using nanobind and scikit-build
+Author-Email: FAE <f.e@emory.edu>
+Classifier: License :: OSI Approved :: BSD License
+Project-URL: Homepage, https://github.com/evangelistalab/nanoforte
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+Compile with `pip install --no-build-isolation -ve .`
