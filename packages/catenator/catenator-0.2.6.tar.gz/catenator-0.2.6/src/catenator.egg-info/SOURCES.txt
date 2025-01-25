@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/catenator/__init__.py
+src/catenator/catenator.py
+src/catenator.egg-info/PKG-INFO
+src/catenator.egg-info/SOURCES.txt
+src/catenator.egg-info/dependency_links.txt
+src/catenator.egg-info/entry_points.txt
+src/catenator.egg-info/requires.txt
+src/catenator.egg-info/top_level.txt
+tests/test_catenator.py
