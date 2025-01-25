@@ -1,0 +1,32 @@
+Metadata-Version: 2.2
+Name: impulse-mcmc
+Version: 1.0.0
+Summary: A rewrite of PTMCMCSampler focusing on modularity
+Home-page: https://github.com/AaronDJohnson/impulse
+Author: Aaron D. Johnson
+Author-email: "Aaron D. Johnson" <aaron9035@gmail.com>
+Project-URL: Homepage, https://github.com/AaronDJohnson/impulse_mcmc
+Project-URL: Issues, https://github.com/AaronDJohnson/impulse_mcmc/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=2.2.2
+Requires-Dist: scipy>=1.15.1
+Requires-Dist: tqdm>=4.67.1
+
+# impulse
+  A rewrite of PTMCMCSampler focusing on modularity
+
+## Installation
+
+  This package can be installed via pip: `pip install impulse_mcmc`
+
+## Currently working:
+  * Metropolis-Hastings sampling with adaptive jumps
+  * Parallel tempering with adaptive temperature spacing (as in Vousden et al. 2016)
+  * Vectorized likelihoods and priors
+
+## Currently under development:
+  * Resume function

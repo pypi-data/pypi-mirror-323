@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+impulse/__init__.py
+impulse/base.py
+impulse/mhsampler.py
+impulse/online_updates.py
+impulse/product_space.py
+impulse/proposals.py
+impulse/ptsampler.py
+impulse_mcmc.egg-info/PKG-INFO
+impulse_mcmc.egg-info/SOURCES.txt
+impulse_mcmc.egg-info/dependency_links.txt
+impulse_mcmc.egg-info/requires.txt
+impulse_mcmc.egg-info/top_level.txt
