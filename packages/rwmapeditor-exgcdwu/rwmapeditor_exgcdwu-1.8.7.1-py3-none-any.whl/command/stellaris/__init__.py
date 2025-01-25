@@ -1,0 +1,1 @@
+from command.stellaris._core import auto_func as stellaris
