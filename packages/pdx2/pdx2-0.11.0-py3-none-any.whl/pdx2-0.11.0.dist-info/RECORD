@@ -1,0 +1,11 @@
+pdx2/__init__.py,sha256=Tmyd2J4vpBAJHL1O7XYXRHBQoXpdGZD3gvMHsjwKcBw,416
+pdx2/_data.py,sha256=ANtT3Hf_hjY0_gNyCL4KmZbvDEp1dFNNkgvTeavNRSY,164
+pdx2/_io.py,sha256=7DPYkY_rP1RjgCtbsByAZvZaESoAb23c3EhJJhj3K7o,812
+pdx2/_pandas.py,sha256=TqyTYzxo3-YZWT_7JyvLPPWut_mSn5R28ZKrbcnkqVI,2626
+pdx2/_query.py,sha256=PWypkg4ZOJgo3RaRkeMyThxoZBb7Crt5Z-Lmww-BUGE,1137
+pdx2/_util.py,sha256=eXBN8wl8y30M33rF7yhek6F8ewQlUHCMy9AJg5tXUU0,319
+pdx2/data/iris.csv,sha256=nMHDRccbzJtIa3TL9gY_pm9LteD2A6Szw0cewuXo41U,3858
+pdx2-0.11.0.dist-info/METADATA,sha256=qgialsWNhlEX-GLrpqmP7xAS3KRfpV0_I2liQflQpao,4179
+pdx2-0.11.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pdx2-0.11.0.dist-info/licenses/LICENSE,sha256=ka6dVgw6UoijlQTVjshJvz83g6OKiTKug4scHuoLakA,1496
+pdx2-0.11.0.dist-info/RECORD,,

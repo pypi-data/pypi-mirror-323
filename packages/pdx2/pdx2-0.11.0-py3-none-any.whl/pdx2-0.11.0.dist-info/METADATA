@@ -1,0 +1,123 @@
+Metadata-Version: 2.4
+Name: pdx2
+Version: 0.11.0
+Summary: Helper functions to run SQL on Pandas DataFrames
+Project-URL: homepage, https://github.com/ajfriend/pdx2
+Project-URL: repository, https://github.com/ajfriend/pdx2
+Project-URL: documentation, https://github.com/ajfriend/pdx2
+Project-URL: pypi, https://pypi.org/project/pdx2
+Author-email: AJ Friend <ajfriend@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2024, AJ Friend
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Keywords: ETL,SQL,data-wrangling,duckdb,pipelines
+Requires-Python: >=3.9
+Requires-Dist: duckdb>=1.0
+Requires-Dist: pandas>=2.0
+Requires-Dist: pyarrow>=15.0.0
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: ruff; extra == 'test'
+Description-Content-Type: text/markdown
+
+# PDX2: Helper functions to run SQL on Pandas DataFrames
+
+[GitHub](https://github.com/ajfriend/pdx2) | [PyPI](https://pypi.org/project/pdx2/)
+
+**NOTE**: This is basically a clone of https://github.com/ajfriend/pdx (since `pdx` is already taken on PyPI.)
+
+```shell
+pip install pdx2
+```
+
+Small ergonomic improvements to make it easy to run [DuckDB](https://duckdb.org/) queries on Pandas DataFrames.
+
+- `pdx2` monkey-patches `pandas.DataFrame` to provide a `df.sql(...)` method.
+- since `pdx` uses DuckDB, you can leverage their convienient SQL dialect:
+  - https://duckdb.org/2022/05/04/friendlier-sql.html
+  - https://duckdbsnippets.com/
+
+
+Query a Pandas DataFrame with `df.sql(...)`.
+Omit the `FROM` clause because it is added implicitly:
+
+```python
+import pdx2
+iris = pdx2.data.get_iris()  # returns pandas.DataFrame
+
+iris.sql("""
+select
+    species,
+    count(*)
+        as num,
+group by
+    1
+""")
+```
+
+You can use short SQL (sub-)expressions because `FROM` and `SELECT *` are implied whenever they're omitted:
+
+```python
+iris.sql('where petal_length > 4.5')
+```
+
+```python
+iris.sql('limit 10')
+```
+
+```python
+iris.sql('order by petal_length')
+```
+
+```python
+iris.sql('')  # returns the dataframe unmodified. I.e., 'select * from iris'
+```
+
+For more, check out the [example notebook folder](notebooks).
+
+# Other affordances
+
+- `df.aslist()`
+- `df.asdict()`
+- `df.asitem()`
+- `df.cols2dict()`
+- save/load helpers for DuckDB database files
+
+# Reference
+
+- [Apache Arrow and the "10 Things I Hate About pandas"](https://wesmckinney.com/blog/apache-arrow-pandas-internals/)
+
+## For bleeding edge DuckDB
+
+```
+git clone https://github.com/duckdb/duckdb.git
+cd duckdb
+../env/bin/pip install -e tools/pythonpkg --verbose
+```
