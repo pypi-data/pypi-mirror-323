@@ -1,0 +1,3 @@
+[console_scripts]
+checkm2 = checkm2.cli:main
+
