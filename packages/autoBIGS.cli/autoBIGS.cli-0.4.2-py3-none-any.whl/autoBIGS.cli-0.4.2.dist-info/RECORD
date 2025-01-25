@@ -1,0 +1,11 @@
+autobigs/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autobigs/cli/info.py,sha256=jsHmwH6B1MN_-jltSpBuRqLUn5S_bEIP4uYvr_M4IHs,1651
+autobigs/cli/meta.py,sha256=T8vJfuYflce6TM0RufEF-vRhOpnalDXW1Pt83fH643o,63
+autobigs/cli/program.py,sha256=dcYoq6dTrPDyMh3d99GdojerOTE0voqI8ck7UQBDEt4,1255
+autobigs/cli/st.py,sha256=ra-5FOCgqDCmpgop-_ivsiV0gRQvl12iiyY_9viWSt4,2311
+autoBIGS.cli-0.4.2.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+autoBIGS.cli-0.4.2.dist-info/METADATA,sha256=WvtownMzio4ws5k1lYmRacRo10H1_a3bnOfyfgG9TL4,43832
+autoBIGS.cli-0.4.2.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+autoBIGS.cli-0.4.2.dist-info/entry_points.txt,sha256=s4Dv0SFSeXgElRkCCopRXv6xcpbmOoOI8_A5ROQYQW8,54
+autoBIGS.cli-0.4.2.dist-info/top_level.txt,sha256=F9DQGtcD2FuT8wuQao23jnK-Ix05xmYVozTzl8U9D4I,9
+autoBIGS.cli-0.4.2.dist-info/RECORD,,
