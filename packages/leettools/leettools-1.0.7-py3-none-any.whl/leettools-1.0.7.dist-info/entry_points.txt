@@ -1,0 +1,2 @@
+[console_scripts]
+leet = leettools.cli.cli:main
