@@ -1,0 +1,16 @@
+exclude src
+recursive-exclude src *
+
+exclude .flake8
+exclude .pre-commit-config.yaml
+exclude requirements.txt
+recursive-exclude ci *.yml
+
+include LICENSE
+include MANIFEST.in
+include README.md
+include pyproject.toml
+recursive-include src/krane *
+
+global-exclude .DS_Store
+global-exclude *.pyc
