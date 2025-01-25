@@ -1,0 +1,2 @@
+[console_scripts]
+ask-trilogy = trilogy_nlp.scripts.main:main
