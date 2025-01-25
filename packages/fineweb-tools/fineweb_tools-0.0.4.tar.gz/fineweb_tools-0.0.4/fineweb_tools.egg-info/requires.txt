@@ -1,0 +1,6 @@
+polars
+huggingface-hub
+tld
+typing
+beautifulsoup4
+selenium

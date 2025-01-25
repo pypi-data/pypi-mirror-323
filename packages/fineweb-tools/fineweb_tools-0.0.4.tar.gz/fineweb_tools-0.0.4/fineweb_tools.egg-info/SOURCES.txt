@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+fineweb_tools/__init__.py
+fineweb_tools/analyze.py
+fineweb_tools/collect_ids.py
+fineweb_tools/preprocess.py
+fineweb_tools.egg-info/PKG-INFO
+fineweb_tools.egg-info/SOURCES.txt
+fineweb_tools.egg-info/dependency_links.txt
+fineweb_tools.egg-info/requires.txt
+fineweb_tools.egg-info/top_level.txt
