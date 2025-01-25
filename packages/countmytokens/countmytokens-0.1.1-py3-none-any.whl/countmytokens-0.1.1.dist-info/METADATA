@@ -1,0 +1,80 @@
+Metadata-Version: 2.2
+Name: countmytokens
+Version: 0.1.1
+Summary: Count tokens in dir or git repos
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiofiles>=24.1.0
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: gitpython>=3.1.44
+Requires-Dist: tiktoken>=0.8.0
+Requires-Dist: treelib>=1.7.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: ruff>=0.9.3; extra == "dev"
+Requires-Dist: black>=24.1.1; extra == "dev"
+Requires-Dist: mypy>=1.8.0; extra == "dev"
+
+# countmytokens
+
+Ever wondered how big in tokens are your codebase? No? Well, too bad, because `countmytokens` is here to count them anyway. 
+
+## Features
+
+- **Token Counting**: Counts tokens in all your files.
+- **Binary File Skipping**: Skipps binary files because counting tokens in those would be just silly.
+- **CSV Reports**: Generates CSV reports so you can pretend to analyze the data.
+- **Tree Reports**: Creates tree reports to visualize the token hierarchy.
+- **Git Integration**: If it detects a Git repository, it uses `ls-files` to respect `.gitignore` and other exclude settings.
+
+
+## Installation
+
+```code
+pip install countmytokens
+```
+
+For users who prefer to use `pipx`, you can install it globally:
+
+```bash
+pipx install countmytokens
+```
+
+If you are using `uv`, you can install it with:
+
+```bash
+uv tool install countmytokens
+```
+
+## Usage
+```code
+countmytokens /path/to/your/code/project
+```
+
+Options
+
+- *--exclude**:
+Paths to exclude. Because some files just don't deserve to be counted.
+- *--include-binary**:
+Include binary files in the token count. If you're into that sort of thing.
+- *--max-files**:
+Maximum concurrent file operations. Default is 100. Because why not?
+- *--report**:
+Choose your report format: `lines` or `tree`
+- **--output**:
+Output file for CSV report. Default is `token_report.csv`. Creative, huh?
+- **--verbose**:
+Increase output verbosity
+
+### Example
+```code
+countmytokens /path/to/your/code/project --exclude venv --report tree --verbose
+```
+
+## Contributing
+Feel free to contribute. Or don't. It's your life.
+
+LICENSE
+MIT License. Because sharing is caring.
