@@ -1,0 +1,9 @@
+README.md
+setup.py
+to_parquet_to_aws/__init__.py
+to_parquet_to_aws/main.py
+to_parquet_to_aws.egg-info/PKG-INFO
+to_parquet_to_aws.egg-info/SOURCES.txt
+to_parquet_to_aws.egg-info/dependency_links.txt
+to_parquet_to_aws.egg-info/requires.txt
+to_parquet_to_aws.egg-info/top_level.txt
