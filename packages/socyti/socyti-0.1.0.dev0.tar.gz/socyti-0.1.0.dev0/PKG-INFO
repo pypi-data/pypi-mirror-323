@@ -1,0 +1,46 @@
+Metadata-Version: 2.3
+Name: socyti
+Version: 0.1.0.dev0
+Summary: A Python package template with src layout
+Author: Yasas Senarath
+Author-email: 12231659+ysenarath@users.noreply.github.com
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: importlib-metadata (>=4.0)
+Project-URL: Homepage, https://github.com/ysenarath/socyti
+Project-URL: Issues, https://github.com/ysenarath/socyti/issues
+Description-Content-Type: text/markdown
+
+# socyti
+
+A Python package template with src layout.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install socyti
+```
+
+## Development Installation
+
+This project uses Poetry for dependency management. To set up a development environment:
+
+1. Clone the repository
+2. Install Poetry if you haven't already
+3. Install dependencies:
+   ```bash
+   poetry install
+   ```
+4. Run tests:
+   ```bash
+   poetry run python -m unittest
+   ```
+
+## License
+
+This project is licensed under the MIT License.
+
