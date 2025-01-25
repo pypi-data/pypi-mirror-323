@@ -1,0 +1,62 @@
+Metadata-Version: 2.3
+Name: langchain-googledrive
+Version: 0.3.2
+Summary: This is a more advanced integration of Google Drive with langchain.
+Home-page: https://www.github.com/pprados/langchain-googledrive
+License: Apache 2.0
+Author: Philippe PRADOS
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: all
+Requires-Dist: google-api-python-client (>=2.97,<3.0)
+Requires-Dist: google-auth-httplib2 (>=0.1)
+Requires-Dist: google-auth-oauthlib (>=1.0)
+Requires-Dist: langchain_community (>=0.3.0)
+Requires-Dist: langchain_core (>=0.3.0)
+Project-URL: Repository, https://www.github.com/pprados/langchain-googledrive
+Description-Content-Type: text/markdown
+
+This is a more advanced integration of Google Drive with langchain.
+
+# Install
+```
+pip install langchain-googledrive
+```
+
+# For debug
+```
+poetry install --with test
+make test
+```
+
+## Documentation
+
+Documentation is available in the [docs](docs) folder in the form of Jupyter notebooks.
+
+- [Document Loaders](docs/integrations/document_loaders/google_drive.ipynb)
+- [Retrievers](docs/integrations/retrievers/google_drive.ipynb)
+- [Toolkits](docs/integrations/toolkits/google_drive.ipynb)
+- [Tools](docs/integrations/tools/google_drive.ipynb)
+
+## Dependencies
+
+In order to support advanced features, you may need to install the following optional dependencies:
+
+| Dependency | Purpose |
+|------------|---------|
+| `unstructured` | Parsing and extracting text from various unstructured document formats |
+| `pdf2image` | Converting PDF files to images for OCR processing |
+| `pypandoc` | Converting between different document formats |
+| `pytesseract` | Performing OCR (Optical Character Recognition) on images and scanned documents |
+| `pdfminer.six` | Extracting text and metadata from PDF documents |
+| `pi_heif` | Handling HEIF (High Efficiency Image Format) image files |
+| `detectron2` | Advanced image analysis for complex document structures |
+
+These dependencies enhance the ability to process and extract information from a wide variety of file types that may be stored in Google Drive. Install the ones you need based on the types of documents you expect to work with.
+
