@@ -1,0 +1,13 @@
+{% if versions %}
+<h3>{{ _('Releases') }}</h3>
+<ul>
+    <li><a href="{{ vpathto(latest_version.name).replace(latest_version.name, 'stable') }}">stable</a> </li>
+  {%- for item in versions %}
+    {%- if item.is_released %}
+      <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+    {%- elif item.name == "main" %}
+      <li><a href="{{ item.url.replace('main', 'dev') }}">{{ item.name.replace("main", "dev") }}</a></li>
+    {%- endif %}
+  {%- endfor %}
+</ul>
+{% endif %}

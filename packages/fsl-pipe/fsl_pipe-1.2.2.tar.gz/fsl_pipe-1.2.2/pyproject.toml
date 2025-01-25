@@ -1,0 +1,44 @@
+[project]
+name = "fsl-pipe"
+version = "1.2.2"
+description = "Declarative pipelines based on Filetrees"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Michiel Cottaar", email = "michiel.cottaar@ndcn.ox.ac.uk" }
+]
+url = "https://git.fmrib.ox.ac.uk/fsl/fsl-pipe"
+dependencies = [
+    "file-tree>=1.5",
+    "xarray",
+    "dask",
+    "fslpy",
+    "loguru",
+    "fsl-sub",
+    "graphviz",
+    "wcmatch>=10.0",
+]
+license = {file = "LICENSE"}
+keywords = ["pipeline", "neuroimage"]
+
+[project.urls]
+Homepage = "https://git.fmrib.ox.ac.uk/fsl/fsl-pipe"
+Documentation = "https://open.win.ox.ac.uk/pages/fsl/fsl-pipe"
+Repository = "https://git.fmrib.ox.ac.uk/fsl/fsl-pipe"
+Issues = "https://git.fmrib.ox.ac.uk/fsl/fsl-pipe/-/issues"
+Changelog = "https://git.fmrib.ox.ac.uk/fsl/fsl-pipe/-/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipython",
+    "myst-parser>=4.0.0",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "pytest>=8.3.4",
+    "sphinx-multiversion>=0.2.4",
+    "sphinx>=8.1.3",
+]
