@@ -1,0 +1,84 @@
+[project]
+name = "abuse-whois"
+dynamic = ["version"]
+description = "Find where to report a domain for abuse"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = "MIT"
+authors = [{ name = "Manabu Niseki", email = "manabu.niseki@gmail.com" }]
+dependencies = [
+  "aiometer~=0.5",
+  "asyncache~=0.3",
+  "asyncer>=0.0.8",
+  "asyncwhois~=1.1",
+  "azuma~=0.7",
+  "cachetools~=5.5",
+  "loguru~=0.7",
+  "pydantic>2.0.1,!=2.1.0,<3.0.0", # same as FastAPI
+  "PyYAML~=6.0",
+  "returns~=0.24",
+  "stamina~=24.3",
+  "starlette>=0.40.0,<0.46.0",     # same as FastAPI
+  "tld~=0.13",
+  "validators~=0.34",
+]
+
+[project.urls]
+Homepage = "https://github.com/ninoseki/abuse_whois"
+Repository = "https://github.com/ninoseki/abuse_whois"
+
+[project.optional-dependencies]
+api = ["fastapi[all]~=0.115", "gunicorn~=23.0"]
+
+[project.scripts]
+abuse_whois = "abuse_whois.main:app"
+
+[build-system]
+requires = ["hatchling>=1.26", "uv-dynamic-versioning==0.4.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[dependency-groups]
+dev = [
+  "build>=1.2.2",
+  "coveralls>=4.0.1,<5.0.0",
+  "lefthook>=1.10.10",
+  "mypy>=1.14.1",
+  "pre-commit>=4.1.0",
+  "pytest>=8.3.4",
+  "pytest-asyncio>=0.25.2",
+  "pytest-cov>=6.0.0",
+  "pytest-mock>=3.14.0,<4.0.0",
+  "pytest-pretty>=1.2,<2.0",
+  "pytest-randomly>=3.16.0",
+  "ruff>=0.9.3",
+  "uv-sort>=0.4.0",
+]
+
+[tool.poetry-dynamic-versioning]
+enable = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.ruff.lint]
+select = [
+  "ASYNC", # flake8-async
+  "B",     # flake8-bugbear
+  "C",     # flake8-comprehensions
+  "E",     # pycodestyle errors
+  "F",     # pyflakes
+  "I",     # isort
+  "N",     # pep8-naming
+  "RET",   # flake8-return
+  "RUF",   # Ruff-specific rules
+  "SIM",   # flake8-simplify
+  "T20",   # flake8-print
+  "UP",    # pyupgrade
+  "W",     # pycodestyle warnings
+]
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
