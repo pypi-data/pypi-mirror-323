@@ -1,0 +1,12 @@
+cradle/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cradle/cli.py,sha256=HXEHuRo72Zf7WdYuyqMANok56xBBeboOOokz834db9A,4023
+cradle/templates.yaml,sha256=2LEyxyB65I0fIraE7uzcebx2QJzmjHzow9rPCeuitNQ,385
+cradle/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cradle/utils/git.py,sha256=LLzBBT5IDtapuU-Edwm6d5aNabepC_1TdT91FmS4ySQ,3619
+cradle/utils/questions.py,sha256=ch5j99g1hKcUwGdxqUHKsjnSXKBP-QjQtn2Tmc_XTTI,2555
+cradle/utils/shell.py,sha256=AW70nXl8v3vJv0dsGSx4T-w_eA8n07hjinp-qsJRQnI,678
+repo_launcher-0.0.6.dist-info/METADATA,sha256=UJ5qDvEbn4DpJtEId7Oid_NbKQlfdwuWIdbdZLTuUl4,5430
+repo_launcher-0.0.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+repo_launcher-0.0.6.dist-info/entry_points.txt,sha256=lKYrstGx0lHxq8MB-S8DukeuJ7xgiy0b-7TP_e6bYiE,50
+repo_launcher-0.0.6.dist-info/licenses/LICENSE,sha256=iFK9pty9SZbssugIfrx-2NP22FL9L4u9sOw8v9m8Jzk,1083
+repo_launcher-0.0.6.dist-info/RECORD,,
