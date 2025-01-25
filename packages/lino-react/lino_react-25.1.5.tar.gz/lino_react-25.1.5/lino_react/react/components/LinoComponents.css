@@ -1,0 +1,10 @@
+.dangling-modification {
+    background: #ffff0030;
+}
+.unsaved-modification {
+    background: #ff00ff20;
+}
+
+.inline-display {
+    display: inline;
+}
