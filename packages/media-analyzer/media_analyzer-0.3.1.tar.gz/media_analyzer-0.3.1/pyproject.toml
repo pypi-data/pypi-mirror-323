@@ -1,0 +1,154 @@
+[project]
+name = "media-analyzer"
+version = "0.3.1"
+description = "Analyze video/image with machine learning methods, exif data, and other file based information. "
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Ruurd Bijlsma", email = "ruurd@bijlsma.dev" }
+]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "accelerate>=1.3.0",
+    "bitsandbytes>=0.45.0",
+    "insightface>=0.7.3",
+    "material-color-utilities>=0.2.0",
+    "meteostat>=1.6.8",
+    "networkx>=3.4.2",
+    "onnxruntime>=1.20.1",
+    "openai>=1.59.8",
+    "opencv-python>=4.11.0.86",
+    "pillow>=11.1.0",
+    "pillow-avif-plugin>=1.4.6",
+    "pyexiftool>=0.5.6",
+    "pytesseract>=0.3.13",
+    "pytz>=2024.2",
+    "reverse-geocode>=1.6.5",
+    "scikit-learn>=1.6.1",
+    "scipy>=1.15.1",
+    "timezonefinder>=6.5.7",
+    "torch>=2.5.1",
+    "torchvision>=0.20.1",
+    "transformers>=4.48.0",
+    "types-pytz>=2024.2.0.20241221",
+    "types-tqdm>=4.67.0.20241221",
+]
+
+[project.urls]
+Homepage = "https://github.com/RuurdBijlsma/media-analyzer"
+Repository = "https://github.com/RuurdBijlsma/media-analyzer"
+Documentation = "https://ruurdbijlsma.github.io/media-analyzer"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.ruff]
+line-length = 100
+exclude = ["scripts", "alembic", "__init__.py", "examples"]
+lint.ignore = [
+    'S101', 'INP001',
+    'T201', 'S311',
+    'TRY003', 'PT018',
+    'PLR0913', "B019",
+    "COM812", "D100",
+]
+lint.select = [
+    "A", # https://docs.astral.sh/ruff/rules/#flake8-builtins-a
+    "ANN", # https://docs.astral.sh/ruff/rules/#flake8-annotations-ann
+    "ARG", # https://docs.astral.sh/ruff/rules/#flake8-unused-arguments-arg
+    "ASYNC", # https://docs.astral.sh/ruff/rules/#flake8-async-async
+    "B", # https://docs.astral.sh/ruff/rules/#flake8-bugbear-b
+    "BLE", # https://docs.astral.sh/ruff/rules/#flake8-blind-except-ble
+    "C4", # https://docs.astral.sh/ruff/rules/#flake8-comprehensions-c4
+    "C9", # https://docs.astral.sh/ruff/rules/#mccabe-c90
+    "COM", # https://docs.astral.sh/ruff/rules/#flake8-commas-com
+    "D", # Docstrings
+    "DJ", # https://docs.astral.sh/ruff/rules/#flake8-django-dj
+    "DTZ", # https://docs.astral.sh/ruff/rules/#flake8-datetimez-dtz
+    "E", # https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
+    "ERA", # https://docs.astral.sh/ruff/rules/#eradicate-era
+    "EXE", # https://docs.astral.sh/ruff/rules/#flake8-executable-exe
+    "F", # https://docs.astral.sh/ruff/rules/#pyflakes-f
+    "FLY", # https://docs.astral.sh/ruff/rules/#flynt-fly
+    "G", # https://docs.astral.sh/ruff/rules/#flake8-logging-format-g
+    "I", # https://docs.astral.sh/ruff/rules/#isort-i
+    "ICN", # https://docs.astral.sh/ruff/rules/#flake8-import-conventions-icn
+    "INP", # https://docs.astral.sh/ruff/rules/#flake8-no-pep420-inp
+    "INT", # https://docs.astral.sh/ruff/rules/#flake8-gettext-int
+    "ISC", # https://docs.astral.sh/ruff/rules/#flake8-implicit-str-concat-isc
+    "N", # https://docs.astral.sh/ruff/rules/#pep8-naming-n
+    "PERF", # https://docs.astral.sh/ruff/rules/#perflint-perf
+    "PGH", # https://docs.astral.sh/ruff/rules/#pygrep-hooks-pgh
+    "PIE", # https://docs.astral.sh/ruff/rules/#flake8-pie-pie
+    "PL", # https://docs.astral.sh/ruff/rules/#pylint-pl
+    "PT", # https://docs.astral.sh/ruff/rules/#flake8-pytest-style-pt
+    "PTH", # https://docs.astral.sh/ruff/rules/#flake8-use-pathlib-pth
+    "PYI", # https://docs.astral.sh/ruff/rules/#flake8-pyi-pyi
+    "Q", # https://docs.astral.sh/ruff/rules/#flake8-quotes-q
+    "RET", # https://docs.astral.sh/ruff/rules/#flake8-return-ret
+    "RSE", # https://docs.astral.sh/ruff/rules/#flake8-raise-rse
+    "RUF", # https://docs.astral.sh/ruff/rules/#ruff-specific-rules-ruf
+    "S", # https://docs.astral.sh/ruff/rules/#flake8-bandit-s
+    "SIM", # https://docs.astral.sh/ruff/rules/#flake8-simplify-sim
+    "SLF", # https://docs.astral.sh/ruff/rules/#flake8-self-slf
+    "SLOT", # https://docs.astral.sh/ruff/rules/#flake8-slots-slot
+    "T10", # https://docs.astral.sh/ruff/rules/#flake8-debugger-t10
+    "T20", # https://docs.astral.sh/ruff/rules/#flake8-print-t20
+    "TCH", # https://docs.astral.sh/ruff/rules/#flake8-type-checking-tch
+    "TID", # https://docs.astral.sh/ruff/rules/#flake8-tidy-imports-tid
+    "TRY", # https://docs.astral.sh/ruff/rules/#tryceratops-try
+    "UP", # https://docs.astral.sh/ruff/rules/#pyupgrade-up
+    "W", # https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
+    "YTT", # https://docs.astral.sh/ruff/rules/#flake8-2020-ytt
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.coverage.report]
+exclude_also = [
+    # 1. Exclude an except clause of a specific form:
+    "except ValueError:\\n\\s*assume\\(False\\)",
+    # 2. Comments to turn coverage on and off:
+    "no cover: start(?s:.)*?no cover: stop",
+    # 3. A pragma comment that excludes an entire file:
+    "\\A(?s:.*# pragma: exclude file.*)\\Z",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+[tool.coverage.coverage]
+fail_under = 100
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch_gpu", marker = "sys_platform != 'darwin'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch_gpu"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[dependency-groups]
+dev = [
+    "mypy>=1.14.1",
+    "pdoc>=15.0.1",
+    "pylint>=3.3.3",
+    "pyscan>=1.0.0",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.9.2",
+    "types-python-dateutil>=2.9.0.20241206",
+    "types-pytz>=2024.2.0.20241221",
+]
