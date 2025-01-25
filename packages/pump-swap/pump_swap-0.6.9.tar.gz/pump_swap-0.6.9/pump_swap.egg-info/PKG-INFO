@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: pump_swap
+Version: 0.6.9
+Summary: A Python module for interacting with Solana's Pump.fun tokens
+Home-page: https://github.com/FLOCK4H/pump_swap
+Author: Flock4h
+Author-email: flock4h@gmail.com
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: solders>=0.21.0
+Requires-Dist: solana>=0.35.1
+Requires-Dist: borsh-construct
+Requires-Dist: aiohttp
+Requires-Dist: requests
+
+# PumpSwap
+
+PumpSwap is a Python module for interacting with Solana's Pump.fun tokens. It enables users to manage bonding curves, execute buy and sell transactions, and handle wallet interactions with ease.
+
+## Features
+- Create, sign, and send Solana transactions for Pump.fun tokens.
+- Fetch wallet balances and Solana price in USD.
+- Automatically derive bonding curve and associated token addresses.
+- Utility functions for converting USD to lamports and tokens.
+
+## Installation
+Install via pip:
+
+```bash
+
+pip install pump_swap
+
+```
