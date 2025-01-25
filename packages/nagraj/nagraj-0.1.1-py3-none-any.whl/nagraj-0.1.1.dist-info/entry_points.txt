@@ -1,0 +1,3 @@
+[console_scripts]
+nagraj=nagraj.cli.main:cli
+
