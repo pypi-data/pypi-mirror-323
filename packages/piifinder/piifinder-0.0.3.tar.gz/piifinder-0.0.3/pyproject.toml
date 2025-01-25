@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "twine"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "piifinder"
+version = "0.0.3"
+description = "A CLI tool to detect and optionally anonymize PII in files."
+authors = [
+  { name = "Your Name", email = "your.email@example.com" }
+]
+# Provide license either as text or file
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.7"
+
+# >>> Important: Use presidio-analyzer and presidio-anonymizer <<<
+dependencies = [
+  "presidio-analyzer>=2.0.0",
+  "presidio-anonymizer>=2.0.0"
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.scripts]
+piifinder = "piifinder.cli:main"
