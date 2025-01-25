@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "simplepushoverclient"
+version = "0.1.0"
+description = "A simple python client for sending pushover messages."
+authors = ["Benedikt Limbacher"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pydantic = "^2.10.6"
+requests = "^2.32.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+black = "^24.10.0"
+requests-mock = "^1.12.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[pytest]
+testpaths = ["tests"]
+pythonpath = ["src"]
