@@ -1,0 +1,4 @@
+click
+azure-identity
+requests
+setuptools
