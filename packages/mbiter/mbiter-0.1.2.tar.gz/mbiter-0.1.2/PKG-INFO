@@ -1,0 +1,36 @@
+Metadata-Version: 2.2
+Name: mbiter
+Version: 0.1.2
+Summary: Add your description here
+Author-email: Sebastian <peraltas@seas.upenn.edu>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: rich-click>=1.8.5
+Requires-Dist: rich>=13.9.4
+
+# MB ITER
+
+## Install
+```bash
+
+pip install mbiter
+```
+
+## Example
+
+```python
+
+from mbiter import process_tasks
+
+async def main():
+    async def worker(func: Callable[[], Any]) -> Any:
+        print(f"{func()=}")
+    
+    exec = process_tasks([worker(lambda: 1), worker(lambda: 2)])
+    async for result in exec:
+        print(f"{result=}")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+```
