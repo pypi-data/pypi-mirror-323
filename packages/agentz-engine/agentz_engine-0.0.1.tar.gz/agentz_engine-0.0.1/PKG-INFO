@@ -1,0 +1,6 @@
+Metadata-Version: 2.2
+Name: agentz-engine
+Version: 0.0.1
+Summary: empty metapackage
+License: MIT
+Requires-Dist: numpy
