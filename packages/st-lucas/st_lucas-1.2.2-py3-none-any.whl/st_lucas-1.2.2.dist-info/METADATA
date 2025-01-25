@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: st_lucas
+Version: 1.2.2
+Summary: ST_LUCAS Python package
+Author-email: Martin Landa <martin.landa@fsv.cvut.cz>, Ondřej Pešek <ondrej.pesek@fsv.cvut.cz>, Tomáš Bouček <tomas.boucek@fsv.cvut.cz>, Lukáš Brodský <lukas.brodsky@natur.cuni.cz>
+License: MIT
+Project-URL: documentation, https://geoforall.fsv.cvut.cz/st_lucas/api/
+Project-URL: repository, https://gitlab.com/geoharmonizer_inea/st_lucas/st_lucas-python-package
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: geopandas>=0.8
+Requires-Dist: OWSLib>=0.26
+Requires-Dist: GDAL>=3.7
+
+# ST_LUCAS Python Package
+
+Python package for accessing harmonized space-time aggregated LUCAS
+(Land Use and Coverage Area frame Survey) data provided by the
+[ST_LUCAS system](https://geoforall.fsv.cvut.cz/st_lucas/).
+
+Documentation: https://geoforall.fsv.cvut.cz/st_lucas/api/
+
+## Funding
+
+This work is co-financed under Grant Agreement Connecting Europe
+Facility (CEF) Telecom project 2018-EU-IA-0095 by the European Union.
