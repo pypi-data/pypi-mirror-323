@@ -1,0 +1,17 @@
+loka/__init__.py,sha256=Ve3dS5ueB_eMn7iBF4daKJUey50iDnKsyzPLd22MhMs,57
+loka/__main__.py,sha256=Wu4ERan9lomS7nBQ61hWxtnQytJa1vFgd8aKneUOjh0,1294
+loka/ai_lib.py,sha256=GSuP-QC7fw87YmFtMwznVkEb8MIzQyBGE2AB3OIgVdU,1378
+loka/cli.py,sha256=nqgOAGCt-9eIFCdK9aL-xYv-QF1Gv07IKj9Obi3tjw0,1071
+loka/code_generator.py,sha256=RNs0MPmPTTdcjhkxP95UJFWOy36EdcKxNr9SzlnC25M,1573
+loka/interpreter.py,sha256=rSiEqikyTZMrlB734cdcSUK_T_f4Fgqgk8sWQosGMl0,7687
+loka/lexer.py,sha256=AY1mSxvLISjiAqyNNZPJ7w-HIlZ6hIVmOoAxhlfEGBc,8090
+loka/matrice.py,sha256=GUT3-ZYGxxwwRe1UZDTsppfnsfImGGKYBrgcLPYGd3g,981
+loka/matrix.py,sha256=8irqOyalL-fslHTzft92VGXpbYIQBI_3lrZQoBo76-U,1128
+loka/optimizer.py,sha256=QEd1jaU1qIu3SSCLfV2-vM53YbJigHq6S_8n5eTei6I,1715
+loka/parser.py,sha256=OPhxVPmFdM6BR_nM8jiFpVB9bHOqaxcCboa64zAsOe8,9092
+loka_lang-0.3.0.dist-info/LICENSE,sha256=zpHutAncVg8hIzovBCMYkqYvNqgy8bTlUa1t_Ah0Wew,1082
+loka_lang-0.3.0.dist-info/METADATA,sha256=5HkJS-VjR_ni3MZlfFPjuOLbAWLZdtqYYGh-lFe5jZE,6628
+loka_lang-0.3.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+loka_lang-0.3.0.dist-info/entry_points.txt,sha256=pHlRxxLr5WQIuLIj1G8Eey4w9RDtWmmLh3QX4bu0usU,39
+loka_lang-0.3.0.dist-info/top_level.txt,sha256=4kfcwLQWsrcOjYb8uxDTIFyEvKYoRUuacbgMlspKKtM,5
+loka_lang-0.3.0.dist-info/RECORD,,
