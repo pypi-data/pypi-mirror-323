@@ -1,0 +1,5 @@
+six
+sqlalchemy_utils
+cryptography
+pycryptodome
+sqlalchemy
