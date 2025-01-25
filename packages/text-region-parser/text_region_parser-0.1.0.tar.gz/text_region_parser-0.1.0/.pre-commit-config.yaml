@@ -1,0 +1,56 @@
+# https://pre-commit.com/
+
+default_stages: [ pre-commit, pre-push ]
+default_language_version:
+  python: python3.9
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-ast
+      - id: check-json
+      - id: pretty-format-json
+        args: [ --autofix, --indent=4 ]
+      - id: check-toml
+      - id: check-yaml
+      - id: check-xml
+      - id: end-of-file-fixer
+      - id: check-docstring-first
+      - id: trailing-whitespace
+        exclude: .md$
+      - id: check-added-large-files
+      - id: detect-private-key
+
+  - repo: https://github.com/bwhmather/ssort
+    rev: 0.14.0
+    hooks:
+      - id: ssort
+        entry: ssort
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.3
+    hooks:
+      - id: ruff
+        args: [ --fix ]
+      - id: ruff-format
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.14.1
+    hooks:
+      - id: mypy
+        name: mypy
+        files: ^src/
+        args: [
+          --install-types,
+          --non-interactive,
+          --config-file=pyproject.toml,
+        ]
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.5.24
+    hooks:
+      # Update the uv lockfile
+      - id: uv-lock
+      # Run uv sync
+      - id: uv-sync
