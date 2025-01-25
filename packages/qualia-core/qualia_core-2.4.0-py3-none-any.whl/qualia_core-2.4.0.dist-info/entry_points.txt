@@ -1,0 +1,7 @@
+[console_scripts]
+clearml-import-offline = qualia_core.experimenttracking.pytorch.ClearML:ClearML.import_and_clear_all_offline_sessions
+qualia = qualia_core.main:main
+qualia-gen-featuremap-pdf = qualia_core.postprocessing.VisualizeFeatureMaps:VisualizeFeatureMaps.gen_featuremap_pdf
+
+[gui_scripts]
+
