@@ -1,0 +1,11 @@
+logstruct/__init__.py,sha256=Gptql-1TUhWmFF8TuzBdnrsCkoN9E7HQdaTKP4Iq1Nc,934
+logstruct/_version.py,sha256=PKIMyjdUACH4-ONvtunQCnYE2UhlMfp9su83e3HXl5E,411
+logstruct/context.py,sha256=t_6ctop8-RNvCSeBvqzul8OJg6865KJdDqTtWJ1EaOo,3441
+logstruct/formatters.py,sha256=jqZKSHGt-DcAlgXUrWgpLCrU7-N0wmnXRyYn7arBfFw,9552
+logstruct/logger.py,sha256=eAhh-NnT85_7qvwu_ofhGjRzr1TtNRxm2__1OOkAceA,8955
+logstruct/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logstruct-0.1.1.dist-info/LICENCE,sha256=7OWru3jBnNHGIlsNq4SWd4wYv2QXKTdUJPwo-Ky_OiM,1464
+logstruct-0.1.1.dist-info/METADATA,sha256=lS4kjO2s-PN7moJ2cbo-1CmVhX_21hDlzJp65rE9O0A,3774
+logstruct-0.1.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+logstruct-0.1.1.dist-info/top_level.txt,sha256=vrtos7e7ZBoE0FhNElGjdIPExoPcFrWEfRt5wCyyvbw,10
+logstruct-0.1.1.dist-info/RECORD,,
