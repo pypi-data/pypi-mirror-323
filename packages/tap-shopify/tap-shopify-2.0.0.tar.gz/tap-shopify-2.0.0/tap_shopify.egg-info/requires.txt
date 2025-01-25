@@ -1,0 +1,8 @@
+ShopifyAPI==12.6.0
+singer-python==6.0.0
+
+[dev]
+pylint==3.0.3
+ipdb
+requests==2.20.0
+nose
