@@ -1,0 +1,13 @@
+id: shared-hosting-netlify
+title: Netlify
+description: A shard hosting rule for Netlify
+contact:
+  provider: Netlify
+  address: fraud@netlify.com
+detection:
+  selection:
+    domain|endswith:
+      - .netlify.app
+  condition: selection
+logsource:
+  product: abuse_whois

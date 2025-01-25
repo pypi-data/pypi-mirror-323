@@ -1,0 +1,2 @@
+[console_scripts]
+abuse_whois = abuse_whois.main:app

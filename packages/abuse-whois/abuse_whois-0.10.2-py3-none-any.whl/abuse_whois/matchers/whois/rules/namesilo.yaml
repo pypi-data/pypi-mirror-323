@@ -1,0 +1,13 @@
+id: whois-namesilo
+title: Namesilo
+description: A whois rule for Namesilo
+contact:
+  provider: Namesilo
+  address: https://www.namesilo.com/report_abuse.php
+detection:
+  selection:
+    rawText|contains:
+      - abuse@namesilo.com
+  condition: selection
+logsource:
+  product: abuse_whois

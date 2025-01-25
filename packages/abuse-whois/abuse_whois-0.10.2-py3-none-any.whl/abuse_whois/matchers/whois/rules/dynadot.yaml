@@ -1,0 +1,13 @@
+id: whois-dynabot
+title: Dynabot
+description: A whois rule for Dynabot
+contact:
+  provider: Dynadot
+  address: https://www.dynadot.com/report_abuse.html
+detection:
+  selection:
+    rawText|contains:
+      - abuse@dynadot.com
+  condition: selection
+logsource:
+  product: abuse_whois
