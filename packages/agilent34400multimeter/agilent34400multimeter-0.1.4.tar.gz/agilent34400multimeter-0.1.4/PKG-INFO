@@ -1,0 +1,33 @@
+Metadata-Version: 2.2
+Name: agilent34400multimeter
+Version: 0.1.4
+Summary: Python API for controlling Agilent 34400 series measurement devices
+Home-page: https://github.com/juliansteffens/agilent34400multimeter
+Author: Julian Steffens, Robin Binger
+Author-email: juliansf@mail.uni-paderborn.de
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyvisa
+Requires-Dist: visa
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Multimeter Control
+
+This python package provides an API for controlling Agilent 34400 series measurement devices through the pyVISA package
+
+## Installation
+
+For installing this package run the following command:
+
+```bash
+pip install agilent34400multimeter
