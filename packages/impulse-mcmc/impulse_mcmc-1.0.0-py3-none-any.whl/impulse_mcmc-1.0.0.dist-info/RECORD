@@ -1,0 +1,12 @@
+impulse/__init__.py,sha256=iFqwUc2VXDAMIIa9jkOuF4CSRUcVg8An_hT27Re763Q,27
+impulse/base.py,sha256=d8NdRBtpncRjh21vHpu3cpwL5Ys2UYuZf2l9tljW2jY,8777
+impulse/mhsampler.py,sha256=tUfkNAWsZpyW0eF0wmGJF24NWDJrp14_BE06RDQYleE,3270
+impulse/online_updates.py,sha256=Mu7IWOrp9Wen0kcUzqagRasFyjHqD5p41dWiXG2qEQI,2439
+impulse/product_space.py,sha256=2R-9okdN4k1LcH4Q-OOqNkn4UQmDLToxm8A7rq-14po,3247
+impulse/proposals.py,sha256=AplGAXpTxGueLhIu-Z5D8NG_-cfcyhGLAVPQmiAkl_A,11148
+impulse/ptsampler.py,sha256=N0QycjiDY1mXv4X4BA0oJX995IpyjjzpTG8u6Lrqkds,4537
+impulse_mcmc-1.0.0.dist-info/LICENSE,sha256=RpqQH8t-9O9Ss97sk2NZoDJndU97a3Tojb_7yzs-jdU,1073
+impulse_mcmc-1.0.0.dist-info/METADATA,sha256=Zq4ZPgu7cqJIrgjtnRdvBCYl6uGybjUhj-uCvuqBxOU,1057
+impulse_mcmc-1.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+impulse_mcmc-1.0.0.dist-info/top_level.txt,sha256=CGoAcZpXNRYqQuM9Fihf0aga2kNHnkVqSpmT9DH21PE,8
+impulse_mcmc-1.0.0.dist-info/RECORD,,
