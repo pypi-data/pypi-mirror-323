@@ -1,0 +1,68 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: click
+    name: submit
+    locators:
+      - mode: text
+        value: Submit
+        index: 0
+        uses: -2
+  - verb: fill
+    name: first_name
+    locators:
+      - mode: name
+        value: first_name
+        index: 0
+        uses: -2
+  - verb: click
+    name: handy_makes
+    locators:
+      - mode: text (partial)
+        value: Handy makes
+        index: 0
+        uses: 1
+  - verb: fill
+    name: last_name
+    locators:
+      - mode: name
+        value: last_name
+        index: 0
+        uses: -2
+  - verb: fill
+    name: email
+    locators:
+      - mode: name
+        value: email_address
+        index: 0
+        uses: -2
+  - verb: fill
+    name: subject
+    locators:
+      - mode: name
+        value: subject
+        index: 0
+        uses: -2
+  - verb: fill
+    name: message
+    locators:
+      - mode: name
+        value: message
+        index: 0
+        uses: -2

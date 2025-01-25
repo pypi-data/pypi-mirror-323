@@ -1,0 +1,114 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: first_name
+    locators:
+      - mode: id
+        value: FIRST_NAME
+        index: 0
+        uses: 2
+  - verb: fill
+    name: email_address
+    locators:
+      - mode: id
+        value: EMAIL
+        index: 0
+        uses: 2
+  - verb: fill
+    name: phone
+    locators:
+      - mode: id
+        value: PHONE
+        index: 0
+        uses: 2
+  - verb: select
+    name: location
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: location
+        index: 0
+        uses: -1
+      - mode: name
+        value: location
+        index: 0
+        uses: -1
+      - mode: id
+        value: location
+        index: 0
+        uses: -1
+      - mode: id
+        value: location
+        index: 0
+        uses: -1
+      - mode: aria-label
+        value: Location
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[placeholder="Location"]'
+        index: 0
+        uses: -1
+      - mode: id
+        value: Location
+        index: 0
+        uses: -1
+      - mode: id
+        value: STORE
+        index: 0
+        uses: -1
+  - verb: select
+    name: subject
+    locators:
+      - mode: id
+        value: ISSUE
+        index: 0
+        uses: 2
+  - verb: fill
+    name: message
+    locators:
+      - mode: id
+        value: MESSAGE
+        index: 0
+        uses: 2
+  - verb: click
+    name: send
+    locators:
+      - mode: text
+        value: Send
+        index: 0
+        uses: 2
+  - verb: fill
+    name: last_name
+    locators:
+      - mode: id
+        value: LAST_NAME
+        index: 0
+        uses: 2
+  - verb: select
+    name: store
+    locators:
+      - mode: id
+        value: STORE
+        index: 0
+        uses: 2
