@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+dau-active-inference/__init__.py
+dau-active-inference/dau-active-inference.py
+dau_active_inference.egg-info/PKG-INFO
+dau_active_inference.egg-info/SOURCES.txt
+dau_active_inference.egg-info/dependency_links.txt
+dau_active_inference.egg-info/entry_points.txt
+dau_active_inference.egg-info/requires.txt
+dau_active_inference.egg-info/top_level.txt
