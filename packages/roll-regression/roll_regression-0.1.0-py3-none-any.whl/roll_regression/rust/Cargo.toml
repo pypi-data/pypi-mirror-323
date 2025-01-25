@@ -1,0 +1,12 @@
+[package]
+name = "roll_regression"
+version = "0.1.0"
+edition = "2021"
+authors = ["Gavin Chan <gavincyi@gmail.com>"]
+
+[lib]
+name = "roll_regression"
+crate-type = ["cdylib"]
+
+[dependencies]
+nalgebra = "0.32.3"
