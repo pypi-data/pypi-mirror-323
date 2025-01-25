@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "empire-chain"
+version = "0.3.6"
+description = "An orchestration framework for all your AI needs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai",
+    "anthropic",
+    "groq",
+    "qdrant-client",
+    "chromadb",
+    "sentence-transformers",
+    "PyPDF2",
+    "python-docx",
+    "yfinance",
+    "duckduckgo-search",
+    "phidata",
+    "streamlit",
+    "numpy",
+    "Pillow",
+    "matplotlib",
+    "docling",
+    "tqdm",
+    "soundfile",
+    "kokoro_onnx",
+    "python-dotenv",
+    "crawl4ai",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["empire_chain*"]
