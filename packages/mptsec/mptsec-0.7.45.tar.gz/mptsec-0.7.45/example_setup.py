@@ -1,0 +1,26 @@
+import os
+
+from setuptools import setup
+
+setup( 
+    name='mpt', 
+    version='0.7.1', 
+    description='Mobile Pentest Toolkit (MPT)', 
+    author='Alexander Subbotin', 
+    author_email='dev@bytesnipers.com', 
+    url='https://github.com/ByteSnipers/mobile-pentest-toolkit',
+    packages=['mpt'], 
+    install_requires=[ 
+        'GitPython',
+        'colorlog',
+        'colorama',
+        'tabulate',
+        'frida-tools',
+        'simple_term_menu'
+    ], 
+     entry_points={
+        'console_scripts': [
+            'mpt=mpt.console:cli'
+        ],
+    }
+) 
