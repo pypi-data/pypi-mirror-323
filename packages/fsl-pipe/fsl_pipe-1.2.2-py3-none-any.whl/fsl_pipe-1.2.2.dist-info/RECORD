@@ -1,0 +1,9 @@
+fsl_pipe/__init__.py,sha256=4YktSiCuGza_qhCDuoBWR2U01kLJJyX5u9rD6W7sAZc,478
+fsl_pipe/datalad.py,sha256=lS5UFW_FRGZh_fqziempzy7paef_pPwABOwUflejYFo,1233
+fsl_pipe/job.py,sha256=6jFEayssNaMiKGlnpesVKMhxTNJiCuMyAbVbOtKn6TI,39754
+fsl_pipe/pipeline.py,sha256=9Y0IeshSrSg7WVmCvmZ2-rdpczkZDFtOUozF79pUD2s,38119
+fsl_pipe/testing.py,sha256=yjocdkuwDu5fuDE_gpjdK1x1f0YY_aJipjlCB5OtTxc,426
+fsl_pipe-1.2.2.dist-info/METADATA,sha256=uFFANzthVxpKxBxLx-WqK3GoF7aes2miwB6EhNGdlek,5190
+fsl_pipe-1.2.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fsl_pipe-1.2.2.dist-info/licenses/LICENSE,sha256=LVIw5JARlWv5P3qRV75x4EQYqbF0G2XO18myh7NoDCA,1094
+fsl_pipe-1.2.2.dist-info/RECORD,,
