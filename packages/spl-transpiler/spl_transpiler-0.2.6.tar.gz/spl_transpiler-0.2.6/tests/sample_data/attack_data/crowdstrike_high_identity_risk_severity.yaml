@@ -1,0 +1,5 @@
+input_file: ./inputs/crowdstrike_identities.jsonl
+output_file: ./outputs/crowdstrike_high_identity_risk_severity.jsonl
+query_file: ../queries/security_content/crowdstrike_high_identity_risk_severity.spl
+cleanup:
+  timestamps: [firstTime, lastTime]

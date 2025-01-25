@@ -1,0 +1,30 @@
+[package]
+name = "spl_transpiler"
+version = "0.2.6"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+nom = "*"
+pyo3 = { version = "*", features = ["extension-module", "abi3", "abi3-py310", "anyhow"] }
+float-derive = "*"
+anyhow = "*"
+log = "*"
+regex = "*"
+regex-syntax = "*"
+
+phf = { version = "*", features = ["macros"] }
+paste = "*"
+const-str = "*"
+textwrap = "*"
+
+ruff_python_formatter = { git = "https://github.com/astral-sh/ruff.git" }
+
+[dev-dependencies]
+rstest = "*"
+
+[profile.release]
+lto = "thin"
+strip = true
