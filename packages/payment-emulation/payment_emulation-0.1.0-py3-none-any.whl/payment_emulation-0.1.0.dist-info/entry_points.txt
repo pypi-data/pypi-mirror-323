@@ -1,0 +1,3 @@
+[console_scripts]
+payment-emulation=payment_emulation.__main__:main
+
