@@ -1,0 +1,16 @@
+main_server/__init__.py,sha256=D9tvIdnYZxeXh0cE2QgQOOBt6mKvpO7KdgleOC4U5Yw,31
+main_server/main.py,sha256=m9PrqpUH9dBEXK2vjDFAG69XBEOU3b3Pvbx8-xQnSk8,46
+main_server/apps/__init__.py,sha256=BASD6skYMpJJW8BKN_GWibzXMRd53HZzZwuLoJq8kBw,28
+main_server/config/__init__.py,sha256=rjyaN4V_QjDsiu5CVbrIKawEspPmp6RyX2hGqf-tGcU,37
+main_server/config/routes.py,sha256=LQ2pRkeKbOJrLBVUnx4ZDE6-cXsuGJeFcnAvJy-BGQY,29
+main_server/config/settings.py,sha256=VyvDsmnCPLw0ERV1Qo04PKqGVzm7U7YlcKf0uDEPwnU,42
+viyu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+viyu/cli.py,sha256=vP5ZCr2Iw3fDaDZScNzHAzLM0RA_4sN80tqQ_H_8Lsw,4461
+viyu/commands/__init__.py,sha256=HtoZ1bP8gx2Z30pOjOS7wgC_7v0mQyxeSWVw0UFd_so,67
+viyu/commands/add_app.py,sha256=W44mBPPFCcGR7PPoHIyiSwwjlBgCMUQ8GYAn4RuC63I,3190
+viyu/commands/create_server.py,sha256=BBak1SqNlJvDxsCsCW9Kbld81ses4dP8QeC9vBOU04o,6433
+viyu_cli-1.0.0.dist-info/METADATA,sha256=V_zdwnACP5WyGJb6Cae0N_W-4uZEBEWWU_Oj6pE89to,1806
+viyu_cli-1.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+viyu_cli-1.0.0.dist-info/entry_points.txt,sha256=Pz4T11isXBgZdFJQQKRatNR5fvo9DPlz8vjnQsFflQ8,39
+viyu_cli-1.0.0.dist-info/top_level.txt,sha256=h0CF0BLPqlnR_jOMxIk9T7T5rNq3eez7_4aVnDuJ17s,5
+viyu_cli-1.0.0.dist-info/RECORD,,
