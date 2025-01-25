@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: dogcity
+Version: 1.4
+Summary: Tool to bridge the gap between SL-Dog and Cityworks APIs
+Author-Email: Jasper Sheeds <beamandstream@outlook.com>
+Requires-Python: >=3.8
+
