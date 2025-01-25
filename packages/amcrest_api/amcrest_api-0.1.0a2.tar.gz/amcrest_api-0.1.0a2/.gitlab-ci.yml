@@ -1,0 +1,91 @@
+stages:
+  - lint
+  - test
+  - build
+  - deploy
+
+variables:
+  PYTHON_VERSION: 3.13
+  UV_VERSION: 0.5.21
+  PIP_CACHE_DIR: $CI_PROJECT_DIR/.cache/pip
+  VENV_DIR: $CI_PROJECT_DIR/.venv
+  PRE_COMMIT_HOME: $CI_PROJECT_DIR/.cache/pre-commit
+
+default:
+  image: python:$PYTHON_VERSION
+  cache:
+    paths:
+      - .cache/pip
+      - .venv
+      - .cache/pre-commit
+
+  before_script:
+    - python --version ; pip --version
+    - pip install --upgrade pip
+    - pip install uv==$UV_VERSION --upgrade
+    - uv sync --all-groups
+    - source .venv/bin/activate
+
+pre-commit:
+  stage: lint
+  script: pre-commit run --all-files
+
+pytest:
+  stage: test
+  variables:
+    TEST_RESULTS_FILE: "test_results.xml"
+    TEST_COVERAGE_FILE: "coverage.xml"
+  script:
+    - pytest
+  coverage: '/TOTAL.*\s+(\d+%)$/'
+  artifacts:
+    when: always
+    paths:
+      - $TEST_RESULTS_FILE
+      - $TEST_COVERAGE_FILE
+      - tests/**/*.ambr
+    reports:
+      junit: $TEST_RESULTS_FILE
+      coverage_report:
+        coverage_format: cobertura
+        path: $TEST_COVERAGE_FILE
+
+cli_test:
+  stage: test
+  script: python -m amcrest_api --version
+
+build-dist:
+  stage: build
+  script:
+    - uv build
+  artifacts:
+    paths:
+      - dist/
+
+publish:
+  rules:
+    - if: $CI_COMMIT_TAG
+  stage: deploy
+  environment:
+    name: "PyPI ${CI_COMMIT_TAG}"
+    url: https://pypi.org/project/amcrest_api/${CI_COMMIT_TAG}
+  script:
+    - uv publish --token $PUB_REPO_TOKEN
+
+release:
+  inherit:
+    default: false
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  rules:
+    - if: $CI_COMMIT_TAG
+  stage: deploy
+  script:
+    - echo "Creating GitLab release"
+  release:
+    tag_name: $CI_COMMIT_TAG
+    name: $CI_COMMIT_TAG
+    description: "Release version $CI_COMMIT_TAG"
+    assets:
+      links:
+      - name: "PyPI"
+      - url: https://pypi.org/project/amcrest_api/
