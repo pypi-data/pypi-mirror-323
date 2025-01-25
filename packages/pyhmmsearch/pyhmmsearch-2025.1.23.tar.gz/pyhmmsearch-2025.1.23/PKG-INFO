@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: pyhmmsearch
+Version: 2025.1.23
+Summary: Fast implementation of HMMSEARCH optimized for high-memory systems using PyHmmer
+Home-page: https://github.com/jolespin/pyhmmsearch
+Author: Josh L. Espinoza
+Author-email: jolespin@newatlantis.io, jol.espinoz@gmail.com
+License: MIT License
+License-File: LICENSE
+Requires-Dist: pyhmmer>=0.10.12
+Requires-Dist: pandas
+Requires-Dist: tqdm
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
