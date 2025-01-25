@@ -1,0 +1,14 @@
+binhd/__init__.py,sha256=BIVDJBfC9cyyD3zQ-Zybr2VrRMtjeDHurhBCzVWNCOE,1312
+binhd/classifiers.py,sha256=Faqp_5cPvnWsS1Eti3T95j-UDXfugntZM0-W4kim3zA,5429
+binhd/embeddings.py,sha256=5DYnjN0SUEJ9VuhsmVJ-8c6L10bU4tEGfm0LFdCGBUc,6724
+binhd/functional.py,sha256=0IdKgf7Bx3w4Y_MXSjWltSlTK2pZr4w_KC0rvIs3Q0w,550
+binhd/datasets/__init__.py,sha256=CSC2eK-0xGiFos2N9HWmu20pzmfAD8U1V8PCHmcorE8,1442
+binhd/datasets/adult.py,sha256=4vTz3UR59BQUilJ5Hxj9q-jOqJl6jNVYVrxm0rKihiU,3020
+binhd/datasets/dataset.py,sha256=dzMl0yZEhXluZn9M8G1j63qnzzKUSfuJRrsnoNArC8s,3962
+binhd/datasets/iris.py,sha256=uYMf-TkTWkreCy4j7Ys5orjgtJ7ojEM8X1VWCrwxbpM,1907
+binhd/datasets/statlog.py,sha256=vsu7FzG_tYO8oPcPDf0r97WDKR8PH__CrqBtnkwWZ3k,1968
+binhd-1.0.0a0.dist-info/LICENSE,sha256=LubKDheLz8oGh5zI0zRKbmrzXSvsP0aTF1wP3IGUSZI,1084
+binhd-1.0.0a0.dist-info/METADATA,sha256=kCvTZ4kHiJQ7_xFDrssujfO8CMLUzUMxmWRtq0bnBMY,3388
+binhd-1.0.0a0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+binhd-1.0.0a0.dist-info/top_level.txt,sha256=Et731CH9dxY9bateDhYWGUjzMkb-edjbD-6wBMl2AoI,6
+binhd-1.0.0a0.dist-info/RECORD,,
