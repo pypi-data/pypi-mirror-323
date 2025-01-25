@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: UW-RestClients-Canvas
+Version: 1.2.17
+Summary: A library for connecting to the Canvas LMS API
+Home-page: https://github.com/uw-it-aca/uw-restclients-canvas
+Author: UW-IT T&LS
+Author-email: aca-it@uw.edu
+License: Apache License, Version 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+License-File: LICENSE
+Requires-Dist: UW-RestClients-Core
+Requires-Dist: python-dateutil
+Requires-Dist: mock
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+
+See the README on `GitHub
+<https://github.com/uw-it-aca/uw-restclients-canvas>`_.
