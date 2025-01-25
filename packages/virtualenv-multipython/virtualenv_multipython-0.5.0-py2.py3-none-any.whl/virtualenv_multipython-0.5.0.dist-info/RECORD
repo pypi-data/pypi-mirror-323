@@ -1,0 +1,9 @@
+virtualenv_multipython/__init__.py,sha256=0PaI2eSOCp5kkNcpKpUSbLHf66rL9xQzFpYyLGpEtyM,22
+virtualenv_multipython/discover.py,sha256=BIs__ea9DBKQ12jtUtZpx0ZZpklyjm3iHO5D_9u29YY,3203
+virtualenv_multipython/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+virtualenv_multipython/tag.py,sha256=AsXueHAvj8_oetxV7eCYzXkqPtOv4mQBjI043ZL_3LA,568
+virtualenv_multipython-0.5.0.dist-info/METADATA,sha256=aasmLrUS0EWxBllSv25nWN3ylvCxwBmpa_LtMqXYS5s,5024
+virtualenv_multipython-0.5.0.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+virtualenv_multipython-0.5.0.dist-info/entry_points.txt,sha256=rsZ8KZvZqtxCmnZkhzhuOOwTF_yP_TygC6fvqfmmxAs,81
+virtualenv_multipython-0.5.0.dist-info/licenses/LICENSE,sha256=yU2BVtBa14GTAN9NydSEsAYmq9eCvz1CTxfOMj8Ij9c,1072
+virtualenv_multipython-0.5.0.dist-info/RECORD,,

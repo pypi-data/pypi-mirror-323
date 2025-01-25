@@ -1,0 +1,2 @@
+[virtualenv.discovery]
+multipython = virtualenv_multipython.discover:MultiPython
