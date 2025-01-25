@@ -1,0 +1,31 @@
+[project]
+license = { file = "LICENSE" }
+
+name = "oceanprotocol-job-details"
+version = "0.0.4"
+authors = [
+    { name = "Christian López García", email = "christian.lopez@udl.cat" },
+]
+description = "A Python package to get details from OceanProtocol jobs"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Homepage = "https://github.com/AgrospAI/oceanprotocol-job-details"
+Issues = "https://github.com/AgrospAI/oceanprotocol-job-details/issues"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [{ include = "oceanprotocol_job_details" }]
+
+[tool.poetry.dependencies]
+python = ">3.9"
+pytest = "^8.3.4"
