@@ -1,0 +1,2 @@
+[console_scripts]
+QMDown = QMDown.__main__:main
