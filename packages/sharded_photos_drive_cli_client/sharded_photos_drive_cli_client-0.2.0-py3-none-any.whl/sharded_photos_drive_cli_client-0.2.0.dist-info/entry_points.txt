@@ -1,0 +1,3 @@
+[console_scripts]
+sharded_photos_drive_cli=sharded_photos_drive_cli_client.cli.main:main
+
