@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: dfimage
+Version: 0.0.0.dev0
+Summary: Reverse-engineer a Dockerfile from a Docker Image
+Author-email: LanikSJ <laniksj@example.com>
+License: MIT
+Keywords: docker,dockerfile,reverse-engineer
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Utilities
+License-File: LICENSE
+Requires-Dist: docker==7.1.0
