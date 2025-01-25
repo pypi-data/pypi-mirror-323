@@ -1,0 +1,233 @@
+"""PostgreSQL CLI commands with simple and advanced usage"""
+import click
+from rich.console import Console
+from rich.table import Table
+from rich.panel import Panel
+from rich.prompt import Confirm, Prompt
+from rich.markdown import Markdown
+from ..postgres.pg import PostgresManager
+from typing import Optional
+from rich.progress import Progress, SpinnerColumn, TextColumn
+import psycopg2
+
+console = Console()
+
+# Global instance to persist connections
+_pg_manager = None
+
+# Emoji constants for better UX
+EMOJI_DB = "🗄️"
+EMOJI_CHECK = "✅"
+EMOJI_ERROR = "❌"
+EMOJI_BACKUP = "💾"
+EMOJI_RESTORE = "📥"
+EMOJI_LIST = "📋"
+EMOJI_INFO = "ℹ️"
+EMOJI_WARNING = "⚠️"
+
+def get_pg_manager(host, port, user, password) -> PostgresManager:
+    """Get PostgreSQL manager instance"""
+    global _pg_manager
+    
+    # Return existing manager if we have one and the connection details match
+    if _pg_manager is not None:
+        if (_pg_manager.host == (host or 'localhost') and 
+            _pg_manager.port == (port or 5432) and
+            _pg_manager.user == (user or 'postgres')):
+            return _pg_manager
+    
+    # Create new manager if needed
+    _pg_manager = PostgresManager(
+        host=host or 'localhost',
+        port=port or 5432,
+        user=user or 'postgres',
+        password=password
+    )
+    # Ensure PostgreSQL is available
+    _pg_manager.ensure_connection()
+    return _pg_manager
+
+def register_postgres_commands(cli):
+    """Register PostgreSQL commands with the CLI"""
+    
+    # Common connection options
+    connection_options = [
+        click.option('--host', envvar='PG_HOST', help='PostgreSQL host'),
+        click.option('--port', envvar='PG_PORT', type=int, help='PostgreSQL port'),
+        click.option('--user', envvar='PG_USER', help='PostgreSQL user'),
+        click.option('--password', envvar='PG_PASSWORD', help='PostgreSQL password'),
+    ]
+
+    def add_options(options):
+        def _add_options(func):
+            for option in reversed(options):
+                func = option(func)
+            return func
+        return _add_options
+
+    @cli.group()
+    def postgres():
+        """Manage PostgreSQL databases"""
+        pass
+
+    @postgres.command()
+    @click.argument('name')
+    @click.option('--owner', help="Database owner")
+    @click.option('--encoding', default="UTF8", help="Database encoding")
+    @click.option('--template', default="template1", help="Template database")
+    @add_options(connection_options)
+    def create(name, owner, encoding, template, host, port, user, password):
+        """Create a new database"""
+        try:
+            pg = get_pg_manager(host, port, user, password)
+            pg.create_database(name, owner, encoding, template)
+            console.print(f"\n{EMOJI_CHECK} Database '{name}' created successfully!")
+            
+            # Show database info
+            info = pg.get_database_info(name)
+            console.print(Panel(
+                f"• Name: {info['name']}\n"
+                f"• Owner: {info['owner']}\n"
+                f"• Size: {info['size']}\n"
+                f"• Encoding: {info['encoding']}",
+                title=f"{EMOJI_DB} Database Created",
+                border_style="green"
+            ))
+        except Exception as e:
+            console.print(f"\n{EMOJI_ERROR} Error: {e}\n")
+
+    @postgres.command()
+    @click.argument('name')
+    @click.option('--force', is_flag=True, help="Force drop by terminating connections")
+    @add_options(connection_options)
+    def drop(name, force, host, port, user, password):
+        """Drop a database"""
+        if not Confirm.ask(f"\n{EMOJI_WARNING} Are you sure you want to drop '{name}'?"):
+            return
+            
+        try:
+            pg = get_pg_manager(host, port, user, password)
+            pg.drop_database(name, force)
+            console.print(f"\n{EMOJI_CHECK} Database dropped successfully!\n")
+        except Exception as e:
+            console.print(f"\n{EMOJI_ERROR} Error: {e}\n")
+
+
+    @postgres.command()
+    @click.argument('name')
+    @click.option('--output-dir', default="backups", help="Backup output directory")
+    @add_options(connection_options)
+    def backup(name, output_dir, host, port, user, password):
+        """Backup a database"""
+        try:
+            pg = get_pg_manager(host, port, user, password)
+            backup_file = pg.backup_database(name, output_dir)
+            console.print(Panel(
+                f"{EMOJI_BACKUP} Backup created successfully!\n\n"
+                f"Location: {backup_file}\n"
+                f"Database: {name}",
+                border_style="green"
+            ))
+        except Exception as e:
+            console.print(f"\n{EMOJI_ERROR} Error: {e}\n")
+
+    @postgres.command()
+    @click.argument('name')
+    @click.argument('backup_file')
+    @add_options(connection_options)
+    def restore(name, backup_file, host, port, user, password):
+        """Restore a database from backup"""
+        if not Confirm.ask(
+            f"\n{EMOJI_WARNING} This will overwrite '{name}' if it exists. Continue?"
+        ):
+            return
+            
+        try:
+            pg = get_pg_manager(host, port, user, password)
+            pg.restore_database(name, backup_file)
+            console.print(f"\n{EMOJI_RESTORE} Database restored successfully!\n")
+        except Exception as e:
+            console.print(f"\n{EMOJI_ERROR} Error: {e}\n")
+
+    @postgres.command()
+    @click.argument('name')
+    @add_options(connection_options)
+    def info(name, host, port, user, password):
+        """Show detailed database information"""
+        try:
+            pg = get_pg_manager(host, port, user, password)
+            try:
+                info = pg.get_database_info(name)
+            except psycopg2.Error as e:
+                if "database" in str(e) and "does not exist" in str(e):
+                    console.print(f"\n{EMOJI_ERROR} Database '{name}' does not exist. Please create it first.\n")
+                    return
+                raise e
+            
+            console.print(Panel(
+                f"[bold blue]Connection Details[/bold blue]\n"
+                f"• Host: {pg.host}\n"
+                f"• Port: {pg.port}\n"
+                f"• User: {pg.user}\n"
+                f"• Password: {pg.password}\n\n"
+                f"[bold]Basic Information[/bold]\n"
+                f"• Name: {info['name']}\n"
+                f"• Owner: {info['owner']}\n"
+                f"• Size: {info['size']}\n"
+                f"• Encoding: {info['encoding']}\n"
+                f"• Collation: {info['collation']}\n"
+                f"• Character Type: {info['ctype']}\n"
+                f"• Tablespace: {info['tablespace']}\n\n"
+                f"[bold]Statistics[/bold]\n"
+                f"• Number of Tables: {info['tables']}\n"
+                f"• Active Connections: {info['activity']}\n"
+                f"• Installed Extensions: {', '.join(info['extensions'] or [])}",
+                title=f"{EMOJI_INFO} Database Information",
+                border_style="cyan"
+            ))
+        except FileNotFoundError:
+            console.print(f"\n{EMOJI_ERROR} Error: No saved connection information found. Please create the database first.\n")
+        except Exception as e:
+            console.print(f"\n{EMOJI_ERROR} Error: {e}\n")
+
+    @postgres.command()
+    def help():
+        """Show PostgreSQL command help"""
+        help_text = """
+        # PostgreSQL Database Management
+
+        ## Commands
+        - `dbforge postgres create mydb` - Create a database
+        - `dbforge postgres drop mydb` - Delete a database
+        - `dbforge postgres backup mydb` - Backup a database
+        - `dbforge postgres restore mydb backup.sql` - Restore from backup
+        - `dbforge postgres info mydb` - Show database details
+
+        ## Advanced Usage
+        Add options for more control:
+        ```bash
+        # Create with custom settings
+        dbforge postgres create mydb --owner admin --encoding UTF8
+
+        # Force drop a database
+        dbforge postgres drop mydb --force
+
+        # Backup to custom directory
+        dbforge postgres backup mydb --output-dir /path/to/backups
+        ```
+
+        ## Connection Options
+        Add these to any command:
+        - `--host` - Database host
+        - `--port` - Port number
+        - `--user` - Username
+        - `--password` - Password
+
+        ## Environment Variables
+        Set these to avoid typing credentials:
+        - `PG_HOST` - Database host
+        - `PG_PORT` - Port number
+        - `PG_USER` - Username
+        - `PG_PASSWORD` - Password
+        """
+        console.print(Markdown(help_text))
