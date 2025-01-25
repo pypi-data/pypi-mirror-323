@@ -1,0 +1,6 @@
+llama_index/llms/bedrock_converse/__init__.py,sha256=xE3ZHLXqFr7TTTgQlYH9bLLPRZAV3dJyiz_iUFXBfak,98
+llama_index/llms/bedrock_converse/base.py,sha256=_Y8RsE6p3EXiPa3YAr91YMITu2vox_xZa5_cJ8RG8VA,23449
+llama_index/llms/bedrock_converse/utils.py,sha256=AHI2eQh-indMQquJy21kN9mgPiMQppKdpQA4m633JB8,15548
+llama_index_llms_bedrock_converse-0.4.4.dist-info/METADATA,sha256=00lbfaV6oqrol8ugdEAMMnNA8IJMI5Po8s7ahJU-2t4,5311
+llama_index_llms_bedrock_converse-0.4.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+llama_index_llms_bedrock_converse-0.4.4.dist-info/RECORD,,
