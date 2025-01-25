@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: piifinder
+Version: 0.0.2
+Summary: A CLI tool to detect and optionally anonymize PII in files.
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: presidio-analyzer>=2.0.0
+Requires-Dist: presidio-anonymizer>=2.0.0
+
+# piifinder
+
+A CLI tool to scan for PII (Personally Identifiable Information) in your source code or text files, using Microsoft's Presidio library.
+
+## Installation
+
+```bash
+pip install piifinder
+```
+
+## Usage
+
+```
+piifinder scan path/to/scan
+```
