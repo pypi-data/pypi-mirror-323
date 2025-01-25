@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: ThreadedSQLite
+Version: 0.1.0
+Summary: Simplifying SQLite access.
+Home-page: https://github.com/tu_usuario/mi_modulo
+Author: David Lorenzana
+Author-email: davlorenzana@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
