@@ -1,0 +1,4 @@
+Pillow>=8.0.0
+pytest>=6.0.0
+psutil==6.1.1
+pluggy>=1.0.0

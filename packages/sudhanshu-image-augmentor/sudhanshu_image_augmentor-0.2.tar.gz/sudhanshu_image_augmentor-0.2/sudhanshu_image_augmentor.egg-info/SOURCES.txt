@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+image_augmentor/__init__.py
+image_augmentor/augmentor.py
+image_augmentor/cli.py
+sudhanshu_image_augmentor.egg-info/PKG-INFO
+sudhanshu_image_augmentor.egg-info/SOURCES.txt
+sudhanshu_image_augmentor.egg-info/dependency_links.txt
+sudhanshu_image_augmentor.egg-info/entry_points.txt
+sudhanshu_image_augmentor.egg-info/requires.txt
+sudhanshu_image_augmentor.egg-info/top_level.txt
+tests/test_augmentor.py

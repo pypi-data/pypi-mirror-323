@@ -1,0 +1,2 @@
+[console_scripts]
+image-augmentor = image_augmentor.cli:main
