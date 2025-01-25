@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ironaai"
+version = "0.0.1"
+description = "IronaAI Python SDK"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "ironaai"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.26.0"
+litellm = "^0.1.1"
+python-dotenv = "^0.19.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
