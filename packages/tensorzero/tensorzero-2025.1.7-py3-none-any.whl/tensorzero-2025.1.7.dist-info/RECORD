@@ -1,0 +1,8 @@
+tensorzero/__init__.py,sha256=u9Zkij_HtwKFRRxA14m-dKTd7AO9Qvj9AoP8cZbLaXY,675
+tensorzero/client.py,sha256=amPoLuR6szGSSSSDj4zea-K7bLwBrGXBxvY87w0jeMU,22174
+tensorzero/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tensorzero/types.py,sha256=DT8ojC6vgdOk3IM_hPZ2eRW4igHnfxhf2RLwGu6xts8,5914
+tensorzero/util.py,sha256=n1B_ClHFbPjlzkksiQ8GePZEPFQ3XrAQdBZoJMhfiL4,50
+tensorzero-2025.1.7.dist-info/METADATA,sha256=7LjZQY9phXJfU0Iin8tuPNm0814wy2-sSDzf72Ri-c8,2974
+tensorzero-2025.1.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tensorzero-2025.1.7.dist-info/RECORD,,
