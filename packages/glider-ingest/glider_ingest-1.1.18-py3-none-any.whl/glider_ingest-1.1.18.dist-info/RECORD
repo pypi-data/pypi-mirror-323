@@ -1,0 +1,14 @@
+glider_ingest/__init__.py,sha256=lz0TnYMx_VWQK8cgwn310Fph3HPWUCAjGuAD23_wLaQ,510
+glider_ingest/dataset_attrs.py,sha256=fTqzpYH0cmXNRXrfK_q7b0XUe7R1JxRDyW9kMWkdVKY,6392
+glider_ingest/example.py,sha256=L-zlx6ekNWeA5bPBa0ke8ETMP52wQcOpPp5hRUt48VU,1406
+glider_ingest/FlightProcessor.py,sha256=TI94fsT7OstnGA3K7WKYdN6_t7D05u8QLdAmFPGc_7k,4350
+glider_ingest/gridder.py,sha256=pi3_asm7Mft8zdU9LBYAZj6-CAx_aOd0wvioDCXCV1U,18347
+glider_ingest/MissionData.py,sha256=6dHfvjL6FB9FK_70KaQ1Ger1fn6lGNKYcoCrfoewc9I,18659
+glider_ingest/MissionProcessor.py,sha256=Enru8UqSG0lVPTImutRE13G0obxbufbgb43CbsghDhQ,3907
+glider_ingest/ScienceProcessor.py,sha256=AjLgQ4UvVjk2Q3ssoc1FjN0ID8hoamwqZWdYUB7xsSM,8287
+glider_ingest/utils.py,sha256=ZixKawGgRSDlbXdewmZOrOzKCNfiKlJRmKDEtXPYjv8,5407
+glider_ingest/variable.py,sha256=eYmdfZ64AwuFCQmX4TAfkAtMK-Tm3bVd_TYAa-K1jR4,2995
+glider_ingest-1.1.18.dist-info/LICENSE,sha256=2zjcqjxK1u8cd6mPZbVUldqpMlc2a2sTz4oKc2Xo1PA,1094
+glider_ingest-1.1.18.dist-info/METADATA,sha256=7grKSxLOmFK2x1-Ps2tZsoSwvvMtA7yu61IAdNryrWU,7811
+glider_ingest-1.1.18.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+glider_ingest-1.1.18.dist-info/RECORD,,
