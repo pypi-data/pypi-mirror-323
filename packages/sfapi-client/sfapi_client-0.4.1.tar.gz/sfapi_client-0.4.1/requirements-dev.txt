@@ -1,0 +1,12 @@
+datamodel-code-generator
+unasync
+typer
+pytest
+pytest-asyncio
+pytest-mock
+mkdocs-jupyter
+datamodel-code-generator[http]
+cryptography
+authlib
+tenacity
+pydantic_settings
