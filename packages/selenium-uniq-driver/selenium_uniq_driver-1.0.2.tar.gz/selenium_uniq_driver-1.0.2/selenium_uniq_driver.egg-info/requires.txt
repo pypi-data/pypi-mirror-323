@@ -1,0 +1,6 @@
+blinker==1.4
+selenium-stealth
+selenium-wire
+random-user-agent
+setuptools
+pytest

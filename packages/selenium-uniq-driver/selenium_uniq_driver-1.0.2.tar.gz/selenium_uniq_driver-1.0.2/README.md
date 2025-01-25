@@ -1,0 +1,86 @@
+# Selenium Uniq Driver
+It is impossible to imagine modern web resources without validation of incoming traffic. A lot of different validation methods are using for user detection such as IP, canvas fingerprint, user-agent, etc.
+For us, who want to automate our web journey it is a challenge to avoid site fingerrinting. The **selenium-uniq-driver** package is created to prevent blocking when using [selenium](https://github.com/SeleniumHQ/Selenium) library.
+
+## Features
+- Create stealthy webdriver
+- Uniq browser user-agent, language and platform
+- Choose device type and change resolution
+- Generate random WebGL data
+- Change your timezone
+- Spoof audio and canvas fingerprints
+
+Additionaly to randomly generated device data the [selenium-stealth](https://github.com/diprajpatra/selenium-stealth) library is in use which allows you prevent almost all selenium detections.
+
+## Install
+Selenium-uniq-driver is available on PyPI you can install with pip.
+```sh
+pip install selenium-uniq-driver
+```
+
+## Usage
+```python
+from selenium_uniq_driver import UniqDriver, HardwareType, SoftwareName, OperatingSystem
+
+driver_creator = UniqDriver(hardware_type=HardwareType.MOBILE, software_name=SoftwareName.CHROME, operating_system=OperatingSystem.ANDROID)
+# driver_creator.set_proxy("host", "port", "login", "password", "http")
+
+entropy_methods = [
+    "user_agent_and_language",
+    "device_viewport",
+    "device_webgl",
+    "device_timezone",
+    "canvas_fingerprint",
+    "audio_fingerprint"
+]
+
+driver = driver_creator.create(entropy_methods)
+driver.get("https://bot.sannysoft.com/")
+input("\nPress Enter to exit...")
+driver.quit()
+```
+
+## Explanation
+Use **UniqDriver** class to create your webdriver. You should pass device information into construstor using enum classes **HardwareType**, **SoftwareName** and **OperatingSystem**. For now only Chrome supports.
+```python
+driver_creator = UniqDriver(hardware_type=HardwareType.MOBILE, software_name=SoftwareName.CHROME, operating_system=OperatingSystem.ANDROID)
+```
+
+You can add proxy data if you want by using **set_proxy** method
+```python
+driver_creator.set_proxy("host", "port", "login", "password", "http")
+```
+
+Choose which device data you want to randomize by passing entropy params into **create** method. If **entropy_methods** doesn't provided will be used all existed.
+```python
+entropy_methods = [
+    "user_agent_and_language",
+    "device_viewport",
+    "device_webgl",
+    "device_timezone",
+    "canvas_fingerprint",
+    "audio_fingerprint"
+]
+
+driver = driver_creator.create(entropy_methods)
+```
+
+## Tests
+You can run pytest using command below.
+```sh
+pytest -p no:warnings -s
+```
+![Test log](test_logs/log_1.png)
+
+## Future Developments
+- Increase uniqueness for existed entropy methods 
+- Add new spoofing mechanisms, like Font Fingerprint etc.
+
+## From author
+**IT IS A DEMO VERSION!!!** Please rise an issue if you find any bug or something else. 
+
+**MAKE ANONYMITY GREAT AGAIN!!!**
+
+## License
+Copyright © 2025, [AlexanderTsk](https://github.com/AlexanderTsk/selenium-uniq-driver). Released under the MIT License.
+
