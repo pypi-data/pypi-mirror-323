@@ -1,0 +1,340 @@
+{% extends "webclient/base/base_container.html" %}
+{% load i18n %}
+
+
+{% comment %}
+<!--
+  Copyright (C) 2011 University of Dundee & Open Microscopy Environment.
+  All rights reserved.
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU Affero General Public License as
+  published by the Free Software Foundation, either version 3 of the
+  License, or (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Affero General Public License for more details.
+
+  You should have received a copy of the GNU Affero General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+{% endcomment %}
+
+{% block link %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static "webgateway/css/ome.table.css" %}" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="{% static "3rdparty/jquery.tablesorter-2.0.3/jquery.tablesorter.css" %}" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="{% static "tagsearch/3rd-party/chosen/chosen.css" %}" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="{% static "tagsearch/css/webtagging_search.css" %}" type="text/css" media="screen"/>
+
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="{% static "/webgateway/css/ome.table_ie.css" %}" />
+  <![endif]-->
+
+
+{% endblock %}
+
+{% block script %}
+    {{ block.super }}
+    <script src="{% static 'webclient/javascript/jquery.infieldlabel-0.1.js' %}" type="text/javascript"></script>
+    <script type="text/javascript" src="{% static "3rdparty/jquery.tablesorter-2.0.3/jquery.tablesorter.js" %}"></script>
+    <script type="text/javascript" src="{% static "3rdparty/jquery.quicksearch-1.0.js" %}"></script>
+
+    <!-- Different chosen than used elsewhere in OMERO because ordering needs a more recent version -->
+    <script src="{% static "tagsearch/3rd-party/chosen/chosen.jquery.js" %}"></script>
+    <script src="{% static "tagsearch/3rd-party/chosen.order.jquery.js" %}"></script>
+
+    <script type="text/javascript">
+        var ownership_l = {{ ownership_l|safe }};
+        $(document).ready(function()
+            {
+
+                var objTypes = ['project', 'dataset', 'image', 'screen', 'plate', 'acquisition', 'well']
+                $("#id_selectedTags").chosen({placeholder_text:'Choose tags'});
+                $("#id_excludedTags").chosen({placeholder_text:'Choose tags to exclude'});
+
+                $(".searching_info").tooltip({
+                    track: true,
+                    delay: 0,
+                    showURL: false,
+                    opacity: 1,
+                    fixPNG: true,
+                    showBody: " - ",
+                    top: -15,
+                    left: 5
+                });
+
+                function change_row_display(checked, rowClass) {
+                    if (checked) {
+                        $(rowClass).show();
+                        $(rowClass).removeClass('hidfromcheckbox');
+                    } else {
+                        $(rowClass).hide();
+                        $(rowClass).addClass('hidfromcheckbox');
+                    }
+                }
+
+                $('#user_filter_on').change(function() {
+                  var filter_user = $("#user_filter_on").is(':checked');
+                  $("#id_selectedTags option, #id_excludedTags option").each(function() {
+                    var optionValue = parseInt(this.value);
+                    var inOwnershipList = $.inArray(optionValue, ownership_l) !== -1;
+                    if (filter_user && !inOwnershipList) {
+                      $(this).hide();
+                    } else if (!$(this).hasClass('hidfromresults')) {
+                      $(this).show();
+                    }
+                  });
+                  var selection_incl = $('#id_selectedTags').getSelectionOrder();
+                  var selection_excl = $('#id_excludedTags').getSelectionOrder();
+                  $('#id_selectedTags, #id_excludedTags').trigger("chosen:updated");
+                  $('#id_selectedTags').setSelectionOrder(selection_incl);
+                  $("#id_excludedTags").setSelectionOrder(selection_excl);
+                });
+
+                // Form Submission
+                $("#tagSearchForm").ajaxForm({
+                  beforeSubmit: function() {
+                    // prevent submitting the form again while waiting
+                    $("div#content_details").html('<p>{% trans "Loading data... please wait" %} <img src ="{% static "webgateway/img/spinner.gif" %}"/></p>');
+                  },
+                  success: function(data) {
+                    $("div#content_details").html(data.html);
+
+                    objTypes.forEach(function(objtype) {
+                      $(".tagnav-"+objtype+" span").html(data.count[objtype]);
+                    });
+
+                    $("#filtersearch").removeClass('hidden');
+                    OME.table_selection_changed();
+
+                    // Hide any options that are no longer possible and
+                    // show any that have become possible
+                    // optionnaly filter on user's owned tags
+
+                    $("#id_selectedTags option, #id_excludedTags option").each(function() {
+                      var filter_user = $("#user_filter_on").is(':checked');
+                      var tag_value = parseInt(this.value);
+                      if ((($.inArray(tag_value, data.navdata) == -1)
+                           && (data.navdata.length != 0))
+                          || (filter_user && ($.inArray(tag_value, ownership_l) == -1))) {
+                        $(this).hide();
+                        $(this).addClass('hidfromresults');
+                      } else {
+                        $(this).show();
+                        $(this).removeClass('hidfromresults');
+                      }
+                    });
+
+                    // Preserve the order of the select because otherwise Chosen will show the same order as
+                    // the underlying select. i.e. the original option ordering
+                    var selection_incl = $('#id_selectedTags').getSelectionOrder();
+                    var selection_excl = $('#id_excludedTags').getSelectionOrder();
+                    // Update the chosen selector
+                    $("#id_selectedTags, #id_excludedTags").trigger("chosen:updated");
+                    // Restore the ordering
+                    $('#id_selectedTags').setSelectionOrder(selection_incl);
+                    $("#id_excludedTags").setSelectionOrder(selection_excl);
+
+                    $('#id_search').quicksearch('table#dataTable tbody tr', {
+                        'delay': 300,
+                        'loader': 'span.loading',
+                        'show': function(){
+                          if (!$(this).hasClass('hidfromcheckbox')){
+                            $(this).show();
+                          }
+                        },
+                        'hide': function(){
+                          if (!$(this).hasClass('hidfromcheckbox')){
+                            $(this).hide();
+                          }
+                        }
+                    });
+
+                    objTypes.forEach(function(objtype) {
+                      change_row_display($('#id_view_'+objtype).is(":checked"), "."+objtype+"_row");
+                    });
+
+                    // Triggering the search and setting the delay
+                    $('#id_search').trigger('keyup');
+                  },
+                });
+
+                $('#id_operation').change(function() {
+                  if ($('#enableCheckbox').is(':checked')) {
+                    $("#tagSearchForm").submit();
+                  }
+                });
+
+                $( "#id_selectedTags" ).chosen().change(function(event, params) {
+                  // Tag selection or deselection made
+                  if ((params.selected || params.deselected) && $('#enableCheckbox').is(':checked')) {
+                    $("#tagSearchForm").submit();
+                  }
+                });
+                $( "#id_excludedTags" ).chosen().change(function(event, params) {
+                  if ((params.selected || params.deselected) && $('#enableCheckbox').is(':checked')) {
+                    $("#tagSearchForm").submit();
+                  }
+                });
+
+                $('#enableCheckbox').change(function() {
+                  if ($(this).is(':checked')) {
+                    $('#tagSearchForm').submit();
+                  }
+                });
+
+                objTypes.forEach(function(objtype) {
+                  $('#id_view_'+objtype).change(function() {change_row_display($(this).is(":checked"), "."+objtype+"_row");});
+                });
+
+                $("#filtersearch label").inFieldLabels();
+
+                OME.table_selection_changed();     // clear selection (hides acquisition & preview tabs)
+
+                $(".searching_info").tooltip({
+                    track: true,
+                    show: false,
+                    hide: false,
+                    items: '[data-content]',
+                    content: function() {
+                        return $(this).data('content');
+                    }
+                });
+
+                $("#selectall_btn").click(function(){
+                    var do_select = $("#selectall_btn").text() === "Select all";
+                    objTypes.forEach(function(objtype) {
+                      _objclass = '#id_view_'+objtype
+                      if ($(_objclass).is(":checked") != do_select) {
+                        $(_objclass).prop("checked", do_select);
+                        change_row_display($(_objclass).is(":checked"), "."+objtype+"_row");
+                      }
+                    });
+
+                    if (do_select) {
+                      $("#selectall_btn").text("Deselect all");
+                    } else {
+                      $("#selectall_btn").text("Select all");
+                    }
+                });
+            });
+    </script>
+
+{% endblock %}
+
+{% block left %}
+
+
+<div id="user_selection">
+
+{% include "webclient/base/includes/group_user_dropdown.html" %}
+
+</div>
+
+
+<div id="searching">
+  <div class="left_panel_inner">
+      <form id="tagSearchForm" action="{% url 'wtsimages' %}" method="get" class="standard_form">{% csrf_token %}
+          <h2>{% trans "Tag Search" %}</h2>
+          {# {{ tagnav_form.as_p }} #}
+          {{ tagnav_form.non_field_errors }}
+
+          {% if user_name %}
+          <div id="id_userName" class="tagnav-user">
+            <span>
+              <input type="checkbox" id="user_filter_on"> Filter tags for {{ user_name }}
+              &nbsp;<span class="tagnav-icon"></span>
+            </span>
+
+          </div>
+          {% endif %}
+
+          <div class="fieldWrapper">
+                <div class="tagSearchDivider">
+                  <div class="field">
+                    {{ tagnav_form.selectedTags.errors }}
+                    <label for="id_selectedTags">Selected Tags:</label>
+                    {{ tagnav_form.selectedTags }}&nbsp;
+                    <span class="searching_info"
+                    data-content="Search objects annotated with selected tags.</br>Multiple tags are combined according to the joining method.">
+                      <img class="search_tips__tag" src="{% static 'webgateway/img/help16.png' %}" />
+                    </span>
+                  </div><br/>
+                  <div class="field">
+                    {{ tagnav_form.excludedTags.errors }}
+                    <label for="id_excludedTags">Excluded Tags:</label>
+                    {{ tagnav_form.excludedTags }}&nbsp;
+                    <span class="searching_info"
+                    data-content="Remove from the results the objects annotated with excluded tags.">
+                      <img class="search_tips__tag" src="{% static 'webgateway/img/help16.png' %}" />
+                    </span>
+                  </div><br/><br/>
+                  <div>
+                    <label for="id_operation">Joining method:</label>
+                    <span class="searching_info"
+                    data-content="AND: Get the objects with all selected tags.</br>OR: Get the objects with at least one selected tag.">
+                      <img class="search_tips__join" src="{% static 'webgateway/img/help16.png' %}" />
+                    </span>
+                    {{ tagnav_form.operation }}
+                  </div><br/>
+              </div>
+
+              <h2>Results</h2>
+              <ul id="counts_list">
+                  <li class="tagnav-project">{{ tagnav_form.view_project }}<div class="tagnav-icon">&nbsp;</div>Project:&nbsp;<span>0</span></li>
+                  <li class="tagnav-dataset">{{ tagnav_form.view_dataset }}<div class="tagnav-icon">&nbsp;</div>Dataset:&nbsp;<span>0</span></li>
+                  <li class="tagnav-screen">{{ tagnav_form.view_screen }}<div class="tagnav-icon">&nbsp;</div>Screen:&nbsp;<span>0</span></li>
+                  <li class="tagnav-plate">{{ tagnav_form.view_plate }}<div class="tagnav-icon">&nbsp;</div>Plate:&nbsp;<span>0</span></li>
+                  <li class="tagnav-acquisition">{{ tagnav_form.view_acquisition }}<div class="tagnav-icon">&nbsp;</div>Run:&nbsp;<span>0</span></li>
+                  <li class="tagnav-well">{{ tagnav_form.view_well }}<div class="tagnav-icon">&nbsp;</div>Well:&nbsp;<span>0</span></li>
+                  <li class="tagnav-image">{{ tagnav_form.view_image }}<div class="tagnav-icon">&nbsp;</div>Image:&nbsp;<span>0</span></li>
+                  <li><button id="selectall_btn" type="button">Deselect all</button>&nbsp
+                     <span class="searching_info" data-content="Deselect object types to filter them out of the result view. This has no effect on the query sent to the server.">
+                       <img class="search_tips__join" src="{% static 'webgateway/img/help16.png' %}" />
+                     </span>
+                  </li>
+                  <li><br/><br/>
+                      <label>
+                        <input type="checkbox" id="enableCheckbox" checked> <span>Preview</span>
+                      </label>
+                      <span class="searching_info" data-content="Prevent queries from being sent to the server, thereby disabling the updating of the tag selection fields and results.">
+                        <img class="search_tips__join" src="{% static 'webgateway/img/help16.png' %}" />
+                      </span>
+                  </li>
+              </ul>
+
+          </div>
+
+
+      </form>
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block center %}
+
+  <div id="center_panel_header">
+
+    <form class="search filtersearch hidden" id="filtersearch" action="#">
+        <div>
+            <label for="id_search">
+                Filter Results
+            </label>
+          <input type="text" id="id_search" size="25" />
+      </div>
+      <input type="submit" value="Go" />
+      <span class="loading">
+        <img class="loader" alt="Loading" src="{% static "webgateway/img/spinner.gif" %}">
+      </span>
+    </form>
+
+  </div>
+
+  <div id="content_details" class="center_panel_content"> </div>
+
+{% endblock %}
