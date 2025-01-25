@@ -1,0 +1,8 @@
+gef_reader/__init__.py,sha256=lSZ19GycqOGAhJPtvnYFExuS9HX7wbEMjd-01jByc84,249
+gef_reader/gef_parser.py,sha256=iZTGhFE2MNYkmOHu81OvxEF1rSHr4kXyJ6gXasCilLE,11290
+gef_reader/utils/pytess_main.py,sha256=GwdqCGGup8H-U_RUGEeP2rbQUDxb6caKbEOSznxhPIQ,32602
+gef_reader/utils/pytess_tesselator.py_backup,sha256=gPs8DyYrSMftwSEiS2HjJLxlcLKQOMKoAuorj0C6BWI,28062
+gef_reader-0.1.1.dist-info/METADATA,sha256=OCmWQdZT6sfnfPGIP9QT2Alcu7lzoQIvUV3h5H4QwPY,6574
+gef_reader-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gef_reader-0.1.1.dist-info/licenses/LICENSE,sha256=dOHSBLzBGIqCwxcYSlMK9pE9ugce4irFxweaZhCTRro,1067
+gef_reader-0.1.1.dist-info/RECORD,,
