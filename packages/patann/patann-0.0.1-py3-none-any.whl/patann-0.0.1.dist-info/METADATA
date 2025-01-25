@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: patann
+Version: 0.0.1
+Summary: PatANN is a massively parallel, distributed, and scalable in-memory/on-disk vector database library for efficient nearest neighbor search using patterns across large-scale datasets, developed by mesibo, inc.
+Home-page: https://github.com/mesibo/patann
+Author: https://mesibo.com
+Author-email: support@mesibo.com
+Project-URL: Bug Tracker, https://github.com/mesibo/patann/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: requires-python
+Dynamic: summary
+
+Test
+
