@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: autodrome
+Version: 0.1.0
+Summary: Framework and OpenAI Gym environment for development of self-driving cars
+Home-page: https://github.com/vojtamolda/autodrome
+Author: Vojta Molda
+Author-email: vojta.molda@gmail.com
+Keywords: self-driving car simulation reinforcement-learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Requires-Dist: gym
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pyzmq
+Requires-Dist: pycapnp
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
