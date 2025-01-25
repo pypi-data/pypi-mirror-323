@@ -1,0 +1,2 @@
+[console_scripts]
+nvidia-binarchive = nvidia_binarchive.parse_redist:main
