@@ -1,0 +1,10 @@
+LICENSE
+README.md
+mpeg1fs.py
+pyproject.toml
+mpeg1fs.egg-info/PKG-INFO
+mpeg1fs.egg-info/SOURCES.txt
+mpeg1fs.egg-info/dependency_links.txt
+mpeg1fs.egg-info/entry_points.txt
+mpeg1fs.egg-info/requires.txt
+mpeg1fs.egg-info/top_level.txt
