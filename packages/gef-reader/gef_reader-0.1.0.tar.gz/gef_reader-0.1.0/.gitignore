@@ -1,0 +1,12 @@
+*.xlsx
+*.pdf
+GEF_SAMPLES
+__pycache__
+.DS_Store
+example_data/*
+.env
+.vscode
+output_data/*
+*.csv
+.venv
+.pytest_cache
