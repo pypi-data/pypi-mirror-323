@@ -1,0 +1,10 @@
+phpgp/__init__.py,sha256=QTYqXqSTHFRkM9TEgpDFcHvwLbvqHDqvqfQ9EiXkcAM,23
+phpgp/cli.py,sha256=kX79oyTfAPHYwP57wEwr0ER0vV7Iyl0bkG4XkMjvx5M,20376
+phpgp/server.py,sha256=ud2oVQGcU1f-OJN416820FG5arn4PS030HlaaIqjX2M,10571
+phpgp/utils.py,sha256=u3N9kJYnIb7sqtFElVvRQgqA_PtTN_kHoBUDIxnwUKs,2711
+phpgp-0.1.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+phpgp-0.1.0.dist-info/METADATA,sha256=J3CcQe1OqXo9NUbr605fj0NK7FB4gJEbGCHRa5rCeio,8193
+phpgp-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+phpgp-0.1.0.dist-info/entry_points.txt,sha256=VR4Ythmf0kfujfK6rJstrO2Le9ywZ-qDgORGih1uaGY,40
+phpgp-0.1.0.dist-info/top_level.txt,sha256=t74B7TPqkbO13glbdLY30xUlVQcgrjyt8dBdnm5f7kU,6
+phpgp-0.1.0.dist-info/RECORD,,
