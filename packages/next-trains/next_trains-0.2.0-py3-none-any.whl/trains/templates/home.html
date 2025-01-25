@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="15">
+    <title></title>
+    <style>
+      @font-face {
+        font-family: "London Underground Regular";
+        src: url("/static/London Underground Regular.ttf");
+      }
+        @font-face {
+        font-family: "London Underground Heavy";
+        src: url("/static/London Underground Heavy.ttf");
+      }
+
+        body {
+        background: black;
+        }
+        table {
+        color: orange;
+        border-spacing: 16px 8px;
+        }
+        tr.vevent {
+          font-family: "London Underground Regular";
+        }
+
+        tfoot th {
+          font-family: "London Underground Heavy";
+        }
+        abbr[title] {
+        text-decoration: none;
+      }
+    </style>
+</head>
+<body>
+
+<table>
+    <tbody>
+    {% for train in trains %}
+    <tr class="vevent">
+        <td class="summary">{{train[0]}}</td>
+        <td>{{train[1]}}</td>
+        <td class="location">{{train[2]}}</td>
+        <td><abbr class="dtstart" title="{{train[3]}}">{{train[4]}}</abbr></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th colspan="4">
+            {{now}}
+        </th>
+    </tr>
+    </tfoot>
+</table>
+
+
+</body>
+</html>

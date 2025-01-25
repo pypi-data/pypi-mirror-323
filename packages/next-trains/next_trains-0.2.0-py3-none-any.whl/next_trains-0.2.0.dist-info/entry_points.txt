@@ -1,0 +1,2 @@
+[console_scripts]
+trains = trains.trains:trains
