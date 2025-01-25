@@ -1,0 +1,2 @@
+from ._codegpt_plugin_api import litechat_codegpt_server
+# from ._legacy_codegpt_plugin import litechat_codegpt_legacy_server
