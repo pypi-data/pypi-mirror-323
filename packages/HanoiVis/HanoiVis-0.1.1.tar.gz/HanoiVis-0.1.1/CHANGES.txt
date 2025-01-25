@@ -1,0 +1,1 @@
+v0.1.1, 25/01/2025 -- Added bash script to run python file
