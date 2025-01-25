@@ -1,0 +1,257 @@
+import logging
+from typing import Any, Callable, Union
+
+from pyparsing import ParseResults
+from pypika import analytics as an
+from pypika import functions as fn
+from pypika.enums import Arithmetic, Boolean
+from pypika.queries import Selectable
+from pypika.terms import (
+    AggregateFunction,
+    ArithmeticExpression,
+    Case,
+    ComplexCriterion,
+    Criterion,
+    Field,
+    NullValue,
+    Term,
+    ValueWrapper,
+)
+
+from tesseract_olap.common.strings import shorthash
+from tesseract_olap.query import (
+    Comparison,
+    FilterCondition,
+    LogicOperator,
+    NullityOperator,
+    NumericConstraint,
+)
+from tesseract_olap.schema import Measure
+
+from .dialect import ArrayElement, Power, Quantile, TopK
+
+logger = logging.getLogger(__name__)
+
+
+def _get_aggregate(
+    table: Selectable,
+    measure: Measure,
+) -> Union[fn.Function, ArithmeticExpression]:
+    """Return the AggregateFunction instance needed to calculate a measure."""
+    aggregator_type = str(measure.aggregator)
+    column_hash = shorthash(measure.key_column)
+    field = table.field(f"ms_{column_hash}")
+
+    if aggregator_type == "Sum":
+        return fn.Sum(field)
+
+    if aggregator_type == "Count":
+        return fn.Count(field)
+
+    if aggregator_type == "Average":
+        return fn.Avg(field)
+
+    if aggregator_type == "Max":
+        return fn.Max(field)
+
+    if aggregator_type == "Min":
+        return fn.Min(field)
+
+    if aggregator_type == "Mode":
+        return ArrayElement(TopK(1, field), 1)
+
+    # elif aggregator_type == "BasicGroupedMedian":
+    #     return fn.Abs()
+
+    if aggregator_type == "WeightedSum":
+        params = measure.aggregator.get_params()
+        weight_field = table.field(f"msp_{column_hash}_weight")
+        return fn.Sum(field * weight_field)
+
+    if aggregator_type == "WeightedAverage":
+        params = measure.aggregator.get_params()
+        weight_field = table.field(f"msp_{column_hash}_weight")
+        return AggregateFunction("avgWeighted", field, weight_field)
+
+    # elif aggregator_type == "ReplicateWeightMoe":
+    #     return fn.Abs()
+
+    if aggregator_type == "CalculatedMoe":
+        params = measure.aggregator.get_params()
+        critical_value = ValueWrapper(params["critical_value"])
+        term = fn.Sqrt(fn.Sum(Power(field / critical_value, 2)))
+        return ArithmeticExpression(Arithmetic.mul, term, critical_value)
+
+    if aggregator_type == "Median":
+        return AggregateFunction("median", field)
+
+    if aggregator_type == "Quantile":
+        params = measure.aggregator.get_params()
+        quantile_level = float(params["quantile_level"])
+        return Quantile(quantile_level, field)
+
+    if aggregator_type == "DistinctCount":
+        # Count().distinct() might use a different function, configured in Clickhouse
+        return AggregateFunction("uniqExact", field)
+
+    # elif aggregator_type == "WeightedAverageMoe":
+    #     return fn.Abs()
+
+    msg = f"Aggregation type {aggregator_type!r} not implemented in Clickhouse module."
+    raise NameError(msg)
+
+
+def _filter_criterion(column: Field, constraint: FilterCondition) -> Criterion:
+    """Apply comparison filters to query."""
+    if constraint == NullityOperator.ISNULL:
+        return column.isnull()  # noqa: PD003
+    if constraint == NullityOperator.ISNOTNULL:
+        return column.isnotnull()
+
+    # create criterion for first constraint
+    criterion = _filter_comparison(column, constraint[0])
+
+    # add second constraint to criterion if defined
+    if len(constraint) == 1:
+        return criterion
+    if constraint[1] == LogicOperator.AND:
+        return criterion & _filter_comparison(column, constraint[2])
+    if constraint[1] == LogicOperator.OR:
+        return criterion | _filter_comparison(column, constraint[2])
+    if constraint[1] == LogicOperator.XOR:
+        return criterion ^ _filter_comparison(column, constraint[2])
+
+    msg = f"Invalid constraint: {constraint}"
+    raise ValueError(msg)
+
+
+def _filter_comparison(field: Field, constr: NumericConstraint) -> Criterion:
+    """Retrieve the comparison operator for the provided field."""
+    comparison, scalar = constr
+
+    # Note we must use == to also compare Enums values to strings
+    if comparison == Comparison.GT:
+        return field.gt(scalar)
+    if comparison == Comparison.GTE:
+        return field.gte(scalar)
+    if comparison == Comparison.LT:
+        return field.lt(scalar)
+    if comparison == Comparison.LTE:
+        return field.lte(scalar)
+    if comparison == Comparison.EQ:
+        return field.eq(scalar)
+    if comparison == Comparison.NEQ:
+        return field.ne(scalar)
+
+    msg = f"Invalid criterion type: {comparison}"
+    raise ValueError(msg)
+
+
+def _transf_formula(tokens: Any, field_builder: Callable[[str], Field]) -> Term:
+    if isinstance(tokens, ParseResults):
+        if len(tokens) == 1:
+            return _transf_formula(tokens[0], field_builder)
+
+        if tokens[0] == "CASE":
+            case = Case()
+
+            for item in tokens[1:]:
+                if item[0] == "WHEN":
+                    clauses = _transf_formula(item[1], field_builder)
+                    expr = _transf_formula(item[3], field_builder)
+                    case = case.when(clauses, expr)
+                elif item[0] == "ELSE":
+                    expr = _transf_formula(item[1], field_builder)
+                    case = case.else_(expr)
+                    break
+
+            return case
+
+        if tokens[0] == "NOT":
+            # 2 tokens: ["NOT", A]
+            return _transf_formula(tokens[1], field_builder).negate()
+
+        if tokens[1] in ("AND", "OR", "XOR"):
+            # 2n + 1 tokens: [A, "AND", B, "OR", C]
+            left = _transf_formula(tokens[0], field_builder)
+            for index in range(len(tokens) // 2):
+                comparator = Boolean(tokens[index * 2 + 1])
+                right = _transf_formula(tokens[index * 2 + 2], field_builder)
+                left = ComplexCriterion(comparator, left, right)
+            return left
+
+        column = tokens[1]
+        if not isinstance(column, str):
+            msg = f"Malformed formula: {tokens}"
+            raise TypeError(msg)
+
+        if tokens[0] == "ISNULL":
+            return field_builder(column).isnull()  # noqa: PD003
+
+        if tokens[0] == "ISNOTNULL":
+            return field_builder(column).isnotnull()
+
+        if tokens[0] == "TOTAL":
+            return an.Sum(field_builder(column)).over()
+
+        if tokens[0] == "SQRT":
+            return fn.Sqrt(field_builder(column))
+
+        if tokens[0] == "POW":
+            return field_builder(column) ** tokens[2]
+
+        operator = column
+
+        if operator in ">= <= == != <>":
+            branch_left = _transf_formula(tokens[0], field_builder)
+            branch_right = _transf_formula(tokens[2], field_builder)
+
+            if operator == ">":
+                return branch_left > branch_right
+            if operator == "<":
+                return branch_left < branch_right
+            if operator == ">=":
+                return branch_left >= branch_right
+            if operator == "<=":
+                return branch_left <= branch_right
+            if operator == "==":
+                return branch_left == branch_right
+            if operator in ("!=", "<>"):
+                return branch_left != branch_right
+
+            msg = f"Operator '{operator}' is not supported"
+            raise ValueError(msg)
+
+        if operator in "+-*/%":
+            branch_left = _transf_formula(tokens[0], field_builder)
+            branch_right = _transf_formula(tokens[2], field_builder)
+
+            if operator == "+":
+                return branch_left + branch_right
+            if operator == "-":
+                return branch_left - branch_right
+            if operator == "*":
+                return branch_left * branch_right
+            if operator == "/":
+                return branch_left / branch_right
+            if operator == "%":
+                return branch_left % branch_right
+
+            msg = f"Operator '{operator}' is not supported"
+            raise ValueError(msg)
+
+    elif isinstance(tokens, (int, float)):
+        return ValueWrapper(tokens)
+
+    elif isinstance(tokens, str):
+        if (tokens.startswith("'") and tokens.endswith("'")) or (
+            tokens.startswith('"') and tokens.endswith('"')
+        ):
+            return ValueWrapper(tokens[1:-1])
+        if tokens == "NULL":
+            return NullValue()
+        return field_builder(tokens)
+
+    logger.error("Couldn't parse formula: <%s %r>", type(tokens).__name__, tokens)
+    msg = f"Expression '{tokens!r}' can't be parsed"
+    raise ValueError(msg)
