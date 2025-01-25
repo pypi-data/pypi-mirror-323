@@ -1,0 +1,16 @@
+[project]
+name = "harpiamm"
+dynamic = ["version", "dependencies"]
+authors = [
+    {name = "Lukas Kontenis", email = "lukas.kontenis@lightcon.com"},
+]
+description = "A Python library for the HARPIA microscopy module."
+readme = "README.md"
+requires-python = ">=3.8"
+
+[tool.setuptools.dynamic]
+version = {attr = "harpiamm.__version__"}
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["harpiamm", "scripts"]

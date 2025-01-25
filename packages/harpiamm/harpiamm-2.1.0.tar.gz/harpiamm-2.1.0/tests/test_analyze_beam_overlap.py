@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Pump-probe overlap analysis script.
+
+Generate a pump-probe XYZ overlap report. The report contains three panels
+which show the FWHM beam size and the focus X and Y position as a function of
+the Z position.
+
+Please specify the objective type and the device serial number
+
+This script is a part of the HARPIA Microscopy Kit, which is a set of tools for
+the alignment, characterization and troubleshooting of HARPIA-MM Microscopy
+Extension.
+
+Contact: lukas.kontenis@lightcon.com, support@lightcon.com
+
+Copyright (c) 2019-2025 Light Conversion
+All rights reserved.
+www.lightcon.com
+"""
+from harpiamm.overlap_analysis import make_overlap_report
+
+# make_overlap_report() will be called next to analyze the pump-probe overlap
+# data and produce a report. If the obj_id and device_sn arguments are not set
+# a dialog will be shown for user input. Typical arguments are:
+#   obj_id='nikon_pf_10x'
+#   device_sn="M00000"
+# The following objective ids are supported: nikon_pf_4x, nikon_pf_10x
+# The device serial number must be in the M00000 format
+make_overlap_report(path="../test-data/HARPIA-MM Overlap test dataset - M24079 10x/", device_sn="M24079", obj_id='nikon_pf_10x')
+
+input("Press any key to close this window")
