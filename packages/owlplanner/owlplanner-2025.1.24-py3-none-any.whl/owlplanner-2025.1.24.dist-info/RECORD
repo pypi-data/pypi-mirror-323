@@ -1,0 +1,16 @@
+owlplanner/__init__.py,sha256=QqrdT0Qks20osBTg7h0vJHAxpP9lL7DA99xb0nYbtw4,254
+owlplanner/abcapi.py,sha256=eemIsdbtzdWCIj5VuuswgphxXMcxJ_GZfUlDi6lttFM,6658
+owlplanner/config.py,sha256=ouADb6YES5Zgv0UwnEK9Axwvs8drp-ahboQjI4WTrr0,12069
+owlplanner/logging.py,sha256=pXg_mMgBll-kklqaDRLDNVUFo-5DAa-yqTKtiVrhNWw,2530
+owlplanner/plan.py,sha256=hBDT8twND4ddXxfnm3O9MG3HAtwbPAyfhej1BzbrZpE,115173
+owlplanner/progress.py,sha256=YZjL5_m4MMgKPlWlhhKacPLt54tVhVGF1eXxxZapMYs,386
+owlplanner/rates.py,sha256=MY-jnTdld50gRytPa_LtlS0RwTDFbhN-YlgCg9fF1jw,22801
+owlplanner/tax2024.py,sha256=qiGZCWv02Y8Ip3lmQCZT1kFpsnFYwj5cHlpB2Lh1dt8,6820
+owlplanner/tax2025.py,sha256=W3yXKC3rgcqPjZMguOyejgsox9J42w3ogBNN1mIBHBI,6965
+owlplanner/timelists.py,sha256=n1ZWCN8cyW1o9sAJLKZRDzZITgwjMWUUKcGjXqyXcNE,4729
+owlplanner/utils.py,sha256=adIwqGVQFfvekke0JCxYJD3PKHbptVCj3NrQT2TQIB4,2351
+owlplanner/version.py,sha256=UAr2KgRbggn8uPi5Qz9zJrAznnf2fpeRuFB_a4TVwhE,27
+owlplanner-2025.1.24.dist-info/METADATA,sha256=cdMc1W357-STYficByVJ_CSNA0Xycqzd3ka0_ITSktA,64228
+owlplanner-2025.1.24.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+owlplanner-2025.1.24.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+owlplanner-2025.1.24.dist-info/RECORD,,
