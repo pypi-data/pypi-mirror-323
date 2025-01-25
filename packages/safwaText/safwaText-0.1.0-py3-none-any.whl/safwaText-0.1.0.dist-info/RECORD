@@ -1,0 +1,9 @@
+safwaText/__init__.py,sha256=mKiZPjy-eqHLIiwy9sJg35v0diYpbd9p9boHX0gWmOM,441
+safwaText/cleaner.py,sha256=gtPxnOymzWbz3XGFnK9xdrlf3qYRrMes7Ls57PPVg14,1990
+safwaText/stemmer.py,sha256=vDRwbZhJ1ng5cv5C5twQdf-QBkPl2ughA025R0_hGTU,3377
+safwaText/stopwords.py,sha256=9WbeiGQWmxdrKp8TUS8UnkdOMMIsZCyuk_zgIBcEx7M,1494
+safwaText-0.1.0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+safwaText-0.1.0.dist-info/METADATA,sha256=TQKTaP3tZonkji4rZHyqasydhnMXldvjjIrj_TWO7O4,16711
+safwaText-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+safwaText-0.1.0.dist-info/top_level.txt,sha256=kL7T3FvjwVhpJrm2bZRWUP5eWQo1W3JyS2iCqqiEEh8,10
+safwaText-0.1.0.dist-info/RECORD,,
