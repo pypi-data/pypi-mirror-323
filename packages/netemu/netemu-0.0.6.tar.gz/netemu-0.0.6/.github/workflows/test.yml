@@ -1,0 +1,84 @@
+name: Test Package
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.dev.txt
+
+      - name: Lint with ruff
+        run: ruff check
+
+      - name: Check formatting with ruff
+        run: ruff format --check
+
+      - name: Check minimum supported Python version with vermin
+        run: |
+          min=$(vermin -f parsable . | tail -n1 | cut -d: -f5)
+          req=$(grep -oP 'requires-python = ">=\K[^"]+' pyproject.toml)
+          if [[ $min != $req ]]; then
+            echo "Minimum supported Python version is $min, but $req is required"
+            exit 1
+          fi
+          echo "MINVER=$min" >> "$GITHUB_OUTPUT"
+          
+  test:
+    needs: lint
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - '${{ needs.lint.outputs.MINVER }}'
+          - '3.x'
+    
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --user --upgrade pip
+          pip install -r requirements.dev.txt
+
+      - name: Test with pytest
+        run: unshare -Urn pytest --cov-report=xml --junitxml=junit.xml -o junit_family=legacy
+
+      - name: Upload test results to Codecov
+        if: ${{ !cancelled() }}
+        uses: codecov/test-results-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Upload coverage reports to Codecov
+        if: ${{ matrix.python-version == '3.x'}}
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
