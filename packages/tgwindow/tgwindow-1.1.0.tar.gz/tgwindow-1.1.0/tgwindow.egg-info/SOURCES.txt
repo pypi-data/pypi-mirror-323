@@ -1,0 +1,17 @@
+README.md
+setup.py
+src/__init__.py
+src/errors.py
+src/middleware.py
+src/sender/__init__.py
+src/sender/sender.py
+src/window/__init__.py
+src/window/base.py
+src/window/wrapper.py
+tests/__init__.py
+tests/main_test.py
+tgwindow.egg-info/PKG-INFO
+tgwindow.egg-info/SOURCES.txt
+tgwindow.egg-info/dependency_links.txt
+tgwindow.egg-info/requires.txt
+tgwindow.egg-info/top_level.txt
