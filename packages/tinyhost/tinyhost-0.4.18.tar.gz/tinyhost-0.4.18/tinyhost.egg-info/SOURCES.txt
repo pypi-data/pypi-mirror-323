@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+tinyhost/__init__.py
+tinyhost/datastore_template.js
+tinyhost/py.typed
+tinyhost/tinyhost.py
+tinyhost/version.py
+tinyhost.egg-info/PKG-INFO
+tinyhost.egg-info/SOURCES.txt
+tinyhost.egg-info/dependency_links.txt
+tinyhost.egg-info/entry_points.txt
+tinyhost.egg-info/requires.txt
+tinyhost.egg-info/top_level.txt
