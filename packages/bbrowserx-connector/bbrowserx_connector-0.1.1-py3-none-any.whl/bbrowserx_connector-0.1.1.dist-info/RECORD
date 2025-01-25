@@ -1,0 +1,10 @@
+bbrowserx_connector/__init__.py,sha256=lzigx0--BnbWd2MKANRAfCYaG8i_WKWmu1dn59vN2Jw,271
+bbrowserx_connector/_api.py,sha256=AyTwNWuJvaW7GUPpoYlyL9VCocezGAozPCmMRd2SvDk,12704
+bbrowserx_connector/_connector.py,sha256=YM2vmK4zY4GzN02mCuAPDfSahtpWtMxne2ELSWpRzo8,16881
+bbrowserx_connector/_constants.py,sha256=lLVGBd05-0Gxy9g5ClFPnizDrzUg63UK7d2-Og55MKI,4081
+bbrowserx_connector/_submit_format.py,sha256=bh1IhFRmVybk7l38sdWlna2vGEW-iB-k2F_l9mKER1c,2160
+bbrowserx_connector/_utils.py,sha256=I4WCyrUXnyLagIoQ03Fx2o3epZhYADGtgjPRJmCgHPY,3443
+bbrowserx_connector-0.1.1.dist-info/METADATA,sha256=iYEM6D6MTjcXvLJgcrdZ-Jr2ago_hyW1Ih8WkSja4YY,2332
+bbrowserx_connector-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+bbrowserx_connector-0.1.1.dist-info/top_level.txt,sha256=CwvZjGgrB3BxdKa-qnDZQrEbJLaALVySwEWhRZ4QfBk,20
+bbrowserx_connector-0.1.1.dist-info/RECORD,,
