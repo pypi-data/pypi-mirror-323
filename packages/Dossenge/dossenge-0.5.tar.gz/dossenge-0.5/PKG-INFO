@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: Dossenge
+Version: 0.5
+Summary: Dossenge 0.5
+Author: Dossenge
+Requires-Python: >=3.0
+Requires-Dist: toml
+
+This package contains commonly used functions
