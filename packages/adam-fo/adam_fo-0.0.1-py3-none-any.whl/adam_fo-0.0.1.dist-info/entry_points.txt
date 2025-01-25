@@ -1,0 +1,5 @@
+[console_scripts]
+build-fo = adam_fo.build:main
+
+[gui_scripts]
+

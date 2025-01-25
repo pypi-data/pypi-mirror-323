@@ -1,0 +1,13 @@
+adam_fo-0.0.1.dist-info/METADATA,sha256=wlCQerroqjWe0M0iQtNLCH_Xs_9DvVrGFisVwD0Z8IA,3662
+adam_fo-0.0.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+adam_fo-0.0.1.dist-info/entry_points.txt,sha256=sTb5a9Dp9yOr11Cckh-u-YS3qb5NwjIWnI65VkNLQoQ,64
+adam_fo/.env,sha256=LVnqhByctVD5dHhDJJyLfHlaUfNkX-GvTScOGFzKTdQ,52
+adam_fo/__init__.py,sha256=lHa_ShQDWrwIGnT2ChlRdbpPTSddSmXNF5zmFLbYTe0,78
+adam_fo/_version.py,sha256=07NzQXBgNlnw5kSN6ZYxE9By-_RuH3Jyy58Z74sIio0,21
+adam_fo/build.py,sha256=DsQX5ARnxicer479hyPHwz6XZRH27J3AEGmjgsRnCJg,4143
+adam_fo/build_fo.sh,sha256=k-9yt6nPg0RiQjq6zm2G1r4_hC5WthiT2s7strch_BM,1721
+adam_fo/config.py,sha256=Yi5XQZdlXhbrT1DbNlmMotYlgxStDdSW-iQxCXoemM8,1123
+adam_fo/conversions.py,sha256=-i14CPywmcrZb4NmAi0r2B7ayTe79lq8ESvnIZQQlD8,10175
+adam_fo/environ.dat.tpl,sha256=FKF5HL6KLjb3rcoWS8QJ6JnZyMBcKolH7quLXK9HmsU,27291
+adam_fo/run_fo.py,sha256=8kfoIunHxaTV3_PX-_D-Ihcsg7rHde6SDgyefTFoZpo,5921
+adam_fo-0.0.1.dist-info/RECORD,,
