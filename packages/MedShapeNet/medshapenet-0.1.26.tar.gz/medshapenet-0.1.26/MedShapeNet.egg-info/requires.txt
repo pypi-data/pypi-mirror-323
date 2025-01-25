@@ -1,0 +1,13 @@
+minio>=7.2.8
+tqdm>=4.66.5
+numpy>=1.18.5
+numpy-stl>=3.1.2
+requests>=2.32.3
+fire>=0.6.0
+trimesh>=4.4.9
+pydicom>=2.2.0
+python-gdcm
+pygments>=2.4.0
+jupyter-core>=4.9.2
+packaging>=17.0
+traitlets>=5.1.0
