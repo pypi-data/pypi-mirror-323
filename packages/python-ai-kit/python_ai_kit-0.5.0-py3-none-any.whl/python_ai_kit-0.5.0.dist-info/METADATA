@@ -1,0 +1,69 @@
+Metadata-Version: 2.3
+Name: python-ai-kit
+Version: 0.5.0
+Summary: AI Kit is the first CLI thats not designed for you. Its for your agent.
+Author: Ben Everman
+Author-email: ben@beneverman.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.11.11,<4.0.0)
+Requires-Dist: bs4 (>=0.0.2,<0.0.3)
+Requires-Dist: build (>=1.2.2.post1,<2.0.0)
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: duckduckgo-search (>=7.2.1,<8.0.0)
+Requires-Dist: faiss-cpu (>=1.9.0.post1,<2.0.0)
+Requires-Dist: litellm (>=1.59.6,<2.0.0)
+Requires-Dist: markdownify (>=0.14.1,<0.15.0)
+Requires-Dist: numpy (>=2.2.2,<3.0.0)
+Requires-Dist: openai (>=1.60.1,<2.0.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: rank-bm25 (>=0.2.2,<0.3.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Requires-Dist: twine (>=6.1.0,<7.0.0)
+Description-Content-Type: text/markdown
+
+# AI Kit - Supercharge Your AI IDE ⚡️
+
+AI Kit is the first CLI thats not designed for you. Its designed for your agent.
+
+Designed to integrate with a text editor like Cursor or Windsurf (or any environment with a shell), it extends your agent with search, reasoning, and memory. The goal: make myself obsolete. So I can go do other, better, stuff - like scrolling TikTok.
+
+## Only one command for you
+This creates an `.ai-kit` directory that both you and your agent have control over.
+
+`init`
+Initialize or reset AI Kit in your project.
+```bash
+ai-kit init
+```
+
+## Commands For Your Agent
+`list`
+List all commands available to your agent
+```bash
+ai-kit list
+```
+
+`think`
+Automatically route complex requstes to `deepseek-r1`, retuning the though stream back to the execution agent in your editor
+```bash
+ai-kit think "What does this code do?"
+```
+
+`web`
+Search the web using DuckDuckGo
+```bash
+ai-kit web "query"
+ai-kit web -n 5 "specific query"
+```
+
+`status`
+Show the status of your AI Kit
+```bash
+ai-kit status
+```
