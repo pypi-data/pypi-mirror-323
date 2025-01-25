@@ -1,0 +1,8 @@
+agentgui/__init__.py,sha256=BKfe7fHB9aZyedvl57qEn0LVa-IrrhRBJmjFUKQqfyA,56
+agentgui/gui_agent.py,sha256=Gv9UTm0keYRxDkC2uDNpK3oRi9uzJPZF4Jl7MGQzssQ,48507
+agentgui/model.py,sha256=Atuy87Dc4q1J5KFBjUIYZkz1ufaQTSGFkvhooq_yNCk,921
+agentgui/playwright_agent.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agentgui-0.0.2.dist-info/METADATA,sha256=WuvrbHlqeJqLVn6H3HBsjx-lo0gh7PSL92Jc7SEBMqE,637
+agentgui-0.0.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+agentgui-0.0.2.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agentgui-0.0.2.dist-info/RECORD,,
