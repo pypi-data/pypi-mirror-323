@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: helpful-helper
+Version: 0.1.0
+Summary: A helper package to use common functions
+Home-page: https://github.com/yourusername/helpful-helper
+Author: Lawrence Chin
+Author-email: lawrence.chin@gusto.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: redshift_connector>=2.1.3
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: gspread>=6.1.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Helpful Helper
+Created by me, this package contains our team's most commonly used and useful functions
+
+# About
+Contents include functions for connecting to redshift. For help with what functions are available, please run help()
+
+# Installation
+To install functional-functions, you can install it using pip:
+````python
+pip install helpful-helper
+````
+
+# Additional Prequisites
