@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+django_tailwind_4.egg-info/PKG-INFO
+django_tailwind_4.egg-info/SOURCES.txt
+django_tailwind_4.egg-info/dependency_links.txt
+django_tailwind_4.egg-info/not-zip-safe
+django_tailwind_4.egg-info/requires.txt
+django_tailwind_4.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_templatetags.py
