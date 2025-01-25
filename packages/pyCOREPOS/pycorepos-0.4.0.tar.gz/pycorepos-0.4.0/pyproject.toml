@@ -1,0 +1,49 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "pyCOREPOS"
+version = "0.4.0"
+description = "Python Interface to CORE POS"
+readme = "README.md"
+authors = [{name = "Lance Edgar", email = "lance@edbob.org"}]
+license = {text = "GNU GPL v3+"}
+classifiers = [
+        "Development Status :: 3 - Alpha",
+        "Environment :: Console",
+        "Environment :: Web Environment",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Topic :: Office/Business",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+        "mysql-connector-python",
+        "requests",
+        "SQLAlchemy>=1.4",
+]
+
+
+[project.urls]
+Homepage = "https://forgejo.wuttaproject.org/rattail/pycorepos"
+Repository = "https://forgejo.wuttaproject.org/rattail/pycorepos"
+Issues = "https://forgejo.wuttaproject.org/rattail/pycorepos/issues"
+Changelog = "https://forgejo.wuttaproject.org/rattail/pycorepos/src/branch/master/CHANGELOG.md"
+
+
+[tool.commitizen]
+version_provider = "pep621"
+tag_format = "v$version"
+update_changelog_on_bump = true
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["corepos"]
