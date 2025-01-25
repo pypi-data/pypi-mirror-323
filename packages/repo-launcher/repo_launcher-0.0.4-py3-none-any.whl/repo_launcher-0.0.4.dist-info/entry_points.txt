@@ -1,0 +1,3 @@
+[console_scripts]
+launch = cradle.cli:main
+repo-launcher = cradle.cli:main

@@ -1,0 +1,12 @@
+cradle/__init__.py,sha256=yLwnR2BNb-HSjPpng5bQc1gSOoWyjHVkdIc28-djCw0,610
+cradle/cli.py,sha256=dg6quW0iUXKFSHP-T0cV2DFq_ydC65_Vu_Lap5tsh4w,4626
+cradle/templates.yaml,sha256=2LEyxyB65I0fIraE7uzcebx2QJzmjHzow9rPCeuitNQ,385
+cradle/utils/__init__.py,sha256=yLwnR2BNb-HSjPpng5bQc1gSOoWyjHVkdIc28-djCw0,610
+cradle/utils/git.py,sha256=KwFGIbnKWmSG3MhsqNr7MVVrVE9NzB11Sw0JiIWiFZs,4229
+cradle/utils/questions.py,sha256=7fnTtDd-HfNb4pFUhHClu_iGlzY7u8dA50kZdLQwBlE,3165
+cradle/utils/shell.py,sha256=L_jpwsLykTeOF2Xem1UeqLmINgRP4JW9yW5dZykOg8g,1288
+repo_launcher-0.0.4.dist-info/METADATA,sha256=cGo4wwG8Roh4ZKw3VuFXOnNQL6STCa_YE3OUIcV08KQ,6251
+repo_launcher-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+repo_launcher-0.0.4.dist-info/entry_points.txt,sha256=8YQti4OWxkqDh5glwKNy2tOK128kfbCnmpRW9SLt08g,75
+repo_launcher-0.0.4.dist-info/licenses/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+repo_launcher-0.0.4.dist-info/RECORD,,
