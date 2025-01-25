@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+setup.py
+numpar/__init__.py
+numpar.egg-info/PKG-INFO
+numpar.egg-info/SOURCES.txt
+numpar.egg-info/dependency_links.txt
+numpar.egg-info/top_level.txt
+tests/test_numpar.py
