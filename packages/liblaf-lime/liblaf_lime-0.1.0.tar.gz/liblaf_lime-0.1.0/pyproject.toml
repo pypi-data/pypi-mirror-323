@@ -1,0 +1,64 @@
+#:schema https://json.schemastore.org/pyproject.json
+# https://packaging.python.org/en/latest/specifications/pyproject-toml/
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[dependency-groups]
+build = [
+  "build>=1.2.2.post1,<2",
+  "check-wheel-contents>=0.6.1,<0.7",
+  "twine>=6.1.0,<7",
+]
+dev = ["icecream>=2.1.4,<3", "ipykernel>=6.29.5,<7", "ipython>=8.31.0,<9"]
+
+[project]
+authors = [
+  { email = "30631553+liblaf@users.noreply.github.com", name = "liblaf" },
+]
+dependencies = [
+  "emoji>=2.14.1,<3",
+  "githubkit>=0.12.5",
+  "gitpython>=3.1.44,<4",
+  "hishel>=0.1.1,<0.2",
+  "httpx[socks]>=0.27.2,<0.28",
+  "lazy-loader>=0.4,<0.5",
+  "liblaf-grapes>=0.0.1,<0.0.2",
+  "litellm>=1.59.7,<2",
+  "loguru>=0.7.3,<0.8",
+  "platformdirs>=4.3.6,<5",
+  "pydantic-settings>=2.7.1,<3",
+  "pydantic>=2.10.6,<3",
+  "python-frontmatter>=1.1.0,<2",
+  "rich>=13.9.4,<14",
+  "typer-di>=0.1.2,<0.2",
+  "typer>=0.15.1,<0.16",
+]
+description = "Add your description here"
+keywords = []
+license = "MIT"
+name = "liblaf-lime"
+readme = "docs/README.md"
+requires-python = ">=3.12,<4"
+version = "0.1.0"
+
+[project.scripts]
+aic = "liblaf.lime.cli.commit:app"
+lime = "liblaf.lime.cli:app"
+
+[project.urls]
+"Changelog" = "https://github.com/liblaf/lime/blob/main/CHANGELOG.md"
+"Homepage" = "https://github.com/liblaf/lime"
+"Issue Tracker" = "https://github.com/liblaf/lime/issues"
+"Release Notes" = "https://github.com/liblaf/lime/releases"
+"Source Code" = "https://github.com/liblaf/lime"
+
+[tool.check-wheel-contents]
+ignore = ["W002"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/liblaf"]
+
+[tool.uv]
+default-groups = ["build", "dev"]
