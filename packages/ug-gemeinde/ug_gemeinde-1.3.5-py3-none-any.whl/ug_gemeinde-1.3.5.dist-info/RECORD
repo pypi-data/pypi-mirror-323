@@ -1,0 +1,13 @@
+ug_gemeinde/Gemeinde.py,sha256=yNCncDw28D4rxmFHnEhFxC-vsN3YTW3itKKmabMq3wI,97576
+ug_gemeinde/Gemeinde.yaml,sha256=4jUCQhaigb-PPhLbAQiXZBJhlrnxq3X9UwALnSpfXwY,1734
+ug_gemeinde/GemeindeInstall.sh,sha256=SlkPrRdYT5iIg73XfyrLv4ni194TDO0c2boazFmU4gk,2857
+ug_gemeinde/GemeindeStart.sh,sha256=rcIoMytgq6EG9Iy03PQTykaqLV16biSpTkegdbIHz58,467
+ug_gemeinde/GemeindeUpgrade.sh,sha256=K5ShSSmsNsgHCAQSC3k3u_Y6afDeqX9UCpczR8AMrfc,794
+ug_gemeinde/Gemeinde_Def.py,sha256=zIQB4mJuxzsRsv23fTNuyAWo6izQqAJz2WNpVPmOh5Y,20468
+ug_gemeinde/Gemeinde_Modelle.py,sha256=ufNPyUIiOplHm7mT8IoPICxYUiwaL7cKaqG1oqK1fOw,18018
+ug_gemeinde/Icons.yaml,sha256=xwoggi_1fyS9ABFB4lHLD8jn9ONel6Kpi_cMTZEJrDc,265546
+ug_gemeinde/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ug_gemeinde-1.3.5.dist-info/METADATA,sha256=m1UPB0aN4NAhhXFPGcVJPHsSTQKELK3uZh2lK8d1rSA,1256
+ug_gemeinde-1.3.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ug_gemeinde-1.3.5.dist-info/licenses/LICENSE,sha256=J2AOUnqs6D0Lj-UkwbKiB_lowdWGYFmhUkomVREB6PM,1069
+ug_gemeinde-1.3.5.dist-info/RECORD,,
