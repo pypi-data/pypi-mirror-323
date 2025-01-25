@@ -1,0 +1,17 @@
+numpy
+polars
+scipy
+anndata
+pysam
+tqdm
+
+[dev]
+ruff
+pytest
+
+[doc]
+sphinx
+sphinx-book-theme
+sphinx-autodoc-typehints
+sphinx-copybutton
+sphinx-autoapi
