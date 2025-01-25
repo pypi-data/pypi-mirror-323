@@ -1,0 +1,12 @@
+template_nn/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+template_nn/shallow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+template_nn/shallow/fnn.py,sha256=KyX_QtcEpLTNkMub9JIv0vMyd9S1-IcIzocZGAz30BE,2542
+template_nn/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+template_nn/utils/args_val.py,sha256=kwqlWLPOVYouG1fUr0vmM8t7lIAMwNTJOJ0gC2jBegQ,1508
+template_nn/utils/gpu.py,sha256=FWByv5E9JGyd6NtYxqNDDpaJ5YL69YT36ZqzZPUszCw,881
+template_nn/utils/model_compose.py,sha256=-mkx_Kr6smbdo0z37Wvq6J4CmiKI7hWOPj9nkh8NLc8,4014
+template_nn-0.1.1.dist-info/LICENSE,sha256=RtJki7nuiFRDKSjx-zGb4QccCFgyv6Sj5G2nTrrZ6a0,1071
+template_nn-0.1.1.dist-info/METADATA,sha256=8aXFzAWlbEAePCAJWLuHNBrEOuIb_8MTM37AXCxoezc,591
+template_nn-0.1.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+template_nn-0.1.1.dist-info/top_level.txt,sha256=pRsE0Av778862tRjdVHJKX0uORX3VSUOPKWmWQp60eo,12
+template_nn-0.1.1.dist-info/RECORD,,
