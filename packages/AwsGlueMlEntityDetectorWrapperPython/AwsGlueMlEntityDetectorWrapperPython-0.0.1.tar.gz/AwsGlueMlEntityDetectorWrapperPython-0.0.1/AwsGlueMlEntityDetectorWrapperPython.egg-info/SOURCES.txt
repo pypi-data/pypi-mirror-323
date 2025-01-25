@@ -1,0 +1,5 @@
+setup.py
+AwsGlueMlEntityDetectorWrapperPython.egg-info/PKG-INFO
+AwsGlueMlEntityDetectorWrapperPython.egg-info/SOURCES.txt
+AwsGlueMlEntityDetectorWrapperPython.egg-info/dependency_links.txt
+AwsGlueMlEntityDetectorWrapperPython.egg-info/top_level.txt
