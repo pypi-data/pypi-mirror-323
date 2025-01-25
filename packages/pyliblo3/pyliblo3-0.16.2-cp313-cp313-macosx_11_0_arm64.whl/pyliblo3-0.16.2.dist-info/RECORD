@@ -1,0 +1,11 @@
+pyliblo3-0.16.2.dist-info/RECORD,,
+pyliblo3-0.16.2.dist-info/WHEEL,sha256=zEwrEM3mH_qOUQ9uk3aZI5DMOaUao9_e1G94mKtHrTY,109
+pyliblo3-0.16.2.dist-info/COPYING,sha256=XfBwBxmJicYi9dQd6NcD577z0OedYuJDMu5zmkUq9io,26436
+pyliblo3-0.16.2.dist-info/top_level.txt,sha256=1YXAnXd3QlTXjIZLrE_5RpE-YicaxiCnAT-KGPJbI5M,9
+pyliblo3-0.16.2.dist-info/METADATA,sha256=ZyYJ9UMXQXOGZj_LkaSrO2baLbGX1id-Cv92YMVUJ78,3079
+pyliblo3/__init__.py,sha256=HitRN3n7HxRC_aOyeNT7lv_wXA0KU_yNz1JmMlURpY4,627
+pyliblo3/_liblo.cpython-313-darwin.so,sha256=lTMHkk3_-eA07w2r2-n9CLMiZyogMGWzqtfKS8tXd3Y,306288
+pyliblo3/_liblo.pyi,sha256=pePIgBGFrFMYsjAcHX7rG-l4akFJKD4707zlPutzxOU,3454
+pyliblo3/.dylibs/liblo.7.5.0.dylib,sha256=9tGvxzPXSlP3kyZQOs1cFnBJ-VOOhjv-X4PnRtBusEU,228800
+pyliblo3-0.16.2.data/scripts/dump_osc.py,sha256=gMjgLAnFhbGHdERTB36sHTSEanRh0lEeO0hFdNWBj1c,2128
+pyliblo3-0.16.2.data/scripts/send_osc.py,sha256=qOOOfrfHvIcIKzeJ6JC0AqHI9GhS2sK3Hebpud36OCg,1764
