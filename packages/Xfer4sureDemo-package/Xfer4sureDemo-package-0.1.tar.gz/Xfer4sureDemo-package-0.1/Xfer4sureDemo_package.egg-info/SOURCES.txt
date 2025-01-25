@@ -1,0 +1,9 @@
+README.md
+setup.py
+Xfer4sureDemo_package/__init__.py
+Xfer4sureDemo_package/script.py
+Xfer4sureDemo_package.egg-info/PKG-INFO
+Xfer4sureDemo_package.egg-info/SOURCES.txt
+Xfer4sureDemo_package.egg-info/dependency_links.txt
+Xfer4sureDemo_package.egg-info/entry_points.txt
+Xfer4sureDemo_package.egg-info/top_level.txt
