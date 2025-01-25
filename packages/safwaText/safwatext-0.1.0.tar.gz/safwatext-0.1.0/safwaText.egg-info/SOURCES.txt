@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+safwaText/__init__.py
+safwaText/cleaner.py
+safwaText/stemmer.py
+safwaText/stopwords.py
+safwaText.egg-info/PKG-INFO
+safwaText.egg-info/SOURCES.txt
+safwaText.egg-info/dependency_links.txt
+safwaText.egg-info/top_level.txt
+tests/test_cleaner.py
+tests/test_stemmer.py
+tests/test_stopwords.py
