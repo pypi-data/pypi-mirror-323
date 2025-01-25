@@ -1,0 +1,36 @@
+Metadata-Version: 2.2
+Name: ray-tpu
+Version: 0.0.3
+Summary: An utility for running Ray with Cloud TPUs
+Author-email: Allen Wang <allencwang@google.com>, Richard Liu <ricliu@google.com>
+Project-URL: Homepage, https://github.com/richardsliu/ray-tpu
+Project-URL: Issues, https://github.com/richardsliu/ray-tpu/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Ray TPU
+
+This is a repository containing utilities for running [Ray](https://www.ray.io/)
+on Cloud TPUs. For more information about TPUs, please check out the official
+Google Cloud documentation [here](https://cloud.google.com/tpu).
+
+## Why this package?
+
+TPUs are different from other accelerators like GPUs because they are
+"pod-centric". Scheduling jobs and workloads on TPUs require awareness of slice
+topologies and other factors. This package introduces higher level utilities
+that simplify running Ray workloads on TPU pod slices as if they were single
+nodes.
+
+## Installation
+
+Run the following command to install the package:
+```
+pip install ray-tpu
+```
+
+Check out the [tutorials section](https://github.com/AI-Hypercomputer/ray-tpu/tree/main/tutorials/0-basic%20tutorial) for more details.
