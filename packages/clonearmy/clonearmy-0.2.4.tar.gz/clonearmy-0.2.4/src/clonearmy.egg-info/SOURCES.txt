@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/cloneArmy/__init__.py
+src/cloneArmy/cli.py
+src/cloneArmy/comparison.py
+src/cloneArmy/processor.py
+src/cloneArmy/report.py
+src/cloneArmy/utils.py
+src/clonearmy.egg-info/PKG-INFO
+src/clonearmy.egg-info/SOURCES.txt
+src/clonearmy.egg-info/dependency_links.txt
+src/clonearmy.egg-info/entry_points.txt
+src/clonearmy.egg-info/requires.txt
+src/clonearmy.egg-info/top_level.txt
