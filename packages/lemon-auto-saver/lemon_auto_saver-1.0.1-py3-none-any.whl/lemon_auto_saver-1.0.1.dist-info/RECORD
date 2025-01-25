@@ -1,0 +1,12 @@
+backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backend/auto_save.py,sha256=MLOPSN4tQg0KTTpEeU2CajSQCs9oWNm-p55QwlwKl5c,4878
+config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+config/config.json,sha256=2SwjdKxsV4-dKF-C28WmTk3b5jwxk-MyuRnQKhxpUEU,95
+config/config.py,sha256=GIAMlqab75PknKr9RSRAJJ746qsbQGI0s9VTEqvnElg,596
+gui/__init__.py,sha256=6yIF3EYSjDraIBJ6tP73R9v0MP0LxPfQl73a3kdbRTQ,35
+gui/main_window.py,sha256=Uobrz8FkkITk25mMZmbCD6G2PXlJvtRD5FfJ6Bq7EBM,4753
+lemon_auto_saver-1.0.1.dist-info/METADATA,sha256=-EAQ2w82mM-8zPQIb5kf1UQhkre0LClhYmS1Hom2IU8,926
+lemon_auto_saver-1.0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+lemon_auto_saver-1.0.1.dist-info/entry_points.txt,sha256=NinpI5MhjMbrvkclzFW_8kRhuqnPE9Pq3aPB8jRrgg8,68
+lemon_auto_saver-1.0.1.dist-info/top_level.txt,sha256=H_qdxRdbzJfxk0jwUs_bVKgp91kJ7TV8WqphISk_2qY,19
+lemon_auto_saver-1.0.1.dist-info/RECORD,,
