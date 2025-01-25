@@ -1,0 +1,143 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tox-no-deps"
+description = "Skip an installation of dependencies of tox test environments"
+requires-python = ">= 3.9"
+dependencies = [
+  "tox > 4",
+]
+dynamic = ["version"]
+readme = "README.md"
+keywords = ["virtual", "environments", "isolated", "testing"]
+authors = [
+  {name = "Stanislav Levin"},
+]
+maintainers = [
+  {name = "Stanislav Levin"},
+]
+license = {text = "MIT"}
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Framework :: tox",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Unix",
+  "Topic :: Software Development :: Testing",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Utilities",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/stanislavlevin/tox-no-deps"
+Repository = "https://github.com/stanislavlevin/tox-no-deps"
+Issues = "https://github.com/stanislavlevin/tox-no-deps/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "tox_no_deps.version.version"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.entry-points.tox]
+tox_no_deps = "tox_no_deps.plugin"
+
+[tool.black]
+line-length = 80
+
+[tool.pytest.ini_options]
+addopts = "-ra --showlocals"
+filterwarnings = [
+    "error",
+]
+
+[tool.coverage.run]
+source = [
+    "tox_no_deps",
+]
+
+[tool.coverage.report]
+skip_covered = false
+show_missing = true
+
+[tool.coverage.paths]
+source = [
+    "src/tox_no_deps",
+    "*/.tox/*/lib/python*/site-packages/tox_no_deps",
+    "*/src/tox_no_deps",
+]
+
+[tool.pylint."master"]
+recursive = true
+suggestion-mode = "yes"
+persistent="no"
+ignore-paths = [
+    '.*/\.git/.*',
+    '^.git/.*',  # dot escaping doesn't work, see pylint#5398
+    '.*/\.tox/.*',
+    '^.tox/.*',  # dot escaping doesn't work, see pylint#5398
+]
+
+[tool.pylint."messages control"]
+enable = [
+    "all",
+    "useless-suppression",
+]
+
+disable = [
+    "bad-inline-option",
+    "c-extension-no-member",
+    "deprecated-pragma",
+    "file-ignored",
+    "locally-disabled",
+    "raw-checker-failed",
+    "suppressed-message",
+    "use-symbolic-message-instead",
+    "bad-indentation",
+    "broad-except",
+    "dangerous-default-value",
+    "duplicate-code",
+    "fixme",
+    "invalid-name",
+    "line-too-long",
+    "missing-docstring",
+    "protected-access",
+    "raise-missing-from",
+    "redefined-builtin",
+    "redefined-outer-name",
+    "super-init-not-called",
+    "superfluous-parens",
+    "too-few-public-methods",
+    "too-many-arguments",
+    "too-many-branches",
+    "too-many-instance-attributes",
+    "too-many-lines",
+    "too-many-locals",
+    "too-many-nested-blocks",
+    "too-many-public-methods",
+    "too-many-return-statements",
+    "too-many-statements",
+    "trailing-newlines",
+    "trailing-whitespace",
+    "ungrouped-imports",
+    "unused-argument",
+    "wrong-import-order",
+    "wrong-import-position",
+    "consider-using-with",  # pylint 2.8.0, contextmanager is not mandatory
+    "consider-using-max-builtin",  # pylint 2.8.0, code can be more readable
+    "consider-using-min-builtin",  # pylint 2.8.0, code can be more readable
+    "consider-using-f-string",  # pylint 2.11.0, format can be more readable
+    "subprocess-run-check",  # subprocess result can be check later or ignored
+]
+
+[tool.pylint."reports"]
+output-format = "colorized"

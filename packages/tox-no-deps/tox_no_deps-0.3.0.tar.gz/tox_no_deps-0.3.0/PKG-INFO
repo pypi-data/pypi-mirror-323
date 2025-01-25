@@ -1,0 +1,58 @@
+Metadata-Version: 2.2
+Name: tox-no-deps
+Version: 0.3.0
+Summary: Skip an installation of dependencies of tox test environments
+Author: Stanislav Levin
+Maintainer: Stanislav Levin
+License: MIT
+Project-URL: Homepage, https://github.com/stanislavlevin/tox-no-deps
+Project-URL: Repository, https://github.com/stanislavlevin/tox-no-deps
+Project-URL: Issues, https://github.com/stanislavlevin/tox-no-deps/issues
+Keywords: virtual,environments,isolated,testing
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: tox
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tox>4
+
+# tox-no-deps plugin ![CI](https://github.com/stanislavlevin/tox-no-deps/workflows/CI/badge.svg)
+
+In network-isolated environments it's impossible to install anything from
+Python package index and only globally installed packages can be used within tox
+test environments.
+
+This plugin skips an installation of dependencies of tox test environments:
+
+- [deps](https://tox.wiki/en/latest/config.html#deps)
+- [extras](https://tox.wiki/en/latest/config.html#extras)
+- [dependency_groups](https://tox.wiki/en/latest/config.html#dependency_groups)
+
+This is mostly used for testing purposes in ALTLinux during RPM build of Python
+packages to run integration tests against the repository packages.
+
+Usage
+-----
+
+```
+tox --no-deps
+```
+
+License
+-------
+
+Distributed under the terms of the **MIT** license, `tox-no-deps` is
+free and open source software.
