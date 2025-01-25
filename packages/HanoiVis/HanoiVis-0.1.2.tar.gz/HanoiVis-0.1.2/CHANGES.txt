@@ -1,0 +1,1 @@
+v0.1.2, 25/01/2025 -- Fix bash script
