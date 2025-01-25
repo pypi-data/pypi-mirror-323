@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/deviceid/__init__.py
+src/deviceid/_store.py
+src/deviceid/deviceid.py
+src/py_deviceid.egg-info/PKG-INFO
+src/py_deviceid.egg-info/SOURCES.txt
+src/py_deviceid.egg-info/dependency_links.txt
+src/py_deviceid.egg-info/top_level.txt
+tests/test_device_id.py
+tests/test_device_id_windows.py
