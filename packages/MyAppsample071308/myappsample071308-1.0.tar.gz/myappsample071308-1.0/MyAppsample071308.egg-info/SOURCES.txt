@@ -1,0 +1,7 @@
+setup.py
+MyAppsample071308.egg-info/PKG-INFO
+MyAppsample071308.egg-info/SOURCES.txt
+MyAppsample071308.egg-info/dependency_links.txt
+MyAppsample071308.egg-info/entry_points.txt
+MyAppsample071308.egg-info/requires.txt
+MyAppsample071308.egg-info/top_level.txt
