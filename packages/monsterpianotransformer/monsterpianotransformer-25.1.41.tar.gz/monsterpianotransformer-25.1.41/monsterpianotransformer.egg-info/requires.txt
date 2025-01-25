@@ -1,0 +1,10 @@
+tqdm
+ipywidgets
+matplotlib
+numpy
+scikit-learn
+torch
+einops
+torch-summary
+hf-transfer
+huggingface_hub
