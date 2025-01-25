@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+nebis/__init__.py
+nebis/cli.py
+nebis_cli.egg-info/PKG-INFO
+nebis_cli.egg-info/SOURCES.txt
+nebis_cli.egg-info/dependency_links.txt
+nebis_cli.egg-info/entry_points.txt
+nebis_cli.egg-info/requires.txt
+nebis_cli.egg-info/top_level.txt
