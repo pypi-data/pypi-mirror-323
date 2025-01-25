@@ -1,0 +1,58 @@
+histogram:
+  dims: [time, farm_id, Z, Y, X]
+  data: [[[
+    [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0]],
+    [[0, 0, 0, 1, 1], [0, 0, 0, 0, 0]],
+  ]]]
+  attrs:
+    grid_mapping: crs
+
+X:
+  dims: X
+  data: [2, 4, 6, 8, 10]
+  attrs:
+    axis: X
+    long_name: longitude coordinate
+    standard_name: longitude
+    units: degrees_east
+
+Y:
+  dims: Y
+  data: [6, 18]
+  attrs:
+    axis: Y
+    long_name: latitude coordinate
+    standard_name: latitude
+    units: degrees_north
+
+crs:
+  dims: []
+  data: 0
+  attrs:
+    crs_wkt: 'GEOGCRS["unknown",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ID["EPSG",6326]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8901]],CS[ellipsoidal,2],AXIS["longitude",east,ORDER[1],ANGLEUNIT["degree",0.0174532925199433,ID["EPSG",9122]]],AXIS["latitude",north,ORDER[2],ANGLEUNIT["degree",0.0174532925199433,ID["EPSG",9122]]]]'
+    geographic_crs_name: 'unknown'
+    grid_mapping_name: 'latitude_longitude'
+    inverse_flattening: 298.257223563
+    longitude_of_prime_meridian: 0.0
+    prime_meridian_name: 'Greenwich'
+    reference_ellipsoid_name: 'WGS 84'
+    semi_major_axis: 6378137.0
+    semi_minor_axis: 6356752.314245179
+    horizontal_datum_name: 'World Geodetic System 1984'
+
+Z:
+  dims: Z
+  data: [3, 9]
+
+farm_id:
+  dims: farm_id
+  data: [12346]
+  attrs:
+    global_index: 1
+
+time:
+    dims: time
+    data: [549]
+    attrs:
+      global_index: 1
+      units: days since 2019-01-01

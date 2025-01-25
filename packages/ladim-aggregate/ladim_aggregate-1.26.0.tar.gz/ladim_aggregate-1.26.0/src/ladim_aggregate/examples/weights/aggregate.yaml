@@ -1,0 +1,48 @@
+# Use a weighting variable, or import weighting from file
+
+# In this example, we use a simple 1-dimensional binning
+bins:
+  X: [0, 50, 100]
+
+# Here we specify the weights expression. This must be a valid numeric
+# expression containing variable names defined in the input file.
+#
+# Variables imported from external files can also be used in the expression.
+# In the expression below, `spec` and `super` are imported from a file
+#
+# The special variable "TIMESTEPS" represents the number of time steps
+# in the particle file. Divide by this variable to get the time-weighted mean.
+weights: mass * spec * super / TIMESTEPS
+
+# The standard name "histogram" may not make sense when the weights are
+# applied. Here, we change the name to "conc"
+output_varname: conc
+
+# Import grid variables from a netCDF file.
+# - Grid variables are sampled by bilinear interpolation for each particle instance,
+#   unless specified otherwise (through the "method" keyword)
+# - Grid does not have to match the grid used when creating the ladim input file
+# - Grid coordinate names must match variable names in the ladim input file
+#
+# Interpolation method can be "linear" (default), "nearest" or "bin".
+# The different methods are easiest to explain by an example. Consider a
+# file 'external.nc' with coordinates Z = [0, 10] and data variable
+# spec = [-1, 1]. A set of particles with Z = [0, 2.5, 5, 7.5, 10] will give
+# the following results under different interpolation methods:
+#
+# "linear":  [-1, -0.5,    0,  0.5,    1]
+# "nearest": [-1,   -1,   -1,    1,    1]
+# "bin":     [-1,   -1,   -1,   -1,    1]
+#
+grid:
+  - file: external.nc
+    variable: spec
+  - file: external.nc
+    variable: super
+    method: bin
+
+# Output file
+outfile: count.nc
+
+# Input file
+infile: ladim.nc

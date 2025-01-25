@@ -1,0 +1,20 @@
+# Spread data across multiple input and output files
+
+bins:
+  # We use a simple one-dimensional binning in the spatial direction
+  X: {min: 0, max: 10, step: 2}
+
+# The binning variable `farm_id` is split across multiple files.
+# Multiple variables can be specified.
+filesplit_dims:
+  - farm_id
+
+# Multiple input files are specified using wildcards
+infile: ladim_*.nc
+
+# Output file in netCDF format. This is the name of the *main* dataset file.
+# Since the binning variable `farm_id` is split across multiple files, there
+# will be generated files named count_<firstFarmID>.nc, count_<secondFarmID>.nc
+# and so on. The main dataset file contains variables that are common to all
+# the subdatasets.
+outfile: count.nc

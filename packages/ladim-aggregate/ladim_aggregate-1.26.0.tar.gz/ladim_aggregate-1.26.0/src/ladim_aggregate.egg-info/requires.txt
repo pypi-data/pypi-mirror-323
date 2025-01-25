@@ -1,0 +1,10 @@
+numpy
+pytest
+xarray
+netCDF4
+PyYAML
+pyproj
+pandas
+numexpr
+scipy
+matplotlib

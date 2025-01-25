@@ -1,0 +1,23 @@
+time:
+  dims: time
+  data: [0, 1, 2]
+  attrs:
+    units: days since 2000-01-02
+
+start_time:
+  dims: particle_instance
+  data: [10, 20, 30, 10, 20, 30, 10, 20]
+  attrs:
+    units: days since 2000-01-01
+
+Z:
+  dims: particle_instance
+  data: [1, 2, 3, 1, 2, 3, 1, 2]
+
+particle_count:
+  dims: time
+  data: [4, 2, 2]
+
+pid:
+  dims: particle_instance
+  data: [0, 1, 2, 3, 1, 2, 1, 2]
