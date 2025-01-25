@@ -1,0 +1,3 @@
+[funcnodes.module]
+module = funcnodes_lmfit
+shelf = funcnodes_lmfit:NODE_SHELF
