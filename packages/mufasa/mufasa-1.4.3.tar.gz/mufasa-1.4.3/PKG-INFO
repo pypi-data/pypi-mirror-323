@@ -1,0 +1,35 @@
+Metadata-Version: 2.2
+Name: mufasa
+Version: 1.4.3
+Summary: MUlti-component Fitter for Astrophysical Spectral Applications
+Home-page: https://github.com/mcyc/mufasa
+Author: Mike Chen
+Project-URL: homepage, https://github.com/mcyc/mufasa
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: numpy<2,>=1.24.4
+Requires-Dist: astropy
+Requires-Dist: matplotlib
+Requires-Dist: scipy>=1.7.3
+Requires-Dist: scikit-image>=0.20.0
+Requires-Dist: spectral-cube>=0.6.0
+Requires-Dist: radio-beam
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: reproject>=0.7.1
+Requires-Dist: pyspeckit>=1.0.4
+Provides-Extra: docs
+Requires-Dist: sphinx>=7.3.7; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.3; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints>=2.3.0; extra == "docs"
+Requires-Dist: nbsphinx>=0.9.6; extra == "docs"
+Requires-Dist: sphinx-copybutton>=0.5.2; extra == "docs"
+Requires-Dist: pydata-sphinx-theme>=0.15.3; extra == "docs"
+Requires-Dist: numpydoc>=1.2.0; extra == "docs"
+Requires-Dist: sphinx-issues>=2.0; extra == "docs"
+Requires-Dist: sphinxext-opengraph>=0.9; extra == "docs"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Dynamic: home-page
+Dynamic: requires-python
