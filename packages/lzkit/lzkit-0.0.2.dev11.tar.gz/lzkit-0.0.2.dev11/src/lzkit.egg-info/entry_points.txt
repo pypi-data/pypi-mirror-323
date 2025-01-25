@@ -1,0 +1,3 @@
+[console_scripts]
+lzk = lzkit.cli:cli
+lzkit = lzkit.cli:cli

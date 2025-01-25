@@ -1,0 +1,5 @@
+click>=8.1.8
+pydantic>=2.10.5
+tomlkit>=0.13.2
+
+[api]
