@@ -1,0 +1,40 @@
+# Conda environment for ctapointing version dev
+# Install:    conda env create -f ctapointing-environment.yml
+# Activate:   conda activate ctapointing
+# Deactivate: conda deactivate
+
+name: ctapointing
+
+channels:
+  - conda-forge
+  - defaults
+  - cta-observatory
+
+dependencies:
+  - python>=3.10
+  - pip
+  - astropy
+  - astroquery
+  - h5py
+  - iminuit
+  - ipython
+  - ipywidgets
+  - jupyter
+  - matplotlib
+  - numpy
+  - numpydoc
+  - pytest
+  - pytest-cov
+  - pytest-runner
+  - pyyaml
+  - pymongo
+  - scikit-image
+  - scipy
+  - sep_pjw
+  - setuptools
+  - sphinx
+  - sphinx-automodapi
+  - sphinx_rtd_theme
+  - yaml
+  - ctapipe=0.23
+  - black

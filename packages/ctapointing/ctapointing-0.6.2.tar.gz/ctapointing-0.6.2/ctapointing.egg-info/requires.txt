@@ -1,0 +1,13 @@
+ctapipe
+astroquery
+pymongo
+scikit-image
+sep_pjw
+iminuit
+
+[docs]
+sphinx
+sphinx_rtd_theme
+sphinx-automodapi
+numpydoc
+matplotlib
