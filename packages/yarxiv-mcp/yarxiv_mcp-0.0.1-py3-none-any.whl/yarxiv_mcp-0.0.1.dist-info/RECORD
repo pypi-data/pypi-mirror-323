@@ -1,0 +1,9 @@
+yarxiv_mcp/__init__.py,sha256=0wvKJeTFVLXWx97eL76D6SRNF4o5IUxwv83lWiG3Xiw,89
+yarxiv_mcp/__main__.py,sha256=rcmsOtJd3SA82exjrcGBuxuptcoxF8AXI7jNjiVq2BY,59
+yarxiv_mcp/server.py,sha256=G5mS2F_2qiUSAsA6yk0yQCJlPSr-JCzvh4c2s_ailsM,204
+yarxiv_mcp/tools/arxiv_search.py,sha256=r3tZnG5gdyBQ2Z5aJPHWN7YtJHraEmtZoQHRRYsnLf8,9146
+yarxiv_mcp-0.0.1.dist-info/METADATA,sha256=Ps2wmPAfU0nsP2KbvDapTQSbznAVsXVIlS_Ht9QSMRU,668
+yarxiv_mcp-0.0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+yarxiv_mcp-0.0.1.dist-info/entry_points.txt,sha256=T6VT_lPSKQY299Lezstit34Tcc3MNpb-cRf3mb6AfXc,47
+yarxiv_mcp-0.0.1.dist-info/top_level.txt,sha256=9OjUlY3bDOp4KqtJSS0YZo3djbxNBwAhN_F1cUb5AEE,11
+yarxiv_mcp-0.0.1.dist-info/RECORD,,
