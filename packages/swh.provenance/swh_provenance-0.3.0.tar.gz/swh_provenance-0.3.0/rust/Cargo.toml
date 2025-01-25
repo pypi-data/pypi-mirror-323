@@ -1,0 +1,77 @@
+[package]
+name = "swh-provenance"
+version.workspace = true
+readme = "README.md"
+edition = "2021"
+description = "gRPC service to efficiently find the first revisions/releases/origins to contain a given content/directory"
+repository = "https://gitlab.softwareheritage.org/swh/devel/swh-provenance"
+license = "GPL-3.0-or-later"
+keywords = ["software-heritage", "graph", "provenance", "grpc"]
+categories = ["compression", "science"]
+rust-version = "1.80"
+
+[dependencies]
+anyhow = { version="1.0.79", features=["backtrace"] }
+itertools = "0.13.0"
+mimalloc = { version = "0.1", default-features = false }
+swh-graph.workspace = true
+
+# CLI & logging
+cadence = "1.4.0"
+clap = { version = "4.1.6", features = ["derive"] }
+dsi-progress-logger = "0.2.4"
+log = "0.4.17"
+sentry = { version = "0.32.1", features = ["anyhow", "tower", "tracing"], optional = true }
+sentry-tracing = { version = "0.32.1", optional = true }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+
+# Database
+object_store = { version = "0.11.0", default-features = false }
+url = "2.2"
+parquet_aramid = { git = "https://gitlab.softwareheritage.org/swh/devel/parquet_aramid-rs.git", rev = "a1f3a854c244c8313f9994c10e4b2a921f2e0c46", features = ["rayon"] }
+#parquet_aramid = { path = "../../parquet_aramid-rs", features = ["rayon"] }
+swh-provenance-db-build.workspace = true
+dataset-writer.workspace = true # to generate test databases
+
+# Elias-Fano index
+epserde = "0.6.1"
+sux = "0.4.1"
+
+# gRPC
+prost = "0.13"
+prost-types = "0.13"
+tonic = "0.12.2"
+tonic-health = "0.12.2"
+tonic-reflection = "0.12.2"
+tonic-middleware = "0.2.1"
+http-body = "1"  # must match the version used by tonic
+
+# serde
+serde_json = "1.0"
+serde = "1.0.189"
+serde_derive = "1.0.189"
+
+# Tokio & async
+futures = "0.3.30"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+
+[build-dependencies]
+tonic-build = "0.11.0"
+
+[features]
+default = ["sentry", "grpc-server"]
+grpc-server = []
+sentry = ["dep:sentry", "dep:sentry-tracing"]
+
+[[bin]]
+name = "swh-provenance-index"
+path = "src/bin/index.rs"
+
+[[bin]]
+name = "swh-provenance-grpc-serve"
+path = "src/bin/grpc-serve.rs"
+
+[[bin]]
+name = "swh-provenance-gen-test-database"
+path = "src/bin/gen-test-database.rs"
