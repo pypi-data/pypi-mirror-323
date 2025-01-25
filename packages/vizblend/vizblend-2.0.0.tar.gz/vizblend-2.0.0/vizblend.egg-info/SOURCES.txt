@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+tests/test_code.py
+tests/test_pptx.py
+vizblend/__init__.py
+vizblend/create_ppt_report.py
+vizblend/create_report.py
+vizblend/figure_defaults.py
+vizblend.egg-info/PKG-INFO
+vizblend.egg-info/SOURCES.txt
+vizblend.egg-info/dependency_links.txt
+vizblend.egg-info/requires.txt
+vizblend.egg-info/top_level.txt
