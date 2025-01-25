@@ -1,0 +1,3 @@
+[console_scripts]
+ostruct=openai_structured.cli.cli:main
+
