@@ -1,0 +1,5 @@
+setup.py
+AWSGlueDataplanePython.egg-info/PKG-INFO
+AWSGlueDataplanePython.egg-info/SOURCES.txt
+AWSGlueDataplanePython.egg-info/dependency_links.txt
+AWSGlueDataplanePython.egg-info/top_level.txt
