@@ -1,0 +1,59 @@
+name: Release Package
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check tag matches version
+        run: |
+          tag=$(git tag --points-at ${{ github.sha }})
+          version=$(python -c 'from netemu import __version__; print(__version__)')
+          if [[ $tag != $version ]]; then
+            echo "Tag $tag does not match version $version"
+            exit 1
+          fi
+
+      - name: Generate changelog
+        run: .github/release_message.sh > release_message.md
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: release_message.md
+
+  flit-publish:
+    needs: release
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --user --upgrade pip
+          pip install -r requirements.dev.txt
+
+      - name: Upload with flit
+        run: flit publish
+        env:
+          FLIT_USERNAME: __token__
+          FLIT_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
