@@ -1,0 +1,10 @@
+cpp_tiff-1.1.0.dist-info/RECORD,,
+cpp_tiff-1.1.0.dist-info/WHEEL,sha256=1fbXxa6MA4fqjT59FHn3OvFBvxPSBzM7JEVEKMgU5UU,110
+cpp_tiff-1.1.0.dist-info/top_level.txt,sha256=7R5B-YLztzQ_9LyzPchaFZh1g5ApvbivJrpWMud_fU4,8
+cpp_tiff-1.1.0.dist-info/METADATA,sha256=_s2w6OJ3dU4g9CKX1mXR1CoQcoruCneFvz6J9_axhWU,496
+cpptiff/__init__.py,sha256=hIuC1hJ0P1UjUEP3PYmGBa0y68Ov3A3-Ok07Y3pQAaQ,67
+cpptiff/cpptiffwrappers.py,sha256=UF6M6mNHHEbvPO6f38iIFlWiplp8F3kL5A_1u1_U1_E,921
+cpptiff/cpptiff.cpython-312-darwin.so,sha256=cGe6zZOgGxlkjnvcPJE4bjmUjl_s3uA4PRbP2LolJ_4,353184
+cpptiff/.dylibs/libcppTiff.dylib,sha256=4qkpPAWXg-C_TAzxA7WPMHSXY_Znv-irtokitzdQU5I,2060960
+cpptiff/.dylibs/libgcc_s.1.1.dylib,sha256=J_fmqw0LRKhc_qQL4BHPsFKQEbKQkcg4jUU9U1sdQtY,205728
+cpptiff/.dylibs/libgomp.1.dylib,sha256=RXRKVIPL_IXWp5mojKTc32zFF1w_YjYoZxSSL50_apI,476896
