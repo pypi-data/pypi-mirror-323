@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=cliffy_schema.json
+
+manifestVersion: v1 # optional (Default will be the latest)
+name: town
+version: 0.1.1
+
+imports: |
+  import re
+  import time
+
+functions:
+  - |
+    def format_money(money: float):
+        return "${:.2f}".format(money)
+
+commands:
+  people:
+    help: Manage people
+  shops:
+    help: Manage shops
+  home:
+    help: Manage homes
+  land:
+    help: Manage land
+  land.build:
+    params: [name: Name!, address: str!, --value|-v: int = 100]
+    run: |
+      """Build land"""
+      print(f"building land {name}")
+  land.sell:
+    params: [name: Name!, money: Money]
+    run: |
+      """Sell land"""
+      print(f"selling land {name}")
+  land.buy:
+    params: [name: Name!, money: Money]
+    run: |
+      """Buy land"""
+      print(f"buying land {name} for {format_money(money)}")
+  people.add:
+    params: [fullname: str!, age: int!, --home|-h: str]
+    run: |
+      """Add a person to town"""
+      print(f"adding person {fullname}, {age}, {home}")
+  people.remove:
+    params: [fullname: str!]
+    run: |
+      """Remove person from town"""
+      print(f"removing person {fullname}")
+  shops.build:
+    params: [name: Name!, land: str!, --type|-t: str]
+    run: |
+      """Build a shop"""
+      print(f"building shop {name} ({type}) on land {land}")
+  shops.sell:
+    params: [name: Name!, money: Money]
+    run: |
+      """Sell a shop"""
+      print(f"selling shop {name} for ${money}")
+  shops.buy:
+    params: [name: Name!, money: Money]
+    run: |
+      """Buy a shop"""
+      print(f"buying shop {name} for ${money}")
+  home.build|bu:
+    params: [address: str!, land: str, owner: str]
+    run: |
+      """Build a home"""
+      print(f"building home at {address} for {owner} on land {land}")
+  home.sell:
+    params: [address: str!, money: Money]
+    aliases: ["s"]
+    run: |
+      """Sell a home"""
+      print(f"selling home {address} for {format_money(money)}")
+  home.buy:
+    params: [address: str!, money: Money]
+    aliases: ["b"]
+    run: |
+      """Buy a home"""
+      print(f"buying home {address} for {money}")
+  (*).list:
+    params: [--limit|-l: int]
+    run: |
+      """Get a list of {(*)}"""
+      print(f"listing {(*)}")
+
+types:
+  Money: float = typer.Option(..., help="Amount of money", min=0)
+  Name: str = typer.Argument(..., help="Name")
+
+# TODO
+db: sqlite

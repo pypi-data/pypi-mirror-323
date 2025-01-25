@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=cliffy_schema.json
+
+manifestVersion: v3 # optional (Default will be the latest)
+name: db
+version: 0.1.0
+help: Database CLI
+cli_options:
+  add_completion: False
+  
+requires:
+  - rich
+
+imports: |
+  from rich.console import Console
+  console = Console()
+
+commands:
+  create|mk:
+    params: &db_args
+      - name: DatabaseName
+    run: |
+      """Create a new database"""
+      console.print(f"Creating database {name}", style="green")
+    pre_run: |
+      console.print("Running pre-run hook", style="green")
+  delete|rm:
+    params: *db_args
+    run: |
+      """Delete a database"""
+      sure = typer.confirm("Are you really really really sure?")
+      if sure:
+          console.print(f"Deleting database {name}", style="red")
+      else:
+          console.print(f"Back to safety!", style="green")
+  list|ls: |
+    """List databases"""
+    print("Listing all databases")
+  view|v: 
+    params:
+    - <<: *db_args
+    - table: TableName
+    run: |
+      """View database table"""
+      console.print(f"Viewing {table} table for {name} DB")
+
+types:
+  DatabaseName: str = typer.Option(..., prompt="What is the name of the database?", confirmation_prompt=True)
+  TableName: str = typer.Option(..., prompt="What is the name of the table?")
