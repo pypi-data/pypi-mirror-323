@@ -1,0 +1,10 @@
+pytest>=6.2
+google-cloud-storage
+mirakuru
+port-for
+
+[test]
+mypy
+pytest-cov
+pydocstyle
+isort

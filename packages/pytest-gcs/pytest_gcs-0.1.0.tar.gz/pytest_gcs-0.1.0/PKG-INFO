@@ -1,0 +1,129 @@
+Metadata-Version: 2.2
+Name: pytest-gcs
+Version: 0.1.0
+Summary: GCS fixtures and fixture factories for Pytest.
+Author-email: Sam Pegler <sam@sampegler.co.uk>
+License: Copyright (c) 2024 Sam Pegler
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Source, https://github.com/Poogles/pytest-gcs
+Project-URL: Bug Tracker, https://github.com/Poogles/pytest-gcs/issues
+Keywords: tests,pytest,fixture,gcs
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Classifier: Framework :: Pytest
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest>=6.2
+Requires-Dist: google-cloud-storage
+Requires-Dist: mirakuru
+Requires-Dist: port-for
+Provides-Extra: test
+Requires-Dist: mypy; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pydocstyle; extra == "test"
+Requires-Dist: isort; extra == "test"
+
+## Pytest GCS
+
+This is a pytest plugin in similar vein to [pytest-postgres](https://github.com/ClearcodeHQ/pytest-postgresql) and [pytest-kafka](https://pypi.org/project/pytest-kafka/).
+
+This would have been much more painful without [Mirakuru](https://github.com/ClearcodeHQ/mirakuru)
+and [fake-gcs-server](https://github.com/fsouza/fake-gcs-server); this is a simple wrapper around
+those tools.
+
+
+### Installation
+
+This tool requires you to have a copy of the `fake-gcs-server` binary somewhere on your path.
+Depending upon your architecture you'll need a different version of the tool.
+
+```sh
+wget https://github.com/fsouza/fake-gcs-server/releases/download/v1.47.8/fake-gcs-server_1.47.8_Linux_amd64.tar.gz
+tar -xvf fake-gcs-server_1.47.8_Linux_amd64.tar.gz
+mv fake-gcs-server /usr/local/bin
+```
+
+To install this library:
+
+```sh
+pip install pytest-gcs
+```
+
+
+### Demo
+
+```python
+# conftest.py
+from pytest_gcs.factories import client as gcs_client
+from pytest_gcs.factories import proc as gcs_process
+
+# Create a process and a local client that targets that process.
+gcs_proc = gcs_process.gcs_proc()
+gcslocal = gcs_client.gcslocal("gcs_proc")
+
+# tests/test_gcs.py
+from google.cloud import storage
+from pytest_gcs.executor.process import GCSExecutor
+
+
+def test_can_create_gcs_bucket(gcs_proc: GCSExecutor, gcslocal: storage.Client) -> None:
+    """MVP to ensure everything works."""
+    bucket = "test_base"
+    gcslocal.create_bucket(bucket)
+    buckets = [x.name for x in gcslocal.list_buckets()]
+
+    assert bucket in buckets
+```
+
+
+### Contributing
+
+PRs are accepted.
+
+```sh
+# Install the dependencies with:
+pip install .[test]
+# Install pre-commit hooks.
+pre-commit install
+# Validate everything passes.
+pre-commit run --all
+# Run the tests.
+pytest tests/
+```
+
+
+### TODOs
+
+* Implement the events outputs, `-event.bucket`, `-event.list`, etc.
