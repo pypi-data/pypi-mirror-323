@@ -1,0 +1,9 @@
+autobex/__init__.py,sha256=Y64IFD0zo6ferf6x5oGiRoMvqHth7iruK0MNvmB5KWo,184
+autobex/excluded_tags.txt,sha256=UxqMaWYmnFQCDmZBhA8TPexSWbpxK9boF4Kv4LWaTBM,38
+autobex/osm_search_plus.py,sha256=HKPDpdy1F8lfdHIxhMKN7rLgJS87mhvXBDccsGIEt8Q,41570
+autobex/tags.txt,sha256=LdaNxxOOnNN9UAwvQ88HLD0m4cNkWtyB4_SG44t-Z60,133
+autobex-0.1.161.dist-info/LICENSE,sha256=FyuBsNr3YLXHPRQfWIpCAC4brUeSdYelr01V-Fkog8U,1066
+autobex-0.1.161.dist-info/METADATA,sha256=IrYIxB6F9O3g-J7vnvF5OtGyyzsJScHKtpGWUDqYNuA,11124
+autobex-0.1.161.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+autobex-0.1.161.dist-info/top_level.txt,sha256=ZDdVDHafGLtsXEJEThuNtC7exWgP0T-HECFwDPxQ7eg,8
+autobex-0.1.161.dist-info/RECORD,,
