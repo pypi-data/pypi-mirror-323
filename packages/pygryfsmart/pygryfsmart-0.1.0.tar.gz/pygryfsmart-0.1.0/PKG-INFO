@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: pygryfsmart
+Version: 0.1.0
+Summary: Library for the GryfSmart system
+Home-page: https://github.com/karlowiczpl/pygryfsmart
+Author: @karlowiczpl
+Author-email: k.karlowski@outlook.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: pyserial
+Requires-Dist: pyserial-asyncio
+
+#Gryf smart system lib
+
