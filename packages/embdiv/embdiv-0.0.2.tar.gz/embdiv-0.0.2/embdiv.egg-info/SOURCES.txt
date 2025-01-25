@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+EmbeddingsDivision/__init__.py
+EmbeddingsDivision/embeddings_division.py
+embdiv.egg-info/PKG-INFO
+embdiv.egg-info/SOURCES.txt
+embdiv.egg-info/dependency_links.txt
+embdiv.egg-info/requires.txt
+embdiv.egg-info/top_level.txt
