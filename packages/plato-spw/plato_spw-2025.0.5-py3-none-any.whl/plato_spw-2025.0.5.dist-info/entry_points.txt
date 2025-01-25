@@ -1,0 +1,2 @@
+[cgse.version]
+plato-spw = egse.plugins
