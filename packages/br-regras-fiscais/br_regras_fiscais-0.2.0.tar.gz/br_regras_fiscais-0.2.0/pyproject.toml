@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "br-regras-fiscais"
+version = "0.2.0"
+description = "Calculate BR taxes from NF total value, and calculate the original value of a NF from a received payment"
+authors = [
+    "Bjorn Boschman <bjorn.boschman@admdoctor.com.br>", 
+    "Julio Reis <juliocsreis@gmail.com>"
+]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
