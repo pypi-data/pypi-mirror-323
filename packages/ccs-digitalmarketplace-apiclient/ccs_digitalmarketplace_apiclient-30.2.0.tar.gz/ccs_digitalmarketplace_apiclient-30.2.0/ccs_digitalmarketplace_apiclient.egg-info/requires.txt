@@ -1,0 +1,12 @@
+requests<3,>=2.18.4
+Flask>=3.0.3
+
+[dev]
+flake8
+mock
+mypy
+pytest
+pytest-cov
+requests-mock
+types-requests
+ccs-digitalmarketplace-test-utils==6.1.1
