@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.py
+matrix_operations_cuni/__init__.py
+matrix_operations_cuni/core.py
+matrix_operations_cuni/operations.py
+matrix_operations_cuni/transformations.py
+matrix_operations_cuni.egg-info/PKG-INFO
+matrix_operations_cuni.egg-info/SOURCES.txt
+matrix_operations_cuni.egg-info/dependency_links.txt
+matrix_operations_cuni.egg-info/top_level.txt
+tests/test_core.py
+tests/test_operations.py
+tests/test_transformations.py
