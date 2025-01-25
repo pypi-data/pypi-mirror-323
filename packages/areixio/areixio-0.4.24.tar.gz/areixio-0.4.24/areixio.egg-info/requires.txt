@@ -1,0 +1,8 @@
+pyyaml
+pandas
+tzlocal
+requests
+aiohttp
+loguru
+pydantic
+cachetools
