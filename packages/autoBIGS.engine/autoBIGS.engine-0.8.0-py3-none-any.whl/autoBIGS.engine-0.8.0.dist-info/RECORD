@@ -1,0 +1,16 @@
+autobigs/engine/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autobigs/engine/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autobigs/engine/data/local/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autobigs/engine/data/local/csv.py,sha256=qK84151UJUP99zoJxqt_Vp6ne__bC-sVdJc2kSNWxsE,1715
+autobigs/engine/data/local/fasta.py,sha256=OwCs2jeMatWjCCcWSqvnz2aoVzk8oc6Xm4lqnPK13W4,726
+autobigs/engine/data/remote/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autobigs/engine/data/remote/databases/bigsdb.py,sha256=W7LMXC4riMd0-7wseqReG67Vgr1zMLQydxZx6986qOo,8597
+autobigs/engine/data/structures/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autobigs/engine/data/structures/genomics.py,sha256=lA1z6VhyAth_C-4pfESsUt6PWu4llWxrXhb3-OH73OU,3050
+autobigs/engine/data/structures/mlst.py,sha256=179Ps3BPD8oxabrU8HAoLauZuYF3eJena1ov_JqCcmY,505
+autobigs/engine/exceptions/database.py,sha256=bKmRkBtP_Hb_ID769_ai4S80VCDZ7WHM7j3HHPInbIU,1064
+autoBIGS.engine-0.8.0.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+autoBIGS.engine-0.8.0.dist-info/METADATA,sha256=LBlhC3U_kaIzCAPCAYBTrb65r7eT_XkR44cwXLN_t7g,1939
+autoBIGS.engine-0.8.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+autoBIGS.engine-0.8.0.dist-info/top_level.txt,sha256=F9DQGtcD2FuT8wuQao23jnK-Ix05xmYVozTzl8U9D4I,9
+autoBIGS.engine-0.8.0.dist-info/RECORD,,
