@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+exodus/cli.py
+exodus/kv_migrator.py
+exodus/├─ __init__.py
+vault_exodus.egg-info/PKG-INFO
+vault_exodus.egg-info/SOURCES.txt
+vault_exodus.egg-info/dependency_links.txt
+vault_exodus.egg-info/entry_points.txt
+vault_exodus.egg-info/requires.txt
+vault_exodus.egg-info/top_level.txt
