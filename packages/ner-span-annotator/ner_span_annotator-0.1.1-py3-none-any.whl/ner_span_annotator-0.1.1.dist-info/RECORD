@@ -1,0 +1,13 @@
+ner_span_annotator/__init__.py,sha256=TdY2b3tcK6NXyjaCEyrznW_Xrq-u9t6L9OLWRXWH24g,1568
+ner_span_annotator/example.py,sha256=0STeVl3bKo9rhC4JD9yO2XmGmSVsnQ8k9DooXmzkTLA,684
+ner_span_annotator/frontend/build/asset-manifest.json,sha256=oJX53SjB432TuzOtzigpvFO24k4YSjv00DP3phY6UQQ,221
+ner_span_annotator/frontend/build/bootstrap.min.css,sha256=hTwg6axJ8dAPmGVJmYTrsQS3JhKWA0skJ-td54UbEOk,197459
+ner_span_annotator/frontend/build/index.html,sha256=9sQ2e7ezTyBwgpD8Nfu195DCLTJ10UW4opo7Dn_rtnQ,492
+ner_span_annotator/frontend/build/static/js/main.b066f690.js,sha256=TrGB2JrkaDD0uqTC9D1aGOvXVj1Q5Se6mvx_MqrWdBM,329283
+ner_span_annotator/frontend/build/static/js/main.b066f690.js.LICENSE.txt,sha256=cmjEMovgjlkZ-Bs7b5rRQ8FsJtL1F77Y3YkM2E9yfUs,1293
+ner_span_annotator/frontend/build/static/js/main.b066f690.js.map,sha256=M1L4ALb_UWy1rMh9Dp-dVy-PgkdxEJyzYPn2Cq9KR9Q,3437824
+ner_span_annotator-0.1.1.dist-info/LICENSE,sha256=9VDWIUfeWnnobvVpN2KtC5cHaNpAmxhdjyF4LivEPNw,1063
+ner_span_annotator-0.1.1.dist-info/METADATA,sha256=LA9fruzwfv-_r2AjM38HDNVYp99caQnJTBAiiXkwimA,1237
+ner_span_annotator-0.1.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+ner_span_annotator-0.1.1.dist-info/top_level.txt,sha256=Y8mKnPnuaKZ2BNxLSUR469LgNFg8wusTEN1RCH15ku4,19
+ner_span_annotator-0.1.1.dist-info/RECORD,,
