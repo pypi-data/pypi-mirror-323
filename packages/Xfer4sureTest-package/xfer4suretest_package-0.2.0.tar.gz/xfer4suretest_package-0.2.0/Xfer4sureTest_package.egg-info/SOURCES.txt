@@ -1,0 +1,6 @@
+README.md
+setup.py
+Xfer4sureTest_package.egg-info/PKG-INFO
+Xfer4sureTest_package.egg-info/SOURCES.txt
+Xfer4sureTest_package.egg-info/dependency_links.txt
+Xfer4sureTest_package.egg-info/top_level.txt
