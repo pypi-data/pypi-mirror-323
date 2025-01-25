@@ -1,0 +1,11 @@
+superduper_ibis/__init__.py,sha256=zCcxdgtdcMURmLO7c6xWQGVoLhBO-sfaTY3pdTCu4x0,149
+superduper_ibis/data_backend.py,sha256=NEWjhr3k0P_Mv2P9HO1Ym_AxdIql_tfSH13kyMlqYD4,10527
+superduper_ibis/db_helper.py,sha256=BxR5eJjl7xr8Yvel44qBw1z40af01xXVcKlIk9pG1F4,4332
+superduper_ibis/field_types.py,sha256=Y3Tr1N_FEmd3dqIIerYSJsAHYx5_nejA5-JvAOxpdec,736
+superduper_ibis/query.py,sha256=dAwilp2RFj64BWSOliQpqo1huMtFSM-mYoi5mUCk8JU,12172
+superduper_ibis/utils.py,sha256=p8Bkgtm2MV1uimCtBJHJhIfvT0uH77QkWwTsw4lbKr4,1396
+superduper_ibis-0.5.2.dist-info/LICENSE,sha256=fq2WxmjewRN4VfDClVl-6CiVFZedp4y5_iGqQiXHBN8,11353
+superduper_ibis-0.5.2.dist-info/METADATA,sha256=8sRumP14vbb6JBFER3_Eh3r-gWDGdOUF5Dbb8Uf0Di8,16687
+superduper_ibis-0.5.2.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+superduper_ibis-0.5.2.dist-info/top_level.txt,sha256=ndy40_jTokrBGbNQ8gk4lOZLuMRCEKdTzDVKZgMntPc,16
+superduper_ibis-0.5.2.dist-info/RECORD,,
