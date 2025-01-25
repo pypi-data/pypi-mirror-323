@@ -1,0 +1,15 @@
+expert_score/__init__.py,sha256=zouLWFjP6nU5dSj8S-aVZ2n4vK_J5WMN_4Q5Q5ElAhc,26
+expert_score/expert.py,sha256=Z2GmVjbXqf7ZLpJl-bp8yz5yzZ2n4xD9X-8gZU2bxpA,4877
+expert_score/aspects/__init__.py,sha256=oTukeF8hsFHDoFnDCF5ETlBD6mjK7LIxG_cCxASidaA,49
+expert_score/aspects/extraction.py,sha256=9PZpyFt5duZrsTPdR70PqtagcuXIztmW7K5H1z-g3vA,4214
+expert_score/matching/__init__.py,sha256=_N-Qc6GmfvniXt3vWTVECHGDt3Sl7-g8yblPmaiFsGs,80
+expert_score/matching/match.py,sha256=4o0hL9G4XYJOV0yXuU4XH-Un8Sib9bSt5q1HJ8llOVE,14790
+expert_score/matching/utils.py,sha256=cDyVY75uvYnNLmvV3yzcciYIPslgz3HWc5S_um_PMzo,5139
+expert_score/utils/__init__.py,sha256=QDtW3u9HSAi8b1q9CW7l2kbF9Gp2y-Y_rSqRv6Z-pC0,149
+expert_score/utils/api_llm.py,sha256=co7eh-lTh2Dh8ufbDfqt0ID0lD5CTKcq20EazHTL3bY,2514
+expert_score/utils/json_parsing.py,sha256=j9xp68ZKxjxj8xpYAKhWfM3qclQZvvBLP3paLLQ83EA,3909
+expert_score-0.0.1.dist-info/LICENSE.txt,sha256=suOamQSzsAFzEl95g01XE4XpyaQO9Vo8wUWvZ1zS_Jk,1070
+expert_score-0.0.1.dist-info/METADATA,sha256=eIml3BtxkVluQmpJdZ16F6ynum7PC-MfRUR-lmNPOxc,3288
+expert_score-0.0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+expert_score-0.0.1.dist-info/top_level.txt,sha256=rrmL7j2FhqCoxzSCUgs4QtSvKeyYcAN9SJynPdPPUe0,13
+expert_score-0.0.1.dist-info/RECORD,,
