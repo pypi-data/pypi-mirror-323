@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}<h2>Result {{ result.id }} - {{ result.status }}</h2>{% endblock title %}
+{% block content %}
+<dl>
+    <dt>Task</dt>
+    <dd>
+        <a href="{{ url_for('get_task_results_view', task_id=result.task.id) }}">
+            {{ result.task }}
+        </a>
+    </dd>
+    <dt>Submitted at</dt>
+    <dd>{{ result.submitted_at }}</dd>
+    <dt>Status</dt>
+    <dd>{{ result.status }}</dd>
+    <dt>Severity</dt>
+    <dd>{{ result.severity }}</dd>
+    <dt>Context</dt>
+    <dd>
+        {% if result.status != error %}
+        {{ result.context }}
+        {% else %}
+        <dl>
+            {% if result.context['error_message'] %}
+            <dt>Error message</dt>
+            <dd>{{ result.context['error_message'] }}</dd>
+            {% endif %}
+            <dt>Error type</dt>
+            <dd>{{ result.context['error_type'] }}</dd>
+            <dt>Error details</dt>
+            <dd>
+                <details>
+                    <summary>{{ result.context['error_details'] | truncate(120, False, '…') }} (click to expand)</summary>
+                    <pre><code>{{ result.context['error_details'] | replace('\n', '<br>') | safe }}</code></pre>
+                </details>
+            </dd>
+        </dl>
+        {% endif %}
+    </dd>
+</dl>
+{% endblock content %}

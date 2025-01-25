@@ -1,0 +1,10 @@
+__pycache__
+*.egg-info
+.vscode
+venv
+.env
+public
+*.swp
+argos-config.yaml
+config.yaml
+dist

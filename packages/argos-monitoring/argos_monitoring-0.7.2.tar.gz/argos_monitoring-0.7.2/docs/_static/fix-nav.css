@@ -1,0 +1,4 @@
+.sy-head-brand img + strong {
+    display: inline;
+    margin-left: 1em;
+}
