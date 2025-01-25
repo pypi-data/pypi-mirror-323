@@ -1,0 +1,17 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "dogcity"
+version = "1.1"
+dependencies = []
+requires-python = ">=3.8"
+authors = [
+    { name = "Jasper Sheeds", email = "beamandstream@outlook.com" },
+]
+description = "Tool to bridge the gap between SL-Dog and Cityworks APIs"
+
+[tool]
