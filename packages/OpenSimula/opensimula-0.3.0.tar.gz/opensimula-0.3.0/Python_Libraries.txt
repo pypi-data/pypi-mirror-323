@@ -1,0 +1,32 @@
+Python libraries needed for OpenSimula:
+In a clean python version:
+- numpy
+- pandas
+- scipy
+- py-expression-eval
+- shapely
+- psychrolib
+- pyvista: 
+    pip install "pyvista[jupyter]"
+    or
+    pip install pyvista, ipywidgets, trame, trame-vtk, trame-vuetify
+- plotly
+- dash
+- dash_bootstrap_components
+- dash_ag_grid
+- triangle:
+    pip install triangle
+    pip install git+https://github.com/drufat/triangle.git # For Macos Apple Silicon
+
+For juputer:
+- notebook
+
+
+With Anaconda you must add:
+- py_expression_eval
+- psychrolib
+- pyvista
+- ipywidgets
+- trame
+- trame-vtk
+- trame-vuetify

@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: OpenSimula
+Version: 0.3.0
+Summary: Component-based time simulation environment in Python
+Project-URL: Homepage, http://opensimula.org
+Project-URL: Repository, https://github.com/jfCoronel/OpenSimula
+Project-URL: Bug Tracker, https://github.com/jfCoronel/OpenSimula/issues
+Author-email: "Juan F. Coronel" <jfc@us.es>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: dash-ag-grid>=31.0.0
+Requires-Dist: dash-bootstrap-components>=1.0.0
+Requires-Dist: dash>=2.0.0
+Requires-Dist: ipywidgets>=8.1.2
+Requires-Dist: numpy>1.25
+Requires-Dist: pandas>1.5
+Requires-Dist: plotly>=5.17.0
+Requires-Dist: psychrolib>=2.5.0
+Requires-Dist: py-expression-eval>=0.3.14
+Requires-Dist: pyvista>=0.43.5
+Requires-Dist: scipy>=1.1
+Requires-Dist: shapely>=2.0.3
+Requires-Dist: trame-vtk>=2.8.5
+Requires-Dist: trame-vuetify>=2.4.3
+Requires-Dist: trame>=3.6.0
+Requires-Dist: triangle>=20230923
+Provides-Extra: docs
+Requires-Dist: mkdocs>=1.5; extra == 'docs'
+Provides-Extra: testing
+Requires-Dist: pytest; extra == 'testing'
+Description-Content-Type: text/markdown
+
+![Logo](docs/img/logo_opensimula.png)
+Component-based time simulation environment in Python
+
+[Documentation page](https://jfcoronel.github.io/OpenSimula/site/)
+
+## Main Developers
+
+* [Juan F. Coronel](http://jfc.us.es), Universidad de Sevilla
+
+## Package dependencies
+- numpy
+- pandas
+- scipy
+- py-expression-eval
+- shapely
+- psychrolib
+- plotly
+- dash
+- dash_bootstrap_components
+- dash_ag_grid
+- pyvista
+- trame
+- trame-vtk
+- trame-vuetify
+- ipywidgets
+
