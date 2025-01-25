@@ -1,0 +1,6 @@
+numpy
+urllib3
+typing-extensions
+dataclasses-json
+scp
+paramiko
