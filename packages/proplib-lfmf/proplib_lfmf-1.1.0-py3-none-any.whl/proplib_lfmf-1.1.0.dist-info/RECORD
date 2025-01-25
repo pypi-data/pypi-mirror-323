@@ -1,0 +1,11 @@
+ITS/Propagation/LFMF/LFMF-1.1-universal.dylib,sha256=ZExHcJe1AW4ahmsXhEkPUs7gtSxi-DA7Wi1DpXBk8KM,161056
+ITS/Propagation/LFMF/LFMF-1.1-x64.dll,sha256=O614n36286MKlQRzEBi3PWZsS4mnCOELkND9FpPC540,81920
+ITS/Propagation/LFMF/LFMF-1.1-x86.dll,sha256=8YL-FciAz-yoe0QhFixX6VbmhjfCzBWk-yeyj0MosmE,77312
+ITS/Propagation/LFMF/LFMF-1.1-x86_64.so,sha256=9hRZxZR1bzyrYIP-qDw84N2LueKJroDDuc9WRqhCZcQ,73064
+ITS/Propagation/LFMF/LFMF.py,sha256=PgvJOG88IAaYIATtZPYz2LFkEacsYUkVwi3U_ZMv07I,2005
+ITS/Propagation/LFMF/__init__.py,sha256=CEnMoOAWdLPskdjpxBBMQMRomGlbKj4JgXbBDaHo1AE,169
+ITS/Propagation/LFMF/proplib_loader.py,sha256=nQ7VicYfFsH2ZYIjJWr860puzxrEt6eYtdCxSKO_JBk,4331
+proplib_lfmf-1.1.0.dist-info/METADATA,sha256=GRNGd8pzhaevizK06KOX8NOx9PpatgmroD3YHWREYDY,10524
+proplib_lfmf-1.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+proplib_lfmf-1.1.0.dist-info/licenses/LICENSE.md,sha256=50ZyFEPs0vTcIEO1MRCEnqCsVkVYn2aa8wGNa4FHL2o,2086
+proplib_lfmf-1.1.0.dist-info/RECORD,,
