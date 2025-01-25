@@ -1,0 +1,27 @@
+[build-system]
+requires = ["flit_core >=3.4"]
+build-backend = "flit_core.buildapi"
+
+
+[project]
+name = "pytest-exit-status"
+version = "1.0.0"
+description = "Enhance."
+readme = "README.md"
+#license = "MIT"
+authors = [
+    {name = "Harmin Parra Rueda", email="harmin.rueda@gmail.com"},
+]
+requires-python = ">=3.10"
+dependencies = ['pytest >= 8.0.0']
+classifiers = [
+    "Framework :: Pytest",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+]
+keywords = ["pytest", "pytest-html"]
+
+
+[project.entry-points.pytest11]
+pytest_exit_status = "pytest_exit_status.plugin"
