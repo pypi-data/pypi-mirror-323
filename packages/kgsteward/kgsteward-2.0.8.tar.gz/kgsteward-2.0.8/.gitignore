@@ -1,0 +1,16 @@
+# Byte-compiled files.
+__pycache__/
+*.pyc
+
+# Distribution / packaging
+build/
+kgsteward.egg-info/
+dist/
+
+# virtualenv
+Pipfile
+Pipfile.lock
+.vscode
+.venv/
+.coverage
+htmlcov/
