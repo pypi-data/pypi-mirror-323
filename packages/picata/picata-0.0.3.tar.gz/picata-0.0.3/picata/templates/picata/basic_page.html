@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+<article>
+  {% block article %}
+    {{ self.content }}
+  {% endblock %}
+</article>
+{% endblock %}
