@@ -1,0 +1,13 @@
+pyadb_client-2.1.5.dist-info/METADATA,sha256=Jk3NeVqP7AMOZxxyW961DpOh6-5pqapcJb8lpio5emk,1548
+pyadb_client-2.1.5.dist-info/WHEEL,sha256=6H4uSM6rt9Tsb3AuhKkb2BIwTxQXCZXWqEUfxGhX4oQ,106
+pyadb_client-2.1.5.dist-info/licenses/LICENSE,sha256=0scBAk_Vz46vNnQM5BeoEFZK8k1D-HDNHTgBoZQ_N8E,1076
+pyadb_client/Cargo.toml,sha256=0pQvRh8Io6jTvXOwfnP255QgjB7r_rRDrl0I8ZoyOSU,509
+pyadb_client/src/models/devices.rs,sha256=09J6kHJhdWM7JK8PzBEQZTwozuOAsad1r_UYPdu0Np0,540
+pyadb_client/src/models/mod.rs,sha256=DjeLNIQMjK1-DlFRB2J4O3qmjmjSmBT9cvCGMSI_NRk,45
+pyadb_client/src/adb_server.rs,sha256=DWJuIJ8yt6_iSBw-7o7t1-EJegwyP4az4OS0BXje-yw,920
+pyadb_client/src/adb_usb_device.rs,sha256=lC8Z7ILAJQ9Ruwr9_0qcWb7TF0pJZ65VAfPNk0Jd8cs,1111
+pyadb_client/src/adb_server_device.rs,sha256=VdAOOmG0kbPazF1-aOTxdpvirHWC0KCcZ3LPoRgpXHg,1114
+pyadb_client/src/lib.rs,sha256=44CWL1hnA5EG2_FhPsSC5qRsF2veO4yNHFHISpRLvvs,430
+pyadb_client/README.md,sha256=sF4srQX0uc1SekDUPijdLydzwfgCa_OIDuGQmzXQB1w,958
+pyadb_client/pyadb_client.abi3.so,sha256=wpJcX1PWBflRqBdsv3Yi6_4j6iJwA522fJhN3VRQpHw,2411488
+pyadb_client-2.1.5.dist-info/RECORD,,
