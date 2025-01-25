@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "key-vault-interface"
+version = "1.0.8" # Incremented version
+authors = [{ name = "Mirco Domenicale", email = "m.domenicale@40-factory.com" }]
+description = "A simple package to work as an interface with a key; at the moment only supporting Azure."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "azure-identity>=1.19.0",
+    "azure-keyvault-secrets>=4.9.0",
+    "yarg>=0.1.9",
+]
+optional-dependencies = { dev = [
+    "pytest>=8.3.4",        # For testing purposes
+    "pipdeptree>=2.24.0",
+    "pytest-mock==3.14.0",
+    "python-dotenv==1.0.1",
+    "wheel==0.45.1",
+    "twine==6.0.1",
+    "build==1.2.2.post1",
+], docs = [
+    "sphinx>=8.1.3",                  # Documentation dependencies
+    "docopt>=0.6.2",
+    "ipython>=8.12.3",
+    "nbconvert>=7.16.4",
+    "pdoc==15.0.1",
+    "sphinx-markdown-builder==0.6.7",
+] }
