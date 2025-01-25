@@ -1,0 +1,8 @@
+README.md
+gpt4zero.py
+setup.py
+Gpt4Zero.egg-info/PKG-INFO
+Gpt4Zero.egg-info/SOURCES.txt
+Gpt4Zero.egg-info/dependency_links.txt
+Gpt4Zero.egg-info/requires.txt
+Gpt4Zero.egg-info/top_level.txt
