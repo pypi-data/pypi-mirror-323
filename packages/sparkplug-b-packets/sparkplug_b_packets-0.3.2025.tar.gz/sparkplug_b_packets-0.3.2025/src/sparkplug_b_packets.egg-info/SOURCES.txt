@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+pyproject.toml
+src/__init__.py
+src/sparkplub_b_packets/__init__.py
+src/sparkplub_b_packets/builder.py
+src/sparkplub_b_packets/packets.py
+src/sparkplub_b_packets/core/__init__.py
+src/sparkplub_b_packets/core/array_packer.py
+src/sparkplub_b_packets/core/sparkplug_b.py
+src/sparkplub_b_packets/core/sparkplug_b_pb2.py
+src/sparkplug_b_packets.egg-info/PKG-INFO
+src/sparkplug_b_packets.egg-info/SOURCES.txt
+src/sparkplug_b_packets.egg-info/dependency_links.txt
+src/sparkplug_b_packets.egg-info/top_level.txt
