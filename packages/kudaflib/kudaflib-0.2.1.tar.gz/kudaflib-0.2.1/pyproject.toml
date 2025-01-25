@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "kudaflib"
+version = "0.2.1"
+description = "This Python library contains KUDAF metadata schema definitions and logic that is common and applicable to other KUDAF Python packages"
+authors = ["Daniel Díguele, Senioringeniør, Sikt - Kunnskapssektorens tjenesteleverandør  <daniel.diguele@sikt.no>"]
+maintainers = ["Daniel Díguele, Senioringeniør,  Sikt - Kunnskapssektorens tjenesteleverandør  <daniel.diguele@sikt.no>"]
+repository = "https://gitlab.sikt.no/kudaf/kudaflib"
+license = "MIT License"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+]
+packages = [{include = "kudaflib"}]
+
+[tool.poetry.scripts]
+kudaf-generate = "kudaflib.main:app"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+pydantic = "^2.10"
+ruamel-yaml = "^0.18.5"
+typer = {extras = ["all"], version = "^0.9.0"}
+rich = "^13.7.1"
+httpx = "^0.28.0"
+python-dotenv = "^1.0.1"
+pydantic-settings = "^2.6.1"
+datacatalogtordf = "^3.0.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+ruff = "^0.0.272"
+pytest = "^7.3.2"
+pytest-cov = "^4.1.0"
+cryptography = "^41.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length=79
+
+[project.urls]
+"Homepage" = "https://gitlab.sikt.no/kudaf/kudaflib"
+"Bug Tracker" = "https://gitlab.sikt.no/kudaf/kudaflib/-/issues"
