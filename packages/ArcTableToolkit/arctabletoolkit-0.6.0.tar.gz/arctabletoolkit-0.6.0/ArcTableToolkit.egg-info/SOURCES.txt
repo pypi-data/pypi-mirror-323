@@ -1,0 +1,12 @@
+README.md
+setup.py
+ArcTableToolkit.egg-info/PKG-INFO
+ArcTableToolkit.egg-info/SOURCES.txt
+ArcTableToolkit.egg-info/dependency_links.txt
+ArcTableToolkit.egg-info/requires.txt
+ArcTableToolkit.egg-info/top_level.txt
+arctable_toolkit/BaseProcessor.py
+arctable_toolkit/DataCatalog.py
+arctable_toolkit/ExtendedDataCatalog.py
+arctable_toolkit/TableLoader.py
+arctable_toolkit/__init__.py
