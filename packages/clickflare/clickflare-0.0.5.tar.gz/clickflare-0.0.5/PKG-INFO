@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: clickflare
+Version: 0.0.5
+Summary: A command line interface for Cloudflare
+Project-URL: Homepage, https://github.com/IotaSpencer/clickflare
+Project-URL: Issues, https://github.com/IotaSpencer/clickflare/issues
+Author-email: IotaSpencer <me@iotaspencer.me>
+Maintainer-email: IotaSpencer <me@iotaspencer.me>
+License-File: LICENSE
+Keywords: cli,cloudflare,python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: click>=8.1.8
+Requires-Dist: cloudflare>=4.0.0
+Requires-Dist: terminaltables>=3.1.10
+Requires-Dist: toml>=0.10.2
+Description-Content-Type: text/markdown
+
+# clickflare
+
+[![PyPI Version](https://img.shields.io/pypi/v/clickflare.svg)](https://pypi.org/project/clickflare/)
+[![Upload Python Package](https://github.com/IotaSpencer/clickflare/actions/workflows/python-publish.yml/badge.svg)](https://github.com/IotaSpencer/clickflare/actions/workflows/python-publish.yml)
+
+A command line tool for interacting with Cloudflare's API.
+
+
+## Installation
+
+(This should be able to be ran with pipx as long as you have a config file set up.  See [the Configuration section](#Configuration) for more information.)
+
+
+
+#### With pipx
+
+`pipx run clickflare [options/commands]`
+
+#### Otherwise
+
+`pip install clickflare`
+
+## Configuration
+
+#### In the file `~/.clickflare/config` (create it if it doesn't exist)
+```toml
+[cf-api]
+token = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+```
+Obviously replace XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX with your API token.
+
+## Usage
+
+```bash
+clickflare [options] [commands]
+```
+
+Some commands will prompt for input if it is not provided. (e.g. `clickflare zones dns_records add`)
