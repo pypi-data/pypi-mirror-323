@@ -1,0 +1,5 @@
+[build-system]
+# We specify setuptools as our build system - this is what pip will use to build your package
+# The version requirement ensures we have new enough setuptools to handle modern Python packaging
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
