@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tests/test_vsports.py
+vsports/__init__.py
+vsports/vsports.py
+vsports.egg-info/PKG-INFO
+vsports.egg-info/SOURCES.txt
+vsports.egg-info/dependency_links.txt
+vsports.egg-info/requires.txt
+vsports.egg-info/top_level.txt
