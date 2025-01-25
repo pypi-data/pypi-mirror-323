@@ -1,0 +1,12 @@
+oddspy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oddspy/lm_setup.py,sha256=1V0x5iiRzr_ybOYaAhRbhstDEpX6eacDW-2wslaw9O4,3829
+oddspy/pipeline.py,sha256=aEcs2M1IcAhuqaqfS4qop0qnU4CVv-GrxHuXIkkUbOU,2417
+oddspy/processors.py,sha256=wsQjRGxA0ofVSpCMT9jHK8heJptkn3ZjCTIVIVNrq4o,3374
+oddspy/steps.py,sha256=-T17KNF0dmlh7bw0QH4iiF8qhzN5Ku3Z6FchMGpQXS4,1412
+oddspy/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oddspy/utils/logging.py,sha256=7-YKK6VCRClevsETGl1jqQfkS4ZZqcjRAAjL-HWUcYc,3918
+oddspy/utils/text_utils.py,sha256=6t8h2DdB59qkQiIYsY3LSb1L-KPErvRyGYWERaWNbUw,2947
+oddspy-0.0.1.dist-info/METADATA,sha256=LX7MWi_zrHsrK49YdZeaO3liNRXlFCkNe3-EFJkqLHU,3102
+oddspy-0.0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+oddspy-0.0.1.dist-info/top_level.txt,sha256=o_Wyj4zDF5RUtA9jh4qiuCSg94z5YbsJoTgvNF_57RM,7
+oddspy-0.0.1.dist-info/RECORD,,
