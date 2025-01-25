@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.12.8 on linux)" generated="2025-01-24T11:01:48.920654" rpa="false" schemaversion="5">
+<suite id="s1" name="Acceptance" source="/workspaces/envoy/src/tests/acceptance">
+<suite id="s1-s1" name="TestSuite" source="/workspaces/envoy/src/tests/acceptance/TestSuite.robot">
+<test id="s1-s1-t1" name="Show help output" line="6">
+<kw name="Run Envoy" owner="keywords">
+<kw name="Run Process" owner="Process">
+<msg time="2025-01-24T11:01:48.934539" level="INFO">Starting process:
+uv run python -m envoy   --help</msg>
+<msg time="2025-01-24T11:01:48.936518" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-01-24T11:01:49.048454" level="INFO">Process completed.</msg>
+<msg time="2025-01-24T11:01:49.048633" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>uv run python -m envoy ${env_file} ${example_file} ${args}</arg>
+<arg>shell=True</arg>
+<arg>cwd=../../</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-01-24T11:01:48.934425" elapsed="0.114228"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.049231" level="INFO">                                                                                                                                                                      
+ Usage: python -m envoy [OPTIONS] ENV_FILE EXAMPLE_FILE                                                                                                               
+                                                                                                                                                                      
+╭─ Arguments ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ *    env_file          TEXT  [default: None] [required]                                                                                                            │
+│ *    example_file      TEXT  [default: None] [required]                                                                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --warn-additional-keys       --no-warn-additional-keys         Whether to warn when additional keys are found in the .env [default: no-warn-additional-keys]       │
+│ --warn-uninitialised-keys    --no-warn-uninitialised-keys      Whether to warn when keys are found in the .env but not initialised with a value                    │
+│                                                                [default: no-warn-uninitialised-keys]                                                               │
+│ --install-completion                                           Install completion for the current shell.                                                           │
+│ --show-completion                                              Show completion for the current shell, to copy it or customize the installation.                    │
+│ --help                                                         Show this message and exit.                                                                         │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</msg>
+<arg>${result.stdout}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.048852" elapsed="0.000415"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2025-01-24T11:01:49.049304" elapsed="0.000051"/>
+</return>
+<msg time="2025-01-24T11:01:49.049454" level="INFO">${output} = &lt;result object with rc 0&gt;</msg>
+<var>${output}</var>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<arg>--help</arg>
+<doc>Runs the envoy program with given arguments</doc>
+<status status="PASS" start="2025-01-24T11:01:48.933915" elapsed="0.115550"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Usage: python -m envoy</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.049575" elapsed="0.000184"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.050041" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${output.rc}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.049822" elapsed="0.000253"/>
+</kw>
+<doc>Tests that the help documentation is shown correctly when requested</doc>
+<status status="PASS" start="2025-01-24T11:01:48.933611" elapsed="0.116548"/>
+</test>
+<test id="s1-s1-t2" name="Valid env file" line="12">
+<kw name="Run Envoy" owner="keywords">
+<kw name="Run Process" owner="Process">
+<msg time="2025-01-24T11:01:49.050758" level="INFO">Starting process:
+uv run python -m envoy tests/assets/001_env_valid.env tests/assets/001.env.example --warn-additional-keys --warn-uninitialised-keys</msg>
+<msg time="2025-01-24T11:01:49.052795" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-01-24T11:01:49.159114" level="INFO">Process completed.</msg>
+<msg time="2025-01-24T11:01:49.159297" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>uv run python -m envoy ${env_file} ${example_file} ${args}</arg>
+<arg>shell=True</arg>
+<arg>cwd=../../</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.050661" elapsed="0.108658"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.159935" level="INFO">Checking for missing keys in file tests/assets/001_env_valid.env'
+
+ PASS 	 No differences found between 'tests/assets/001_env_valid.env' and 'tests/assets/001.env.example'
+
+Checking for additional keys in file 'tests/assets/001_env_valid.env'
+
+ PASS 	 No additional keys found between 'tests/assets/001_env_valid.env' and 'tests/assets/001.env.example'
+
+Checking for uninitialised keys in file 'tests/assets/001_env_valid.env'
+
+ PASS 	 No uninitialised keys found in 'tests/assets/001_env_valid.env'
+
+Checking complete, no errors found!</msg>
+<arg>${result.stdout}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.159541" elapsed="0.000422"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2025-01-24T11:01:49.159999" elapsed="0.000056"/>
+</return>
+<msg time="2025-01-24T11:01:49.160214" level="INFO">${output} = &lt;result object with rc 0&gt;</msg>
+<var>${output}</var>
+<arg>tests/assets/001_env_valid.env</arg>
+<arg>tests/assets/001.env.example</arg>
+<arg>--warn-additional-keys --warn-uninitialised-keys</arg>
+<doc>Runs the envoy program with given arguments</doc>
+<status status="PASS" start="2025-01-24T11:01:49.050527" elapsed="0.109701"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>No additional keys found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.160333" elapsed="0.000179"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>No differences found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.160569" elapsed="0.000162"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>No uninitialised keys found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.160783" elapsed="0.000143"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Checking complete, no errors found!</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.160974" elapsed="0.000152"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.161375" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${output.rc}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.161180" elapsed="0.000223"/>
+</kw>
+<doc>Test that an env file that is valid in every way returns no errors</doc>
+<status status="PASS" start="2025-01-24T11:01:49.050275" elapsed="0.111202"/>
+</test>
+<test id="s1-s1-t3" name="Uninitialised keys (with flag)" line="21">
+<kw name="Run Envoy" owner="keywords">
+<kw name="Run Process" owner="Process">
+<msg time="2025-01-24T11:01:49.162061" level="INFO">Starting process:
+uv run python -m envoy tests/assets/001_unset_vars.env tests/assets/001.env.example --warn-uninitialised-keys</msg>
+<msg time="2025-01-24T11:01:49.163821" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-01-24T11:01:49.270229" level="INFO">Process completed.</msg>
+<msg time="2025-01-24T11:01:49.270390" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>uv run python -m envoy ${env_file} ${example_file} ${args}</arg>
+<arg>shell=True</arg>
+<arg>cwd=../../</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.161964" elapsed="0.108444"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.270934" level="INFO">Checking for missing keys in file tests/assets/001_unset_vars.env'
+
+ PASS 	 No differences found between 'tests/assets/001_unset_vars.env' and 'tests/assets/001.env.example'
+
+Checking for uninitialised keys in file 'tests/assets/001_unset_vars.env'
+
+ WARN 	 Provided env file has uninitialised key 'TEST_1'
+ WARN 	 Provided env file has uninitialised key 'TEST_2'
+
+Checking complete with warnings found, please fix the warnings and try again.</msg>
+<arg>${result.stdout}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.270597" elapsed="0.000359"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2025-01-24T11:01:49.270986" elapsed="0.000048"/>
+</return>
+<msg time="2025-01-24T11:01:49.271117" level="INFO">${output} = &lt;result object with rc 0&gt;</msg>
+<var>${output}</var>
+<arg>tests/assets/001_unset_vars.env</arg>
+<arg>tests/assets/001.env.example</arg>
+<arg>--warn-uninitialised-keys</arg>
+<doc>Runs the envoy program with given arguments</doc>
+<status status="PASS" start="2025-01-24T11:01:49.161837" elapsed="0.109291"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>No differences found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.271225" elapsed="0.000174"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Provided env file has uninitialised key 'TEST_1'</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.271461" elapsed="0.000157"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Provided env file has uninitialised key 'TEST_2'</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.271673" elapsed="0.000150"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Checking complete with warnings found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.271873" elapsed="0.000147"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.272272" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${output.rc}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.272073" elapsed="0.000226"/>
+</kw>
+<doc>Test that uninitialised keys are detected, when the appropriate flag is set</doc>
+<status status="PASS" start="2025-01-24T11:01:49.161586" elapsed="0.110784"/>
+</test>
+<test id="s1-s1-t4" name="Uninitialised keys (without flag)" line="30">
+<kw name="Run Envoy" owner="keywords">
+<kw name="Run Process" owner="Process">
+<msg time="2025-01-24T11:01:49.273059" level="INFO">Starting process:
+uv run python -m envoy tests/assets/001_unset_vars.env tests/assets/001.env.example </msg>
+<msg time="2025-01-24T11:01:49.274917" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-01-24T11:01:49.382201" level="INFO">Process completed.</msg>
+<msg time="2025-01-24T11:01:49.382400" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>uv run python -m envoy ${env_file} ${example_file} ${args}</arg>
+<arg>shell=True</arg>
+<arg>cwd=../../</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.272960" elapsed="0.109465"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.383052" level="INFO">Checking for missing keys in file tests/assets/001_unset_vars.env'
+
+ PASS 	 No differences found between 'tests/assets/001_unset_vars.env' and 'tests/assets/001.env.example'
+
+Checking complete, no errors found!</msg>
+<arg>${result.stdout}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.382637" elapsed="0.000444"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2025-01-24T11:01:49.383125" elapsed="0.000045"/>
+</return>
+<msg time="2025-01-24T11:01:49.383271" level="INFO">${output} = &lt;result object with rc 0&gt;</msg>
+<var>${output}</var>
+<arg>tests/assets/001_unset_vars.env</arg>
+<arg>tests/assets/001.env.example</arg>
+<arg>${EMPTY}</arg>
+<doc>Runs the envoy program with given arguments</doc>
+<status status="PASS" start="2025-01-24T11:01:49.272735" elapsed="0.110550"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>No differences found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.383405" elapsed="0.000410"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Provided env file has uninitialised key 'TEST_1'</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.383888" elapsed="0.000200"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Provided env file has uninitialised key 'TEST_2'</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.384151" elapsed="0.000216"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Checking complete, no errors found!</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.384421" elapsed="0.000146"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.384815" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${output.rc}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.384617" elapsed="0.000226"/>
+</kw>
+<doc>Test that uninitialised keys are not detected, when the appropriate flag is unset</doc>
+<status status="PASS" start="2025-01-24T11:01:49.272469" elapsed="0.112445"/>
+</test>
+<test id="s1-s1-t5" name="Missing keys" line="39">
+<kw name="Run Envoy" owner="keywords">
+<kw name="Run Process" owner="Process">
+<msg time="2025-01-24T11:01:49.385562" level="INFO">Starting process:
+uv run python -m envoy tests/assets/001_missing_test_1.env tests/assets/001.env.example </msg>
+<msg time="2025-01-24T11:01:49.387561" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-01-24T11:01:49.496583" level="INFO">Process completed.</msg>
+<msg time="2025-01-24T11:01:49.496768" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
+<var>${result}</var>
+<arg>uv run python -m envoy ${env_file} ${example_file} ${args}</arg>
+<arg>shell=True</arg>
+<arg>cwd=../../</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.385474" elapsed="0.111314"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.497393" level="INFO">Checking for missing keys in file tests/assets/001_missing_test_1.env'
+
+ FAIL 	 Provided env file is missing attribute 'TEST_1' which is in the example file
+
+Checking complete with errors found, please fix the errors and try again.</msg>
+<arg>${result.stdout}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.497008" elapsed="0.000413"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2025-01-24T11:01:49.497452" elapsed="0.000041"/>
+</return>
+<msg time="2025-01-24T11:01:49.497576" level="INFO">${output} = &lt;result object with rc 1&gt;</msg>
+<var>${output}</var>
+<arg>tests/assets/001_missing_test_1.env</arg>
+<arg>tests/assets/001.env.example</arg>
+<arg>${EMPTY}</arg>
+<doc>Runs the envoy program with given arguments</doc>
+<status status="PASS" start="2025-01-24T11:01:49.385247" elapsed="0.112340"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>No differences found</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.497692" elapsed="0.000174"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Provided env file is missing attribute 'TEST_1' which is in the example file</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.497929" elapsed="0.000167"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Provided env file is missing attribute 'TEST_2' which is in the example file</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.498149" elapsed="0.000149"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Checking complete with errors found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.498353" elapsed="0.000149"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.498757" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${output.rc}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.498555" elapsed="0.000230"/>
+</kw>
+<kw name="Run Envoy" owner="keywords">
+<kw name="Run Process" owner="Process">
+<msg time="2025-01-24T11:01:49.499333" level="INFO">Starting process:
+uv run python -m envoy tests/assets/001_missing_test_2.env tests/assets/001.env.example </msg>
+<msg time="2025-01-24T11:01:49.501317" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-01-24T11:01:49.619604" level="INFO">Process completed.</msg>
+<msg time="2025-01-24T11:01:49.619789" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
+<var>${result}</var>
+<arg>uv run python -m envoy ${env_file} ${example_file} ${args}</arg>
+<arg>shell=True</arg>
+<arg>cwd=../../</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.499231" elapsed="0.120582"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.620413" level="INFO">Checking for missing keys in file tests/assets/001_missing_test_2.env'
+
+ FAIL 	 Provided env file is missing attribute 'TEST_2' which is in the example file
+
+Checking complete with errors found, please fix the errors and try again.</msg>
+<arg>${result.stdout}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.620035" elapsed="0.000403"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2025-01-24T11:01:49.620468" elapsed="0.000041"/>
+</return>
+<msg time="2025-01-24T11:01:49.620592" level="INFO">${output} = &lt;result object with rc 1&gt;</msg>
+<var>${output}</var>
+<arg>tests/assets/001_missing_test_2.env</arg>
+<arg>tests/assets/001.env.example</arg>
+<arg>${EMPTY}</arg>
+<doc>Runs the envoy program with given arguments</doc>
+<status status="PASS" start="2025-01-24T11:01:49.498924" elapsed="0.121679"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>No differences found</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.620710" elapsed="0.000189"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Provided env file is missing attribute 'TEST_2' which is in the example file</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.620964" elapsed="0.000169"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Provided env file is missing attribute 'TEST_1' which is in the example file</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.621206" elapsed="0.000156"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Checking complete with errors found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.621414" elapsed="0.000146"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.621805" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${output.rc}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.621612" elapsed="0.000219"/>
+</kw>
+<doc>Test that missing keys are correctly detected</doc>
+<status status="PASS" start="2025-01-24T11:01:49.385019" elapsed="0.236881"/>
+</test>
+<test id="s1-s1-t6" name="Additional args (with flag)" line="55">
+<kw name="Run Envoy" owner="keywords">
+<kw name="Run Process" owner="Process">
+<msg time="2025-01-24T11:01:49.622476" level="INFO">Starting process:
+uv run python -m envoy tests/assets/001_missing_additional_args.env tests/assets/001.env.example --warn-additional-keys</msg>
+<msg time="2025-01-24T11:01:49.624681" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-01-24T11:01:49.733611" level="INFO">Process completed.</msg>
+<msg time="2025-01-24T11:01:49.733792" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>uv run python -m envoy ${env_file} ${example_file} ${args}</arg>
+<arg>shell=True</arg>
+<arg>cwd=../../</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.622387" elapsed="0.111425"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.734431" level="INFO">Checking for missing keys in file tests/assets/001_missing_additional_args.env'
+
+ PASS 	 No differences found between 'tests/assets/001_missing_additional_args.env' and 'tests/assets/001.env.example'
+
+Checking for additional keys in file 'tests/assets/001_missing_additional_args.env'
+
+ WARN 	 Provided env file had additional attribute 'TEST_3' which is not in the example file
+
+Checking complete with warnings found, please fix the warnings and try again.</msg>
+<arg>${result.stdout}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.734032" elapsed="0.000436"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2025-01-24T11:01:49.734506" elapsed="0.000042"/>
+</return>
+<msg time="2025-01-24T11:01:49.734638" level="INFO">${output} = &lt;result object with rc 0&gt;</msg>
+<var>${output}</var>
+<arg>tests/assets/001_missing_additional_args.env</arg>
+<arg>tests/assets/001.env.example</arg>
+<arg>--warn-additional-keys</arg>
+<doc>Runs the envoy program with given arguments</doc>
+<status status="PASS" start="2025-01-24T11:01:49.622263" elapsed="0.112387"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>No differences found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.734764" elapsed="0.000193"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Provided env file had additional attribute 'TEST_3' which is not in the example file</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.735025" elapsed="0.000171"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Checking complete with warnings found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.735267" elapsed="0.000159"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.735676" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${output.rc}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.735480" elapsed="0.000222"/>
+</kw>
+<doc>Test that additional args are detected, when the appropriate flag is set</doc>
+<status status="PASS" start="2025-01-24T11:01:49.622004" elapsed="0.113767"/>
+</test>
+<test id="s1-s1-t7" name="Additional args (without flag)" line="63">
+<kw name="Run Envoy" owner="keywords">
+<kw name="Run Process" owner="Process">
+<msg time="2025-01-24T11:01:49.737335" level="INFO">Starting process:
+uv run python -m envoy tests/assets/001_missing_additional_args.env tests/assets/001.env.example </msg>
+<msg time="2025-01-24T11:01:49.739514" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-01-24T11:01:49.845722" level="INFO">Process completed.</msg>
+<msg time="2025-01-24T11:01:49.845908" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>uv run python -m envoy ${env_file} ${example_file} ${args}</arg>
+<arg>shell=True</arg>
+<arg>cwd=../../</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.737242" elapsed="0.108687"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.846522" level="INFO">Checking for missing keys in file tests/assets/001_missing_additional_args.env'
+
+ PASS 	 No differences found between 'tests/assets/001_missing_additional_args.env' and 'tests/assets/001.env.example'
+
+Checking complete, no errors found!</msg>
+<arg>${result.stdout}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.846151" elapsed="0.000395"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2025-01-24T11:01:49.846578" elapsed="0.000039"/>
+</return>
+<msg time="2025-01-24T11:01:49.846706" level="INFO">${output} = &lt;result object with rc 0&gt;</msg>
+<var>${output}</var>
+<arg>tests/assets/001_missing_additional_args.env</arg>
+<arg>tests/assets/001.env.example</arg>
+<arg>${EMPTY}</arg>
+<doc>Runs the envoy program with given arguments</doc>
+<status status="PASS" start="2025-01-24T11:01:49.736146" elapsed="0.110571"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>No differences found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.846823" elapsed="0.000194"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Provided env file had additional attribute</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.847084" elapsed="0.000162"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Checking complete, no errors found!</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.847301" elapsed="0.000151"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.847722" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${output.rc}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.847504" elapsed="0.000246"/>
+</kw>
+<doc>Test that additional args are not detected, when the appropriate flag is unset</doc>
+<status status="PASS" start="2025-01-24T11:01:49.735871" elapsed="0.111951"/>
+</test>
+<test id="s1-s1-t8" name="Env vars in comments" line="71">
+<kw name="Run Envoy" owner="keywords">
+<kw name="Run Process" owner="Process">
+<msg time="2025-01-24T11:01:49.848495" level="INFO">Starting process:
+uv run python -m envoy tests/assets/001_env_in_comment.env tests/assets/001.env.example </msg>
+<msg time="2025-01-24T11:01:49.850520" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-01-24T11:01:49.959496" level="INFO">Process completed.</msg>
+<msg time="2025-01-24T11:01:49.959677" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>uv run python -m envoy ${env_file} ${example_file} ${args}</arg>
+<arg>shell=True</arg>
+<arg>cwd=../../</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.848401" elapsed="0.111297"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.960325" level="INFO">Checking for missing keys in file tests/assets/001_env_in_comment.env'
+
+ PASS 	 No differences found between 'tests/assets/001_env_in_comment.env' and 'tests/assets/001.env.example'
+
+Checking complete, no errors found!</msg>
+<arg>${result.stdout}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.959908" elapsed="0.000440"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2025-01-24T11:01:49.960378" elapsed="0.000040"/>
+</return>
+<msg time="2025-01-24T11:01:49.960499" level="INFO">${output} = &lt;result object with rc 0&gt;</msg>
+<var>${output}</var>
+<arg>tests/assets/001_env_in_comment.env</arg>
+<arg>tests/assets/001.env.example</arg>
+<arg>${EMPTY}</arg>
+<doc>Runs the envoy program with given arguments</doc>
+<status status="PASS" start="2025-01-24T11:01:49.848169" elapsed="0.112340"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>No differences found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.960672" elapsed="0.000209"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output.stdout}</arg>
+<arg>Checking complete, no errors found!</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.960946" elapsed="0.000181"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-01-24T11:01:49.961392" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${output.rc}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-01-24T11:01:49.961184" elapsed="0.000236"/>
+</kw>
+<doc>Test that env vars listed in comments are not detected</doc>
+<status status="PASS" start="2025-01-24T11:01:49.847919" elapsed="0.113575"/>
+</test>
+<doc>Acceptance Tests for Envoy Program</doc>
+<status status="PASS" start="2025-01-24T11:01:48.931171" elapsed="1.030603"/>
+</suite>
+<status status="PASS" start="2025-01-24T11:01:48.921120" elapsed="1.040914"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Acceptance" id="s1" pass="8" fail="0" skip="0">Acceptance</stat>
+<stat name="TestSuite" id="s1-s1" pass="8" fail="0" skip="0">Acceptance.TestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
