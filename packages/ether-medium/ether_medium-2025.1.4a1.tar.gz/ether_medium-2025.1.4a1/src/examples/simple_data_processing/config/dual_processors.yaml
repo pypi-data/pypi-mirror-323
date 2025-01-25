@@ -1,0 +1,11 @@
+instances:  
+  generator_interprocess:
+    class_path: examples.simple_data_processing.DataGenerator
+  processor2x:
+    class_path: examples.simple_data_processing.DataProcessor
+  processor4x:
+    class_path: examples.simple_data_processing.DataProcessor
+    kwargs:
+      multiplier: 4
+  collector1:
+    class_path: examples.simple_data_processing.DataCollector
