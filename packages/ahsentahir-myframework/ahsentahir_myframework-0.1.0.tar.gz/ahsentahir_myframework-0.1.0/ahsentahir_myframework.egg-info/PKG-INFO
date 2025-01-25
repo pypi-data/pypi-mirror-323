@@ -1,0 +1,97 @@
+Metadata-Version: 2.2
+Name: ahsentahir-myframework
+Version: 0.1.0
+Summary: A Python framework for ML workflows(this one is for testing purpose only)
+Home-page: https://github.com/AhsenTahir/Py_Framework.git
+Author: Your Name
+Author-email: ahsentahir007@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy==1.23.5
+Requires-Dist: pandas==1.5.3
+Requires-Dist: scikit-learn==1.2.2
+Requires-Dist: torch>=2.0.0
+Requires-Dist: torchvision>=0.15.0
+Requires-Dist: pytest>=6.0.0
+Requires-Dist: black>=21.0
+Requires-Dist: isort>=5.0.0
+Requires-Dist: pytest-cov>=2.12.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# MyFramework
+
+A Python framework for machine learning workflows, providing tools for data processing, model training, and evaluation.
+
+## Features
+
+- Data processing utilities (module1)
+- Machine learning tools (module2)
+- Common utility functions
+- Comprehensive test suite
+- Example scripts
+
+## Installation
+
+```bash
+pip install myframework
+```
+
+## Quick Start
+
+```python
+from myframework.module1 import process_data
+from myframework.module2 import train_model, evaluate_model
+
+# Process your data
+processed_data = process_data(your_data, normalize=True)
+
+# Train a model
+model = train_model(X_train, y_train)
+
+# Evaluate the model
+metrics = evaluate_model(model, X_test, y_test)
+```
+
+## Documentation
+
+For detailed documentation, see the `docs/` directory or visit our [documentation site](docs/index.md).
+
+## Examples
+
+Check out the `examples/` directory for usage examples:
+
+```bash
+python examples/example1.py
+```
+
+## Development
+
+1. Clone the repository
+2. Install development dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run tests:
+   ```bash
+   pytest
+   ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
