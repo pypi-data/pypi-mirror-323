@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: numpar
+Version: 0.1.0
+Summary: A package for parsing number strings in various formats
+Author: User
+Author-email: user@example.com
+Requires-Python: >=3.6
+License-File: LICENSE.md
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
