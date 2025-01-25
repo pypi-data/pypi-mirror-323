@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+devgagantools/__init__.py
+devgagantools/spylib.py
+devgagantools.egg-info/PKG-INFO
+devgagantools.egg-info/SOURCES.txt
+devgagantools.egg-info/dependency_links.txt
+devgagantools.egg-info/requires.txt
+devgagantools.egg-info/top_level.txt
