@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: freeact-skills
+Version: 0.0.7
+Summary: Library of predefined freeact agent skills
+Home-page: https://github.com/gradion-ai/freeact-skills
+License: Apache-2.0
+Author: Martin Krasser
+Author-email: martin@gradion.ai
+Requires-Python: >=3.11,<3.14
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: all
+Provides-Extra: reader
+Provides-Extra: resume
+Provides-Extra: search-google
+Provides-Extra: search-perplexity
+Provides-Extra: zotero
+Requires-Dist: beautifulsoup4 (>=4.12,<5.0) ; extra == "resume" or extra == "all"
+Requires-Dist: google-genai (>=0.2.2,<0.3.0) ; extra == "search-google" or extra == "all"
+Requires-Dist: httpx (>=0.27.2,<0.28.0) ; extra == "search-perplexity" or extra == "all"
+Requires-Dist: openai (>=1.56.0,<2.0.0) ; extra == "search-perplexity" or extra == "all"
+Requires-Dist: pydantic (>=2.9,<3.0) ; extra == "resume" or extra == "all"
+Requires-Dist: python-dateutil (>=2.9,<3.0) ; extra == "reader" or extra == "zotero" or extra == "all"
+Requires-Dist: pyyaml (>=6.0,<7.0) ; extra == "resume" or extra == "all"
+Requires-Dist: pyzotero (>=1.5,<2.0) ; extra == "zotero" or extra == "all"
+Requires-Dist: requests (>=2.32,<3.0) ; extra == "reader" or extra == "resume" or extra == "all"
+Description-Content-Type: text/markdown
+
+# freeact-skills
+
+<p align="left">
+    <a href="https://gradion-ai.github.io/freeact-skills/"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgradion-ai.github.io%2Ffreeact-skills%2F&up_message=online&down_message=offline&label=docs"></a>
+    <a href="https://pypi.org/project/freeact-skills/"><img alt="PyPI - Version" src="https://img.shields.io/pypi/v/freeact-skills?color=blue"></a>
+    <!-- <a href="https://github.com/gradion-ai/freeact-skills/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/gradion-ai/freeact-skills"></a> -->
+    <a href="https://github.com/gradion-ai/freeact-skills/actions"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/gradion-ai/freeact-skills/test.yml"></a>
+    <a href="https://github.com/gradion-ai/freeact-skills/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/gradion-ai/freeact-skills?color=blueviolet"></a>
+    <a href="https://pypi.org/project/freeact-skills/"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/freeact-skills"></a>
+</p>
+
+The `freeact-skills` project provides a curated set of predefined skill modules for the [freeact](https://gradion-ai.github.io/freeact) agent system.
+
+## Documentation
+
+The `freeact-skills` documentation is available [here](https://gradion-ai.github.io/freeact-skills/).
+
