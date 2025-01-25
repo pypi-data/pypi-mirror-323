@@ -1,0 +1,41 @@
+Metadata-Version: 2.3
+Name: socytinet
+Version: 0.0.1.dev0
+Summary: 
+Author: Yasas Senarath
+Author-email: 12231659+ysenarath@users.noreply.github.com
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# socytinet
+
+A Python package for social network analysis.
+
+## Installation
+
+```bash
+pip install socytinet
+```
+
+## Usage
+
+```python
+import socytinet
+```
+
+## License
+
+This project is licensed under the terms of the MIT license.
+
