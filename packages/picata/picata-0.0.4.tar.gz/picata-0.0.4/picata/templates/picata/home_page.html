@@ -1,0 +1,21 @@
+{% extends "picata/split_view.html" %}
+{% load wagtailcore_tags %}
+{% comment %}
+  Template for the HomePage class, utilising a split-view page layout.
+{% endcomment %}
+
+{% block main_classes %}{{ block.super }} home-page{% endblock %}
+
+{% block content %}
+
+    {% for div in self.top_content %}<div>{{ div }}</div>{% endfor %}
+
+    {% for post in recent_posts %}<div class="recent-post">
+        {% if forloop.counter == 1 %}<h2>Recent posts</h2>{% endif %}
+        <h3>{{ post.title }}</h3>
+        {{ post.summary|richtext }}
+    </div>{% endfor %}
+
+    {% for div in self.bottom_content %}<div>{{ div }}</div>{% endfor %}
+
+{% endblock %}
