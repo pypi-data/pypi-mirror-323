@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: roll-regression
+Version: 0.2.0
+Summary: Fast rolling linear regression using Rust
+Home-page: https://github.com/gavincyi/roll_regression
+Author: Gavin Chan
+Author-email: Gavin Chan <your.email@example.com>
+License: MIT
+Keywords: regression,rolling,rust
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Rust
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: cffi>=1.15.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: scipy>=1.8.0; extra == "dev"
+
