@@ -1,0 +1,8 @@
+setuptools
+wheel
+typing
+scikit-learn
+numpy
+spacy
+transformers
+torch

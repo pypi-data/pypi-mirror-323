@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/biasana/__init__.py
+src/biasana/association_analyzer.py
+src/biasana/logit_analyzer.py
+src/biasana/template_manager.py
+src/biasana.egg-info/PKG-INFO
+src/biasana.egg-info/SOURCES.txt
+src/biasana.egg-info/dependency_links.txt
+src/biasana.egg-info/requires.txt
+src/biasana.egg-info/top_level.txt
+tests/test_association_analyzer.py
+tests/test_logit_analyzer.py
