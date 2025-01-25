@@ -1,0 +1,10 @@
+ytmdpy/__init__.py,sha256=vTQP2ouOKa3QbcvjwRD1XIdYvUZyKvRXrYGQ_x30pR0,1131
+ytmdpy/client.py,sha256=iWvgYVPaeXIR236qw5PZRuiu95UDDUZIJ1SBK__00lw,4557
+ytmdpy/enums.py,sha256=xryMV1PMdse3K7cir06UZ05Bq2n_5lju3TsGdY9mxKg,667
+ytmdpy/exceptions.py,sha256=IWON8uHd8VH_GJYUL-cby3l5rvi9m5F7xPLQ4WX5pO4,638
+ytmdpy/http.py,sha256=gjb0cpqjjqYMPu_aD3VH8wH0-aFc5VbBd-lsmswgSVE,1908
+ytmdpy-1.0.0.dist-info/LICENSE,sha256=cXzBKkEvpr1rlmcitr6ck-E2npdit40O-0ypMcZpRss,1098
+ytmdpy-1.0.0.dist-info/METADATA,sha256=krPiAL45fMdKOPzAgwAgEqnD0Mryb4c4i1zHMWCzXnM,3258
+ytmdpy-1.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+ytmdpy-1.0.0.dist-info/top_level.txt,sha256=5k9MG0SncQwagmGgKb1iBivvxWSnfjzelCXsuIPL-Ps,7
+ytmdpy-1.0.0.dist-info/RECORD,,
