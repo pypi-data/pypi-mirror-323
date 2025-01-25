@@ -1,0 +1,7 @@
+README.md
+setup.py
+imagedatasetanalyzer.egg-info/PKG-INFO
+imagedatasetanalyzer.egg-info/SOURCES.txt
+imagedatasetanalyzer.egg-info/dependency_links.txt
+imagedatasetanalyzer.egg-info/requires.txt
+imagedatasetanalyzer.egg-info/top_level.txt
