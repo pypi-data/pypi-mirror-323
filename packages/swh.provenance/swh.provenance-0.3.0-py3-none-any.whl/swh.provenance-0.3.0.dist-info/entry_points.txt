@@ -1,0 +1,2 @@
+[swh.cli.subcommands]
+swh.provenance = swh.provenance.cli

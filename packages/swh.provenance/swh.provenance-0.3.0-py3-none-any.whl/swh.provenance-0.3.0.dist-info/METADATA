@@ -1,0 +1,42 @@
+Metadata-Version: 2.2
+Name: swh.provenance
+Version: 0.3.0
+Summary: Software Heritage provenance
+Author-email: Software Heritage developers <swh-devel@inria.fr>
+Project-URL: Homepage, https://gitlab.softwareheritage.org/swh/devel/swh-provenance
+Project-URL: Bug Reports, https://gitlab.softwareheritage.org/swh/devel/swh-provenance/-/issues
+Project-URL: Funding, https://www.softwareheritage.org/donate
+Project-URL: Documentation, https://docs.softwareheritage.org/devel/swh-provenance/
+Project-URL: Source, https://gitlab.softwareheritage.org/swh/devel/swh-provenance.git
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: swh.core[db,http]>=2
+Requires-Dist: swh.model>=2.6.1
+Requires-Dist: swh.storage
+Requires-Dist: swh.graph>=6.4.0
+Provides-Extra: luigi
+Requires-Dist: swh.core[db,http]>=2; extra == "luigi"
+Requires-Dist: swh.model>=2.6.1; extra == "luigi"
+Requires-Dist: swh.storage; extra == "luigi"
+Requires-Dist: swh.graph>=6.4.0; extra == "luigi"
+Requires-Dist: pyarrow<19.0.0; extra == "luigi"
+Requires-Dist: swh-graph[luigi]; extra == "luigi"
+Requires-Dist: psutil; extra == "luigi"
+Provides-Extra: testing
+Requires-Dist: swh.core[db,http]>=2; extra == "testing"
+Requires-Dist: swh.model>=2.6.1; extra == "testing"
+Requires-Dist: swh.storage; extra == "testing"
+Requires-Dist: swh.graph>=6.4.0; extra == "testing"
+Requires-Dist: grpcio; extra == "testing"
+Requires-Dist: pytest>=8.1; extra == "testing"
+Requires-Dist: swh.graph[testing]>=1.0.1; extra == "testing"
+Requires-Dist: types-click; extra == "testing"
+Requires-Dist: types-PyYAML; extra == "testing"
+Requires-Dist: types-Deprecated; extra == "testing"
