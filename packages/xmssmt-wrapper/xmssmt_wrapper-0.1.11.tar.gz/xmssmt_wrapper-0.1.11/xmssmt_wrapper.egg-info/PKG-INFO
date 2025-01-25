@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: xmssmt_wrapper
+Version: 0.1.11
+Summary: Python wrapper of XMSSMT
+Author: Jim HE
+Author-email: jimheapps@gmail.com
+License: MIT
+Requires-Dist: cython
