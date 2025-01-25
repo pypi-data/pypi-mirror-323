@@ -1,0 +1,10 @@
+CHANGELOG.txt
+MANIFEST.in
+README.txt
+setup.py
+AskioCircleLib/__init__.py
+AskioCircleLib.egg-info/PKG-INFO
+AskioCircleLib.egg-info/SOURCES.txt
+AskioCircleLib.egg-info/dependency_links.txt
+AskioCircleLib.egg-info/requires.txt
+AskioCircleLib.egg-info/top_level.txt

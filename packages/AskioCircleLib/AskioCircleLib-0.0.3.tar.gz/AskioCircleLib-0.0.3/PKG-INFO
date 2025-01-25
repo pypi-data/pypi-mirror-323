@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: AskioCircleLib
+Version: 0.0.3
+Summary: circle class
+Home-page: 
+Author: Askio
+Author-email: legoask@gmail.com
+Keywords: circle
+
+A simple library that adds a class like the pygame rect class but for circles.
+pls install pygame and math
+
+Change log
+==========
+
+0.0.3 (24/01/2025)
+--------------------
+Now dependencies actually works
