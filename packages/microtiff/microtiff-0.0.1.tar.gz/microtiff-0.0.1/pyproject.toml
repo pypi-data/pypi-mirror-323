@@ -1,0 +1,21 @@
+[project]
+name = "microtiff"
+version = "0.0.1"
+authors = [
+  { name="Alex Baldwin", email="contact@alexbaldwin.dev" },
+]
+description = "A Python module and CLI tool for converting proprietary microscopy formats to TIFF with JSON metadata sidecar files."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/NOC-OI/microtiff"
+Issues = "https://github.com/NOC-OI/microtiff/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

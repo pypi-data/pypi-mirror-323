@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/ifcb.py
+src/lisst_holo.py
+src/microtiff.egg-info/PKG-INFO
+src/microtiff.egg-info/SOURCES.txt
+src/microtiff.egg-info/dependency_links.txt
+src/microtiff.egg-info/top_level.txt

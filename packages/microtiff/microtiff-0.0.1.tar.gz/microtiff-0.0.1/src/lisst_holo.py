@@ -1,0 +1,155 @@
+#!/bin/python3
+
+# Copyright 2024, A Baldwin, S Giering, W Major and M Masoudi
+#
+# This file is part of microtiff.
+#
+# microtiff is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# microtiff is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with microtiff.  If not, see <http://www.gnu.org/licenses/>.
+
+'''
+lisst_holo.py
+
+A converter for image data from the LISST-Holo and LISST-Holo2 holographic sensors
+
+Notes:
+
+Only imports holopy when attempting to construct normal images from interference patterns.
+'''
+
+import argparse
+import os
+import re
+import csv
+import json
+from PIL import Image
+from PIL.TiffImagePlugin import ImageFileDirectory_v2
+import numpy as np
+import matplotlib.pyplot as plt
+
+def header_file_to_dict(lines):
+    o_dict = {}
+    for line in lines:
+        m = re.search("^([^:]+):\\s?", line)
+        key = m.group(1)
+        value = line[len(m.group(0)):]
+        o_dict[key] = value.rstrip()
+    return o_dict
+
+def is_whitespace(char):
+    if char == ' ':
+        return True
+    if char == '\t':
+        return True
+    if char == '\r':
+        return True
+    if char == '\n':
+        return True
+    return False
+
+def read_string_till_space(fp):
+    str_out = ""
+    reading = False
+    while True:
+        char = chr(fp.read(1)[0])
+        if reading:
+            if is_whitespace(char):
+                return str_out
+            else:
+                str_out = str_out + char
+        else:
+            # We don't want multiple spaces (or CRLF!) to return empty strings
+            if not is_whitespace(char):
+                reading = True
+                str_out = str_out + char
+
+def extract_lisst_holo_image(target, no_metadata = False, construct = False):
+    image_map = []
+    outputs = []
+    with open(target + ".pgm", "rb") as f:
+        bd = 255
+        imd_start_byte = 0
+        height = 0
+        width = 0
+        f.seek(0)
+        header = ""
+        footer = ""
+        while imd_start_byte == 0:
+            if not read_string_till_space(f) == "P5":
+                raise ValueError("Invalid start to a PGM file")
+            width = int(read_string_till_space(f))
+            height = int(read_string_till_space(f))
+            bd = int(read_string_till_space(f))
+            imd_start_byte = f.tell()
+        two_byte = False
+        # Caveat of PGM files: they sometimes have more than 8 bpp. While the Holo2 doesn't, a future sensor might.
+        if (bd > 255):
+            two_byte = True
+        imd_length = height * width
+        if (two_byte):
+            imd_length = imd_length * 2
+        if (height * width > 0):
+            f.seek(imd_start_byte)
+            imdata = f.read(imd_length)
+            imdata_reform = None
+            if (two_byte):
+                imdata_reform = np.reshape(np.frombuffer(imdata, dtype=np.uint16), (height, width))
+            else:
+                imdata_reform = np.reshape(np.frombuffer(imdata, dtype=np.uint8), (height, width))
+
+            image = Image.fromarray(imdata_reform, "L")
+            im_metadata = {}
+            if not no_metadata:
+                with open(target + ".json", "w") as f:
+                    json.dump(im_metadata, f, ensure_ascii=False)
+            image.save(target + ".tiff", "TIFF")
+            if construct:
+                import holopy
+                zstack = np.linspace(0, 100000, 64)
+                raw_holo = holopy.load_image(target + ".tiff", spacing=4.4, medium_index = 1, illum_wavelen = 0.658)
+                rec_vol = holopy.propagate(raw_holo, zstack, cfsp = 3)
+                print("--construct not fully implemented!")
+                #print(rec_vol.shape)
+                for img in rec_vol:
+                    plt.imshow(np.abs(img.to_numpy()), interpolation="nearest", origin="upper")
+                    plt.colorbar()
+                    plt.show()
+
+            outputs.append(target)
+
+    return outputs
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-x", "--exclude-metadata", action="store_true", required=False, help="don't add metadata to resulting image files.")
+    parser.add_argument("-c", "--construct", action="store_true", required=False, help="reconstruct image from holographic pattern.")
+    parser.add_argument("file", nargs='+', help="any number of .pgm files")
+
+    args = parser.parse_args()
+
+    in_files = args.file
+    targets = []
+
+    for in_file in in_files:
+        in_file_s = os.path.splitext(in_file)
+        if in_file_s[1] == ".pgm":
+            targets.append(in_file_s[0])
+        else:
+            print("invalid extension \"" + in_file_s[1][1:] + "\" in file \"" + in_file + "\", ignoring")
+
+    # Get rid of duplicates
+    targets = list(set(targets))
+
+    for target in targets:
+        extract_lisst_holo_image(target, no_metadata = args.exclude_metadata, construct = args.construct)
+
