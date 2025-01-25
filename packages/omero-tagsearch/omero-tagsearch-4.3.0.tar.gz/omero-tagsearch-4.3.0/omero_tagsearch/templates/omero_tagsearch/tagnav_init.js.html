@@ -1,0 +1,22 @@
+{% load url from future %}
+<script>
+
+$(function() {
+    $("#tagnav_panel").omeroweb_center_plugin({
+        plugin_index: {{ forloop.counter }},        // since we're in a Django template loop
+        empty_on_sel_change: false,                 // Do not completely erase content when changing selection
+        load_plugin_content: function(selected, dtype, oid){
+
+            // Check if the Tag Navigation Page is already loaded
+            if (!$('#tagSearchForm').length) {
+                $("div#tagnav_panel").html('<p class="loading_center">Loading... please wait. <img src ="{% static "webgateway/img/spinner_big.gif" %}"/></p>');
+
+                // Get and load actual contents
+                tagnav_url = '{% url 'tagsearch' %}';
+                $("div#tagnav_panel").load(tagnav_url);
+            }
+        },
+    });
+});
+
+</script>

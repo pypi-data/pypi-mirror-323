@@ -1,0 +1,141 @@
+.tagSearchDivider {
+    border-bottom:solid 1px hsl(210,20%,90%);
+    -webkit-box-shadow:0 1px 0 rgba(255,255,255,.3);
+
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.3); /* Saf3.0+, Chrome */
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.3); /* FF3.5+ */
+    box-shadow: 0 1px 0 rgba(255,255,255,0.3); /* Opera 10.5, IE 9.0 */
+
+    padding-bottom:25px;
+    margin-bottom:25px;
+    }
+
+#id_selectedTags, #id_excludedTags {
+  width:200px;
+}
+
+.tagSearchDivider .field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1px; /* Adjust as needed */
+}
+
+.tagSearchDivider label {
+    width:100px;
+    margin-right: 10px; /* Adjust as needed */
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+.tagnav_counts {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  top: 8px;
+}
+
+.tagnav_counts span {
+  font-size:1.3em;
+  font-weight:lighter;
+  margin-left: 5px;
+}
+
+.tagnav-icon {
+  background-position: center bottom;
+  height: 16px;
+  width: 17px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 3px 5px 2px 3px;
+  padding: 0;
+}
+
+.tagnav-user .tagnav-icon {
+  background: url('../image/icon_user.png') no-repeat;
+  margin: 0 0 0 0;
+}
+
+.tagnav-project .tagnav-icon {
+  background: url('../image/folder16.png') no-repeat;
+}
+
+.tagnav-dataset .tagnav-icon {
+  background: url('../image/folder_image16.png') no-repeat;
+}
+
+.tagnav-screen .tagnav-icon {
+  background: url('../image/folder_screen16.png') no-repeat;
+}
+
+.tagnav-plate .tagnav-icon {
+  background: url('../image/folder_plate16.png') no-repeat;
+}
+
+.tagnav-acquisition .tagnav-icon {
+  background: url('../image/run16.png') no-repeat;
+}
+
+.tagnav-well .tagnav-icon {
+  background: url('../image/well16.png') no-repeat;
+}
+
+.tagnav-image .tagnav-icon {
+  background: url('../image/image16.png') no-repeat;
+}
+
+.tagnav-project, .tagnav-dataset, .tagnav-screen,
+.tagnav-plate, .tagnav-acquisition, .tagnav-well,
+.tagnav-image, .tagnav-user {
+    color: hsl(210,10%,50%);
+    font-size: 1.2em;
+    text-shadow: 0 1px 0 white;
+    vertical-align: middle;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+
+.search_tips__tag {
+  vertical-align: middle;
+}
+
+.search_tips__join {
+  vertical-align: bottom;
+}
+
+#id_view_project, #id_view_dataset, #id_view_screen, #id_view_plate,
+#id_view_well, #id_view_acquisition, #id_view_image{
+  vertical-align: bottom;
+}
+
+ul#id_operation li{
+  display: inline-block;
+}
+
+#id_userName {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+#counts_list li,
+#counts_list ul{
+  margin-top: 2px;
+  margin-left: 0px;
+}
+#selectall_btn {
+  margin-left: 3px;
+  margin-top: 8px;
+}
+
+#id_operation {
+  display: flex;
+}
+
+#id_operation div {
+  margin-right: 10px; /* Adjust as needed */
+}
