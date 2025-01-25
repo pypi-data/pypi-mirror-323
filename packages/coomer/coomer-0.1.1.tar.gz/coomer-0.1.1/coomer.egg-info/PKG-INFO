@@ -1,0 +1,90 @@
+Metadata-Version: 2.2
+Name: coomer
+Version: 0.1.1
+Summary: Coomer/Kemono Api client
+Home-page: https://github.com/sero01000/coomer
+Author: sero01000
+Author-email: author@example.com
+License: MIT
+Keywords: coomer,kemono,api,asyncio
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pydantic<2.11,>=2.4.1
+Provides-Extra: aiohttp
+Requires-Dist: aiohttp<3.12,>=3.9.0; extra == "aiohttp"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Coomer
+
+This package is Api client for coomer/kemono.
+
+## Installing
+
+```bash
+pip install coomer
+```
+
+## Installing async version
+
+```bash
+pip install coomer[aiohttp]
+```
+
+## Getting started
+
+### Client
+
+To get posts from the creator:
+
+```python
+from coomer import Creator
+
+creator = Creator(name="test")
+posts = creator.get_posts()
+for p in posts:
+    print(f"{p.id}\tfiles:{len(p.files)}\t{p.title}")
+```
+
+### Changing domain
+
+```python
+parser = Parser(domain='kemono.su')
+creator = Creator(name="test", parser=parser)
+```
+
+
+### Async Client
+
+To get posts from the creator asynchronously:
+
+```python
+import asyncio
+from coomer.asyncio import AsyncCreator
+
+async def test():
+    creator = Creator(name="test")
+    posts = creator.get_posts()
+    async for p in posts:
+        print(f"{p.id}\tfiles:{len(p.files)}\t{p.title}")
+
+asyncio.run(test())
+```
