@@ -1,0 +1,15 @@
+url_remote/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+url_remote/action_name_enum.py,sha256=zeWQueGN08VmWcA_ZFZsELnRjlVjXtPNqzQqG-A33kY,1824
+url_remote/api_version_dicts.py,sha256=pj8UsgVNrOlv6G_4g-fFLCkkqgxBhRuwaecvHbRRuAc,723
+url_remote/authentiction_api_version_dict.py,sha256=SrzuVOqByg1O0FLSugS2DsgJaVya0kqLWZPmFAGnyDI,210
+url_remote/brand_name_enum.py,sha256=a3SyYvCYUWNR9QQNk0PyTOb5l4g3YqCisGSYuOmdICU,71
+url_remote/component_name_enum.py,sha256=sLauMxgygorGmr3-IdVueWEaSHD8Di5LGb6DqOB49T0,636
+url_remote/domain.py,sha256=1Q_AWJ-Y_roUIhILklm5s6jFbQhy17HKXXg_vF2JebQ,4916
+url_remote/entity_name_enum.py,sha256=8p7GcIYGEE2EKTPUkB87VN1xK4kx_YTH5hWtNZtbbE4,449
+url_remote/environment_name_enum.py,sha256=Rx4fi6ja2TSplR3ytOTGf4INfHvkKZu1nWAHqgiqZdo,547
+url_remote/our_url.py,sha256=RlNiIfdte8TNxaRmQDg2hPAUFFCSrDVwOrQWzLop604,9949
+url_remote/url_circlez.py,sha256=ykkLEenZezx6N8qquks0Tj9jtqBzwib5KG1dsWyd3p8,250
+url_remote-0.0.109.dist-info/METADATA,sha256=SY0iBihEvUg7-e2MY7F1a71bFDCywlR1T7F8bPoDDZc,498
+url_remote-0.0.109.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+url_remote-0.0.109.dist-info/top_level.txt,sha256=2lq7LdwusC-lchFZkdULv5qw-uCl62OobO9ZGmnlfFE,11
+url_remote-0.0.109.dist-info/RECORD,,
