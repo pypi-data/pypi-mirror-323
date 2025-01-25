@@ -1,0 +1,2 @@
+[console_scripts]
+decodify = decodify.cli:main
