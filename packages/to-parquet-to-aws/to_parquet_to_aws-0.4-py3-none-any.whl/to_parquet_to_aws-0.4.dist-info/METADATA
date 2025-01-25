@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: to-parquet-to-aws
+Version: 0.4
+Requires-Dist: pandas
+Requires-Dist: boto3
+
