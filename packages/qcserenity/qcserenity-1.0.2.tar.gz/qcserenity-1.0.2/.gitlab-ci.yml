@@ -1,0 +1,261 @@
+stages:
+  - build
+  - test
+  - deploy
+
+
+# Before
+# Adds a SSH key to the runner in order to clone
+#  external projects from the gitlab server,
+#  such as generated libint source files
+before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - eval $(ssh-agent -s)
+  - ssh-add <(echo "$SSH_PRIVATE_KEY")
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+.ubuntu:
+  stage: build
+  image: ubuntu:22.04
+  tags: 
+    - serenity-1.1
+
+.install-gcc: &install-gcc
+  - echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+  - apt-get update && apt-get install -y wget make cmake gcc git libeigen3-dev python3-pip libboost-all-dev libhdf5-dev doxygen graphviz libomp-dev doxygen
+  - pip3 install gcovr
+
+.install-clang: &install-clang
+  - echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+  - apt-get update && apt-get install -y wget make cmake gcc git libeigen3-dev python3-pip libboost-all-dev libhdf5-dev doxygen clang graphviz libomp-dev doxygen
+  - export CC=/usr/bin/clang
+  - export CXX=/usr/bin/clang++
+  - rm -rf serenity.sh
+  - rm -rf test.input
+  - rm -rf build
+
+#=========================#
+#  Default Configurations #
+#=========================#
+
+build:code_cleanliness:
+  stage: build
+  tags: 
+    - serenity-1.1
+  script:
+    - python3 dev/scripts/checkFileDoc.py src/
+
+build:pages:
+  extends: .ubuntu
+  script:
+    - *install-gcc
+    - mkdir -p build
+    - cd build
+    - cmake ..
+    - make doc
+
+build:formatting:
+  stage: build
+  extends: .ubuntu
+  script:
+    - apt-get install -y clang-format-15
+    - bash dev/scripts/formatting.sh src -m check -f
+
+build:manual:
+  stage: build
+  tags:
+    - latex
+  script:
+    - cd manual
+    - pdflatex -interaction=nonstopmode SerenityUserManual.tex
+    - bibtex SerenityUserManual
+    - pdflatex -interaction=nonstopmode SerenityUserManual.tex
+    - cd ..
+    - cp manual/SerenityUserManual.pdf .
+  artifacts:
+    expire_in: 1 day
+    name: SerenityUserManual
+    paths:
+    - SerenityUserManual.pdf
+
+build:clang:
+  extends: .ubuntu
+  except:
+    - release
+    - master
+    - tags
+  script:
+    - *install-clang
+    - mkdir -p build
+    - cd build
+    - cmake -DWERROR=ON -DCMAKE_BUILD_TYPE=Release -DSERENITY_PYTHON_BINDINGS=ON -DSERENITY_USE_LAPLACE_MINIMAX=ON ..
+    - time make -j8
+    - cd ..
+    - source serenity.sh
+    - mkdir testfolder
+    - cd testfolder
+    - ../build/bin/serenity_tests --gtest_output="xml:report.xml"
+    - python3 -m unittest discover ../src/python/tests/ -v
+    - mv report.xml ..
+    - |+
+      results=$(find . -maxdepth 1 -mindepth 1 \( -type f -o -type d \) -print)
+      results_array=($results)
+      echo "Search results are: $results"
+      if (( ${#results_array[@]} > 0 )); then
+        echo "Error! The tests left behind some remainders."
+        exit 1
+      fi
+  artifacts:
+    expire_in: 1 day
+    reports:
+      junit: report.xml
+  coverage: '/^TOTAL.*\s+(\d+\%)$/'
+
+build:gcc:
+  extends: .ubuntu
+  except:
+    - release
+    - master
+    - tags
+  script:
+    - *install-gcc
+    - mkdir -p build
+    - cd build
+    - cmake -DWERROR=ON -DGCC_COVERAGE=ON -DCMAKE_BUILD_TYPE=Release -DSERENITY_PYTHON_BINDINGS=ON -DSERENITY_USE_LAPLACE_MINIMAX=ON ..
+    - time make -j8
+    - cd ..
+    - source serenity.sh
+    - ./build/bin/serenity_tests --gtest_output="xml:report.xml"
+    - python3 -m gcovr -r $(pwd)/src --sort uncovered-number --gcov-ignore-parse-errors=suspicious_hits.warn --object-directory=$(pwd)/build/CMakeFiles/serenity.dir/src --exclude='.*_python.*' --exclude='.*_test.*' --exclude='.*__TEST_SUPPLY.*' --exclude='.*DummyTask.*'
+    - python3 -m unittest discover src/python/tests/ -v
+  artifacts:
+    expire_in: 1 day
+    reports:
+      junit: report.xml
+  coverage: '/^TOTAL.*\s+(\d+\%)$/'
+  when: manual
+  allow_failure: false
+
+#========================#
+#  Master Configurations #
+#========================#
+build:master:
+  extends: .ubuntu
+  only:
+    - master
+  script:
+    - *install-gcc
+    - mkdir -p build
+    - cd build
+    - cmake -DWERROR=ON -DGCC_COVERAGE=ON -DCMAKE_BUILD_TYPE=Release -DSERENITY_PYTHON_BINDINGS=ON -DSERENITY_USE_LAPLACE_MINIMAX=ON ..
+    - time make -j8
+  artifacts:
+    name: build_master
+    when: on_success
+    expire_in: 3 day
+    paths:
+      - build/CMakeFiles/serenity.dir
+      - build/bin
+      - build/lib
+      - data
+      - ext
+      - test.input
+      - serenity.sh
+
+test:master_executable_serial:
+  stage: test
+  extends: .ubuntu
+  only:
+    - master
+  dependencies:
+    - build:master
+  script:
+    - *install-gcc
+    - export OMP_NUM_THREADS=1
+    - ln -s build/lib
+    - ln -s build/bin
+    - source serenity.sh
+    - ./build/bin/serenity_tests --gtest_output="xml:report.xml"
+    - python3 -m gcovr -r $(pwd)/src --sort uncovered-number --gcov-ignore-parse-errors=suspicious_hits.warn --object-directory=$(pwd)/build/CMakeFiles/serenity.dir/src --gcov-ignore-errors=no_working_dir_found --exclude='.*_python.*' --exclude='.*_test.*' --exclude='.*__TEST_SUPPLY.*' --exclude='.*DummyTask.*'
+  artifacts:
+    expire_in: 1 day
+    reports:
+      junit: report.xml
+  coverage: '/^TOTAL.*\s+(\d+\%)$/'
+
+test:master_executable_parallel:
+  extends: .ubuntu
+  stage: test
+  only:
+    - master
+  dependencies:
+    - build:master
+  script:
+    - *install-gcc
+    - export OMP_NUM_THREADS=4
+    - ln -s build/lib
+    - ln -s build/bin
+    - source serenity.sh
+    - ./build/bin/serenity_tests --gtest_output="xml:report.xml"
+    - python3 -m gcovr -r $(pwd)/src --sort uncovered-number --gcov-ignore-parse-errors=suspicious_hits.warn --object-directory=$(pwd)/build/CMakeFiles/serenity.dir/src --gcov-ignore-errors=no_working_dir_found --exclude='.*_python.*' --exclude='.*_test.*' --exclude='.*__TEST_SUPPLY.*' --exclude='.*DummyTask.*'
+  artifacts:
+    expire_in: 1 day
+    reports:
+      junit: report.xml
+  coverage: '/^TOTAL.*\s+(\d+\%)$/'
+
+test:master_python_wrapper:
+  extends: .ubuntu
+  stage: test
+  only: 
+    - master
+  dependencies:
+    - build:master
+  script:
+    - *install-gcc
+    - ln -s build/lib
+    - ln -s build/bin
+    - source serenity.sh
+    - python3 -m unittest discover src/python/tests/ -v
+
+variables:
+  DOCKER_HOST: tcp://docker:2375/
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+
+deploy:build_wheels:
+  stage: deploy
+  image: python:3.12
+  only:
+    - master
+  before_script:
+    - curl -sSL https://get.docker.com/ | sh
+    - python -m pip install cibuildwheel==2.21.3 build
+  services:
+    - name: docker:dind
+      entrypoint: ["env", "-u", "DOCKER_HOST"]
+      command: ["dockerd-entrypoint.sh"]
+  script:
+    - cibuildwheel --output-dir wheelhouse
+  artifacts:
+    paths:
+      - wheelhouse/
+  when: manual
+  #allow_failure: false
+
+deploy:build_sdist:
+  stage: deploy
+  image: python:3.12
+  only:
+    - master
+  before_script:
+    - curl -sSL https://get.docker.com/ | sh
+    - python -m pip install cibuildwheel==2.21.3 build
+  script:
+    - python -m build --sdist --outdir dist
+  artifacts:
+    paths:
+      - dist/*.tar.gz
+  when: manual
+  #allow_failure: false
