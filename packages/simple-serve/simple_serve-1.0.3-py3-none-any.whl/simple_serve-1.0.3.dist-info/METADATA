@@ -1,0 +1,100 @@
+Metadata-Version: 2.4
+Name: simple_serve
+Version: 1.0.3
+Summary: Deployment of a Scikit-Learn model and it's column transformations with a single endpoint.
+Project-URL: Homepage, https://github.com/alexliap/sk_serve
+Project-URL: Documentation, https://alexliap.github.io/sk_serve/
+Project-URL: Repository, https://github.com/alexliap/sk_serve
+Project-URL: Issues, https://github.com/alexliap/sk_serve/issues
+Author-email: Alexandros Liapatis <alexandrosliapatis@gmail.com>
+Maintainer-email: Alexandros Liapatis <alexandrosliapatis@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 Alexandros Liapatis
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: fastapi
+Requires-Dist: loguru
+Requires-Dist: pandas
+Requires-Dist: pydantic
+Requires-Dist: scikit-learn
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pyright; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# sk-serve
+
+![deploy on pypi](https://github.com/alexliap/sk_serve/actions/workflows/publish_package.yaml/badge.svg)
+![PyPI Version](https://img.shields.io/pypi/v/simple-serve?label=pypi%20package)
+![Downloads](https://static.pepy.tech/badge/simple-serve)
+
+Deployment of a Scikit-Learn pipeline with a single endpoint. Validation of input data is also supported with pydantic.
+
+### Usage
+
+See the [Examples](https://github.com/alexliap/sk_serve/tree/master/examples) section of the repository.
+
+### Installation
+
+The package exists on PyPI (with a different name though) so you can install it directly to your environment by running the command
+
+```terminal
+pip install simple-serve
+```
+
+### Dependencies
+
+* pydantic
+* fastapi
+* pandas
+* scikit-learn
+* loguru
+
+Additional packages for development:
+
+* pyright
+* pre-commit
+
+### Development
+
+If you want to contribute you fork the repository and clone it on your machine
+
+```terminal
+git clone https://github.com/alexliap/sk_serve.git
+```
+
+And after you create you environment (either venv or conda) and activate it then run this command
+
+```terminal
+pip install -e ".[dev]"
+```
+
+That way not only the required dependencies are installed but also the development ones.
+
+Also this makes it so that when you import the code to test it, you can do it like any other module but containing the changes you made locally.
+
+Before you decide to commit, run the following command to reformat code in order to be in the acceptable style.
+
+```terminal
+pre-commit install
+pre-commit run --all-files
+```
