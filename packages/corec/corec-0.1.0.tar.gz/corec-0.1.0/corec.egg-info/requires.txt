@@ -1,0 +1,6 @@
+pydantic
+
+[evaluator]
+ranx
+
+[recommender]
