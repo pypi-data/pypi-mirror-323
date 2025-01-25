@@ -1,0 +1,30 @@
+[package]
+name = "mbn"
+version = "1.0.9"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "1.0.61"
+num_enum = "0.7.3"
+strum = { version = "0.26", features = ["derive"], optional = true }
+sqlx = { version = "0.6", features = ["macros","runtime-actix-rustls" ]} 
+pyo3 = { workspace = true, optional = true }
+dbn = "0.22.1"
+chrono = "0.4"
+tokio = { version = "1.0", features = ["io-util"] }
+futures = "0.3"
+time = { version = "0.3", features = ["macros"] }
+bytemuck = "1.20.0"
+
+[dev-dependencies]
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread", "time"] }
+anyhow = "1.0.89"
+serial_test ="3.1.1"
+
+[lib]
+crate-type = ["rlib"]
+
+[features]
+default = []
+python = ["dep:pyo3", "dep:strum"]
