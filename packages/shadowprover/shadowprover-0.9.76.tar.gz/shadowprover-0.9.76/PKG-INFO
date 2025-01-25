@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: shadowprover
+Version: 0.9.76
+Home-page: https://github.com/naveensundarg/py_laser
+Author: Naveen Sundar Govindarajulu
+Author-email: naveensundarg@gmail.com
+Keywords: shadowprover
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+License-File: AUTHORS.rst
+Requires-Dist: Click>=7.0
+Requires-Dist: edn_format
+Requires-Dist: pydantic
+Requires-Dist: pyparsing
+Requires-Dist: fuzzywuzzy
+Requires-Dist: loguru
+Requires-Dist: colorama
+Requires-Dist: pyarmor
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
