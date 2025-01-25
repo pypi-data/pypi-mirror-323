@@ -1,0 +1,5 @@
+setup.py
+AWSGlueCustomConnectorPython.egg-info/PKG-INFO
+AWSGlueCustomConnectorPython.egg-info/SOURCES.txt
+AWSGlueCustomConnectorPython.egg-info/dependency_links.txt
+AWSGlueCustomConnectorPython.egg-info/top_level.txt
