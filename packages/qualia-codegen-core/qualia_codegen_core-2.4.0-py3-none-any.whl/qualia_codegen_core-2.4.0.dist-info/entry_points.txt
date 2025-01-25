@@ -1,0 +1,5 @@
+[console_scripts]
+qualia-codegen = qualia_codegen_core.main:main
+
+[gui_scripts]
+
