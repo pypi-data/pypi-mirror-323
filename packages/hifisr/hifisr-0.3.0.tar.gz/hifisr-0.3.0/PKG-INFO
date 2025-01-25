@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: hifisr
+Version: 0.3.0
+Home-page: https://github.com/zouyinstein/hifisr
+Author: Yi Zou
+Author-email: zouyi.nju@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: biopython
+Requires-Dist: pysam
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist

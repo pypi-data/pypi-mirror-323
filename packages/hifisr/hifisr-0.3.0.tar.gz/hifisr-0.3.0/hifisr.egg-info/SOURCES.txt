@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+hifisr.egg-info/PKG-INFO
+hifisr.egg-info/SOURCES.txt
+hifisr.egg-info/dependency_links.txt
+hifisr.egg-info/requires.txt
+hifisr.egg-info/top_level.txt
+hifisr_functions/__init__.py
+hifisr_functions/hifisr_functions.py
