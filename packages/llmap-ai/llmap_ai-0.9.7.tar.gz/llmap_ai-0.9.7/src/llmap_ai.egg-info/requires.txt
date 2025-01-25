@@ -1,0 +1,5 @@
+openai<2.0.0,>=1.58.1
+transformers>=4.47.1
+tree-sitter==0.21.3
+tree-sitter-languages==1.10.2
+tqdm
