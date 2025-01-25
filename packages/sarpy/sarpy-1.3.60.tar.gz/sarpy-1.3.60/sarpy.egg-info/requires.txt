@@ -1,0 +1,12 @@
+numpy>=1.19.0
+scipy
+
+[all]
+pillow
+lxml>=4.1.1
+matplotlib
+h5py
+smart_open[http]
+pytest>=3.3.2
+networkx>=2.5
+shapely>=1.6.4
