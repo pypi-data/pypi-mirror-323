@@ -1,0 +1,13 @@
+thermoengine_utils/__init__.py,sha256=rhrrK3skieUdOXMiz38qcZkVLbohyHrMxO94xEWY1V0,165
+thermoengine_utils/coder.py,sha256=P0V0D6VtwE5pQqaJOyyrB1xs0fgXbHsi0ARYlcsklts,395779
+thermoengine_utils/coder_templates.py,sha256=V8Rnf2DLPO8MH68mVXMfNLsg8wZFIprTZpmO2tUUlfs,267224
+thermoengine_utils/core.py,sha256=iC6pIp6OCv_pxSZLmfyMJ4dWnS8IQxDog5Vbu5-GRjI,43055
+thermoengine_utils/data/coder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thermoengine_utils/data/coder/berman_1988.json,sha256=9qnl77bDww9NakfnorS8Hrj36CQ_6Wx3uRr0mvEnph8,28608
+thermoengine_utils/data/coder/elements.csv,sha256=CPLm2gkkTR56iS-GcJ5Zl0col-rk267Ob6JisYj4Vyk,2416
+thermoengine_utils/data/coder/entropies.csv,sha256=6Dz2Q41DPWDgliwxPhgQ30ndoX4qnmnLv01d2bOxIX4,2397
+thermoengine_utils-0.1.dist-info/LICENSE,sha256=ND17Pl7wJ4YG4VDYTjr2mRP1NDsWIN9G9IpdycJQ4tk,34454
+thermoengine_utils-0.1.dist-info/METADATA,sha256=1yQMd1fbp0_pfAtmdc2QCmqn3ESeepyYOwUHDXwQ-1o,41113
+thermoengine_utils-0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+thermoengine_utils-0.1.dist-info/top_level.txt,sha256=pOvf6GAmM-cXgSKaQbV9JZs7H7Ye4x6JKOuNl9eT8oA,19
+thermoengine_utils-0.1.dist-info/RECORD,,
