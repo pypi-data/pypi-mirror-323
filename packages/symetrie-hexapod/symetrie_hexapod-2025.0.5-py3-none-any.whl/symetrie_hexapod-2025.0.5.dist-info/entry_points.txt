@@ -1,0 +1,11 @@
+[console_scripts]
+puna_cs = egse.hexapod.symetrie.puna_cs:cli
+
+[gui_scripts]
+puna_ui = egse.hexapod.symetrie.puna_ui:main
+
+[cgse.service.plugins]
+puna_cs = scripts.cgse_service_plugins:puna_cs
+
+[cgse.version]
+symetrie-hexapod = egse.plugins
