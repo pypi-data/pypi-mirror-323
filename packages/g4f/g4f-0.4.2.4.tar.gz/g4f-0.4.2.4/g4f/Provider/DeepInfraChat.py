@@ -1,0 +1,60 @@
+from __future__ import annotations
+
+from ..typing import AsyncResult, Messages
+from .needs_auth import OpenaiAPI
+
+class DeepInfraChat(OpenaiAPI):
+    label = __name__
+    url = "https://deepinfra.com/chat"
+    login_url = None
+    needs_auth = False
+    api_base = "https://api.deepinfra.com/v1/openai"
+
+    working = True
+    supports_stream = True
+    supports_system_message = True
+    supports_message_history = True
+
+    default_model = 'meta-llama/Llama-3.3-70B-Instruct-Turbo'
+    models = [
+        'meta-llama/Llama-3.3-70B-Instruct',
+        'meta-llama/Meta-Llama-3.1-8B-Instruct',
+        default_model,
+        'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo',
+        'Qwen/QwQ-32B-Preview',
+        'microsoft/WizardLM-2-8x22B',
+        'microsoft/WizardLM-2-7B',
+        'Qwen/Qwen2.5-72B-Instruct',
+        'Qwen/Qwen2.5-Coder-32B-Instruct',
+        'nvidia/Llama-3.1-Nemotron-70B-Instruct',
+    ]
+    model_aliases = {
+        "llama-3.3-70b": "meta-llama/Llama-3.3-70B-Instruct",
+        "llama-3.1-8b": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "llama-3.3-70b": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "llama-3.1-70b": "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+        "qwq-32b": "Qwen/QwQ-32B-Preview",
+        "wizardlm-2-8x22b": "microsoft/WizardLM-2-8x22B",
+        "wizardlm-2-7b": "microsoft/WizardLM-2-7B",
+        "qwen-2-72b": "Qwen/Qwen2.5-72B-Instruct",
+        "qwen-2.5-coder-32b": "Qwen/Qwen2.5-Coder-32B-Instruct",
+        "nemotron-70b": "nvidia/Llama-3.1-Nemotron-70B-Instruct",
+    }
+
+    @classmethod
+    async def create_async_generator(
+        cls,
+        model: str,
+        messages: Messages,
+        headers: dict = {},
+        **kwargs
+    ) -> AsyncResult:
+        headers = {
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Origin': 'https://deepinfra.com',
+            'Referer': 'https://deepinfra.com/',
+            'X-Deepinfra-Source': 'web-page',
+            **headers
+        }
+        async for chunk in super().create_async_generator(model, messages, headers=headers, **kwargs):
+            yield chunk
