@@ -1,0 +1,6 @@
+
+[dev]
+tox
+pytest
+mypy
+flake8
