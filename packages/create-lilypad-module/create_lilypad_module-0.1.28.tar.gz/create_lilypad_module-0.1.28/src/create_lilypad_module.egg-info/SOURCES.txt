@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/create_lilypad_module/__init__.py
+src/create_lilypad_module/scaffold.py
+src/create_lilypad_module.egg-info/PKG-INFO
+src/create_lilypad_module.egg-info/SOURCES.txt
+src/create_lilypad_module.egg-info/dependency_links.txt
+src/create_lilypad_module.egg-info/entry_points.txt
+src/create_lilypad_module.egg-info/top_level.txt
+src/create_lilypad_module/templates/config/constants.py
+src/create_lilypad_module/templates/scripts/download_model.py
+src/create_lilypad_module/templates/scripts/run.py
+src/create_lilypad_module/templates/src/run_inference.py
