@@ -1,0 +1,33 @@
+Metadata-Version: 2.2
+Name: fasttea
+Version: 1.1.0
+Summary: Fast XiaoTea encryption and decryption
+Author: Daljeet Nandha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: summary
+
+# FastTea
+FastTea is a Python extension module that provides fast XiaoTea encryption and decryption.
+It is >100x faster than the [original XiaoTea implementation](https://github.com/BotoX/xiaomi-m365-firmware-patcher/blob/master/xiaotea/xiaotea.py).
+
+## Usage
+`import fasttea`
+### Encrypt
+`fasttea.encrypt(<bytes>)`
+### Decrypt
+`fasttea.decrypt(<bytes>)`
+### Using custom key
+```python
+fasttea.encrypt(<bytes>, b"FastTeaFastTeaFT")
+# or using keywords
+fastea.decrypt(data=<bytes>, key=b"FastTeaFastTeaFT")
+```
+    
