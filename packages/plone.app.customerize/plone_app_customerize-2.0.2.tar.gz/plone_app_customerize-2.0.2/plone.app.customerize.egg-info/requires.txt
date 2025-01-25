@@ -1,0 +1,12 @@
+setuptools
+five.customerize
+plone.browserlayer
+plone.portlets
+Products.CMFCore
+Zope
+
+[test]
+Products.GenericSetup
+plone.app.layout
+plone.app.testing
+plone.testing
