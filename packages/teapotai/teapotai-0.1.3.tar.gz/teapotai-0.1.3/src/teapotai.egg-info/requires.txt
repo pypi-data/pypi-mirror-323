@@ -1,0 +1,12 @@
+numpy
+pydantic
+regex
+scikit-learn
+tqdm
+transformers
+
+[dev]
+check-manifest
+
+[test]
+coverage
