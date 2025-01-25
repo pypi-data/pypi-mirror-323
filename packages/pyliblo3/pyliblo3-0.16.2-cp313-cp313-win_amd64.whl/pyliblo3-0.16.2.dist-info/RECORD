@@ -1,0 +1,12 @@
+pyliblo3/_liblo.cp313-win_amd64.pyd,sha256=wvUszKkJloZFhSttp-s41tZwAESieg_A2INFq0U_4zU,206848
+pyliblo3/_liblo.pyi,sha256=uTfL1uwoscMKm46Jk52mtuSh-v4XbqQhWxhf3fEt1b0,3584
+pyliblo3/__init__.py,sha256=CsKnTurBHUawyhWzaJDydR0UxVj1GSot5KT2jDG4asA,972
+pyliblo3-0.16.2.data/scripts/dump_osc.py,sha256=r_2ks80kawaZVs_upS4HZ4oVF9sUZFGDeHW23VAgSbo,2204
+pyliblo3-0.16.2.data/scripts/send_osc.py,sha256=iIJ6r6n37uykK3mP3jprUCT8go_u2Q06rPrPJkRMCcM,1831
+pyliblo3-0.16.2.dist-info/COPYING,sha256=MZ2u_jjr7q098Xjlk3iYpS1nwMeV9U8cC7EKw7nP-2M,26940
+pyliblo3-0.16.2.dist-info/DELVEWHEEL,sha256=7nMgUEeX6nOVZ5Awl6GMB3pmXFN8oScJJNIUIk5eThI,473
+pyliblo3-0.16.2.dist-info/METADATA,sha256=hWmjD18lIhpMc75qxbVlnByurNvuKe1mHtVZvCYOJMM,3242
+pyliblo3-0.16.2.dist-info/RECORD,,
+pyliblo3-0.16.2.dist-info/top_level.txt,sha256=1YXAnXd3QlTXjIZLrE_5RpE-YicaxiCnAT-KGPJbI5M,9
+pyliblo3-0.16.2.dist-info/WHEEL,sha256=6bXTkCllrWLYPW3gCPkeRA91N4604g9hqNhQqZWsUzQ,101
+pyliblo3.libs/liblo-7faba0ba4f628a50250f28c371ae3178.dll,sha256=UOaDBCJyJC52s9jOSrsP5IPVUG-57ZbObYcAJ1eRZa4,65536
