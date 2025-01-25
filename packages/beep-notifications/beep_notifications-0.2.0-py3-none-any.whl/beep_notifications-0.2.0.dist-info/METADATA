@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: beep_notifications
+Version: 0.2.0
+Summary: Email notifications are a thing of the past, send notifications to messengers
+Author: Daniel Baikalov
+Author-email: felix.trof@gmail.com
+Description-Content-Type: text/markdown
+
+# Beep
+
+This library will help you integrate notifications and authorization via Telegram through our Beep platform.
+
+## Preparation
+
+First, you must log into the developer panel on the official [Beep website](https://beepme.org/login) and create your
+project.
+
+After that, you must copy the ID of your project. It serves as a token, so be careful and keep it secret.
+
+## Library usage
+### Install
+Install this library using
+```sh
+pip install beep-notifications
+```
+
+### Connecting to the project
+Using your ``project_id`` create ``BeepNotify`` instance.
+```python
+from beep_notifications import BeepNotify
+
+beep = BeepNotify('some_project_id')
+```
+
+### Creating link code
+Use ``get_link_code()`` method to get link code for your project.
+```python
+link_code = beep.get_link_code()
+```
+
+### Checking link code status
+Use ``check_link_code(code)`` method to check link code status. It returns ``accepted``, ``beep_code``, ``username``.
+```python
+accepted, beep_code, username = beep.check_link_code("12345")
+```
+
+### Sending notifications
+Use ``send_notification(title, body, username)`` method to send notifications.
+
+Using username as receiver identification
+```python
+beep.send_notification("Hello", "I SAID HELLOOOOO", "spiritedRaisins6")
+```
+
+Using Beep code as receiver identification
+```python
+beep.send_notification("Hello", "I SAID HELLOOOOO", "665123731")
+```
+### Sending auth code
+Use ``send_auth_code(user_iden)`` method to send auth code to user, ``user_iden`` can be a username or a Beep code.
+```python
+beep.send_auth_code("spiritedRaisins6")
+```
+
+### Try to authorize user with auth code
+Use ``get_token(user_iden, auth_code)`` method to user authorization, ``user_iden`` can be a username or a Beep code.
+```python
+token = beep.get_token("spiritedRaisins6", "1234")
+```
+
+### Validate a token
+Use ``validate_token(token, uac)`` method to validate a token, ``uac`` is 'username_as_code', if uac is True, then return a username of the token owner, else Beep code.
+This method returns 3 values: ``validation_result``, ``user_iden`` and ``error``.
+```python
+res, user, errpr = beep.validate_token("some_token", uac=True)
+```
+
+## Contact me!
+
+[Beep Telegram Chat](https://t.me/beepme_org)<br>[X / Twitter](https://x.com/worldz_tech) <br> [Email felix.trof@gmail.com](mailto:felix.trof@gmail.com) <br> [Telegram](https://t.me/dbaykalov) <br>
