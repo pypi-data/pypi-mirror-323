@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+black **/*.py && \
+isort **/*.py && \
+flake8 **/*.py && \
+pylint **/*.py
