@@ -1,0 +1,8 @@
+clamav_client/__init__.py,sha256=rK2oY6tnj2XPNpYzqMuM_tQSTBGNkHgepaB-TJ5PuFM,166
+clamav_client/clamd.py,sha256=1HihTEq1v3dQMJ3vmMZV1hSLxicPzBK88E8L691JG4k,9509
+clamav_client/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clamav_client/scanner.py,sha256=se_yILB-ynSpwkmwfTSxBUhtefz5Oz8Z4qXxouBgVjw,8658
+clamav_client-0.6.3.dist-info/METADATA,sha256=F13qQr8Z99pjn5txobQKNtSofWw1XKTZXvOUzsWPeu4,1479
+clamav_client-0.6.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+clamav_client-0.6.3.dist-info/licenses/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+clamav_client-0.6.3.dist-info/RECORD,,
