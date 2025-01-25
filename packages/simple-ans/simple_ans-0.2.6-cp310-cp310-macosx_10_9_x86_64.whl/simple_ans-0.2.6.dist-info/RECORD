@@ -1,0 +1,14 @@
+simple_ans/EncodedSignal.py,sha256=x-wjN3X_Yv7b63fGfisjvw-aheYUDUd-AdrOUru3F3o,2742
+simple_ans/encode_decode.py,sha256=Wg6GiRk14CVRfGizgcvV4wAZWGrLecpkgq7xZ5EzfJY,6588
+simple_ans/__init__.py,sha256=VjBI-2QzZXHGXPcWsXUoPUodeOBemO3J1xs1L-bQm5E,295
+simple_ans/choose_symbol_counts.py,sha256=qXvUhNsuJkJk076i11h0WcgqommDcVU0EDsOIj6KbVo,2310
+simple_ans/cpp/simple_ans.cpp,sha256=-2xwS975ny2-d9TKl-WyJCvzADPgp6IfCLtsTaqYDIM,26
+simple_ans/cpp/simple_ans.hpp,sha256=kfQX6THRCKIhQ0dwlvFvM9I8Xr1j1F1-yph5zD3BhAw,10943
+simple_ans/pure_python/__init__.py,sha256=_ShiqTBgK7Vbbs8XH7RFV1goXX5rfjR6Ign1XyYkvts,105
+simple_ans/pure_python/py_encode_decode.py,sha256=0SSUM2uN90AGr_cSU3-u-LJ7as9MCaTEHo37FoO-yek,8526
+include/simple_ans/simple_ans.hpp,sha256=kfQX6THRCKIhQ0dwlvFvM9I8Xr1j1F1-yph5zD3BhAw,10943
+simple_ans-0.2.6.dist-info/RECORD,,
+simple_ans-0.2.6.dist-info/WHEEL,sha256=CQCn-Gg7FyA1vyNSzvE34YdeHxf8WzJQKMn4oS65uIg,115
+simple_ans-0.2.6.dist-info/METADATA,sha256=-8-ZnZGEZV0T8B5CWAAuqX3Q-hIaVLWx7Y--qy4Vu8k,4977
+simple_ans-0.2.6.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+lib/_simple_ans.cpython-310-darwin.so,sha256=U67KjQ5ituTJSfFxgpzbOzfUP2mwFyDjnCQ3KvNftWo,227736
