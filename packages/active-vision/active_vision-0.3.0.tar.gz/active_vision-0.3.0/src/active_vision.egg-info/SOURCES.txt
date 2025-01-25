@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/active_vision/__init__.py
+src/active_vision/core.py
+src/active_vision.egg-info/PKG-INFO
+src/active_vision.egg-info/SOURCES.txt
+src/active_vision.egg-info/dependency_links.txt
+src/active_vision.egg-info/requires.txt
+src/active_vision.egg-info/top_level.txt
