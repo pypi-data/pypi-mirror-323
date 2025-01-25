@@ -1,0 +1,25 @@
+asgiref==3.8.1
+certifi==2024.12.14
+cffi==1.17.1
+charset-normalizer==3.4.1
+cryptography==44.0.0
+Django==5.1.5
+djangorestframework==3.15.2
+flake8==7.1.1
+idna==3.10
+mccabe==0.7.0
+pycodestyle==2.12.1
+pycparser==2.22
+pyflakes==3.2.0
+PyJWT==2.10.1
+pyotp==2.9.0
+requests==2.32.3
+setuptools==75.8.0
+sqlparse==0.5.3
+tzdata==2025.1
+ua-parser==1.0.0
+ua-parser-builtins==0.18.0.post1
+urllib3==2.3.0
+user-agents==2.2.0
+-e git+https://github.com/Theetawee/WAANVERSE_MAILER.git@db7ba594b11f3abefe610db275187d4868ec7a0a#egg=waanverse_mailer
+wheel==0.45.1
