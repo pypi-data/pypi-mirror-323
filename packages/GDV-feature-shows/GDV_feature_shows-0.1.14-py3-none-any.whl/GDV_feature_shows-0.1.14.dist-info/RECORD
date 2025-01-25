@@ -1,0 +1,17 @@
+GDV_feature_shows/__init__.py,sha256=6nbPZgvlxkWpfPLBhv17ytsItSHMaAuCCBUWmUuxlM4,40
+GDV_feature_shows/api_client.py,sha256=mje27V90_FIbO75pRudlrl5H8nDP11KyN9KJmXZN8Yc,5003
+GDV_feature_shows/excel_forming_logic.py,sha256=HSzO7xxzZEBNiKR7iT8VNQHVUHL4_vLwESDH3mfd7o8,7272
+GDV_feature_shows/feature_extraction.py,sha256=wHLVfn0vC_EdSgq56pAXCq7xXn-PzQ5VtYqDAIhfVXE,31058
+GDV_feature_shows/interface_gradio.py,sha256=i5piJyM3HjJQUOSq-dAur2OG2d4xVK1c4QVFIdQLhZw,9263
+GDV_feature_shows/interface_tk.py,sha256=gqGGbcxarN0wwkVzq7LWsV3Ya7BRkajrRaTBwuF1Q80,9222
+GDV_feature_shows/main.py,sha256=tGMHUS4iiYT3yXItZ4yTDvoOy8yeyb2IlnzUHRjx5eI,2257
+GDV_feature_shows/name_volume.py,sha256=ZlZFUYm-leLJkCQ6DoAhf7wdX5QQ4dzxL33AWQlJtE0,4986
+GDV_feature_shows/parsing.py,sha256=_hrfXqtxWbGuIyBAxu2aciD_2ia44l1LvQppAqPyHHM,1558
+GDV_feature_shows/process.py,sha256=VimEy6LUwjxvYswVyVIMzjieNGsZkAJUNVZv2h--QOQ,19751
+GDV_feature_shows/resource_manager.py,sha256=ZfmLy1-n7YejnbjxTbHT-iHwqDYZYOvIVmTJosOur7w,566
+GDV_feature_shows/assets/ico.png,sha256=7cjxFsU8DhBVNRzLbYwwFZp8ljneuuMNWVe9GAGvEV4,247217
+GDV_feature_shows-0.1.14.dist-info/METADATA,sha256=j4nd8u8j5kjrDzNiwXv0Vsl4ica8W3QxyEiox5iLrok,634
+GDV_feature_shows-0.1.14.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+GDV_feature_shows-0.1.14.dist-info/entry_points.txt,sha256=ZHTcLssBBAloGR1ZyDXhPLZDsoHrCvioSMNs5RriZGA,66
+GDV_feature_shows-0.1.14.dist-info/top_level.txt,sha256=99NYYZHxO33CBCoNI0asfD2JfFSede96lWRrT6W2GiY,18
+GDV_feature_shows-0.1.14.dist-info/RECORD,,
