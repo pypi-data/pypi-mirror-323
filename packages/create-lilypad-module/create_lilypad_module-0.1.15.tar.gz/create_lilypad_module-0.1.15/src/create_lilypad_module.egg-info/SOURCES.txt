@@ -1,0 +1,8 @@
+pyproject.toml
+src/create_lilypad_module/__init__.py
+src/create_lilypad_module/scaffold.py
+src/create_lilypad_module.egg-info/PKG-INFO
+src/create_lilypad_module.egg-info/SOURCES.txt
+src/create_lilypad_module.egg-info/dependency_links.txt
+src/create_lilypad_module.egg-info/entry_points.txt
+src/create_lilypad_module.egg-info/top_level.txt
