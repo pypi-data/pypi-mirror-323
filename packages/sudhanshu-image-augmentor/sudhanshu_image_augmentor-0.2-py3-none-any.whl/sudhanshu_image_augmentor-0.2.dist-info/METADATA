@@ -1,0 +1,54 @@
+Metadata-Version: 2.2
+Name: sudhanshu_image_augmentor
+Version: 0.2
+Summary: A tool for augmenting images using various transformations.
+Home-page: https://github.com/sudhanshuskarn/sudhanshu_image_augmentor
+Author: Sudhanshu Shekhar Karn
+Author-email: sudhanshuskarn@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Multimedia :: Graphics
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow>=8.0.0
+Requires-Dist: pytest>=6.0.0
+Requires-Dist: psutil==6.1.1
+Requires-Dist: pluggy>=1.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Image Augmentor
+
+**Image Augmentor** is a Python tool that provides various image augmentation techniques to generate augmented images from a set of input images. It supports multiple augmentation types, including rotation, flipping, color adjustments, and more. This tool is useful for training machine learning models where diverse image data is required.
+
+## Features
+
+- Resize, rotate, and flip images.
+- Apply color, contrast, brightness, and sharpness adjustments.
+- Crop images randomly.
+- Support for various output formats (`jpg`, `png`, etc.).
+- CLI for easy integration into workflows.
+
+## Installation
+
+### Via PyPI
+
+To install the latest version from PyPI:
+
+```bash
+pip install sudhanshu-image-augmentor
+
