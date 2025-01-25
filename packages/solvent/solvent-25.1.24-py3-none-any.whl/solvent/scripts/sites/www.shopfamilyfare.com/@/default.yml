@@ -1,0 +1,62 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: click
+    name: contact_us
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: text
+        value: Contact Us
+        index: 0
+        uses: 2
+      - mode: text
+        value: Contact us
+        index: 0
+        uses: 0
+      - mode: text
+        value: contact us
+        index: 0
+        uses: 0
+      - mode: value
+        value: Contact Us
+        index: 0
+        uses: 0
+      - mode: value
+        value: Contact us
+        index: 0
+        uses: 0
+      - mode: value
+        value: contact us
+        index: 0
+        uses: 0
+      - mode: text (partial)
+        value: Contact Us
+        index: 0
+        uses: 0
+      - mode: text (partial)
+        value: Contact us
+        index: 0
+        uses: 0
+      - mode: text (partial)
+        value: contact us
+        index: 0
+        uses: 0
