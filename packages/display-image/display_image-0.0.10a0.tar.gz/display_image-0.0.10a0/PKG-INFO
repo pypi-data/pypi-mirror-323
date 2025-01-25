@@ -1,0 +1,55 @@
+Metadata-Version: 2.2
+Name: display-image
+Version: 0.0.10a0
+Summary: PyQt6 Gui App to display the wide range image formats (jpg, png, tif, dng, bmp, and RAWs), with displaying metadata and histogram.
+Author-email: Yuan SUN <sunyuan860510@gmail.com>
+Maintainer-email: Yuan SUN <sunyuan860510@gmail.com>
+License: MIT License
+Keywords: display ,image,view,display image,image viewer,raw viewer,display raw image
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: cxx-image-io>=1.0.10
+Requires-Dist: PyQt6>=6.6.0
+Requires-Dist: pyqtgraph>=0.13.4
+
+# Display Image
+
+Display image is a Python project which provides a command `display-image` to visualize the image and metadata by QtPy6.
+~~~~~~~~~~~~~~~{.shell}
+display-image -i <path_to_image>
+~~~~~~~~~~~~~~~
+![displaye-image GUI](https://github.com/sygslhy/display-image/blob/master/images/display-image-gui.png)
+
+
+| Image format  | Read | EXIF | Pixel precision        | Pixel type           | File extension                   |  Sidecar needed  |
+|---------------|------|------|------------------------|----------------------|----------------------------------|------------------|
+| BMP           | x    |      | 8 bits                 | Grayscale, RGB, RGBA | .bmp                             |                  |
+| CFA           | x    |      | 16 bits                | Bayer                | .cfa                             |                  |
+| DNG           | x    | x    | 16 bits                | Bayer, RGB           | .dng                             |                  |
+| JPEG          | x    | x    | 8 bits                 | Grayscale, RGB       | .jpg, .jpeg                      |                  |
+| MIPI RAW      | x    |      | 10 bits, 12 bits       | Bayer                | .RAWMIPI, .RAWMIPI10, .RAWMIPI12 | x                |
+| PLAIN RAW     | x    |      | *                      | *                    | .raw .plain16, *                 | x                |
+| PNG           | x    |      | 8 bits, 16 bits        | Grayscale, RGB, RGBA | .png                             |                  |
+| TIFF          | x    | x    | 8 bits, 16 bits        | Bayer, RGB           | .tif, .tiff                      |                  |
+
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/sygslhy/display-image/blob/master/LICENSE.md) file for details.
