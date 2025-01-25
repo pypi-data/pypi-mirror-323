@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: appsniffer
+Version: 1.0.0
+Summary: Интерактивный скрипт для поиска информации о приложениях в Google Play Market.
+Home-page: https://t.me/+VFiT6gd42ehhNzYy
+Author: Avinion
+Author-email: shizofrin@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google-play-scraper
+
+# AppSniffer
+
+AppSniffer is an interactive Python script for fetching information about apps from Google Play Market. 
+It allows you to check the app's version, last update date, and other useful details.
+
+## Installation
+
+1. Ensure you have Python 3.6 or higher installed.
+2. Install the script using pip:
+
+```bash
+pip install .
+```
+
+3. Run the script with the command:
+
+```bash
+appsniffer
+```
+
+## Usage
+
+- Enter the app name to get information.
+- Type `q` or `quit` to exit.
+- Type `clear` to clear the console.
+
+## Author
+
+- **Avinion**
+- Telegram: [@akrim](https://t.me/+VFiT6gd42ehhNzYy)
+- Email: shizofrin@gmail.com
+- Website: [https://yourwebsite.com](https://t.me/+VFiT6gd42ehhNzYy)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
