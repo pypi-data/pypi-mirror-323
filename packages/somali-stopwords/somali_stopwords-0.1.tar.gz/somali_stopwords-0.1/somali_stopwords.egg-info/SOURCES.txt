@@ -1,0 +1,7 @@
+setup.py
+somali_stopwords/__init__.py
+somali_stopwords/stopwords.py
+somali_stopwords.egg-info/PKG-INFO
+somali_stopwords.egg-info/SOURCES.txt
+somali_stopwords.egg-info/dependency_links.txt
+somali_stopwords.egg-info/top_level.txt
