@@ -1,0 +1,8 @@
+titans_pytorch/__init__.py,sha256=rMT99CPQFH4Gudp0FmVPWGKfhBf6xksGEaFEcOVdqjs,230
+titans_pytorch/associative_scan.py,sha256=Y-iYqmFuG-NoCKu6kgql1mhowXTeJfyawi3eUIXamp0,2650
+titans_pytorch/mac_transformer.py,sha256=KBwo-Fr_fDzVaAa7xg1ggEpNlE4vRUoGMEjB-I2ZWTU,26463
+titans_pytorch/neural_memory.py,sha256=wFOLFe3ViXiQfNvUiAGJ6BfiaDhr0BYDRDnLNMHWQhU,28938
+titans_pytorch-0.1.35.dist-info/METADATA,sha256=5e5qPt4hAOhxhDWqdjutjJuUmht44zYq_KqgagKjqxE,6826
+titans_pytorch-0.1.35.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+titans_pytorch-0.1.35.dist-info/licenses/LICENSE,sha256=1yCiA9b5nhslTavxPjsQAO-wpOnwJR9-l8LTVi7GJuk,1066
+titans_pytorch-0.1.35.dist-info/RECORD,,
