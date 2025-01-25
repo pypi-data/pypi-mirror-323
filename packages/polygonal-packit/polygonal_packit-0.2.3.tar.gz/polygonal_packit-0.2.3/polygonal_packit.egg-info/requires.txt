@@ -1,0 +1,7 @@
+numpy
+torch
+tqdm
+huggingface_hub
+tensorflow
+coloredlogs
+easyAI
