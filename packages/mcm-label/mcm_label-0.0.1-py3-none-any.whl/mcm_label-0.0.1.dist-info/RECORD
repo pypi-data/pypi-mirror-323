@@ -1,0 +1,11 @@
+mcm_label/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcm_label/cli.py,sha256=6RhWfq2DjjmEf_hODDTtRe9YtlzghLPSLQ9y3PECEOk,2190
+mcm_label/default_print_template.html,sha256=EDTTUMVFGXoGvdsS5vUqYv6n0mIk-hvdu1ENhaxNv4E,305
+mcm_label/default_style.css,sha256=ZrkpClU5NNr0ljkd2_m8JRhKguSyTbpeRvHq-XvP74o,976
+mcm_label/default_template.html,sha256=73bdzkO5xncTEHC2IX3counmWPHRs1seSThobV4KMTA,416
+mcm_label/mcm_label.py,sha256=7XAQ0FQ6dSXimP1VZZ-yYX8bpMcZDOn1qL_CoKlJgJU,5013
+mcm_label-0.0.1.dist-info/METADATA,sha256=wFhLX5lEpWM2Kgs9-K9m4nVeY33F0OwtlGHCaO0snL0,1929
+mcm_label-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcm_label-0.0.1.dist-info/entry_points.txt,sha256=NZvGvNrPHGAZDqK6Aid_KTzXLoQRRT4HgSwWqZU4DGw,49
+mcm_label-0.0.1.dist-info/licenses/LICENSE,sha256=U2zUwdIN8xeJkuoHwayT59FD8Q_9cf89tiqJrFSXRhg,1072
+mcm_label-0.0.1.dist-info/RECORD,,

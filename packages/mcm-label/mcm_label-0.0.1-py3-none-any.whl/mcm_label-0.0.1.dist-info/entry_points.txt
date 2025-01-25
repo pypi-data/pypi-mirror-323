@@ -1,0 +1,2 @@
+[console_scripts]
+mcm-label = mcm_label.cli:main
