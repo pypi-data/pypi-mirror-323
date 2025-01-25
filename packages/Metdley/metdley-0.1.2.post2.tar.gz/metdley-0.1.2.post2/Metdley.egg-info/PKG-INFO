@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: Metdley
+Version: 0.1.2.post2
+Summary: A Python client for the Metdley API
+Home-page: https://metdley.com
+Author: Metdley
+Author-email: contact@metdley.com
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
