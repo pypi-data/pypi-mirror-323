@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: kakao-chatbot
+Version: 0.2.2
+Summary: Effortlessly build KakaoTalk chatbots with Python objects - say goodbye to complex JSON and hello to streamlined development.
+Author: Han Lee
+Author-email: hanlee@indiemaker.kr
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+
