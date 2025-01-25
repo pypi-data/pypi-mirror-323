@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: aigauntlet
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.10.5
+Requires-Dist: requests>=2.32.3
+Requires-Dist: types-requests>=2.32.0.20241016
+
+# AIGauntlet
+A pip-installable library to locally run a gauntlet test on your AI agent or system.
