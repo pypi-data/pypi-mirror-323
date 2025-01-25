@@ -1,0 +1,14 @@
+egse/coordinates/__init__.py,sha256=FmqTMtFRhAe7INUFi8RxeT2DgDpYll9cfU73OuijBmc,17171
+egse/coordinates/avoidance.py,sha256=9qbGgVZLSIF2tQ5dMDBlLl0wBW3NAOBl_XchC1_t0Xw,3903
+egse/coordinates/cslmodel.py,sha256=Z5KZP9yWmhkp4ZhMfv9fRaZ6zJo5CIazNloBxMW3U1k,4487
+egse/coordinates/laser_tracker_to_dict.py,sha256=8Mav2No5pwWdMIlpwtPM5wUjD3qqiXXd76chHj4JxfM,3453
+egse/coordinates/point.py,sha256=4hyg2-qH5vDi_Co6ohhvUx7pGazvl5EfA9BuAFBE-I8,25131
+egse/coordinates/pyplot.py,sha256=QeLxJKlJDJTkZEIq27rgWj_AyZrdlASWLkoKoJGBMsg,6214
+egse/coordinates/referenceFrame.py,sha256=InJ8iH2v7jlHHiELa9YnFQgf6UV68oye7ynF-XrLhBg,49726
+egse/coordinates/refmodel.py,sha256=SMdFL1xShToMDN0yKsEtjU-na3mHrPyUapWih2W6fsQ,24014
+egse/coordinates/rotationMatrix.py,sha256=0y2XwliE9tdCkxZAUSOIWNdq_rb6O6lojmCSTeSAkZQ,3012
+egse/coordinates/transform3d_addon.py,sha256=_1-LwzdEh_LBVA1qGwco3NJVd_Hm81IHZPQXVncaCIA,15394
+cgse_coordinates-2025.0.5.dist-info/METADATA,sha256=z8VhPLSsUbDrrTbClrHY4nyhS5250esIB5vNr5XQyyk,733
+cgse_coordinates-2025.0.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cgse_coordinates-2025.0.5.dist-info/entry_points.txt,sha256=fIrWeaRjA8qVGo4SgirTqW105906ilhJWE3M8wYg07U,32
+cgse_coordinates-2025.0.5.dist-info/RECORD,,
