@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+disk_cached/__init__.py
+disk_cached/cache_manager.py
+disk_cached.egg-info/PKG-INFO
+disk_cached.egg-info/SOURCES.txt
+disk_cached.egg-info/dependency_links.txt
+disk_cached.egg-info/requires.txt
+disk_cached.egg-info/top_level.txt
+tests/test_cache_manager.py
