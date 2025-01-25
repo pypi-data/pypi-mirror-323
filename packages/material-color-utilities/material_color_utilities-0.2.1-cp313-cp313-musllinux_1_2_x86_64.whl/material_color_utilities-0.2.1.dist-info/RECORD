@@ -1,0 +1,11 @@
+material_color_utilities-0.2.1.dist-info/WHEEL,sha256=j-COG96g3Xk_uGsWxU634VWY0OAM7I-jZCJn2aPFtus,117
+material_color_utilities-0.2.1.dist-info/RECORD,,
+material_color_utilities-0.2.1.dist-info/METADATA,sha256=vBY8FM8-Z3raXKJr_tg0lunKexiJi5OJtRUDHr6gggg,16855
+material_color_utilities-0.2.1.dist-info/licenses/LICENSE,sha256=zrDroKEDnofjAgMZwEQRqK6ehSMwhTMXI9v-EWXqNVI,10947
+material_color_utilities/image_utils.py,sha256=SRZr8_uClD90payaEGOBChoRcdPXW1xksjpY2JbOqxA,3343
+material_color_utilities/_core.py,sha256=AvVltjlR3TLeFBnQelgrbztQYcWdZCpCRNxceen5YKs,10804
+material_color_utilities/_core.cpython-313-x86_64-linux-musl.so,sha256=ptISKOQeZVc4vAXo1QMKfMnCD2b9M-49lgRO76rrB5o,796033
+material_color_utilities/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+material_color_utilities/__init__.py,sha256=eHI9riGpt_t9ftrdzLBy2lhWtWDbcuTeyi06Fx4BMlo,867
+material_color_utilities.libs/libgcc_s-a0b57c20.so.1,sha256=XPAr2giQZFaQKDEig3i_sQM7zfbaGkuhwmZ9ryvu-Vk,148041
+material_color_utilities.libs/libstdc++-0d31ccbe.so.6.0.32,sha256=QyUTnI2umnGgPmNJ-6F_BVIAJnq6-70cNoEWpma6EFQ,3494521
