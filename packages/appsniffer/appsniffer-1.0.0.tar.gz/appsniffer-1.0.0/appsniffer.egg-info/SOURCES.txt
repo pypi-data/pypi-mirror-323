@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+appsniffer/__init__.py
+appsniffer/main.py
+appsniffer.egg-info/PKG-INFO
+appsniffer.egg-info/SOURCES.txt
+appsniffer.egg-info/dependency_links.txt
+appsniffer.egg-info/entry_points.txt
+appsniffer.egg-info/requires.txt
+appsniffer.egg-info/top_level.txt
