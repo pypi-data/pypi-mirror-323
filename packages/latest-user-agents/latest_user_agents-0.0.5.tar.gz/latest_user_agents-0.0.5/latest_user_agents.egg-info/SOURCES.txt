@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+latest_user_agents/__init__.py
+latest_user_agents.egg-info/PKG-INFO
+latest_user_agents.egg-info/SOURCES.txt
+latest_user_agents.egg-info/dependency_links.txt
+latest_user_agents.egg-info/requires.txt
+latest_user_agents.egg-info/top_level.txt
+tests/test_main.py
