@@ -1,0 +1,26 @@
+Metadata-Version: 2.3
+Name: simplepushoverclient
+Version: 0.1.0
+Summary: A simple python client for sending pushover messages.
+License: MIT
+Author: Benedikt Limbacher
+Requires-Python: >=3.13,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# SimplePushoverClient
+A simple client for the Pushover notification service.
+
+## Usage
+
+```
+from SimplePushoverClient.pushover import PushoverClient
+
+if __name__ == "__main__":
+    client = PushoverClient(token="my_token")
+    client.send(user="my_user", message="my_msg", device="device", title="title")
+```
