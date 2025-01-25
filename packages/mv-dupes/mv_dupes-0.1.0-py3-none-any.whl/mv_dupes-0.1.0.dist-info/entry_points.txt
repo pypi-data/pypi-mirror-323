@@ -1,0 +1,3 @@
+[console_scripts]
+mv-dupes = mv_dupes.main:main
+mv_dupes = mv_dupes.main:main
