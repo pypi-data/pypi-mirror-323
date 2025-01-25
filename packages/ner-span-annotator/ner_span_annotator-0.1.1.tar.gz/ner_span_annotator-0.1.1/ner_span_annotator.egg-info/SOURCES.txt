@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ner_span_annotator/__init__.py
+ner_span_annotator/example.py
+ner_span_annotator.egg-info/PKG-INFO
+ner_span_annotator.egg-info/SOURCES.txt
+ner_span_annotator.egg-info/dependency_links.txt
+ner_span_annotator.egg-info/requires.txt
+ner_span_annotator.egg-info/top_level.txt
+ner_span_annotator/frontend/build/asset-manifest.json
+ner_span_annotator/frontend/build/bootstrap.min.css
+ner_span_annotator/frontend/build/index.html
+ner_span_annotator/frontend/build/static/js/main.b066f690.js
+ner_span_annotator/frontend/build/static/js/main.b066f690.js.LICENSE.txt
+ner_span_annotator/frontend/build/static/js/main.b066f690.js.map

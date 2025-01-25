@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: ner-span-annotator
+Version: 0.1.1
+Summary: Streamlit component that allows you to visualize and modify NER annotations
+Home-page: 
+Author: Dmitry Yemelyanov
+Author-email: dmitry@forwardit.ai
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit>=0.63
+Provides-Extra: devel
+Requires-Dist: wheel; extra == "devel"
+Requires-Dist: pytest==7.4.0; extra == "devel"
+Requires-Dist: playwright==1.48.0; extra == "devel"
+Requires-Dist: requests==2.31.0; extra == "devel"
+Requires-Dist: pytest-playwright-snapshot==1.0; extra == "devel"
+Requires-Dist: pytest-rerunfailures==12.0; extra == "devel"
+
+# ner-span-annotator
+
+Streamlit component that allows you to visualize and modify NER annotations
+
+## Installation instructions
+
+```sh
+pip install ner_span_annotator
+```
+
+## Usage instructions
+
+```python
+import streamlit as st
+
+from ner_span_annotator import ner_span_annotator
+
+spans = [
+    {"start_token": 3, "end_token": 6, "label": "ORG"},
+    {"start_token": 5, "end_token": 6, "label": "GPE"},
+]
+tokens = ["Welcome", "to", "the", "Bank", "of", "China", "."]
+
+result = ner_span_annotator(tokens=tokens, spans=spans, labels=["ORG", "GPE"])
+
+st.json(result)
+```
