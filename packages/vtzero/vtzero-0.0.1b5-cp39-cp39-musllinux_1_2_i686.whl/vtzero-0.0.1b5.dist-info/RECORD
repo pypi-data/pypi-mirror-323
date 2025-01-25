@@ -1,0 +1,12 @@
+vtzero-0.0.1b5.dist-info/WHEEL,sha256=p9BaE8XS5HpBleOS1Y1Pc6Mt55o9d_aerVHuSGDVQ1I,108
+vtzero-0.0.1b5.dist-info/RECORD,,
+vtzero-0.0.1b5.dist-info/top_level.txt,sha256=d6G1eguAqPsZCiv8Vb2o-W7fUlnN7ecv1FrCv199898,7
+vtzero-0.0.1b5.dist-info/METADATA,sha256=1Tnuit2kdke7VVPJHanEi3eDvSEVERPMccy5FbTAcIg,2254
+vtzero.libs/libstdc++-0530927c.so.6.0.32,sha256=h2p2et0WB0CYcMcUEViWjYXOe8uir-_tHJJZui-6GRc,3537509
+vtzero.libs/libgcc_s-1257a076.so.1,sha256=wbXWo2Qh33OuE7spB8-mVbZoEiUkvZu6ZH78pUNr9X8,168321
+vtzero/tile.pyx,sha256=4M8hH1vBm-08w5CiF1pakOPmGR63oPJbcrDS4F9GNjI,4692
+vtzero/tile.cpython-39-i386-linux-gnu.so,sha256=eZemiPNYe2RcP8MwkAYWnXRILkVGpbwZlg37Mhzb_yM,1279229
+vtzero/cvtzero.pxd,sha256=VfJuhZfI0A_8HDmSSACjBt3CN6E1s4qoFC5SkJg6VTA,3632
+vtzero/tile.cpp,sha256=T5Dn1vHzyWm_2EHEKcAzgDjIHgugeIqUTwGIbzvkukE,725180
+vtzero/__init__.py,sha256=b_w8eh8_JbIaQcDyKhQBFtfQEaSbrd88nZDzwbVVhDQ,68
+vtzero/version.py,sha256=qvGXKuwnHw5ZeW8ApL9p_v4mbUrYQNjw3nafHcL5_gE,47
