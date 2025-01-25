@@ -1,0 +1,11 @@
+__pycache__/
+dist/
+*.egg-info
+.vscode/
+.env
+*.ipynb
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
