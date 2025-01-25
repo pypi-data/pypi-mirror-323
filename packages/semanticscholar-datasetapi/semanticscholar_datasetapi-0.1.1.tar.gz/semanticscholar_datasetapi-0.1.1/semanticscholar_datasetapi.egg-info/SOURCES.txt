@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+semanticscholar_datasetapi/__init__.py
+semanticscholar_datasetapi/api.py
+semanticscholar_datasetapi.egg-info/PKG-INFO
+semanticscholar_datasetapi.egg-info/SOURCES.txt
+semanticscholar_datasetapi.egg-info/dependency_links.txt
+semanticscholar_datasetapi.egg-info/requires.txt
+semanticscholar_datasetapi.egg-info/top_level.txt
