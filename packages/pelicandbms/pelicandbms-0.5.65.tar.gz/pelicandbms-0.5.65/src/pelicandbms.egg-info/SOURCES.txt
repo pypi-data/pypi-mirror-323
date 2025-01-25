@@ -1,0 +1,14 @@
+LICENSE
+README.RST
+README.rst
+pyproject.toml
+src/__init__.py
+src/ini.py
+src/pelicandb.py
+src/samples_pelican.py
+src/samples_pelican_ru.py
+src/pelicandbms.egg-info/PKG-INFO
+src/pelicandbms.egg-info/SOURCES.txt
+src/pelicandbms.egg-info/dependency_links.txt
+src/pelicandbms.egg-info/requires.txt
+src/pelicandbms.egg-info/top_level.txt
