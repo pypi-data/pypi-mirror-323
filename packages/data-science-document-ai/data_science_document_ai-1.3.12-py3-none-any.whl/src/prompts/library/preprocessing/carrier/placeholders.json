@@ -1,0 +1,20 @@
+{
+  "bookingConfirmation": {
+    "type": "string",
+    "enum": [
+      "Hapag-Lloyd",
+      "MsC",
+      "Maersk",
+      "YangMing",
+      "Evergreen",
+      "Other"
+    ]
+  },
+  "finalMbL": {
+    "type": "string",
+    "enum": [
+      "Hapag-Lloyd",
+      "Other"
+    ]
+  }
+}
