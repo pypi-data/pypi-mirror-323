@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: pakj
+Version: 0.0.1
+Summary: pakj Python Package
+Project-URL: homepage, https://github.com/patrikkj/pakj
+Project-URL: repository, https://github.com/patrikkj/pakj
+Author-email: Patrik Kjaerran <patrikkja@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# ...
+
+...
