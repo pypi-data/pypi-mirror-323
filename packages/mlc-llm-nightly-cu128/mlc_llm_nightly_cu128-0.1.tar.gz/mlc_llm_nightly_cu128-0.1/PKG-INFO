@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: mlc-llm-nightly-cu128
+Version: 0.1
+Summary: Machine learning for systems
+Home-page: https://github.com/mlc-llm
+Author: mlc-ai
+Author-email: ruihang.lai@gmail.com
+License: Apache-2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary
