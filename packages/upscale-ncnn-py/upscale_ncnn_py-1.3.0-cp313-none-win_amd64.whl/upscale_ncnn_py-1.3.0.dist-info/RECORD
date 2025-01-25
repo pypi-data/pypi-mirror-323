@@ -1,0 +1,9 @@
+upscale_ncnn_py-1.3.0.dist-info/METADATA,sha256=D2dROG-IMPtaMzpqee9q2evveuXl5sikT7uSZi3h2uE,10753
+upscale_ncnn_py-1.3.0.dist-info/WHEEL,sha256=1Oc8qLqZ3a3_GOCbVqvgeSfkLxNO8Pdeom1AR-7J_UM,98
+upscale_ncnn_py-1.3.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+upscale_ncnn_py-1.3.0.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+upscale_ncnn_py/__init__.py,sha256=PHrIGKp5MnGPudq1i7_DBHwtP2TBN_wo6HquzsWFc8E,82
+upscale_ncnn_py/upscale_ncnn_vulkan.py,sha256=Hfr0cmKN1Nkj2hdfXNNkm3k1uRe89xEdm183ids7DbM,10230
+upscale_ncnn_py/upscale_ncnn_vulkan_wrapper.cp313-win_amd64.pyd,sha256=xE34_YylG1vDcn0BzURzE6RTiSNR_8uQnDppJnAkM58,5752320
+upscale_ncnn_py/vcomp140.dll,sha256=JDTS4F0b-aMnzge-PPEgGUu_GJNsJyDuCrDgiB-joAQ,192080
+upscale_ncnn_py-1.3.0.dist-info/RECORD,,
