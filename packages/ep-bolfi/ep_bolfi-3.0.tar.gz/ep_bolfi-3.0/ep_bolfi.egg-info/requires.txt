@@ -1,0 +1,14 @@
+elfi
+h5py
+kadi-apy
+matplotlib
+numpy
+pyarrow
+pybamm
+scikit-learn
+pyimpspec
+scipy
+sympy
+tabulate
+xmlhelpy
+wheel
