@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+../README.md
+autobex/__init__.py
+autobex/excluded_tags.txt
+autobex/osm_search_plus.py
+autobex/tags.txt
+autobex.egg-info/PKG-INFO
+autobex.egg-info/SOURCES.txt
+autobex.egg-info/dependency_links.txt
+autobex.egg-info/requires.txt
+autobex.egg-info/top_level.txt
