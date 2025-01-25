@@ -1,0 +1,17 @@
+dircontextgen/__init__.py,sha256=xo8IFw30J9q_yXP6ulA8OZldmREQz_-J5Iiasr7ruag,328
+dircontextgen/cli.py,sha256=xpiDdbcQKztEDsiFRqLmmZQjF6FYfzWqAJ_nWgVr2TI,3286
+dircontextgen/core.py,sha256=D0bCDd00t_zu8DM8wD53LnzFzcv5420rKOTErFbWmb8,6480
+dircontextgen/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dircontextgen/utils/file_handling.py,sha256=kYUlIVo-SoJkq1fQ151WEsXjvQAr7c-lhGic1JCWXg0,4559
+dircontextgen/utils/ignore_patterns.py,sha256=TOCltGk4ZSd4je4zYv-7EWaqwHkK9AaMAI3aknppvbA,3694
+dircontextgen/utils/tree_generation.py,sha256=3oEg9FqQqUV0P4apZTYMMoSYXS5-PN54b-Bcpzxz2yo,3671
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=_Btve74w1ZOJivwcI-Ur4LJfBANUMwV3FzOJ98A_hCo,1038
+tests/test_core.py,sha256=E8GI6KLTA15Y4IzlLHq0Ih5ZRs7RWHAQm07SWm52XSI,5877
+tests/test_utils.py,sha256=42xV3ZJ4gnThBLaMQtCxx9QJpYK61_8K9_jePxzJdOw,3990
+dircontextgen-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dircontextgen-0.1.0.dist-info/METADATA,sha256=WFmvlbiBLygVsLaU-qT6orV0MOT6Fh0MSy07-Nw76y4,2802
+dircontextgen-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+dircontextgen-0.1.0.dist-info/entry_points.txt,sha256=JdA2KZk7oxD5RPDdd2JisVvN2y0MHXdJhjcUltSVeCs,57
+dircontextgen-0.1.0.dist-info/top_level.txt,sha256=_xOBP6vfsMjoeCvoRqOKE4AfKORfUwAnEYm8ho-sFrk,20
+dircontextgen-0.1.0.dist-info/RECORD,,
