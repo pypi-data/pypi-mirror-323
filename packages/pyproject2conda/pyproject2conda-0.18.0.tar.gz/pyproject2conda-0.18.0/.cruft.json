@@ -1,0 +1,26 @@
+{
+  "template": "https://github.com/usnistgov/cookiecutter-nist-python.git",
+  "commit": "97f9ecc1229823fe6a0e8a4750432d7ec4e2efc2",
+  "checkout": "develop",
+  "context": {
+    "cookiecutter": {
+      "project_name": "pyproject2conda",
+      "project_slug": "pyproject2conda",
+      "project_short_description": "A script to convert a Python project declared on a pyproject.toml to a conda environment.",
+      "full_name": "William P. Krekelberg",
+      "email": "wpk@nist.gov",
+      "github_username": "usnistgov",
+      "pypi_username": "conda-forge",
+      "conda_channel": "wpk-nist",
+      "command_line_interface": "typer",
+      "sphinx_use_autodocsumm": true,
+      "sphinx_theme": "sphinx_book_theme",
+      "year": "2023",
+      "__answers": "",
+      "_copy_without_render": [],
+      "_template": "https://github.com/usnistgov/cookiecutter-nist-python.git",
+      "_commit": "97f9ecc1229823fe6a0e8a4750432d7ec4e2efc2"
+    }
+  },
+  "directory": null
+}
