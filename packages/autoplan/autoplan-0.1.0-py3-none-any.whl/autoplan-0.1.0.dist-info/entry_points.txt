@@ -1,0 +1,3 @@
+[console_scripts]
+autoplan=autoplan.cli:cli
+
