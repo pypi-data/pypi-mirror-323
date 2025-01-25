@@ -1,0 +1,6 @@
+playwright==1.42.0
+
+[test]
+pytest-playwright==0.4.4
+playwright==1.42.0
+pytest-asyncio
