@@ -1,0 +1,43 @@
+# Proyecto: Aplicación Hotel
+
+## Descripción
+
+Esta aplicación de escritorio está desarrollada utilizando **PyQt6** para la interfaz gráfica de usuario (GUI) y **SQLite** como sistema gestor de bases de datos. Además, incluye recursos visuales como imágenes para enriquecer la experiencia del usuario.
+
+## Requisitos previos
+
+- Tener instalado **Python 3.6** o superior.
+- Instalar las librerías necesarias listadas en el archivo `requirements.txt`.
+
+## Estructura del proyecto
+
+```plaintext
+Reserva/
+├── _build/html                 # Documentación de la APP
+│   └──                     
+├── img/                       # Recursos de imágenes del proyecto
+│   └──                     
+├── databases/                # Base de datos
+│   ├── __init__.py              # Archivo para definir el paquete
+│   ├── reservas_logica.py       # Módulo que gestiona la interacción de la base de datos
+│   ├── reservas.db             # Base de datos SQLite
+├── src/                       # Controladores
+│   ├── __init__.py              # Archivo para definir el paquete principal
+│   ├── Appmain.py              # Punto de entrada principal de la aplicación
+│   ├── Menu_logic.py           # Implementa la lógica de la interfaz Menu
+│   ├── MostraReserva_logic.py  # Implementa la lógica de MostrarReserva
+│   ├── Reserva_logic.py        # Implementa la lógica de Reserva
+│   ├── Validacion.py           # Módulo que se encarga de la validación del formulario
+├── ui/                        # Código generado en QtDesigner y convertido a Python
+│   ├── Menu.py                 # Código convertido de Menu.ui
+│   ├── Menu.ui                 # Diseño generado en QtDesigner
+│   ├── MostrarReserva.py       # Código convertido de MostrarReserva.ui
+│   ├── MostrarReserva.ui       # Diseño generado en QtDesigner
+│   ├── Reserva.py              # Código convertido de Reserva.ui
+│   ├── Reserva.ui              # Diseño generado en QtDesigner
+├── setup.py                    # Configuración del paquete para instalación
+├── requirements.txt            # Dependencias necesarias para ejecutar el proyecto
+└── README.md                   # Información general del proyecto
+
+Autor:
+Navil Lugo Taveras
