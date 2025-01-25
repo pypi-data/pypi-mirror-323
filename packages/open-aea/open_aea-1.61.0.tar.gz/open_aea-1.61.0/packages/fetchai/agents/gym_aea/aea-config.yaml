@@ -1,0 +1,33 @@
+agent_name: gym_aea
+author: fetchai
+version: 0.25.0
+description: The gym aea demos the interaction between a skill containing a RL agent
+  and a gym connection.
+license: Apache-2.0
+aea_version: '>=1.0.0, <2.0.0'
+fingerprint:
+  README.md: bafybeiadln5ca6tu6rzbsgjpeluf6nz5efxl3u223c3vxwgf2iynkj5n6q
+fingerprint_ignore_patterns: []
+connections:
+- fetchai/gym:0.19.0:bafybeicpzcp2otfv4p3bvz44n2wurpsqddlwyc6mnuwbhimidjqvttw27y
+contracts: []
+protocols:
+- fetchai/default:1.0.0:bafybeiaf3qhrdttthrisrl2tlpt3mpo5btkozw2dnxlj4cbqq56ilcl6oa
+- fetchai/gym:1.0.0:bafybeigja2j7wefnunb44w3g6m5kscayeoym2etx5gddkzjjsjfefioffi
+- fetchai/state_update:1.0.0:bafybeig66he5ndtkb3j7z3woy3dtdvpwmbz3z4omlv6q6eih6r7kceq55e
+- open_aea/signing:1.0.0:bafybeig2d36zxy65vd7fwhs7scotuktydcarm74aprmrb5nioiymr3yixm
+skills:
+- fetchai/gym:0.20.0:bafybeih27hdrpzjz2fp5u2n7mgyrqqk3cyuempiixn6ptkkztvld7d4jhe
+default_connection: fetchai/gym:0.19.0
+default_ledger: fetchai
+required_ledgers:
+- fetchai
+logging_config:
+  disable_existing_loggers: false
+  version: 1
+private_key_paths: {}
+default_routing: {}
+connection_private_key_paths: {}
+dependencies:
+  open-aea-ledger-fetchai:
+    version: <2.0.0,>=1.0.0
