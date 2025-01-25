@@ -1,0 +1,12 @@
+LICENCE.txt
+MANIFEST.in
+README.txt
+requirements.txt
+setup.py
+players_ftbl12.egg-info/PKG-INFO
+players_ftbl12.egg-info/SOURCES.txt
+players_ftbl12.egg-info/dependency_links.txt
+players_ftbl12.egg-info/requires.txt
+players_ftbl12.egg-info/top_level.txt
+players_yach/__init__.py
+players_yach/scraper.py
