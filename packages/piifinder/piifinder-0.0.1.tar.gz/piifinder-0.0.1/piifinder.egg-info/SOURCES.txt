@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+piifinder/__init__.py
+piifinder/cli.py
+piifinder/scanner.py
+piifinder.egg-info/PKG-INFO
+piifinder.egg-info/SOURCES.txt
+piifinder.egg-info/dependency_links.txt
+piifinder.egg-info/entry_points.txt
+piifinder.egg-info/requires.txt
+piifinder.egg-info/top_level.txt

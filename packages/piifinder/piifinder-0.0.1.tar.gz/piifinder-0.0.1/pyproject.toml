@@ -1,0 +1,29 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "twine"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "piifinder"
+version = "0.0.1"
+description = "A CLI tool to detect PII in your code."
+authors = [
+  { name = "Your Name", email = "your.email@example.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+  "microsoft-presidio>=2.0.0"  # Adjust version as needed
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+# This section defines console script entry points,
+# so installing the package provides a 'piifinder' command.
+[project.scripts]
+piifinder = "piifinder.cli:main"
