@@ -1,0 +1,15 @@
+coderdata/__init__.py,sha256=GJUNjYPvQ_R10UniFoX6mp0tHHLPLqULbZA2XlP_uEw,282
+coderdata/_version.py,sha256=o9XMlNC6GoiUn7mwoOOgJdijgp3B_2fLdgizcKs1i2o,411
+coderdata/cli.py,sha256=JedzxsgvX3TYJeMaDfn4_gT3mbOnq0qMNlYjW9z2SIc,5741
+coderdata/dataset.yml,sha256=izKqC13ZBUWHM7Su6J34YQLti2ER6moHYDVlwHyBgRY,6559
+coderdata/dataset/__init__.py,sha256=YhK43XGzjn8Boojn0RsRynM2yoxKJO7ElAjX2QPV3sA,123
+coderdata/dataset/dataset.py,sha256=XWl1znOLOAMOh4uRWSwgWpBXjXd8X0jZrs40x3BxDbI,38105
+coderdata/download/__init__.py,sha256=tzDuw_PH0IhTY7AmCe-a9JmnBjX1RVqnqJwMLwRO0aI,34
+coderdata/download/downloader.py,sha256=Gzdlx4vAo9Am9foLfHFsE_FvnKjeKDJYOCs-wmsF7jI,3324
+coderdata/utils/__init__.py,sha256=ugPxH6bMfkMKV-2copQA9Y9qvPaXaoGe2Q8KbhhES80,59
+coderdata/utils/utils.py,sha256=dtEW0t-MnVNTYqU783Ko0yb4qMxSZ4RYwecYuNXeVVU,1833
+coderdata-2.0.0.dist-info/METADATA,sha256=DxXzWf0blQZViyUvxOUDd1nMKXPbK02yN7J4McU8EFc,5768
+coderdata-2.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+coderdata-2.0.0.dist-info/entry_points.txt,sha256=msnORXvZZrndGxok8Zwpt3nYhL-vOjcWrDVL1CAnWXE,49
+coderdata-2.0.0.dist-info/licenses/LICENSE,sha256=95zxaTF42gEMd24pe4Pr1ZBpxlmh42zPlmQDKkKnagM,2620
+coderdata-2.0.0.dist-info/RECORD,,
