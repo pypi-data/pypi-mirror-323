@@ -1,0 +1,13 @@
+mediqaws/clients/__init__.py,sha256=R_AbyoYLV9QJIU8dxEVjXsU57s9x7v5d4zycFUgAEfA,148
+mediqaws/clients/abc.py,sha256=a6yjnfEU8ji5EXoQ1jmM_4mDurX6e_fOcADhoZVEdas,721
+mediqaws/clients/kms.py,sha256=i-y2RJu06CWSkLgPSptUaM73owDr4eXscAUO9o_ITRU,400
+mediqaws/clients/s3.py,sha256=eBacchbLkVjqt4y61a-4dIz5yE1n5C3p_W5pKEr8tG4,3924
+mediqaws/clients/ses.py,sha256=2F53DZvSKSfGPeGJ0Bgo2ZuPRnr4F30bQALHxXBtm24,423
+mediqaws/clients/sns.py,sha256=PstnYpuepvo5ANvfypBTQwAHUe-iGC7lofAm4O_GHBo,1039
+mediqaws/clients/sqs.py,sha256=8w-4pxU7czqUdTNp66-JK3O5L4_7FXLpUxCQXwkqwaI,3095
+mediqaws/secrets_manager/__init__.py,sha256=PhLz9ddLDY3RvmCP9Imq7DYvPJeMMElzx_CN6gFss3g,1150
+mediqaws-0.0.6.dist-info/LICENSE,sha256=Dte7vpJ_9_zYtuZZCdHy2VsrrLi7qCOuayh1qAgN4j4,1497
+mediqaws-0.0.6.dist-info/METADATA,sha256=UMywVdAtgNJcC_0geI-hEhVwKJ-mKZsayoGhnUjSGr4,1501
+mediqaws-0.0.6.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+mediqaws-0.0.6.dist-info/top_level.txt,sha256=U5nqLDw5TbScmOlxD_GH4KoY77G1eb2OUoGrNILG-GM,9
+mediqaws-0.0.6.dist-info/RECORD,,
