@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: SecretsProvider
+Version: 1.0.0
+Summary: A package to handle secrets in Python using environment variables
+Project-URL: Homepage, https://github.com/NaaVRE/SecretsProvider.git
+Author-email: Koen Greuell <koen.greuell@lifewatch.eu>
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
