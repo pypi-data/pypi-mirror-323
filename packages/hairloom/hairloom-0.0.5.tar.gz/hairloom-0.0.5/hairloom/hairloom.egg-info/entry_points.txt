@@ -1,0 +1,2 @@
+[console_scripts]
+hairloom = hairloom.cli:cli
