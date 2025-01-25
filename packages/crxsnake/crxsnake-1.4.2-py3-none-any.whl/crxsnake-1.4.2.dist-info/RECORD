@@ -1,0 +1,16 @@
+crxsnake/__init__.py,sha256=arrwu6wGSLKjgpaNdP3qK68XqSkmZiw-ZWMzfBgqjvo,624
+crxsnake/cogs.py,sha256=E0BF6SBvF4K7KlfpwZ6j6mpIcJYX3H2neaHiLYPK2fI,633
+crxsnake/embed.py,sha256=NnOqgTJ38BokdeduSVJ4M2nxNl45t7bm0ciJNrUbcI8,2709
+crxsnake/files.py,sha256=qBn8azQq_RMUZI2y0IK6lEXi8qQHWB-9HlgB-Z_gjRc,811
+crxsnake/logger.py,sha256=yv1298VWx0TwoBE2X9wJq1WOsGTRwDfdJ-BLds0Jnew,778
+crxsnake/tortoise.py,sha256=xRu6ns5a9xyduS8lglps4iKh0Gurkib9WnIDD1k5jZM,637
+crxsnake/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crxsnake/utils/convert.py,sha256=lfS4fhePDdNJ4LS0PqT523bs34auIA5114NfZi4aaeE,542
+crxsnake/utils/crx.py,sha256=iBZzz71u-TSWynynSLLfWqcr2CX_Zba4DbPwFmYd7iM,437
+crxsnake/utils/hotline.py,sha256=DEs70kjdG0MLXTQF2c2Bj2QzfFhCwpp7BM3xKlXmMw0,4042
+crxsnake/utils/misc.py,sha256=eV6WBod5yMpWVH4PaCG4vNIWN9xhoeO-b6z3mRNPe0Q,434
+crxsnake-1.4.2.dist-info/LICENSE,sha256=xt4Ru6tOCU8e2wVlx_lgx7wh-sNLKbiCbmANzr2e3cc,1085
+crxsnake-1.4.2.dist-info/METADATA,sha256=O-MAzWBsPKPysRCMtRCZi-xTbZ8mw1FA6E8p6kfgew4,1454
+crxsnake-1.4.2.dist-info/WHEEL,sha256=HiCZjzuy6Dw0hdX5R3LCFPDmFS4BWl8H-8W39XfmgX4,91
+crxsnake-1.4.2.dist-info/top_level.txt,sha256=GOgG6tMH05czsfM6y-Tvm9LUSd-0PPuuuYkkkbWHZjQ,9
+crxsnake-1.4.2.dist-info/RECORD,,
