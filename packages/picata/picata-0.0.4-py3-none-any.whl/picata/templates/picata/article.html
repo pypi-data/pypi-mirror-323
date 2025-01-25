@@ -1,0 +1,20 @@
+{% extends "picata/3_column.html" %}
+{% load wagtailcore_tags %}
+
+{% block main_classes %}{{ block.super }} article{% endblock %}
+
+{% block aside %}
+  {% if tagline %}<div class="tagline">"{{ tagline }}"<hr /></div>{% endif %}
+  {% if published %}<p class="leading-none text-xs">Published <span>{{ published }}</span></p>{% endif %}
+  {% if updated %}<p class="leading-none text-xs">Updated <span>{{ updated }}</span></p>{% endif %}
+  {% comment %} {% if page.tags %}
+    <hr /><p class="text-center">Tagged: {% for tag in page.tags.all %}<span>{{ tag }}{% if not forloop.last %}, {% endif %}</span>{% endfor %}</p>
+  {% endif %} {% endcomment %}
+{% endblock %}
+
+{% block article %}
+  <h1>{{ page.title }}</h1>
+  {{ page.content }}
+{% endblock %}
+
+{% block nav %}<div class="toc"></div>{% endblock %}
