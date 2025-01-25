@@ -1,0 +1,9 @@
+jsonschema
+large-image>=1.30.7.dev30
+pyyaml
+
+[all]
+scikit-image
+
+[girder]
+girder-large-image>=1.30.7.dev30
