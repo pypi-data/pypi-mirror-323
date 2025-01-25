@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "weetags"
+version = "1.0.0"
+description = "Small and simple permanent tree database builded on top of Sqlite"
+authors = ["Romain Viry <rom88.viry@gmail.com>"]
+readme = "README.md"
+packages = [{include = "weetags"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+attrs = "^23.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "==6.2.5"
+pytest-cov = "^3.0.0"
+commitizen = "^2.27.1"
+yamllint = "^1.35.1"
+ruff = "^0.2.2"
+safety = "^3.0.1"
+
+[tool.commitizen]
+version = "1.0.0"
+version_files = [
+    "pyproject.toml:^version",
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--no-header -l --cov weetags -m 'not running_server'"
+
+testpaths = ["tests"]
+
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
