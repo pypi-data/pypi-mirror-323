@@ -1,0 +1,7 @@
+numpy
+pyyaml
+gymnasium
+ray
+rllib
+importlib-metadata==8.4.0
+protobuf<=3.20.0
