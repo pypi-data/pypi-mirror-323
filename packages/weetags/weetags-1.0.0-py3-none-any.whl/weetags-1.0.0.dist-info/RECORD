@@ -1,0 +1,14 @@
+weetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weetags/engine/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weetags/engine/engine.py,sha256=XlxZX_iP4DkNUplPVIo6OvYAR_4Drh8I2Oo4ChH1NwI,12295
+weetags/engine/schema.py,sha256=1UsMwQoUoiH24vkGBvoDKdxeRn6P5ljQSiM9Lfjd3Ms,12040
+weetags/engine/sql.py,sha256=pfpCDOQBbXii1fAXAoXKgW5CBSfo-JgMa2QPr9B1AO0,19010
+weetags/exceptions.py,sha256=MIFqnr2nWFM4vVuCTjqsU2AIvmFUqtzDnipTqPZKpk8,3142
+weetags/loaders.py,sha256=DqYXHiflS7_8n9T9diA_sg8z7pDjMfGyV71s2AR6YPw,1581
+weetags/tree.py,sha256=rPxFI2S2Huy0mMkAiVydANKnDPlWVflEyaMYz1aCZ4g,17666
+weetags/tree_builder.py,sha256=LQBo4Cr08TAbvFoU-w4g1z3gvTmujXwH_TEEkL_vsL8,10622
+weetags/utils.py,sha256=Cb6tdmscFd0aZEUePXN8peIROLA4jkC49-D7TAyLHv0,4217
+weetags-1.0.0.dist-info/LICENSE,sha256=q1xj-buBaPR-m7z4k3wXehxQSC75CBZ3hMUk54Crfbo,1068
+weetags-1.0.0.dist-info/METADATA,sha256=pzmzOVKPe57EQp0LvGMAOt-Pablkkiolkd2O5Z09_6o,8726
+weetags-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+weetags-1.0.0.dist-info/RECORD,,
