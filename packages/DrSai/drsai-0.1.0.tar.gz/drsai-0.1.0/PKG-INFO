@@ -1,0 +1,369 @@
+Metadata-Version: 2.1
+Name: DrSai
+Version: 0.1.0
+Summary: A development framework for single and multi-agent collaborative systems developed by the Dr.Sai team at the IHEP, CAS.
+Home-page: https://code.ihep.ac.cn/xdb/drsaigen
+Author: HepAI
+Author-email: hepai@ihep.ac.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: hepai>=1.1.20
+Requires-Dist: pyautogen>=0.6.1
+Requires-Dist: schedule>=1.2.2
+Requires-Dist: lxml>=5.3.0
+Requires-Dist: flaml>=2.3.3
+Requires-Dist: PyPDF2>=3.0.1
+Requires-Dist: beautifulsoup4>=4.12.3
+Requires-Dist: mechanize>=0.4.10
+Requires-Dist: arxiv>=2.1.3
+Requires-Dist: markdown>=3.7
+Requires-Dist: python_multipart>=0.0.20
+
+# DrSai 
+由高能物理研究所Dr.Sai团队开发的智能体与多智能体协同系统快速开发框架
+
+<div align="center">
+  <p>
+      <img width="80%" src="assets/drsai.png" alt="适配逻辑图">
+  </p>
+</div>
+
+## 1.特色
+
+- 1.可基于[HepAI平台](https://ai.ihep.ac.cn/)进行智能体基座模型的灵活切换。
+- 2.为智能体设计了感知、思考、记忆、执行等行为功能，并进行了插件化设计，可灵活扩展，满足多种应用场景。
+- 3.提供了智能体选择制和举手制等多种多智能体协同逻辑
+- 4.为智能体和多智能体协作系统交互提供了兼容OpenAI Chat和OpenAI ASSISTANTS的标准后端接口，可与兼容OpenAI输出的前端进行无缝对接，从而可将智能体和多智能体协作系统作为模型或智能体服务进行部署。
+
+## 2.快速开始
+
+### 2.1.安装DrSai多智能体协作系统
+
+#### pip 安装
+
+```shell
+conda create -n drsai python==3.10
+conda activate drsai
+pip install drsai
+```
+
+配置[HepAI](https://ai.ihep.ac.cn/users?tab=B)等平台的API访问密钥等环境变量(Based on bash)：
+```shell
+vi ~/.bashrc
+export HEPAI_API_KEY=your_api_key
+source ~/.bashrc
+```
+
+#### 从源码安装和配置DrSai多智能体协作系统运行环境
+
+创建[code.ihep.ac.cn](https://code.ihep.ac.cn/)账号，克隆OpenDrSai仓库到本地：
+```shell
+git clone https://code.ihep.ac.cn/hepai/drsai.git drsai
+cd drsai
+```
+
+配置conda环境，安装依赖包：
+```shell
+conda create -n drsai python=3.10
+conda activate drsai
+pip install .
+```
+
+### 2.2.直接部署DrSai多智能体协作系统后端
+
+```python
+from dataclasses import dataclass, field
+from DrSai.version import __version__
+import hepai as hai
+from typing import Union, Dict
+from hepai import HModelConfig, HWorkerConfig, HWorkerAPP
+from DrSai.backend.app_worker import DrSaiWorkerModel
+import uvicorn
+from fastapi import FastAPI
+
+@dataclass
+class DrSaiModelConfig(HModelConfig):
+    name: str = field(default="hepai/drsai", metadata={"help": "Model's name"})
+
+@dataclass
+class DrSaiWorkerConfig(HWorkerConfig):
+    port: int = field(default=42801, metadata={"help": "Worker's port, default is None, which means auto start from `auto_start_port`"})
+
+if __name__ == '__main__':
+    model_args, worker_args = hai.parse_args((DrSaiModelConfig, DrSaiWorkerConfig))
+    print(model_args)
+    print(worker_args)
+    model = DrSaiWorkerModel(model_args)
+    app: FastAPI = HWorkerAPP(model, worker_config=worker_args)  # Instantiate the APP, which is a FastAPI application.
+    app.include_router(model.drsai.router)
+    print(app.worker.get_worker_info(), flush=True)
+    # 启动服务
+    uvicorn.run(app, host=app.host, port=app.port)
+
+
+```     
+
+将以上代码保存为`app.py`，运行后将启动在本地的42801端口：
+```shell
+python app.py
+```
+
+
+### 2.3.使用HepAI client访问的方式访问定制好的智能体
+
+```python
+from hepai import HepAI 
+import os
+import json
+import requests
+import sys
+
+HEPAI_API_KEY = os.getenv("HEPAI_API_KEY")
+base_url = "http://localhost:42801/v1"
+
+
+# 调用HepAI client接口
+client = HepAI(api_key=HEPAI_API_KEY, base_url=base_url)
+completion = client.chat.completions.create(
+  model='hepai/Dr-Sai',
+  messages=[
+    {"role": "user", "content": "请使用百度搜索什么是Ptychography?"}
+  ],
+  stream=True,
+  extra_body = {"base_models": "openai/gpt-4o-mini"}
+)
+for chunk in completion:
+  if chunk.choices[0].delta.content:
+    print(chunk.choices[0].delta.content, end='', flush=True)
+print('\n')
+
+
+# 调用openai chat接口，并指定base_models参数
+# response = requests.post(
+#     f"{base_url}/chat/completions", 
+#     headers={"Authorization": f"Bearer {HEPAI_API_KEY}"},
+#     json={
+#         "model": "hepai/Dr-Sai", 
+#         "base_models": "openai/gpt-4o-mini",
+#         "messages": [{"role": "user", "content": "我需要python求逆矩阵"}],
+#         "stream": True
+#         },
+#         stream=True)
+
+# for oai_response in response.iter_lines():
+#     if oai_response:
+#         # print(str(oai_response).split("data: "))
+#         decoded_str = oai_response.decode('utf-8')
+#         oai_json = json.loads(decoded_str.split("data: ")[1])
+#         textchunck = oai_json["choices"][0]["delta"]["content"]
+#         if textchunck:
+#             sys.stdout.write(textchunck)
+#             sys.stdout.flush()
+```
+
+## 3.配置记忆层、执行器等组件
+
+### 3.2 安装和配置[hairag](https://code.ihep.ac.cn/shangzj18/hai-rag-os)作为智能体的记忆层组件
+
+- 克隆hairag并安装依赖包：
+```shell
+cd .. 
+git clone https://code.ihep.ac.cn/shangzj18/hai-rag-os.git hairag
+cd hairag
+conda create -n hairag python=3.10
+conda activate hairag
+pip install -r requirements.txt
+```
+
+- 下载embbeding模型到hairag/embedding，具体操作请参考[hairag embedding文档](https://code.ihep.ac.cn/shangzj18/hai-rag-os/-/blob/main/embedding/README.md?ref_type=heads)。
+
+
+- hairag的基于Qdrant Vector Database框架，具体hairag的配置见[hairag配置文档](https://code.ihep.ac.cn/shangzj18/hai-rag-os/-/tree/main?ref_type=heads)。 
+
+具体案例见[hairag文档](https://code.ihep.ac.cn/shangzj18/hai-rag-os/-/blob/main/src/example_rag.ipynb?ref_type=heads)。
+
+
+### 3.3 安装和配置[Dr.Sai Code Wroker V2](https://code.ihep.ac.cn/xuliang/drsai-code-worker-v2)作为智能体的执行器组件
+
+- 克隆Dr.Sai Code Wroker V2并安装依赖包：
+```shell
+cd .. 
+git clone https://code.ihep.ac.cn/xuliang/drsai-code-worker-v2.git  codeworker
+cd codeworker
+```
+ - 安装依赖包：
+```shell
+conda create -n codeworker python=3.10
+conda activate codeworker
+pip install -r requirements.txt
+```
+详细配置Dr.Sai Code Wroker V2见[README.md](https://code.ihep.ac.cn/xuliang/drsai-code-worker-v2)。
+
+### 3.4 为智能体添加记忆层和执行器插件
+
+继承DrSai_APP，修改[DrSai/dr_sai.py](DrSai/dr_sai.py)中```default_agents```函数的智能体配置，为相应智能体添加记忆层和执行器组件插件。默认的Agent列表包括```Assistant、Coder、Navigator```：
+```python
+def default_agents(self, llm_config: Dict, **kwargs) -> List[Type[LearnableAgent]]:
+    '''
+    默认的Agent列表:
+        - Assistant: 助手
+        - Coder: 代码编写者
+        - Navigator: 查询Arxiv/docDB/web等论文信息
+    在作为后端使用时,请在这里更改和注册你自己定义的Agents
+    '''
+    stream = kwargs.get('stream', True)
+    # TODO: 增加默认的RAG
+    if self._default_agents is None:
+        assistant = AssistantAgent("Assistant", llm_config=llm_config, stream=stream)
+        self.register_agent(assistant.name, assistant)
+        coder = Coder("Coder", llm_config=llm_config, stream=stream)
+        self.register_agent(coder.name, coder)
+        navigator = Navigator("Navigator", llm_config=llm_config, stream=stream)
+        tool_calls_register.all_tools(agent=navigator)
+        self.register_agent(navigator.name, navigator)
+        
+        self._default_agents = [coder, assistant, navigator]
+    return self._default_agents
+
+```
+如果需要给语言模型助手添加具体同步辐射光源知识库的记忆层插件，同时添加一个可执行代码的智能体，可以参考如下配置：
+```python
+
+from DrSai.backend.app_worker import DrSaiAPP
+class YourDrSaiAPP(DrSaiAPP):
+    
+    def __init__(
+            self, 
+            **kwargs
+    ):
+        super().__init__(
+            **kwargs
+        )
+    def default_agents(self, llm_config: Dict, **kwargs) -> List[Type[LearnableAgent]]:
+        '''
+        自定义的Agent列表:
+        '''
+        stream = kwargs.get('stream', True)
+        if self._default_agents is None:
+            # 配置具有同步辐射光源知识的助手
+            ## 配置自定义的RAG函数和相应检索参数
+            headers={"Authorization": f"Bearer {self.api_key}"}
+            request_data = {
+                    "model": "hai-rag",
+                    "username": "your_username",
+                    "method": "retrieve",
+                    "similarity_top_k": 10,
+                    'collection':"synchrotron",
+                    "score_limit": 0.5
+                }
+            RAG_config = {"request_data": request_data, "headers": headers}
+            retrieve_config = {"RAG_function": hai_rag_retrieve, "RAG_config": RAG_config}
+            ## 构建智能体
+            assistant = AssistantAgent(
+                name="AssistantAgent",
+                llm_config=llm_config, # 定义了模型和api的配置
+                retrieve_config = retrieve_config, # 定义了RAG的配置和自定义的RAG函数
+                system_message = "你是一个同步辐射光源知识问答助手",
+                description="一个同步辐射光源知识问答助手", 
+                stream=stream)
+            self.register_agent(assistant.name, assistant)
+            # 配置可执行代码的智能体
+            tester = AssistantAgent(
+                name="AssistantAgent",
+                llm_config=llm_config,
+                description="一个代码执行者", 
+                worker_name={"name": "hepai/code-worker-v2", "base_url": "http://localhost:42899/apiv2"},# 定义了worker的访问配置
+                worker_config={"llm_config": llm_config, "job_timeout": 10}, # 定义了worker的参数配置
+                stream=stream)
+            self.register_agent(tester.name, tester)
+            # 配置默认的智能体列表
+            coder = Coder("Coder", llm_config=llm_config, stream=stream)
+            self.register_agent(coder.name, coder)
+            navigator = Navigator("Navigator", llm_config=llm_config, stream=stream)
+            tool_calls_register.all_tools(agent=navigator)
+            self.register_agent(navigator.name, navigator)
+            
+            self._default_agents = [coder, assistant, navigator, tester]
+        return self._default_agents
+
+```
+
+### 3.5 启动DrSai后端服务
+
+将定制的智能体YourDrSaiAPP后端服务和以下文件保存为run_drsai.py：
+```python
+
+class DrSaiWorkerModel(HRModel):  # Define a custom worker model inheriting from HRModel.
+    def __init__(self, config: HModelConfig):
+        super().__init__(config=config)
+
+        self.drsai = YourDrSaiAPP()
+        pass
+
+    @HRModel.remote_callable
+    def chat_completions(self, *args, **kwargs):
+        return self.drsai.start_chat_completions(*args, **kwargs)
+
+
+@dataclass
+class DrSaiModelConfig(HModelConfig):
+    name: str = field(default="hepai/Dr-Sai", metadata={"help": "Model's name"})
+    permission: Union[str, Dict] = field(default=None, metadata={"help": "Model's permission, separated by ;, e.g., 'groups: all; users: a, b; owner: c', will inherit from worker permissions if not setted"})
+    version: str = field(default="2.0", metadata={"help": "Model's version"})
+
+@dataclass
+class DrSaiWorkerConfig(HWorkerConfig):
+    host: str = field(default="0.0.0.0", metadata={"help": "Worker's address, enable to access from outside if set to `0.0.0.0`, otherwise only localhost can access"})
+    port: int = field(default=42801, metadata={"help": "Worker's port, default is None, which means auto start from `auto_start_port`"})
+    auto_start_port: int = field(default=42801, metadata={"help": "Worker's start port, only used when port is set to `auto`"})
+    route_prefix: str = field(default="/apiv2", metadata={"help": "Route prefix for worker"})
+    # controller_address: str = field(default="https://aiapi001.ihep.ac.cn", metadata={"help": "The address of controller"})
+    controller_address: str = field(default="http://localhost:42601", metadata={"help": "The address of controller"})
+    
+    controller_prefix: str = field(default="/apiv2", metadata={"help": "Controller's route prefix"})
+    no_register: bool = field(default=True, metadata={"help": "Do not register to controller"})
+
+    permissions: str = field(default='users: admin, xx@ihep.ac.cn', metadata={"help": "Model's permissions, separated by ;, e.g., 'groups: default; users: a, b; owner: c'"})
+    description: str = field(default='This is Dr.Sai multi agents system', metadata={"help": "Model's description"})
+    author: str = field(default=None, metadata={"help": "Model's author"})
+    daemon: bool = field(default=False, metadata={"help": "Run as daemon"})
+    type: str = field(default="drsai", metadata={"help": "Worker's type"})
+    debug: bool = field(default=True, metadata={"help": "Debug mode"})
+
+if __name__ == "__main__"
+    # 启动后端服务
+    model_args, worker_args = hepai.parse_args((DrSaiModelConfig, DrSaiWorkerConfig))
+    print(model_args)
+    print(worker_args)
+    
+    import uvicorn
+    from fastapi import FastAPI
+    model = DrSaiWorkerModel(model_args)
+    app: FastAPI = HWorkerAPP(model, worker_config=worker_args)  # Instantiate the APP, which is a FastAPI application.
+    app.include_router(model.drsai.router)
+    
+    print(app.worker.get_worker_info(), flush=True)
+    # 启动服务
+    uvicorn.run(app, host=app.host, port=app.port)
+
+```
+
+启动自定义的智能体后端服务：
+```shell
+python run_drsai.py
+```
+
+## 4.详细文档
+见docs目录：
+```shell
+.
+├── 1-Agent_components.md         # 智能体组件开发介绍
+├── 2-Agent.md                    # 智能体开发介绍
+├── 3-Multi-Agent_system.md       # 多智能体协作系统开发介绍
+├── 4-backend.md                  # 后端服务开发介绍
+├── developer.md                  # 开发者指南
+└── 0-Re0:Dr.Sai.md               # Dr.Sai开发逻辑
+```
