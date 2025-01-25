@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+<head>
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+
+  <title>Sending Messages</title>
+</head>
+
+<body>
+  <div class='header'>
+    <div class='headertitle'>
+      Sending Messages
+    </div>
+  </div>
+
+  <div class='contents'>
+    <p>Messages can be sent to a counter party with the static
+    <b>Session::sendToTarget</b> methods.</p>See this code in
+    <a href="python/sending_messages_1.html">PYTHON</a>, <a href=
+    "ruby/sending_messages_1.html">RUBY</a>
+    <pre class='fragment'>
+// send a message that already contains a <i>BeginString</i>, <i>SenderCompID</i>, and a <i>TargetCompID</i>
+static bool sendToTarget( Message&amp;, const std::string&amp; qualifier = "" )
+  throw(SessionNotFound&amp;);
+
+// send a message based on the sessionID, convenient for use
+// in <i>fromApp</i> since it provides a session ID for incoming
+// messages
+static bool sendToTarget( Message&amp;, const SessionID&amp; )
+  throw(SessionNotFound&amp;);
+
+// append a <i>SenderCompID</i> and <i>TargetCompID</i> before sending
+static bool sendToTarget( Message&amp;, const SenderCompID&amp;, const TargetCompID&amp;, const std::string&amp; qualifier = "" )
+  throw(SessionNotFound&amp;);
+
+// pass SenderCompID and TargetCompID in as strings
+static bool sendToTarget( Message&amp;, const std::string&amp;, const std::string&amp;, const std::string&amp; qualifier = "" )
+  throw(SessionNotFound&amp;);
+</pre>
+
+    <br/><hr/>
+    <h2>Type Safe Messages And Fields</h2>
+
+    <p>Message constructors take in all required fields and adds
+    the correct <b>MsgType</b> and <b>BeginString</b> for you. With
+    the <b>set</b> method, the compiler will not let you add a
+    field that is not a part of a message as defined by the
+    spec.</p>
+    <pre class='fragment'>
+void sendOrderCancelRequest()
+{
+  FIX41::OrderCancelRequest message(
+    FIX::OrigClOrdID("123"),
+    FIX::ClOrdID("321"),
+    FIX::Symbol("LNUX"),
+    FIX::Side(FIX::Side_BUY));
+
+  message.set(FIX::Text("Cancel My Order!"));
+
+  FIX::Session::sendToTarget(message, SenderCompID("TW"), TargetCompID("TARGET"));
+}
+</pre>
+
+    <br/><hr/>
+    <h2>Type Safe Field Only</h2>
+
+    <p>The <b>setField</b> method allows you to add any field to
+    any message.</p>See this code in <a href=
+    "python/sending_messages_3.html">PYTHON</a>, <a href=
+    "ruby/sending_messages_3.html">RUBY</a>
+    <pre class='fragment'>
+void sendOrderCancelRequest()
+{
+  FIX::Message message;
+  FIX::Header header&amp; = message.getHeader();
+
+  header.setField(FIX::BeginString("FIX.4.2"));
+  header.setField(FIX::SenderCompID(TW));
+  header.setField(FIX::TargetCompID("TARGET"));
+  header.setField(FIX::MsgType(FIX::MsgType_OrderCancelRequest));
+  message.setField(FIX::OrigClOrdID("123"));
+  message.setField(FIX::ClOrdID("321"));
+  message.setField(FIX::Symbol("LNUX"));
+  message.setField(FIX::Side(FIX::Side_BUY));
+  message.setField(FIX::Text("Cancel My Order!"));
+
+  FIX::Session::sendToTarget(message);
+}
+</pre>
+
+    <br/><hr/>
+    <h2>No Type Safety</h2>
+
+    <p>You can also use <b>setField</b> to pass in
+    primitives.</p>See this code in <a href=
+    "python/sending_messages_2.html">PYTHON</a>, <a href=
+    "ruby/sending_messages_2.html">RUBY</a>
+    <pre class='fragment'>
+void sendOrderCancelRequest()
+{
+  FIX::Message message;
+  // BeginString
+  message.getHeader().setField(8, "FIX.4.2");
+  // SenderCompID
+  message.getHeader().setField(49, "TW");
+  // TargetCompID, with enumeration
+  message.getHeader().setField(FIX::FIELD::TargetCompID, "TARGET");
+  // MsgType
+  message.getHeader().setField(35, 'F');
+  // OrigClOrdID
+  message.setField(41, "123");
+  // ClOrdID
+  message.setField(11, "321");
+  // Symbol
+  message.setField(55, "LNUX");
+  // Side, with value enumeration
+  message.setField(54, FIX::Side_BUY);
+  // Text
+  message.setField(58, "Cancel My Order!");
+
+  FIX::Session::sendToTarget(message);
+}
+</pre>
+  </div>
+</body>
+</html>
