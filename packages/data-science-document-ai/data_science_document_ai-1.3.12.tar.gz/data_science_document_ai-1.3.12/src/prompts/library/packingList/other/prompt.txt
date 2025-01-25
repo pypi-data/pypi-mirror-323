@@ -1,0 +1,21 @@
+Task: Fill in the following dictionary from the information in the given pdf document.
+
+Extract all the data points from the given document.
+Each child data point is part of a master field called skuData. There may be multiple skuData entries in a document.
+Your goal is to extract all instances.
+
+Instructions:
+- Do not change the keys of the following dictionary.
+- The values should be filled in as per the response schema provided.
+- The entity can be extracted multiple times. Please pay attention to the occurrence_type.
+- Use the data field description to understand the context of the data.
+- Pay attention to the column names in the table to understand the context of the data.
+- Please give priority to the Cartons field in the table to extract the data for the quantity field.
+- The measurement is measured in "Cubic Meter (cbm)" or dimensions. But volume in "cbm" is preferred
+- If containerNumber, sealNumber, poNumber, or poPosition are not found within an skuData entity, look for these fields elsewhere in the document. Once found, insert these fields to all relevant skuData entities by populating their respective fields.
+- Do not create additional skuData entries separately for these shared attributes; instead, insert them to existing skuData entries by populating their respective fields.
+- Do not extract or associate the total Gross Weight, total Net Weight, or quantityShipped fields with any skuData entity. These fields are document-level fields and should not be associated with any skuData entity.
+
+
+return only the extracted data in the json format excluding all other information.
+Please find the schema below and return the output in a valid json format.
