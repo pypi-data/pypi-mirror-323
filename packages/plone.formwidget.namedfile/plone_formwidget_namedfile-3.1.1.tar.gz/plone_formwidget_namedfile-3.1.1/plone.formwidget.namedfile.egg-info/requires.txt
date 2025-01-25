@@ -1,0 +1,17 @@
+BTrees
+setuptools
+plone.base
+plone.namedfile>=6.3.0
+Products.MimetypesRegistry
+persistent
+plone.registry
+z3c.form
+zope.annotation
+zope.size
+
+[test]
+Pillow
+plone.app.testing
+plone.scale
+plone.testing
+zope.pagetemplate
