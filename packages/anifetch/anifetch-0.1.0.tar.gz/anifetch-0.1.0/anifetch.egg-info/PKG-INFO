@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: anifetch
+Version: 0.1.0
+Summary: Clone of neofetch but with anime characters as ascii arts
+Home-page: https://github.com/KillerShoaib/Anifetch
+Author: Shoaib Hossain
+Author-email: sh.shoaib8@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: rich==13.7.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Anifetch
+
+**A clone of neofetch but with anime ASCII arts**

@@ -1,0 +1,10 @@
+setup.py
+Anifetch/Anifetch.py
+Anifetch/__init__.py
+Anifetch/ascii_arts.py
+anifetch.egg-info/PKG-INFO
+anifetch.egg-info/SOURCES.txt
+anifetch.egg-info/dependency_links.txt
+anifetch.egg-info/entry_points.txt
+anifetch.egg-info/requires.txt
+anifetch.egg-info/top_level.txt
