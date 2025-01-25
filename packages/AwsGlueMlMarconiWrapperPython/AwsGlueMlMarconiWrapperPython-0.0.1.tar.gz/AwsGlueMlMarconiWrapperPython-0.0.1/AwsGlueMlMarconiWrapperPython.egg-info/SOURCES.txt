@@ -1,0 +1,5 @@
+setup.py
+AwsGlueMlMarconiWrapperPython.egg-info/PKG-INFO
+AwsGlueMlMarconiWrapperPython.egg-info/SOURCES.txt
+AwsGlueMlMarconiWrapperPython.egg-info/dependency_links.txt
+AwsGlueMlMarconiWrapperPython.egg-info/top_level.txt

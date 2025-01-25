@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: AwsGlueMlMarconiWrapperPython
+Version: 0.0.1
+Summary: This package is parked by AWS Glue.
+Home-page: UNKNOWN
+Author: awsglue
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 7 - Inactive
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
