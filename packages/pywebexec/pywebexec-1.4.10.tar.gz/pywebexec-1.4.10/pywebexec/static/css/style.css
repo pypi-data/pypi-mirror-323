@@ -1,0 +1,281 @@
+@font-face {
+    font-family: 'Consolas NF';
+    src: url('/static/css/Consolas NF.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+.table-container {
+    height: 270px;
+    overflow-y: auto;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.30);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+}
+th { 
+    background-color: #444;
+    color: #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.outcol {
+    width: 100%;
+}
+select { /* Safari bug */
+    -webkit-appearance: none;
+    -webkit-border-radius: none;
+    appearance: none;
+    outline: none;
+    font-size: 15px;
+    border: #aaa solid 1px;
+    border-radius: 5px;
+    padding: 0px 5px 5px 0px;
+    min-width: 150px;
+}
+.output {
+    white-space: pre-wrap;
+    background: #111;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow-y: hidden;
+}
+.copy-icon { cursor: pointer; }
+.monospace { font-family: Consolas NF, monospace; }
+.copied { color: green; margin-left: 5px; }
+button {
+    -webkit-appearance: none;
+    -webkit-border-radius: none;
+    appearance: none;
+    border-radius: 15px;
+    padding-right: 13px;
+    border: 1px #555 solid;
+    height: 22px;
+    font-size: 13px;
+    outline: none;
+    text-indent: 10px;
+    background-color: #eee;
+}
+form {
+    padding-bottom: 15px;
+}
+.form-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.status-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.title-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url("/static/images/favicon.svg");
+    vertical-align: bottom;
+}
+.status-running { 
+    background-image: url("/static/images/running.gif")
+}
+.status-success { 
+    background-image: url("/static/images/success.svg")
+}
+.status-failed { 
+    background-image: url("/static/images/failed.svg")
+}
+.status-aborted { 
+    background-image: url("/static/images/aborted.svg")
+}
+.copy_clip {
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 20px 12px;
+    white-space: nowrap;
+}
+.copy_clip:hover {
+    cursor: pointer;
+    background-image: url("/static/images/copy.svg");
+}
+.copy_clip_ok, .copy_clip_ok:hover {
+    background-image: url("/static/images/copy_ok.svg");
+}
+#params, #commandName {
+    -webkit-appearance: none;
+    -webkit-border-radius: none;
+    appearance: none;
+    border-radius: 15px;
+    padding: 3px;
+    border: 1px #aaa solid;
+    height: 15px;
+    font-size: 15px;
+    outline: none;
+    background-color: white;
+    margin: 0; /* Remove margin */
+}
+
+#commandName {
+    width: auto; /* Allow dynamic width */
+    background-size: 16px 16px;
+    border-radius: 15px 0px 0px 15px;
+    border-right: 0px;
+    text-indent: 5px;
+    padding-right: 0px;
+}
+#params {
+    width: auto; /* Allow dynamic width */
+    border-radius: 0px 15px 15px 0px;
+    border-left: 0px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    /*width: 60%;*/
+}
+
+.show-command-list-button {
+    background-color: white;
+    cursor: pointer;
+    height: 21px;
+    font-size: 15px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.show-command-list-button .arrow {
+    visibility: hidden; /* Hide arrow by default */
+}
+
+.show-command-list-button:hover .arrow {
+    visibility: visible; /* Show arrow on hover */
+}
+
+#commandName:focus + .show-command-list-button .arrow {
+    visibility: visible; /* Show arrow when input has focus */
+}
+
+#commandList.show + .show-command-list-button .arrow {
+    display: none; /* Hide arrow when list is shown */
+}
+
+.command-list {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 0px 5px 0px 5px;
+    margin-top: 2px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.command-item {
+    padding: 3px 5px 3px 5px;
+    cursor: pointer;
+}
+
+.command-item:hover, .command-item.highlighted {
+    background-color: #eee;
+}
+
+.currentcommand {
+    background-color: #eef;
+}
+.resizer {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: #aaa;
+    cursor: ns-resize;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.resizer-container {
+    position: relative;
+    height: 5px;
+    margin: 5px;
+    /*margin-bottom: 10px;*/
+}
+tr.clickable-row {
+    cursor: pointer;
+}
+body.dimmed {
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+body.dimmed * {
+    pointer-events: none;
+}
+.dimmer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow-y: hidden;
+}
+.dimmer-text {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* allow wide chars in terminal */
+span {
+    letter-spacing: -0.03px !important;
+}
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+#outputSlider {
+    width: 100%;
+}
+.popup-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.popup-button img {
+    width: 16px;
+    height: 16px;
+}
+
