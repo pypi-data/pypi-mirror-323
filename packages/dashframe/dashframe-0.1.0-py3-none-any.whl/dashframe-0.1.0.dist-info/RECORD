@@ -1,0 +1,10 @@
+dashframe-0.1.0.dist-info/METADATA,sha256=awzlF1Fy-E7BjjJMvhQAeJEySB74IphUlxCOJG4OM3o,385
+dashframe-0.1.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+dashframe-0.1.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+dashframe-0.1.0.dist-info/licenses/LICENSE,sha256=hSeh34gPSyjC0KCQAOFzrlpUJ4pwGkG0lGzTO5JU7XE,39
+dashframe/__init__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+dashframe/components/footer.py,sha256=ZCA578TKVK_o5l351hTg4BZubJEA5XpmdTyU6IJcoJc,802
+dashframe/components/header.py,sha256=JvSypLLX4tQtFAVigBGmM32RwoM_fwXfdsHqN5LXzdY,166
+dashframe/components/nav.py,sha256=uyXs352Z2SlX5142uzF_TbZ3ml2k1FAYfbIRIsxTvdI,555
+dashframe/examples.py,sha256=1HZ9d2TzgYQUdHu7sb5c5QYIU688dw-qhUC6YTz10iw,598
+dashframe-0.1.0.dist-info/RECORD,,

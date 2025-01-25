@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: dashframe
+Version: 0.1.0
+Summary: Quick template to build dash app
+Author-Email: svtter <svtter@qq.com>
+License: LIMIT LICENSE
+Requires-Python: ==3.11.*
+Requires-Dist: dash>=2.18.2
+Requires-Dist: dash-bootstrap-components>=1.7.1
+Description-Content-Type: text/x-rst
+
+DashApp
+========
+
+A quick builder for dash application.
+
+Usage
+-----
+
+``pdm add dashapp``
