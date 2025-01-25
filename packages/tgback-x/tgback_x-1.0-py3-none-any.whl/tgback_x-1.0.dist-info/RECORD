@@ -1,0 +1,13 @@
+tgback_x/__init__.py,sha256=TaMH4xZY8MLqkbeNqSbJdiqrjY2MMn3Y3_eihKo4LJY,391
+tgback_x/crypto.py,sha256=KjHXiwxwho9shMizxPWG3A1Cpd3pUPfxWqwZ-fjtCa4,3972
+tgback_x/defaults.py,sha256=SsEZjLdyYkLEUGUD2ch1vRXNnJrmEH4ljNwFyW_JJt8,576
+tgback_x/errors.py,sha256=Tg_P4coZ15JVY_8JvMxAItyo3PLwGguyv6v32iZzV5k,1090
+tgback_x/protocols.py,sha256=Ovf2mhUN770OTVUNgmxhT4CzuV-IEP8ylHt4JvmpN4g,5970
+tgback_x/providers.py,sha256=DmLeZ3cCxbjh7cwI215rsIRITYF2xr8ld7NDvScSl8g,8508
+tgback_x/tools.py,sha256=GdzkM6TUeXp-lUz8ZS-FDCvW_ZR-9R6FQyCEBiDnt8s,555
+tgback_x/version.py,sha256=qDELPlksFSwWLqsldfcO3h82HUM9qbRemTxcdjn1Jb8,16
+tgback_x-1.0.dist-info/LICENSE,sha256=cwC5lXQBjVkNlWTPx2U855bRB0K0wmSs3Qlag3D5PB8,1089
+tgback_x-1.0.dist-info/METADATA,sha256=ysh4UrXSp7uHXsWLG2oDcfKpwdQ_MmQvTf0bDWDa7QI,4007
+tgback_x-1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+tgback_x-1.0.dist-info/top_level.txt,sha256=-0PAG0racXRD2BynVuAm7TkWwTuKPTyC9XqI-SYfsqA,9
+tgback_x-1.0.dist-info/RECORD,,
