@@ -1,0 +1,2 @@
+include gg_streamlit_table/my_component/frontend/build/*
+recursive-include gg_streamlit_table/my_component/frontend/build *
