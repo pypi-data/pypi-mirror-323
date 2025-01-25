@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "shadems"
+version = "0.5.4"
+description = "Rapid Measurement Set plotting with dask-ms and datashader"
+authors = ["Ian Heywood & RATT <ian.heywood@physics.ox.ac.uk>"]
+license = "GPL-2.0-only"
+homepage = "https://github.com/ratt-ru/shadeMS"
+repository = "https://github.com/ratt-ru/shadeMS"
+readme = "README.md"
+keywords = ["Astronomy", "Visualisation", "Packaging"]
+classifiers = [
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+        "Operating System :: POSIX :: Linux",
+        "Programming Language :: Python",
+        "Topic :: Scientific/Engineering :: Astronomy"
+]
+packages = [
+    { include = "shade_ms" },
+]
+
+[tool.poetry.scripts]
+shadems = "shade_ms.main:driver"
+
+[tool.poetry.dependencies]
+python = "^3.10, < 3.13"
+datashader = "^0.16.0"
+dask-ms = [
+    { version = "^0.2.20", extras = ["xarray"], python = "<3.12" },
+    { version = "^0.2.23", extras = ["xarray"], python = ">=3.12" }
+]
+holoviews = "^1.20.0"
+matplotlib = { version = "^3.9.4" }
+cmasher = "^1.6.3"
+future-fstrings = "^1.2.0"
+requests = "^2.27.1"
+pytest = { version = "^7.2.2", optional=true }
+pytest-flake8 = { version = "^1.1.1", optional=true }
+
+[tool.poetry.extras]
+testing = ["pytest", "pytest-flake8"]
+
+[build-system]
+requires = ["setuptools", "poetry-core"]
+build-backend = "poetry.core.masonry.api"
