@@ -1,0 +1,3 @@
+[console_scripts]
+netemu=netemu.__main__:main
+
