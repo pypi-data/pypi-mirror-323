@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: smoothtable
+Version: 0.0.1
+Summary: User-friendly looking table creator.
+Home-page: https://github.com/kamillenczewski/smoothtable
+Author: Kamil Lenczewski
+Author-email: kamillenczewski2@gmail.com
+Keywords: smooth table display color
+
+smoothtable lets you display rows and columns 
+                        in user-friendly style. Moreover you can create 
+                        color conditions using ColorCondition class 
+                        to emphasize visibility of specific values in your data sets
