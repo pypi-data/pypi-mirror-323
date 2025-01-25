@@ -1,0 +1,121 @@
+[project]
+name = "payment-emulation"
+
+version = "0.1.0"
+
+description = "Uma biblioteca desenvolvida para ser utilizada em projetos Django para emular pagamentos com cartão bancário."
+
+authors = [
+    {name = "Valdean",email = "valdeanjose6@gmail.com"}
+]
+
+readme = "payment_emulation/README.md"
+
+license = { file = "LICENSE" }
+
+requires-python = ">=3.10"
+
+dependencies = [
+    "django (>=5.1.5,<6.0.0)",
+    "pycpfcnpj (>=1.8) ; python_version >= '3.8' and python_version < '4.0'",
+]
+
+keywords = [
+    "payment", "emulation", "SDK", "implementation", "e-commerce",
+    "pagamento", "emulação", "implementação"
+]
+
+classifiers = [
+    "Framework :: Django",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+
+[project.urls]
+repository = "https://github.com/valdean7/payment_emulation"
+documentation = "https://payment-emulation.readthedocs.io/latest/"
+"Bug Tracker" = "https://github.com/valdean7/payment_emulation/issues"
+
+[tool.poetry]
+exclude = [
+    "payment_emulation/__pycache__/*",
+    "payment_emulation/.pytest_cache/*",
+    "payment_emulation/core/*",
+    "payment_emulation/utils/tests/*",
+    "payment_emulation/payment/tests/*",
+    "payment_emulation/manage.py",
+    "payment_emulation/README.md",
+    "payment_emulation/.coverage",
+    "payment_emulation/coverage.xml",
+    "*/__pycache__/*",
+    "*/.pytest_cache/*",
+]
+
+[tool.poetry.scripts]
+payment-emulation = "payment_emulation.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+coverage = "^7.6.10"
+pytest-django = "^4.9.0"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.5.49"
+mkdocstrings-python = "^1.13.0"
+mkdocs-macros-plugin = "^1.3.7"
+mkdocs-exclude-search = "^0.6.6"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "payment_emulation.core.settings"
+# pythonpath = "."
+# norecursedirs = ["venv"]
+python_files = ["test_*.py", "tests_*.py", "*_test.py", "*_tests.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*", "tests_*"]
+console_output_style = "compact"  # (classic, progress, compact)
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "error::RuntimeWarning"
+]
+addopts = [
+    "-vv",
+    "-s",
+    "--cov-report=term"
+]
+
+[tool.coverage.run]
+source = ["tests"]
+omit = [
+    "*/__init__.py",
+    "*/admin.py",
+    "*/apps.py",
+    "*/tests/__init__.py",
+    "*/management/__init__.py",
+    "*/migrations/0001_initial.py",
+    "*/docs/*",
+    "*/translate/*"
+]
+
+[tool.coverage.report]
+omit = [
+    "*/__init__.py",
+    "*/admin.py",
+    "*/apps.py",
+    "*/tests/__init__.py",
+    "*/management/__init__.py",
+    "*/migrations/0001_initial.py",
+    "*/docs/*",
+    "*/translate/*"
+]
