@@ -1,0 +1,3 @@
+[console_scripts]
+kicad_auto_lib=kicad_auto_lib:main
+

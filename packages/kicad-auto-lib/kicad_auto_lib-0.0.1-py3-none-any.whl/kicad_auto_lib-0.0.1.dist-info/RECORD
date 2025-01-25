@@ -1,0 +1,14 @@
+kicad_auto_lib/Sexp_read_write.py,sha256=OrypwvabSQmoIfWSudtDPUcXaFUK1FibYAkYzHKhR3o,20073
+kicad_auto_lib/__init__.py,sha256=XIcvSlgTlMSdppl8GLFEKB824mi02ZQJ4yQ05QC0bLs,34
+kicad_auto_lib/__main__.py,sha256=jTo5GQJCIFzr3KmRUfGdFEAC0Y7qagjLyqP3-wLZlog,74
+kicad_auto_lib/constants.py,sha256=QDHrugv50eUKXBoJbb3r7dMJu3pco5Wq5r7CUYgsJ-8,1410
+kicad_auto_lib/file_manage.py,sha256=_ZnQ_kdO-7k4Kq9XKpGb15_hocjiTgxoUjkTHrR1sKg,19648
+kicad_auto_lib/file_monitor.py,sha256=rwA9ZrsYJlrW0BZUao5PduD_tuR1dA7zqAi5WUkFMek,4955
+kicad_auto_lib/git_manage.py,sha256=oAYWAA-lHbFPsNPLa93k6MwZZWO85h1kQdLhpixiWmY,3876
+kicad_auto_lib/kicad_auto_lib.py,sha256=8xXSVGjZ8TEV86ivRTMMeoRwzi79ZlbJxAPEueexkxk,2476
+kicad_auto_lib/variables.py,sha256=m-3rQEy3hPMg0G8Ko6BO04us7Vd9M0yAvJ4lqcsKvWk,513
+kicad_auto_lib-0.0.1.dist-info/entry_points.txt,sha256=jE1w7LAa-L5piaHRQ1riJm8qbH6OGMou4JrNuK2Qmac,54
+kicad_auto_lib-0.0.1.dist-info/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+kicad_auto_lib-0.0.1.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+kicad_auto_lib-0.0.1.dist-info/METADATA,sha256=pjnhMf4IGcctn1fDpYcRNwUdXUWtgEIaExE6M7Gjq98,9579
+kicad_auto_lib-0.0.1.dist-info/RECORD,,
