@@ -1,0 +1,10 @@
+torch
+botorch
+pandas
+
+[test]
+black
+flake8
+pytest
+pytest-cov
+flake8-pyproject
