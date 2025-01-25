@@ -1,0 +1,11 @@
+gamspy_baron/__init__.py,sha256=DYtWlyLM-mQ6-HHnUizqUerJLtVZZTY-ZvV0EMKQ_ss,386
+gamspy_baron/baron,sha256=vQ8MBxA_qbRRcx0kNhpcWKwK2z4F4B9CH49FY_caFtk,20553992
+gamspy_baron/gmsba_us.run,sha256=DaOnWbwjOV4SNKncTJ6BIAC36FFlCyyfT-AYnMtVXxI,103
+gamspy_baron/gmsba_ux.out,sha256=EqFUC8n2luhmuIsEg9GtfEVPX4pkYLYIR554wVnOjKc,1437360
+gamspy_baron/libbaronnavvy64.so,sha256=-rv4veCvZwLVq1NKem3naxs5y3JZbiSHUbT2NJrvwh8,248208
+gamspy_baron/optbaron.def,sha256=NnPvPx5aPOjcgbCu6BPpYhbYP9eH82JZ5EPuUkig0e4,17348
+gamspy_baron/version.py,sha256=NlwiYmA-u9CB9dWiagQcD_d7rBwtpMThfkQeS2OxGJQ,22
+gamspy_baron-48.6.1.dist-info/METADATA,sha256=ZQ40zNpkVTVa3505vqG8Z3fqoYdrfQK56VnQDPL_gn0,57
+gamspy_baron-48.6.1.dist-info/WHEEL,sha256=i1dBt0I7WIS6wu95mceELXQ2cgqHB656xyft0EoG5-4,115
+gamspy_baron-48.6.1.dist-info/top_level.txt,sha256=ckcfbNRGnYCVz7WFrq-agTrqjVyrn7XrRxJzDC6rIzs,13
+gamspy_baron-48.6.1.dist-info/RECORD,,
