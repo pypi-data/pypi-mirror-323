@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: dagster-gitlab
+Version: 0.0.4
+Summary: A Dagster integration for a GitLab client using the v4 GitLab API
+Project-URL: Homepage, https://github.com/cooperellidge/dagster-gitlab
+Project-URL: Repository, https://github.com/cooperellidge/dagster-gitlab
+Project-URL: Documentation, https://cooperellidge.github.io/dagster-gitlab
+Project-URL: Example, https://gitlab.com/cooperellidge/test-dagster
+Author-email: Cooper Ellidge <cooper.ellidge@gmail.com>
+License: MIT License
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Monitoring
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Requires-Dist: dagster>=1.7.1
+Requires-Dist: python-gitlab>=4.4.0
+Requires-Dist: responses>=0.25.6
+Description-Content-Type: text/markdown
+
+# dagster-gitlab
+
+Dagster integration for GitLab.
+It is the same as `dagster-github` but for GitLab.
+
+_Yes, it is ironic that this is hosted on GitHub._
+
+The project is a WIP and is not feature complete.
