@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "easyspec-mods"
+version = "1.0.0.4"
+authors = [
+    {name="Clodolinus", email="clodolinus@gmail.com"},
+    {name="Raniere de Menezes", email="raniere.m.menezes@gmail.com"},
+
+]
+description = ""
+readme="README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/ranieremenezes/easyspec"
+Issues = "https://github.com/ranieremenezes/easyspec"
