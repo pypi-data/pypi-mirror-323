@@ -1,0 +1,15 @@
+morphcloud/__init__.py,sha256=_jIF8xCCnYjlIm5NYlHynWPbgR6jK-vgkLvjY6AxMcU,158
+morphcloud/_asyncify.py,sha256=MbRiPnV0bwaI74lEpSqUSEP12uNN4_lmeMlR4mLMLfM,13551
+morphcloud/_bash_interpreter.py,sha256=GLql7AGGaEHjrxhNnYshcXMvIrQ4hA-tm8wD9fdPEBI,7646
+morphcloud/_llm.py,sha256=gNLv6P46-DK331VXIXLH8PrEUD6I5TYTfCJ7mqY_xxE,14367
+morphcloud/_scramble.py,sha256=zT_58Z48PKngW3NwCRKIEx22B-J55R-eb8T6aX_3UFo,10564
+morphcloud/_ssh.py,sha256=-HAOi0fCEBe8n_8SHP7ERq8Bc1mmqpu-fM5s6zGQdYg,15800
+morphcloud/_utils.py,sha256=FKjXed9uRBUJhPIoKhnGbrHuu3iX-J-AZestLMZZphY,1345
+morphcloud/api.py,sha256=hxKZmzuu5gF3uwNm91tKGmmi3M_U0c1FIaIPnk1oQW0,44726
+morphcloud/cli.py,sha256=W-ANfPJ2L2MhM9D_62HOoCXlAM7P7LBOzRhGZCeevU0,22879
+morphcloud/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+morphcloud-0.1.22.dist-info/METADATA,sha256=154u2_aBAeoTsbf_ZfsJnt514gK6uWdViAwbKGJ9gW0,4900
+morphcloud-0.1.22.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+morphcloud-0.1.22.dist-info/entry_points.txt,sha256=8mSPe3CcGoAS44YYBWU7KyZVV28oikyFNMkSoq8FycE,50
+morphcloud-0.1.22.dist-info/licenses/LICENSE,sha256=mRBpmhT8rfESlq6lQvUHpXJjFfJnbgBtcIuPMjyWJu0,11340
+morphcloud-0.1.22.dist-info/RECORD,,
