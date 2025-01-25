@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: radnn
+Version: 0.0.1
+Summary: Rapid Deep Neural Networks
+Home-page: https://github.com/pikaplan/radnn
+Author: Pantelis I. Kaplanoglou
+Author-email: "Pantelis I. Kaplanoglou" <pikaplanoglou@ihu.gr>
+Project-URL: Homepage, https://github.com/yourusername/my_package
+Project-URL: Documentation, https://my_package.readthedocs.io/
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: numpy >=1.26.4
+Requires-Dist: matplotlib >=3.8.4
+Requires-Dist: pandas >=2.2.2
+Requires-Dist: scikit-learn >=1.4.2
+
+# radnn - Rapid Deep Neural Networks
+
+A library that brings the Rapid Application Development (RAD) approach into the lifecycle of Deep Learning models. Adapts objects from other frameworks and hides their implementation details to put emphasis on:
+
+- Experiments: Data, Models, Training, Reproducibility
+- Management: Process, Storage, Deployment
+- Evaluation: Metrics, Plots, Visualizations
+- Integration: IPC, Web API
