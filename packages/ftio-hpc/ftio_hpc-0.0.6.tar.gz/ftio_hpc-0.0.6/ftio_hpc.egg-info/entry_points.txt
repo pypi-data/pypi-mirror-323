@@ -1,0 +1,14 @@
+[console_scripts]
+admire_proxy_invoke_ftio = ftio.api.metric_proxy.proxy_invoke_ftio:main
+convert_trace = ftio.util.convert_old_trace:main
+ftio = ftio.cli.ftio_core:run
+ioparse = ftio.util.ioparse:main
+ioplot = ftio.util.ioplot:main
+jit = ftio.api.gekkoFs.jit.jit:main
+parallel_trace_analysis = ftio.api.trace_analysis.parallel_trace_analysis:main
+plot_bandwdith = ftio.util.plot_bandwidth:main
+predictor = ftio.cli.predictor:main
+predictor_jit = ftio.api.gekkoFs.predictor_gekko_zmq:main
+proxy_ftio = ftio.api.metric_proxy.parallel_proxy:main
+trace_analysis = ftio.api.trace_analysis.trace_analysis:main
+trace_ftio = ftio.api.trace_analysis.trace_ftio_v2:main

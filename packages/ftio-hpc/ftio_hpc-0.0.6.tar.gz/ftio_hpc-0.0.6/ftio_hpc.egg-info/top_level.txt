@@ -1,0 +1,7 @@
+artifacts
+dist
+docker
+docs
+examples
+ftio
+test

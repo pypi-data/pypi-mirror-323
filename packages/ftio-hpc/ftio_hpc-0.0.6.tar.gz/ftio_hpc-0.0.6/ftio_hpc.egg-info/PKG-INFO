@@ -1,0 +1,461 @@
+Metadata-Version: 2.2
+Name: ftio-hpc
+Version: 0.0.6
+Summary: Frequency Techniques for I/O
+Author-email: Ahmad Tarraf <ahmad.tarraf@tu-darmstadt.de>
+Maintainer-email: Ahmad Tarraf <ahmad.tarraf@tu-darmstadt.de>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2024, Parallel Programming @ TU Darmstadt
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://github.com/tuda-parallel/FTIO
+Project-URL: Documentation, https://github.com/tuda-parallel/FTIO/docs
+Project-URL: Repository, https://github.com/tuda-parallel/FTIO
+Project-URL: Bug Tracker, https://github.com/tuda-parallel/FTIO/issues
+Project-URL: Changelog, https://github.com/tuda-parallel/FTIO/blob/master/CHANGELOG.md
+Keywords: ftio,I/O
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: scikit-learn
+Requires-Dist: pyzmq
+Requires-Dist: numba
+Requires-Dist: darshan
+Requires-Dist: fastdtw
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: jsonlines
+Requires-Dist: plotly
+Requires-Dist: dash
+Requires-Dist: kneed
+Requires-Dist: PyWavelets
+Requires-Dist: trace_updater
+Requires-Dist: plotly_resampler
+Requires-Dist: msgpack
+Requires-Dist: rich
+Requires-Dist: dash_extensions
+Requires-Dist: pytest
+Requires-Dist: fastcluster
+Provides-Extra: debug
+
+<!-- # FTIO -->
+![GitHub Release](https://img.shields.io/github/v/release/tuda-parallel/FTIO)
+![GitHub Release Date](https://img.shields.io/github/release-date/tuda-parallel/FTIO)
+![](https://img.shields.io/github/last-commit/tuda-parallel/FTIO)
+![contributors](https://img.shields.io/github/contributors/tuda-parallel/FTIO)
+![issues](https://img.shields.io/github/issues/tuda-parallel/FTIO)
+![](https://img.shields.io/github/languages/code-size/tuda-parallel/FTIO)
+![](https://img.shields.io/github/languages/top/tuda-parallel/FTIO)
+![license][license.bedge]
+[![CI](https://github.com/tuda-parallel/FTIO/actions/workflows/CI.yml/badge.svg)](https://github.com/tuda-parallel/FTIO/actions/workflows/CI.yml)
+[![CD](https://github.com/tuda-parallel/FTIO/actions/workflows/python-publish.yml/badge.svg)](https://github.com/tuda-parallel/FTIO/actions/workflows/python-publish.yml)
+[![pypi](https://img.shields.io/pypi/status/ftio-hpc)](https://pypi.org/project/ftio-hpc/)
+
+<!-- [![Upload Python Package](https://img.shields.io/github/actions/workflow/status/tuda-parallel/FTIO/python-publish.yml)](https://github.com/tuda-parallel/FTIO/actions/workflows/python-publish.yml) -->
+
+
+<br />
+<div align="center">
+  <h1 align="center">FTIO</h1>
+  <p align="center">
+ <h3 align="center"> Frequency Techniques for I/O </h2>
+    <!-- <br /> -->
+    <a href="https://github.com/tuda-parallel/FTIO/tree/main/docs/approach.md"><strong>Explore the approach »</strong></a>
+    <br />
+    <!-- <br /> -->
+    <a href="#testing">View Demo</a>
+    ·
+    <a href="https://github.com/tuda-parallel/FTIO/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/tuda-parallel/FTIO/issues">Request Feature</a>
+  </p>
+</div>
+
+FTIO captures periodic I/O using frequency techniques.
+Many high-performance computing (HPC) applications perform their I/O in bursts following a periodic pattern.
+Predicting such patterns can be very efficient for I/O contention avoidance strategies, including burst buffer management, for example.
+FTIO allows [*offline* detection](/docs/approach.md#offline-detection) and [*online* prediction](/docs/approach.md#online-prediction) of periodic I/O phases.
+FTIO uses the discrete Fourier transform (DFT), combined with outlier detection methods to extract the dominant frequency in the signal.
+Additional metrics gauge the confidence in the output and tell how far from being periodic the signal is.
+A complete description of the approach is provided [here](https://github.com/tuda-parallel/FTIO/tree/main/docs/approach.md).
+
+This repository provides two main Python-based tools:
+
+- [`ftio`](/docs/approach.md#offline-detection): Uses frequency techniques and outlier detection methods to find the period of I/O phases 
+- [`predictor`](/docs/approach.md#online-prediction): Implements the online version of FTIO. It reinvokes FTIO whenever new traces are appended to the monitored file. See [online prediction](/docs/approach.md#online-prediction) for more details. We recommend using [TMIO](https://github.com/tuda-parallel/TMIO) to generate the file with the I/O traces.
+
+Other tools:
+
+- [`ioplot`](https://github.com/tuda-parallel/FTIO/tree/main/docs/tools.md#ioplot): Generates interactive plots in HTML
+- [`ioparse`](https://github.com/tuda-parallel/FTIO/tree/main/docs/tools.md#ioparse): Parses and merges several traces to an [Extra-P](https://github.com/extra-p/extrap) supported format. This allows one to examine the scaling behavior of the monitored metrics. Traces generated by FTIO (frequency modls), [TMIO](https://github.com/tuda-parallel/TMIO) (msgpack, json and jsonl) and other tools (Darshan, Recorder, and TAU Metric Proxy) are supported.
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#automated-installation">Automated installation</a></li>
+        <li><a href="#manual-installation">Manual installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+ 	<li><a href="#testing">Testing</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+ <li><a href="#citation">Citation</a></li>
+ <li><a href="#publications">Publications</a></li>
+  </ol>
+</details>
+
+Join the [Slack channel](https://join.slack.com/t/ftioworkspace/shared_invite/zt-2bydqdt13-~hIHzIrKW2zJY_ZWJ5oE_g) or see the latest updates here: [Latest News](https://github.com/tuda-parallel/FTIO/tree/main/ChangeLog.md)
+
+## Installation
+
+FTIO is available on PYPI and can be easily installed via [pip](#automated-installation-from-pypi). For the latest GitHub version, FTIO can be installed either [automatically](#automated-installation) or [manually](#manual-installation). As a prerequisite,
+for the virtual environment, `python3.11-venv` is needed, which can be installed on Ubuntu, for example, with:
+
+```sh
+apt install python3.11-venv
+```
+
+If you want to contribute to the code, we advise that you install FTIO as mentioned under [contributing](#contributing).
+### Automated installation from GitHub
+
+FTIO is installed by default in a virtual environment. For the automated installation, simply execute the command:
+
+```sh
+# clone FTIO
+git clone https://github.com/tuda-parallel/FTIO.git
+cd  FTIO
+# uses by default python3 
+make install
+
+# or using a specific python version,
+# which is often needed on a cluster 
+make install PYTHON=python3.12
+```
+
+This generates a virtual environment in the current directory, sources `.venv/bin/activate`, and installs FTIO as a module.
+If you are working on an HPC cluster, you first need to load the Python module (e.g., `module load python/3.12`) and eventually add `~/.loacl/bin` to your PATH (e.g., `export PATH=$PATH:~/.local/bin`) in case it's not there yet.
+
+If you don't need a dedicated environment, just call:
+
+```sh
+make ftio PYTHON=python3
+```
+
+### Manual installation from GitHub
+
+Create a virtual environment if needed and activate it:
+
+```sh
+git clone https://github.com/tuda-parallel/FTIO.git
+cd  FTIO
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Install all tools provided in this repository simply by using pip:
+
+```sh
+pip install .
+```
+
+> [!note]
+> You need to activate the environment to use `ftio` and the other tools using:
+>
+> ```sh
+> source path/to/venv/bin/activate
+> ```
+
+> [!note]
+> Note there are currently issues with pyDarshan on Mac and windows, that can be solved as mentioned [here](https://github.com/darshan-hpc/darshan/issues/930)
+
+<p align="right"><a href="#ftio">⬆</a></p>
+
+### Automated installation from PYPI
+FTIO is available on PYPI and can be easily installed via pip:
+
+```sh
+pip install ftio-hpc
+```
+
+> [!note]
+> Note there are currently issues with pyDarshan on Mac and windows, that can be solved as mentioned [here](https://github.com/darshan-hpc/darshan/issues/930)
+
+
+## Usage
+
+For installation instructions see [installation](#installation).
+
+To call `ftio` on a file execute:
+
+```sh
+ftio filename.extension
+```
+
+There are three options to use `ftio` and `predictor`:
+
+1. Provide a supported file format to the tool. Supported extensions are `json`, `jsonLines`, `msgpack`, and `darshan`. For recorder, you provide the path to the folder instead of `filename.extension`. For more on the input format see [supported file formats](/docs/file_formats.md#file-formats-and-tools). There is also an option to provide a [custom format](/docs/file_formats.md#parsing-custom-file-formats). 
+2. Use the [API](/docs/api.md#general). This is particularly good if you just want to experiment with the tool, or directly jump into using it with as little effort as possible. 
+3. Send TCP messages over ZeroMQ (ZMQ) to the tools as described [here](/docs/zmq.md). There is also an API example with ZMQ and GekkoFS [here](/docs/api.md#gekkofs-with-zmq). Usually, `predictor` is used with ZMQ, as it makes little sense to use `ftio` with this option.
+
+
+In all cases, various options can be provided to `ftio` and `predictor`. To see all available command line arguments, call:
+
+```
+ftio -h
+
+  
+usage: ftio [-h] [-m MODE] [-r RENDER] [-f FREQ] [-ts TS] [-te TE] [-tr TRANSFORMATION] [-e ENGINE]
+            [-o OUTLIER] [-le LEVEL] [-t TOL] [-d] [-nd] [-re] [--no-reconstruction] [-p] [-np] [-c] [-w]
+            [-fh FREQUENCY_HITS] [-v] [-s] [-ns] [-a] [-na] [-i] [-ni] [-x DXT_MODE] [-l LIMIT]
+            files [files ...]
+```
+
+There are several options available to enhance the frequency predictions from `ftio`. In the standard mode, the DFT is used in combination with an outlier detection method. Additionally, autocorrelation can be used to further increase the confidence in the results:
+
+1. DFT + outlier detection (Z-score, DB-Scan, Isolation forest, peak detection, or LOF)​
+2. Optionally: Autocorrelation + Peak detection (`-c` flag)
+3. If step 2. is performed, the results from both predictions are merged automatically
+
+See [offline detection](/docs/approach.md#offline-detection) for more details. 
+
+Several flags can be specified. The most relevant settings are:
+
+| Flag                        | Description|
+|---                          | --- |
+|file                         | file, file list (file 0 ... file n), folder, or folder list (folder 0.. folder n) containing traces  (positional argument)|
+|-h, --help                   | show this help message and exit|
+|-m MODE, --mode MODE         | if the trace file contains several I/O modes, a specific mode can be selected. Supported modes are: write_async, read_async, write_sync, read_sync|
+|-r RENDER, --render RENDER   | specifies how the plots are rendered. Either dynamic (default) or static|
+|-f FREQ, --freq FREQ         | specifies the sampling rate with which the continuous signal is discretized (default=10Hz). This directly affects the highest captured frequency (Nyquist). The value is specified in Hz. In case this value is set to -1, the auto mode is launched which sets the sampling frequency automatically to the smallest change in the bandwidth detected. Note that the lowest allowed frequency in the auto mode is 2000 Hz|
+|-ts TS, --ts TS              | Modifies the start time of the examined time window
+|-te TE, --te TE              | Modifies the end time of the examined time window
+|-tr TRANSFORMATION, --transformation TRANSFORMATION| specifies the frequency technique to use. Supported modes are: dft (default), wave_disc, and wave_cont|
+|-e ENGINE, --engine ENGINE   | specifies the engine used to display the figures. Either plotly (default) or mathplotlib can be used. Plotly is used to generate interactive plots as HTML files. Set this value to no if you do not want to generate plots
+|-o OUTLIER, --outlier OUTLIER| outlier detection method: Z-score (default), DB-Scan, Isolation_forest, or LOF|
+|-le LEVEL, --level LEVEL     | specifies the decomposition level for the discrete wavelet transformation (default=3). If specified as auto, the maximum decomposition level is automatic calculated |
+|-t TOL, --tol TOL            | tolerance value|
+|-d, --dtw                    | performs dynamic time wrapping on the top 3 frequencies (highest contribution) calculated using the DFT if set (default=False) |
+|-re, --reconstruction        | plots reconstruction of top 10 signals on figure |
+|-np, --no-psd                | if set, replace the power density spectrum (a*a/N) with the amplitude spectrum (a) |
+|-c, --autocorrelation        | if set, autocorrelation is calculated in addition to DFT. The results are merged to a single prediction at the end |
+|-w, --window_adaptation      | online time window adaptation. If set to true, the time window is shifted on X hits to X times the previous phases from the current instance. X corresponds to frequency_hits|
+|-fh FREQUENCY_HITS, --frequency_hits FREQUENCY_HITS |  specifies the number of hits needed to adapt the time window. A hit occurs once a dominant frequency is found|
+|-v, --verbose                | sets verbose on or off (default=False)|
+|-x DXT_MODE, --dxt_mode DXT_MODE| select data to extract from Darshan traces (DXT_POSIX or DXT_MPIIO (default)) |
+|-l LIMIT, --limit LIMIT         | max ranks to consider when reading a folder |
+
+`predictor` has the same syntax as `ftio`. All arguments that are available for `ftio` are also available for `predictor`.
+
+<p align="right"><a href="#ftio">⬆</a></p>
+
+## Testing
+
+There is a `8.jsonl` file provided for testing under [examples](https://github.com/tuda-parallel/FTIO/tree/main/examples). 
+On your system, navigate to the folder [examples/tmio/JSONL](https://github.com/tuda-parallel/FTIO/tree/main/examples/tmio/JSONL) and call:
+
+```sh
+ftio 8.jsonl
+```
+
+## Examples
+Several examples are provided under [examples](https://github.com/tuda-parallel/FTIO/tree/main/examples). 
+See also the examples provided [here](/docs/file_formats.md#file-formats-and-tools) for the different file formats.
+
+Alternatively, the [artifact folder](https://github.com/tuda-parallel/FTIO/tree/main/artifacts/ipdps24) contains several instructions and examples traces 
+from the [FTIO paper](#citation) that can be simply downloaded as described [here](https://github.com/tuda-parallel/FTIO/tree/main/artifacts/ipdps24#extracting-the-data-set). 
+
+As `ftio` supports Darshan traces, you could download also traces from [https://hpcioanalysis.zdv.uni-mainz.de/](https://hpcioanalysis.zdv.uni-mainz.de/) and execute FTIO on them as described [here](https://github.com/tuda-parallel/FTIO/blob/main/docs/file_formats.md#darshan).
+
+For an online example with `predictor`, you can follow the instructions here for [HACC-IO](https://github.com/tuda-parallel/FTIO/tree/main/artifacts/ipdps24/HACC-IO#ftio-online-evaluation). 
+
+<p align="right"><a href="#ftio">⬆</a></p>
+
+<!-- CONTRIBUTING -->
+## Contributing
+> [!note] If you are a student from TU Darmstadt, kindly see these [instructions](/docs/students_contribute.md).
+
+### Step 1: Fork the Repository
+1. Visit the [FTIO GitHub repository](https://github.com/tuda-parallel/FTIO).
+2. Click the **Fork** button in the top-right corner to create a copy of the repository under your GitHub account.
+
+### Step 2: Clone Your Fork
+Clone the forked repository to your local machine:
+```bash
+git clone https://github.com/<your-username>/FTIO.git
+```
+
+Replace `<your-username>` with your GitHub username.
+
+### Step 3: Navigate to the Project Directory
+```bash
+cd FTIO
+```
+
+### Step 4: Build the Project in Debug Mode
+Compile the project using the `make debug` command:
+```bash
+# allows to directly test the changes made
+make debug 
+```
+
+This will generate a debug build of the project, useful for development and troubleshooting.
+
+### Step 5: Sync with the Original Repository (Optional)
+To stay up-to-date with the latest changes from the main repository:
+```bash
+git remote add upstream https://github.com/tuda-parallel/FTIO.git
+git fetch upstream
+git merge upstream/main
+```
+
+### Step 6: Create an Issue for Your Contribution
+Before starting your work, create an issue on the repository to describe the feature, bug fix, or enhancement you plan to implement. This helps us track contributions and avoids duplicate work.
+
+1. Go to the **Issues** tab in the [FTIO repository](https://github.com/tuda-parallel/FTIO).
+2. Click **New Issue** and provide a clear title and description.
+3. Label the issue appropriately (e.g., `enhancement`, `bug`, or `question`).
+
+### Step 7: Make Your Changes
+1. Create a new branch for your changes:
+   ```bash
+   git checkout -b <your-feature-branch>
+   ```
+   Replace `<your-feature-branch>` with a descriptive name for your branch.
+   
+2. Make your desired changes and commit them:
+   ```bash
+   git add .
+   git commit -m "Description of your changes"
+   ```
+
+### Step 8: Push Your Changes
+Push your changes to your forked repository:
+```bash
+git push origin <your-feature-branch>
+```
+
+
+## Step 9: Create a Pull Request to the `development` Branch
+1. Navigate to the original FTIO repository on GitHub.
+2. Click the **Pull Requests** tab, then click **New Pull Request**.
+3. Set the target branch to `development`:
+   - **Base Repository:** `tuda-parallel/FTIO`
+   - **Base Branch:** `development`
+   - **Compare Branch:** `<your-feature-branch>`
+4. Provide a detailed description of your changes, referencing the issue you created earlier (e.g., `Fixes #123`).
+5. Submit your pull request and wait for feedback from the maintainers.
+
+We look forward to your contributions! 🎉
+
+<p align="right"><a href="#ftio">⬆</a></p>
+
+<!-- CONTACT -->
+## Contact
+
+[![][parallel.bedge]][parallel_website]
+
+- Ahmad Tarraf: <ahmad.tarraf@tu-darmstadt.de>
+
+<p align="right"><a href="#ftio">⬆</a></p>
+
+## License
+
+![license][license.bedge]
+
+Distributed under the BSD 3-Clause License. See [LICENCE](./LICENSE) for more information.
+<p align="right"><a href="#ftio">⬆</a></p>
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+Authors:
+
+- Ahmad Tarraf
+
+This work is a result of cooperation between the Technical University of Darmstadt and INRIA in the scope of the [EuroHPC ADMIRE project](https://admire-eurohpc.eu/).
+
+<p align="right"><a href="#ftio">⬆</a></p>
+
+## Citation
+
+```
+ @inproceedings{AT24_ftio, 
+  author={Tarraf, Ahmad and Bandet, Alexis and Boito, Francieli and Pallez, Guillaume and Wolf, Felix},
+  booktitle={2024 IEEE International Parallel and Distributed Processing Symposium (IPDPS)}, 
+  title={Capturing periodic {I/O} using frequency techniques}, 
+  month=may, 
+  year={2024},
+  pages={465-478},
+  publisher = {IEEE},
+  doi={10.1109/IPDPS57955.2024.00048}
+ }
+```
+
+<p align="right"><a href="#ftio">⬆</a></p>
+
+## Publications
+
+1. A. Tarraf, A. Bandet, F. Boito, G. Pallez, and F. Wolf, “Capturing Periodic I/O Using Frequency Techniques,” in 2024 IEEE International Parallel and Distributed Processing Symposium (IPDPS), San Francisco, CA, USA, May 2024, pp. 1–14.
+
+2. A. Tarraf, A. Bandet, F. Boito, G. Pallez, and F. Wolf, “FTIO: Detecting I/O periodicity using frequency techniques.” arXiv preprint arXiv:2306.08601 (2023).
+
+<p align="right"><a href="#ftio">⬆</a></p>
+
+
+<!-- https://img.shields.io/badge/any_text-you_like-blue -->
+
+<!--* Badges *-->
+[license.bedge]: https://img.shields.io/badge/License-BSD_3--Clause-blue.svg
+[parallel_website]: https://www.parallel.informatik.tu-darmstadt.de/laboratory/team/tarraf/tarraf.html
+[parallel.bedge]: https://img.shields.io/badge/Parallel_Programming:-Ahmad_Tarraf-blue
+
+<!--* links *-->
