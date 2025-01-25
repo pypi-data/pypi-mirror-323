@@ -1,0 +1,17 @@
+titiler/extensions/__init__.py,sha256=mVdGl4iEmfF0pFcR7mzzx3ONLgxXt8mONFDBclyPMjY,292
+titiler/extensions/cogeo.py,sha256=vFIJ4x4VAhjw8ryQ4NJ3_Uf4ZGkwGvJMQu0opUFUyyU,1215
+titiler/extensions/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+titiler/extensions/render.py,sha256=rULNadAyVyPf7tqZMp3FrZ_1BdUuidCg7gMXfUBEMHA,6002
+titiler/extensions/stac.py,sha256=l8OHrxVb7R3iQbfZNA4fnLhI_a9VQjlsqDIbmkbWRXg,6046
+titiler/extensions/templates/cog_viewer.html,sha256=3zZbWMg5jpiiVW2sfguT3i_FXZwCZ8ecb6FM2gci75k,35421
+titiler/extensions/templates/stac_viewer.html,sha256=SsEDO5wWdSltQA5ZilvLhxWRdHjxTyCX85uVooUxFr0,34020
+titiler/extensions/templates/wms_1.0.0.xml,sha256=rQs9qNVHxhRRSGQCJOozggEVBfAgBtnkWBTop-C-h-g,2471
+titiler/extensions/templates/wms_1.1.1.xml,sha256=l_3AJ-GhyOUThm6u1yUIzGPV1idI1IMeij8jJonJWZs,3069
+titiler/extensions/templates/wms_1.3.0.xml,sha256=RsTAPUPgK_sRBdPEv423pynAga1H8dKREqwi6KNZBho,3820
+titiler/extensions/viewer.py,sha256=CjKvyUW4ZJKWO-_uIgWLSC7wBz52daQdnUl-JrooufA,2405
+titiler/extensions/wms.py,sha256=EstvEd4UcnvZFzJEha23aUXIAQy02z_7trDoPTfNsTU,23166
+titiler_extensions-0.21.0.dist-info/METADATA,sha256=pvvPou4JUDehCunhlk2er80vXcKIjK2nbsMialBrT5E,6295
+titiler_extensions-0.21.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+titiler_extensions-0.21.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+titiler_extensions-0.21.0.dist-info/licenses/LICENSE,sha256=JMWQqrPFT_ROFZt2NtEwJKicd2TYl_D0x22M4CkHhVU,1073
+titiler_extensions-0.21.0.dist-info/RECORD,,
