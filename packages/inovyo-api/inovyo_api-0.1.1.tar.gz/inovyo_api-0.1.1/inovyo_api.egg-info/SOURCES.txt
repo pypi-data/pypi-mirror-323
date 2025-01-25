@@ -1,0 +1,9 @@
+README.md
+setup.py
+inovyo_api/__init__.py
+inovyo_api/auth.py
+inovyo_api.egg-info/PKG-INFO
+inovyo_api.egg-info/SOURCES.txt
+inovyo_api.egg-info/dependency_links.txt
+inovyo_api.egg-info/requires.txt
+inovyo_api.egg-info/top_level.txt
