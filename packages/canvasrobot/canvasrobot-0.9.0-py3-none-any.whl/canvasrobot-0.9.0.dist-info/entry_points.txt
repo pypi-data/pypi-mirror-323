@@ -1,0 +1,3 @@
+[console_scripts]
+canvasrobot = canvasrobot.commandline:cli
+urltransform = canvasrobot.urltransform:cli
