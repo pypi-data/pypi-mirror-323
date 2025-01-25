@@ -1,0 +1,4 @@
+[console_scripts]
+cbpf = astromodule.cli:cbpf
+iguana = astromodule.cli:iguana
+teiu = astromodule.cli:teiu
