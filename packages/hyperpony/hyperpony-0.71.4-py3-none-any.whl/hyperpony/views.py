@@ -1,0 +1,332 @@
+from io import BytesIO
+from typing import cast, Optional, Union, Any
+
+from django.http import HttpRequest, HttpResponse, QueryDict
+from django.urls import path, reverse, ResolverMatch, resolve
+
+from hyperpony.htmx import swap_oob
+from hyperpony.response_handler import RESPONSE_HANDLER, add_response_handler
+from hyperpony.utils import response_to_str
+
+
+def is_head(request: HttpRequest) -> bool:
+    return request.method == "HEAD"
+
+
+def is_get(request: HttpRequest) -> bool:
+    return request.method == "GET"
+
+
+def is_post(request: HttpRequest) -> bool:
+    return request.method == "POST"
+
+
+def is_put(request: HttpRequest) -> bool:
+    return request.method == "PUT"
+
+
+def is_patch(request: HttpRequest) -> bool:
+    return request.method == "PATCH"
+
+
+def is_delete(request: HttpRequest) -> bool:
+    return request.method == "DELETE"
+
+
+class ViewUtilsMixin:
+    """
+    This mixin serves as a helper that simplifies request method
+    detection, response management, and additional request-specific handling logic.
+    """
+
+    def pre_dispatch(self, request, *args, **kwargs):
+        """
+        Pre-processes the request before it is dispatched to the corresponding handler.
+        """
+        pass
+
+    def post_dispatch(self, request, response, *args, **kwargs):
+        """
+        This method is designed to execute any custom logic that should occur after
+        the main dispatching process of handling a web request and response is
+        completed. It allows for further modifications, logging, or cleanup operations
+        to be implemented based on the application's specific requirements.
+        """
+        pass
+
+    def dispatch(self, request: HttpRequest, *args, **kwargs):
+        self.pre_dispatch(request, *args, **kwargs)
+        response = super().dispatch(request, *args, **kwargs)  # type: ignore
+        self.post_dispatch(request, response, *args, **kwargs)
+        return response
+
+    def is_get(self):
+        """
+        Returns True, if the request method is GET.
+        """
+        return self.request.method == "GET"  # type: ignore
+
+    def is_post(self):
+        """
+        Returns True, if the request method is POST.
+        """
+        return self.request.method == "POST"  # type: ignore
+
+    def is_put(self):
+        """
+        Returns True, if the request method is PUT.
+        """
+        return self.request.method == "PUT"  # type: ignore
+
+    def is_patch(self):
+        """
+        Returns True, if the request method is PATCH.
+        """
+        return self.request.method == "PATCH"  # type: ignore
+
+    def is_delete(self):
+        """
+        Returns True, if the request method is DELETE.
+        """
+        return self.request.method == "DELETE"  # type: ignore
+
+    def url(self):
+        """
+        This method constructs and returns the URL of the current request's view,
+        by using Django's `reverse()` function combined with the view name, its
+        arguments, and keyword arguments.
+        """
+        rm = self.request.resolver_match  # type: ignore
+        return reverse(rm.view_name, args=rm.args, kwargs=rm.kwargs)
+
+    def add_response_handler(self, handler: RESPONSE_HANDLER):
+        """
+        Adds a response handler to the current request process to handle
+        responses in a custom way. The provided handler should conform to the specified
+        RESPONSE_HANDLER interface and is applied during the request handling lifecycle.
+        """
+        add_response_handler(self.request, handler)  # type: ignore
+
+    def add_swap_oob(
+        self,
+        additional: HttpResponse | list[HttpResponse],
+        hx_swap_oob_method="outerHTML",
+    ):
+        """
+        Adds an out-of-band (OOB) "swap" operation.
+
+        Parameters:
+            additional: HttpResponse or list[HttpResponse]
+                Represents one or multiple HTTP responses that contain the data or markup
+                needed to update the DOM.
+                **Important:** The responses must only contain a single element with an 'id' attribute.
+            hx_swap_oob_method: str, optional
+                Specifies the HTMX swap method, determining how the OOB content should
+                replace or modify the targeted DOM element. Defaults to "outerHTML".
+        """
+        self.add_response_handler(
+            lambda response: swap_oob(response, additional, hx_swap_oob_method)
+        )
+
+    # noinspection PyPep8Naming
+    def add_swap_oob_view(
+        self,
+        path_name: str,
+        *,
+        GET: Union[QueryDict, dict, None] = None,  # noqa: N803
+        POST: Union[QueryDict, dict, None] = None,  # noqa: N803
+        args=None,
+        kwargs=None,
+        hx_swap_oob_method="outerHTML",
+    ):
+        self.add_swap_oob(
+            invoke_view(self.request, path_name, GET=GET, POST=POST, args=args, kwargs=kwargs),  # type: ignore
+            hx_swap_oob_method=hx_swap_oob_method,
+        )
+
+    def is_embedded_view(self):
+        return is_embedded_request(self.request)  # type: ignore
+
+
+# noinspection PyPep8Naming
+def invoke_view(
+    request: HttpRequest,
+    path_name: str,
+    *,
+    GET: Union[QueryDict, dict, None] = None,  # noqa: N803
+    POST: Union[QueryDict, dict, None] = None,  # noqa: N803
+    args=None,
+    kwargs=None,
+) -> HttpResponse:
+    if isinstance(GET, dict):
+        get_qd = QueryDict(mutable=True)
+        get_qd.update(GET)
+    elif GET is None:
+        get_qd = QueryDict()
+    else:
+        get_qd = GET
+    if isinstance(POST, dict):
+        post_qd = QueryDict(mutable=True)
+        post_qd.update(POST)
+    else:
+        post_qd = POST
+
+    embedded_req = EmbeddedRequest.create(request, get_qd, post_qd)
+
+    url = reverse(path_name, args=args, kwargs=kwargs)
+    rm: ResolverMatch = resolve(url)
+    embedded_req.path = rm.route
+    embedded_req.path_info = rm.route
+    embedded_req.resolver_match = rm
+
+    response = rm.func(embedded_req, *rm.args, **rm.kwargs)
+    return response
+
+
+# noinspection PyPep8Naming
+def embed_view(
+    request: HttpRequest,
+    path_name: str,
+    *,
+    GET: Union[QueryDict, dict, None] = None,  # noqa: N803
+    POST: Union[QueryDict, dict, None] = None,  # noqa: N803
+    args=None,
+    kwargs=None,
+) -> str:
+    response = invoke_view(request, path_name, GET=GET, POST=POST, args=args, kwargs=kwargs)
+    return response_to_str(response)
+
+
+def is_embedded_request(request: HttpRequest) -> bool:
+    return isinstance(request, EmbeddedRequest)
+
+
+class SingletonPathMixin:
+    """
+    This mixin is designed to ensure a unique path for the views that implement it.
+    It allows using the view directly, and various utility methods for reverse lookups
+    and handling out-of-band swap responses.
+    """
+
+    @classmethod
+    def create_path(
+        cls,
+        path_suffix: Optional[str] = None,
+        *,
+        full_path: Optional[str] = None,
+        name: Optional[str] = None,
+    ):
+        if cls.get_path_name() is not None:
+            raise Exception("create_path() can only be called once per view class.")
+        if full_path is not None and path_suffix is not None:
+            raise Exception("Either full_path or path_suffix can be specified, not both.")
+
+        if full_path is None:
+            path_suffix = "" if path_suffix is None else path_suffix
+            full_path = cls.__name__
+            full_path += "/" if len(path_suffix) > 0 and not path_suffix.startswith("/") else ""
+            full_path += path_suffix
+
+        path_name = (
+            name if name is not None else f"{cls.__module__}.{cls.__name__}".replace(".", "-")
+        )
+        setattr(cls, "__path_name", path_name)
+
+        return path(full_path, cast(Any, cls).as_view(), name=path_name)
+
+    @classmethod
+    def get_path_name(cls) -> Optional[str]:
+        return cls.__dict__.get("__path_name", None)
+
+    # noinspection PyPep8Naming
+    @classmethod
+    def invoke(
+        cls,
+        request: HttpRequest,
+        *,
+        GET: Union[QueryDict, dict, None] = None,  # noqa: N803
+        POST: Union[QueryDict, dict, None] = None,  # noqa: N803
+        args=None,
+        kwargs=None,
+    ):
+        path_name = cls.get_path_name()
+        if path_name is None:
+            raise Exception(f"View {cls} was not registered with create_path().")
+        return invoke_view(request, path_name, GET=GET, POST=POST, args=args, kwargs=kwargs)
+
+    # noinspection PyPep8Naming
+    @classmethod
+    def embed(
+        cls,
+        request: HttpRequest,
+        *,
+        GET: Union[QueryDict, dict, None] = None,  # noqa: N803
+        POST: Union[QueryDict, dict, None] = None,  # noqa: N803
+        args=None,
+        kwargs=None,
+    ):
+        path_name = cls.get_path_name()
+        if path_name is None:
+            raise Exception(f"View {cls} was not registered with create_path().")
+        return embed_view(request, path_name, GET=GET, POST=POST, args=args, kwargs=kwargs)
+
+    # noinspection PyPep8Naming
+    @classmethod
+    def swap_oob(
+        cls,
+        request: HttpRequest,
+        *,
+        hx_swap="outerHTML",
+        GET: Union[QueryDict, dict, None] = None,  # noqa: N803
+        POST: Union[QueryDict, dict, None] = None,  # noqa: N803
+        args=None,
+        kwargs=None,
+    ):
+        self_response = cls.invoke(request, GET=GET, POST=POST, args=args, kwargs=kwargs)
+        add_response_handler(
+            request,
+            lambda response: swap_oob(response, self_response, hx_swap),
+        )
+
+    @classmethod
+    def reverse(cls, *, urlconf=None, args=None, kwargs=None, current_app=None):
+        return reverse(
+            cls.get_path_name(), urlconf=urlconf, args=args, kwargs=kwargs, current_app=current_app
+        )
+
+
+class EmbeddedRequest(HttpRequest):
+    @classmethod
+    def create(
+        cls,
+        original_request: HttpRequest,
+        get: Optional[QueryDict] = None,
+        post: Optional[QueryDict] = None,
+    ):
+        self = cls()
+        self.__original_request = original_request
+        self._read_started = False
+        self._stream = BytesIO()
+        self.COOKIES = original_request.COOKIES
+        self.META = original_request.META
+        self.content_type = "text/html; charset=utf-8"
+        self.content_params = {}
+        self.method = "GET" if post is None else "POST"
+        self.GET = cast(Any, get) if get is not None else QueryDict()
+        self.POST = cast(Any, post) if post is not None else QueryDict()
+        return self
+
+    def __getattr__(self, name):
+        return getattr(self.__original_request, name)
+
+
+class ElementIdMixin:
+    element_id: Optional[str] = None
+
+    def get_element_id(self) -> str:
+        return self.element_id or self.__class__.__name__
+
+
+class ElementAttrsMixin:
+    def get_attrs(self) -> dict[str, str]:
+        return {}
