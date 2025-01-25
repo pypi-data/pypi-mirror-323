@@ -1,0 +1,3 @@
+[console_scripts]
+run-my-script = Xfer4suretest_package.script:run_script
+
