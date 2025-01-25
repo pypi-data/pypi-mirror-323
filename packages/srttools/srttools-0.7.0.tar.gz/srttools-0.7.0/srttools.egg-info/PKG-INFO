@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: srttools
+Version: 0.7.0
+Summary: SRT single dish tools: Tools for the analysis and conversion of SRT data
+Author: Giuseppe Carboni, The Disc Team
+Author-email: Matteo Bachetti <matteo@matteobachetti.it>
+License: 3-clause BSD
+Project-URL: homepage, https://srt-single-dish-tools.readthedocs.io
+Project-URL: documentation, https://srt-single-dish-tools.readthedocs.io
+Project-URL: repository, https://github.com/discos/srt-single-dish-tools
+Keywords: astronomy,astrophysics,time series,X-ray,data analysis,black holes,neutron stars,pulsars,space,science
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Provides-Extra: test
+Provides-Extra: test_all
+Provides-Extra: recommended
+Provides-Extra: all
+Provides-Extra: docs
