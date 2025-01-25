@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+topsis_mohit_102397005/__init__.py
+topsis_mohit_102397005/topsis_102397005.py
+topsis_mohit_102397005.egg-info/PKG-INFO
+topsis_mohit_102397005.egg-info/SOURCES.txt
+topsis_mohit_102397005.egg-info/dependency_links.txt
+topsis_mohit_102397005.egg-info/requires.txt
+topsis_mohit_102397005.egg-info/top_level.txt
