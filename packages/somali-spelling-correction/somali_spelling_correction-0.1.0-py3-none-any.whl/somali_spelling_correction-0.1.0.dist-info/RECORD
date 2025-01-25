@@ -1,0 +1,8 @@
+somali_spelling_correction/__init__.py,sha256=KesdUKPQgc-9Jrd2ch_Fsj-aRNDLR4aKFgKtlMQpn5c,57
+somali_spelling_correction/spelling_correction.py,sha256=zwup4P2oleiUfd-OheAj9uap4SfcsbHHEYhzvqkoCic,1836
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_spelling_correction.py,sha256=JFreQQk5KSB0zC0xCLGjPwagRRd2bBSqZGP6r3lR0zM,654
+somali_spelling_correction-0.1.0.dist-info/METADATA,sha256=gOG_At19422uXowRw9WNPKFksn_R2bObQvZO2k34Sr0,545
+somali_spelling_correction-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+somali_spelling_correction-0.1.0.dist-info/top_level.txt,sha256=f4xCyQ54afAcffLvliA0bvbxuV4ve03NNud1qG645PM,33
+somali_spelling_correction-0.1.0.dist-info/RECORD,,
