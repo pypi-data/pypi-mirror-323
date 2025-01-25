@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: cgse-tools
+Version: 2025.0.5
+Summary: Tools for CGSE
+Author: IVS KU Leuven
+Maintainer-email: Rik Huygen <rik.huygen@kuleuven.be>, Sara Regibo <sara.regibo@kuleuven.be>
+License-Expression: MIT
+Keywords: CGSE,Common-EGSE,hardware testing,software framework
+Requires-Python: >=3.9
+Requires-Dist: cgse-core
+Requires-Dist: rich>=13.9.4
+Requires-Dist: textual>=1.0.0
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest-mock; extra == 'test'
+Description-Content-Type: text/markdown
+
+# Tools for the CGSE framework
