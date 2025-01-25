@@ -1,0 +1,3 @@
+[console_scripts]
+copy-gnomad-toolbox-notebooks = gnomad_toolbox.scripts:copy_notebooks_cli
+gnomad-toolbox-jupyter = gnomad_toolbox.scripts:run_jupyter_cli

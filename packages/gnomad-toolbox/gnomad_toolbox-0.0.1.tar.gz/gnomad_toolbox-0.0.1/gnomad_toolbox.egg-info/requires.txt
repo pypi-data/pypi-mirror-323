@@ -1,0 +1,9 @@
+gnomad>=0.8.2
+hail
+jupyter
+jupyter_contrib_nbextensions
+jupyter_nbextensions_configurator
+jupyterlab
+nodejs
+npm
+jupyter-server<2.0.0
