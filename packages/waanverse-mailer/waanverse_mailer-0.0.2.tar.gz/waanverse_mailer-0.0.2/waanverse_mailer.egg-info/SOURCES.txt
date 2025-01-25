@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+waanverse_mailer/__init__.py
+waanverse_mailer/apps.py
+waanverse_mailer/email_service.py
+waanverse_mailer/utils.py
+waanverse_mailer/version.py
+waanverse_mailer.egg-info/PKG-INFO
+waanverse_mailer.egg-info/SOURCES.txt
+waanverse_mailer.egg-info/dependency_links.txt
+waanverse_mailer.egg-info/requires.txt
+waanverse_mailer.egg-info/top_level.txt
