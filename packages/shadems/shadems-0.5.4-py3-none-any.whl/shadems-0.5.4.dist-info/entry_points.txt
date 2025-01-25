@@ -1,0 +1,3 @@
+[console_scripts]
+shadems=shade_ms.main:driver
+
