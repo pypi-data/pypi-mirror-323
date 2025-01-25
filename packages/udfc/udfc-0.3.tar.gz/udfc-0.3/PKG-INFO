@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: udfc
+Version: 0.3
+Summary: A Small tool to create .desktop files
+Home-page: https://github.com/juanvel4000/udfc
+Author: juanvel400
+Author-email: juanvel400@proton.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+
+# udfc
+A small tool written in python to create **.desktop** files based on a series of questions
+
+## License
+
+udfc is licensed with the **MIT** license, read the license text in **LICENSE**
+

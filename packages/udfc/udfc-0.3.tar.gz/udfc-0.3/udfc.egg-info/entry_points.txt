@@ -1,0 +1,2 @@
+[console_scripts]
+udfc = udfc.main:main
