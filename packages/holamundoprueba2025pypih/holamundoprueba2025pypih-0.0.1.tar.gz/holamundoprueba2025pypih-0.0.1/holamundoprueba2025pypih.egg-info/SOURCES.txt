@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+holamundoplayer/__init__.py
+holamundoplayer/loquesea.py
+holamundoplayer/player.py
+holamundoprueba2025pypih.egg-info/PKG-INFO
+holamundoprueba2025pypih.egg-info/SOURCES.txt
+holamundoprueba2025pypih.egg-info/dependency_links.txt
+holamundoprueba2025pypih.egg-info/top_level.txt
