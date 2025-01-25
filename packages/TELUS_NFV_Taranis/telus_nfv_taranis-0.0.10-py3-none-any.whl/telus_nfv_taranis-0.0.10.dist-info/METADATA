@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: TELUS_NFV_Taranis
+Version: 0.0.10
+Summary: This module provides types used for NATS messages. It allows for python NATS clients to validate the messages they send and receive. It also has a dispatcher component that can be used to route messages to the appropriate handler based on the message type.
+Author-email: Salim Gangji <0z79qdsfi@mozmail.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: pydantic
+Requires-Dist: nats-py
+Project-URL: Home, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
