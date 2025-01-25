@@ -1,0 +1,5 @@
+hyperpocket_langchain/__init__.py,sha256=W6CWTgNymARQ7aPw99ItplrB0oH5ZAdBj-OSsaX0u7Y,98
+hyperpocket_langchain/pocket_langchain.py,sha256=PGvy0NRJVjqIxMbtLaycKr0YwGsZ9qXn454i5YGgnNc,2461
+hyperpocket_langchain-0.2.0.dist-info/METADATA,sha256=Cq-uAE_vnIU6XoP06Gw6baS5w-PgkBM_ZhsshmsuKB0,2185
+hyperpocket_langchain-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hyperpocket_langchain-0.2.0.dist-info/RECORD,,
