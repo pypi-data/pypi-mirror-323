@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: players_ftbl12
+Version: 0.0.6
+Summary: Takes player information from Transfermarkt
+Home-page: https://github.com/y1ach/playersftbl12
+Author: Yach
+Author-email: yigitalicelik@hotmail.com
+Keywords: Football Players
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+# Players FTBL
+
+A library to scrape football players' information from Transfermarkt.
+
+## Installation
+
+You can install it via pip:
+
+```bash
+pip install players-ftbl12
+
+Change Log
+==========
+
+0.0.6 (25/01/2024)
+-------------------
+
