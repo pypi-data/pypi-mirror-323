@@ -1,0 +1,242 @@
+Metadata-Version: 2.1
+Name: qualia-core
+Version: 2.4.0
+Summary: Qualia toolchain Core
+Author-Email: Pierre-Emmanuel Novac <penovac@unice.fr>
+License: AGPL-3.0-or-later
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Project-URL: homepage, https://github.com/LEAT-EDGE/qualia-core
+Project-URL: documentation, https://leat-edge.github.io/qualia-core
+Requires-Python: <3.13,>=3.9
+Requires-Dist: numpy>=1.22.0
+Requires-Dist: tomlkit>=0.11.7
+Requires-Dist: colorful
+Requires-Dist: gitpython
+Requires-Dist: blosc2
+Requires-Dist: pydantic
+Requires-Dist: typing_extensions; python_version < "3.12"
+Provides-Extra: codegen
+Requires-Dist: qualia_codegen_core; extra == "codegen"
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow<2.18.0rc0; extra == "tensorflow"
+Requires-Dist: keras>=2.13.1; extra == "tensorflow"
+Requires-Dist: pydot; extra == "tensorflow"
+Provides-Extra: pytorch
+Requires-Dist: torch; extra == "pytorch"
+Requires-Dist: pytorch-lightning>=1.4.0; extra == "pytorch"
+Requires-Dist: tabulate; extra == "pytorch"
+Provides-Extra: gtsrb
+Requires-Dist: imageio; extra == "gtsrb"
+Requires-Dist: scikit-image; extra == "gtsrb"
+Provides-Extra: gsc
+Requires-Dist: torchaudio; extra == "gsc"
+Provides-Extra: pytorch3drotation
+Requires-Dist: pytorch3d; extra == "pytorch3drotation"
+Provides-Extra: dataaugmentation-image
+Requires-Dist: torchvision; extra == "dataaugmentation-image"
+Provides-Extra: clearml
+Requires-Dist: clearml; extra == "clearml"
+Requires-Dist: tensorboard; extra == "clearml"
+Provides-Extra: visualize
+Requires-Dist: matplotlib; extra == "visualize"
+Requires-Dist: pypdf; extra == "visualize"
+Provides-Extra: deployment-sparkfunedge
+Requires-Dist: pycryptodome; extra == "deployment-sparkfunedge"
+Provides-Extra: evaluation-host-tflite
+Requires-Dist: scikit-learn; extra == "evaluation-host-tflite"
+Provides-Extra: evaluation-target-qualia
+Requires-Dist: pyserial; extra == "evaluation-target-qualia"
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-dependency; extra == "tests"
+Requires-Dist: pytest-xdist; extra == "tests"
+Requires-Dist: pytest-env; extra == "tests"
+Requires-Dist: dill; extra == "tests"
+Requires-Dist: filelock; extra == "tests"
+Provides-Extra: lint
+Requires-Dist: ruff; extra == "lint"
+Provides-Extra: typecheck
+Requires-Dist: mypy; extra == "typecheck"
+Requires-Dist: pyright; extra == "typecheck"
+Provides-Extra: docs
+Requires-Dist: pdm; extra == "docs"
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+Description-Content-Type: text/markdown
+
+# Qualia Core (formerly MicroAI)
+End-to-end training, quantization and deployment framework for deep neural networks on microcontrollers.
+
+Repository should be cloned with `--recursive` to get TFLite Micro and its dependencies.
+
+## Dependencies
+
+Python:
+```
+numpy
+scikit-learn
+tomlkit
+colorful
+gitpython
+```
+
+### Dataset
+
+#### GTSRB
+
+Python:
+```
+imageio
+scikit-image
+```
+
+### Training
+
+#### TensorFlow
+
+Python:
+```
+tensorflow
+tensorflow_addons
+```
+
+#### PyTorch
+
+Python:
+```
+pytorch
+pytorch_lightning
+```
+
+### Deployment
+
+#### Embedded targets
+
+##### SparkFun Edge 
+
+Python:
+```
+pycryptodome
+```
+
+##### Nucleo-L452RE-P
+System:
+```
+stm32cubeide
+stm32cubeprog
+```
+
+#### Embedded frameworks
+
+##### STM32Cube.AI
+
+STM32CubeIDE extension pack:
+```
+X-CUBE-AI == 5.2.0
+```
+
+##### TensorFlow Lite Micro
+
+System:
+```
+arm-none-eabi-binutils
+arm-none-eabi-gcc
+arm-none-eabi-newlib
+libopenexr-dev
+wget
+```
+
+##### Qualia-CodeGen
+Python:
+```
+jinja2
+```
+
+System:
+```
+arm-none-eabi-binutils
+arm-none-eabi-gcc
+arm-none-eabi-newlib
+```
+
+### Evaluation
+Python:
+```
+pyserial
+```
+
+## Usage
+
+If Qualia installed with pip, you can run the `qualia` command directly. Otherwise run `PYTHONPATH=. ./bin/qualia <config.toml> <action>` from the qualia directory.
+
+### Dataset pre-processing
+```
+qualia <config.toml> preprocess_data
+```
+
+### Training
+```
+qualia <config.toml> train
+```
+
+### Prepare deployment (generate firmware)
+```
+qualia <config.toml> prepare_deploy
+```
+
+### Deploy and evaluate
+```
+qualia <config.toml> deploy_and_evaluate
+```
+
+### Run test suite
+```
+CUBLAS_WORKSPACE_CONFIG=:4096:8 PYTHONHASHSEED=2 python -m unittest discover qualia/tests
+```
+
+## Included support for datasets, learning framework, neural networks, embedded frameworks and targets
+
+### Datasets
+- [UCI HAR](https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones)
+- [GTSRB](https://benchmark.ini.rub.de/)
+- [Written and Spoken MNIST](https://zenodo.org/record/3515935)
+
+### Learning frameworks
+- TensorFlow.Keras
+- PyTorch
+
+### Neural networks
+- MLP
+- CNN (1D&2D)
+- Resnetv1 (1D&2D)
+
+### Embedded frameworks
+- STM32Cube.AI
+- TensorFlow Lite for Microcontrollers
+- Qualia-CodeGen
+
+### Targets
+- Nucleo-L452RE-P
+- SparkFun Edge
+
+## Reference & Citation
+
+[Quantization and Deployment of Deep Neural Networks on Microcontrollers](https://www.mdpi.com/1424-8220/21/9/2984), Pierre-Emmanuel Novac, Ghouthi Boukli Hacene, Alain Pegatoquet, Benoît Miramond and Vincent Gripon, Sensors, 2021.
+
+```
+@article{qualia,
+	author = {Novac, Pierre-Emmanuel and Boukli Hacene, Ghouthi and Pegatoquet, Alain and Miramond, Benoît and Gripon, Vincent},
+	title = {Quantization and Deployment of Deep Neural Networks on Microcontrollers},
+	journal = {Sensors},
+	volume = {21},
+	year = {2021},
+	number = {9},
+	article-number = {2984},
+	url = {https://www.mdpi.com/1424-8220/21/9/2984},
+	issn = {1424-8220},
+	doi = {10.3390/s21092984}
+}
+```

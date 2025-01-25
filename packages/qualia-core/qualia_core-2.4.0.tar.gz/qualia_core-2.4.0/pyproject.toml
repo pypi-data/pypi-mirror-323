@@ -1,0 +1,183 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "qualia-core"
+authors = [
+    { name = "Pierre-Emmanuel Novac", email = "penovac@unice.fr" },
+]
+description = "Qualia toolchain Core"
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.22.0",
+    "tomlkit>=0.11.7",
+    "colorful",
+    "gitpython",
+    "blosc2",
+    "pydantic",
+    "typing_extensions; python_version < \"3.12\"",
+]
+dynamic = []
+version = "2.4.0"
+
+[project.license]
+text = "AGPL-3.0-or-later"
+
+[project.urls]
+homepage = "https://github.com/LEAT-EDGE/qualia-core"
+documentation = "https://leat-edge.github.io/qualia-core"
+
+[project.optional-dependencies]
+codegen = [
+    "qualia_codegen_core",
+]
+tensorflow = [
+    "tensorflow<2.18.0rc0",
+    "keras>=2.13.1",
+    "pydot",
+]
+pytorch = [
+    "torch",
+    "pytorch-lightning>=1.4.0",
+    "tabulate",
+]
+gtsrb = [
+    "imageio",
+    "scikit-image",
+]
+gsc = [
+    "torchaudio",
+]
+pytorch3drotation = [
+    "pytorch3d",
+]
+dataaugmentation_image = [
+    "torchvision",
+]
+clearml = [
+    "clearml",
+    "tensorboard",
+]
+visualize = [
+    "matplotlib",
+    "pypdf",
+]
+deployment-sparkfunedge = [
+    "pycryptodome",
+]
+evaluation-host-tflite = [
+    "scikit-learn",
+]
+evaluation-target-qualia = [
+    "pyserial",
+]
+tests = [
+    "pytest",
+    "pytest-dependency",
+    "pytest-xdist",
+    "pytest-env",
+    "dill",
+    "filelock",
+]
+lint = [
+    "ruff",
+]
+typecheck = [
+    "mypy",
+    "pyright",
+]
+docs = [
+    "pdm",
+    "sphinx",
+    "sphinx-rtd-theme",
+    "myst-parser",
+]
+
+[project.scripts]
+qualia = "qualia_core.main:main"
+clearml-import-offline = "qualia_core.experimenttracking.pytorch.ClearML:ClearML.import_and_clear_all_offline_sessions"
+qualia-gen-featuremap-pdf = "qualia_core.postprocessing.VisualizeFeatureMaps:VisualizeFeatureMaps.gen_featuremap_pdf"
+
+[tool.pytest.ini_options]
+markers = [
+    "deploy: tests requiring deployment on target (deselect with '-m \"not deploy\"')",
+]
+testpaths = "tests"
+env = [
+    "CUBLAS_WORKSPACE_CONFIG=:4096:8",
+    "PYTHONHASHSEED=2",
+]
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.ruff]
+extend-exclude = [
+    "third_party",
+]
+line-length = 131
+target-version = "py39"
+
+[tool.ruff.lint]
+select = [
+    "ALL",
+]
+ignore = [
+    "ANN101",
+    "ANN102",
+    "D1",
+    "N999",
+    "D203",
+    "D213",
+]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+
+[tool.mypy]
+files = [
+    "src",
+]
+exclude = [
+    "third_party",
+]
+python_version = 3.9
+strict = true
+show_column_numbers = true
+pretty = true
+plugins = "numpy.typing.mypy_plugin"
+
+[tool.pylsp-mypy]
+enabled = true
+live_mode = true
+strict = true
+report_progress = true
+
+[tool.pyright]
+include = [
+    "src",
+]
+exclude = [
+    "**/third_party",
+    "**/examples",
+]
+pythonVersion = "3.9"
+typeCheckingMode = "strict"
+reportCallInDefaultInitializer = "warning"
+reportImplicitOverride = "warning"
+reportImplicitStringConcatenation = "warning"
+reportMissingSuperCall = "warning"
+reportPropertyTypeMismatch = "warning"
+reportShadowedImports = "warning"
+reportUninitializedInstanceVariable = "warning"
+reportUnnecessaryTypeIgnoreComment = "warning"
+reportUnusedCallResult = "warning"
