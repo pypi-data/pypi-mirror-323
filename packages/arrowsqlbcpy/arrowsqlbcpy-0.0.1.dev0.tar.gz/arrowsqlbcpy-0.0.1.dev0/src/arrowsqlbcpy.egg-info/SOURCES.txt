@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+version.txt
+src/arrowsqlbcpy/__init__.py
+src/arrowsqlbcpy/py.typed
+src/arrowsqlbcpy.egg-info/PKG-INFO
+src/arrowsqlbcpy.egg-info/SOURCES.txt
+src/arrowsqlbcpy.egg-info/dependency_links.txt
+src/arrowsqlbcpy.egg-info/not-zip-safe
+src/arrowsqlbcpy.egg-info/requires.txt
+src/arrowsqlbcpy.egg-info/top_level.txt
