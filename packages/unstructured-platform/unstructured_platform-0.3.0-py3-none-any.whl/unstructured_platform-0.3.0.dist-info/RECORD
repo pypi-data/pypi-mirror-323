@@ -1,0 +1,13 @@
+unstructured_platform_sdk/__init__.py,sha256=5gwhql1WsaiMNLog-W0qTbHaHgZvS4OXP9ioA8fytPc,196
+unstructured_platform_sdk/client.py,sha256=KHz8jKXyG9CRwXRpiiU07pRj48rrbaUfIlzwvhRcFYE,2357
+unstructured_platform_sdk/models.py,sha256=qzzIUf4GYBiKBpfyqJ1_4ExiSuU5iBFypIwYDztWvmo,2863
+unstructured_platform_sdk/api/__init__.py,sha256=mKWvGbJ2O5YK87SA2k1MSVOir3VzzGP9hdXeSIyORas,385
+unstructured_platform_sdk/api/base.py,sha256=IC4pmu358tyzUgEqxcG429pHzCy0PIiJ0t0YpAjOa7E,460
+unstructured_platform_sdk/api/destinations.py,sha256=E9yulreK9V7PnSI1RRJbQ9Hudv-t9ujRZ7bUksWf91w,3247
+unstructured_platform_sdk/api/jobs.py,sha256=V18lP89mgMowsPlIKcbOrxMQ4rkeZaex4jM6KYolLNA,1350
+unstructured_platform_sdk/api/sources.py,sha256=M6WgbNpWJui5zkUcsYJ5YQHMBsI8v2C7GoLxhI3A5qQ,3006
+unstructured_platform_sdk/api/workflows.py,sha256=lw02XrN625YSlgNReg1Rhc0G36I_EbQWktpfIsAG1wI,4706
+unstructured_platform-0.3.0.dist-info/METADATA,sha256=Jv0G7FSMrxpwK8uL48EZCoInzdi235GX4Vu-4-eIhQM,5648
+unstructured_platform-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+unstructured_platform-0.3.0.dist-info/licenses/LICENSE,sha256=uF4Jun1cUhrk7Oyvok1OOmwNLiLFUwXRP6hjh-hT754,1108
+unstructured_platform-0.3.0.dist-info/RECORD,,
