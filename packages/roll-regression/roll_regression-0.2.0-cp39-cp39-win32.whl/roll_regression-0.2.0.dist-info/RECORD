@@ -1,0 +1,11 @@
+roll_regression/__init__.py,sha256=7-FxpvSReynUgdheY28TsmAAZ8BPMAJKFN4K4knOAAo,173
+roll_regression/roll_regression.py,sha256=JxWs96VyAOnFkbTKfSirWwQoTjPQVfubX-wM1uRiVWk,4680
+roll_regression/rust/Cargo.toml,sha256=CuagrMokPfehspzFMO57YJb2bPVs_VAO6qg_l7IUSog,220
+roll_regression/rust/src/lib.rs,sha256=HS-EPWiylluBKohysEFIssHTsE0iCnMHhWMDES9glKk,7906
+roll_regression/rust/src/roll_regression.h,sha256=4c90nwwefp5ryikbvAfxeXh2teyfq9AeRZTMT45Ic30,304
+roll_regression-0.2.0.dist-info/AUTHORS.rst,sha256=ddWmZ3-O4Zj9yNG4uvbDLjNsEwhDC-NxKzZXqrMIjuM,167
+roll_regression-0.2.0.dist-info/LICENSE,sha256=If-NeElIuqQV3yNv3TEiOrKHCPfe7PXYBll7oesjiXQ,1081
+roll_regression-0.2.0.dist-info/METADATA,sha256=PRlpw2lKIuphDyvoHOSQFtDd5SU2lv2Exrma1s3d4xA,804
+roll_regression-0.2.0.dist-info/WHEEL,sha256=nit2jk1XD9iB81u5goYHy9pLj6BDgJHNYHDLr0P5SFs,95
+roll_regression-0.2.0.dist-info/top_level.txt,sha256=mRofTucHFSgqpT_aXoRGYgVXEtvRBBGvcBYQHAqx6Ts,16
+roll_regression-0.2.0.dist-info/RECORD,,
