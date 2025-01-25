@@ -1,0 +1,19 @@
+[project]
+name = "aws-test-harness"
+version =   "0.0.1a14"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "boto3>=1.29.7",
+    "boto3-stubs[cloudformation,dynamodb,s3,sqs,stepfunctions,sts]>=1.29.7",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/**/*.py"
+]
