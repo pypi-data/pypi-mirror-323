@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+AntonVoiceLib/__init__.py
+AntonVoiceLib.egg-info/PKG-INFO
+AntonVoiceLib.egg-info/SOURCES.txt
+AntonVoiceLib.egg-info/dependency_links.txt
+AntonVoiceLib.egg-info/not-zip-safe
+AntonVoiceLib.egg-info/top_level.txt
