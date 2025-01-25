@@ -1,0 +1,11 @@
+[console_scripts]
+cgse-status = egse.tools.status:main
+
+[cgse.plugins]
+foo = scripts.cgse_plugins:foo
+
+[cgse.service.plugins]
+xxx = scripts.cgse_service_plugins:xxx
+
+[cgse.version]
+cgse-tools = egse.tools
