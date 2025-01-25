@@ -1,0 +1,2 @@
+[console_scripts]
+neon_users_service = neon_users_service.__main__:main
