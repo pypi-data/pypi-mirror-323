@@ -1,0 +1,10 @@
+usaugment/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+usaugment/albumentations/__init__.py,sha256=dmZ9TJkuEwjn-XkSkGGm87zTeiswVCLBlwZp0-1AabE,199
+usaugment/albumentations/depth_attenuation.py,sha256=EPU6wVwrZcGrBE6NNpA4paKyCWQHB0LGhJRPZ-Xrm_4,2747
+usaugment/albumentations/gaussian_shadow.py,sha256=hQ0X3Bq7K4QODZhO2V_ctTTGdKPIOw1rj54dEX2l2C4,2922
+usaugment/albumentations/haze_artifact.py,sha256=IfDfxcH_X7cgGNITmcg1PqBjch6WSXlDoKnSbo5gTiw,2330
+usaugment/albumentations/speckle_reduction.py,sha256=P__uBtys2LoMeM4JqnRLPKGQSDrRXgfEpAPHIex0eQE,2467
+usaugment-1.0.0.dist-info/METADATA,sha256=lBLsoBNGCVmspxc7ClJvrWejhtjBgLJHUFSi3cTlPZ4,3746
+usaugment-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+usaugment-1.0.0.dist-info/licenses/LICENSE,sha256=b51VFBdq5MDnX6UjVr9wM0t1ZJSiqQQX22GFfDxoqAY,1068
+usaugment-1.0.0.dist-info/RECORD,,
