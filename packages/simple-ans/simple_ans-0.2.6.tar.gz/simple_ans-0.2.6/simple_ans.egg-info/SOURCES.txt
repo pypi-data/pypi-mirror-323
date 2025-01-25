@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+simple_ans/EncodedSignal.py
+simple_ans/__init__.py
+simple_ans/choose_symbol_counts.py
+simple_ans/encode_decode.py
+simple_ans.egg-info/PKG-INFO
+simple_ans.egg-info/SOURCES.txt
+simple_ans.egg-info/dependency_links.txt
+simple_ans.egg-info/requires.txt
+simple_ans.egg-info/top_level.txt
+simple_ans/cpp/simple_ans.cpp
+simple_ans/cpp/simple_ans.hpp
+tests/test_simple_ans.py
