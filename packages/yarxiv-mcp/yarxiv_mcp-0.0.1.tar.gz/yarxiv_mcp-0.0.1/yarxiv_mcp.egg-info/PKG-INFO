@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: yarxiv-mcp
+Version: 0.0.1
+Summary: Yet another MCP server that provides access to arXiv papers through their API.
+Author-email: Ilya Gusev <phoenixilya@gmail.com>
+Project-URL: Homepage, https://github.com/IlyaGusev/yarxiv_mcp
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp
+Requires-Dist: xmltodict>=0.14.0
+Requires-Dist: types-xmltodict>=0.14.0
+Requires-Dist: requests>=2.32.0
+Requires-Dist: types-requests>=2.32.0
+
+# yarxiv_mcp
+Yet another ArXiv MCP server

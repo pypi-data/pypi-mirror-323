@@ -1,0 +1,2 @@
+[console_scripts]
+yarxiv_mcp = yarxiv_mcp:main
