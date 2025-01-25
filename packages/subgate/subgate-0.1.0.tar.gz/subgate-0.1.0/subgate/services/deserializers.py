@@ -1,0 +1,100 @@
+from datetime import datetime
+
+from subgate.domain.cycle import Cycle
+from subgate.domain.discount import Discount
+from subgate.domain.plan import Plan, ID
+from subgate.domain.subscription import Subscription
+from subgate.domain.usage import UsageRate, Usage, UsageForm
+from subgate.domain.webhook import Webhook
+
+
+def deserialize_cycle(data: dict) -> Cycle:
+    return Cycle(
+        title=data["title"],
+        code=data["code"],
+        cycle_in_days=data["cycleInDays"],
+    )
+
+
+def deserialize_usage_rate(data: dict) -> UsageRate:
+    return UsageRate(
+        code=data["code"],
+        unit=data["unit"],
+        available_units=data["availableUnits"],
+        renew_cycle=data["renewCycle"]["code"],
+        title=data["title"],
+    )
+
+
+def deserialize_usage(data: dict) -> Usage:
+    return Usage(
+        title=data["title"],
+        code=data["code"],
+        unit=data["unit"],
+        available_units=data["availableUnits"],
+        used_units=data["usedUnits"],
+        renew_cycle=data["renewCycle"]["code"],
+    )
+
+
+def deserialize_usage_form(data: dict) -> UsageForm:
+    return UsageForm(code=data["code"], value=data["value"])
+
+
+def deserialize_discount(data: dict) -> Discount:
+    return Discount(
+        title=data["title"],
+        code=data["code"],
+        description=data["description"],
+        size=data["size"],
+        valid_until=datetime.fromisoformat(data["validUntil"]),
+    )
+
+
+def deserialize_plan(data: dict) -> Plan:
+    usage_rates = [deserialize_usage_rate(x) for x in data["usageRates"]]
+    discounts = [deserialize_discount(x) for x in data["discounts"]]
+    billing_cycle = deserialize_cycle(data["billingCycle"])
+    return Plan(
+        id=ID(data["id"]),
+        title=data["title"],
+        price=data["price"],
+        currency=data["currency"],
+        billing_cycle=billing_cycle,
+        description=data["description"],
+        level=data["level"],
+        features=data["features"],
+        fields=data["fields"],
+        usage_rates=usage_rates,
+        discounts=discounts,
+        created_at=datetime.fromisoformat(data["createdAt"]),
+        updated_at=datetime.fromisoformat(data["updatedAt"]),
+    )
+
+
+def deserialize_subscription(data: dict) -> Subscription:
+    paused_from = datetime.fromisoformat(data["pausedFrom"]) if data.get("pausedFrom") else None
+    usage_rates = [deserialize_usage(x) for x in data["usages"]]
+    plan = deserialize_plan(data["plan"])
+    return Subscription(
+        id=ID(data["id"]),
+        subscriber_id=data["subscriberId"],
+        plan=plan,
+        last_billing=datetime.fromisoformat(data["lastBilling"]),
+        status=data["status"],
+        created_at=datetime.fromisoformat(data["createdAt"]),
+        updated_at=datetime.fromisoformat(data["updatedAt"]),
+        paused_from=paused_from,
+        autorenew=data["autorenew"],
+        usages=usage_rates,
+    )
+
+
+def deserialize_webhook(data: dict) -> Webhook:
+    return Webhook(
+        id=ID(data["id"]),
+        event_code=data["eventCode"],
+        target_url=data["targetUrl"],
+        created_at=datetime.fromisoformat(data["createdAt"]),
+        updated_at=datetime.fromisoformat(data["updatedAt"]),
+    )
