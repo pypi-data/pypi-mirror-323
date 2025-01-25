@@ -1,0 +1,16 @@
+ug_gemeinde/Gemeinde.py,sha256=yNCncDw28D4rxmFHnEhFxC-vsN3YTW3itKKmabMq3wI,97576
+ug_gemeinde/Gemeinde.yaml,sha256=4jUCQhaigb-PPhLbAQiXZBJhlrnxq3X9UwALnSpfXwY,1734
+ug_gemeinde/GemeindeInstall.ps1,sha256=A-u8QTWm7E3C7vQz88XLkrNYAXY8kW555asKqCZQ0nw,3305
+ug_gemeinde/GemeindeInstall.sh,sha256=Syks0goQZXxo9YAyj2Y8cS8HqTNOYbP0a1WHm1ceCl0,2893
+ug_gemeinde/GemeindeStart.ps1,sha256=ABYh8Dq8D7M7ZQqVY0H6_IaSZv_DxoEI5AbAapjQI1E,514
+ug_gemeinde/GemeindeStart.sh,sha256=xtpegewRc4lMC8wF09XLWyIHFEmYXmoE8c8_Z3q8Cm8,511
+ug_gemeinde/GemeindeUpgrade.ps1,sha256=bhZpHAkg5reNMqyZsFvyC_f3RexA45oCT9U1K1RpLPE,802
+ug_gemeinde/GemeindeUpgrade.sh,sha256=q3iU_vcUu-LJtT-ZXDc6uu1cTuTqGtq68emNMXLHpaA,799
+ug_gemeinde/Gemeinde_Def.py,sha256=NtnIePY2zMgjO3t0Xob4xS-bUIJjK8xWTlGBi6eyV_M,20540
+ug_gemeinde/Gemeinde_Modelle.py,sha256=ufNPyUIiOplHm7mT8IoPICxYUiwaL7cKaqG1oqK1fOw,18018
+ug_gemeinde/Icons.yaml,sha256=xwoggi_1fyS9ABFB4lHLD8jn9ONel6Kpi_cMTZEJrDc,265546
+ug_gemeinde/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ug_gemeinde-1.3.7.dist-info/METADATA,sha256=90uccAW6TbkjVQxMx0y6hczimQiXQ-5en8I8J7CR-x4,1256
+ug_gemeinde-1.3.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ug_gemeinde-1.3.7.dist-info/licenses/LICENSE,sha256=J2AOUnqs6D0Lj-UkwbKiB_lowdWGYFmhUkomVREB6PM,1069
+ug_gemeinde-1.3.7.dist-info/RECORD,,
