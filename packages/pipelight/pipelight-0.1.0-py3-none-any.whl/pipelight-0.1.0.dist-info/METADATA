@@ -1,0 +1,117 @@
+Metadata-Version: 2.2
+Name: pipelight
+Version: 0.1.0
+Summary: ✨ Change smart lights based on CI pipeline status
+Author: Brie Carranza
+License: MIT
+Project-URL: Homepage, https://pipelight.brie.dev
+Project-URL: Changelog, https://gitlab.com/brie/pipelight/releases
+Project-URL: Issues, https://github.com/bbbbbrie/pipelight/issues
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: certifi==2024.12.14
+Requires-Dist: charset-normalizer==3.4.1
+Requires-Dist: click==8.1.8
+Requires-Dist: emoji==2.14.1
+Requires-Dist: idna==3.10
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: python-gitlab==5.3.1
+Requires-Dist: requests==2.32.3
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: urllib3==2.3.0
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+
+# 🚀 ✨ 🤖 💡 Pipelight
+
+> Visualize CI pipeline status with smart lights
+
+## 🗺️ Overview
+
+With `pipelight`, your smart lights are automatically updated to reflect the status of the latest pipeline.
+
+## 🛠️ Installation
+
+```bash
+pip install pipelight
+```
+
+## 📋 Configuration
+
+Set these environment variables in `.env`:
+
+```bash
+GOVEE_API_KEY=goveetokenwouldgohere
+GOVEE_DEVICE_ID=77:00:00:00:00:00:00:00
+GOVEE_DEVICE_MODEL=HXXXX
+GITLAB_API_TOKEN=glpatWOULDGOHERE
+GITLAB_PROJECT_ID=0123456
+```
+
+## ✨ Features
+
+### 🌈 Pipeline Status Colors
+
+- 💛 Yellow (`#9F9110`): Created, Preparing, Pending
+- 💗 Pink (`#DC6BAD`): Waiting for Resources
+- 💙 Blue (`#3974C6`): Running
+- 💚 Green (`#309508`): Success
+- 💔 Red (`#FF0000`): Failed
+- 🖤 Dark Gray (`#212121`): Canceled, Skipped
+
+### 🌞 Adaptive Brightness
+
+The brightness of the light changes based on how recently the pipeline was updated. More recent pipelines have a brighter color. The brightness progressively fades as the pipeline's `updated_at` value is less recent.
+
+### 🦊 GitLab
+
+There is support for checking any GitLab instance (`.com`, self-managed or GitLab Dedicated). By default, `pipelight` assumes `gitlab.com`.
+
+## 🚀 Usage
+
+Run the main command:
+
+```bash
+pipelight change-the-lights
+```
+
+Customize GitLab instance:
+
+```bash
+pipelight change-the-lights --gitlab-url https://gitlab.example.com
+```
+
+Use `uv`:
+
+```bash
+uv run --with emoji,python-dotenv,python-gitlab python -m pipelight change_the_lights
+```
+
+Run in a loop to continuously monitor a project's pipelines as you work:
+
+```bash
+while true ; do date ; uv run --with emoji,python-dotenv,python-gitlab python -m pipelight change_the_lights ; sleep 15 ; done
+```
+
+## 🚀 Publishing
+
+```toml
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+```
+
+## 📄 License
+
+MIT License
