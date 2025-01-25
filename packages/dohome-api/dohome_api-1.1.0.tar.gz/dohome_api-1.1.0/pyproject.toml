@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dohome_api"
+authors = [
+    {name = "Mikhael Khrustik", email = "misha@myrt.co"},
+]
+description = "Library for controlling DoIT protocol lights"
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["doit", "reverse-engineering", "iot"]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+    "aiodatagram==0.0.2",
+    "arrrgs>=3.0.0",
+]
+dynamic = ["version"]
+
+[project.scripts]
+dohome = "dohome.cli:start"
+
+[tool.setuptools.dynamic]
+version = {file = [".version"]}
+
+[tool.ruff]
+lint.ignore = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+lint.select = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
