@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+partialjson/__init__.py
+partialjson/json_parser.py
+partialjson.egg-info/PKG-INFO
+partialjson.egg-info/SOURCES.txt
+partialjson.egg-info/dependency_links.txt
+partialjson.egg-info/top_level.txt
