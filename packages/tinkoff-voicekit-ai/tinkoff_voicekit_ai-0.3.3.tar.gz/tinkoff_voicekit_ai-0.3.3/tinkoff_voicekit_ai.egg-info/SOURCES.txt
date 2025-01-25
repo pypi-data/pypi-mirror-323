@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+tinkoff_voicekit_ai/__init__.py
+tinkoff_voicekit_ai.egg-info/PKG-INFO
+tinkoff_voicekit_ai.egg-info/SOURCES.txt
+tinkoff_voicekit_ai.egg-info/dependency_links.txt
+tinkoff_voicekit_ai.egg-info/requires.txt
+tinkoff_voicekit_ai.egg-info/top_level.txt
