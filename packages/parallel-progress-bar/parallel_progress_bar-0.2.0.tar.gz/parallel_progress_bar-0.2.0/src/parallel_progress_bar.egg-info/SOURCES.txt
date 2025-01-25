@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/ppbar.py
+src/parallel_progress_bar.egg-info/PKG-INFO
+src/parallel_progress_bar.egg-info/SOURCES.txt
+src/parallel_progress_bar.egg-info/dependency_links.txt
+src/parallel_progress_bar.egg-info/entry_points.txt
+src/parallel_progress_bar.egg-info/requires.txt
+src/parallel_progress_bar.egg-info/top_level.txt

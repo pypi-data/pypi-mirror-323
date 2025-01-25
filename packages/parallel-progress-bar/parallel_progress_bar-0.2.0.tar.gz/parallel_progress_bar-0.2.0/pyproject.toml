@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parallel-progress-bar"
+version = "0.2.0"
+description = "slim gnu-parallel clone with a better progress bar"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Asher Mancinelli", email = "ashermancinelli@gmail.com" },
+]
+keywords = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = [ "tqdm", ]
+[project.scripts]
+ppbar = "ppbar:main"
