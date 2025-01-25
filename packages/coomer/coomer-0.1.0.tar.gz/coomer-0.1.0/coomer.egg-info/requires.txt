@@ -1,0 +1,5 @@
+requests
+pydantic<2.11,>=2.4.1
+
+[aiohttp]
+aiohttp<3.12,>=3.9.0
