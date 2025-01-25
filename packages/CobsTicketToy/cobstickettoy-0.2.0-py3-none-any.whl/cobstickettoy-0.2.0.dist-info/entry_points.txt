@@ -1,0 +1,5 @@
+[console_scripts]
+cob-t = cobstickettoy.cobstickettoy:entry_point
+
+[gui_scripts]
+
