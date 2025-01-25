@@ -1,0 +1,5 @@
+[console_scripts]
+ultrabench = ultrabench.cli:app
+
+[pipx.run]
+ultrabench = ultrabench.cli:app
