@@ -1,0 +1,29 @@
+[project]
+name = "socyti"
+version = "0.0.0-dev.0"
+description = "A Python package template with src layout"
+authors = [
+    {name = "Yasas Senarath",email = "12231659+ysenarath@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "importlib-metadata>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ysenarath/socyti"
+Issues = "https://github.com/ysenarath/socyti/issues"
+
+[tool.poetry]
+packages = [{include = "socyti", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
