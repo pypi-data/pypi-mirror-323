@@ -1,0 +1,35 @@
+aiohttp[speedups]
+aiortsp
+av
+beaupy
+numpy>=1.20
+pl-neon-recording>=0.1.4
+pydantic>=2
+websockets
+zeroconf
+
+[:python_version < "3.8"]
+importlib-metadata
+typing-extensions
+
+[docs]
+furo
+jaraco.packaging>=9
+rst.linker>=1.9
+sphinx
+sphinx-toolbox
+
+[docs:python_version < "3.8"]
+importlib-metadata
+
+[examples]
+opencv-python
+
+[testing]
+pytest>=6
+pytest-checkdocs>=2.4
+pytest-cov
+pytest-enabler>=1.3
+
+[testing:platform_python_implementation != "PyPy"]
+pytest-mypy>=0.9.1
