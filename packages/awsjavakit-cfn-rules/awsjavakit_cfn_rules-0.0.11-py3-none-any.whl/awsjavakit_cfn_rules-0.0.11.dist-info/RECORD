@@ -1,0 +1,8 @@
+awsjavakit_cfn_rules/__init__.py,sha256=a3FdnawleOq_Gy4sL6Z-HQUsoQq0ANxfpUda3is_8ZE,226
+awsjavakit_cfn_rules/rules/__init__.py,sha256=raZUi6a9LZOW290-9rlBI0HXqdw5u4ppcECTlp3TKBA,111
+awsjavakit_cfn_rules/rules/__pycache__/__init__.cpython-313.pyc,sha256=eEz5s3tUR8gJBm4fiSfPVRwQYvrU_kngfHEcCA3QRK8,451
+awsjavakit_cfn_rules/rules/__pycache__/tags_rule.cpython-313.pyc,sha256=lZKM2JgUTJkcd2r-n-0a1NwAJAhXOVRQOAXasLsOEZQ,5334
+awsjavakit_cfn_rules/rules/tags_rule.py,sha256=Po1lla3H4n86AcxRYgqQvHMASCTt7qIvQyWi2MziaEM,2990
+awsjavakit_cfn_rules-0.0.11.dist-info/METADATA,sha256=feQULPTuNAu2nGZRxMyrUtvu7EhJlMSIXSua5fRwuf0,1512
+awsjavakit_cfn_rules-0.0.11.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+awsjavakit_cfn_rules-0.0.11.dist-info/RECORD,,
