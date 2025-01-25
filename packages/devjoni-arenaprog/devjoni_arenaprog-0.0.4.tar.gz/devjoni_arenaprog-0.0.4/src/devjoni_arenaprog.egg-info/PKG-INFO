@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: devjoni-arenaprog
+Version: 0.0.4
+Summary: Experiment control program for the arena
+Author-email: DEV Joni <solutions@devjoni.com>
+Project-URL: Homepage, https://github.com/devjonix/arenaprog
+Project-URL: Bug Tracker, https://github.com/devjonix/arenaprog/issues
+Keywords: toolkit,GUI,tk,gtk,p3d
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyserial
+Requires-Dist: pillow
+Requires-Dist: devjoni-hosguibase
+
+# Arena Program
+
+This is the PC program for controlling the arena experiments.
+
+## Installing
+
+TBA
+
