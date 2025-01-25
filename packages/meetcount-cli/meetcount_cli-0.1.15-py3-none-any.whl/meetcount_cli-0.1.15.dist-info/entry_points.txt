@@ -1,0 +1,3 @@
+[console_scripts]
+meetcount-deploy=meetcount_cli.main:app
+
