@@ -1,0 +1,2 @@
+[console_scripts]
+uvfile = uvfile.__main__:main
