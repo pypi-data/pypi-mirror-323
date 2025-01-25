@@ -1,0 +1,4 @@
+pyrodigal==3.5.2
+tqdm>=4.42
+pyrodigal-gv
+pyfastatools>=2.3

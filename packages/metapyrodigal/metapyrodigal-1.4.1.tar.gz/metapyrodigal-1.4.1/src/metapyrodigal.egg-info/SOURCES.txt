@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/metapyrodigal/load_balancer.py
+src/metapyrodigal/main.py
+src/metapyrodigal/orf_finder.py
+src/metapyrodigal/utils.py
+src/metapyrodigal.egg-info/PKG-INFO
+src/metapyrodigal.egg-info/SOURCES.txt
+src/metapyrodigal.egg-info/dependency_links.txt
+src/metapyrodigal.egg-info/entry_points.txt
+src/metapyrodigal.egg-info/requires.txt
+src/metapyrodigal.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+pyrodigal = metapyrodigal:main.main
