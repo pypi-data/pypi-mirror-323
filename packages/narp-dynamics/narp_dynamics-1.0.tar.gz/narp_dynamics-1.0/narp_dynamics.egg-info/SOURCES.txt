@@ -1,0 +1,7 @@
+README.md
+setup.py
+narp_dynamics.egg-info/PKG-INFO
+narp_dynamics.egg-info/SOURCES.txt
+narp_dynamics.egg-info/dependency_links.txt
+narp_dynamics.egg-info/requires.txt
+narp_dynamics.egg-info/top_level.txt

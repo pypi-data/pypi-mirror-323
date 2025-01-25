@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: narp-dynamics
+Version: 1.0
+Summary: Implementation of NARP Pulses and Their Interaction Dynamics with Two-Level Systems
+Home-page: https://gitlab.com/juardilag/narp-dynaimics
+Author: Juan E. Ardila-García
+Author-email: juardilag@unal.edu.co
+Requires-Dist: jax
+Requires-Dist: matplotlib
+Requires-Dist: cmap
+Requires-Dist: tqdm
