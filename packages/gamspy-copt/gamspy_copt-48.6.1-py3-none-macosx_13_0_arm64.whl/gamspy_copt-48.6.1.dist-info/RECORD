@@ -1,0 +1,9 @@
+gamspy_copt/__init__.py,sha256=iVgCwGH4ldGSn9JiNRSKSYXWJuxc10OayLI3C7o9ABU,364
+gamspy_copt/libcopt.dylib,sha256=4HtxQCbHqJJQ-T8eyZciqOxq3gQqBDfbTJ2sT8-i-iM,6009600
+gamspy_copt/libcptcclib64.dylib,sha256=tW_xO6ksEzPywO959KE7Rk538E3xyGCLsjuggf1yDdY,428976
+gamspy_copt/optcopt.def,sha256=wP5jGsezJuZgtH1jmynNC1NKILzi66lq5qiatIyHVVo,9164
+gamspy_copt/version.py,sha256=NlwiYmA-u9CB9dWiagQcD_d7rBwtpMThfkQeS2OxGJQ,22
+gamspy_copt-48.6.1.dist-info/METADATA,sha256=kHTCSaVGtJDh2WuxB0P2O3Zy8wuI8myKu3oUttVpYlA,56
+gamspy_copt-48.6.1.dist-info/WHEEL,sha256=1TgqNzhOMVQ9CC89JOz7UTFYrPo9i3vp-KGhAiXJYRI,111
+gamspy_copt-48.6.1.dist-info/top_level.txt,sha256=o5QBGmjwM9C5RbXo-DaXXSQ3pp7mqHaWj3aCHrz-lXY,12
+gamspy_copt-48.6.1.dist-info/RECORD,,
