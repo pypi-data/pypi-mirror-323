@@ -1,0 +1,13 @@
+prospector_profile_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prospector_profile_utils/autofix.yaml,sha256=U4O-xRRhhaIs5Io5Qq_9Y7g86qT5CmEj0rFZgMgdmfE,31
+prospector_profile_utils/base-all.yaml,sha256=X2Y-duV2wiiCmjkYTcIlPyZ8UYdyxVDht6mu0OkZ6Ag,345
+prospector_profile_utils/base-less-strict.yaml,sha256=fmvClEMLygxblUnEBVP5BXyhtfrUv_0rYWyShJCXHzQ,76
+prospector_profile_utils/base.yaml,sha256=jL4Av5UWzv6FDIWWvUAHtzZ7UCJgyiuvC-sz25TIXi0,1384
+prospector_profile_utils/c2cwsgiutils.yaml,sha256=QavIhTrj3A4LY3c9TnsDz-3FnSmHVY8rEwFOjDKJE7w,349
+prospector_profile_utils/fix.yaml,sha256=ce7J-VTgeGVkZL_Ci1Q5iEmhvm9-EanHAjDdINPrHm4,106
+prospector_profile_utils/no-design-checks.yaml,sha256=RT9-ZhzVyv6c3mM8jj7JF92CnmeXGBrdOUbdEQs2kcQ,433
+prospector_profile_utils/unsafe.yaml,sha256=o0QhBZG4GUuVWmKoVuQXpQ5QFdhXUFH8WVH2MLKD8HQ,54
+prospector_profile_utils-1.17.0.dist-info/LICENSE,sha256=pyLtY-w-yViWwSH5MY7TPsmQI4zhdBavPAk5SWY57uo,1308
+prospector_profile_utils-1.17.0.dist-info/METADATA,sha256=saNSmqpkEFzq0qLAsdlsSIKcNRX_x_j-sdfH15eDL50,1708
+prospector_profile_utils-1.17.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+prospector_profile_utils-1.17.0.dist-info/RECORD,,
