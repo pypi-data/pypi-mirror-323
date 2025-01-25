@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: el800-control
+Version: 1.1.2
+Summary: el800 export reads from a serial device connected to a EL800 the last read plate and exports it as pdf.
+Home-page: https://gitlab.tuwien.ac.at:iap/app/biomimetics/el800-control.git
+Author: Richard van Nieuwenhoven
+Author-email: richard.nieuwenhoven@tuwien.ac.at
+License: UNKNOWN
+Project-URL: Homepage, https://gitlab.tuwien.ac.at:iap/app/biomimetics/el800-control.git
+Keywords: el800
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.1
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib (>=3.5.1)
+Requires-Dist: pyserial (>3.3)
+Requires-Dist: tk (>=0.1.0)
+
+# EL800 control: Access the EL800 over the serial port
+
+This is the second version that extracts the latest plate information over the serial port and present is as PDF and CSV. Without the need of a printer.
+Additionally a window based control is now included to have a more interactive control of the EL800.
+
+
+---
+
+## Key Features  
+
+- **Extract plate data**:  
+  Extract the date from the lates read from the EL800.
+
+---
+
+## Benefits  
+
+- **Human-Readable**:  
+  The data is available as PDF and CSV.  
+
+- **Machine-Friendly**:  
+  The CSV format enables seamless integration with Python and other data processing workflows.  
+
+- **Efficient Visualization**:  
+  Auto-generated PDF plots provide quick insights into measurement trends and values.  
+
+- **No Printer Needed**:  
+  The Printer for reports is not needed anymore.  
+
+---
+
+## Applications  
+
+- Post-experiment analysis of OD600 measurements.  
+- Integration into automated workflows for advanced data analysis.  
+- Creation of visual representations for reports or presentations.  
+
+---
+
+## Installation and Usage  
+
+1. **Instalation**:  
+   - Python >= 3.1  
+   - pip >= 22.0.2
+   - pip install el800-control
+
+2. **Run the Script**:  
+   ```bash
+usage: el800-control [-h] [--input_file INPUT_FILE] [--port PORT] output_file
+
+Utility for extracting reports from a EL800.
+
+positional arguments:
+  output_file           Path to the output file.
+
+options:
+  -h, --help            show this help message and exit
+  --input_file INPUT_FILE
+                        Path to the input file.
+  --port PORT           serial port specification.
+
+      
+   el800-control --port /dev/ttyUSB0 plate96.pdf
+   ```
+   
+GUI based verion for extracting reports from a EL800.
+
+   ```bash
+   el800-win-control
+   ```   
+
+## Developers and Designers
+
+   Richard W. van Nieuwenhoven <nieuwenhoven@iap.tuwien.ac.at>
+
+
+
+
+

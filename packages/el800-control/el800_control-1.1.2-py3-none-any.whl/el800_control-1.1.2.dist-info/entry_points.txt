@@ -1,0 +1,4 @@
+[console_scripts]
+el800-control = el800.__main__:main
+el800-win-control = el800.__main__:main_gui
+
