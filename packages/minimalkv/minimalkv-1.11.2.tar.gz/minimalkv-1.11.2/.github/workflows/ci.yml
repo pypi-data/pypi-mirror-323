@@ -1,0 +1,109 @@
+name: CI
+on: [push, pull_request, workflow_dispatch]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pre-commit:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938 # v4.2.0
+      - name: Set up pixi
+        uses: prefix-dev/setup-pixi@ba3bb36eb2066252b2363392b7739741bb777659 # v0.8.1
+        with:
+          environments: default lint
+      - name: pre-commit
+        run: pixi run pre-commit-run --color=always --show-diff-on-failure
+
+  unittest:
+    name: Unit tests - ${{ matrix.environment }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: "read"
+      id-token: "write"
+    strategy:
+      fail-fast: false
+      matrix:
+        environment:
+          - py39
+          - py310
+          - py311
+          - py312
+    services:
+      postgres:
+        image: postgres:11
+        env:
+          POSTGRES_DB: minimalkv_test
+          POSTGRES_PASSWORD: minimalkv_test
+          POSTGRES_USER: minimalkv_test
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938 # v4.2.0
+      - name: Set up pixi
+        uses: prefix-dev/setup-pixi@ba3bb36eb2066252b2363392b7739741bb777659 # v0.8.1
+        with:
+          environments: ${{ matrix.environment }}
+      - name: Install repository
+        run: pixi run -e ${{ matrix.environment }} postinstall
+      # For some reason we can't check for $ACTIONS_ID_TOKEN_REQUEST_URL
+      # from the `if` condition in the next step.
+      # See this commit: https://github.com/simonbohnen/minimalkv/commit/775c74c1b1248245d66c2be69476e18acda9f2fe
+      # and this run: https://github.com/simonbohnen/minimalkv/actions/runs/3444175584/jobs/5746499674
+      # It appears that the variable is not accessible from the env context.
+      - name: Check if ID Token generation is enabled
+        id: check-id-token
+        run: |
+          if [[ -z "${ACTIONS_ID_TOKEN_REQUEST_URL}" ]]; then
+            echo "ID Token generation is not enabled"
+            exit 1
+          fi
+        continue-on-error: true
+      - id: google_auth
+        if: steps.check-id-token.outcome == 'success'
+        name: "Authenticate to Google Cloud"
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: "projects/498651197656/locations/global/workloadIdentityPools/qc-minimalkv-gh-actions-pool/providers/github-actions-provider"
+          service_account: "sa-github-actions@qc-minimalkv.iam.gserviceaccount.com"
+          token_format: "access_token"
+      - name: Authenticate to AWS
+        if: steps.check-id-token.outcome == 'success'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::211125346859:role/github-poweruser
+          aws-region: eu-central-1
+
+      # We set an env variable according to the result of the check
+      # to only allow skipping of aws integration test when in fork.
+      # When being run in the base repo, the aws integration test should always be executed.
+      - name: Check whether the workflow runs in a fork
+        run: echo "CI_IN_FORK=${{ github.event.pull_request && github.repository != github.event.pull_request.head.repo.full_name }}" >> $GITHUB_ENV
+      - name: "Run setup: install package & start docker container"
+        shell: bash -x -l {0}
+        run: |
+          pixi run docker compose up -d
+          while ! docker exec mysql mysqladmin status -h 127.0.0.1 -u minimalkv_test --password=minimalkv_test; \
+            do sleep 3; done
+      - name: Run pytest
+        run: pixi run -e ${{ matrix.environment }} pytest -n auto --dist loadfile -rs --cov=minimalkv --cov-report=xml --color=yes --cov-report=term-missing
+      - uses: codecov/codecov-action@v5
+        with:
+          file: ./coverage.xml
+
+  mypy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938 # v4.2.0
+      - name: Set up pixi
+        uses: prefix-dev/setup-pixi@ba3bb36eb2066252b2363392b7739741bb777659 # v0.8.1
+        with:
+          environments: py39 # as in pyproject.toml
+      - name: Install repository
+        run: pixi run -e py39 postinstall
+      - name: Run mypy
+        run: pixi run -e py39 mypy minimalkv
