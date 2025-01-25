@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: GDV_feature_shows
+Version: 0.1.14
+Summary: Interface for GDV feature show. 
+Author-email: The220th <The220th@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pillow
+Requires-Dist: argparse
+Requires-Dist: ksupk
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: tqdm
+Requires-Dist: gradio
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+
+# GDV_feature_shows
+
+
