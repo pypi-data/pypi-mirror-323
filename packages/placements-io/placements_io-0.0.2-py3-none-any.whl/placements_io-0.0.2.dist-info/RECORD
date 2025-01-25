@@ -1,0 +1,15 @@
+pio/__init__.py,sha256=4cyGDBv7c_kNX4A5Dl5kMxmyRqerKHkkw_Lr-2Mp8v4,131
+pio/client.py,sha256=Cki80EUPePz01GiKvqcsm15PTaH--6KeFlPi1caNcpE,12713
+pio/error/api_error.py,sha256=eZY742AF5pWRZ_5uqMGutw-XrmPSHzSKthTNA6jpS6c,126
+pio/model/environment.py,sha256=L7P7biLP-NwkyweCoiv6pOlOgBzPm6XI3A-IU1Ci0Os,158
+pio/model/get.py,sha256=mnJ7zfuAlVWg3ww0_rqJe5JQ1HW_5PRuq0eAIFPh_C8,2676
+pio/model/oauth.py,sha256=V8M8CASZPKUX8Lma613gJUjlWf73HlExUR5rJbIwbBo,281
+pio/model/report.py,sha256=kRkJ0OCeAPeGuacfqU-Q7D4vCdji-Vh7xeAV7_k79Lo,424
+pio/model/service.py,sha256=scRkHeN2fL8L2HSBdmyPW0q4Rut50ENuSTKP46K39xM,388
+pio/oauth.py,sha256=W0JYMyworYZHcndATkuv_BxHlalSHYurh1i1LEx-Aa0,4958
+pio/pio.py,sha256=_R1AnnjZhWBuigP1gPEmJxmA9Azoqt_ttqWIAACVCIA,12266
+pio/utility/json_encoder.py,sha256=I-bcDT6FsyNUkAt_xuWhhMOeVJuFw5xfz7Sj0cuyrnI,361
+placements_io-0.0.2.dist-info/LICENSE,sha256=M5UNyW9zMwDu9hywuP5NGFndyROFYcu8Myp81Y0bOn0,1070
+placements_io-0.0.2.dist-info/METADATA,sha256=3zJX1UgULI9TaFbpHBF9bQQEf8LiSPPYj2yxAL9Fcrc,11815
+placements_io-0.0.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+placements_io-0.0.2.dist-info/RECORD,,
