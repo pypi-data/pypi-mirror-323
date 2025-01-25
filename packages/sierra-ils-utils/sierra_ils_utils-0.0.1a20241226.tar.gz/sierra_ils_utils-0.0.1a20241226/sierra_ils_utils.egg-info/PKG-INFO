@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: sierra-ils-utils
+Version: 0.0.1a20241226
+Summary: Python wrappers for working with the Sierra ILS
+Home-page: https://github.com/chimpy-me/sierra-ils-utils/
+Author: Ray Voelker
+Author-email: ray.voelker@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: httpx<0.29.0,>=0.28.0
+Requires-Dist: pymarc<6.0.0,>=5.2.0
+Provides-Extra: test
+Requires-Dist: pytest>=8.3.4; extra == "test"
+Requires-Dist: pytest-asyncio>=0.25.0; extra == "test"
+Requires-Dist: respx>=0.22.0; extra == "test"
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
