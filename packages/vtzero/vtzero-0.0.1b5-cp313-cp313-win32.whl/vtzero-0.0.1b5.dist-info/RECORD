@@ -1,0 +1,10 @@
+vtzero/__init__.py,sha256=O1zl7KDaAGAaNV30dj3hlXr35_wRh_USzwz8wTfBEnA,69
+vtzero/cvtzero.pxd,sha256=xGSNQs5_o3MuknNlIi4iVYw3gGvhv0sAVVhLR5uDbQE,3753
+vtzero/tile.cp313-win32.pyd,sha256=kCJ3CLEd_cFQHv0HfuM9j0KVUSz_2ZIYrPeSiUrUmQc,109056
+vtzero/tile.cpp,sha256=yRr115BkDczdT-ZFnoMlY4BXtcRF4qp76Q3X8ciVdFY,725184
+vtzero/tile.pyx,sha256=SSHq7LexHod-aklf7L6GcyfB8R9XFRMqVl-6jIaLKNY,4897
+vtzero/version.py,sha256=IV-Swt0WD25V6aLQZS5kQ5fQ1rphikyI5Ko8Hu6TNQ8,50
+vtzero-0.0.1b5.dist-info/METADATA,sha256=nlHkrOdpqLp7rhKTbX0BhN-o0nQnJFQse1nSjl2WrPg,2348
+vtzero-0.0.1b5.dist-info/WHEEL,sha256=DFEd4wH53WDAEWJlYTy3wsIIOJTkJ3-fMddO9UbJavY,97
+vtzero-0.0.1b5.dist-info/top_level.txt,sha256=d6G1eguAqPsZCiv8Vb2o-W7fUlnN7ecv1FrCv199898,7
+vtzero-0.0.1b5.dist-info/RECORD,,
