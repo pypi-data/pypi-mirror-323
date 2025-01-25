@@ -1,0 +1,7 @@
+odd_kernel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_util_misc.py,sha256=L1tgXiZw3xS3geYHT-N26iyTJW6swp98IhaXV3Yfrgw,52
+odd_kernel-0.1.0.dist-info/METADATA,sha256=sgXnr6VK8t7iU-Bpl9Eo_AwGL9e1z7SkmOfdeVvq2R4,536
+odd_kernel-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+odd_kernel-0.1.0.dist-info/top_level.txt,sha256=DxUDtiB2NBpCi7uCdXVrFLAoQSLdW4vCMZHEIw9hzlM,17
+odd_kernel-0.1.0.dist-info/RECORD,,
