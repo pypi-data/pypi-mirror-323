@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: fast_hard
+Version: 0.1.0
+Summary: Um pacote para gerar projetos FastAPI com estrutura básica.
+Home-page: https://github.com/seu-usuario/fast_hard
+Author: Felipe Hardmann
+Author-email: fashardmann@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Fast Hard
+
+Um pacote para gerar projetos FastAPI com estrutura básica.
+
+## Como usar
+
+Instale o pacote:
+
+```bash
+pip install fast_hard
+
+fast-hard meu_novo_projeto
