@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: diform
+Version: 0.0.1
+Summary: Dependency Injection for data analsyis
+Project-URL: Homepage, https://github.com/flywhl/diform
+Project-URL: Repository, https://github.com/flywhl/diform
+Project-URL: Documentation, https://github.com/flywhl/diform#readme
+Project-URL: Bug Tracker, https://github.com/flywhl/diform/issues
+Author-email: Rory Byrne <rory@rory.bio>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# diform
