@@ -1,0 +1,10 @@
+__pycache__/
+dist/
+build/
+*.egg-info
+.coverage
+.mypy_cache/
+.pytest_cache/
+coverage.xml
+htmlcov/
+src/pyblackjack/__version__.py

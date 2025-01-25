@@ -1,0 +1,2 @@
+src/pyblackjack/_version.py export-subst
+src/pyblackjack/__version__.py export-subst
