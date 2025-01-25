@@ -1,0 +1,43 @@
+[project]
+name = "hairloom"
+version = "0.0.6"
+authors = [
+    { name="Seongmin Choi", email="soymintc@gmail.com" },
+]
+description = "A package to analyze split reads of long read data"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/shahcompbio/hairloom"
+Issues = "https://github.com/shahcompbio/hairloom/issues"
+
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+# Empty is fine
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+hairloom = "hairloom.cli:cli"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["hairloom"]
+
+[tool.setuptools.package-data]
+"hairloom" = ["data/*.fasta", "data/*.fasta.fai", "data/*.bam", "data/*.bai", "data/cli/*.txt"]
