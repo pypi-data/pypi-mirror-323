@@ -1,0 +1,34 @@
+Metadata-Version: 2.3
+Name: opentrons-http-api
+Version: 1.5.0
+Summary: Python client for the Opentrons HTTP API (https://github.com/Opentrons/opentrons-integration-tools/tree/main/http-api)
+Author: morefigs
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Project-URL: Homepage, https://github.com/morefigs/opentrons-http-api
+Description-Content-Type: text/markdown
+
+# opentrons-http-api
+
+Python client for the [Opentrons HTTP API](https://github.com/Opentrons/opentrons-integration-tools/tree/main/http-api).
+
+Stable, but not currently complete. It's relatively easy to add missing functions to the existing codebase, and PRs are welcome.
+
+## Installation
+
+Install from [PyPI](https://pypi.org/project/opentrons-http-api/):
+
+```shell
+pip install opentrons-http-api
+```
+
+## Usage
+
+See [examples/robot_client/](examples/robot_client/) for usage examples.
+
