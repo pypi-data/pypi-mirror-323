@@ -1,0 +1,15 @@
+clishelf-0.2.10.dist-info/METADATA,sha256=mnc2Siz-8e0z-T_axZPIY5XEiNtlHU6vUIp1muq2LG8,6456
+clishelf-0.2.10.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+clishelf-0.2.10.dist-info/entry_points.txt,sha256=NYZbcol6lyycdIEKcDUWD56OZRxB4z2alOZOu2Y3wBg,65
+clishelf-0.2.10.dist-info/licenses/LICENSE,sha256=ya1kgjiTc2fqGDilFpcWcm_ImOAiZhRfctlAX-DsyW4,1073
+clishelf/__about__.py,sha256=H_dHJhz-QpG8MKnJ-3P8MqnO6NYjGPLqnMpY-wqfeGY,87
+clishelf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clishelf/__main__.py,sha256=GuYTFVYWfxqwSasvS4of7vYoWa7hS-42UBPue97FR5k,345
+clishelf/assets/emoji.json,sha256=SWWArtqm9q8KN4O27vIt6PDFhlRQ3CLFyLs3DmV4n9U,128416
+clishelf/cli.py,sha256=xRjdCrLhPEbKMZ8vsbqlBWgkplSDecfQzH1zRdTYEXQ,3436
+clishelf/emoji.py,sha256=mt7DV-AQBwrwUVWkp2MAwuUIp6YhDicTvwL-W_W3UjU,3621
+clishelf/git.py,sha256=JKs8tN3qzwNBe0OEhuxkGtyoGmGeYPx-6g6cc2p4BVg,19634
+clishelf/settings.py,sha256=Tc6-0K8V4Va9lByetQvy9y0ESpLtBdpGO2dirz3EYIY,9048
+clishelf/utils.py,sha256=yMmvV8aMAuCi6jphNlIfvnGlP_XpETYJ6Pti76MKlPE,2555
+clishelf/version.py,sha256=mSOxJGXNRiBtllJ1do4o9Sd14eBftvu3d12K0GaRKJ0,12568
+clishelf-0.2.10.dist-info/RECORD,,
