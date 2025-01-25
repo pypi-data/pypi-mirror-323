@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+binhd/__init__.py
+binhd/classifiers.py
+binhd/embeddings.py
+binhd/functional.py
+binhd.egg-info/PKG-INFO
+binhd.egg-info/SOURCES.txt
+binhd.egg-info/dependency_links.txt
+binhd.egg-info/requires.txt
+binhd.egg-info/top_level.txt
+binhd/datasets/__init__.py
+binhd/datasets/adult.py
+binhd/datasets/dataset.py
+binhd/datasets/iris.py
+binhd/datasets/statlog.py
