@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: get-sqrt-of-four-divided-by-seventy-four
+Version: 0.2.0
+Summary: 
+Author: python1st-code
+Author-email: python1st-code@github.com
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# get_sqrt_of_four_divided_by_seventy_four
+get sqrt of four divided by seventy four
+
+### Code Example
+```python
+import get_sqrt_of_four_divided_by_seventy_four 
+
+print(get_sqrt_of_four_divided_by_seventy_four.get_sqrt_of_four_divided_by_seventy_four())
+```
