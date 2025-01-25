@@ -1,0 +1,79 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "pydantic-devtools"
+version = "0.3.0"
+description = "Devtools for the Pydantic library"
+authors = [
+    { name = "Victorien", email = "contact@vctrn.dev" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "rich>=11.0.0",
+    "pydantic>=2.10.0",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[dependency-groups]
+lint = [
+    "ruff>=0.9.3",
+    "pyright>=1.1.392",
+]
+
+[tool.pdm]
+distribution = true
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+preview = true
+explicit-preview-rules = true
+select = [
+    "E",
+    "W",
+    "F",
+    "UP",
+    "I",
+    "PL",
+    "RUF",
+    "RUF022",
+    "YTT",
+    "B",
+    "C4",
+    "T10",
+    "FA",
+    "PIE",
+    "T20",
+    "RSE",
+    "PTH",
+]
+ignore = [
+    "B904",
+    "PLR0912",
+    "PLR0915",
+    "PLW0603",
+]
