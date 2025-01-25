@@ -1,0 +1,16 @@
+automagic_rest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+automagic_rest/_version.py,sha256=O82e8yUjRHAyzpOxLpXpGJZbuf3VENU0viCiiMxqvgI,411
+automagic_rest/apps.py,sha256=5UkA3e-gnvO4mDeJ-FktnHfV6-YD7Cu5QZ25WJK3Hts,102
+automagic_rest/pagination.py,sha256=XC8HKJqmqR-3MbuDKAu39TLtE8Bep-Myud1vu3RXx8U,1421
+automagic_rest/settings.py,sha256=DUE7ydaf0TZPk8noOBbIaETfdYbf8hhEQmB0ycuROvE,791
+automagic_rest/views.py,sha256=AVXrUgiwSgs7zVsq-0WdC7h-JDZfer8xNaCciL22jFs,9488
+automagic_rest/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+automagic_rest/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+automagic_rest/management/commands/build_data_models.py,sha256=Y_jzDVztepD8jXALFFoHCPE6MchPUZrcP0X2dFftQ6o,12376
+automagic_rest/templates/automagic_rest/models.html,sha256=j2OYKrYQF2bJwMsK3L8iDsenh7Z5HZcv6oaQfpcS_os,326
+automagic_rest/templates/automagic_rest/urls.html,sha256=5EMlAFuNx_Ao5kwIFB7bjSiLVTCJ8u6QDqTjmPuU-Q4,356
+automagic_rest-2.1.1.dist-info/LICENSE,sha256=SS33FVsJtUzphV_QYBILTVs5t3Oh_je1mVey8tnSW7E,1550
+automagic_rest-2.1.1.dist-info/METADATA,sha256=v2Flvy-ExMHxz6ED_EpIrCk0ug7xMh70giBZ5R9rHP0,10084
+automagic_rest-2.1.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+automagic_rest-2.1.1.dist-info/top_level.txt,sha256=c-5OCX0cwP3khujpoArbqCfF2KtlZfz1gq3An77Hb4U,15
+automagic_rest-2.1.1.dist-info/RECORD,,
