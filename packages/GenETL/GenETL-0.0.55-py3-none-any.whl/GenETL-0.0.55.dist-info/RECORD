@@ -1,0 +1,12 @@
+etl/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+etl/edl.py,sha256=2B28x3p5qb0Y1DyBt682qL0WWsjbqYvU8SyNnoJqwmU,29097
+etl_tools/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+etl_tools/api.py,sha256=_katYB53c8-bhN9wNhzy-bPdX5No1b8Iq0plKe-M__g,2518
+etl_tools/aws.py,sha256=sKk6QoL2rH95cuHCmwIYuuySKOKJqWCWHzqRVJk00xE,12967
+etl_tools/execution.py,sha256=vN4QxaYn19zbsgK2VpLKl0IzmpDmYDU57fFIWiPV-68,8850
+etl_tools/sql.py,sha256=xu_DKDqygeiNRG-v5SfX5G3h58Jbe-XUZXU15XvG3Os,39397
+GenETL-0.0.55.dist-info/LICENSE,sha256=gKrM2JuiKs-eyKSzlB-YIhvfYdyVtGEutMteJvCiWxQ,1091
+GenETL-0.0.55.dist-info/METADATA,sha256=sRP_JAqbROVY06K7i5Mf4dKUP1oAxyy0vqfaj2hXcNM,24289
+GenETL-0.0.55.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+GenETL-0.0.55.dist-info/top_level.txt,sha256=vLwFqku-ThKji8Mjr5TaKnaXKF7y8EDEb984eRkbskM,14
+GenETL-0.0.55.dist-info/RECORD,,
