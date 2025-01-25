@@ -1,0 +1,11 @@
+trendify/API.py,sha256=sDoxmHRX_IHQpKKGealZB_8_KgFNDPkSL-VPJZO2y9M,70549
+trendify/CLI.py,sha256=cLTS2S-36fPBks7GaJJSKFSV91A_3TYVZ7HGNg88xRk,18316
+trendify/__init__.py,sha256=KwyFRMFEOpjmDpPQtVY644JFDwC_Z_aRyF8bXlTaggo,93
+trendify/examples.py,sha256=0gzpkuWQtdxCkRskE9eAQtYrTCFuRXTw7tZ1Pzr77xQ,5630
+trendify/local_server.py,sha256=VuBQmAQ6yPbEHajyJw1mZ0EKr1Sx-otckdL1bMCew8s,4765
+trendify/server.py,sha256=oMN-EFTY1xjNKYFX2sZQsFirHj-ScIvSKEaWXTwU27k,4759
+trendify-1.0.0.dist-info/METADATA,sha256=aazqbatnqCsx-W3dSBsVUhisyBLmVQo2Y-3CCGUxerI,848
+trendify-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+trendify-1.0.0.dist-info/entry_points.txt,sha256=iDWKVnnaBoPW99swVlcoe38uZwmUJ_BIMmEEipbg1Z4,114
+trendify-1.0.0.dist-info/licenses/LICENSE.txt,sha256=UpI7Pu3PvXg9ytUCZFX4gInKY9g6L48LaQ22l-Py63w,1071
+trendify-1.0.0.dist-info/RECORD,,
