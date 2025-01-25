@@ -1,0 +1,5 @@
+pytz>=2024.2
+
+[dev]
+pytest
+build
