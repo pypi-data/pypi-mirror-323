@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+countmytokens/__init__.py
+countmytokens/main.py
+countmytokens.egg-info/PKG-INFO
+countmytokens.egg-info/SOURCES.txt
+countmytokens.egg-info/dependency_links.txt
+countmytokens.egg-info/entry_points.txt
+countmytokens.egg-info/requires.txt
+countmytokens.egg-info/top_level.txt
+tests/test_main.py

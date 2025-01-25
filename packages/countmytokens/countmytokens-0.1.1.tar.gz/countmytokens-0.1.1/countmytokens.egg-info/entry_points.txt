@@ -1,0 +1,2 @@
+[console_scripts]
+countmytokens = countmytokens.main:main
