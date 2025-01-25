@@ -1,0 +1,68 @@
+Metadata-Version: 2.2
+Name: skribble-sdk
+Version: 0.9
+Summary: A Python SDK for the Skribble API
+Author-email: Eric Campos <ec@webix.ch>
+Project-URL: Homepage, https://github.com/LeEricCH/skribble-sdk
+Project-URL: Documentation, https://skribblesdk.mintlify.app/
+Project-URL: Repository, https://github.com/LeEricCH/skribble-sdk.git
+Keywords: skribble,api,sdk
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pydantic
+Provides-Extra: test
+Requires-Dist: unittest; extra == "test"
+Requires-Dist: coverage; extra == "test"
+
+# Skribble SDK
+
+A Python SDK for interacting with the Skribble API.
+
+## Installation
+
+You can install the Skribble SDK using pip:
+
+```
+pip install skribble-sdk
+```
+
+## Basic Usage
+
+Here is a basic example of how to use the Skribble Python SDK to create a signature request:
+
+```python
+import skribble
+
+# Replace with your actual API credentials
+USERNAME = "your_username"
+API_KEY = "your_api_key"
+
+# Initialize the SDK and get the access token
+token = skribble.init(USERNAME, API_KEY)
+print(f"Access token: {token}")
+
+# Create a signature request
+signature_request = {
+    "title": "Test Signature Request",
+    "message": "Please sign this test document",
+    "file_url": "https://pdfobject.com/pdf/sample.pdf",
+    "signatures": [
+        {
+            "account_email": "signer1@example.com"
+        }
+    ],
+}
+
+create_response = skribble.signature_request.create(signature_request)
+print(create_response)
+```
+
+For more detailed examples and advanced usage, please refer to the [Documentation](https://skribblesdk.mintlify.app/).
