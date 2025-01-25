@@ -1,0 +1,4 @@
+Fix 3.0.3:
+
+* :pr:`457`: Re-enable Trove license identifier
+* :pr:`456`: Fix source dist file
