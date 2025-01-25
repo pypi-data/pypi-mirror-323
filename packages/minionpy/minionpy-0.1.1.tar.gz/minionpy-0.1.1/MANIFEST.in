@@ -1,0 +1,2 @@
+recursive-include minionpy/lib *
+recursive-include minionpy/cec_input_data *

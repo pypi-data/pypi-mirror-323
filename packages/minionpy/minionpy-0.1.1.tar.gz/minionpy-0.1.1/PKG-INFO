@@ -1,0 +1,88 @@
+Metadata-Version: 2.2
+Name: minionpy
+Version: 0.1.1
+Summary: MinionPy is the Python implementation of the Minion C++ library, designed for derivative-free optimization.
+Author-email: Khoirul Faiq Muzakka <khoirul.muzakka@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Dr. Khoirul Faiq Muzakka (Forschungszentrum Juelich GmbH)
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: homepage, https://github.com/khoirulmuzakka/Minion
+Project-URL: documentation, https://github.com/khoirulmuzakka/Minion
+Project-URL: source, https://github.com/khoirulmuzakka/Minion
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scipy>=1.13.1
+
+# MinionPy
+
+MinionPy is the Python implementation of the Minion C++ library, designed for derivative-free optimization. It provides tools for solving optimization problems where gradients are unavailable or unreliable, incorporating state-of-the-art algorithms recognized in IEEE Congress on Evolutionary Computation (CEC) competitions. The library offers researchers and practitioners access to advanced optimization techniques and benchmarks for testing and evaluation.
+
+## Features
+
+- **Optimization Algorithms**  
+  MinionPy implements several high-performing algorithms, including:
+  - JADE
+  - L-SHADE (1st place, CEC2014)
+  - jSO (1st place, CEC2017)
+  - j2020 (3rd place, CEC2020)
+  - NL-SHADE-RSP (1st place, CEC2021)
+  - LSRTDE (1st place, CEC2024)
+  - ARRDE (Adaptive Restart-Refine Differential Evolution)  
+
+  These algorithms are robust and converge efficiently in complex optimization tasks. Additionally, classical methods like Nelder-Mead and the original Differential Evolution are included for reference.
+
+- **Benchmark Support**  
+  The library includes benchmark functions from the CEC competitions (2011–2022), providing a standardized environment for algorithm development, testing, and comparison.
+
+- **Performance**  
+  Most implemented algorithms are population-based, making them suitable for parallelization. MinionPy is optimized for vectorized functions, enabling efficient use of multithreading and multiprocessing capabilities.
+
+- **Cross-Platform Compatibility**  
+  MinionPy is implemented in C++ with a Python wrapper, supporting usage in both languages. It has been tested on the following platforms:
+  - Windows 11
+  - Linux Ubuntu 24.04
+  - macOS Sequoia 15  
+
+## Applications
+
+MinionPy is applicable in scenarios where derivative-free optimization is required, including engineering, physics, and machine learning. Its standardized benchmarks and high-performance algorithms make it suitable for developing and evaluating new optimization techniques as well as solving real-world optimization problems.
