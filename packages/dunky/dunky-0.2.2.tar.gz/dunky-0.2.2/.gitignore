@@ -1,0 +1,10 @@
+.venv
+.idea/
+.python-version
+__pycache__/
+dist/
+.envrc
+junit/
+.coverage
+data_kernelspec/
+.DS_Store
