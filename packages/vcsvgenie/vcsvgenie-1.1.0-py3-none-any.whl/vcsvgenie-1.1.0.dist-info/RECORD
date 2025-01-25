@@ -1,0 +1,8 @@
+vcsvgenie/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vcsvgenie/read.py,sha256=cvNU2Le91Ig_eYG2BHQQ1Crd_WTZljPpyuN9X5fHJqA,782
+vcsvgenie/transient_waveform.py,sha256=D6rxOcf-ckknVEw608JHv0UZbnI39q73MvIcz6vWCWQ,30853
+vcsvgenie-1.1.0.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+vcsvgenie-1.1.0.dist-info/METADATA,sha256=mmfChdh0q6es9gUCuIe6nVZNUXMeMekZzu_PxnXq0uQ,5043
+vcsvgenie-1.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+vcsvgenie-1.1.0.dist-info/top_level.txt,sha256=PhxRPkG9-efXWml9M-uGic4OJUpqI5uDryEcJbLjrjw,10
+vcsvgenie-1.1.0.dist-info/RECORD,,
