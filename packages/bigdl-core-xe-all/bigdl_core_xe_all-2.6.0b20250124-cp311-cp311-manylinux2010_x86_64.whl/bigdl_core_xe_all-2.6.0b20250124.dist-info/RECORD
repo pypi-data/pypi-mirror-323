@@ -1,0 +1,7 @@
+xe_addons.cpython-311-x86_64-linux-gnu.so,sha256=B1NryyXj0Z3f5hBRhvy-i8lUfvOQtz7CqIfwVdskbNY,3528704
+xe_batch.cpython-311-x86_64-linux-gnu.so,sha256=G1PBRJ2TgJQag401dE9lQ0CDcHwBX62i9vJsoiUZRu4,5188848
+xe_linear.cpython-311-x86_64-linux-gnu.so,sha256=8PX0MEAWoLff1NFHaPlBsM06hNMdhsFVoliBQ0Wzio4,12926344
+bigdl_core_xe_all-2.6.0b20250124.dist-info/METADATA,sha256=hjQKH0aIVaKs0J_WpVgSqpYBve3gMmd2tQFmuMRdtOs,71
+bigdl_core_xe_all-2.6.0b20250124.dist-info/WHEEL,sha256=tPsOy6rfcvuhdVMqyrvacphXysLFmJewNoMoimGtZKs,112
+bigdl_core_xe_all-2.6.0b20250124.dist-info/top_level.txt,sha256=139OuvCSE8VWJwpMsG-Uoudes4kBXlsnSvewPwGJ4jg,8
+bigdl_core_xe_all-2.6.0b20250124.dist-info/RECORD,,
