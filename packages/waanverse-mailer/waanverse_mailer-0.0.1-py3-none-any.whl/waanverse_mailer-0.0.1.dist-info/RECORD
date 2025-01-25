@@ -1,0 +1,9 @@
+waanverse_mailer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+waanverse_mailer/email_service.py,sha256=NtFR4kvWQ0gzo8TYN-nGVy0enE7IeD7dg-FOT3sCfsc,15817
+waanverse_mailer/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+waanverse_mailer/version.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+waanverse_mailer-0.0.1.dist-info/LICENSE,sha256=OMgYAwDRRW73D43ddXnjQuT4IjgzHvUcB-5W7qBIcwA,1089
+waanverse_mailer-0.0.1.dist-info/METADATA,sha256=aOSYOL9HF1TFCpN3-H8YVc2O5ZBK37fYiBx2U5a8RV8,1508
+waanverse_mailer-0.0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+waanverse_mailer-0.0.1.dist-info/top_level.txt,sha256=FQtct5dC61wBKOqzmTgStbXsuVKwXt4QjEhUuRrx2qU,17
+waanverse_mailer-0.0.1.dist-info/RECORD,,
