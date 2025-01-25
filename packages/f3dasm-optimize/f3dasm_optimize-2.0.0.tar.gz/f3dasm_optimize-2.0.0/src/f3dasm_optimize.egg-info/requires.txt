@@ -1,0 +1,7 @@
+f3dasm>=2.0.0
+
+[all]
+nevergrad
+evosax
+optuna
+optax==0.1.7
