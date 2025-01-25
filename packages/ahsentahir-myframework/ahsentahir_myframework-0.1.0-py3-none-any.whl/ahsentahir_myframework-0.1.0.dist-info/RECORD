@@ -1,0 +1,13 @@
+myframework/__init__.py,sha256=yKaKDO1pTVu601qyR4v5fIVprg_K9ZhH6erRtpVDwR8,570
+myframework/module1.py,sha256=VpET2EhzJTu-3MqHWieLc0KURc2m1nxQCC9QtbtJB7U,751
+myframework/module2.py,sha256=sn5WqTHZFbU3aD2zn8b9doM1uejY_0SPK7BFw4hYwuQ,6336
+myframework/utils.py,sha256=eO2gMum5RIHn3llQM3eMju1cLJxrSNCihJ3VMUhuM7U,2531
+tests/__init__.py,sha256=KzCdC43F16W3Wj79QC4HFsCxo0BWhQc6TgQK9qw14C4,35
+tests/conftest.py,sha256=G1MYF4EW7RK0BEmD6tbt2m8y60Gj4eE04FXvrP1sDtY,495
+tests/test_module1.py,sha256=XpngU063TdrXqe2Y2JJM1YrwUAkgd8QWgOnuyBwWgTQ,1076
+tests/test_module2.py,sha256=9YRR9xSxNXs2bevaTj5YGswQjH-aoFZ2JLVqYBH5jjU,1407
+ahsentahir_myframework-0.1.0.dist-info/LICENSE,sha256=yh_BEmRJcgkwAai7fRTFrfffLVaDJhJpardIGMJExXs,1088
+ahsentahir_myframework-0.1.0.dist-info/METADATA,sha256=YjJeqXuSyxZP8v1pcfOHRAdFql9K84hVDZA7pDdPaeI,2455
+ahsentahir_myframework-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+ahsentahir_myframework-0.1.0.dist-info/top_level.txt,sha256=RPbkqNppKznAzy_oAKz4Fxrgzh1vfUB1GEiwVL61SYs,18
+ahsentahir_myframework-0.1.0.dist-info/RECORD,,
