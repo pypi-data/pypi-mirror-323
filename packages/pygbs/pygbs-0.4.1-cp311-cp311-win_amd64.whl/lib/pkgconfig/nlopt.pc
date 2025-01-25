@@ -1,0 +1,12 @@
+prefix=C:/Users/sebas/AppData/Local/Temp/tmpxsunlw5c/wheel/platlib
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: NLopt
+Description: nonlinear optimization library
+Version: 2.9.1
+Libs: -L${libdir} -lnlopt
+Libs.private: 
+Cflags: -I${includedir}
+
