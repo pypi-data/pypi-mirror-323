@@ -1,0 +1,11 @@
+profanity_check/__init__.py,sha256=y3Qo4YZooxs_ib8lMI4P3PRBpTkyNH2eqNIUs3OYiR4,74
+profanity_check/command_line.py,sha256=yLjc9dlbJlNC26JKfDKdASvZBQgwSCrQAwOg4wQOwS0,871
+profanity_check/profanity_check.py,sha256=wAc8bMXhCAZ9xfslIcTRPZqksERJ5qT_MO9Ed0c6_AU,1022
+profanity_check/data/model.joblib,sha256=51YN_ms8TgEoVRpfqhXy9wy20SLIfSF6og2noBXEi_s,620645
+profanity_check/data/vectorizer.joblib,sha256=kFZlG4XS35hSIWRh-H6pDiK1T5-91Yj_7ruEnwjtJAs,324016
+alt_profanity_check-1.6.1.dist-info/LICENSE,sha256=qR9g5LPlqoduUhU9WrzkYRYee8YnPZAmx1KO4tYJzCw,1118
+alt_profanity_check-1.6.1.dist-info/METADATA,sha256=TyJLkYi9J9aYT6otRN_vEsJ907YvtdQzRUaO5QE5PTU,9809
+alt_profanity_check-1.6.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+alt_profanity_check-1.6.1.dist-info/entry_points.txt,sha256=Ms1-Dv4RmcRVh8GpB2sXlbGa_zZgrdA916v208cpnJo,70
+alt_profanity_check-1.6.1.dist-info/top_level.txt,sha256=kKjRFf4S53ZbymTecT9Uj3flPhlkjGjcwRDQJSfjVRA,16
+alt_profanity_check-1.6.1.dist-info/RECORD,,
