@@ -1,0 +1,8 @@
+dim_for_python-0.2.1.dist-info/METADATA,sha256=bs_oWcGHq7nfurMjGF_P2YFODiTX_j7t9at4Yg0YpL4,4467
+dim_for_python-0.2.1.dist-info/WHEEL,sha256=AmAUaTZ4DVfLTuR-ZO23MbJhraCCBktLKlayDTq4_o0,104
+dim_for_python-0.2.1.dist-info/licenses/LICENSE,sha256=k3Fq1VKSKJeNZhn7tHmCzHKyfO-kA0oghvQlckPj_Wg,1066
+dim_python/__init__.py,sha256=7l3asp66DzdHRspHnnvdzGJh_ZVTrwwn6SYLLqTLj5o,123
+dim_python/__init__.pyi,sha256=9nfzsdh2JsgD8V9RyJ1IUqdRdO7HJZqNSXDlPmniaO8,1170
+dim_python/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dim_python/dim_python.cpython-311-darwin.so,sha256=7r-4US422jJHBEornwnJhY8sm88WHP4zjBqoJAkndhA,10316128
+dim_for_python-0.2.1.dist-info/RECORD,,
