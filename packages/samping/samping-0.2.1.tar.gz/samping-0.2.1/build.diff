@@ -1,0 +1,13 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 387f2a8..c27ab3d 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -8,7 +8,7 @@ readme = "README.md"
+ requires-python = ">= 3.10"
+ 
+ [build-system]
+-requires = ["hatchling"]
++requires = ["hatchling==1.26.3", "hatch-vcs"]
+ build-backend = "hatchling.build"
+ 
+ [tool.rye]
