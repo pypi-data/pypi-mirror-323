@@ -1,0 +1,5 @@
+setup.py
+AwsGlueMlDataQualityETLPython.egg-info/PKG-INFO
+AwsGlueMlDataQualityETLPython.egg-info/SOURCES.txt
+AwsGlueMlDataQualityETLPython.egg-info/dependency_links.txt
+AwsGlueMlDataQualityETLPython.egg-info/top_level.txt
