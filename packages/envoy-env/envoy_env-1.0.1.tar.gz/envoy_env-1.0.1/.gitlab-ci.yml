@@ -1,0 +1,65 @@
+variables:
+  # Most stages don't care about the envoy version, only the publishing stage. But will still panic if they can't get it.
+  SETUPTOOLS_SCM_PRETEND_VERSION: 0.0.0
+
+stages:
+  - tests
+  - release
+
+version:
+  stage: release
+  image: oven/bun:1.2-slim
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: always
+  before_script:
+    - apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates
+    - bun install -g semantic-release @semantic-release/gitlab @semantic-release/commit-analyzer
+  script:
+    - semantic-release --branches main --plugins @semantic-release/commit-analyzer,@semantic-release/release-notes-generator,@semantic-release/gitlab
+  
+publish:
+  stage: release
+  needs: ["version"]
+  image: ghcr.io/astral-sh/uv:0.5-python3.12-bookworm-slim
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: always
+  script:
+    # Very important that we unset the workaround for getting the version
+    - unset SETUPTOOLS_SCM_PRETEND_VERSION
+    - apt-get update
+    - apt-get install -y --no-install-recommends git-core
+    - uv sync
+    - uv build
+    - uv publish --token $UV_PUBLISH_TOKEN
+
+unit_tests:
+  stage: tests
+  image: ghcr.io/astral-sh/uv:0.5-python3.12-bookworm-slim
+  script:
+    - uv sync
+    - cd src
+    - uv run pytest -v --junitxml pytest.xml
+  artifacts:
+    when: always
+    expire_in: 1 week
+    reports:
+      junit: src/pytest.xml
+
+acceptance_tests:
+  stage: tests
+  image: ghcr.io/astral-sh/uv:0.5-python3.12-bookworm-slim
+  script:
+    - uv sync --no-install-project
+    - cd src/tests/acceptance
+    - uv run robot -x xunit.xml .
+  artifacts:
+    when: always
+    expire_in: 1 week
+    paths:
+      - src/tests/acceptance/report.html
+      - src/tests/acceptance/log.html
+      - src/tests/acceptance/output.xml
+    reports:
+      junit: src/tests/acceptance/xunit.xml
