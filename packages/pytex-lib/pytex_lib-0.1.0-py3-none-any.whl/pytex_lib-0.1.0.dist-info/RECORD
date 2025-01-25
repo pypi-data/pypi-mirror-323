@@ -1,0 +1,6 @@
+pytex_lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytex_lib/core.py,sha256=lreIRj2AnRes1GQiowbnb-3nbhrLEva3jWb6JX8fuL8,1711
+pytex_lib/test.tex,sha256=3ZjjxAXlfEmBLxbmXWM1a-FeZKnAum5EjJTg6D6y01s,97
+pytex_lib-0.1.0.dist-info/METADATA,sha256=YM7UoyN24-3a7mj1pRV0rODYkPiICxExHnak8iySw0U,429
+pytex_lib-0.1.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+pytex_lib-0.1.0.dist-info/RECORD,,
