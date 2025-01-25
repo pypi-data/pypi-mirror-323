@@ -1,0 +1,9 @@
+repod/__init__.py,sha256=Y5jYYf4YjFhB8F8cIQYNG1eG1EYIKWxbIXMhTIu73GM,51
+repod/cli.py,sha256=-aVi1XwO0uiPzx_8FBJko1qDG3s0aHQv47NwiToPE6Y,1707
+repod/core.py,sha256=k1EypL2wTmJ7NUqZRl-fVB368QMPp2VOlLSRXulYHJ0,8067
+repod/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+repod_cli-0.0.4.dist-info/METADATA,sha256=fnYqC62eV5HoDvRJ8CsnPFFZGlfsPoYve07py4JQPFQ,2666
+repod_cli-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+repod_cli-0.0.4.dist-info/entry_points.txt,sha256=v0Ib4-hmR22g0vbpk-iKHhlIt36_SlNbVA4P6JSsVHU,41
+repod_cli-0.0.4.dist-info/licenses/LICENSE,sha256=Az_Stjythay_JFdfTKtc6Yd_qml8bLCt8YUi8jtbFuo,1070
+repod_cli-0.0.4.dist-info/RECORD,,
