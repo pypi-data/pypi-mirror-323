@@ -1,0 +1,8 @@
+requests
+pycryptodome
+aiohttp
+psutil
+httpx
+pillow
+simplejson
+pywin32

@@ -1,0 +1,8 @@
+README.md
+setup.py
+GhostGate/__init__.py
+GhostGate.egg-info/PKG-INFO
+GhostGate.egg-info/SOURCES.txt
+GhostGate.egg-info/dependency_links.txt
+GhostGate.egg-info/requires.txt
+GhostGate.egg-info/top_level.txt
