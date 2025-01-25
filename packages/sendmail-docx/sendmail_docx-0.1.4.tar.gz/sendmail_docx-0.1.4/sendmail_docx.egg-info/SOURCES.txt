@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+sendmail_docx/__init__.py
+sendmail_docx/email_sender.py
+sendmail_docx.egg-info/PKG-INFO
+sendmail_docx.egg-info/SOURCES.txt
+sendmail_docx.egg-info/dependency_links.txt
+sendmail_docx.egg-info/requires.txt
+sendmail_docx.egg-info/top_level.txt
+tests/__init__.py
+tests/test_email_sender_01.py

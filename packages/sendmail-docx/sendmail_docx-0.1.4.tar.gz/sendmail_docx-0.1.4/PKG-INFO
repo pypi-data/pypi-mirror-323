@@ -1,0 +1,67 @@
+Metadata-Version: 2.2
+Name: sendmail-docx
+Version: 0.1.4
+Summary: Permite enviar correos electrónicos con plantillas DOCX.
+Home-page: https://github.com/jmsanchez-ibiza/sendmail-docx
+Author: José María Sánchez González
+Author-email: jmsanchez.ibiza@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-docx
+Requires-Dist: python-dotenv
+Requires-Dist: mammoth
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# sendmail-docx
+
+Para enviar emails usando una plantilla docx.
+
+## InstallaciÃ³n
+
+```sh
+pip install sendmail-docx
+```
+
+## Dependencias
+```sh
+pip install python-docx python-dotenv mammoth
+```
+
+## Uso
+
+```python
+from sendmail_docx import enviar_correo_electronico
+import os
+
+def main():
+    # Enviar un mail de prueba
+    resultado = enviar_correo_electronico(
+        template_path=os.path.join("tests", "templates", "plantilla-ejemplo.docx"),
+        datos={"nombre": "John Doe", "saldo": "1.235,50 â‚¬"},
+        asunto="ComunicaciÃ³n de saldo",
+        destinatarios=["destinatario@mail.com"],
+        cc=[],
+        cco=[],
+        adjuntos=['factura.pdf', 'images/logo.png']
+    )
+
+    print(f"{resultado=}")
+
+
+if __name__ == '__main__':
+    main()
+```
