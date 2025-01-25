@@ -1,0 +1,55 @@
+Metadata-Version: 2.3
+Name: persiankivy
+Version: 0.1.1
+Summary: A program to correctly display Persian and Arabic words in kivy
+Author: Farhad KHodavirdizadeh
+Author-email: farhadvb@gmail.com
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# PersianShowInKivy
+
+PersianShowInKivy یک ابزار ساده برای نمایش صحیح متن‌های فارسی در برنامه‌های Kivy است. این ابزار از دو کتابخانه **`bidi`** و **`arabic_reshaper`** استفاده می‌کند تا متن‌های فارسی را به درستی شکل داده و راست‌چین کند.
+---
+
+## ویژگی‌ها
+
+- **حروف‌چینی متن فارسی:** اتصال صحیح حروف فارسی با استفاده از `arabic_reshaper`.
+- **راست‌چین کردن متن:** تنظیم جهت متن (RTL) با استفاده از `bidi.algorithm`.
+- مناسب برای برنامه‌هایی که با Kivy توسعه داده شده‌اند.
+
+---
+
+## نحوه استفاده
+from persian_show_in_kivy import PersianShowInKivy
+
+# نمونه‌سازی از کلاس
+persian_renderer = PersianShowInKivy()
+
+# متن فارسی مورد نظر
+text = "سلام دنیا"
+
+# پردازش متن
+reshaped_text = persian_renderer.persian_text(text)
+
+# نمایش متن پردازش‌شده
+print(reshaped_text)  # متن آماده برای نمایش در Kivy
+
+## وابستگی‌ها
+این پروژه از کتابخانه‌های زیر استفاده می‌کند
+
+bidi
+arabic_reshaper
+
+## چرا این ابزار؟
+Kivy به‌صورت پیش‌فرض از متن‌های راست‌چین (RTL) پشتیبانی نمی‌کند و نمایش متن فارسی یا عربی ممکن است با مشکل مواجه شود. PersianShowInKivy این مشکل را حل می‌کند و متن را به شکلی که برای Kivy قابل نمایش باشد آماده می‌سازد
+
+## لایسنس
+این پروژه تحت مجوز MIT منتشر شده است. برای اطلاعات بیشتر به فایل LICENSE مراجعه کنید
+
