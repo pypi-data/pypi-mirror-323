@@ -1,0 +1,8 @@
+narp_functions/__init__.py,sha256=f6AWBOyI7D9s06ANjf4X-ld2wYp1XJ6dxK_JoLZ5yjw,201
+narp_functions/integrator.py,sha256=8ndomQJYPvA4CWtwO9NX8w-YaAb3OArwhHqwFh3d0Vk,3085
+narp_functions/narp_functions.py,sha256=d6q64R3qrckDZFZ7QgMQkRIQAlgQM9lhqv_-RJI0OTU,12557
+narp_functions/pulses.py,sha256=YJ_kmXv09FMfXdtlZh71c0xhCGP7NsWGMAu8CPuJ_VA,8654
+narp_dynamics-1.4.dist-info/METADATA,sha256=8N74_Q9LVMmXwEnqgONN8XSphrxLZdR5wvVuBm7EPj4,2742
+narp_dynamics-1.4.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+narp_dynamics-1.4.dist-info/top_level.txt,sha256=jKO0iGqQzd4i_C8PJojWmVjJjJAxCwwkcTUBecSMI4g,15
+narp_dynamics-1.4.dist-info/RECORD,,
