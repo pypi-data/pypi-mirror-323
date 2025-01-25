@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: HA-IITB
+Version: 0.1.0
+Summary: HA IIT Bombay
+Home-page: https://github.com/Deepak-Dhinwa/HA_IITB.git
+Author: dhinwaji
+Author-email: ddhinwa05@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Installation
+pip install HA_IITB
+
+## Usage
+This package can give you the data of the HA of IIT Bombay
+from HostelAffairs import HA
+
+obj = HA(2024)
+obj.GSHA()
+
