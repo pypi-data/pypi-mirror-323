@@ -1,0 +1,44 @@
+[build-system]
+requires = [ "setuptools>=61.0",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "envquest"
+version = "0.0.11"
+description = "A collection of Reinforcement Learning algorithms to train autonomous agents in different environments."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [ "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent",]
+dependencies = [ "gymnasium>=1.0.0", "imageio[ffmpeg,pyav]>=2.35.1", "opencv-python>=4.10.0.84", "pillow>=10.4.0", "torch>=2.5.1", "tqdm>=4.67.1", "wandb[media]>=0.19.1",]
+[[project.authors]]
+name = "Medric Sonwa"
+email = "medric49@gmail.com"
+
+[dependency-groups]
+dev = [ "black>=24.8.0", "fire>=0.7.0", "gymnasium[box2d,mujoco]>=1.0.0", "jupyter>=1.1.1", "metaworld", "pylint>=3.2.7", "toml>=0.10.2",]
+
+[project.urls]
+Homepage = "https://github.com/medric49/envquest"
+Issues = "https://github.com/medric49/envquest/issues"
+
+[tool.uv]
+native-tls = true
+
+[tool.black]
+line-length = 120
+target-version = [ "py310",]
+color = true
+
+[tool.pylint.main]
+disable = [ "line-too-long", "missing-module-docstring", "missing-function-docstring", "missing-class-docstring", "duplicate-code", "too-few-public-methods", "no-member", "fixme", "logging-too-many-args", "no-name-in-module", "too-many-arguments", "too-many-positional-arguments", "too-many-locals", "useless-parent-delegation", "too-many-instance-attributes", "too-many-branches",]
+ignore-paths = [ "./.venv", "wandb",]
+logging-format-style = "new"
+
+[tool.setuptools.packages.find]
+where = [ ".",]
+include = [ "envquest*",]
+namespaces = false
+
+[tool.uv.sources.metaworld]
+git = "https://github.com/Farama-Foundation/Metaworld.git"
+rev = "master"

@@ -1,0 +1,7 @@
+gymnasium>=1.0.0
+imageio[ffmpeg,pyav]>=2.35.1
+opencv-python>=4.10.0.84
+pillow>=10.4.0
+torch>=2.5.1
+tqdm>=4.67.1
+wandb[media]>=0.19.1
