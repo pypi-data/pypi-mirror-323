@@ -1,0 +1,49 @@
+Metadata-Version: 2.2
+Name: astroquery
+Version: 0.4.9
+Summary: Functions and classes to access online astronomical data resources
+Author: The Astroquery Developers
+License: BSD
+Project-URL: Source, https://github.com/astropy/astroquery
+Project-URL: Documentation, https://astroquery.readthedocs.io
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE.rst
+Requires-Dist: numpy>=1.20
+Requires-Dist: astropy>=5.0
+Requires-Dist: requests>=2.19
+Requires-Dist: beautifulsoup4>=4.8
+Requires-Dist: html5lib>=0.999
+Requires-Dist: keyring>=15.0
+Requires-Dist: pyvo>=1.5
+Provides-Extra: test
+Requires-Dist: pytest-astropy; extra == "test"
+Requires-Dist: matplotlib; extra == "test"
+Requires-Dist: pytest-dependency; extra == "test"
+Requires-Dist: pytest-rerunfailures; extra == "test"
+Requires-Dist: fsspec[http]; extra == "test"
+Requires-Dist: moto[s3]; extra == "test"
+Provides-Extra: docs
+Requires-Dist: sphinx-automodapi<0.18; extra == "docs"
+Requires-Dist: matplotlib; extra == "docs"
+Requires-Dist: sphinx-astropy>=1.5; extra == "docs"
+Requires-Dist: scipy; extra == "docs"
+Requires-Dist: fsspec[http]; extra == "docs"
+Provides-Extra: all
+Requires-Dist: mocpy>=0.12; extra == "all"
+Requires-Dist: astropy-healpix; extra == "all"
+Requires-Dist: boto3; extra == "all"
+Requires-Dist: regions>=0.5; extra == "all"
+Dynamic: description
+Dynamic: description-content-type
+
+README.rst
