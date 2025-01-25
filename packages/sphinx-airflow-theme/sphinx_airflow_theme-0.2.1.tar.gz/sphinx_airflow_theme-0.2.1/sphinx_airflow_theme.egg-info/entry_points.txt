@@ -1,0 +1,2 @@
+[sphinx.html_themes]
+sphinx_airflow_theme = sphinx_airflow_theme
