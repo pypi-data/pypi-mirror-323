@@ -1,0 +1,2 @@
+[console_scripts]
+mpeg1fs = mpeg1fs:main
