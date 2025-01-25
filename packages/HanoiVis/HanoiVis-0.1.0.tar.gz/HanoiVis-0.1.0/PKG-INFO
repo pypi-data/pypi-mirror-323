@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: HanoiVis
+Version: 0.1.0
+Summary: Tower of Hanoi visualiser
+Home-page: http://pypi.python.org/pypi/HanoiVis/
+Author: Arvind Olag
+Author-email: arvindolag@gmail.com
+License: LICENSE.txt
+License-File: LICENSE.txt
+
+========
+HanoiVis
+========
+
+HanoiVis is a simple Python visualiser app for the Tower of Hanoi puzzle, using curses to display output.
