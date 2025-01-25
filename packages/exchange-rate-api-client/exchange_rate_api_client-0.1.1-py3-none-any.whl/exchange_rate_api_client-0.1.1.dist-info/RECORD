@@ -1,0 +1,11 @@
+exchange_rate_api_client/__init__.py,sha256=wABJBHLNXBK68eg6YIkF4MbuyTWqpoPTjKDxGzJrO1Y,553
+exchange_rate_api_client/_client.py,sha256=FAzQAxt42RwNJyjB6C-mXEZ3dL0eB8rdQq2ZyVR60kk,14690
+exchange_rate_api_client/_error_handlers.py,sha256=XDIMSLSpt3o5I0Z0K6UJUGSRHmcjsHymcjZTh3nN-8c,2300
+exchange_rate_api_client/_open.py,sha256=aCxYPg2-oONF7NxTqt9lPgaFBRAi21XUkIS55EpyfLU,612
+exchange_rate_api_client/commons.py,sha256=l2ki_PdFfBFHdBl4Pgp-LAz3FHMeAb6pRkcAAOGfufA,1837
+exchange_rate_api_client/exceptions.py,sha256=otL7TcEexmeqy_HPLlT2pxmVA27oW2U29PZLGKsCNms,336
+exchange_rate_api_client-0.1.1.dist-info/LICENSE,sha256=Pe03TYgLEeE67aglgNqlxyl47vbbhsZamPYO3cOR2v8,1090
+exchange_rate_api_client-0.1.1.dist-info/METADATA,sha256=oHTq50j3D6GrN2wEgKKQdASuA7h38q8Snsyh1PD0oes,3062
+exchange_rate_api_client-0.1.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+exchange_rate_api_client-0.1.1.dist-info/top_level.txt,sha256=JcpNrA8NqEvucOpJThBVqqaAeE2qhbp-7hicCB4vtww,25
+exchange_rate_api_client-0.1.1.dist-info/RECORD,,
