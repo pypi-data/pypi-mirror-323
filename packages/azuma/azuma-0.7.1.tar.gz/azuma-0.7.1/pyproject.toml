@@ -1,0 +1,80 @@
+[project]
+name = "azuma"
+dynamic = ["version"]
+description = "Yet another Sigma library for Python"
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+license = "MIT"
+authors = [{ name = "Manabu Niseki", email = "manabu.niseki@gmail.com" }]
+dependencies = [
+    "lark[interegular]~=1.2",
+    "pydantic>=2.5.3,<3.0.0",
+    "pyyaml~=6.0",
+    "regex>=2024.11.6",
+    "returns~=0.24",
+    "semver>=3.0.4",
+    "senkawa~=0.1",
+    "typer~=0.15",
+]
+
+[project.urls]
+Homepage = "https://github.com/ninoseki/azuma"
+Repository = "https://github.com/ninoseki/azuma"
+
+[project.scripts]
+azuma = "azuma.cli:app"
+
+[build-system]
+requires = ["hatchling>=1.26", "uv-dynamic-versioning==0.4.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[tool.uv]
+default-groups = ["dev", "docs"]
+
+[dependency-groups]
+dev = [
+    "build>=1.2.2.post1",
+    "ci-py>=1.0,<2.0",
+    "gitpython>=3.1.44",
+    "lefthook>=1.10.10",
+    "loguru>=0.7.3",
+    "mypy>=1.14.1",
+    "pre-commit>=4.1.0",
+    "pytest>=8.3.4",
+    "pytest-pretty>=1.2,<2.0",
+    "pytest-randomly>=3.16.0",
+    "ruff>=0.9.3",
+    "types-pyyaml>=6.0.12,<7.0.0",
+    "types-regex>=2024.11.6.20241108",
+    "uv-sort>=0.4.0",
+]
+docs = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.5.50",
+    "mkdocstrings[python]>=0.27.0",
+]
+
+[tool.ruff.lint]
+select = [
+    "B",   # flake8-bugbear
+    "C",   # flake8-comprehensions
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "RET", # flake8-return
+    "RUF", # Ruff-specific rules
+    "SIM", # flake8-simplify
+    "T20", # flake8-print
+    "W",   # pycodestyle warnings
+]
+ignore = [
+    "E501", # line too long
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+plugins = ["returns.contrib.mypy.returns_plugin", "pydantic.mypy"]
