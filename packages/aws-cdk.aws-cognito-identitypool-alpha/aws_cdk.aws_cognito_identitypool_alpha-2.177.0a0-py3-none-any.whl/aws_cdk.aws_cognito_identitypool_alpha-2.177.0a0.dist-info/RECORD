@@ -1,0 +1,10 @@
+aws_cdk/aws_cognito_identitypool_alpha/__init__.py,sha256=d65SBQZWrXuuPiS92lNHcuQp35OU0tNF5NN2bNVDJ28,120231
+aws_cdk/aws_cognito_identitypool_alpha/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_cognito_identitypool_alpha/_jsii/__init__.py,sha256=6a12QJBw9V5g0zYfxzic1S_Qf-xbp5Cph2wLd1zaGic,1513
+aws_cdk/aws_cognito_identitypool_alpha/_jsii/aws-cognito-identitypool-alpha@2.177.0-alpha.0.jsii.tgz,sha256=OkkB3NieIoMMRL0xOaIfI8yWeC6pyqCpg_kCx2DireU,67836
+aws_cdk.aws_cognito_identitypool_alpha-2.177.0a0.dist-info/LICENSE,sha256=y47tc38H0C4DpGljYUZDl8XxidQjNxxGLq-K4jwv6Xc,11391
+aws_cdk.aws_cognito_identitypool_alpha-2.177.0a0.dist-info/METADATA,sha256=tXWUGZAECzJbkcHoAaOiNl5JTdIV9iCx7bilKBUTqm8,18494
+aws_cdk.aws_cognito_identitypool_alpha-2.177.0a0.dist-info/NOTICE,sha256=lf1Mchtamvfy_KVMSMyuswAeOleGHEGUixMu0n6uXos,112
+aws_cdk.aws_cognito_identitypool_alpha-2.177.0a0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+aws_cdk.aws_cognito_identitypool_alpha-2.177.0a0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_cognito_identitypool_alpha-2.177.0a0.dist-info/RECORD,,
