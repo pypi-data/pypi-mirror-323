@@ -1,0 +1,2 @@
+[console_scripts]
+exodus = exodus.cli:main
