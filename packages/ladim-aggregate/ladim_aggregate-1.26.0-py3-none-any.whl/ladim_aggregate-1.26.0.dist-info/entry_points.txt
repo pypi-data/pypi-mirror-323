@@ -1,0 +1,3 @@
+[console_scripts]
+crecon = ladim_aggregate.script:main_from_command_line
+ladim_aggregate = ladim_aggregate.script:main_from_command_line

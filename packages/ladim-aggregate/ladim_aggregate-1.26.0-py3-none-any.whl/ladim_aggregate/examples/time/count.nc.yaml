@@ -1,0 +1,22 @@
+histogram:
+  dims: [time, start_time, Z]
+  data:
+    - [[2, 0], [0, 2]]
+    - [[0, 0], [0, 2]]
+    - [[1, 0], [0, 1]]
+
+Z:
+  dims: Z
+  data: [1, 3]
+
+start_time:
+  dims: start_time
+  data: [10, 30]
+  attrs:
+    units: days since 2000-01-01
+
+time:
+  dims: time
+  data: [0.5, 1.5, 2.5]
+  attrs:
+    units: days since 2000-01-02

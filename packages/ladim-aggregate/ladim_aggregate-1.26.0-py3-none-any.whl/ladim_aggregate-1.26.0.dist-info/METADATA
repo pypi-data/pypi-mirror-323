@@ -1,0 +1,25 @@
+Metadata-Version: 2.2
+Name: ladim_aggregate
+Version: 1.26.0
+Summary: Aggregate tool for LADiM output files
+Author: Pål Næverlid Sævik
+Author-email: paal.naeverlid.saevik@hi.no
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pytest
+Requires-Dist: xarray
+Requires-Dist: netCDF4
+Requires-Dist: PyYAML
+Requires-Dist: pyproj
+Requires-Dist: pandas
+Requires-Dist: numexpr
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+
+# ladim_aggregate
+
+A package for aggregating particles from a `ladim` simulation. Type
+`ladim_aggregate` on the command line to get an overview of various options.
