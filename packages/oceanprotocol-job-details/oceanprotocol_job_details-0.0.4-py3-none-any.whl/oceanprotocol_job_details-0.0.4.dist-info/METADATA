@@ -1,0 +1,62 @@
+Metadata-Version: 2.3
+Name: oceanprotocol-job-details
+Version: 0.0.4
+Summary: A Python package to get details from OceanProtocol jobs
+License: Copyright 2025 Agrospai
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+         
+         The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+         
+         THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Author: Christian López García
+Author-email: christian.lopez@udl.cat
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pytest (>=8.3.4,<9.0.0)
+Project-URL: Homepage, https://github.com/AgrospAI/oceanprotocol-job-details
+Project-URL: Issues, https://github.com/AgrospAI/oceanprotocol-job-details/issues
+Description-Content-Type: text/markdown
+
+A Python package to get details from OceanProtocol jobs
+
+---
+
+## Installation
+
+```
+pip install oceanprotocol-job-details
+```
+
+## Usage 
+
+As a simple library, we only need to import the main object and use it once:
+
+```Python
+from oceanprotocol_job_details.job_details import OceanProtocolJobDetails
+
+# Using default parameters
+job_details = OceanProtocolJobDetails().load()
+```
+
+### Advanced Usage (not recommended)
+
+If instead of the environment variables, we want to use another kind of mapping, can pass it as a parameter and it will work as long as it has the same key values (Can be implemented in a more generic way, but there is no need right now).
+
+```Python
+from oceanprotocol_job_details.job_details import OceanProtocolJobDetails
+from oceanprotocol_job_details.loaders.impl.environment import Keys
+
+# Fill in with values that will be used instead of env
+custom_mapper = {
+    Keys.ALGORITHM: " ... ",
+    Keys.DIDS: " ... ",
+    Keys.ROOT: " ... ",
+    Keys.SECRET: " ... ",
+}
+
+job_details = OceanProtocolJobDetails(mapper=custom_mapper).load()
+```
+
