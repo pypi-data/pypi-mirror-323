@@ -1,0 +1,243 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2025-01-24T12:25:25.198532+01:00",
+            "magic": "de311c9f7282041fe721df4da021e03ef402248657dd50c8cf1a92a2e441cfa2",
+            "version": "3.147.1-dev.0"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "v-julien-pulumi-corp",
+                "project": "cert-component-yaml",
+                "stack": "dev"
+            }
+        },
+        "metadata": {},
+        "resources": [
+            {
+                "urn": "urn:pulumi:dev::cert-component-yaml::pulumi:pulumi:Stack::cert-component-yaml-dev",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "outputs": {
+                    "caCertPem": null,
+                    "certPem": null,
+                    "certPrivateKey": null,
+                    "subject": {
+                        "cn": "example.com"
+                    }
+                },
+                "created": "2025-01-24T11:25:16.768422Z",
+                "modified": "2025-01-24T11:25:16.768422Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::cert-component-yaml::pulumi:providers:my-component::default",
+                "custom": true,
+                "id": "5883c96f-1d74-4a01-9a0d-b6226c058a69",
+                "type": "pulumi:providers:my-component",
+                "created": "2025-01-24T11:25:17.345975Z",
+                "modified": "2025-01-24T11:25:17.345975Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::cert-component-yaml::my-component:index:SelfSignedCertificate::mycert",
+                "custom": false,
+                "type": "my-component:index:SelfSignedCertificate",
+                "outputs": {
+                    "cacertPem": "-----BEGIN CERTIFICATE-----\nMIIDBTCCAe2gAwIBAgIRAJWB5D+FGnwlE2Y9wWlwCZgwDQYJKoZIhvcNAQELBQAw\nHDEaMBgGA1UEAxMRaGVsbG8uZXhhbXBsZS5jb20wHhcNMjUwMTI0MTEyNTIyWhcN\nMjUwMTI1MTEyNTIyWjAcMRowGAYDVQQDExFoZWxsby5leGFtcGxlLmNvbTCCASIw\nDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMLaShGj4t/N0O6Py/kiXhKrFACZ\nGjZXe3bX62DhUry/jN/DOFUKt2uJQEoOgzCeNgHO6ZxOp7uB0hLrsh/2sTLt8Pmt\nLidUU+raQlPEkJ5Kpb6t9cXBzw4l2iz6zL3sRRb4IEnhAVA3bnzLNK/ZfkMQQ/I4\neXa181sqdw8Ro4II1VfjcUuDH8KYeGlmkN8J7DP7yy7/HRhHXL+akKrqpNUvttH6\nNuuSgsFbGnh0s0sHl5LkwVuFK4ubkEmqPZMz5wDnVLUhcIbR1iAv/PQhPwaOAZF9\nyaxwimmqy3mXMXWemLXfFCJzK4CTXMEC88IEd94OO4cmPMFzVB3hB/Gbd2MCAwEA\nAaNCMEAwDgYDVR0PAQH/BAQDAgWgMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYE\nFNNELbMMznWnvMsrxr+MAKaf2xPGMA0GCSqGSIb3DQEBCwUAA4IBAQA49BM7RiXT\nMBZ5Gj0n7D4BrWpb1+v9I2kZFG9Apfey2YogolYXUSblkjZvLMab5prrQunHfk9k\nEIqji9bT0NQcbIzz8XqUNFjmxcXCOcU8nYJ6cb5j86KkZdNWvKO0PmgpkJHlNj4d\nKP38JbhjDiNUIT0o6Z+X7fcmocTdrPuB/3cNntS+qPuoRaShaChuYV4LTpPQWAxg\nYS+CayokqlHPS8pRMO8NgVh4ntEQZbhe/4O3JKAyHi251eVuoL8DnAOd2ms9hiQA\nl+iMN6SjCnAp4wPilSVze+UAiHAVAFHmI9IVcMJzv5cbBk5kMAgGjob5ZRvH+mHs\nOUjAZewOYUjo\n-----END CERTIFICATE-----\n",
+                    "ecdsaCurve": "P224",
+                    "privateKey": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "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"
+                    },
+                    "rsaBits": 2048,
+                    "subject": {
+                        "cn": "example.com"
+                    }
+                },
+                "created": "2025-01-24T11:25:18.372834Z",
+                "modified": "2025-01-24T11:25:18.372834Z",
+                "sourcePosition": "project:///../../src/component/provider.py#38"
+            },
+            {
+                "urn": "urn:pulumi:dev::cert-component-yaml::pulumi:providers:tls::default_5_0_10",
+                "custom": true,
+                "id": "36bc5862-8f37-47fd-8f4b-46b18de45705",
+                "type": "pulumi:providers:tls",
+                "inputs": {
+                    "__internal": {},
+                    "version": "5.0.10"
+                },
+                "outputs": {
+                    "version": "5.0.10"
+                },
+                "created": "2025-01-24T11:25:18.965274Z",
+                "modified": "2025-01-24T11:25:18.965274Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::cert-component-yaml::my-component:index:SelfSignedCertificate$tls:index/privateKey:PrivateKey::mycert-ca",
+                "custom": true,
+                "id": "70e46e905c00a65bc3d13372b004adc554f5d7db",
+                "type": "tls:index/privateKey:PrivateKey",
+                "inputs": {
+                    "algorithm": "RSA",
+                    "ecdsaCurve": "P224",
+                    "rsaBits": 2048
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "algorithm": "RSA",
+                    "ecdsaCurve": "P224",
+                    "id": "70e46e905c00a65bc3d13372b004adc554f5d7db",
+                    "privateKeyOpenssh": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "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"
+                    },
+                    "privateKeyPem": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "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"
+                    },
+                    "privateKeyPemPkcs8": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "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"
+                    },
+                    "publicKeyFingerprintMd5": "89:33:77:30:14:0b:da:24:c7:e2:13:f1:ef:58:56:45",
+                    "publicKeyFingerprintSha256": "SHA256:LpGRlN9yGJInzjzY+yz4bwwS8NgWV2ThdcywPlteTH0",
+                    "publicKeyOpenssh": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDC2koRo+LfzdDuj8v5Il4SqxQAmRo2V3t21+tg4VK8v4zfwzhVCrdriUBKDoMwnjYBzumcTqe7gdIS67If9rEy7fD5rS4nVFPq2kJTxJCeSqW+rfXFwc8OJdos+sy97EUW+CBJ4QFQN258yzSv2X5DEEPyOHl2tfNbKncPEaOCCNVX43FLgx/CmHhpZpDfCewz+8su/x0YR1y/mpCq6qTVL7bR+jbrkoLBWxp4dLNLB5eS5MFbhSuLm5BJqj2TM+cA51S1IXCG0dYgL/z0IT8GjgGRfcmscIppqst5lzF1npi13xQicyuAk1zBAvPCBHfeDjuHJjzBc1Qd4Qfxm3dj\n",
+                    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwtpKEaPi383Q7o/L+SJe\nEqsUAJkaNld7dtfrYOFSvL+M38M4VQq3a4lASg6DMJ42Ac7pnE6nu4HSEuuyH/ax\nMu3w+a0uJ1RT6tpCU8SQnkqlvq31xcHPDiXaLPrMvexFFvggSeEBUDdufMs0r9l+\nQxBD8jh5drXzWyp3DxGjggjVV+NxS4Mfwph4aWaQ3wnsM/vLLv8dGEdcv5qQquqk\n1S+20fo265KCwVsaeHSzSweXkuTBW4Uri5uQSao9kzPnAOdUtSFwhtHWIC/89CE/\nBo4BkX3JrHCKaarLeZcxdZ6Ytd8UInMrgJNcwQLzwgR33g47hyY8wXNUHeEH8Zt3\nYwIDAQAB\n-----END PUBLIC KEY-----\n",
+                    "rsaBits": 2048
+                },
+                "parent": "urn:pulumi:dev::cert-component-yaml::my-component:index:SelfSignedCertificate::mycert",
+                "provider": "urn:pulumi:dev::cert-component-yaml::pulumi:providers:tls::default_5_0_10::36bc5862-8f37-47fd-8f4b-46b18de45705",
+                "propertyDependencies": {
+                    "algorithm": [],
+                    "ecdsaCurve": [],
+                    "rsaBits": []
+                },
+                "additionalSecretOutputs": [
+                    "privateKeyOpenssh",
+                    "privateKeyPem",
+                    "privateKeyPemPkcs8"
+                ],
+                "created": "2025-01-24T11:25:20.054901Z",
+                "modified": "2025-01-24T11:25:20.054901Z",
+                "sourcePosition": "project:///../my-component/.venv/lib/python3.13/site-packages/pulumi_tls/private_key.py#277"
+            },
+            {
+                "urn": "urn:pulumi:dev::cert-component-yaml::my-component:index:SelfSignedCertificate$tls:index/privateKey:PrivateKey$tls:index/privateKey:PrivateKey::mycert-key",
+                "custom": true,
+                "id": "25a45d0560dff6a7501e79074b31684b16169f17",
+                "type": "tls:index/privateKey:PrivateKey",
+                "inputs": {
+                    "algorithm": "RSA",
+                    "ecdsaCurve": "P224",
+                    "rsaBits": 2048
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "algorithm": "RSA",
+                    "ecdsaCurve": "P224",
+                    "id": "25a45d0560dff6a7501e79074b31684b16169f17",
+                    "privateKeyOpenssh": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "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"
+                    },
+                    "privateKeyPem": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "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"
+                    },
+                    "privateKeyPemPkcs8": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "AAABAHyLgx4o+AeNDzwM0HfcBS0gZW9k6C8Om3VFqmtke4xm497zG0aTFAYDdpPduOq1SQ3DgvJy4R/SbS65YJk8ZMH4KK/urDBJ2d6lKTjL0nARH1jQB2Lw3YJUZAXWb4p/o6F3nRoF7RO1RyUrxVVHY/S8qG8EuvoU5+fSwjThs5zvb0ikf+eHFs9JPexJyVT+67g869/nU6emTNQt4zs4FC32WS4ONj5fEaoClCY3Fas3/tul0LtdDNWLYiYbYrjiFs1Mjo2nOEkIjKiroAN1zA9FgZ7VdXwTBORGLiPN5EXK7ge8VwHWPZ9QpZiK2PdRO86hq3yn3k7lfkkuREL/bfVBN8NIk2l7k2pXYtW+SbG17AY3rRSZshKa7dyfz7/FuDPJzLFuZ3ZywniEwdlAR91wmFLf0o/9lmJ8EzUfHCc1wvzXA9blRSHBg6rLFbAwiWwRs/oAVC8dni9AD3131Gk4BShGXbaaGhoSK/HuULNrggOL06HEnynmaTuNhwTR8ONnvoxmkVRGc6n4Z09Lo0VRv93pwTGprPNTT3XNUccOpOAAwMJpLb9wpMEKVta44HWsKZpTP2MhDJu/vew7NoNe/0SQZJWEEjqQo0cElNXKW22+EUjAkZhDCJdcqJeLyGg6MEmpacDab4EwUpiX6ZJ6Fwh44JxMuZrJuKjI0RKueV3ul1mPsArwC8lGK9oFQL1XVN4WH8DBM3W8aLCUNQJdTKg5IAfnm7qEJzkxAVZzwLff6E4CjgCMC3f9wm/Vova9/x6uf1LMP5IV4aa1bmk6xuVxqOQ/KGUdfbz0qe+CSjdkyefbcbxPmHquza0EFBX7xR4dS+wWt7F6MmMge9+JBClHm+PSOV7m6Sw6LlSp4wBt55wgQ3znmPPmwevbVy89KS0aJnxL1gjr8vkJwMOQSNOnz1OTYaU6RFjt1ZoC9FXbmMH7Ymb2VvaZ1/0CgntyQfcRAhNnWYFdehUObz+fFAEsuRqMG88FtGUSQzhD64Bhg+9pSMNAB4PfYw0WMx2Bi9fJtnMqmPaTZyASajWprB6oE3yFNu7gc5qBF0R63YALON7bAJtA4ARJEfhpg33Or3Q6V6J7CwcCfmHfgMBnbwYrt4ZwD5hHsXl9VkYDJFyz4qYukigMQO6KOgNS3HFuw2gLGq6MNX7tRO6R7qFQKCWjyurQYOht01FNtyyd3RGtL6ppMCHsNobMeUf7mBuhSgf9vs8N9wOCiM6RvyG500q8L4IUwQ507KWjS2hiSAGL4S2LddYj3MXsOq6fwPZZaorXQ0cXQ5YfrX2rHu/XEe5GRwoej10rExNPlKl31OtbFG6tDuYqP5utjB8strAkt8yYVISrxFkh6NpcBeHw0NaCQcWtw9txTag0sQFNhX5McQsjoz+FGaMoKYFPRvSQ1HY4/gYHD8AhyQmaycpwz/IWQzBUAXYatJKx4hwF6L8yiBMPQ7aFioVJwRicekhHOD3/2uU+1FVeuiN6pMUGrbg7VafxEjJInezZN+ikbmPjkr2FslgTNXgSQdgAyULR7KykbFb/XLubeAutLMGPaYdcmXDFZVgymBdceiDg1p9Y+SXbw9BV+IEl61lXU8FV6xqZA+LQwB/9KzQiKnxx2hrg4khRgPrvvlxd8eEzAQfwbhHDi4dSuwm4T3JVFVTWFcXO+kGCHiBJ6GieJBkClleNTy9i6Xeq8wEePhFsUAWrGRMBjjPYmMWfb9U60GnaIEFhRx4Sn3nQcjkISyrbcBiOEGCJzR2DiGlFPGZcPV+DNif4LNLx278B1xmAq21LHiA/UfW69zNSPab4mdUEP2v9vQyRs7ubKzV99+h1Q7RDmZ027KhDrzl/x4HwBnhhBrY6bEQCocMU12DIpUaH59N3EW1VBeGbWqdzXhJjV9dJRZrJfEvkEr7cK+rxeFloWm3f3NBoVZair8uflIFhYKUlxM0nx85bDrNBpfS50k5D50I/EwHOR3yKaaT8PpZygCbs2LQTuOge1HKlOrtZUDRb6NnzYcJQEJSkDQA3/XSqd4nFFrhEneHClbCjgEQ0jdV+YkoCz/0ichSSp37xtNNje2UKSa3gk3mPTRmCLiK/yrS6X7RGbPstnaBudfrsTP8AbUvqIl6/iwZ+ntz8xJycxz44b489lAkeeKIAeeAgAfXDheETAJruLXyWYxQ9gVKLYCLdLb/OTVH0BDvm6Tei1PQjXYbwxSSN2LYMlOn+pdy+u7ectX6xG7Fto4oUb2OIuOyx56N40BJFWQzeCrDCcCUcJNeozGwNd0FM0Rsf/7pod7RfEvuIdidMGtP0W0sTUhgPedUvdfx9jxy4BQd/X7C9XeB7dV09fHJcFSE="
+                    },
+                    "publicKeyFingerprintMd5": "9c:92:6a:9f:3b:b8:ad:26:78:62:f1:b1:e3:80:ac:38",
+                    "publicKeyFingerprintSha256": "SHA256:u2teSNDrZErBYSNSw7BFYuNOmz1sKYzryXVDEsDP2E4",
+                    "publicKeyOpenssh": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGHyxNnlBBeJxbzdGyIy6uWyCNaCnPmT72Rt1TE2cNffmZDiQd1l/UlrlgrM0wBSFGKkkOz72TqT1speWN/xCcywltopjTFrOlmOlz82qsAzoPpbWoH1iam6l6hu/0aYdKopzFXWXG//QVKEzSL6xMLxF12LF8CMYvME3uaxO9wA0jN1uDwuOac2vI4WS5LrpGGPlqhXdvbhWK+u3tRRcyLL9Ms7D4ZgWSCRAcAEqdpt8c2WHNHaz4RGtNyHhN4zDkOU/xyxWnH3ESwcF1rB8c/kV9cSFa3saSWs1t2XfgegQDIGPY4YTucjz+j2sZwI1TmV9FVkeYhjS3J83tXDuX\n",
+                    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxh8sTZ5QQXicW83RsiMu\nrlsgjWgpz5k+9kbdUxNnDX35mQ4kHdZf1Ja5YKzNMAUhRipJDs+9k6k9bKXljf8Q\nnMsJbaKY0xazpZjpc/NqrAM6D6W1qB9Ympupeobv9GmHSqKcxV1lxv/0FShM0i+s\nTC8RddixfAjGLzBN7msTvcANIzdbg8LjmnNryOFkuS66Rhj5aoV3b24Vivrt7UUX\nMiy/TLOw+GYFkgkQHABKnabfHNlhzR2s+ERrTch4TeMw5DlP8csVpx9xEsHBdawf\nHP5FfXEhWt7GklrNbdl34HoEAyBj2OGE7nI8/o9rGcCNU5lfRVZHmIY0tyfN7Vw7\nlwIDAQAB\n-----END PUBLIC KEY-----\n",
+                    "rsaBits": 2048
+                },
+                "parent": "urn:pulumi:dev::cert-component-yaml::my-component:index:SelfSignedCertificate$tls:index/privateKey:PrivateKey::mycert-ca",
+                "provider": "urn:pulumi:dev::cert-component-yaml::pulumi:providers:tls::default_5_0_10::36bc5862-8f37-47fd-8f4b-46b18de45705",
+                "propertyDependencies": {
+                    "algorithm": [],
+                    "ecdsaCurve": [],
+                    "rsaBits": []
+                },
+                "additionalSecretOutputs": [
+                    "privateKeyOpenssh",
+                    "privateKeyPem",
+                    "privateKeyPemPkcs8"
+                ],
+                "created": "2025-01-24T11:25:21.86496Z",
+                "modified": "2025-01-24T11:25:21.86496Z",
+                "sourcePosition": "project:///../my-component/.venv/lib/python3.13/site-packages/pulumi_tls/private_key.py#277"
+            },
+            {
+                "urn": "urn:pulumi:dev::cert-component-yaml::my-component:index:SelfSignedCertificate$tls:index/privateKey:PrivateKey$tls:index/selfSignedCert:SelfSignedCert::mycert-ca",
+                "custom": true,
+                "id": "198729407088660853441177768072253016472",
+                "type": "tls:index/selfSignedCert:SelfSignedCert",
+                "inputs": {
+                    "allowedUses": [
+                        "key_encipherment",
+                        "digital_signature"
+                    ],
+                    "isCaCertificate": true,
+                    "privateKeyPem": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "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"
+                    },
+                    "subject": {
+                        "commonName": "hello.example.com"
+                    },
+                    "validityPeriodHours": 24
+                },
+                "outputs": {
+                    "allowedUses": [
+                        "key_encipherment",
+                        "digital_signature"
+                    ],
+                    "certPem": "-----BEGIN CERTIFICATE-----\nMIIDBTCCAe2gAwIBAgIRAJWB5D+FGnwlE2Y9wWlwCZgwDQYJKoZIhvcNAQELBQAw\nHDEaMBgGA1UEAxMRaGVsbG8uZXhhbXBsZS5jb20wHhcNMjUwMTI0MTEyNTIyWhcN\nMjUwMTI1MTEyNTIyWjAcMRowGAYDVQQDExFoZWxsby5leGFtcGxlLmNvbTCCASIw\nDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMLaShGj4t/N0O6Py/kiXhKrFACZ\nGjZXe3bX62DhUry/jN/DOFUKt2uJQEoOgzCeNgHO6ZxOp7uB0hLrsh/2sTLt8Pmt\nLidUU+raQlPEkJ5Kpb6t9cXBzw4l2iz6zL3sRRb4IEnhAVA3bnzLNK/ZfkMQQ/I4\neXa181sqdw8Ro4II1VfjcUuDH8KYeGlmkN8J7DP7yy7/HRhHXL+akKrqpNUvttH6\nNuuSgsFbGnh0s0sHl5LkwVuFK4ubkEmqPZMz5wDnVLUhcIbR1iAv/PQhPwaOAZF9\nyaxwimmqy3mXMXWemLXfFCJzK4CTXMEC88IEd94OO4cmPMFzVB3hB/Gbd2MCAwEA\nAaNCMEAwDgYDVR0PAQH/BAQDAgWgMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYE\nFNNELbMMznWnvMsrxr+MAKaf2xPGMA0GCSqGSIb3DQEBCwUAA4IBAQA49BM7RiXT\nMBZ5Gj0n7D4BrWpb1+v9I2kZFG9Apfey2YogolYXUSblkjZvLMab5prrQunHfk9k\nEIqji9bT0NQcbIzz8XqUNFjmxcXCOcU8nYJ6cb5j86KkZdNWvKO0PmgpkJHlNj4d\nKP38JbhjDiNUIT0o6Z+X7fcmocTdrPuB/3cNntS+qPuoRaShaChuYV4LTpPQWAxg\nYS+CayokqlHPS8pRMO8NgVh4ntEQZbhe/4O3JKAyHi251eVuoL8DnAOd2ms9hiQA\nl+iMN6SjCnAp4wPilSVze+UAiHAVAFHmI9IVcMJzv5cbBk5kMAgGjob5ZRvH+mHs\nOUjAZewOYUjo\n-----END CERTIFICATE-----\n",
+                    "earlyRenewalHours": 0,
+                    "id": "198729407088660853441177768072253016472",
+                    "isCaCertificate": true,
+                    "keyAlgorithm": "RSA",
+                    "privateKeyPem": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "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"
+                    },
+                    "readyForRenewal": false,
+                    "setAuthorityKeyId": false,
+                    "setSubjectKeyId": false,
+                    "subject": {
+                        "commonName": "hello.example.com"
+                    },
+                    "validityEndTime": "2025-01-25T12:25:22.165758+01:00",
+                    "validityPeriodHours": 24,
+                    "validityStartTime": "2025-01-24T12:25:22.165758+01:00"
+                },
+                "parent": "urn:pulumi:dev::cert-component-yaml::my-component:index:SelfSignedCertificate$tls:index/privateKey:PrivateKey::mycert-ca",
+                "dependencies": [
+                    "urn:pulumi:dev::cert-component-yaml::my-component:index:SelfSignedCertificate$tls:index/privateKey:PrivateKey::mycert-ca"
+                ],
+                "provider": "urn:pulumi:dev::cert-component-yaml::pulumi:providers:tls::default_5_0_10::36bc5862-8f37-47fd-8f4b-46b18de45705",
+                "propertyDependencies": {
+                    "allowedUses": [],
+                    "isCaCertificate": [],
+                    "privateKeyPem": [
+                        "urn:pulumi:dev::cert-component-yaml::my-component:index:SelfSignedCertificate$tls:index/privateKey:PrivateKey::mycert-ca"
+                    ],
+                    "subject": [],
+                    "validityPeriodHours": []
+                },
+                "additionalSecretOutputs": [
+                    "privateKeyPem"
+                ],
+                "created": "2025-01-24T11:25:22.174502Z",
+                "modified": "2025-01-24T11:25:22.174502Z",
+                "sourcePosition": "project:///../my-component/.venv/lib/python3.13/site-packages/pulumi_tls/self_signed_cert.py#508"
+            }
+        ]
+    }
+}
