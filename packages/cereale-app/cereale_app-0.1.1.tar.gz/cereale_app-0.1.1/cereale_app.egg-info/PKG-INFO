@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: cereale_app
+Version: 0.1.1
+Summary: Python SDK for Cereale.app API
+Home-page: https://bursadecereale.com/
+Author: krakiun
+Author-email: info@cereale.app
+Project-URL: Homepage, https://bursadecereale.com/
+Project-URL: Developer, https://krakiun.com/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.0
+
+# Cereale SDK
+
+[Bursa de cereale](https://bursadecereale.com) facilitează conexiunea directă între fermieri și cumpărători, eliminând intermediarii. Permite publicarea anunțurilor și, prin SDK, asigură integrarea și comunicarea ușoară cu platforma.
+
+
+
+## Installation
+
+```bash
+pip install cereale-sdk
+```
+
+## Usage
+
+```python
+from cereale_sdk import CerealeClient
+
+client = CerealeClient()
+client.verify(phone="+40722111222", code="0000")
+
+# Get listings
+listings = client.get_listings(category="porumb")
+```
+
+## Features
+
+- Complete API coverage
+- Authentication handling
+- File upload support
+- Error handling

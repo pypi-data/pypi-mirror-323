@@ -1,0 +1,9 @@
+README.md
+setup.py
+cereale_app.egg-info/PKG-INFO
+cereale_app.egg-info/SOURCES.txt
+cereale_app.egg-info/dependency_links.txt
+cereale_app.egg-info/requires.txt
+cereale_app.egg-info/top_level.txt
+cereale_sdk/__init__.py
+cereale_sdk/client.py
