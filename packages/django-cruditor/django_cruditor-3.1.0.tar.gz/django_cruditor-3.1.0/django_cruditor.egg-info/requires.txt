@@ -1,0 +1,8 @@
+Django>=4.2
+django-tapeforms>=2.2
+
+[filters]
+django-filter>=24.3
+
+[tables]
+django-tables2>=2.6
