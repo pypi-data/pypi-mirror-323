@@ -1,0 +1,2 @@
+[tox]
+multipython = tox_multipython.hookimpl
