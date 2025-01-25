@@ -1,0 +1,10 @@
+fastahold/__init__.py,sha256=y25xoRqELw0VOJSMc8qBvh4Su2rRS4G44hWEsMIzL1g,98
+fastahold/__main__.py,sha256=2e1Aip5_RZMDLGMj5E1433-n46u1qW_CmWqckKcp29E,66
+fastahold/core/__init__.py,sha256=-UmfYEmQNUYFs-KOWjKS4fKRMyCWeAD8ePWhEVgX3dM,47
+fastahold/tests/__init__.py,sha256=5DXfabhAaC_mT2Sf_1cWkg9Nr5unFp3deWtCfoEtdUY,297
+fastahold/tests/test_1984.py,sha256=GPfy8FPaGbj-w9uGHkJYSjmlSReVAXwiHS8JydJaERw,187
+fastahold-0.0.0.dev0.dist-info/LICENSE.txt,sha256=fOh9FHccUt9OcJPBaVJ482GX4yrl_FxCUk9YRZ53JOI,1074
+fastahold-0.0.0.dev0.dist-info/METADATA,sha256=4o_FMfU9yPP6w9cl7VwkQ53otaLSKjW9pIc2JHgXdME,2652
+fastahold-0.0.0.dev0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+fastahold-0.0.0.dev0.dist-info/top_level.txt,sha256=EzxB6lbcOgXgbQKPi9Nix36TvbJGzWhJAYmEAuwUcLA,10
+fastahold-0.0.0.dev0.dist-info/RECORD,,
