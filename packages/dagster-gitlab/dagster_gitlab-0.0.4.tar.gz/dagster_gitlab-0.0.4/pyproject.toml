@@ -1,0 +1,65 @@
+[project]
+name = "dagster-gitlab"
+version = "0.0.4"
+description = "A Dagster integration for a GitLab client using the v4 GitLab API"
+readme = "README.md"
+license = { text = "MIT License" }
+authors = [{ name = "Cooper Ellidge", email = "cooper.ellidge@gmail.com" }]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Intended Audience :: Developers",
+    "Topic :: System :: Monitoring",
+    "Topic :: Software Development :: Libraries",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+]
+dependencies = ["dagster>=1.7.1", "python-gitlab>=4.4.0", "responses>=0.25.6"]
+
+[dependency-groups]
+dev = ["mypy>=1.14.1", "pytest>=8.3.4", "ruff>=0.9.2"]
+docs = ["mkdocs-material>=9.5.49", "mkdocstrings[python]>=0.27.0"]
+
+[project.urls]
+Homepage = "https://github.com/cooperellidge/dagster-gitlab"
+Repository = "https://github.com/cooperellidge/dagster-gitlab"
+Documentation = "https://cooperellidge.github.io/dagster-gitlab"
+Example = "https://gitlab.com/cooperellidge/test-dagster"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "COM812", # Avoid conflict with formatter
+    "D100",   # Package level docstrings are a bit weird
+    "D104",   # Module level docstrings are a bit weird
+    "D105",   # Docstrings on dunder methods are a bit weird
+    "TD",     # I like todos
+    "FIX002", # I still like todos
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "D",    # Test names should be clear, with docstring being optional
+    "S101", # Asserts are needed for tests
+]
+
+[tool.mypy]
+python_version = "3.10"
