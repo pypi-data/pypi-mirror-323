@@ -1,0 +1,2 @@
+pyyaml
+ansible-core>=2.18
