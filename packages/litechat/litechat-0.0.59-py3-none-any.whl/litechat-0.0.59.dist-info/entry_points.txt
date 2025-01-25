@@ -1,0 +1,6 @@
+[console_scripts]
+codegpt_legacy_server=litechat_server_run:codegpt_legacy_server
+codegpt_server=litechat_server_run:codegpt_server
+litechat_server=litechat_server_run:run_server
+litechat_server_animation=litechat_server_run:run_server_animation
+

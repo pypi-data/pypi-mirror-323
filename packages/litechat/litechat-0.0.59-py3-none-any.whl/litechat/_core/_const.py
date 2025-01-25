@@ -1,0 +1,1 @@
+OPENAI_COMPATIBLE_BASE_URL:str = "http://localhost:11437/v1"
