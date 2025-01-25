@@ -1,0 +1,5 @@
+.cache/
+.venv/
+**/Library/
+**/__pycache__/
+dist
