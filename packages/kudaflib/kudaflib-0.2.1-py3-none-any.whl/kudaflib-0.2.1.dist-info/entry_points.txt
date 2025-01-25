@@ -1,0 +1,3 @@
+[console_scripts]
+kudaf-generate=kudaflib.main:app
+
