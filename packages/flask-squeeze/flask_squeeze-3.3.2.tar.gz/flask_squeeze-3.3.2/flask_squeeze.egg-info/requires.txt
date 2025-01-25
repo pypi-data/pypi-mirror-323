@@ -1,0 +1,4 @@
+flask>=1
+brotli~=1.1
+rjsmin~=1.2
+rcssmin~=1.2
