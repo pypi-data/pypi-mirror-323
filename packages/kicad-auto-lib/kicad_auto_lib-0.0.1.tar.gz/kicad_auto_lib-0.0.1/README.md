@@ -1,0 +1,259 @@
+# Kicad_Auto_Lib  
+
+Stop wasting time managing your component libraries in KiCad.  
+Say goodbye to opening the **Manage Symbol/Footprint Libraries** dialog.
+
+**Kicad_Auto_Lib** is a Python script that automates the organization of symbols, footprints, and 3D models into global libraries—smartly organized and ready to use.  
+
+Simply drag and drop your `.kicad_sym`, `.kicad_mod`, and `.step` files into your KiCad project folder, and let the script handle the rest. Zero configuration required on KiCad's side. Works across all platforms.  
+
+---
+
+## Features  
+
+- **Launch and Forget**: Runs in the background, detecting new files on startup and monitoring your project folder for changes.  
+- **Automatic Detection**: Detects new `.kicad_sym`, `.kicad_mod`, or `.step` files added to your KiCad project folder or subfolders (e.g., via plugins like JLC2KiCad_lib or extractions from SnapEDA).  
+- **Library Management**: Automatically adds component library files to your custom library. Supports a single library or multiple libraries.
+- **Path Correction**: Edits footprint and 3D model paths to ensure everything works out-of-the-box.  
+- **Library Git Syncing**: Automatically syncs all changes to your git repo (Optional)  
+- **Missing Library Handling**: Makes sure that your Project Defined Libraries are always up to date.  
+- **Flexible Organization**: Use one or multiple libraries depending on your workflow. (Note: With multiple libraries, you’ll be prompted to choose where to save each file).
+
+**Library Structure Example**:  
+```  
+/OneCustomLib
+    /symbols.kicad_sym
+    /footprints.pretty
+    /3dmodels
+/TwoCustomLib
+    ...  
+```  
+
+---
+
+## Video
+
+Coming soon..
+
+---
+
+## Installation  
+
+Install the package via `pip`:  
+```bash  
+pip install kicad_auto_lib  
+```  
+
+---
+
+## How to Use  
+
+### First Use  
+
+1. **Create or Open a KiCad Project**:  
+   - Open your KiCad project or create a new one.  
+
+2. **Open a Terminal**:  
+   - Open a terminal in your KiCad project folder. (Right-click -> Open in Terminal on Windows or Terminal -> cd your/project/folder/path)
+
+3. **Prepare the `_Libraries` Folder**:  
+   - Create a folder named `_Libraries` **right outside** your KiCad project folder: 
+    On Linux :
+     ```bash  
+     mkdir ../_Libraries  
+     ``` 
+   - Alternatively, clone your existing library repository into the `_Libraries` folder if you have one.  
+
+   The folder structure should look like this:  
+   ```  
+   /KicadProject  
+       project.kicad_pro  
+       ...  
+   /_Libraries  
+       /OneCustomLib  
+       /TwoCustomLib  
+       ...  
+   ```  
+
+4. **Launch the Script**:  
+   - Run the script in the terminal **from the project folder**:  
+     ```bash  
+     python -m kicad_auto_lib  
+     ```  
+   - Keep the terminal window open to monitor the output.  
+
+5. **Add Files**:  
+   - You're now ready to drag and drop `.kicad_sym`, `.kicad_mod`, or `.step` files into your KiCad project folder. The script will automatically process any files, including those already present in the folder.  
+
+---
+
+### (Optional) Set Up a Git Repository for Your Libraries  
+
+You have two options for organizing your libraries with Git:  
+
+**Option 1: One Repository for All Libraries**:  
+   ```  
+   /_Libraries  
+       /.git  # Your Git root is here  
+       /MyVacuumTubes_Lib
+       /MyQuantumMCUs_Lib
+
+   ```  
+
+**Option 2: Separate Repository for Each Library**:  
+   ```  
+   /_Libraries  
+       /MyNewCoolProject_Lib  
+           /.git  # Your Git root is here  
+       /MyAncientProject_Lib  
+           /.git  # Your Git root is here  
+   ```  
+
+**Steps to Create a Repository**:  
+1. Go to your Git platform (e.g., GitHub) and create an **empty repository**.  
+2. Copy the repository’s clone link.  
+3. Clone the repository into your `_Libraries` folder (for Option 1) or into each library folder (for Option 2):  
+   ```bash  
+   git clone <library_repository_link>  
+   ```  
+Note: If you encounter issues with the first commit/push, manually commit and push to resolve them.  
+
+---
+
+### (Optional) Create a Shortcut to Launch Kicad_Auto_Lib  
+
+To make it easier to launch the script alongside your project:  
+
+- **Windows**: Copy the `/script/launch.bat` file to your project folder.  
+- **Linux**: Copy the `/script/launch.sh` file to your project folder and make it executable:  
+  ```bash  
+  chmod +x launch.sh  
+  ```  
+- **Create a Shortcut**: Optionally, create a desktop shortcut to the script for quick access.  
+
+---
+
+### Regular Use  
+
+To use the script after the initial setup:  
+
+1. Open a terminal in your KiCad project folder.  
+2. Run the script:  
+   ```bash  
+   python -m kicad_auto_lib  
+   ```  
+   - Or be lazy and use the shortcut script (`launch.bat` or `launch.sh`) if you’ve set it up (see just above) 
+
+---
+
+### Create a New Library  
+
+To create a new library:  
+
+1. Create and name a new folder in the `_Libraries` directory:  
+2. The library will be initialized automatically when you add a new symbol or footprint to it.  
+
+---
+
+## Build  
+
+To build the project from source:  
+
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/StepUp-Solutions/kicad_auto_lib.git
+   ```  
+2. Navigate to the project root and build the package:  
+   ```bash  
+   python -m flit build  
+   ```  
+3. Install the built package:  
+   ```bash  
+   pip install dist/kicad_auto_lib-x.y.z-py3-none-any.whl --force-reinstall  
+   ```  
+
+---
+
+Here’s the polished and enhanced version of the remaining sections. I’ve improved clarity, structure, and syntax while maintaining a professional tone. Let’s proceed section by section:
+
+---
+
+## Potential Features  
+
+Upvote and suggest new features on the [GitHub Issues](https://github.com/your-repo/issues) page!  
+
+Here are some ideas for future improvements:  
+
+- **Create Shortcut Scripts**: Generate `.bat` or `.sh` scripts to launch KiCad alongside the script automatically.  
+- **Exclude PCB `.step` Files**: Add an option to ignore PCB-specific `.step` files.  
+- **Background Mode with Notifications**: Run the script in the background and notify users when a prompt or error occurs.  
+- **Set a Default Library**: Allow users to specify a default library when working with multiple libraries.  
+- **Two-Way Sync with HTTP Lib Part-DB**: Sync symbols and footprints with the HTTP Lib part database (e.g., adding a reference would sync the component and vice versa).  
+- **Datasheet Management**: Ensure all datasheets are linked and/or downloaded automatically.  
+- **Pin Cleanup**: Use LLM integration to remove unspecified pins while editing symbols.  
+- **Component Tags with Board Presence**: Add tags to components indicating which boards they’re present on (e.g., by analyzing BOMs or cache files).  
+- **Automated Git Push**: Automatically push changes to the `_Libraries` folder if it’s set up as a Git repository.  
+- **Library UI**: Develop a small UI to visualize all parts and manage their removal.  
+
+---
+
+## TODO  
+
+Here’s the current roadmap:  
+
+- [ ] Add tests for core functionality.  
+- [ ] Implement exclusion of PCB `.step` files.  
+- [ ] Add support for setting a default library.  
+- [ ] Add support for datasheets. 
+
+---
+
+## License  
+
+This project is licensed under the **AGPL v3 License**.  
+
+- **What this means**:  
+  - Anyone or any organization can use this software freely.  
+  - If you modify or extend the software, **you must share your changes** under the same license.  
+  - You are encouraged to contribute your improvements back to this project.  
+
+This license ensures that the project remains open and collaborative, benefiting the entire community.  
+
+---
+
+## Contribute  
+
+We welcome contributions from the community! Whether it’s a new feature, bug fix, or feedback, your input is valuable.  
+
+Here’s how you can contribute:  
+- **Feature Requests**: Suggest new features on the [GitHub Issues](https://github.com/StepUp-Solutions/kicad_auto_lib/issues) page.  
+- **Pull Requests**: Submit PRs for bug fixes or enhancements.  
+- **Comments and Feedback**: Share your thoughts and ideas!  
+- **Documentation**: Help improve the README, guides, or code comments.  
+
+---
+
+## Disclaimer  
+
+This project is still in its **early stages** and comes with **no warranty**.  
+
+**Important Notes**:  
+- Always keep a **backup** of your project (e.g., using Git).  
+- Familiarize yourself with KiCad’s file structure to troubleshoot any issues.  
+- KiCad errors are usually explicit and easily fixable, but **errors may occur**.  
+
+Use this tool at your own risk — you’ve been warned!  
+
+---
+
+## Third-Party Libraries  
+
+This project uses the following third-party libraries:  
+
+- `sexpdata`: Licensed under the **BSD 2-Clause License**  
+  Copyright (c) [2024], [jd-boyd]  
+  [Source Code](https://github.com/jd-boyd/sexpdata)  
+
+---
+
+Let me know if you’d like to add more sections or refine this further!
