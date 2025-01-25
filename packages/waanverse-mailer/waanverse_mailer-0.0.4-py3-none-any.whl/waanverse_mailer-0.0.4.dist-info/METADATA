@@ -1,0 +1,33 @@
+Metadata-Version: 2.2
+Name: waanverse_mailer
+Version: 0.0.4
+Summary: A comprehensive Waanverse Labs Inc. internal package for sending emails
+Home-page: https://dj-waanverse-auth.waanverse.com/
+Author: Waanverse Labs Inc.
+Author-email: software@waanverse.com
+Maintainer: Khaotungkulmethee Pattawee
+Maintainer-email: tawee@waanverse.com
+License: Internal Use License
+Project-URL: Documentation, https://dj-waanverse-auth.waanverse.com/
+Project-URL: Developers, https://www.waanverse.com
+Project-URL: Blog, https://www.waanverse.com/blog/
+Keywords: django,email,sending,waanverse
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: Free To Use But Restricted
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django :: 5.1
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Communications :: Email
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Security
+Requires-Python: <4.0,>=3.11.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django<6.0.0,>=5.1
+
+# WAANVERSE_MAILER
+ WAANVERSE_MAILER
