@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+aiad_cli.egg-info/PKG-INFO
+aiad_cli.egg-info/SOURCES.txt
+aiad_cli.egg-info/dependency_links.txt
+aiad_cli.egg-info/top_level.txt
