@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/sk_serve/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sk_serve"]
+
+[project]
+name = "simple_serve"
+dynamic = ["version"]
+dependencies = [
+    "fastapi",
+    "pandas",
+    "scikit-learn",
+    "pydantic",
+    "loguru"
+]
+requires-python = ">=3.12"
+authors = [
+  {name = "Alexandros Liapatis", email = "alexandrosliapatis@gmail.com"}
+]
+maintainers = [
+  {name = "Alexandros Liapatis", email = "alexandrosliapatis@gmail.com"}
+]
+description = "Deployment of a Scikit-Learn model and it's column transformations with a single endpoint."
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.optional-dependencies]
+dev = ["pre-commit", "pyright"]
+
+[project.urls]
+Homepage = "https://github.com/alexliap/sk_serve"
+Documentation = "https://alexliap.github.io/sk_serve/"
+Repository = "https://github.com/alexliap/sk_serve"
+Issues = "https://github.com/alexliap/sk_serve/issues"
