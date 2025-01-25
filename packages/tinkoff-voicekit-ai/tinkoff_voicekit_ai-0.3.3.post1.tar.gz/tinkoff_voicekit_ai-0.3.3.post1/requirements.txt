@@ -1,0 +1,12 @@
+boto3>=1.28.0
+aioboto3~=11.0.0
+google>=3.0.0
+jsonschema>=4.0.0
+opuslib==3.0.1
+grpcio>=1.50.0
+grpcio-tools>=1.50.0
+googleapis-common-protos>=1.60.0
+requests>=2.31.0
+pytest-asyncio>=0.21.0
+pytest>=7.0.0
+setuptools>=65.5.0

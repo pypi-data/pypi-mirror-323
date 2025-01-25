@@ -1,0 +1,2 @@
+from tinkoff_voicekit_ai.Operations.long_running import ClientOperations
+from tinkoff_voicekit_ai.Operations import aio_long_running as aio
