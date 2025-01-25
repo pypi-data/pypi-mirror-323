@@ -1,0 +1,12 @@
+torch==2.2.2
+sentence-transformers
+gpt4all
+sacremoses
+transformers
+sentencepiece
+optuna
+spacy==3.7.6
+markdown
+uvicorn
+fastapi
+python-multipart
