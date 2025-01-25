@@ -1,0 +1,10 @@
+modules:
+    cloud:
+      - provider: aws
+        account: 436708548746
+        start: "2024-01-01"
+        end: "2024-07-01"
+      - provider: aws
+        start: "2024-01-01"
+        end: "2024-07-01"
+        account: "foo" #Account with no profile

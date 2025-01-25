@@ -1,0 +1,6 @@
+modules:
+    cloud:
+      - provider: aws
+        account: 4367-0854-8746
+        start: "2024-01-01"
+        end: "2024-07-01"
