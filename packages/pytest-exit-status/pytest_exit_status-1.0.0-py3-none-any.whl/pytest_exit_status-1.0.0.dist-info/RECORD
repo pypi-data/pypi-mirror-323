@@ -1,0 +1,6 @@
+pytest_exit_status/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_exit_status/plugin.py,sha256=NfZcoCjyT9Gmj0lI8hHBKmn5JTGilhk6cQlJxJ-eqic,2244
+pytest_exit_status-1.0.0.dist-info/entry_points.txt,sha256=xvBw4QpgIhGBen5Gr4KSMIPk16GN9IigH5AA2tYVMS0,57
+pytest_exit_status-1.0.0.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+pytest_exit_status-1.0.0.dist-info/METADATA,sha256=n_qwz9qtPqLUiDmLFoQnvv4OXY7X4DvM36nut58Ve9k,1575
+pytest_exit_status-1.0.0.dist-info/RECORD,,
