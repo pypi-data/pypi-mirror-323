@@ -1,0 +1,17 @@
+apksearch/__init__.py,sha256=ximCGw08I0PBhA9IWmkLyV5TJRKC_77MM55t8jCXnrk,334
+apksearch/__main__.py,sha256=MSmt_5Xg84uHqzTN38JwgseJK8rsJn_11A8WD99VtEo,61
+apksearch/cli.py,sha256=y2j6dssYUrSSLfhiLJgTDElXLbyOU4g4d8njQI8ioow,8802
+apksearch/sites/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apksearch/sites/apkad.py,sha256=x5nnI20Rj1LysZQc7-vFEbooxXb0vkmHzFpHoUvF_SA,4811
+apksearch/sites/apkcombo.py,sha256=AiJhSb0subQLb51dr8MQaxgeEZ77wI99InfigYfrcl4,4718
+apksearch/sites/apkfab.py,sha256=5f0fOBmQk0E30NcVE2cF80soJqI5ziOukU6_xMPtgFQ,5502
+apksearch/sites/apkmirror.py,sha256=IpS6r7ovM3g2dZrkR_a9zQpHy-jqrU2nJ3ykVkWxers,3127
+apksearch/sites/apkpure.py,sha256=7IUY4u6q6ga_8CFQ1DCaeU_WS2xE70T_7PUU0o20NCk,5941
+apksearch/sites/appteka.py,sha256=in04JYF043n0fUvBW1QQeXnNbYekGUIh4qeame951nA,6372
+apksearch/sites/aptoide.py,sha256=CtLm5ItHZZ8YczcexnoVDePA379wJfM_I5OuQk1tkkk,4348
+apksearch-1.2.7.dist-info/LICENSE,sha256=Icu9iAY9cAaraq-HaAk8aWpXS1nE-3U_wfaOhN-HQUw,1061
+apksearch-1.2.7.dist-info/METADATA,sha256=YybBwp4yCe0mLkoC681aaRGPYcv9BTe40P1MR21oyXg,8185
+apksearch-1.2.7.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+apksearch-1.2.7.dist-info/entry_points.txt,sha256=FeAPgNPSU1tCwQNaKAmk6eQYbMHtsltcgeWSGUTxu0k,49
+apksearch-1.2.7.dist-info/top_level.txt,sha256=VguZMODhlXWwDyJJNJms5syJ4EHmWSQOS45J9I5Cv5o,10
+apksearch-1.2.7.dist-info/RECORD,,
