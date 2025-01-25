@@ -1,0 +1,2 @@
+include template/my_component/frontend/build/*
+recursive-include template/my_component/frontend/build *

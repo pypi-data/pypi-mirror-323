@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+gg_streamlit_table.egg-info/PKG-INFO
+gg_streamlit_table.egg-info/SOURCES.txt
+gg_streamlit_table.egg-info/dependency_links.txt
+gg_streamlit_table.egg-info/requires.txt
+gg_streamlit_table.egg-info/top_level.txt
+template/my_component/frontend/build/asset-manifest.json
+template/my_component/frontend/build/bootstrap.min.css
+template/my_component/frontend/build/index.html
+template/my_component/frontend/build/static/css/main.dd1ea7b7.css
+template/my_component/frontend/build/static/css/main.dd1ea7b7.css.map
+template/my_component/frontend/build/static/js/main.983ce6a4.js
+template/my_component/frontend/build/static/js/main.983ce6a4.js.LICENSE.txt
+template/my_component/frontend/build/static/js/main.983ce6a4.js.map
