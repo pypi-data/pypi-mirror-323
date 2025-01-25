@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: carlogtt_python_library
+Version: 1.0.1
+Summary: A Python package that provides some utility functions.
+Home-page: https://github.com/64rl0/CarlogttPythonLibrary.git
+Author: Carlo Gatti
+Author-email: Carlo Gatti <carlo.gatti@me.com>
+License: MIT
+Project-URL: Homepage, https://github.com/64rl0/CarlogttPythonLibrary.git
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: boto3-stubs
+Requires-Dist: cryptography
+Requires-Dist: mypy-boto3-cloudfront
+Requires-Dist: mypy-boto3-dynamodb
+Requires-Dist: mypy-boto3-ec2
+Requires-Dist: mypy-boto3-kms
+Requires-Dist: mypy-boto3-lambda
+Requires-Dist: mypy-boto3-s3
+Requires-Dist: mypy-boto3-secretsmanager
+Requires-Dist: mysql-connector-python
+Requires-Dist: redis
+Requires-Dist: requests
+Requires-Dist: selenium
+Requires-Dist: types-requests
+Provides-Extra: prod
+Provides-Extra: dev
+Provides-Extra: test
