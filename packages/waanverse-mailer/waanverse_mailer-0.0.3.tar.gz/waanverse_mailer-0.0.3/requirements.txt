@@ -1,0 +1,13 @@
+asgiref==3.8.1
+Django==5.1.5
+flake8==7.1.1
+mccabe==0.7.0
+pycodestyle==2.12.1
+pyflakes==3.2.0
+setuptools==75.8.0
+sqlparse==0.5.3
+tzdata==2025.1
+ua-parser-builtins==0.18.0.post1
+urllib3==2.3.0
+-e git+https://github.com/Theetawee/WAANVERSE_MAILER.git@1303bae92e704b86c27bb72c2c34c0f271796189#egg=waanverse_mailer
+wheel==0.45.1
