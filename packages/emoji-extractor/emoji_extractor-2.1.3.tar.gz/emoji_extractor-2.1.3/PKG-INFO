@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: emoji_extractor
+Version: 2.1.3
+Summary: Extract, detect and count emoji
+Home-page: https://github.com/alexanderrobertson/emoji-extractor
+Author: Alexander Robertson
+Author-email: alexander.duncan.robertson@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Text Processing :: General
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: summary
