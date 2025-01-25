@@ -1,0 +1,2 @@
+
+from medium_multiply_adil.multiplication import Multiplication
