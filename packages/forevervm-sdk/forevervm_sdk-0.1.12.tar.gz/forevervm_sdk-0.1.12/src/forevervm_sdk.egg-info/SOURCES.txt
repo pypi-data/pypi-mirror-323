@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/forevervm_sdk/__init__.py
+src/forevervm_sdk/config.py
+src/forevervm_sdk/repl.py
+src/forevervm_sdk/types.py
+src/forevervm_sdk.egg-info/PKG-INFO
+src/forevervm_sdk.egg-info/SOURCES.txt
+src/forevervm_sdk.egg-info/dependency_links.txt
+src/forevervm_sdk.egg-info/requires.txt
+src/forevervm_sdk.egg-info/top_level.txt
+tests/test_connect.py
