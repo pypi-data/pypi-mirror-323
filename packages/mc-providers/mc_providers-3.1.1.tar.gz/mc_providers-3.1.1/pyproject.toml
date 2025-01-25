@@ -1,0 +1,41 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "mc-providers"
+version = "3.1.1"
+authors = [
+    {name = "Paige Gulley", email = "nano3.14@gmail.com"},
+    {name = "Rahul Bhargava", email = "r.bhargava@northeastern.edu"},
+]
+description = "Search Providers package for Mediacloud"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+    "python-dateutil == 2.*",
+    "ciso8601==2.2.*",
+    "dateparser",
+    "requests",
+    "wayback-news-search == 1.*",
+    "fasttext == 0.9.*",
+    "mediacloud-metadata >= 1.0.0",
+    "mediacloud == 4.*",
+    "elasticsearch == 8.17.*", # keep in sync w/ ES major version?
+    "elasticsearch-dsl == 8.17.*", # keep in sync w/ ES major version!
+]
+
+[tool.flit.sdist]
+include = ["mc_providers/*.py","mc_providers/language/*.py", "mc_providers/language/*.bin", "mc_providers/language/*.txt" ]
+
+[tool.flit.module]
+name = "mc_providers"
