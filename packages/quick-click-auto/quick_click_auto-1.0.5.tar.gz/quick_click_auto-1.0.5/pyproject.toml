@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "quick-click-auto"
+version = "1.0.5"
+description = " Enable quick tab autocompletion for complex Click CLI applications. "
+authors = ["Nim <nim@systemli.org>"]
+maintainers = ["Nim <nim@systemli.org>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/nimrod-a/quick-click-auto"
+repository = "https://github.com/nimrod-a/quick-click-auto"
+documentation = "https://github.com/nimrod-a/quick-click-auto/blob/main/README.md"
+keywords = ["click", "autocomplete", "shell"]
+classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Topic :: Software Development",
+]
+packages = [{include = "quick_click_auto"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = "^8.1.4"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.4.1"
+
+[[tool.mypy.overrides]]
+module = ["click"]
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
