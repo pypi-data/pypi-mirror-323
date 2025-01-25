@@ -1,0 +1,52 @@
+import requests,json
+from abstract_security import get_env_value
+solana_rpc_url="http://api.mainnet-beta.solana.com"
+def get_if_None(obj,fallBack):
+    return obj if obj != None else fallBack
+def get_rpc_payload(method,params=None,id=None,jsonrpc=None):
+    if method == None:
+        return None
+    params=get_if_None(params,[])
+    rpc_id=int(get_if_None(id,1))
+    jsonrpc=str(get_if_None(jsonrpc,"2.0"))
+    return {
+            "jsonrpc": jsonrpc,
+            "id": rpc_id,
+            "method": method,
+            "params": params
+        }
+def get_result(response):
+    try:
+        response = response.json()
+        result = response.get('result',response)
+    except:
+        result = response.text
+    return result
+def make_rpc_call(method, params=[],rpc_url=None):
+    rpc_url = rpc_url or solana_rpc_url
+    headers = {'Content-Type': 'application/json'}
+    payload = get_rpc_payload(method=method, params=params)
+    response = requests.post(rpc_url, data=json.dumps(payload), headers=headers)
+    return response
+def get_transaction(signature):
+    transaction=None
+    method='getTransaction'
+    params=[signature,{"maxSupportedTransactionVersion": 0}]
+    while True:
+        response = make_rpc_call(method=method,params=params)
+        transaction = get_result(response)
+        if transaction:
+            break
+    return transaction
+def get_signatures(address, until=None, limit=1000,rpc_url=None):
+    rpc_url = rpc_url or solana_rpc_url
+    method = 'getSignaturesForAddress'
+    params = [address, {"until":until,"limit": limit}]
+    response = make_rpc_call(method=method,params=params,rpc_url=rpc_url)
+    return get_result(response)
+async def async_get_signatures(address, until=None, limit=1000,rpc_url=None):
+    rpc_url = rpc_url or solana_rpc_url
+    method = 'getSignaturesForAddress'
+    params = [address, {"until":until,"limit": limit}]
+    response = make_rpc_call(method=method,params=params,rpc_url=rpc_url)
+    return get_result(response)
