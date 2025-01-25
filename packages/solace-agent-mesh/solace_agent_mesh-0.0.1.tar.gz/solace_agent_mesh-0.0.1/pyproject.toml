@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "solace-agent-mesh"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+keywords = []
+authors = [
+  { name = "Art Morozov", email = "art.morozov@solace.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/SolaceDev/solace-agent-mesh#readme"
+Issues = "https://github.com/SolaceDev/solace-agent-mesh/issues"
+Source = "https://github.com/SolaceDev/solace-agent-mesh"
+
+[tool.hatch.version]
+path = "src/solace_agent_mesh/__init__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/solace_agent_mesh tests}"
+
+[tool.coverage.run]
+source_pkgs = ["solace_agent_mesh", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/solace_agent_mesh/__about__.py",
+]
+
+[tool.coverage.paths]
+solace_agent_mesh = ["src/solace_agent_mesh", "*/solace-agent-mesh/src/solace_agent_mesh"]
+tests = ["tests", "*/solace-agent-mesh/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
