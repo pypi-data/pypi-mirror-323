@@ -1,0 +1,20 @@
+[project]
+name = "mbiter"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Sebastian", email = "peraltas@seas.upenn.edu" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "rich>=13.9.4",
+]
+
+[project.scripts]
+mbiter = "mbiter:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
