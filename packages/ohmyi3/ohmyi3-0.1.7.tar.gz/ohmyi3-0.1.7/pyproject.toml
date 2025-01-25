@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "ohmyi3"
+version = "0.1.7"
+license = "MIT"
+authors = ["Matthew Reschke <mail@mreschke.com>"]
+description = "Dynamic i3 Configuration Manager "
+homepage = "https://github.com/ohmyi3/ohmyi3"
+documentation = "https://github.com/ohmyi3/ohmyi3"
+repository = "https://github.com/ohmyi3/ohmyi3"
+readme = "README.md"
+include = ["LICENSE"]
+
+packages = [
+    { include = "ohmyi3" },
+]
+
+[tool.poetry.scripts]
+i3ctl = 'ohmyi3.commands.entrypoint:cli'
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+jinja2 = "3.1.*"
+uvicore = "0.2.8"
+#uvicore = {path = "../framework", develop = true, extras = []}
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
