@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: embdiv
+Version: 0.0.3
+Summary: Library for dividing the Embedding layer of the LLM.
+Home-page: https://github.com/1kkiRen/Embeddings-Division
+Author: 1kkiren
+Author-email: 1kkiren@mail.ru
+Project-URL: GitHub, https://github.com/1kkiRen/Embeddings-Division
+Keywords: embeddings division nlp
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Embeddings-Division
+
+Python script for for dividing Embedding layer of LLM.
+
+The solution was tested on meta-llama/Llama-3.2-1B.
+
+# Installation
+
+Installation from PyPI:
+
+```bash
+pip install embdiv
+```
+
+# Requirements
+
+- Python 3.9+
+- cachetools>=5.5.0,
+- torch>=2.5.1,
+- transformers>=4.45.2,
+
+# Docs
+
+[https://embeddings-division.readthedocs.io/en/latest/](https://embeddings-division.readthedocs.io/en/latest/)
