@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "interactive-process"
+version = "0.2.4"
+description = ""
+authors = ["Yason Khaburzaniya <yason@hey.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ptyprocess = "^0.7.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+interactive-process = "interactive_process.interactive_process:main"
