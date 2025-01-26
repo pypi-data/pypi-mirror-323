@@ -1,0 +1,13 @@
+pytubepp/__init__.py,sha256=MigXIT7A1M9YZuH2MyjKReSziFwzbZX2boVYsLosR6s,22
+pytubepp/config.py,sha256=RvvdS68Gzg-WdNQ29jQE0ZGgw2vKI0bx6AWHG2lmuFw,1815
+pytubepp/download.py,sha256=spBaac-e_K8Jb8eEB0swUsmLFeW_vVcRgEhG2tqPmms,4489
+pytubepp/main.py,sha256=tEKqwZzXXtN6bhW--NGVZnVwtaRj8whN_49HjdHxFS4,39352
+pytubepp/postinstaller.py,sha256=IUDAdS0rpcoZCI_CS2bfwUdfKUhc8zEn1yY_G6kvcUI,7602
+pytubepp/postprocess.py,sha256=HMOdkiM-rCyfZrjcPiO73gBhWzqacLFuN80WbdnOPHA,5241
+pytubepp/utils.py,sha256=DNwOIdRG7WlUkmNPP2GwD4DC_vJcn817TPzy1irB7qo,2769
+pytubepp-1.1.8.dist-info/LICENSE,sha256=KJffRTkB0kse7TATXgdkcpkf6Admk89ei1DdRhWeTgk,1071
+pytubepp-1.1.8.dist-info/METADATA,sha256=99To82F8xxioG1yO31MyFyN9JngSafe5078LYcJSY7E,13987
+pytubepp-1.1.8.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+pytubepp-1.1.8.dist-info/entry_points.txt,sha256=MgpB3Dz4NWb2M2cOgxUP3P8dXYmvEgoBXblY63lNZoc,48
+pytubepp-1.1.8.dist-info/top_level.txt,sha256=jtrDDrnWZXZhYaYyYjw4jQfIgVDbHa4k0URYK0RZPJE,9
+pytubepp-1.1.8.dist-info/RECORD,,
