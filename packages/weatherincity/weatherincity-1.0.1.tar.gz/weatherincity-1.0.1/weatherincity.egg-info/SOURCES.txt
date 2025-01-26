@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+weatherincity/__init__.py
+weatherincity/weatherincity.py
+weatherincity.egg-info/PKG-INFO
+weatherincity.egg-info/SOURCES.txt
+weatherincity.egg-info/dependency_links.txt
+weatherincity.egg-info/top_level.txt
