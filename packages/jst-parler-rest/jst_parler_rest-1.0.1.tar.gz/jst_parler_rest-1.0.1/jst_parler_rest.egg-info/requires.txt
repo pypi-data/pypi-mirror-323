@@ -1,0 +1,3 @@
+jst-parler>=1.0.0
+djangorestframework>=3.5
+django>=2.2
