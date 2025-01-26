@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+mikegrad/__init__.py
+mikegrad/engine.py
+mikegrad/nn.py
+mikegrad.egg-info/PKG-INFO
+mikegrad.egg-info/SOURCES.txt
+mikegrad.egg-info/dependency_links.txt
+mikegrad.egg-info/requires.txt
+mikegrad.egg-info/top_level.txt
