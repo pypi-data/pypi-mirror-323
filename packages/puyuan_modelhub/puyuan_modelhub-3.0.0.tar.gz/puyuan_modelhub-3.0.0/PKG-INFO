@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: puyuan_modelhub
+Version: 3.0.0
+Summary: 
+Author: HSPK
+Author-email: whxway@whu.edu.cn
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: httpx (>=0.27.2,<0.28.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: pydantic (>2)
+Description-Content-Type: text/markdown
+
+## Modelhub Client
+
+This is a Python client for the Modelhub API. It is a simple wrapper around the Modelhub API, which is a RESTful API for managing virtual deep learning models.
+
+## Quick Start
+
+```bash
+pip install puyuan_modelhub --user
+```
+
+Usage
+
+```python
+from modelhub import Modelhub
+
+mh = Modelhub()
+
+# List models
+print(mh.supported_models)
+
+# Generate text
+mh.generate("hello", model="gpt-4o")
+
+# Streaming text
+for t in mh.stream("hello", model="gpt-4o"):
+    print(t.token, end="")
+
+# Embedding
+mh.embedding("hello", model="m3e")
+
+# Rerank
+mh.rerank([["hello", "world"], ["good", "morning"]], model="bge-reranker-base")
+```
+
