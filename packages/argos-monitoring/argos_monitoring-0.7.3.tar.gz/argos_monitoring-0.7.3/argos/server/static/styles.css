@@ -1,0 +1,72 @@
+@import url("pico.min.css");
+
+.display-small {
+    display: none;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .display-large {
+        display: none !important;
+    }
+    .display-small {
+        display: block;
+    }
+    .display-small article {
+        display: inline-block;
+        width: 24%;
+    }
+}
+
+code {
+    white-space: pre-wrap;
+}
+
+#title {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-bottom: calc(var(--pico-typography-spacing-vertical) * 0.5);
+}
+
+.grid-index {
+    font-size: 2rem;
+}
+.text-center,
+.grid-index {
+    text-align: center;
+}
+.grid-index article {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: calc(var(--pico-block-spacing-vertical) * 2.4);
+}
+.grid-index article > header {
+    padding-top: calc(var(--pico-block-spacing-vertical) * 2.4);
+    padding-bottom: calc(var(--pico-block-spacing-vertical) * 2.4);
+    margin-bottom: calc(var(--pico-block-spacing-vertical) * 2.4);
+}
+
+label[for="select-status"] {
+    display: inline-block;
+}
+#select-status {
+    width: initial;
+}
+
+.inline-label {
+    display: inline-block;
+}
+.initial-width {
+    width: initial !important;
+}
+#refresh-form {
+    margin-bottom: 0;
+}
+#refresh-delay {
+    max-width: 120px;
+}
+/* Remove chevron on menu */
+#nav-menu summary::after {
+    background-image: none !important;
+}

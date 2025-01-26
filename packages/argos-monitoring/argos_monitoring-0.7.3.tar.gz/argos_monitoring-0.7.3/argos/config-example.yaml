@@ -1,0 +1,254 @@
+---
+general:
+  # Except for frequency and recheck_delay settings, changes in general
+  # section of the configuration will need a restart of argos server.
+  db:
+    # The database URL, as defined in SQLAlchemy docs :
+    # https://docs.sqlalchemy.org/en/20/core/engines.html#database-urls
+    # Example for SQLite: "sqlite:////tmp/argos.db"
+    url: "postgresql://argos:argos@localhost/argos"
+    # You configure the size of the database pool of connection, and
+    # the max overflow (until when new connections are accepted ?)
+    # For details, see
+    # https://docs.sqlalchemy.org/en/20/core/pooling.html#sqlalchemy.pool.QueuePool.params.pool_size
+    pool_size: 10
+    max_overflow: 20
+  # Can be "production", "dev", "test".
+  # If not present, default value is "production"
+  env: "production"
+  # To get a good string for cookie_secret, run:
+  # openssl rand -hex 32
+  cookie_secret: "foo_bar_baz"
+
+  # Session duration
+  # Use m for minutes, h for hours, d for days
+  # w for weeks, M for months, y for years
+  # See https://github.com/timwedde/durations_nlp#scales-reference for details
+  # If not present, default value is "7d"
+  session_duration: "7d"
+  # Session opened with "Remember me" checked
+  # If not present, the "Remember me" feature is not available
+  # remember_me_duration: "1M"
+
+  # Unauthenticated access
+  # If can grant an unauthenticated access to the dashboard or to all pages
+  # To do so, choose either "dashboard", or "all"
+  # If not present, all pages needs authentication
+  # unauthenticated_access: "all"
+
+  # LDAP authentication
+  # Instead of relying on Argos’ users, use a LDAP server to authenticate users.
+  # If not present, Argos’ native user system is used.
+  # ldap:
+  #   # Server URI
+  #   uri: "ldaps://ldap.example.org"
+  #   # Search base DN
+  #   user_tree: "ou=users,dc=example,dc=org"
+  #   # Search bind DN
+  #   bind_dn: "uid=ldap_user,ou=users,dc=example,dc=org"
+  #   # Search bind password
+  #   bind_pwd: "secr3t"
+  #   # User attribute (uid, mail, sAMAccountName, etc.)
+  #   user_attr: "uid"
+  #   # User filter (to exclude some users, etc.)
+  #   user_filter: "(!(uid=ldap_user))"
+
+  # Default delay for checks.
+  # Can be superseeded in domain configuration.
+  # For ex., to run checks every 5 minutes:
+  frequency: "5m"
+  # Default re-check delay if a check has failed.
+  # Can be superseeded in domain configuration.
+  # If not present, failed checked won’t be re-checked (they will be
+  # run again like if they succeded
+  # For ex., to re-try a check one minute after a failure:
+  # recheck_delay: "1m"
+
+  # Default setting for notifications delay.
+  # Say you want to be warned right after a failure on a check: set it to 0
+  # Say you want a second failure on the check before being warned,
+  # to avoid network hiccups: set it to 1
+  # Can be superseeded in domain configuration
+  # If not present, default is 0
+  # retry_before_notification: 0
+
+  # Defaults settings for IPv4/IPv6
+  # Can be superseeded in domain configuration.
+  # By default, Argos will check both IPv4 and IPv6 addresses of a domain
+  # (i.e. by default, both `ipv4` and `ipv6` are set to true).
+  # To disable the IPv4 check of domains:
+  # ipv4: false
+  # To disable the IPv6 check of domains:
+  # ipv6: false
+
+  # Which way do you want to be warned when a check goes to that severity?
+  # "local" emits a message in the server log
+  # You’ll need to configure mail, gotify or apprise below to be able to use
+  # them here.
+  # Use "apprise:john", "apprise:team" (with the quotes!) to use apprise
+  # notification groups.
+  alerts:
+    ok:
+      - local
+    warning:
+      - local
+    critical:
+      - local
+    unknown:
+      - local
+  # Argos root path
+  # If not present, default value is ""
+  # Set it to /foo if you want to use argos at /foo/ instead of /
+  # on your web server
+  # root_path: "/foo"
+  # Mail configuration is quite straight-forward
+  # mail:
+  #   mailfrom: no-reply@example.org
+  #   host: 127.0.0.1
+  #   port: 25
+  #   ssl: False
+  #   starttls: False
+  #   auth:
+  #     login: foo
+  #     password: bar
+  #   addresses:
+  #     - foo@admin.example.org
+  #     - bar@admin.example.org
+  # Create an app on your Gotify server and put its token here
+  # See https://gotify.net/ for details about Gotify
+  # gotify:
+  #   - url: https://example.org
+  #     tokens:
+  #       - foo
+  #       - bar
+  # See https://github.com/caronc/apprise#productivity-based-notifications
+  # for apprise’s URLs syntax.
+  # You need to surround the URLs with quotes like in the examples below.
+  # Use "apprise:john", "apprise:team" (with the quotes!) in "alerts" settings.
+  # apprise:
+  #   john:
+  #     - "mastodon://access_key@hostname/@user"
+  #     - "matrixs://token@hostname:port/?webhook=matrix"
+  #   team:
+  #     - "mmosts://user@hostname/authkey"
+  #     - "nctalks://user:pass@host/RoomId1/RoomId2/RoomIdN"
+
+service:
+  secrets:
+    # Secrets can be generated using `argos server generate-token`.
+    # You need at least one. Write them as a list, like:
+    # - secret_token
+
+ssl:
+  thresholds:
+    - "1d": critical
+    - "5d": warning
+
+# It's also possible to define the checks in another file
+# with the include syntax:
+#
+# websites: !include websites.yaml
+#
+websites:
+  - domain: "https://mypads.example.org"
+    # Wait for a second failure before sending notification
+    retry_before_notification: 1
+    paths:
+      - path: "/mypads/"
+        # Specify the method of the HTTP request
+        # Valid values are "GET", "HEAD", "POST", "OPTIONS",
+        # "CONNECT", "TRACE", "PUT", "PATCH" and "DELETE"
+        # default is "GET" if omitted
+        method: "GET"
+        checks:
+          # Check that the returned HTTP status is 200
+          - status-is: 200
+          # Check that the response contains this string
+          - body-contains: '<div id= "mypads"></div>'
+          # Check that the response matches this regex
+          - body-like: MyPads .* accounts
+          # Check that the SSL certificate is no older than ssl.thresholds
+          - ssl-certificate-expiration: "on-check"
+          # Check that the response contains this headers
+          # The comparison is case insensitive
+          - headers-contain:
+              - "content-encoding"
+              - "content-type"
+          # Check that there is a HTTP to HTTPS redirection with 3xx status code
+          - http-to-https: true
+          # Check that there is a HTTP to HTTPS redirection with 301 status code
+          - http-to-https: 301
+          # Check that there is a HTTP to HTTPS redirection with a status code
+          # in the provided range (stop value excluded)
+          - http-to-https:
+              start: 301
+              stop: 308
+          # Check that there is a HTTP to HTTPS redirection with a status code
+          # in the provided list
+          - http-to-https:
+              - 301
+              - 302
+              - 307
+      - path: "/admin/"
+        methode: "POST"
+        # Send form data in the request
+        request_data:
+          data:
+            login: "admin"
+            password: "my-password"
+          # To send data as JSON (optional, default is false):
+          is_json: true
+          # To send additional headers
+          headers:
+            Authorization: "Bearer foo-bar-baz"
+        checks:
+          # Check that the return HTTP status is one of those
+          # Similar to status-is, verify that you don’t mistyped it!
+          - status-in:
+              - 401
+              - 301
+          # Check that the response contains this headers and values
+          # It’s VERY important to respect the 4 spaces indentation here!
+          # The name of the headers is case insensitive
+          - headers-have:
+              content-encoding: "gzip"
+              content-type: "text/html"
+          # Checks that response headers contains the expected headers and
+          # that the values matches the provided regexes
+          # You have to double the escape character \
+          - headers-like:
+              content-encoding: "gzip|utf"
+              content-type: "text/(html|css)"
+      - path: "/my-stats.json"
+        checks:
+          # Check that JSON response contains the expected structure
+          - json-contains:
+              - /foo/bar/0
+              - /foo/bar/1
+              - /timestamp
+          # Check that JSON response contains the expected structure and values
+          # It’s VERY important to respect the 4 spaces indentation here!
+          - json-has:
+              /maintenance: false
+              /productname: "Nextcloud"
+          # Check that JSON response contains the expected structure and
+          # that the values matches the provided regexes
+          # You have to double the escape character \
+          - json-like:
+              /productname: ".*cloud"
+              /versionstring: "29\\..*"
+          # Check that JSON response is the exact expected JSON object
+          # The order of the items in the object does not matter.
+          - json-is: '{"foo": "bar", "baz": 42}'
+  - domain: "https://munin.example.org"
+    frequency: "20m"
+    recheck_delay: "5m"
+    # Let’s say it’s an IPv6 only web site
+    ipv4: false
+    paths:
+      - path: "/"
+        checks:
+          - status-is: 301
+      - path: "/munin/"
+        checks:
+          - status-is: 401
