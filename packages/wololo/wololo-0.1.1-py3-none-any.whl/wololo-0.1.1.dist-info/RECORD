@@ -1,0 +1,16 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/torchdist_test.py,sha256=B9gZzmIlpV_3-2v3Cxun2Tx9z4txnhaZSKMUBZXX2K0,4013
+tests/training_test.py,sha256=MtEi_4Uc5bZmxEGMvlxLanzmA5V6HHZtQ3xv-uY5U88,3615
+wololo/__init__.py,sha256=vMXKMtiJUr-8TaT0nhlK928WM2-oPZZSqRF215GHuR8,371
+wololo/adapters.py,sha256=xEOzP90AtjAYvaEgg5umjpVvKQozWppe-vsgfsZG3o4,5975
+wololo/converters.py,sha256=M6Fgm4Om81cHUls7IHoDW4M004z2JTD9nmHqAtr2fsk,11186
+wololo/tracers.py,sha256=4-gWhfUGDcomuaER2CjJETePc7EJ3cx_b55_NKky57o,4199
+wololo/transformers.py,sha256=6MyqJGQkwsknLcY8PyzMEiF2j-1FgveRAIyVJ5xI78A,3061
+wololo/algorithms/__init__.py,sha256=bF14SyInqurKA1IK3qXfUCAcvmUdoFEOimhUoLE-8jE,85
+wololo/algorithms/bbvi.py,sha256=B3a78iw7Jpblu4-vVFhHUK8558QyTEURjN99salBkSg,12651
+wololo/algorithms/sensitivity.py,sha256=mCcGZwYTKb2OpXP6SqccPVmHVoJ47X-Ai_ohOON5yfc,8936
+wololo/algorithms/svgd.py,sha256=bJUaaUGkNpn6LllPjbNTblQvjz2bKQEfazzvop7CnKY,13793
+wololo-0.1.1.dist-info/METADATA,sha256=BOh_Y6xSi7MDSwC5ckC0sWMANdoJNOc5ljp_gIOq1_w,215
+wololo-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wololo-0.1.1.dist-info/top_level.txt,sha256=HLJ4zVsTkeh7kGAItaGE6vighk63rmmf_LBM4L2YvU8,13
+wololo-0.1.1.dist-info/RECORD,,

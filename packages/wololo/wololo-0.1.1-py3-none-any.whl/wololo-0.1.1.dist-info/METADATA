@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: wololo
+Version: 0.1.1
+Summary: A PyTorch Framework for Probabilistic Model Conversion
+Author: mrcaprari
+Requires-Dist: torch>=2.5.1
+Requires-Dist: numpy>=1.22
+Requires-Dist: tqdm>=4.67.1
