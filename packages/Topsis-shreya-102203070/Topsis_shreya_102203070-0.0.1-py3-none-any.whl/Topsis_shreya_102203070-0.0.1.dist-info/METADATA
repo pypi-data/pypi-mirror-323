@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: Topsis_shreya_102203070
+Version: 0.0.1
+Summary: topsis package for decision making
+Author: shreya
+Author-email: ssingh5_be22@thapar.edu
+Keywords: python,video,stream,video stream,camera stream,sockets
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: logging
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+# Topsis
+
+TOPSIS is based on the fundamental premise that the best solution has the shortest distance from the positive-ideal solution, and the longest distance from the negative-ideal one. Alternatives are ranked with the use of an overall index calculated based on the distances from the ideal solutions.
+
+It takes 4 arguments :
+1.Data.csv file
+2.Weights
+3.Impacts
+4.Result file
+
+Returns file with Topsis Score and Rank
+
+## How to use it?
+
+Open terminal and type pip install Topsis-shreya-102203070
+
+To get started quickly, just use the following:
+
+from topis_pckg.topsis import topsis
+topsis('inputfilename','Weights','Impacts','Outputfilename')
+make ensure the weights and impacts should be in ""
+
+eg: "1,1,1,1,1" and "+,-,+,-,+"
