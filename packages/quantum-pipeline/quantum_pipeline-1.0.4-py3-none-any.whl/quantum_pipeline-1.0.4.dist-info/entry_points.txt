@@ -1,0 +1,5 @@
+[console_scripts]
+quantum-pipeline = quantum_pipeline.cli:main
+
+[gui_scripts]
+
