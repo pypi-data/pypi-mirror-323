@@ -1,0 +1,15 @@
+tailwind/__init__.py,sha256=CRzJlI9k7yXv1Rfx8zUXWAtfAt9oQOZqCJvEt5HSWKk,524
+tailwind/apps.py,sha256=_OUAG1Bnh1CjoNshiCQntp6-zB1i-YDtxvBMwqQeGV0,91
+tailwind/npm.py,sha256=lo4_Jzi1-dZH0B4rMZkXwo4qr2kbb450VFXxzSSIbws,1150
+tailwind/utils.py,sha256=kDTEZa8UobFk-Ud45i00p0HJG6wBhc6dLN0zOarQ8-8,762
+tailwind/validate.py,sha256=2o-lLDMQAtN9XH28vR7VaFlhC23AfQRZ1YiEc5ZFJFE,1018
+tailwind/app_template/hooks/pre_gen_project.py,sha256=qMM4UNU7ElqLJHI61WmKyXVwYIPdNmegUw8bXkf8qd8,292
+tailwind/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tailwind/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tailwind/management/commands/tailwind.py,sha256=FuMEl2BhvPfHv4vrtChMJybm2fmpqqp_5_MpyK9dub8,4121
+tailwind/templatetags/tailwind_tags.py,sha256=H0f9g-KHMywhcg8kqxjqws02m9pOXVeJquBdRnvggDE,896
+django_tailwind_4-0.1.2.dist-info/LICENSE,sha256=htQDvjKtOLJxi8Tz0hybW1juf4G24j4iKgXTP1JovzQ,1078
+django_tailwind_4-0.1.2.dist-info/METADATA,sha256=3NWTNXuNgZUenpwG-AVbJAO9tkuuokencIX1QZ3r6dI,3717
+django_tailwind_4-0.1.2.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+django_tailwind_4-0.1.2.dist-info/top_level.txt,sha256=oGa74iNaKmO4yUcfgp4iDDLLBjJKg_EdfywCdV0VFpw,9
+django_tailwind_4-0.1.2.dist-info/RECORD,,
