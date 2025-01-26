@@ -1,0 +1,71 @@
+[project]
+name = "pybarrnap"
+dynamic = ["version"]
+description = "Python implementation of barrnap (Bacterial ribosomal RNA predictor)"
+authors = [{ name = "moshi4", email = "" }]
+license = "GPL-3.0-only"
+readme = "README.md"
+keywords = ["bioinformatics"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+requires-python = ">=3.9"
+dependencies = ["biopython>=1.80", "pyhmmer>=0.11.0"]
+
+[project.urls]
+homepage = "https://github.com/moshi4/pybarrnap/"
+repository = "https://github.com/moshi4/pybarrnap/"
+
+[project.scripts]
+pybarrnap = "pybarrnap.scripts.pybarrnap:main"
+
+[tool.hatch.version]
+path = "src/pybarrnap/__init__.py"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ruff>=0.4.0",
+    "pre-commit>=3.5.0",
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+    "ipykernel>=6.13.0",
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov=src --tb=long -vv --cov-report=xml --cov-report=term"
+testpaths = ["tests"]
+
+[tool.ruff]
+include = ["src/**.py", "tests/**.py"]
+line-length = 88
+
+# Lint Rules: https://docs.astral.sh/ruff/rules/
+[tool.ruff.lint]
+select = [
+    "F", # pyflakes
+    "E", # pycodestyle (Error)
+    "W", # pycodestyle (Warning)
+    "I", # isort
+    "D", # pydocstyle
+]
+ignore = [
+    "D100", # Missing docstring in public module
+    "D101", # Missing docstring in public class
+    "D104", # Missing docstring in public package
+    "D105", # Missing docstring in magic method
+    "D205", # 1 blank line required between summary line and description
+    "D400", # First line should end with a period
+    "D401", # First line should be in imperative mood
+    "D403", # First word of the first line should be properly capitalized
+    "D415", # First line should end with a period, question mark, or exclamation point
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[build-system]
+requires = ["hatchling==1.26.3"]
+build-backend = "hatchling.build"
