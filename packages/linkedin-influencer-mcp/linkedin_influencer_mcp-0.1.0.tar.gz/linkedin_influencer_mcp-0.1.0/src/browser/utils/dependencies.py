@@ -1,0 +1,16 @@
+dependencies = [
+    "playwright",
+    "beautifulsoup4",
+    "lxml",
+    "fastmcp",
+    "fastmcp>=0.4.1",
+    "mcp[cli]",
+    "playwright",
+    "langchain_groq",
+    "playwright>=1.39.0",
+    "pydantic>=2.5.2",
+    "python-dotenv>=1.0.0",
+    "uvicorn>=0.24.0",
+    "langchain_google_genai",
+    "langchain_openai",
+]
