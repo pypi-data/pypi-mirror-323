@@ -1,0 +1,17 @@
+pytrilogy<0.0.4.0,>=0.0.3.4
+openai
+langchain
+langchain-community
+langchain-openai
+mediawikiapi
+wikibase-rest-api-client
+tomli-w
+
+[anthropic]
+langchain-anthropic
+
+[gemini]
+langchain-google-genai
+
+[openai]
+langchain-openai
