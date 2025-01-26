@@ -1,0 +1,70 @@
+Metadata-Version: 2.3
+Name: transdoc-python
+Version: 0.1.0
+Summary: A Transdoc handler for Python docstrings
+License: MIT
+Author: Maddy Guthridge
+Author-email: hello@maddyguthridge.com
+Requires-Python: >=3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: libcst (>=1.6.0,<2.0.0)
+Requires-Dist: transdoc (>=1.0.0,<2.0.0)
+Project-URL: Bug Tracker, https://github.com/MaddyGuthridge/transdoc-python/issues
+Project-URL: Documentation, https://maddyguthridge.github.io/transdoc/handlers
+Project-URL: Homepage, https://maddyguthridge.github.io/transdoc/handlers
+Project-URL: Repository, https://github.com/MaddyGuthridge/transdoc-python
+Description-Content-Type: text/markdown
+
+# 🏳️‍⚧️🐍 Transdoc Python
+
+A Transdoc handler for Python docstrings.
+
+## Installation
+
+```sh
+pip install transdoc[python]
+```
+
+## Usage
+
+Transdoc rules are applied to Python docstrings.
+
+For example, given the following rule:
+
+```py
+def mdn_link(e: str) -> str:
+    '''
+    Return a Markdown-formatted link to MDN's documentation of an HTML element.
+    '''
+    return (
+        f"[View `<{e}>` on MDN]"
+        f"(https://developer.mozilla.org/en-US/docs/Web/HTML/Element/{e})"
+    )
+```
+
+The following Python function's docstring would be transformed as follows:
+
+```py
+# Before
+def make_link(text: str, href: str) -> str:
+    '''
+    Generate an HTML link.
+    {{mdn_link[a]}}
+    '''
+    # Please don't write code this insecure in real life
+    return f"<a href={href}>{text}</a>"
+
+
+def make_link(text: str, href: str) -> str:
+    '''
+    Generate an HTML link.
+    [View `<a>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+    '''
+    # Please don't write code this insecure in real life
+    return f"<a href={href}>{text}</a>"
+```
+
