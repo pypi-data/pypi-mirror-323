@@ -1,0 +1,12 @@
+
+[dev]
+repo_mapper[lint,test]
+
+[lint]
+pre-commit
+ruff
+
+[test]
+pytest
+pytest-cov
+hypothesis
