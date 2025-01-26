@@ -1,0 +1,10 @@
+README.md
+setup.py
+jscrawler/__init__.py
+jscrawler/jscrawler.py
+jscrawler.egg-info/PKG-INFO
+jscrawler.egg-info/SOURCES.txt
+jscrawler.egg-info/dependency_links.txt
+jscrawler.egg-info/entry_points.txt
+jscrawler.egg-info/requires.txt
+jscrawler.egg-info/top_level.txt
