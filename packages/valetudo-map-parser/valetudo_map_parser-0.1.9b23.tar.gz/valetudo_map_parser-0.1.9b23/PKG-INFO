@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: valetudo-map-parser
+Version: 0.1.9b23
+Summary: A Python library to parse Valetudo map data returning a PIL Image object.
+License: Apache-2.0
+Author: Sandro Cantarella
+Author-email: gsca075@gmail.com
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: Pillow (>=10.3.0)
+Requires-Dist: numpy (>=1.26.4)
+Project-URL: Bug Tracker, https://github.com/sca075/Python-package-valetudo-map-parser/issues
+Project-URL: Changelog, https://github.com/sca075/Python-package-valetudo-map-parser/releases
+Project-URL: Homepage, https://github.com/sca075/Python-package-valetudo-map-parser
+Project-URL: Repository, https://github.com/sca075/Python-package-valetudo-map-parser
+Description-Content-Type: text/markdown
+
+# Python-package-valetudo-map-parser
+Library to Covert Valetudo's Vacuums Json data in a PIL image.
+
