@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: dsa_package
+Version: 0.0.1
+Summary: This package provides you DSA function for sorting
+Author-email: Aman Kumar Verma <akverma2017.jsr@gmail.com>
+Project-URL: Homepage, https://github.com/18-05-Amankumarverma/dsa_package.git
+Project-URL: Issues, https://github.com/18-05-Amankumarverma/dsa_package.git
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# This package provides you DSA function for sorting
+
+#### This is how you can import this package
+>from dsa_package.src.dsa_package_AKV163 import dsa_sorting as sorting
+
+>print(sorting.sorting.bubble_sort([10,2,4]))
+

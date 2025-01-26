@@ -1,0 +1,18 @@
+[project]
+name = "dsa_package"
+version = "0.0.1"
+authors = [
+  { name="Aman Kumar Verma", email="akverma2017.jsr@gmail.com" },
+]
+description = "This package provides you DSA function for sorting"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/18-05-Amankumarverma/dsa_package.git"
+Issues = "https://github.com/18-05-Amankumarverma/dsa_package.git"

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/dsa_package.egg-info/PKG-INFO
+src/dsa_package.egg-info/SOURCES.txt
+src/dsa_package.egg-info/dependency_links.txt
+src/dsa_package.egg-info/top_level.txt
+src/dsa_package_AKV163/__init__.py
+src/dsa_package_AKV163/dsa_sorting.py
+tests/test.py
