@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+bitable/__init__.py
+bitable/api.py
+bitable/fieldType.py
+bitable/operator.py
+bitable/table.py
+bitable.egg-info/PKG-INFO
+bitable.egg-info/SOURCES.txt
+bitable.egg-info/dependency_links.txt
+bitable.egg-info/requires.txt
+bitable.egg-info/top_level.txt
+tests/__init__.py
+tests/credentials.py
+tests/test_table.py
