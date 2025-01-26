@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepseek_reason_extractor"
+version = "0.1.0"
+description = "A Python package for extracting and processing reasoning patterns"
+authors = [
+    { name="Your Name", email="your.email@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "vaklm>=0.1.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/deepseek_reason_extractor"
