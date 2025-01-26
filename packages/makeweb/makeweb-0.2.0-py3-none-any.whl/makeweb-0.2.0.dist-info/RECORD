@@ -1,0 +1,10 @@
+makeweb/__init__.py,sha256=BJ-Xyw6V8xgIgwUM1yqbV3wBNT9Nyn8Yan7iFy1lz6Q,481
+makeweb/defaults.py,sha256=T-m2gFWbPHh6gluE7CdbKfHUlhqFsVQE4xDIqxBEbq4,3017
+makeweb/html.py,sha256=rkOkkKRRNEcXJo5xN4h3Jv9qkcthOYEE_7ju_iF5xP4,10454
+makeweb/javascript.py,sha256=Nt-_fXIG9b925Te8PIxDqEZ2u1FzepZeBUZ0VhQ4REo,1735
+makeweb/stylesheet.py,sha256=lOwUWeVAaXnsjl4jINpF9kV5kWwirT17EaVET94CGZM,546
+makeweb/utilities.py,sha256=QM9ldqm39B748K7K8XhTwbji5TV71Tq16dkSfpGEH4M,2276
+makeweb-0.2.0.dist-info/LICENSE,sha256=ROKh7NBS1kHEcgEdjSjSYdKy9bmQdZahMEyhFwjvA5c,1071
+makeweb-0.2.0.dist-info/METADATA,sha256=iaqy6LW679tFwx4GgvqEXxlqBN2H91cZRUvgA8sQRRo,6136
+makeweb-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+makeweb-0.2.0.dist-info/RECORD,,
