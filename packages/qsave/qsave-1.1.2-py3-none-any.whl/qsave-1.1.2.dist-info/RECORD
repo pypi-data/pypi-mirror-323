@@ -1,0 +1,12 @@
+qsave/__init__.py,sha256=Vql2uNfqnKhyFCNNrgSpZeCL8XmD6aEwtx5q2risZFQ,1401
+qsave/asyncio/__init__.py,sha256=hfGvXxLdm7rXa3JL4r-uq9U0J69nVJGuSDQ2NdCojr0,143
+qsave/asyncio/aio.py,sha256=NFjxvYj0UOUnIVHkl6n93-ZyIKzoOLWrGVr5pZD6SBA,1856
+qsave/asyncio/aioquicksave.py,sha256=MK_VHTQbGHPhE8ZEftpdUibX8VtLcugklsX5a2mAahM,927
+qsave/asyncio/aiosession.py,sha256=-yz7CnSPDajO_KO4InPs3AWwouZ8_CqiEEVKk0YNOt4,3696
+qsave/io.py,sha256=-s-IiotNv3M0N6Lm5rSuVuOClTFqkxcV2ZFBwd8LKBI,1715
+qsave/quicksave.py,sha256=kLVhua4XfAGufElSEthaprzJx8y17ZXY1u_G1kfgzXk,610
+qsave/session.py,sha256=GaQYyiw4mkg65JxX0A8x2g3hv50DAg7koUwDO_S_XI0,4121
+qsave-1.1.2.dist-info/LICENSE,sha256=AlKS3-x748QLqVwRCTFGE0FalD1t2uNNyzlWoiqEaFk,1094
+qsave-1.1.2.dist-info/METADATA,sha256=oDdTrmAJ2eqqTnmjea9K3aiNq4B8hEE2jMS9gTyDARc,5386
+qsave-1.1.2.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+qsave-1.1.2.dist-info/RECORD,,
