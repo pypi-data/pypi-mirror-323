@@ -1,0 +1,10 @@
+numpy
+scipy
+pandas
+loguru
+requests
+toyplot
+
+[dev]
+black==22.1.0
+flake8==4.0.1
