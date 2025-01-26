@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: Topsis_Kunal_102216002
+Version: 3.0.0
+Summary: A Python package to perform TOPSIS analysis
+Home-page: https://github.com/Kunal-code-u/Topsis-Kunal-102216002
+Author: Kunal
+Author-email: kbhalla600@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Topsis-Kunal-102216002
+
+This Python package implements the TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) method for multi-criteria decision-making.
+
+## Installation
+Install the package from PyPI:
+```bash
+pip install Topsis-Kunal-102216002
