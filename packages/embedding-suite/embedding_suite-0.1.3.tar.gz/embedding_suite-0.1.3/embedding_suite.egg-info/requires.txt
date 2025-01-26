@@ -1,0 +1,3 @@
+cohere>=5.13.11
+openai>=1.60.1
+python-dotenv>=1.0.1

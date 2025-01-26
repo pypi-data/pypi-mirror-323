@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: embedding-suite
+Version: 0.1.3
+Summary: A light wrapper around various embedding providers
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: cohere>=5.13.11
+Requires-Dist: openai>=1.60.1
+Requires-Dist: python-dotenv>=1.0.1
