@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "dbwhddn10-py-release"
+version = "1.12.13"
+description = ""
+authors = ["jongwoo Yoo <dbwhddn10@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
