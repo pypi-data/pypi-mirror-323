@@ -1,0 +1,3 @@
+[console_scripts]
+tsmtool=tsmtool.cli:cli
+
