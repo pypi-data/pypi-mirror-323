@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel","cython"]
+build-backend = "setuptools.build_meta"
+
+[tool.build-system]
+requires = ["setuptools", "wheel","cython"]
+build-backend = "setuptools.build_meta"
+
+
+[metadata]
+name = "nazo_rand"
+version = "0.1.1"
+author = "bymoye"
+author_email = "s3moye@gmail.com"
+readme = "README.md"
+description = "A fast random number generator for python"
+url = "https://github.com/bymoye/nazo_rand"
+keywords = ["random"]
+
+[options]
+python_requires = ">=3.8"

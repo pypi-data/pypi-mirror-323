@@ -1,0 +1,4 @@
+include nazo_rand/nazo_rand.pyx
+include nazo_rand/nazo_rand.pxd
+include nazo_rand/nazo_rand.pyi
+include nazo_rand/nazo_rand.hpp
