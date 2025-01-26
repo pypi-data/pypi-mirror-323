@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: weatherincity
+Version: 1.0.1
+Summary: Retrieves the current temperature in a city
+Author: Jürgen Brauer
+License: Unlicense
+Project-URL: Source Code, https://github.com/juebrauer/examples/tree/main/001_writing_an_own_python_package/weatherincity
+Keywords: weather,temperature,example-package
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Installation
+
+    pip install weatherincity
+
+
+# Usage as a CLI tool
+
+    python weatherincity.py Berlin
+
+This will retrieve and display the current temperature for Berlin:
+
+    The current temperature in Berlin is: +6°C
+
+
+# Usage as a module
+
+    import weatherincity
+    print(weatherincity.get_current_temperature('Berlin'))
+    '+6°C'
+
+
+
+
