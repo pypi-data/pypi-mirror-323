@@ -1,0 +1,17 @@
+brui_core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+brui_core/singleton_meta.py,sha256=7prohJKwuIvzLbbmqDtNM-AsBqwkKTjnf0L0ZvlBPEQ,483
+brui_core/ui_integrator.py,sha256=aajjvJXaRbGIobObKWcyH5OSFVblqqWBTO3w9oT-fEQ,4082
+brui_core/browser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+brui_core/browser/browser_launcher.py,sha256=TWfhSs43AKObiXMQUrGkY9q8_p5vo_B-4Xdlh0A492A,9831
+brui_core/browser/browser_manager.py,sha256=bMrCCAuiQxdKkWhZwBIs6V9tB9LLwIzeBIoz1kLgMqo,2854
+brui_core/clipboard/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+brui_core/clipboard/clipboard_manager.py,sha256=kJDA2CVY40Az3Vqy4yIXhlUbR-npEKrvmfZp4S0_x5w,528
+tests/__init__.py,sha256=IXnBCOQHU4uAm-4nLNI6hMs43K3H3bd1Sh4tDbKsaPM,116
+tests/integration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/integration/browser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/integration/browser/test_browser_launcher.py,sha256=_K09WlXL_LhBgJOoCrjRP7VPdA57a8ZTwn2exckLDUA,6504
+tests/integration/browser/test_browser_manager.py,sha256=7jPWhV1hA4iaJyTKi6_0K6AtlapWNjPuIJZxZUg7dRY,3145
+brui_core-1.0.4.dist-info/METADATA,sha256=bTcySSY2Ec8f7Px0VzOtAtMK_t0zRc79_GWfak44U-E,1518
+brui_core-1.0.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+brui_core-1.0.4.dist-info/top_level.txt,sha256=9va7nwCElPgpzyHu_MHaeESWvgOHRlp2Gk63bxVIoDA,16
+brui_core-1.0.4.dist-info/RECORD,,
