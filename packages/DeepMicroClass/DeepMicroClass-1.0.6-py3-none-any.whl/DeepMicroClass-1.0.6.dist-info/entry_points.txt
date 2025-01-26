@@ -1,0 +1,2 @@
+[console_scripts]
+DeepMicroClass = DeepMicroClass.__main__:main
