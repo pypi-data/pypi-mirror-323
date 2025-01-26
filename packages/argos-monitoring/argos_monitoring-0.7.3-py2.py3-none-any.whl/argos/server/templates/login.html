@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}<h2>Login</h2>{% endblock title %}
+{% block content %}
+    {% if msg is not none %}
+    <article>{{ msg }}</article>
+    {% endif %}
+    <div class="frame">
+        <label for="username">Username</label>
+        <input id="username"
+               name="username"
+               type="text"
+               form="login"
+               autofocus>
+        <label for="password">Password</label>
+        <input id="password"
+               name="password"
+               type="password"
+               form="login">
+        {% if remember is not none %}
+        <label>
+            <input type="checkbox"
+                   name="rememberme"
+                   form="login">
+            Remember me
+        </label>
+        {% endif %}
+        <form id="login"
+              method="post"
+              action="{{ url_for('post_login') }}">
+            <input type="Submit">
+        </form>
+    </div>
+{% endblock content %}
