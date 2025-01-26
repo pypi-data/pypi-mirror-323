@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: tcmaker
+Version: 0.0.2
+Summary: testcase maker for online judge
+Home-page: https://github.com/csvega/tcmaker
+Author: csvega
+Author-email: vega4792@gmail.com
+Keywords: testcase,online judge,OJ,hustoj
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6

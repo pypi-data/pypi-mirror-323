@@ -1,0 +1,8 @@
+setup.py
+tcmaker/__init__.py
+tcmaker/tcmaker.py
+tcmaker.egg-info/PKG-INFO
+tcmaker.egg-info/SOURCES.txt
+tcmaker.egg-info/dependency_links.txt
+tcmaker.egg-info/not-zip-safe
+tcmaker.egg-info/top_level.txt
