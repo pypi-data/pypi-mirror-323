@@ -1,0 +1,12 @@
+pgn_tokenizer/__init__.py,sha256=hr0uKCYdkEwbKavb06RSI4l4UlIrVEv-o7qX4_6MQUw,1049
+pgn_tokenizer/constants.py,sha256=Gj4sryMXFOyw74fGC2G8rmvQtqspHfm2XHx888D8rRs,678
+pgn_tokenizer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgn_tokenizer/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgn_tokenizer/config/pgn-tokenizer-merges.txt,sha256=-5jI_fFEbZoEa-UQdACWy8xoTDvWDWySp1iiuXV5UBQ,25354
+pgn_tokenizer/config/pgn-tokenizer-vocab.json,sha256=zwbxGH8d_NJ3d8wtOExFOmNfkqZbwDv_qwACXdRJbn4,48959
+pgn_tokenizer/config/pgn-tokenizer.json,sha256=yunReK8TBJiiAioE5aX0duxxH4epr04eFO5OXPqym-Y,262667
+pgn_tokenizer-0.1.3.dist-info/METADATA,sha256=HwLwjLJ-VOwvrZgocnoWmXFhy7ZQnYCI25cBPqu6zL8,4529
+pgn_tokenizer-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pgn_tokenizer-0.1.3.dist-info/entry_points.txt,sha256=wUoUnK2NdbDIG5_rx1BjY4Okf_g9Nh1IPo9F7-2rjNU,53
+pgn_tokenizer-0.1.3.dist-info/licenses/LICENSE,sha256=v_sd8RVPsx4iPePzS7q_VNc5JPFF-zz6QiGZwVq3zmk,1056
+pgn_tokenizer-0.1.3.dist-info/RECORD,,
