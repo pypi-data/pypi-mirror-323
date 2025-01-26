@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: viacent_package
+Version: 0.1.6
+Summary: A Python package for counting unique characters in strings and files.
+Author-email: Oleksandr Khomiarchuk <akhomyarchuk@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Oleksandr Khomiarchuk
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy...
+License-File: LICENSE
+Description-Content-Type: text/markdown
+
+# Viacent_Package
+
+`Viacent_package` — A package for counting unique character in string and files.
+
+## Install
+
+```bash```
+pip install viacent_package
+
+## Arguments
+
+Processing string: viacent_package --string "example string"
+Processing file: viacent_package --file path/to/file.txt
