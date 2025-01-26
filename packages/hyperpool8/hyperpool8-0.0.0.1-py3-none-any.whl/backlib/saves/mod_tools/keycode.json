@@ -1,0 +1,16 @@
+{
+	"tester": {
+	}
+	"reviewElement": {
+		"inspect": "Ctrl + Shift + C"
+		"debugBounds": "Ctrl + Alt + D"
+		"selectDebugBounds": "Ctrl + Shift + Alt + D"
+	}
+	"element": {
+	}
+	"bindKeyCode": "Ctrl + Shift + R"
+	"selection": {
+		"fixedWindow": "Ctrl + Alt"
+	}
+	"closeWindow": "Shift + F4"
+}

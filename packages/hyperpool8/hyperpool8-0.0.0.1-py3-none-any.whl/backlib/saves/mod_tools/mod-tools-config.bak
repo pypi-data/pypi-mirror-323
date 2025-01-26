@@ -1,0 +1,59 @@
+{
+	"JSFunc": {
+		"keyword": "f92672ff"
+		"type": "66d9efff"
+		"underline": "bfbfbf7f"
+		"window_title": "b2a07fe5"
+	}
+	"font": "DEFAULT"
+	"execution_js": {
+	}
+	"showuilist": {
+		"bgColor": "877f5eff"
+		"iconColor": "ffffffff"
+	}
+	"reviewElement": {
+		"hoverInfoWindow": true
+		"maxDepthForAutoExpand": 5
+		"padColor": "8ce99a75"
+		"padTextColor": "ff00ff"
+		"marginColor": "ffa5007f"
+		"marginTextColor": "ffd37fff"
+		"posLineColor": "70809099"
+		"posTextColor": "32cd32ff"
+		"sizeTextColor": "ff00ffff"
+	}
+	"TSettings": {
+		"maxUICount": 70
+		"paneDrawable": "class arc.scene.style.ScaledNinePatchDrawable"
+		"checkUICount": false
+		"debugBounds": false
+	}
+	"load-settings": true
+	"load-tester": true
+	"tester": {
+	}
+	"load-selection": true
+	"selection": {
+	}
+	"load-showuilist": true
+	"load-unitSpawn": false
+	"load-logdisplay": false
+	"load-contentList": true
+	"load-reviewElement": true
+	"load-executor": true
+	"load-keycodeSetter": true
+	"load-pause": false
+	"load-windowManager": true
+	"Settings": {
+		"position$enabled": true
+		"position": "(170349.94,170415.28)"
+	}
+	"SDIFG": true
+	"ShowMainMenuBackground": false
+	"Blur": {
+		"scale_level": 4
+		"convolution_scheme": "D"
+		"enabled": false
+	}
+}
