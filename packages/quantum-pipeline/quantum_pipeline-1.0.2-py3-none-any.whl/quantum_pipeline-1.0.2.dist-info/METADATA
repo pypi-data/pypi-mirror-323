@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: quantum-pipeline
+Version: 1.0.2
+Summary: Framework for running, monitoring and analysing quantum algorithms.
+Author-Email: Piotr Krzysztof <piotrlis555@gmail.com>
+Maintainer-Email: Piotr Krzysztof <piotrlis555@gmail.com>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Project-URL: Homepage, https://github.com/straightchlorine/quantum-pipeline
+Requires-Python: <3.13,>=3.10
+Requires-Dist: qiskit>=1.0.0
+Requires-Dist: qiskit-ibm-runtime>=0.20.0
+Requires-Dist: qiskit-aer>=0.15.1
+Requires-Dist: qiskit-nature>=0.7.0
+Requires-Dist: qiskit-qasm3-import>=0.5.1
+Requires-Dist: openqasm3>=1.0.0
+Requires-Dist: rustworkx>=0.13.0
+Requires-Dist: pyscf>=2.7.0
+Requires-Dist: numpy>=1.22.0
+Requires-Dist: scipy>=1.10.0
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: matplotlib>=3.7.0
+Requires-Dist: reportlab>=4.2.5
+Requires-Dist: h5py>=3.8.0
+Requires-Dist: sympy>=1.11.0
+Requires-Dist: kafka-python-ng>=2.2.3
+Requires-Dist: avro>=1.12.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Provides-Extra: dev
+Requires-Dist: debugpy; extra == "dev"
+Requires-Dist: ipython; extra == "dev"
+Requires-Dist: ipdb; extra == "dev"
+Requires-Dist: pytest>=7.3.0; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: hypothesis; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: types-all; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: py-spy; extra == "dev"
+Requires-Dist: memory-profiler; extra == "dev"
+Requires-Dist: line-profiler; extra == "dev"
+Requires-Dist: jupyter; extra == "dev"
+Requires-Dist: notebook; extra == "dev"
+Requires-Dist: jupyterlab; extra == "dev"
+Requires-Dist: ipykernel; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: pdoc3; extra == "dev"
+Requires-Dist: bandit; extra == "dev"
+Requires-Dist: safety; extra == "dev"
+
