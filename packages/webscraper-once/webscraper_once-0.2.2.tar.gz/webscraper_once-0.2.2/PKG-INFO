@@ -1,0 +1,87 @@
+Metadata-Version: 2.2
+Name: webscraper-once
+Version: 0.2.2
+Summary: Extrai dados de produtos de qualquer site
+Home-page: https://github.com/seu-usuario/webscraper
+Author: Nyronous
+Author-email: seu.email@exemplo.com
+Keywords: web scraping,produtos
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: beautifulsoup4>=4.9.0
+Requires-Dist: lxml>=4.9.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# WebScraper Once
+
+Extrai dados de produtos de qualquer site.
+
+## Instalação
+```bash
+pip install webscraper-once
+```
+
+## Como Usar
+```python
+# IMPORTANTE: o import correto é webscraper_once (com underline)
+from webscraper_once import get_data
+import json
+from pprint import pprint
+
+# URL do produto
+url = "https://www.bellikids.com.br/conjunto-junino-banana-club-sofia-xadrez-preto"
+
+try:
+    # Extrai os dados
+    dados = get_data(url)
+    
+    # Mostra os dados principais
+    print(f"Título: {dados['titulo']}")
+    print(f"Preço: {dados['preco']}")
+    
+    # Mostra todos os dados
+    pprint(dados)
+    
+    # Salva em JSON
+    with open('produto.json', 'w', encoding='utf-8') as f:
+        json.dump(dados, f, ensure_ascii=False, indent=4)
+        
+except Exception as e:
+    print(f"Erro: {str(e)}")
+```
+
+## O que retorna
+```python
+{
+    'titulo': str,      # Nome/título do produto
+    'preco': float,     # Preço do produto
+    'descricao': str,   # Descrição
+    'imagens': list,    # Lista de URLs das imagens
+    'dados_gerais': {}, # Outros dados encontrados
+    'url': str,         # URL do produto
+    'html': str         # HTML da página
+}
+```
