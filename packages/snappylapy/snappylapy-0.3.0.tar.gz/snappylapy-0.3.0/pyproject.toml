@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "snappylapy"
+version = "0.3.0"
+description = "A snapshot library for python optimized for easy of use, human readable snapshots and enabling decoupling of chained integration tests."
+authors = ["Martin Møldrup"]
+readme = ["README.md", "CHANGELOG.md"]
+classifiers = [
+    "Framework :: Pytest",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Testing",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+]
+packages = [{ include = "snappylapy" }, { include = "snappylapy/py.typed" }]
+repository = "https://github.com/martinmoldrup/snappylapy"
+documentation = "https://martinmoldrup.github.io/snappylapy"
+
+keywords = ["pytest", "snapshot", "testing", "snapshot-testing", "integration-testing", "unit-testing"]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/martinmoldrup/snappylapy/issues"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pytest = ">=7.0"
+jsonpickle = ">=1.0"
+typer = "*"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.9.0"
+ruff = "^0.9.2"
+types-pyyaml = "^6.0.12.20240311"
+toml = "^0.10.2"
+pytest-cov = "^6.0.0"
+mkdocstrings = {extras = ["python"], version = "^0.27.0"}
+mkdoc = "^0.1"
+mkdocs-gen-files = "^0.5.0"
+mkdocs-material = "^9.5.49"
+mkdocs-literate-nav = "^0.6.1"
+mkdocs-section-index = "^0.3.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."pytest11"]
+"snappylapy" = "snappylapy._plugin"
+
+[tool.poetry.scripts]
+snappylapy = "snappylapy._cli:app"
