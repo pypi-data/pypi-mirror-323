@@ -1,0 +1,28 @@
+[project]
+name = "huey-mongodb"
+version = "0.1.1"
+description = "huey MongoDB backend"
+authors = [
+    { name = "Leon", email = "leon0824@gmail.com" },
+]
+dependencies = [
+    "huey>=2.5,<2.6",
+    "pymongo>=4.9,<4.11",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/Leon0824/huey-mongodb"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
