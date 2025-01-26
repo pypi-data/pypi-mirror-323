@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+hi_sourcing/__init__.py
+hi_sourcing/hi_sourcing.py
+hi_sourcing.egg-info/PKG-INFO
+hi_sourcing.egg-info/SOURCES.txt
+hi_sourcing.egg-info/dependency_links.txt
+hi_sourcing.egg-info/requires.txt
+hi_sourcing.egg-info/top_level.txt
