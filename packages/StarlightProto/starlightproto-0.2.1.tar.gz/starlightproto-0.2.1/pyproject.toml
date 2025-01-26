@@ -1,0 +1,35 @@
+[project]
+name = "StarlightProto"
+version = "0.2.1"
+description = "Default template for PDM package"
+authors = [
+    { name = "cho6019", email = "j01040864205@gmail.com" },
+]
+dependencies = [
+    "astropy>=6.1.7",
+    "typer>=0.15.1",
+    "pytest>=8.3.4",
+    "pandas>=2.2.3",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+cho-test = "starlightproto.stella:entry_point"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[dependency-groups]
+eda = [
+    "jupyterlab>=4.3.4",
+]
