@@ -1,0 +1,9 @@
+README.md
+setup.py
+dash2html/__init__.py
+dash2html/utils.py
+dash2html.egg-info/PKG-INFO
+dash2html.egg-info/SOURCES.txt
+dash2html.egg-info/dependency_links.txt
+dash2html.egg-info/requires.txt
+dash2html.egg-info/top_level.txt
