@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+team_3_library/__init__.py
+team_3_library/main.py
+team_3_library.egg-info/PKG-INFO
+team_3_library.egg-info/SOURCES.txt
+team_3_library.egg-info/dependency_links.txt
+team_3_library.egg-info/requires.txt
+team_3_library.egg-info/top_level.txt

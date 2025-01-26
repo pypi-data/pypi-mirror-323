@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: team_3_library
+Version: 1.0.1
+Summary: Dataset cleaning library
+Author: Team 3
+Author-email: enarayiyuan.errasti@alumni.mondragon.edu
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: seaborn
+Requires-Dist: matplotlib.pyplot
+
+# **DATASET CLEANING LIBRARY**
+
+## Table of Contents
+* [General Info](#general-information)
+* [Functions of the library](#functions-of-the-library)
+* [Features](#features)
+* [Setup](#setup)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [License](#license)
+
+
+## General Information
+This code identifies null percentages per column, removes columns with nulls exceeding a specified threshold and fills missing values.
+It also analyzes column distribution using skewness and can show a graph to see how the distribution looks like.
+
+The purpose of the project is to optimize the process of cleaning dataset as it minimizes data loss and enchances data quality as well as gives the opportunity to decide how to fill the missing values.
+
+This project is undertaken in order to create a reliable data cleaning library that standardizes the preparation or preprocessing of datasets. It has an educational value since it is done to understand data processing practical applications. 
+
+
+## Functions of the library
+â€¢	**analyze_nulls(self)**: This function calculates the missing values percentage per column.
+
+â€¢	**drop_null_columns(self, percentage)**: It compares the percentage given and depending on that it eliminates the columns that have greater percentage of null values than the given percentage.
+
+â€¢	**fill_nulls(self, column, e)**: Fills the null values with mean/median/mode/random value for numerical data and mode/ffill/bfill/random for categorical data. Also, it has the option of "auto". It is a value, which if the column has numerical data, depending on the distribution it fills the values with the mean/median/mode and in categorical data it fills with the mode. 
+
+â€¢	**analyze_distribution(self, column)**: This function analyzes the distribution of the column data.
+
+â€¢	**clean_column_customized(self, column)**: It cleans a column in the dataset based on customized rules
+
+â€¢	**graph_num(self, column)**: It shows an histogram of the data column.
+
+â€¢	**graph_obj(self, column)**: It shows an countplot of the data column.
+
+â€¢	**clean_dataset_percentage(self, percentage)**: Eliminates the columns and cleans the rest of the columns.
+
+â€¢	**percentage(self)**: It demans for a percentage.
+
+
+## Features
+The ready features:
+- Awesome feature 1: It automatically analyzes to determine how to fill the missing values of each data column.
+- Awesome feature 2: It analyzes the distribution of numerical data using Pearson's skewness coefficient.
+- Awesome feature 3: It is interactive. Allows the user to choose how missing values will be replaced.
+
+
+## Setup
+This library requires:
+
+__Python__
+
+__Pandas__:
+pip install pandas
+
+__Numpy__:
+pip install numpy
+
+__Seaborn__:
+pip install seaborn
+
+__Matplotlib.pyplot__: 
+pip install matplotlib
+
+
+## Project Status
+Project is: Complete
+
+
+## Room for Improvement
+This project can be improved in many aspects.
+
+Room for improvement:
+- Improvement to be done 1: It could ask for the percentage for each column instead of using the same threshold for all columns. 
+- Improvement to be done 2: Show better graphs and more figures.
+
+To do:
+- Feature to be added 1: It could write the new dataset in another .csv.
+- Feature to be added 2: It could be done as a telegram bot.
+
+## License 
+[MIT](LICENSE)
