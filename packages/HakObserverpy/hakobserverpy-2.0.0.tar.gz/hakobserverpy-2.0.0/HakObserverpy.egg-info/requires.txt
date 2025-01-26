@@ -1,0 +1,4 @@
+requests
+psutil
+lxml[html_clean]
+requests_html
