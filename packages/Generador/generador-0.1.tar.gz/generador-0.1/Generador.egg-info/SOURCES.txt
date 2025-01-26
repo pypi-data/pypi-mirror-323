@@ -1,0 +1,7 @@
+setup.py
+Generador.egg-info/PKG-INFO
+Generador.egg-info/SOURCES.txt
+Generador.egg-info/dependency_links.txt
+Generador.egg-info/entry_points.txt
+Generador.egg-info/requires.txt
+Generador.egg-info/top_level.txt
