@@ -1,0 +1,90 @@
+[build-system]
+build-backend = "pdm.backend"
+requires = [
+    "pdm-backend",
+]
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.10",
+    "mypy>=1.8.0",
+    "pre-commit>=3.7.0",
+    "ruff>=0.4.3",
+]
+
+[project]
+authors = [
+    { name = "Berry Liu" },
+    { name = "Calvin Tian" },
+    { name = "Kevin Zheng" },
+    { name = "Margaret Jagger" },
+    { name = "Susmitha Kusuma" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "fastapi>=0.111.0",
+    "pytest>=8.2.0",
+    "python-dateutil>=2.9.0.post0",
+    "python-dotenv>=1.0.1",
+    "requests-toolbelt>=1.0.0",
+    "requests>=2.31.0",
+    "tzdata>=2024.2",
+]
+description = "Library for programmatically interacting with Gradescope."
+maintainers = [
+    { name = "Calvin Tian" },
+]
+name = "gradescopeapi"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "1.3.1"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/nyuoss/gradescope-api"
+Issues = "https://github.com/nyuoss/gradescope-api/issues"
+Repository = "https://github.com/nyuoss/gradescope-api"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.scripts]
+export = "pdm export -f requirements -o requirements.txt --without-hashes"
+format = "ruff format src tests"
+format-test = "ruff format --check src tests"
+lint = "ruff check src tests"
+lint-fix = "ruff check --fix src tests"
+start = "python -m gradescopeapi"
+test = "pytest tests"
+test-cov-generate-html = "coverage html"
+test-cov-generate-report = "coverage run --source=gradescopeapi --module pytest tests"
+test-cov-view-html = "python -m http.server 9000 --directory htmlcov"
+
+[tool.pdm.scripts.test-cov]
+composite = [
+    "test-cov-generate-html",
+    "test-cov-generate-report",
+    "test-cov-view-html",
+]
+
+[tool.ruff.lint]
+exclude = [
+    "src/gradescopeapi/api/*.py",
+]
+ignore = [
+    "E501",
+    "SIM108",
+]
+select = [
+    "B",
+    "E",
+    "F",
+    "I",
+    "SIM",
+    "UP",
+]
