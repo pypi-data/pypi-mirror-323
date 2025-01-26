@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: sparkplug-api-notifications
+Version: 1.0.0
+Summary: Notifications package for Sparkplug apps
+License: MIT
+Author: Sparkplug Marcus
+Author-email: sparkplugmarcus@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Django (>=4.2.4,<4.3.0)
+Requires-Dist: django-postgres-extra (>=2.0.8,<2.1.0)
+Requires-Dist: django-stubs (>=1.12.0,<1.13.0)
+Requires-Dist: djangorestframework (>=3.14.0,<3.15.0)
+Requires-Dist: djangorestframework-stubs (>=1.7.0,<1.8.0)
+Requires-Dist: huey (>=2.4.5,<2.5.0)
+Requires-Dist: huey-stubs (>=0.0.2,<0.1.0)
+Requires-Dist: sparkplug-api-core (==1.0.0)
+Description-Content-Type: text/markdown
+
+# Sparkplug Notifications
+
