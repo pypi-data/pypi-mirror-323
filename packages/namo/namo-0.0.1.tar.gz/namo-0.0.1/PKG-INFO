@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: namo
+Version: 0.0.1
+Summary: namo is a nano level multi-modal training framework
+Home-page: https://ccc.cc/a
+Author: lucasjin
+Author-email: aa@qq.com
+License: GPL-3.0
+Keywords: deep learning,LLM,VLM,namo multi-modal training,framework
+Platform: any
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: timm
+Requires-Dist: pydub
+
+**Namo (纳摩): Na**no Multi-**Modal Training Framework**
+
+Introducing **namo**. Namo is a dead simple multi-modal training framework focusing on training **small MLLMs**. As more and more MLLM opensource, while small multi-modal LLMs with more powerful abilities remain untouched. Hence, we crafted this framework for anyone who wants training their own MLLM without **finetuning** on existing one. Anyone can training a **base MLLM model** with ease now. The model data you have used in training base, the more ability you will get in training larger models.
+
+**Namo** not only a framework, but also provided our experiences in training MLLMs, we make easily make MLLM work on small models, then the same component (such as ViT, AudioEncoder etc) can be easily adopt into larger LLMs, largely reduced overall training time and resources.
+
+Our model not only showed excellent performance compare with other small vlms, but also support a wide range of downstream tasks. To highlight the advantages of our model, here is:
+
+- **dynamic input**: namo model uses dynamic input, supports input ranges from 224 to 1080;
+- **less token**: nano models only needs 576 tokens even with 800 input resolution, largely efficient than other vlms;
+- **flexibal**: unlike other vlms coupled with their LLMs, we using ViT you can grab in opensource as well as LLMs, so that you can train any version by your own by any LLMs;
+- **audio**: we supports do visual + audio + text at the same time, not like some other models only supports audio + text;
+
+Overall, **namo** is not only a series of model, but also a set of revealable training framework. We hoping our work can push the area further.

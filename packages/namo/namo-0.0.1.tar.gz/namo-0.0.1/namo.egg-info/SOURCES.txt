@@ -1,0 +1,6 @@
+setup.py
+namo.egg-info/PKG-INFO
+namo.egg-info/SOURCES.txt
+namo.egg-info/dependency_links.txt
+namo.egg-info/requires.txt
+namo.egg-info/top_level.txt
