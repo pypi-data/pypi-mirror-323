@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: goose-py
+Version: 0.1.1
+Summary: A tool for AI workflows based on human-computer collaboration and structured output.
+Home-page: https://github.com/chelle-ai/goose
+Keywords: ai,yaml,configuration,llm
+Author: Nash Taylor
+Author-email: nash@chelle.ai
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: test
+Requires-Dist: ipykernel ; extra == "test"
+Requires-Dist: jsonpath-ng (>=1.7.0,<2.0.0)
+Requires-Dist: litellm (>=1.56.5,<2.0.0)
+Requires-Dist: pydantic (>=2.8.2,<3.0.0)
+Requires-Dist: pytest (<8) ; extra == "test"
+Requires-Dist: pytest-asyncio ; extra == "test"
+Requires-Dist: pytest-mock ; extra == "test"
+Project-URL: Documentation, https://github.com/chelle-ai/goose
+Project-URL: Repository, https://github.com/chelle-ai/goose
+Description-Content-Type: text/markdown
+
+# Vers
+
+Docs to come.
+

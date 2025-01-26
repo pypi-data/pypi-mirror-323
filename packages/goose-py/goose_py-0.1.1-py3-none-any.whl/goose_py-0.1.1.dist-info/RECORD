@@ -1,0 +1,10 @@
+goose/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+goose/agent.py,sha256=PXVuCy1b5O6XsG3FuPH2iOOXnrQ6sYA21HUuweBI6dk,2101
+goose/conversation.py,sha256=kYeTGBCvP1cYsxbA6v_2-ApcOapj0cReLx7iLdswVtU,1308
+goose/core.py,sha256=ITO9n5suCdOQgxPDDZMaBUfkHQoAl_hHym0XiUjQli4,10151
+goose/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+goose/regenerator.py,sha256=Pyso2yM2hfxz9cXZm8VzVSEWvHkkaWNyB8hBWGjhfRA,148
+goose/types.py,sha256=l3zeDvpjWCzSSh4uw1W0VdEH5PZuDxwB4Lwpk8ubnaU,3403
+goose_py-0.1.1.dist-info/METADATA,sha256=Ea0rO-RnEJR4C2chLMA8BkCEIA1Y6i7TbjhiHenrKA8,1105
+goose_py-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+goose_py-0.1.1.dist-info/RECORD,,
