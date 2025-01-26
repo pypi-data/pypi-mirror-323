@@ -1,0 +1,4 @@
+[console_scripts]
+jaa = jupyter_agentic.app:main
+jupyter-agentic = jupyter_agentic.app:main
+jupyter-agentic-console = jupyter_agentic.consoleapp:main

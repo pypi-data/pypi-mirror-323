@@ -1,0 +1,7 @@
+# Copyright (c) 2023-2024 Datalayer, Inc.
+#
+# BSD 3-Clause License
+
+"""Jupyter Agentic."""
+
+__version__ = "0.1.0"
