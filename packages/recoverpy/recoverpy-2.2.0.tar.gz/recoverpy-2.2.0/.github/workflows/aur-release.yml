@@ -1,0 +1,40 @@
+name: Release on AUR
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Release on PyPI"]
+    branches: [main]
+    types:
+      - completed
+
+
+jobs:
+  aur-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+
+      - name: Install and fix pip2pkgbuild
+        run: |
+          git clone https://github.com/wenLiangcan/pip2pkgbuild.git
+          sed -i "s/\/usr\/share\/licenses\/common/\//g" pip2pkgbuild/pip2pkgbuild/pip2pkgbuild.py
+
+      - name: Create PKGBUILD
+        run: |
+          python3 pip2pkgbuild/pip2pkgbuild/pip2pkgbuild.py --pep517 recoverpy
+      - name: Fix license
+        run: |
+          sed -i "s/license\=$PARTITION_COLUMN.*/license\=(GNU GPLv3)/" PKGBUILD
+
+      - name: Publish AUR package
+        uses: KSXGitHub/github-actions-deploy-aur@v3.0.1
+        with:
+          pkgname: python-recoverpy
+          pkgbuild: ./PKGBUILD
+          commit_username: PabloLec
+          commit_email: pablolec@pm.me
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          commit_message: Update AUR package
+          ssh_keyscan_types: rsa,dsa,ecdsa,ed25519
