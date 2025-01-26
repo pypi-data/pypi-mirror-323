@@ -1,0 +1,62 @@
+[tool]
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "8.0.0"
+tag_format = "$version"
+version_files = ["pyproject.toml"]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "ReplayTables.rust"
+
+[tool.ruff.lint]
+select = ['F', 'E', 'W']
+ignore = ['E501', 'E701']
+
+[tool.pyright]
+include = ["ReplayTables", "tests"]
+stubPath = "./typings"
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "standard"
+useLibraryCodeForTypes = true
+
+[project]
+name = "ReplayTables-andnp"
+version = "8.0.0"
+description = "A simple replay buffer implementation in python for sampling n-step trajectories"
+authors = [
+    {name = "Andy Patterson", email = "andnpatterson@gmail.com"},
+]
+dependencies = [
+    "discrete-dists~=1.0",
+    "numba~=0.57",
+    "numpy>=1.23,<3.0",
+    "scipy~=1.9",
+    "lz4~=4.3.2",
+]
+requires-python = ">=3.10,<3.13"
+readme = "README.md"
+license = {text = "MIT"}
+
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pip",
+    "ruff",
+    "pyright",
+    "commitizen",
+    "pre-commit",
+    "pytest>=7.3,<9.0",
+    "pytest-benchmark~=4.0",
+    "maturin>=1.4,<1.8",
+]
+
+[build-system]
+requires = ["maturin>=1.4,<2.0"]
+build-backend = "maturin"
