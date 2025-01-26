@@ -1,0 +1,9 @@
+
+[dev]
+chardet
+black
+flake8
+isort
+mypy
+pytest
+pytest-cov
