@@ -1,0 +1,11 @@
+akipy-0.2.1.dist-info/METADATA,sha256=iiFbTBAMgQg5cWXkzSlbkrr_efahrKLQlMhY7WI2PVo,2778
+akipy-0.2.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+akipy-0.2.1.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+akipy-0.2.1.dist-info/licenses/LICENSE,sha256=If_gqB0D7DzJj_qYHj_HdFiamJmx2wDFT1HwFXXTrvE,1064
+akipy/__init__.py,sha256=wYVJH7j57uJGj27-DkLgXk8tVXaL1MDO5rJlQkbffo4,214
+akipy/akinator.py,sha256=8UteFDsbfhqRC78D8Q-7elmvB5NiNoSi-L8yfNlyLGg,12261
+akipy/async_akipy.py,sha256=vssw5HifjZvXAKUjF0hXYDfzurRhEqTgaGXoxUQzYpw,8751
+akipy/dicts.py,sha256=GYTdo4BEd-eFu_kKZWID2noljTt5YT2Jsnm-TL3XDTQ,1452
+akipy/exceptions.py,sha256=DSBHDBdt_oaE46RGQlsynNiY-uawxYgtWaGwGt54kmM,399
+akipy/utils.py,sha256=vMjLMcQR1913zOpEJIdW0OThED-CPrbvsxvfYHhV9No,1051
+akipy-0.2.1.dist-info/RECORD,,
