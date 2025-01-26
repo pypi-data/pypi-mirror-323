@@ -1,0 +1,9 @@
+pandas>=1.4.0
+pyarrow>=14.0.0
+
+[tests]
+pytest>=8.2.0
+mypy>=1.10.0
+pandas-stubs
+pyarrow-stubs
+pytest-cov>=5.0.0
