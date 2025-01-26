@@ -1,0 +1,2 @@
+[console_scripts]
+tensorpool = tensorpool.main:main
