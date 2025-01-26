@@ -1,0 +1,7 @@
+setup.py
+Automate_GPT/__init__.py
+Automate_GPT.egg-info/PKG-INFO
+Automate_GPT.egg-info/SOURCES.txt
+Automate_GPT.egg-info/dependency_links.txt
+Automate_GPT.egg-info/requires.txt
+Automate_GPT.egg-info/top_level.txt

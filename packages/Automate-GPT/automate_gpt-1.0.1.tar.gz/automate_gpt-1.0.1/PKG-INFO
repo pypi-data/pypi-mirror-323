@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: Automate_GPT
+Version: 1.0.1
+Summary: Chat GPT Automation
+Author: Jenil sheth
+Author-email: shethjeniljigneshbhai@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: undetected_chromedriver
+Requires-Dist: selenium
+Requires-Dist: pyperclip
+
+# ChatGPTAutomation
+
+`ChatGPTAutomation` is a Python library that allows users to automate interactions with ChatGPT through a web driver. This library simplifies the process of sending prompts to ChatGPT and receiving responses in an automated manner.
+
+---
+
+## Features
+
+- Automate interactions with ChatGPT.
+- Use an undetected Chrome driver to bypass detection.
+- Simplified interface for sending prompts and retrieving responses.
+
+---
+
+## Installation
+
+To install `ChatGPTAutomation`, use pip:
+
+```bash
+pip install Automate-GPT
+```
+
+---
+
+## Requirements
+
+- Python 3.7 or higher
+- [undetected-chromedriver](https://pypi.org/project/undetected-chromedriver/)
+
+---
+
+## Usage
+
+Here is a basic example of how to use the `ChatGPTAutomation` library:
+
+### Example
+
+```python
+from Automate-GPT import ChatGPTAutomation
+import undetected_chromedriver as uc
+
+# Initialize the undetected Chrome driver
+driver = uc.Chrome()
+
+# Initialize ChatGPTAutomation with the Chrome driver
+chatbot = ChatGPTAutomation(driver)
+
+# Send a prompt to ChatGPT
+response = chatbot.prompt("What is the capital of France?")
+print(response)  # Output: Paris
+```
+
+---
+
+## API Reference
+
+### `ChatGPTAutomation`
+
+A class to automate interactions with ChatGPT.
+
+#### **`__init__(self, driver: undetected_chromedriver.Chrome)`**
+
+Initializes the `ChatGPTAutomation` instance.
+
+- **Parameters**:
+  - `driver` (*undetected_chromedriver.Chrome*): The Chrome web driver instance for interacting with ChatGPT.
+
+#### **`prompt(self, prompt: str) -> str`**
+
+Sends a prompt to ChatGPT and retrieves the response.
+
+- **Parameters**:
+  - `prompt` (*str*): The text prompt to send to ChatGPT.
+- **Returns**:
+  - (*str*): The response from ChatGPT.
+
+---
+
+## Notes
+
+- Ensure you have the latest version of Chrome and the corresponding chromedriver installed.
+- `undetected-chromedriver` is used to prevent detection during automated browser interactions.
+
+---
+## Acknowledgments
+Created by [Sheth Jenil](https://github.com/dummyjenil/)
