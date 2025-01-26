@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: dualcode
+Version: 1.0.0
+Summary: A package to manage variables in a JSON file
+Author: Maximiliano David Sanchez
+Author-email: maximilianosanchez1304@gmail.com
+License: IST
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: summary
+
+# Mi Paquete
+
+Este es un paquete en Python para gestionar variables y almacenarlas en un archivo JSON.
+
+
+# Como usar
+from dualcode import saveVar, deleteVar, seeAllVar, getVar
+
+hola = 10
+adios = 20
+saveVar(hola)
+saveVar(adios)
+
+print(seeAllVar())  # Shows all saved variables
+
+x = getVar('hola')  # Returns 42
+print(x)
+
+deleteVar('adios')
+print(seeAllVar())  # Shows all saved variables

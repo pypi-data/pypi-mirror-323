@@ -1,0 +1,9 @@
+LICENCE
+README.md
+setup.py
+dualcode/__init__.py
+dualcode/variable.py
+dualcode.egg-info/PKG-INFO
+dualcode.egg-info/SOURCES.txt
+dualcode.egg-info/dependency_links.txt
+dualcode.egg-info/top_level.txt
