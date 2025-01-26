@@ -1,0 +1,5 @@
+simplyprint-ws-client>=1.0.1rc2
+aiohttp
+attrs
+imageio[ffmpeg]
+psutil
