@@ -1,0 +1,12 @@
+fastcore
+pandas
+numpy
+pyswarms
+scipy
+xarray
+matplotlib
+seaborn
+pyyaml
+optuna
+
+[dev]

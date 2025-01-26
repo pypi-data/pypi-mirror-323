@@ -1,0 +1,2 @@
+[nbdev]
+budget_optimizer = budget_optimizer._modidx:d
