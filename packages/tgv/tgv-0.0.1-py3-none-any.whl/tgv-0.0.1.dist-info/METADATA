@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: tgv
+Version: 0.0.1
+Summary: Total Generalized Variation with numpy/scipy
+Home-page: https://github.com/ykesenci/tgv
+Author: Yekta Kesenci, Raphael Reme
+Author-email: 
+License: MIT
+Keywords: TGV,Inverse Problem,Optimization,Optical Flow,Denoising
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: tqdm
+
+# tgv
+Implementation of Total Generalized Variation for optical flow
