@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: somali_spelling_correction
+Version: 0.1.3
+Summary: A Somali spelling correction library
+Home-page: https://github.com/abdoltd/somali_spelling_correction
+Author: R&D
+Author-email: abdoldevtra@example.com
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+# Somali Spelling Correction
+
+A Python library for Somali spelling correction.
+
+## Installation
+
+```bash
+pip install somali_spelling_correction
