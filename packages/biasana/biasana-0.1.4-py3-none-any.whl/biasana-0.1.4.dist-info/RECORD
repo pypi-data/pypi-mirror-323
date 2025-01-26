@@ -1,0 +1,9 @@
+biasana/__init__.py,sha256=Wzf5T3NBDfhQoTnhnRNHSlAsE0XMqbclXG-M81Vas70,22
+biasana/association_analyzer.py,sha256=1TjQd80ikjsberydYR63ie_28Cg2YQGKBX2SKx-TzwY,6388
+biasana/logit_analyzer.py,sha256=1jpGk_PdRoefTDvP1glIwiIyu6v6CytbxhJXJUgfKu0,7622
+biasana/template_manager.py,sha256=oyVntxS4z44F1c8DMSaf89nHQvxH0kbluPlntUEqflQ,6505
+biasana-0.1.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+biasana-0.1.4.dist-info/METADATA,sha256=WgwVE1GfGN455_VgLOJxfQDP4_qrjUdAm4TjJ4NwjjI,5781
+biasana-0.1.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+biasana-0.1.4.dist-info/top_level.txt,sha256=0fOSdZniwZR_VdkaKnm7AxmfnJcx6GcYKN1FX102URs,8
+biasana-0.1.4.dist-info/RECORD,,
