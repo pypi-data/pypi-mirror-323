@@ -1,0 +1,13 @@
+awkward_cpp/__init__.py,sha256=Jl6OMQUNpzjJ9vvfWb9SKcxt9zUcA93U-DZWiLdgWo8,202
+awkward_cpp/_kernel_signatures.py,sha256=mOCnDychc6KVdG2rOXM54RGzx871k7i89E9GYaVt7t8,122219
+awkward_cpp/cpu_kernels.py,sha256=ajUrOQOUVDPTviXBUI-A2MWFobr1xIwFLTBnKIVYm2s,692
+awkward_cpp/lib/_ext.cp39-win_amd64.pyd,sha256=hBqHX4h8FVJ48Ok-awMgPY29iha7Ch0igoaUe9CQlhA,349696
+awkward_cpp/lib/awkward-cpu-kernels.dll,sha256=SYDtiP9jxPvimpWOHJ7NqY5GPedmdUU3b09jqs5U8Hs,356352
+awkward_cpp/lib/awkward-cpu-kernels.lib,sha256=QdXUbAMBz9SgbKy0W94kqMFGQ8jlv6w2hSQ0a1xqaQI,139228
+awkward_cpp/lib/awkward.dll,sha256=lPVYIZwOWRXBCwRVj_P0zK9MrN63rehQmW8uAwPn75M,635904
+awkward_cpp/lib/awkward.lib,sha256=mVwcK6DgxYD5yoY0AJnSc_1vAY__IIDhQo6DXbgmzWA,585364
+awkward_cpp/libawkward.py,sha256=aiqG6qL8O83atLnu-AhMlgQbBA2BH2ZzUqeTuq054T8,8802
+awkward_cpp-44.dist-info/METADATA,sha256=cpIfG58y5NDQ0odq87r8mZoR7UaDsaMT7LHl8Id0lak,2069
+awkward_cpp-44.dist-info/WHEEL,sha256=s-IzttuPuPJp8zDv-jm-zGvTOCxdFCvjX9dIQ9zqnM8,104
+awkward_cpp-44.dist-info/licenses/LICENSE,sha256=5h1ABdBBLAJWzvVRfV3o6YeZq28S5ux9lFDMzDJK_yc,1549
+awkward_cpp-44.dist-info/RECORD,,
