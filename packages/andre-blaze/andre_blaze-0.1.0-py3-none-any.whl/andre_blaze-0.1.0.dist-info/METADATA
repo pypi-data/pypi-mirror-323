@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: andre_blaze
+Version: 0.1.0
+Summary: Esta es la descripción del paquete
+Home-page: https://www.hopta.hn
+Author: Andre Ponce
+Author-email: admin@hopta.hn
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+Este es el readme del paquete Pypi
