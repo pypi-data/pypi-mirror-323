@@ -1,0 +1,9 @@
+[server.example]
+username="your user"
+password="your pass"
+url="https://example.org/cal"
+
+[default]
+server="example"
+calendar="Default"
+timezone="Asia/Tokyo"

@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: caldavctl
+Version: 0.0.2
+Project-URL: Documentation, https://codeberg.org/hgg/caldavctl#readme
+Project-URL: Issues, https://codeberg.org/hgg/caldavctl/issues
+Project-URL: Source, https://codeberg.org/hgg/caldavctl
+Author-email: Helder Guerreiro <helder@paxjulia.org>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE.md
+Keywords: caldav,cli
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.12
+Requires-Dist: caldav==1.3.6
+Requires-Dist: click==8.1.7
+Requires-Dist: platformdirs==4.3.6
+Requires-Dist: toml==0.10.2
+Description-Content-Type: text/markdown
+
+# caldavctl
+
+[![PyPI - Version](https://img.shields.io/pypi/v/caldavctl.svg)](https://pypi.org/project/caldavctl)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/caldavctl.svg)](https://pypi.org/project/caldavctl)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+
+## License
+
+`caldavctl` is distributed under the terms of the [GPL-3.0-or-later](https://spdx.org/licenses/GPL-3.0-or-later.html) license.
