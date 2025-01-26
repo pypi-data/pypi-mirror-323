@@ -1,0 +1,193 @@
+[genome]
+# Build of the reference genome
+# Currently human genomes supported: hg19 and hg38
+build = 'hg19'
+# It might work with hg18 and mouse genomes: c3h and mm10
+# if indels are not computed and signature not corrected
+
+
+
+[signature]
+# Choose the method to calculate the trinuclotide singature:
+
+# "full" : Use a 192 matrix with all the possible signatures
+# method = 'full'
+
+# "complemented" : Use a 96 matrix with the signatures complemented
+method = 'complement'
+
+# "none": Don't use signature
+# method = 'none'
+
+# "bysample": Compute a 96 matrix signature for each sample
+# method = 'bysample'
+
+# "file": Provide a file with the signature to use
+# The file should be created using bgsignatures package
+# method = 'file'
+
+
+# Choose the classifier (categorical value for the signature):
+# The classifier is a column in the dataset and must be one of these:
+# classifier = 'SIGNATURE'
+# classifier = 'SAMPLE'
+# classifier = 'CANCER_TYPE'
+# by default, all mutations contribute to the signature
+# If the signature is loaded from the a file, the same classifier must have been used.
+
+
+# The frequency of trinucleotides can be normalized by the frequency of sites
+# This option can be overwritten in the command line
+
+# whole_genome/wgs: correct the signature for the whole genome frequencies
+# normalize_by_sites = 'whole_genome'
+
+# whole_exome/wxs/wes: correct the signature for frequencies in coding regions
+# normalize_by_sites = 'whole_exome'
+
+# None: do not correct (comment the option)
+# normalize_by_sites = ''
+
+
+
+[score]
+# Path to score file
+file = "%(bgdata://genomicscores/caddpack/1.0)"
+# WARNING: The %(bgdata:...) will download (the first time that you use it) a score file from
+# our servers and install it into the ~/.bgdata folder.
+
+# WARNING: CADD 1.0 scores are original from http://cadd.gs.washington.edu/ and are freely
+# available for all non-commercial applications. If you are planning on using them in a
+# commercial application, please contact them at http://cadd.gs.washington.edu/contact.
+
+# Format of the file
+# 'pack': binary format
+format = 'pack'
+# 'tabix': http://www.htslib.org/doc/tabix.html
+# format = 'tabix'
+
+
+# Column that has the chromosome
+chr = 0
+
+# If the chromosome has a prefix like 'chr'. Example: chrX chr1 ...
+chr_prefix = ''
+
+# Column that has the position
+pos = 1
+
+# Column that has the reference allele
+ref = 2
+
+# Column that has the alternative allele
+alt = 3
+
+# Column that has the score value
+score = 5
+
+# If you have different scores at the same position, and each score applies to a
+# different region element, then uncomment this line and set the value to the column
+# that has the element id to match.
+# element = 6
+
+
+
+
+[statistic]
+
+# Mathematical method to use to compare observed and simulated values
+# Arithmetic mean
+method = 'amean'
+
+# Gemoetric mean
+# method = 'gmean'
+
+
+# Do not use/use MNP mutations in the analysis
+discard_mnp = False
+#dicard_mnp = True
+
+
+# Compute the observed values using only 1 mutation per sample
+#per_sample_analysis = 'max'
+#per_sample_analysis = 'amean'
+#per_sample_analysis = 'gmean'
+
+
+# Minimum sampling
+sampling = 100000
+
+# Maximum sampling
+sampling_max = 1000000
+
+# Sampling chunk (in millions)
+sampling_chunk = 100
+
+# Minimum number of observed (if not reached, keeps computing)
+sampling_min_obs = 10
+
+
+[[indels]]
+# Include/exclude indels from your analysis
+# This option can be overwritten in the command line
+include = True
+# include = False
+
+# Indels longer than this size will be discarded
+# set to 0 to include all indels
+max_size = 20
+
+
+# Method used to simulate indels
+
+# Treat them as stops (for coding regions)
+# method = 'stop'
+
+# Treat them as a set of substitutions and take the maximum
+method = 'max'
+
+
+# Number of consecutive times the indel needs to appear to consider it falls in a repetitive region
+max_consecutive = 7
+
+# Do not discard indels that fall in repetitive regions
+# max_consecutive = 0
+
+
+# Use exomic probabilities of frameshift indels in the dataset for the simulation
+gene_exomic_frameshift_ratio = False
+# or probabilities of each gene
+# gene_exomic_frameshift_ratio = True
+# This option is only used if method = 'stop'
+
+
+# Function applied to the scores of the stops in the gene to compute the observed score
+# Only used if method = 'stop'
+
+# Arithmetic mean
+stops_function = 'mean'
+
+# Median
+# stops_function = 'median'
+
+# Random value between the max and the minimum
+# stops_function = 'random'
+
+# Random choice amongst the values
+# stops_function = 'random_choice'
+
+# Minimum number of stops per element to consider those values or use the max
+# Only used if method = 'stop'
+minimum_number_of_stops = 1
+
+
+
+[settings]
+# Number of cores to use in the analysis
+# Comment this option to use all available cores
+# This value can be overwritten in the command line
+# cores = 6
+
+# seed for reproducible results
+# This value can be overwritten in the command line
+# seed = 123
