@@ -1,0 +1,10 @@
+ppopt
+
+[all]
+gurobipy
+pyomo
+sympy
+
+[test]
+coverage
+pytest
