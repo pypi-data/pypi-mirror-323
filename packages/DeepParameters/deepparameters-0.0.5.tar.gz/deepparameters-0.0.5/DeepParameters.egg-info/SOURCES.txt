@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+DeepParameters/CreateDeepLearningModel.py
+DeepParameters/LearnDeepLearningCPDs.py
+DeepParameters/PreprocessingData.py
+DeepParameters/Utils.py
+DeepParameters/__init__.py
+DeepParameters.egg-info/PKG-INFO
+DeepParameters.egg-info/SOURCES.txt
+DeepParameters.egg-info/dependency_links.txt
+DeepParameters.egg-info/requires.txt
+DeepParameters.egg-info/top_level.txt
+tests/test_deeplearning_cpds.py

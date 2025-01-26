@@ -1,0 +1,10 @@
+numpy
+pandas
+pgmpy
+scipy
+scikit-learn
+tensorflow
+matplotlib
+networkx
+keras
+tensorflow-probability
