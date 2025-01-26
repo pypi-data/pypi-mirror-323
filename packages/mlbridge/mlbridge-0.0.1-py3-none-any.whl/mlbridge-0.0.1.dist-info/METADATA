@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: mlbridge
+Version: 0.0.1
+Summary: MLBridge: Seamless AI workflows from local to remote.
+Author: Aran Truslove
+Author-email: atruslove1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
