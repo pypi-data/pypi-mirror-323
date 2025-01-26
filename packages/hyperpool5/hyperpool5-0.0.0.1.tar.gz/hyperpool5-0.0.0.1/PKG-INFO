@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: hyperpool5
+Version: 0.0.0.1
+Summary: Used to transfer some useful data
+Author-email: mark4d4 <sevcow4674@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown
+
+Used to move a special data in other computers which i use.
+This will help me soon!
