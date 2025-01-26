@@ -1,0 +1,8 @@
+README.md
+setup.py
+superline/__init__.py
+superline/main.py
+superline.egg-info/PKG-INFO
+superline.egg-info/SOURCES.txt
+superline.egg-info/dependency_links.txt
+superline.egg-info/top_level.txt
