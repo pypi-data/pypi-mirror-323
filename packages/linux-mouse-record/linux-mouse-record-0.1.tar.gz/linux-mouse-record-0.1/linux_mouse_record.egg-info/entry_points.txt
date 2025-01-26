@@ -1,0 +1,3 @@
+[console_scripts]
+linux-mouse-record = linux_mouse_record.record:main
+linux-mouse-replay = linux_mouse_record.replay:main

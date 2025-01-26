@@ -1,0 +1,11 @@
+README.md
+setup.py
+linux_mouse_record/__init__.py
+linux_mouse_record/record.py
+linux_mouse_record/replay.py
+linux_mouse_record.egg-info/PKG-INFO
+linux_mouse_record.egg-info/SOURCES.txt
+linux_mouse_record.egg-info/dependency_links.txt
+linux_mouse_record.egg-info/entry_points.txt
+linux_mouse_record.egg-info/requires.txt
+linux_mouse_record.egg-info/top_level.txt
