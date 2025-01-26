@@ -1,0 +1,6 @@
+{
+  "test_neurosuite.py": true,
+  "test_nwb.py": true,
+  "test_phy.py": true,
+  "test_suite2p.py": true
+}
