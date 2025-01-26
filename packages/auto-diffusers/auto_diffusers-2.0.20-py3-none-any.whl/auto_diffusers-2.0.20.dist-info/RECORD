@@ -1,0 +1,8 @@
+auto_diffusers/__init__.py,sha256=3F2JjAz8ifuVBXv7uHHhnZi7iCoFLvTwx5cb-xzpxqk,228
+auto_diffusers/pipeline_easy.py,sha256=cx3vRXgeyWmIaOaIJplaC9FH-h6p4W0AmYM-7bhRnaE,92593
+auto_diffusers/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+auto_diffusers-2.0.20.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+auto_diffusers-2.0.20.dist-info/METADATA,sha256=MRXIbpeDeo5lOXtJuBmeu6JGtBHcRDZmtJilDxHDO6U,10210
+auto_diffusers-2.0.20.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+auto_diffusers-2.0.20.dist-info/top_level.txt,sha256=iYkbnc9T-VKVnoCP6AufdXcDUfUaLZ_yMG-USuYf4UQ,15
+auto_diffusers-2.0.20.dist-info/RECORD,,
