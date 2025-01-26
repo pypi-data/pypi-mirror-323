@@ -1,0 +1,2 @@
+[console_scripts]
+fast-hard = fast_hard.cli:create_project
