@@ -1,0 +1,21 @@
+[project]
+name = "solana-keypair"
+version = "0.1.0"
+authors = [
+  { name="handsomevictor", email="handsomevictor@gmail.com" },
+]
+description = "Provides backwards compatibility for older software versions using solana keypair import"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pycryptodome>=3.20.0",
+    "solana>=0.32.0",
+    "typing-extensions>=4.2.0",
+    "semantic-types>=0.1.5",
+    "base58>=2.1.1",
+]
+[project.urls]
+Homepage = "https://stackoverflow.com/questions/77814538/cannot-import-publickey-from-solana-publickey"
