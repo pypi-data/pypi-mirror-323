@@ -1,0 +1,71 @@
+[project]
+name = 'systrack'
+description = 'Linux kernel syscall implementation tracker'
+authors = [{name = 'Marco Bonelli'}, {name = 'Marco Bonelli', email = 'marco@mebeim.net'}]
+maintainers = [{name = 'Marco Bonelli'}, {name = 'Marco Bonelli', email = 'marco@mebeim.net'}]
+license = {text = 'GNU General Public License v3 (GPLv3)'}
+readme = 'README.md'
+platforms = 'any'
+requires-python = '>=3.8'
+dynamic = ['version']
+keywords = ['systrack', 'linux', 'kernel', 'syscall', 'kconfig', 'elf', 'abi']
+classifiers = [
+	'Development Status :: 4 - Beta',
+	'Environment :: Console',
+	'Intended Audience :: Developers',
+	'Intended Audience :: Science/Research',
+	'Intended Audience :: System Administrators',
+	'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+	'Natural Language :: English',
+	'Operating System :: OS Independent',
+	'Programming Language :: Python :: 3',
+	'Topic :: Security',
+	'Topic :: Software Development :: Embedded Systems',
+	'Topic :: Software Development :: Testing',
+	'Topic :: System :: Operating System Kernels :: Linux',
+	'Topic :: Utilities',
+]
+dependencies = [
+	'iced-x86~=1.21.0',
+	'jinja2~=3.1.2'
+]
+
+[project.urls]
+Homepage = 'https://github.com/mebeim/systrack'
+Repository = 'https://github.com/mebeim/systrack.git'
+Changelog = 'https://github.com/mebeim/systrack/blob/master/CHANGELOG.md'
+
+[project.scripts]
+systrack = 'systrack.__main__:main'
+
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'
+
+[tool.hatch.version]
+path = 'src/systrack/version.py'
+
+[tool.hatch.build]
+ignore-vcs = true
+include = ['src/systrack/templates/*']
+
+[tool.hatch.build.targets.wheel]
+packages = ['src/systrack']
+
+[tool.hatch.build.targets.sdist]
+include = ['src', 'CHANGELOG.md']
+
+[tool.hatch.envs.default]
+python = '3'
+
+[tool.hatch.envs.test]
+dependencies = ['pytest']
+
+[tool.ruff.lint]
+# Don't warn for multi-line statements
+ignore = ['E701']
+
+[tool.ruff.lint.per-file-ignores]
+# Don't warn for star imports in these files
+'arch/__init__.py' = ['F403', 'F405']
+'tests/*' = ['F403', 'F405']
