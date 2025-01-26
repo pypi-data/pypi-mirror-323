@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/math_verify/__init__.py
+src/math_verify/few_shots.py
+src/math_verify/grader.py
+src/math_verify/metric.py
+src/math_verify/parser.py
+src/math_verify/tasks.py
+src/math_verify/utils.py
+src/math_verify.egg-info/PKG-INFO
+src/math_verify.egg-info/SOURCES.txt
+src/math_verify.egg-info/dependency_links.txt
+src/math_verify.egg-info/requires.txt
+src/math_verify.egg-info/top_level.txt
+tests/test_all.py
+tests/test_configs.py

@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: math-verify
+Version: 0.3.2
+Summary: A library for verifying mathematical answers
+Author-email: Hynek Kydlíček <hynek.kydlicek@huggingface.co>
+Requires-Python: >=3.10
+Requires-Dist: latex2sympy2_extended>=0.9.2
+Provides-Extra: inference
+Requires-Dist: lighteval[accelerate]; extra == "inference"
