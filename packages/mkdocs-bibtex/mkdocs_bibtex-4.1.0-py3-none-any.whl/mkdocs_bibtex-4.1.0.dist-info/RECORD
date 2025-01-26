@@ -1,0 +1,12 @@
+mkdocs_bibtex/__init__.py,sha256=MvXUk_c0nnBJ2ZEvqidRBbbMj0FwNi6qUUMEtjH2Fis,233
+mkdocs_bibtex/citation.py,sha256=M9CHH5_oqlkM5imUocpTdMqTrVTbsoz3XdKUsD1yyP4,3215
+mkdocs_bibtex/config.py,sha256=rLvs7Mdd4dGYMuPEJUqUnH_vOdTTS0dLrJoUSaILzk8,1494
+mkdocs_bibtex/plugin.py,sha256=WBcm1MX_gg7vz-6horl7CkhQgRDEMiYo8tFgBORCSGU,6341
+mkdocs_bibtex/registry.py,sha256=-0Vi3DbHQt-L4ttBh9YNFYPLsCY6ugltEtdU5MSHKuQ,10879
+mkdocs_bibtex/utils.py,sha256=H3X6ZK6V6dBHTwQIglxNu8veq0eul06u3wJ253L_lPg,3289
+mkdocs_bibtex-4.1.0.dist-info/LICENSE,sha256=L1Rab9JKSNDRGPBh9jdkIsZGEhEK86GmNN6UlW2hOO4,2424
+mkdocs_bibtex-4.1.0.dist-info/METADATA,sha256=yaevEPOtzUADr42bcRmphUvloINKWuZRNSLR0ISUW7c,5816
+mkdocs_bibtex-4.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+mkdocs_bibtex-4.1.0.dist-info/entry_points.txt,sha256=JMhh2AkKr2aJgEw0OH-hKdL49xwKvI6KY5u62Cnl69s,60
+mkdocs_bibtex-4.1.0.dist-info/top_level.txt,sha256=YBHtVD2y2Dv4o8mdH0GbrgYtZNXOh9BEcQLlVdF4VwQ,14
+mkdocs_bibtex-4.1.0.dist-info/RECORD,,
