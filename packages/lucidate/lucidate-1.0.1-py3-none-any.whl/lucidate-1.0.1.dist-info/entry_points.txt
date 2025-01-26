@@ -1,0 +1,2 @@
+[console_scripts]
+lucidate = lucidate.cli:app

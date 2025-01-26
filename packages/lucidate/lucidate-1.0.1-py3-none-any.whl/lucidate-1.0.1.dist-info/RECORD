@@ -1,0 +1,8 @@
+lucidate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lucidate/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lucidate/cli.py,sha256=JewcgUAEDP31wAWUIlYOAZkp3g6DsyyPQml7g4iNmn8,135
+lucidate/lucidate.py,sha256=vTAWwFNi-tROCqMpaBr_OI8WViRQz4Z2r7zOarjImPE,3391
+lucidate-1.0.1.dist-info/METADATA,sha256=d7XAQUQN1XOaGHcn5l7nZIeq623cVtO6dGSSOpdPBJI,234
+lucidate-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+lucidate-1.0.1.dist-info/entry_points.txt,sha256=hEJInDkAgcipb5ft59i5SiHdTVRMz9zr3kqqAOtsvq4,46
+lucidate-1.0.1.dist-info/RECORD,,
