@@ -1,0 +1,13 @@
+bitable/__init__.py,sha256=ry7hSJHEP6eEnVtGSNGvfaDt8QpFMI6QBSaE-LeOFZM,66
+bitable/api.py,sha256=k2DWOgUcboDNep0DE6mCc2aziBzuGQMyC2aWaBcwpt4,3449
+bitable/fieldType.py,sha256=jhlgFDRc6xDPf4j76nuRkMbut7Rfp7btC5D4UqRc-f0,300
+bitable/operator.py,sha256=ej5Rct_zDsl2lK8SYEQPMtir4N9pbffGUV7NHCaY3i0,4840
+bitable/table.py,sha256=IMBDJvoQ4LaAE698iR5FRx4ZiESUyvVfzGLmqUFmpgY,4510
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/credentials.py,sha256=6oVN0_mCCkbUIypPKQL1FfoG0XCtIpim_TbzRwjPeCA,123
+tests/test_table.py,sha256=jlebGGY-tgYUQs3NZao5OQONQPu1dzZA-9Pl3FCOAhw,2778
+bitable-1.0.0.dist-info/LICENSE,sha256=3F-EV1zXzJhJc4nKv7J7eys7szqi6YeEWZkd-uOG9mM,1085
+bitable-1.0.0.dist-info/METADATA,sha256=hbyb2s3kiSoUKimRh1sp72sAbMgMuPmxtd2459jzlhc,2822
+bitable-1.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+bitable-1.0.0.dist-info/top_level.txt,sha256=A4IBtLQFcegtDUmWv2HlAVNNS2kzkD7TAE8Z-Qr_FCA,14
+bitable-1.0.0.dist-info/RECORD,,
