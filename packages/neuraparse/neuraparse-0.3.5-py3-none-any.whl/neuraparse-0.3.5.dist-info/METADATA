@@ -1,0 +1,59 @@
+Metadata-Version: 2.2
+Name: neuraparse
+Version: 0.3.5
+Summary: Universal web scraper package for extracting web data efficiently
+Home-page: https://github.com/bayrameker
+Author: Bayram EKER
+Author-email: eker600@gmail.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/bayrameker
+Project-URL: Source, https://github.com/bayrameker
+Project-URL: Documentation, https://github.com/bayrameker
+Keywords: web scraping,selenium,beautifulsoup,requests,lxml,undetected-chromedriver
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: selenium>=4.0.0
+Requires-Dist: beautifulsoup4>=4.9.0
+Requires-Dist: requests>=2.25.0
+Requires-Dist: lxml>=4.6.0
+Requires-Dist: html5lib>=1.1
+Requires-Dist: undetected-chromedriver>=3.0.0
+Requires-Dist: urllib3>=1.25.0
+Requires-Dist: dataclasses; python_version < "3.7"
+Requires-Dist: readability-lxml>=0.8.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Neuraparse Universal Scraper
+
+Bu paket, `neuraparse` namespace’i altında evrensel bir web scraper sağlar.
+
+## Kurulum
+
+```bash
+pip install neuraparse-universal-scraper
