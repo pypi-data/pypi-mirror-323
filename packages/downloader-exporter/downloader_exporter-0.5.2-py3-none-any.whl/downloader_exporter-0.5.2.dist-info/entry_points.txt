@@ -1,0 +1,5 @@
+[console_scripts]
+downloader-exporter = downloader_exporter.exporter:main
+
+[gui_scripts]
+
