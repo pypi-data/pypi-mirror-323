@@ -1,0 +1,57 @@
+Metadata-Version: 2.3
+Name: pyvrp-zone-checker
+Version: 0.1.0
+Summary: `pyvrp-zone-checker` is a package wrapper for zone-checker in PyVRP
+License: MIT
+Keywords: vehicle routing problem,hybrid genetic search,metaheuristic,zone checker
+Author: Phuripat Kongsakban
+Author-email: phuripat2519.work@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Requires-Dist: matplotlib (>=2.2.0)
+Requires-Dist: numpy (>=1.15.2) ; python_version < "3.12"
+Requires-Dist: numpy (>=1.26.0) ; python_version >= "3.12"
+Requires-Dist: tomli (>=2.0.1,<3.0.0)
+Requires-Dist: tqdm (>=4.64.1,<5.0.0)
+Requires-Dist: vrplib (>=1.4.0,<2.0.0)
+Project-URL: Repository, https://github.com/ZGA2519/PyVRP_zone_checker
+Description-Content-Type: text/markdown
+
+# Zone Checker
+Add zone checker to pyvrp
+
+
+# Forked Repo - [PyVRP]
+
+This is a fork of [PyVRP](https://github.com/PyVRP/PyVRP).  
+It includes modifications for Zone checker.
+
+# Usage
+you can add zone by add another section in .vrp file
+```txt
+  ZONE_SECTION
+  1	0
+  2	1
+  3	1
+  4	2
+  5	2
+```
+The route will be checked to ensure that every route does not have more than one zone and that all routes do not cross zones. 
+
+# Contributors
+[ZGA2519](https://github.com/ZGA2519) <br>
+[Teeraphat6509611809](github.com/Teeraphat6509611809) <br>
+[Kittithara6509611544](https://github.com/Kittithara6509611544) <br>
+[Chayatorn-Prukrattananapa](https://github.com/Chayatorn-Prukrattananapa) <br>
+
