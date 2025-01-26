@@ -1,0 +1,97 @@
+#:schema https://json.schemastore.org/pyproject.json
+# https://packaging.python.org/en/latest/specifications/pyproject-toml/
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[dependency-groups]
+build = [
+  "build>=1.2.2.post1,<2",
+  "check-wheel-contents>=0.6.1,<0.7",
+  "twine>=6.1.0,<7",
+]
+dev = ["icecream>=2.1.4,<3", "ipykernel>=6.29.5,<7", "ipython>=8.31.0,<9"]
+
+[project]
+authors = [
+  { email = "30631553+liblaf@users.noreply.github.com", name = "liblaf" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Utilities",
+  "Typing :: Typed",
+]
+dependencies = [
+  "emoji>=2.14.1,<3",
+  "githubkit>=0.12.5",
+  "gitpython>=3.1.44,<4",
+  "hishel>=0.1.1,<0.2",
+  "httpx[socks]>=0.27.2,<0.28",
+  "lazy-loader>=0.4,<0.5",
+  "liblaf-grapes>=0.0.2,<0.0.3",
+  "litellm>=1.59.8,<2",
+  "loguru>=0.7.3,<0.8",
+  "platformdirs>=4.3.6,<5",
+  "pydantic-settings>=2.7.1,<3",
+  "pydantic>=2.10.6,<3",
+  "python-frontmatter>=1.1.0,<2",
+  "rich>=13.9.4,<14",
+  "typer-di>=0.1.2,<0.2",
+  "typer>=0.15.1,<0.16",
+]
+description = "🍋‍🟩 Lime: AI-powered CLI for GitHub repository management. Automate commits, generate READMEs, and manage topics with ease. Supports conventional commits, markdown generation, and GitHub API integration."
+keywords = [
+  "ai",
+  "automation",
+  "cli",
+  "code-quality",
+  "code-review",
+  "commit-messages",
+  "developer-tools",
+  "documentation",
+  "git",
+  "github-api",
+  "markdown",
+  "open-source",
+  "productivity",
+  "project-management",
+  "python",
+  "readme-generation",
+  "repository-management",
+  "software-development",
+  "topic-management",
+  "version-control",
+]
+license = "MIT"
+name = "liblaf-lime"
+readme = "docs/README.md"
+requires-python = ">=3.12,<4"
+version = "0.1.1"
+
+[project.scripts]
+aic = "liblaf.lime.cli.commit:app"
+lime = "liblaf.lime.cli:app"
+
+[project.urls]
+"Changelog" = "https://github.com/liblaf/lime/blob/main/CHANGELOG.md"
+"Homepage" = "https://github.com/liblaf/lime"
+"Issue Tracker" = "https://github.com/liblaf/lime/issues"
+"Release Notes" = "https://github.com/liblaf/lime/releases"
+"Source Code" = "https://github.com/liblaf/lime"
+
+[tool.check-wheel-contents]
+ignore = ["W002"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/liblaf"]
+
+[tool.uv]
+default-groups = ["build", "dev"]

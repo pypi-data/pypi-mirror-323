@@ -1,0 +1,11 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+# prettier-ignore
+_commit: f7e6c88
+_src_path: gh:liblaf/copier-python
+author: liblaf
+email: 30631553+liblaf@users.noreply.github.com
+license: MIT
+name: liblaf-lime
+owner: liblaf
+package_manager: uv
+repo: lime
