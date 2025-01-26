@@ -1,0 +1,31 @@
+name: Build React App
+
+on: workflow_call
+
+jobs:
+  build_js:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install JavaScript dependencies
+        run: npm ci
+
+      - name: Run Linter
+        run: npm run lint
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Store built React app
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.sha }}-js-build
+          path: build
+          retention-days: 1
+          if-no-files-found: error
