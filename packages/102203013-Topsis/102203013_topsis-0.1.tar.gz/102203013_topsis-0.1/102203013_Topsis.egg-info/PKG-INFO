@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: 102203013-Topsis
+Version: 0.1
+Summary: Topsis Librar for multi criteria decision making
+Home-page: https://github.com/HitakshiArora/102203013-Topsis
+Download-URL: https://github.com/HitakshiArora/102203013-Topsis/archive/refs/tags/v_01.tar.gz
+Author: Hitakshi Arora
+Author-email: harora_be22@thapar.edu
+License: MIT
+Keywords: Topsis,Package,Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: License.txt
+Requires-Dist: validators
+Requires-Dist: beautifulsoup4
