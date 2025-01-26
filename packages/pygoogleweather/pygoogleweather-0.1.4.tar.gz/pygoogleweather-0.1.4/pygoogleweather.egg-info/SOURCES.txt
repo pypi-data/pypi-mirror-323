@@ -1,0 +1,10 @@
+README.md
+setup.py
+google_weather/__init__.py
+google_weather/lang.py
+google_weather/weather.py
+pygoogleweather.egg-info/PKG-INFO
+pygoogleweather.egg-info/SOURCES.txt
+pygoogleweather.egg-info/dependency_links.txt
+pygoogleweather.egg-info/requires.txt
+pygoogleweather.egg-info/top_level.txt
