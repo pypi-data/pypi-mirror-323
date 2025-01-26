@@ -1,0 +1,5 @@
+[console_scripts]
+jarvis = jarvis.main:main
+jarvis-codebase = jarvis.jarvis_codebase.main:main
+jarvis-coder = jarvis.jarvis_coder.main:main
+jarvis-rag = jarvis.rag.main:main
