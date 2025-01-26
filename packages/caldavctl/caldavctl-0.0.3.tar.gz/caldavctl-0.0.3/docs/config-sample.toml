@@ -1,0 +1,16 @@
+# We can access more than one server, each server gets a [server.<server_name>]
+[server.example]
+username="your user"
+password="your pass"
+url="https://example.org/cal"
+
+[default]
+    # Because we can have more than one server we identify here the one that's
+    # used by default. Override with the --server option.
+    server="example"
+    # The same is true for the available calendars. Use the calendar id that's
+    # returned by `caldavctl calendar list`. Override with the --calendar
+    # option
+    calendar="Default"
+    # Your time zone:
+    timezone="Asia/Tokyo"
