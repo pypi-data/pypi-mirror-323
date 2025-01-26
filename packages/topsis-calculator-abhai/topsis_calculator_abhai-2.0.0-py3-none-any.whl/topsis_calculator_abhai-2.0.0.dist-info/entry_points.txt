@@ -1,0 +1,2 @@
+[console_scripts]
+topsis-calculator = topsis_calculator.topsis:main
