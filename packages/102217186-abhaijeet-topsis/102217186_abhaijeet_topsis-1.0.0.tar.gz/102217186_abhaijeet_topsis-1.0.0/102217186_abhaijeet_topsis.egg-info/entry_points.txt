@@ -1,0 +1,2 @@
+[console_scripts]
+102217186_abhaijeet_topsis = 102217186_abhaijeet_topsis.topsis:main
