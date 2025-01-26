@@ -1,0 +1,311 @@
+Metadata-Version: 2.4
+Name: rustme
+Version: 0.1.25
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# RustME: Fast and Memory-Efficient Probit Marginal Effects in Rust
+
+RustME is designed to solve a pressing challenge in computational econometrics: the efficient computation of Probit marginal effects on large datasets. 
+While tools like statsmodels provide robust support, they often struggle with the demands of modern datasets due to their memory and computational overhead. 
+Leveraging the power of Rust, RustME provides a lightweight, scalable, and user-friendly solution that integrates seamlessly with Python workflows.
+
+Chunking allows RustME to process datasets incrementally, enabling researchers to handle datasets that exceed system memory limits without sacrificing accuracy. 
+The underlying mathematical properties of marginal effects (additivity of sums) ensure that chunking produces identical results to full-dataset processing, 
+while offering significant gains in memory efficiency and scalability.
+
+
+The ```rustme``` package provides a fast and memory-efficient alternative to the native ```.margeff()``` functionality in statsmodels. It computes average marginal effects ($AME$) for Probit models with a significant performance improvement, making it especially suitable for large datasets.
+Written in Rust, this package is optimized for speed and can process data in chunks to further reduce memory usage.
+
+## Why RustME?
+
+
+The ```statsmodels``` library's native ```.margeff()``` function is a reliable tool for computing marginal effects. 
+However, it can be slow and memory-intensive when working with large datasets, making it less practical in the context of modern data analysis.
+
+While other libraries, such as ```sklearn```, offer highly efficient tools for statistical modeling, they often lack support for calculating marginal effects specifically for Probit models. 
+In disciplines such as economics and social sciences, where Probit models are extensively used for binary outcome analyses, fast and scalable computation of marginal effects is critical for research and policy decisions. 
+RustME fills this gap by combining the speed of Rust with the flexibility of Python.
+
+Advances in data collection and storage technologies have enabled researchers to work with increasingly large datasets, offering richer insights and more robust analyses. However, calculating marginal effects for such datasets can be computationally intensive. 
+
+
+For Probit models, the computational complexity of marginal effects scales with both the number of observations $(N)$ and the number of independent variables $(k)$. 
+Specifically: The overall complexity is typically $O(N × k)$, as marginal effects need to be calculated for every observation across all variables.
+Additionally, the calculation of standard errors using the delta method introduces matrix operations, which scale as $O(k^3)$.
+
+
+These scaling properties mean that as datasets grow larger or models include more independent variables, the computational demands increase significantly. Faster and more memory-efficient solutions are essential to make such analyses feasible at scale.
+
+
+__To address these challenges, I developed RustME, a Python package powered by Rust, designed to:__
+
+
+- Speed up calculations: Rust's efficiency ensures that even large datasets are processed quickly.
+
+- Optimize memory usage: By utilizing chunking, you can process datasets that might otherwise exceed your machine's memory capacity.
+
+- Handle discrete and continuous variables efficiently: rustme accurately calculates marginal effects for both types of variables, making it a versatile solution.
+
+  __(Currently, RustME is designed to calculate marginal effects exclusively from the Probit model outputs of ```Statsmodels```' ```.fit()``` method. In future updates, I aim to expand its functionality to include support for Logistic model results as well.)__
+
+## How does it work?
+### What is a Probit model
+The Probit model is a type of regression model used for binary outcomes. For example, it’s used when the dependent variable takes on values like ```1``` (success) or ```0``` (failure). 
+The model assumes that the probability of success is determined by a cumulative normal distribution function of a linear combination of independent variables:
+
+<div align="center"; margin: 0>
+
+### __$P(Y = 1 | X) = \phi(X\beta)$__
+
+</div>
+
+Where:
+
+- $\phi$ is the cumulative distribution function (CDF) of the standard normal distribution.
+- $X$ is the vector of independent variables.
+- $\beta$ is the vector of coefficients
+
+### Marginal Effects
+___For Continuous Variables:___\
+The marginal effect of a continuous variable $X_j$ is:
+
+<div align="center"; margin: 0>
+  
+### __$\frac{\partial P(Y = 1)}{\partial X_j} = \phi(X\beta)\beta_j$__
+
+</div>
+
+Where:
+
+$\phi(X\beta)$ is the probability density function (PDF) of the normal distribution, evaluated at $X\beta$.<br>
+
+
+___For Binary (Discrete) Variables:___\
+The marginal effect of a binary variable $X_j$ is the difference in probabilities when $X_j$ changes from ```0``` to ```1```:
+<div align="center"; margin: 0>
+  
+### __$\Delta P = \phi(X_1\beta) - \phi(X_0\beta)$__
+
+</div>
+
+### Standard Errors for Marginal Effects
+The standard errors are calculated using the delta method. For the marginal effects, we compute the covariance matrix as:
+
+<div align="center"; margin: 0>
+  
+### __$\text{Cov}(AME) = G \cdot \text{Cov}(\beta) \cdot G^T$__
+
+</div>
+
+Where:
+
+- $G$ is the Jacobian matrix (gradient) of marginal effects $g(\beta)$ w.r.t. the coefficients $\beta$
+
+The variance and standard errors of the Average Marginal Effects ($AME$) are given by:
+<div align="center"; margin: 0>
+  
+### __$\text{Var}(AME_j) = \text{Cov}(AME)_{jj}$__
+
+</div>
+and
+<div align="center"; margin: 0>
+
+### __$\text{SE}(AME_j) = \sqrt{\text{Var}(AME_j)}$__
+
+</div>
+
+## Installation
+
+To install rustme, use pip:
+```pip install rustme```
+Ensure you have the necessary dependencies, including Rust and Python development headers, installed on your system.
+
+## Usage
+
+### Example
+
+Here’s how to use rustme to compute marginal effects for a Probit model:
+
+```python
+import statsmodels.api as sm
+import rustme
+
+# Simulate some data
+import numpy as np
+np.random.seed(42)
+N = 10000
+X = np.random.randn(N, 3)
+X = np.column_stack([np.ones(N), X])  # Add intercept
+y = (X @ np.array([0.5, -0.2, 0.3, 0.7]) + np.random.randn(N) > 0).astype(int)
+
+# Fit a Probit model
+model = sm.Probit(y, X)
+results = model.fit()
+
+# Compute marginal effects using rustme
+marginal_effects = rustme.ame(results)
+
+# Display results
+for effect in marginal_effects:
+    print(effect)
+```
+Output
+```
+Optimization terminated successfully.
+         Current function value: 0.519687
+         Iterations 6
+{'name': 'x1', 'dy/dx': -0.05697918920800057, 'Std. Err': 0.004098155927002938, 'z': -13.903616705397193, 'p-value': 0.0, 'Significance': '***'}
+{'name': 'x2', 'dy/dx': 0.0843852384589979, 'Std. Err': 0.004052927539993522, 'z': 20.820811037527896, 'p-value': 0.0, 'Significance': '***'}
+{'name': 'x3', 'dy/dx': 0.2006995944921105, 'Std. Err': 0.003587374824216237, 'z': 55.946089919934415, 'p-value': 0.0, 'Significance': '***'}
+```
+
+The output will be a list of dictionaries, where each dictionary contains:
+
+```name: The variable name.```
+
+```dy/dx: The average marginal effect.```
+
+```Std. Err: Standard error.```
+
+```z: z-statistic.```
+
+```p-value: Two-tailed p-value.```
+
+```Significance: Significance stars (e.g., *** for p < 0.01).```
+
+## The Chunking Feature
+
+Large datasets can be challenging to process due to memory constraints.
+To address this, ```rustme``` allows you to specify a ```chunk_size``` parameter when calling the ```ame``` function. 
+This splits the data into smaller chunks, processing each chunk separately while accumulating the results. 
+This:
+
+- Reduces memory usage: Only a portion of the dataset is loaded into memory at a time.
+
+- Improves scalability: Enables processing datasets that exceed system memory capacity.
+
+Chunking leverages the additive property of marginal effects and their gradients, ensuring that partial calculations over chunks can be seamlessly aggregated without losing mathematical accuracy.
+
+### When to Use Chunking
+
+Chunking is used in the ```rustme``` package to calculate marginal effects and their standard errors efficiently without loading the entire dataset into memory. 
+This approach is mathematically feasible because the calculations required for average marginal effects ($AME$ s) and standard errors are additive in nature. 
+Let's explore why.
+
+### 1. Average Marginal Effects are Additive
+
+The $AME$ for a variable $X_j$ is the average of the marginal effects across all observations. For $N$ total observations:
+
+<div align="center"; margin: 0>
+  
+### __$AME_j = \frac{1}{N} \sum^{N}_{i=1} ME_ij$__
+
+</div>
+
+Where:
+
+- $ME_ij$ is the marginal effect for observation $i$ with respect to $X_j$.
+When processing data in chunks, we divide the dataset into $C$ chunks, where $N_c$ is the number of observations in chunk c.
+The $AME$ can then be expressed as:
+
+<div align="center"; margin: 0>
+  
+### $AME_j = \frac{1}{N} \sum_{c=1}^{C} \sum_{i=1}^{N_c} ME_{ij}$
+
+</div>
+
+
+### 2. Standard Errors via the Delta Method
+The standard error of the $AME$ is computed using the Delta Method, which involves taking the gradient of the $AME$ with respect to the parameters $β$. 
+The variance-covariance matrix of the $AME$s is given by:
+
+
+<div align="center"; margin: 0>
+
+### $Cov(AME) = G \cdot Cov(β) \cdot G^T$
+
+</div>
+
+Where:
+
+- $G$ is the gradient of the $AME$ with respect to $β$.
+- $Cov(β)$ is the covariance matrix of the Probit model parameters.
+
+
+
+  
+To compute $G$, we sum over gradients for each observation $i$:
+
+<div align="center"; margin: 0>
+
+### $G_j = \frac{1}{N} \sum_{i=1}^{N} \frac{\partial ME_ij}{\partial β}$
+
+</div>
+
+In chunking, this becomes:
+
+<div align="center"; margin: 0>
+
+### $G_j = \frac{1}{N} \sum_{c=1}^{C} \sum_{i=1}^{N_c} \frac{\partial ME_ij}{\partial β}$
+
+</div>
+
+
+### 3. Chunking for Discrete Variables
+___For binary (discrete) variables, the marginal effect is calculated as:___
+
+<div align="center"; margin: 0>
+
+### $\Delta P = \phi(X_1\beta) - \phi(X_0\beta)$
+
+
+</div>
+
+Where $X_1$ and $X_0$ represent the dataset with the binary variable set to ```1``` and ```0```, respectively. The summation for $\Delta P$ across all observations is:
+<div align="center"; margin: 0>
+
+### $\Delta P_{chunk} =\sum_{i=1}^{N_c} \phi(X_{i1}\beta) - \phi(X_{i0}\beta)$
+
+</div>
+
+
+### 4. Chunking Preserves Computational Integrity
+Since the summations for $AME$s, gradients, and standard errors are additive, breaking the data into chunks does not alter the final result. 
+Each chunk contributes a portion of the overall summation, 
+which is combined at the end to yield the same result as if the entire dataset were processed at once.
+
+## Advantages of Chunking
+- Memory Efficiency: Only a subset of the data is loaded into memory at any time, allowing the method to scale to large datasets.
+- Parallel Processing: Chunking opens opportunities for parallel computation, where each chunk can be processed independently on separate threads or machines.
+- Mathematical Validity: As shown above, the additive nature of the calculations ensures that chunking produces mathematically accurate results.
+
+Example with Chunking
+
+```python
+marginal_effects = rustme.ame(results, chunk_size=5000)
+```
+Here, the dataset will be processed in chunks of 5000 rows at a time. Results are identical whether ```chunk_size``` is specified or not.
+
+## Performance Comparison
+
+### Compared to statsmodels' margeff, RustME offers:
+
+- Faster execution: Significant speedups, especially for large datasets.
+
+- Reduced memory usage: Chunking enables efficient memory management.
+
+- Identical results: Handles both continuous and discrete variables correctly.
+
+## Contribution
+
+Contributions are welcome! Feel free to open issues or submit pull requests to improve the package.
+
+## Acknowledgments
+
+Thanks to the ```statsmodels``` team for their foundational work on Probit modeling and marginal effects. 
+
