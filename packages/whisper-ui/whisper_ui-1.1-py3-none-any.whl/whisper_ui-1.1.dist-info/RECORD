@@ -1,0 +1,9 @@
+whisper_ui/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+whisper_ui/__main__.py,sha256=jiJ696KHKgOPSnemz72xZEH75XS3jWFPgj0pXs4s1Fk,30
+whisper_ui/handle_prefs.py,sha256=jL3sqS8u6f8AmJGWaTjZYtvueCZm-IZdiqC47bvaSPI,3681
+whisper_ui/ui.py,sha256=5PZxY57v5STTd2rNTKYOalkBIqIqXFGx2LFfdRGheXM,8977
+whisper_ui/user_prefs.json,sha256=RJeqOEh7eYV-HwaRrmzKptxtFpgU-OGFW8kE5Lm1wMQ,477
+whisper_ui/whisper_funcs.py,sha256=lfMSW7IvonCFKy5UgIjKY_FCku1QKGiz1wXLOulNjRI,5888
+whisper_ui-1.1.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+whisper_ui-1.1.dist-info/METADATA,sha256=-xK2ExiGyjkiuHjGqXo4zOKQFp0bb9O42j6ZC21nXhA,575
+whisper_ui-1.1.dist-info/RECORD,,
