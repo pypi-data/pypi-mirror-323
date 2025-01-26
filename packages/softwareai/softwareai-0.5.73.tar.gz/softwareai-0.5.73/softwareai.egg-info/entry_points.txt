@@ -1,0 +1,2 @@
+[console_scripts]
+softwareai-cli = softwareai.softwareai_cli:app
