@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+BeginnerNN.egg-info/PKG-INFO
+BeginnerNN.egg-info/SOURCES.txt
+BeginnerNN.egg-info/dependency_links.txt
+BeginnerNN.egg-info/requires.txt
+BeginnerNN.egg-info/top_level.txt

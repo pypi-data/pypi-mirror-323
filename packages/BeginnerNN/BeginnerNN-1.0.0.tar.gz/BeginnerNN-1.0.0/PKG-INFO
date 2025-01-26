@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: BeginnerNN
+Version: 1.0.0
+Summary: A beginner-friendly neural network library using PyTorch and NumPy.
+Home-page: https://github.com/MicrolabsZ/BeginnerNN
+Author: Zian Conradie
+Author-email: zianconradie@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7,<=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# BeginnerNN
+A Python library to simplify creating neural networks for beginners, using PyTorch and NumPy to make it easy to use.
