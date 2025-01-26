@@ -1,0 +1,2 @@
+[console_scripts]
+pyionoseis = pyionoseis.cli:main
