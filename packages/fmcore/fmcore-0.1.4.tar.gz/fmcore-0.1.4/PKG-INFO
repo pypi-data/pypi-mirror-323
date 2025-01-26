@@ -1,0 +1,91 @@
+Metadata-Version: 2.4
+Name: fmcore
+Version: 0.1.4
+Summary: A specialized toolkit for scaling experimental research with Foundation Models.
+Author-email: Abhishek Divekar <adivekar@utexas.edu>
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11.11
+Requires-Dist: autoenum
+Requires-Dist: bears
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: urllib3
+Provides-Extra: all
+Requires-Dist: accelerate; extra == 'all'
+Requires-Dist: aim==3.*; extra == 'all'
+Requires-Dist: altair; extra == 'all'
+Requires-Dist: bears[all]; extra == 'all'
+Requires-Dist: bitsandbytes; extra == 'all'
+Requires-Dist: bokeh; extra == 'all'
+Requires-Dist: brotli; extra == 'all'
+Requires-Dist: dask; extra == 'all'
+Requires-Dist: dask[complete]; extra == 'all'
+Requires-Dist: datasets; extra == 'all'
+Requires-Dist: deepspeed; extra == 'all'
+Requires-Dist: einops; extra == 'all'
+Requires-Dist: evaluate; extra == 'all'
+Requires-Dist: faiss-cpu; extra == 'all'
+Requires-Dist: gpustat; extra == 'all'
+Requires-Dist: holoviews; extra == 'all'
+Requires-Dist: hvplot>=0.10.0; extra == 'all'
+Requires-Dist: imageio; extra == 'all'
+Requires-Dist: matplotlib; extra == 'all'
+Requires-Dist: mauve-text; extra == 'all'
+Requires-Dist: nltk; extra == 'all'
+Requires-Dist: nvitop; extra == 'all'
+Requires-Dist: orjson; extra == 'all'
+Requires-Dist: plotly; extra == 'all'
+Requires-Dist: plotly-express; extra == 'all'
+Requires-Dist: pytest; extra == 'all'
+Requires-Dist: ray; extra == 'all'
+Requires-Dist: ray[default]; extra == 'all'
+Requires-Dist: ray[serve]; extra == 'all'
+Requires-Dist: ray[tune]; extra == 'all'
+Requires-Dist: safetensors; extra == 'all'
+Requires-Dist: seaborn; extra == 'all'
+Requires-Dist: sentence-transformers; extra == 'all'
+Requires-Dist: sentencepiece; extra == 'all'
+Requires-Dist: tensorboard; extra == 'all'
+Requires-Dist: tiktoken; extra == 'all'
+Requires-Dist: tokenizers; extra == 'all'
+Requires-Dist: torch; extra == 'all'
+Requires-Dist: transformers>=4.42.4; extra == 'all'
+Requires-Dist: wandb; extra == 'all'
+Description-Content-Type: text/markdown
+
+## FMCore
+**fmcore** is a specialized toolkit for scaling experimental research with Foundation Models. Our utilities for inference, tuning, and evaluation handle billion-scale models and datasets, letting you skip the boilerplate and focus on pushing AI research forward. Developed by researchers, for researchers, **fmcore** offers a robust, flexible platform that streamlines your workflow without sacrificing rigor.
+
+## Installation
+
+We recommend installing dependencies in a new Anaconda environment using the commands below.
+
+These commands were tested to work on `Deep Learning AMI GPU PyTorch 1.13.1 (Amazon Linux 2) 20230221` on AWS.
+
+Install dependencies:
+
+```commandline
+conda create -n fmcore python=3.11.8 --yes  
+conda activate fmcore
+pip install uv   ## Speed up installation
+uv pip install -r requirements.txt
+uv pip install "spacy==3.7.4" "spacy-transformers==1.3.5"
+uv pip install "setuptools==69.5.1"
+```
+
+Certain features need additional steps, e.g. 
+```commandline
+python -m spacy download en_core_web_lg
+python -c "import nltk; nltk.download('punkt');"
+```
+
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
+## License
+
+This project is licensed under the Apache-2.0 License.
+
