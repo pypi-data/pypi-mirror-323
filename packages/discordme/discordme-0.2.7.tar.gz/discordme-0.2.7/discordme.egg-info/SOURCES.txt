@@ -1,0 +1,11 @@
+README.md
+setup.py
+discordme/__init__.py
+discordme/discord_api.py
+discordme/utils.py
+discordme.egg-info/PKG-INFO
+discordme.egg-info/SOURCES.txt
+discordme.egg-info/dependency_links.txt
+discordme.egg-info/top_level.txt
+tests/test.py
+tests/test_to_add.py
