@@ -1,0 +1,13 @@
+webscraper/__init__.py,sha256=ZH3fz9v1xRl0UiwwaASdQlH_TlrmG4kOa95LZRvxLtE,9230
+webscraper/setup.py,sha256=UHCRoim0lkrlk5fXzk9S5MnDQAAbp2_NotjnSyITfw0,383
+webscraper/core/base_scraper.py,sha256=RqucJgxg-mwU7EQena_fnPN8bFlLSVU8lDTVLjLBfiI,3540
+webscraper/core/exceptions.py,sha256=OzenqViZI96m4XravMXpYiXCvof_I1MxKLgcfxSNb_w,1438
+webscraper/providers/__init__.py,sha256=XMS_fn4jhnCMstw5c0p0UdzErW_HDW-I4vjsYror-pE,53
+webscraper/providers/bellikids/__init__.py,sha256=XMS_fn4jhnCMstw5c0p0UdzErW_HDW-I4vjsYror-pE,53
+webscraper/providers/bellikids/scraper.py,sha256=_8seeeA5lXpaI9WSw4UvLchQz3qfKvBiF5Olc8y72Mo,9836
+webscraper/utils/url_matcher.py,sha256=qPJ4pEEpAeE5ev24EjQAPQuTG7qSnKXcYLHoZoUbs_E,3053
+webscraper_once-0.2.4.dist-info/LICENSE,sha256=FMCweSKftK8qiR-dhNTpfUJNoqanJanCdSDWzsC9SHM,1085
+webscraper_once-0.2.4.dist-info/METADATA,sha256=FzPI7ZFEG5AicqHQ-tsMRn1y5x4eAKFid7TxXXOFHHU,2518
+webscraper_once-0.2.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+webscraper_once-0.2.4.dist-info/top_level.txt,sha256=b9ffzKtpzSgkw30oOp3wRFHCIf0cYJZj9s0JcbYG2Fo,11
+webscraper_once-0.2.4.dist-info/RECORD,,
