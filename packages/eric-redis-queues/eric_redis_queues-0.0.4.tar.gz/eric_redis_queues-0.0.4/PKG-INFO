@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: eric-redis-queues
+Version: 0.0.4
+Summary: Redis support for eric-sse
+License: MIT
+Author: Luca Stretti
+Author-email: laxertu@gmail.com
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: eric-sse (>=0.6.3,<0.7.0)
+Requires-Dist: redis (>=5.2.1,<6.0.0)
