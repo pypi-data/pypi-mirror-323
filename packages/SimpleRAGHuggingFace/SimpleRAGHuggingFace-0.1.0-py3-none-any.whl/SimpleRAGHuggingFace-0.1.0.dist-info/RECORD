@@ -1,0 +1,15 @@
+rag/__init__.py,sha256=Q6687eQHuspha-efwLVi2TtT7Nm9nRt1xiH83gwiXJU,22
+rag/constants.py,sha256=wgJRbTkLr5nJ2Xfg2EfAvAJYtoRsC3gDzYGeEwJnZ4I,60
+rag/dataset_loader.py,sha256=wA1Avoon1EGGSxoLcVx7JUSu_BegXd8jPUNXwsO4ZQQ,336
+rag/rag.py,sha256=DtcksHXx7au8PgZAYdf0IK85CIQAxLQEi83nvF7f5JM,2163
+rag/retriever.py,sha256=RdCAah_Dp2iqJZhpkgL9K3CeXYYDMH7mi5xpOjvOIF4,775
+rag/vectorizer.py,sha256=2SSPIqw--l_mcHFilq-p_PN0pGho5KX86RdOqnYRwoE,497
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_dataset_loader.py,sha256=y-7_1XR2MJEyEiMLXal_TYI-9ECVCTlVuURO0pvzj2w,967
+test/test_rag.py,sha256=d1qkaGg6uBwmmJ6rVhnZcdrXhX31QMLU90dhC6QCXEc,641
+test/test_retriever.py,sha256=Nb18u9-FuphZC6fWXmAmfwQ1A3VXvjwBCwVrRujf694,1191
+test/test_vectorizer.py,sha256=bZLZWyPymQYbDIX42gB7KN4QGmBxnJ_W1zx0RwrqKqo,785
+SimpleRAGHuggingFace-0.1.0.dist-info/METADATA,sha256=JaQWjepYnq1OsyYA98Nq0dzq8P1gLb3a3Glj-0be_R0,3038
+SimpleRAGHuggingFace-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+SimpleRAGHuggingFace-0.1.0.dist-info/top_level.txt,sha256=5CYf0t2L6uoKqQ_ikU9C7IkVE03kWcu5oSafEaLoEIE,9
+SimpleRAGHuggingFace-0.1.0.dist-info/RECORD,,
