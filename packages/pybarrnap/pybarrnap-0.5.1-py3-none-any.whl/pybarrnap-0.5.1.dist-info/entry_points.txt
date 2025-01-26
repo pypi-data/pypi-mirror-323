@@ -1,0 +1,2 @@
+[console_scripts]
+pybarrnap = pybarrnap.scripts.pybarrnap:main
