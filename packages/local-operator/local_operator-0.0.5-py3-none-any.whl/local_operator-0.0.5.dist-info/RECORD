@@ -1,0 +1,9 @@
+local_operator/__init__.py,sha256=t8kpWb_uJEQc8ztkQwq0RvUUeomJbwtpsoF50zh_Vac,66
+local_operator/agent.py,sha256=8egG-wqxtu6Y8zD1Ru7YEWJj_bbhxT-IUe4itlC-g6g,6468
+local_operator/cli.py,sha256=xpIa7lv3V710JFKYI3AEYCplPKrVTWQ8uSNrhGm2_ik,906
+local_operator-0.0.5.dist-info/LICENSE,sha256=LOb3oIbc5GUnQghD0djAAhOOGDO4db7PueK3DLaHj5s,1068
+local_operator-0.0.5.dist-info/METADATA,sha256=SGM-oxP48-XJsKQ9obQvpOD8v_7Ev9cSXQ_jMmHbZto,15044
+local_operator-0.0.5.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+local_operator-0.0.5.dist-info/entry_points.txt,sha256=xZv7oJdnzL_21jyabRJFxStgGrjPam-UnmDww7Q9dlA,59
+local_operator-0.0.5.dist-info/top_level.txt,sha256=CNAhpbm8y8CSHaq3eOv7qXX0Qu28ENBRd97MsCW-KhM,15
+local_operator-0.0.5.dist-info/RECORD,,
