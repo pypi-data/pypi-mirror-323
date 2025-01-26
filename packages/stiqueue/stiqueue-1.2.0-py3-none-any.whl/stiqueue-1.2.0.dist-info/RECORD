@@ -1,0 +1,8 @@
+stiqueue/__init__.py,sha256=_K3vSIwMl7mMIgVeq_u4PPhMD5a2mJQuY_dRAnvrLfI,61
+stiqueue/sqclient.py,sha256=elf3UjjRPpaAG-FmntaiMXdFME7ePW11PodzPnMPKwY,6036
+stiqueue/sqserver.py,sha256=BJXMM5cge3qElhYjtQTO8OCpIXf2Em8TcQOkoy0Cyig,9644
+stiqueue-1.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+stiqueue-1.2.0.dist-info/METADATA,sha256=xG0D6uK2-aZghzLbxq4EdgstJ31aN-VrmojsSOdijvY,18229
+stiqueue-1.2.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+stiqueue-1.2.0.dist-info/top_level.txt,sha256=s7JqayO-oZDE4iPuoFI5UHDB-9N0WS5a35_Z7PysAm8,9
+stiqueue-1.2.0.dist-info/RECORD,,
