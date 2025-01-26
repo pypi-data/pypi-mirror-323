@@ -1,0 +1,492 @@
+title_slide:
+  title: PipeFunc
+  subtitle: |
+    Structure, Automate, and Simplify Your Computational Workflows
+
+    - by Bas Nijholt <bas@nijho.lt>
+    - docs: https://pipefunc.readthedocs.io
+    - source: https://github.com/pipefunc/pipefunc
+chapters:
+  - title: "Introduction"
+    type: bullet_points
+    bullet_points:
+      - text: "Scientists and engineers often work with complex simulation workflows."
+        extra: "These workflows involve multiple steps, such as data preprocessing, model execution, and analysis."
+      - text: "Core logic is often encapsulated in functions that depend on each other."
+        extra: "For example, [bold blue]calculate_fidelity(...)[/] might depend on the output of [bold blue]create_circuit(...)[/], which also depends on other inputs."
+      - text: "Managing complex computational workflows can be challenging."
+        extra: "As the number of steps and dependencies increases, it becomes harder to keep track of the flow of data and ensure correct execution."
+      - text: "Keeping track of dependencies between functions requires a lot of bookkeeping."
+        extra: "Manually managing inputs and outputs for each function can be error-prone and time-consuming."
+      - text: "Once you have a working pipeline, you may want to run it with different parameters."
+        extra: "This usually involves writing boilerplate code with loops over the parameters, executing the functions, and collecting the results."
+      - text: "Running on laptop usually requires vastly different code than in parallel on a cluster."
+        extra: "Adapting code for different execution environments often involves significant code duplication and platform-specific logic."
+      - text: "Reproducibility and maintainability are crucial in scientific computing."
+        extra: "It's essential to be able to rerun experiments with the same results and easily update or extend the workflow."
+      - text: "Ideally, we focus on the science and not the plumbing."
+        extra: "Scientists should spend more time on the problem and less time on writing execution details and boilerplate code."
+      - text: "What if we could automate the creation, execution, and management of function pipelines?"
+        extra: "Not wasting time on plumbing and gathering results!"
+    marker: "1."
+    style: "bright_yellow bold"
+
+  - title: "Anatomy of a Pipeline"
+    code: |
+      from pipefunc import PipeFunc, Pipeline, pipefunc
+
+      @pipefunc(output_name="c")
+      def f(a, b):
+          return a + b
+
+      @pipefunc(output_name="d")
+      def g(b, c, x=1):
+          return b * c * x
+
+      @pipefunc(output_name="e")
+      def h(c, d, x=1):
+          return c * d * x
+
+      pipeline = Pipeline(
+          [f, g, h],
+          debug=True,  # optionally print debug information
+          profile=True,  # optionally profile the pipeline
+          cache_type="hybrid",  # optionally cache the pipeline
+      )
+
+      pipeline.visualize()
+
+    steps:
+      - description: "Structure of the Pipeline\nLet's break down the code into its components"
+        focus:
+          - type: syntax
+            theme: monokai
+
+      - description: "Function Definitions\nThese are the core building blocks of the pipeline"
+        focus:
+          - type: line_containing
+            pattern: "def"
+            style: "bright_yellow bold"
+            lines_after: 1
+
+      - description: "Pipeline Decorators\nEach function is decorated with [bold blue]@pipefunc[/] to specify its output"
+        focus:
+          - type: regex
+            pattern: "@pipefunc\\(.*?\\)"
+            style: "bright_blue bold"
+
+      - description: "Output Names and Dependencies\nEach function specifies its [bold blue]output_name[/] and can use outputs from previous functions"
+        focus:
+          - type: regex
+            pattern: 'output_name="\\w+"'
+            style: "bright_green bold"
+          - type: literal
+            text: "c"
+            style: "bright_green"
+            word_boundary: true
+          - type: literal
+            text: "d"
+            style: "bright_cyan"
+            word_boundary: true
+          - type: literal
+            text: "e"
+            style: "bright_magenta"
+            word_boundary: true
+
+      - description: "Pipeline Construction\nFunctions are combined into a pipeline (the order doesn't matter!)"
+        focus:
+          - type: regex
+            pattern: "\\[f, g, h\\]"
+            style: "bright_yellow bold"
+
+      - description: "Pipeline Options\nOptional settings for debugging, profiling, and caching"
+        focus:
+          - type: line_containing
+            pattern: debug=True
+            lines_after: 2
+            style: "bright_blue bold"
+
+      - description: Visualize the Pipeline
+        focus:
+          - type: line_containing
+            pattern: pipeline.visualize()
+            style: "bright_yellow bold"
+
+      - description: Output of [bold blue]pipeline.visualize()[/]
+        image: http://files.nijho.lt/pipeline-tuitorial-example.png
+        height: auto
+        width: 60%
+
+  - title: "Pipeline Execution"
+    code: |
+      @pipefunc(output_name="c")
+      def f(a, b):
+          return a + b
+
+      @pipefunc(output_name="d")
+      def g(b, c, x=1):
+          return b * c * x
+
+      @pipefunc(output_name="e")
+      def h(c, d, x=1):
+          return c * d * x
+
+      pipeline = Pipeline([f, g, h])
+
+      pipeline(a=1, b=2)  # returns 18
+      pipeline("d", a=1, b=2)  # returns 6
+      pipeline("e", a=1, b=2)  # returns 18
+      pipeline("e", b=2, c=3)  # returns 18
+      pipeline.run("e", {"a": 1, "b": 2})  # returns 18
+      pipeline.run("e", {"a": 1, "b": 2}, full_output=True)  # returns {'a': 1, 'b': 2, 'c': 3, 'd': 6, 'e': 18}
+
+      pipeline.map({"a": 1, "b": 2})  # returns {"c": Result(output=3, ...), "d": Result(output=6, ...), ...}
+    steps:
+      - description: |
+          Let's execute this same pipeline. There are 2 main ways to execute a pipeline:
+          1. Call the pipeline as a function ([b i]sequentially[/]) and get a specific output:
+            - [bold blue]pipeline(output_name, **kwargs)[/]
+            - [bold blue]pipeline.run(output_name, kwargs)[/]
+          2. Evaluate the entire pipeline ([b i]parallel[/]) including map-reduce operations:
+            - [bold blue]pipeline.map(kwargs)[/]
+
+        focus:
+          - type: syntax
+            theme: monokai
+
+      - description: |
+          Call the pipeline with inputs and get the result.
+          This returns the final leaf node of the pipeline [i](if it exists)[/], in this case [bold blue]"e"[/].
+        focus:
+          - type: line_containing
+            pattern: pipeline(a=1, b=2)
+            style: "bright_magenta bold"
+
+      - description: "Specify the [bold blue]output_name[/] to get the result of a specific function."
+        focus:
+          - type: line_containing
+            pattern: pipeline("d
+            style: "bright_magenta bold"
+          - type: line_containing
+            pattern: output_name="d"
+            style: "bright_magenta bold"
+          - type: line_containing
+            pattern: pipeline("e", a=1, b=2)
+            style: "cyan bold"
+          - type: line_containing
+            pattern: output_name="e"
+            style: "cyan bold"
+
+      - description: |
+          Can also provide intermediate results to skip some functions (e.g., [bold blue]c=3[/]).
+          This will skip the calculation of [bold blue]f[/] and directly use the provided value.
+        focus:
+          - type: line_containing
+            pattern: pipeline("e", b=2, c=3)
+            style: "cyan bold"
+          - type: line_containing
+            pattern: output_name="e"
+            style: "cyan bold"
+          - type: line_containing
+            pattern: output_name="c"
+            style: "strike"
+            lines_after: 2
+
+      - description: |
+          Calling the pipeline as a function is equivalent to calling [cyan bold]pipeline.run(output_name, kwargs, full_output)[/].
+        focus:
+          - type: line_containing
+            pattern: pipeline.run
+            style: "cyan bold"
+
+      - description: |
+          Finally, there is [cyan bold]pipeline.map()[/] which is the most powerful way to evaluate the pipeline.
+          It returns a dictionary with the results of each function.
+          Can run in [b i]parallel[/], [b i]save results[/], do [b i]map-reduce[/], [b i]parameter sweeps[/], and more.
+          We will see more about this later!
+        focus:
+          - type: line_containing
+            pattern: pipeline.map
+            style: "cyan bold"
+
+  - title: "Quick notes"
+    code: |
+      from pipefunc import PipeFunc, Pipeline, pipefunc
+
+      @pipefunc(output_name="c")
+      def f(a, b):
+          return a + b
+
+      assert isinstance(f, PipeFunc)
+
+      # is equivalent to
+
+      def f(a, b):
+          return a + b
+
+      f = PipeFunc(f, output_name="c")
+
+      # Still works as expected
+      f(1, 2) # returns 3
+      f(a=1, b=2)  # returns 3
+      f.func # is the original function
+
+      pipeline = Pipeline([f])
+      pipeline.info() # returns:
+      # {'inputs': ('a', 'b', 'x'), 'outputs': ('e',), 'intermediate_outputs': ('c', 'd'),
+      #  'required_inputs': ('a', 'b'), 'optional_inputs': ('x',)}
+    steps:
+      - description: |
+          A couple of quick notes about the [bold blue]PipeFunc[/] and [bold blue]Pipeline[/] class.
+        focus:
+          - type: syntax
+            theme: monokai
+
+      - description: |
+          Decorating a function with [bold blue]@pipefunc[/] turns the function into a [bold blue]PipeFunc[/] object.
+        focus:
+          - type: line_containing
+            pattern: "assert"
+            style: "purple bold"
+          - type: line_containing
+            pattern: "@pipefunc"
+            style: "purple bold"
+            lines_after: 2
+
+      - description: |
+          Instead of decorating the function with [bold blue]@pipefunc[/], you can create a [bold blue]PipeFunc[/] object directly.
+          You can create a [bold blue]PipeFunc[/] object from any callable, also from external libraries.
+        focus:
+          - type: line_containing
+            pattern: "def f(a, b):"
+            style: "yellow bold"
+            lines_after: 2
+          - type: line_containing
+            pattern: PipeFunc(f
+            style: "purple bold"
+          - type: line_containing
+            pattern: "@pipefunc"
+            style: "purple bold"
+
+      - description: |
+          We can still call the function [bold blue]f[/] as usual.
+        focus:
+          - type: line_containing
+            pattern: works as expected
+            style: "green bold"
+            lines_after: 2
+
+      - description: |
+          Or access the original function using the [bold blue]func[/] attribute.
+        focus:
+          - type: line_containing
+            pattern: f.func
+            style: "green bold"
+
+      - description: |
+          Another useful method is [bold blue]pipeline.info()[/] which returns information about the pipeline.
+          Or call [bold blue]pipeline.info(print_table=True)[/] to print a pretty table.
+          Also check [bold blue]pipeline.defaults()[/] and or any of the 20+ other methods/properties.
+        focus:
+          - type: line_containing
+            pattern: pipeline =
+            style: "yellow bold"
+          - type: line_containing
+            pattern: pipeline.info()
+            style: "green bold"
+            lines_after: 2
+
+  - title: "pipeline.map"
+    code: |
+      @pipefunc(output_name="y", mapspec="x[i] -> y[i]")
+      def double_it(x: int) -> int:
+          return 2 * x
+
+      pipeline_double = Pipeline([double_it])
+
+      inputs = {"x": [1, 2, 3, 4, 5]}
+      result = pipeline_double.map(inputs)
+      result["y"].output # returns [2, 4, 6, 8, 10]
+
+    steps:
+      - description: |
+          The [bold blue]pipeline.map[/] method allows you to execute your pipeline over a set of inputs in parallel.
+          It's the most powerful way to evaluate a pipeline and it unlocks map-reduce operations.
+          Here is the simplest example.
+        focus:
+          - type: syntax
+            theme: monokai
+
+      - description: |
+          We define a function [bold blue]double_it[/] that takes an [bold yellow]int[/] [bold red]x[/] and returns an [bold yellow]int[/] [bold green]y[/].
+          The [bold cyan]mapspec[/] argument specifies that the function maps over the index [bold white]i[/] of the input [bold red]x[/].
+          This means that the function will be called for each element in the input list [bold red]x[/].
+        focus:
+          - type: literal
+            text: double_it
+            style: "bold blue"
+            match_index: 0
+          - type: literal
+            text: int
+            style: "bold yellow"
+            word_boundary: true
+          - type: literal
+            text: '"y"'
+            style: "bold green"
+            match_index: 0
+          - type: literal
+            text: y
+            style: "bold green"
+            match_index: 1
+          - type: literal
+            text: x
+            style: "bold red"
+            match_index: [0, 1]
+          - type: literal
+            text: mapspec
+            style: "bold cyan"
+          - type: literal
+            text: "[i]"
+            style: "bold white"
+
+      - description: |
+          We create a pipeline with the [bold blue]double_it[/] function.
+        focus:
+          - type: line_containing
+            pattern: "pipeline_double = Pipeline([double_it])"
+            style: "bright_green bold"
+
+      - description: |
+          We define the inputs to the pipeline as a dictionary.
+          The keys of the dictionary correspond to the input names of the functions in the pipeline.
+        focus:
+          - type: line_containing
+            pattern: 'inputs = {"x": [1, 2, 3, 4, 5]}'
+            style: "bright_cyan bold"
+          - type: literal
+            text: mapspec="x[i] -> y[i]"
+            style: "bright_cyan bold"
+
+      - description: |
+          We call the [bold blue]map[/] method on the pipeline object, passing the inputs.
+          This will execute the pipeline for each element in the input list [bold blue]x[/].
+          The result of each function call is stored in a dictionary, where the keys are the output names of the functions.
+        focus:
+          - type: line_containing
+            pattern: "result = pipeline_double.map(inputs)"
+            style: "bright_magenta bold"
+
+      - description: |
+          Finally, we print the output of the [bold blue]double_it[/] function by accessing the [bold blue]output[/] attribute of the [bold blue]Result[/] object.
+        focus:
+          - type: literal
+            text: "result"
+            style: "bold yellow"
+          - type: literal
+            text: '"y"'
+            style: "bold green"
+          - type: literal
+            text: "y[i]"
+            style: "bold green"
+          - type: literal
+            text: '"x"'
+            style: "bold blue"
+          - type: literal
+            text: "x[i]"
+            style: "bold blue"
+          - type: literal
+            text: "[1, 2, 3, 4, 5]"
+            style: "bright_cyan bold"
+          - type: literal
+            text: "[2, 4, 6, 8, 10]"
+            style: "bright_cyan bold"
+
+  - title: "mapspecs"
+    code: |
+      import numpy as np
+      from pipefunc import Pipeline, pipefunc
+      from pipefunc.typing import Array
+
+      @pipefunc(output_name="y", mapspec="x[i] -> y[i]")
+      def double_it(x: int, b: int = 0) -> int:
+          assert isinstance(x, int)
+          return 2 * x + b
+
+      @pipefunc(output_name="sum")  # no mapspec, so receives y[:] as input
+      def take_sum(y: Array[int]) -> int:
+          assert isinstance(y, np.ndarray)
+          return sum(y)
+
+      pipeline = Pipeline([double_it, take_sum])
+      pipeline.visualize()
+      r = pipeline.map({"x": [0, 1, 2, 3]})
+
+      results["y"].output.tolist()  # [0, 2, 4, 6]
+      results["sum"].output  # 12
+
+    steps:
+      - description: |
+          Now let's look at a map-reduce example.
+        focus:
+          - type: syntax
+            theme: monokai
+      - description: |
+          Here we have the same function [bright_yellow bold]double_it[/] from the previous slide.
+        focus:
+          - type: line_containing
+            pattern: output_name="y"
+            style: "bright_yellow bold"
+            lines_after: 3
+          - type: literal
+            text: double_it
+            style: "bright_yellow bold"
+            match_index: 1
+      - description: |
+          Here we have the same function [bright_yellow bold]double_it[/] from the previous slide.
+          But we follow it with a new function [bright_red bold]take_sum[/].
+          Importantly, [bright_red bold]take_sum[/] does not have a [bright_cyan bold]mapspec[/] argument.
+          This means that it receives the entire output of [bright_yellow bold]double_it[/] as input.
+        focus:
+          - type: line_containing
+            pattern: output_name="y"
+            style: "bright_yellow bold"
+            lines_after: 3
+          - type: line_containing
+            pattern: output_name="sum"
+            style: "bright_red bold"
+            lines_after: 3
+          - type: literal
+            text: double_it
+            style: "bright_yellow bold"
+            match_index: 1
+          - type: literal
+            text: take_sum
+            style: "bright_red bold"
+            match_index: 1
+
+
+  - title: "add_mapspec_axis"
+    code: |
+      @pipefunc(output_name="y", mapspec="x[i] -> y[i]")
+      def double_it(x: int, b: int = 0) -> int:
+          assert isinstance(x, int)
+          return 2 * x + b
+
+      @pipefunc(output_name="sum")
+      def take_sum(y: Array[int]) -> int:
+          assert isinstance(y, np.ndarray)
+          return sum(y)
+
+      pipeline = Pipeline([double_it, take_sum])
+      pipeline.add_mapspec_axis("b", axis="j")
+      pipeline.mapspecs_as_strings  # ['x[i], b[j] -> y[i, j]', 'y[:, j] -> sum[j]']
+
+      pipeline.map({"x": [0, 1, 2, 3], "b": [1, 2, 3]})
+      results["y"].output.shape  # (4, 3)
+      results["sum"].output  # array([3, 6, 9])
+    steps:
+      - description: |
+          TODO
+        focus:
+          - type: syntax
+            theme: monokai
