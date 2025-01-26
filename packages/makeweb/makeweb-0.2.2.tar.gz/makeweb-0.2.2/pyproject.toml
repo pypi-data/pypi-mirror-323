@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "makeweb"
+version = "0.2.2"
+description = "Make interactive web apps using good ol' HTML, CSS and a sprinkling of JavaScript — in Python."
+authors = ["Harshad Sharma <harshad@sharma.io>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["website", "html", "css", "javascript", "generate", "template"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Unix",
+    "Operating System :: POSIX",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Internet",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+]
+packages = [{ include = "makeweb", from = "src" }]
+
+[tool.poetry.dependencies]
+# Support Python versions until 3.14 where ast.Str is removed
+# which is currently used in metapensiero/pj/transformations...
+python = ">=3.9"
+
+[tool.poetry.group.dev.dependencies]
+jsmin = "^3.0.1"
+javascripthon = "^0.13"
+flask = "^3.1.0"
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+pytidylib = "^0.3.2"
+
+[tool.poetry.group.js.dependencies]
+jsmin = "^3.0.1"
+javascripthon = "^0.13"
+
+[tool.poetry.group.examples.dependencies]
+faker = "^35.0.0"
+markdown = "^3.7"
+flask = "^3.1.0"
+tinydb = "^4.8.2"
+jsmin = "^3.0.1"
+javascripthon = "^0.13"
+quart = "^0.20.0"
+websockets = "^14.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning:",
+    # note the use of single quote below to denote "raw" strings in TOML
+    'ignore:function ham\(\) is deprecated:DeprecationWarning',
+]
