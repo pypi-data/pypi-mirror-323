@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uptainer"
+version = "0.2.3"
+description = "Uptainer is a Python CLI that automates tool updates, ensuring consistency and reliability in your GitOps-driven infrastructure."
+readme = "README.rst"
+authors = [
+  {name = "Alessandro Sbarbati", email = "122787746+asbarbati@users.noreply.github.com"}
+]
+maintainers = [
+  {name = "Alessandro Sbarbati", email = "122787746+asbarbati@users.noreply.github.com"}
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+]
+license = {text = "GNU General Public License v3"}
+dependencies = [
+  "GitPython",
+  "pre_commit",
+  "python-box",
+  "PyYAML",
+  "requests",
+  "structlog",
+  "typer",
+  "types-PyYAML",
+  "types-requests"
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage",  # testing
+    "mypy",  # linting
+    "pytest",  # testing
+    "ruff"  # linting
+]
+
+[project.urls]
+homepage = "https://github.com/asbarbati/uptainer"
+docs = "https://uptainer.readthedocs.io"
+source = "https://github.com/asbarbati/uptainer/"
+bugs = "https://github.com/asbarbati/uptainer/issues"
+changelog = "https://github.com/asbarbati/uptainer/blob/master/changelog.md"
+
+[project.scripts]
+uptainer = "uptainer.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+
+# Mypy
+# ----
+
+[tool.mypy]
+files = "."
+
+# Use strict defaults
+strict = true
+warn_unreachable = true
+warn_no_return = true
+
+[[tool.mypy.overrides]]
+# Don't require test functions to include types
+module = "tests.*"
+allow_untyped_defs = true
+disable_error_code = "attr-defined"
