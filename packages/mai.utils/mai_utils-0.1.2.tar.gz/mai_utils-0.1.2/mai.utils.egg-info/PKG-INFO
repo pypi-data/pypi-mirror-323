@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: mai.utils
+Version: 0.1.2
+Summary: Shared utility functions for the MAI project.
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
