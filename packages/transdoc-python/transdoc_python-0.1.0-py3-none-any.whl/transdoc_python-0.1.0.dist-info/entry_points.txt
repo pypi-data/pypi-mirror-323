@@ -1,0 +1,3 @@
+[transdoc.handlers]
+python=transdoc_python:TransdocPythonHandler
+
