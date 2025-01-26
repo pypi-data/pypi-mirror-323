@@ -1,0 +1,12 @@
+Scrapinger/Library/browserContainer.py,sha256=Sm0PRWXNSaw4tAW8D_VcEGMWeRR7laHKnPOom_Xvzg0,8819
+Scrapinger/Library/scrapingConfig.py,sha256=kt-1b-C9cj3taUnmpHeitVmV6PQw321ItaxZ3R4ap-Q,8503
+Scrapinger/Library/scrapingerException.py,sha256=Y2iJ9Hv124kWRoMgvRPP6DQpAYrcuGaDSXnFhUrPvgk,1035
+Scrapinger/Library/scrapingerGlobals.py,sha256=9wkhkpgjWhKON6e93nQKnKmC7-ZMTPt5ucEK6rlB_Uo,451
+Scrapinger/Library/webBrowserController.py,sha256=DW-4G9JxeyhysRn6nuFAur01y-SEGM3EAoDDDL5PZko,16349
+Scrapinger/Library/webDriverController.py,sha256=2ij9kW4V9h0JtC8pH8yr8jerW_kR5FBYRfgeKGYfisQ,4333
+Scrapinger/Library/Base/baseBrowserContainer.py,sha256=sWxMGYQXWIWKDv4KXbaXIeI1c3FBkU7kjHTTEvgzyMw,3664
+Scrapinger/Library/Base/baseWebBrowserController.py,sha256=iKWwdhWnUu6-Eo399ChYQ783o6_b5pwxY-P8Bia2Kj4,2266
+Scrapinger-1.0.41.dist-info/METADATA,sha256=Yr0a_tMSQMIk3Alppu9wE7epdueNKREv99ehXdNdyIo,1305
+Scrapinger-1.0.41.dist-info/WHEEL,sha256=Xo9-1PvkuimrydujYJAjF7pCkriuXBpUPEjma1nZyJ0,92
+Scrapinger-1.0.41.dist-info/top_level.txt,sha256=-n_1jY4yl7cStnDyKJjmH3PB4DJUM9Q0A3nhOqrno3U,43
+Scrapinger-1.0.41.dist-info/RECORD,,
