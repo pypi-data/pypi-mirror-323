@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+artemis/artemis.db
+artemis/artemis.py
+artemis_cli.egg-info/PKG-INFO
+artemis_cli.egg-info/SOURCES.txt
+artemis_cli.egg-info/dependency_links.txt
+artemis_cli.egg-info/entry_points.txt
+artemis_cli.egg-info/requires.txt
+artemis_cli.egg-info/top_level.txt
