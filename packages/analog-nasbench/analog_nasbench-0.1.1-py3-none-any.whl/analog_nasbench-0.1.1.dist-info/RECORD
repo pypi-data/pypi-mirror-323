@@ -1,0 +1,8 @@
+analog_nasbench-0.1.1.data/data/nalog-nasbench/benchmark_data.csv,sha256=-FgmNrTr3hpvwANv22deFScVOU993owchKvkvOd7aAQ,1196994
+analognasbench/__init__.py,sha256=jeuLzGH5z19ZLudUYHzbH00PJPNdMJwMm2bZLYjN8Ts,85
+analognasbench/benchmark_data.csv,sha256=-FgmNrTr3hpvwANv22deFScVOU993owchKvkvOd7aAQ,1196994
+analognasbench/data.py,sha256=D-6dPa5yxizppIc8UEs84WRHa9k9JCqOg2IfYB1dh3g,4238
+analog_nasbench-0.1.1.dist-info/METADATA,sha256=TUlDFLBg4VYph-TPPyz0W1dhuyHcf19z6R0U8GOJv1Y,871
+analog_nasbench-0.1.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+analog_nasbench-0.1.1.dist-info/top_level.txt,sha256=92JL2ZB63OO1O104nfnOkOqNTlqLG-2im8mp248A7vU,15
+analog_nasbench-0.1.1.dist-info/RECORD,,
