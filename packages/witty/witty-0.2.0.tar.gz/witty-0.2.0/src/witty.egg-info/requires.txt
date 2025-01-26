@@ -1,0 +1,11 @@
+cython
+
+[:python_version >= "3.12"]
+setuptools
+
+[dev]
+pytest
+ruff
+mypy
+pdoc
+pre-commit
