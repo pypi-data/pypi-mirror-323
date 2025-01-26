@@ -1,0 +1,4 @@
+[console_scripts]
+bam-basic-stat-cli = gseda.bam_ana.bam_basic_stat:bam_basic_stat
+msa-view-cli = gseda.msa_view.msa_view_using_pileup:main_cli
+reads-quality-stats-cli = gseda.ppl.reads_quality_stats_v2:main_cli
