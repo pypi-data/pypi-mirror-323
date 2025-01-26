@@ -1,0 +1,60 @@
+Metadata-Version: 2.2
+Name: dkgr_client
+Version: 0.2.0
+Summary: Wrapper for dkgr backend
+Home-page: https://github.com/Captain-T2004/dkgr-client
+Author: Akshay Behl
+Author-email: akshaybehl231@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# dkgr_client
+
+## Installation
+
+```bash
+pip install dkgr_client
+```
+
+## Usage
+
+```python
+from dkgr_client import ValidationClient
+
+try:
+    # Initialize the client
+    client = ValidationClient(
+        api_key='your_api_key', 
+        base_url='https://api.example.com'
+    )
+    
+    # Start a new event
+    client.start_event()
+
+    # Validate
+    results = client.validate(
+        type,
+        text,
+    )
+
+    # Extract useful info from results
+    client.humaize_response(results))
+
+    # Close the client
+    client.close()
+
+except Exception as e:
+    print(e)
+```
