@@ -1,0 +1,27 @@
+[project]
+name = "iparq"
+version = "0.1.1"
+description = "Display version and compression information about a parquet file"
+readme = "README.md"
+authors = [
+    { name = "MiguelElGallo", email = "miguel.zurcher@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pyarrow>=19.0.0",
+    "pydantic>=2.10.6",
+    "typer>=0.15.1",
+]
+
+[project.scripts]
+iparq = "iparq.source:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
