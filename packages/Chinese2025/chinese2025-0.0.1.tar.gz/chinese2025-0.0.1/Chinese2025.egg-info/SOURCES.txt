@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+Chinese2025/__init__.py
+Chinese2025/reconstructions_list.sqlite
+Chinese2025/单列查询.py
+Chinese2025/繁體廣韻搜索.py
+Chinese2025/繁體方言搜索.py
+Chinese2025.egg-info/PKG-INFO
+Chinese2025.egg-info/SOURCES.txt
+Chinese2025.egg-info/dependency_links.txt
+Chinese2025.egg-info/top_level.txt

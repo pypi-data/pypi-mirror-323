@@ -1,0 +1,33 @@
+Metadata-Version: 2.2
+Name: Chinese2025
+Version: 0.0.1
+Summary: 一个关于中文的集合库，未来会加入更多内容
+Home-page: https://github.com/yesandnoandperhaps/Chinese2025
+Author: 李岚霏
+Author-email: haizhimenhao@outlook.com
+License: MIT (Non-commercial) or Contact Author for Commercial Use
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Free for non-commercial use
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+## 许可证
+
+本项目的使用规则如下：
+
+- **非商业用途**：您可以在 MIT 许可证下免费使用本项目，包括学习、个人项目或其他非盈利性目的。
+- **商业用途**：如果您需要将本项目用于商业用途（包括但不限于公司内部使用、出售或分发改进版等），请联系作者获取使用许可。
+
+如需更多信息，请参考 [LICENSE](LICENSE) 文件或通过以下方式联系作者：
+- 邮箱：haizhimenhao@outlook.com
