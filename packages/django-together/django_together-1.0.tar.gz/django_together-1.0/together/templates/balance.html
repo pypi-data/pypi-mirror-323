@@ -1,0 +1,18 @@
+{% load i18n %}
+{% if expenses %}
+    <h3>{% trans "Balance" %}</h3>
+    <table>
+    {% for user, amount in balance.items %}
+        <tr><td>{{ user }}</td><td>{{ amount }}</td></tr>
+    {% endfor %}
+    </table>
+    <hr>
+    <h3>{% trans "Expenses" %}</h3>
+    <ul>
+    {% for expense in expenses %}
+        <li>{{ expense }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>{% trans "There are no open expenses." %}</p>
+{% endif %}
