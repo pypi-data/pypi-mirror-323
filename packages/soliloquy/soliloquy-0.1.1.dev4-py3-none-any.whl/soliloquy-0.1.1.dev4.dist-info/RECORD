@@ -1,0 +1,12 @@
+soliloquy/__init__.py,sha256=Fi7aBRSv1DHDXqSDy9bq502m3WyTejkaTm1Up8z4cCY,433
+soliloquy/cli.py,sha256=91zbrGZF_hC1coMUVLRI009Y16RW_QGBGEZ0jc4lICc,13048
+soliloquy/poetry_ops.py,sha256=jnIfljvAVqCz_3yyuyTvEJbzjdT3ENy-Rlf3YLhr1zs,7063
+soliloquy/pyproject_ops.py,sha256=X6Q6Z6k8sczdTVTH_YJdcm7hdGNgOiyEQoc0C3D9x5U,4585
+soliloquy/remote_ops.py,sha256=TphHWno7ky7grB-y1M-ev2ELFxixsZvitJGG0CP0BFE,6934
+soliloquy/test_ops.py,sha256=diIMT2OlYZOenbbN-Il6sB9XBxdjaKre42ggEzibt0Q,7126
+soliloquy/version_ops.py,sha256=fAYU9RD4ez1kzRJeiE7J0g3inA0rgnxXLHe0JiTx7Hc,6028
+soliloquy-0.1.1.dev4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+soliloquy-0.1.1.dev4.dist-info/METADATA,sha256=785Yr-78OnR-fTp_l7lGjHdC54d-ZZXysOePpFHYLbE,573
+soliloquy-0.1.1.dev4.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+soliloquy-0.1.1.dev4.dist-info/entry_points.txt,sha256=uBbXvL6bcx-kn3agj2qUBt77knUVRNiBIslMWKfyxf4,48
+soliloquy-0.1.1.dev4.dist-info/RECORD,,
