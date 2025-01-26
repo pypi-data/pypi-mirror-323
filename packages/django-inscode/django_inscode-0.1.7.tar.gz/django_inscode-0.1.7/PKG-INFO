@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: django-inscode
+Version: 0.1.7
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Requires-Dist: Django>=5.1
+Requires-Dist: django-soft-delete>=1.0.16
+Requires-Dist: pytz>=2024.2
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
