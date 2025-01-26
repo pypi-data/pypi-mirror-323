@@ -1,0 +1,16 @@
+pyproject.toml
+readme.md
+repo2string/__init__.py
+repo2string/__main__.py
+repo2string/cli.py
+repo2string/scan.py
+repo2string/ui.html
+repo2string/ui_server.py
+repo2string.egg-info/PKG-INFO
+repo2string.egg-info/SOURCES.txt
+repo2string.egg-info/dependency_links.txt
+repo2string.egg-info/entry_points.txt
+repo2string.egg-info/requires.txt
+repo2string.egg-info/top_level.txt
+tests/test_repo2string.py
+tests/test_ui.py
