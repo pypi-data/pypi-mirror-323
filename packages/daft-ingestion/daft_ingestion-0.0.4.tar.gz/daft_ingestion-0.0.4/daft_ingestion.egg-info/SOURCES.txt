@@ -1,0 +1,10 @@
+MANIFEST.in
+requirements.txt
+setup.py
+daft_ingestion/__init__.py
+daft_ingestion/daft_ingestion.py
+daft_ingestion.egg-info/PKG-INFO
+daft_ingestion.egg-info/SOURCES.txt
+daft_ingestion.egg-info/dependency_links.txt
+daft_ingestion.egg-info/requires.txt
+daft_ingestion.egg-info/top_level.txt
