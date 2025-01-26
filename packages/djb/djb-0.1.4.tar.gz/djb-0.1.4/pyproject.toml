@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "djb"
+version = "0.1.4"
+description = "djb (dj_bun): playin' dev and deploy since 1984 🎶"
+authors = [
+    {name = "Robert Kajic", email = "robert@kajic.com"},
+    {name = "Vivi Kajic", email = "vivi@kajic.com"},
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1.8",
+    "daphne",
+    "django==5.1.3",
+    "django-debug-toolbar>=5.0.1",
+    "docopt",
+    "ruamel.yaml",
+    "watchfiles",
+]
+
+[project.scripts]
+djb = "djb.cli.djb:main"
+
+[tool.setuptools]
+script-files = ["src/djb/cli/djb-create"]
