@@ -1,0 +1,7 @@
+README.md
+setup.py
+./micropg_lite.py
+micropg_lite.egg-info/PKG-INFO
+micropg_lite.egg-info/SOURCES.txt
+micropg_lite.egg-info/dependency_links.txt
+micropg_lite.egg-info/top_level.txt
