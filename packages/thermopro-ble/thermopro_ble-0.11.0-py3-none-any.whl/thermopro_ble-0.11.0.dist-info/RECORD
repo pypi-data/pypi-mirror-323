@@ -1,0 +1,8 @@
+thermopro_ble/__init__.py,sha256=Ab68WZ_OWfwHSnti4OoTvgXCAwMw7KxNY_OttaDajII,706
+thermopro_ble/device.py,sha256=4nkjSgr0V5V5G7k06WKPZMnXje6-4hO1bfUffZVsRSE,1781
+thermopro_ble/parser.py,sha256=E_hVq5Ajjd0tF6oHujPLKdxltA_hH_loBHAJYYFEWxw,4627
+thermopro_ble/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thermopro_ble-0.11.0.dist-info/LICENSE,sha256=gieJjxNidEKH1VXLqbV9tuqnmcnqvMqt5xcmktkn5I4,1072
+thermopro_ble-0.11.0.dist-info/METADATA,sha256=srqOHL2S-aoUSCBV4VvOmQRz972iUeb_dXYUTTj1kD8,5028
+thermopro_ble-0.11.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+thermopro_ble-0.11.0.dist-info/RECORD,,
