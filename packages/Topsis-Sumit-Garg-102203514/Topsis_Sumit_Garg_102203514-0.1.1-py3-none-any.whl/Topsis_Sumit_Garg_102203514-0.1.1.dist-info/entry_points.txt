@@ -1,0 +1,2 @@
+[console_scripts]
+Topsis_Sumit_Garg_102203514 = Topsis_Sumit_Garg_102203514.topsis:main
