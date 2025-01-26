@@ -1,0 +1,4 @@
+m2r2
+Sphinx
+sphinx-click
+sphinx-rtd-theme
