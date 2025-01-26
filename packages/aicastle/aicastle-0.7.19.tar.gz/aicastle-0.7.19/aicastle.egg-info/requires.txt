@@ -1,0 +1,9 @@
+click
+pyyaml
+streamlit
+openai
+tiktoken
+pathspec
+pymupdf
+python-dotenv
+pillow
