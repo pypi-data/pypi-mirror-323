@@ -1,0 +1,253 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentic-fleet"
+version = "0.4.61"
+description = "A powerful multi-agent system for adaptive AI reasoning and automation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+keywords = ["ai", "agents", "automation", "multi-agent", "adaptive", "AI", "reasoning", "autogen-sample", "autogen", "magentic-one"]
+authors = [
+  { name = "Zachary BENSALEM", email = "contact@qredence.ai" },
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+
+dependencies = [
+    # Core Framework
+    "fastapi>=0.109.0",
+    "uvicorn>=0.24.0",
+    "pydantic>=2.5.2",
+    "pydantic-settings>=2.2.1",
+    "python-dotenv>=1.0.1",
+    "typing-extensions>=4.8.0",
+    "packaging>=23.2",
+    # Networking & Async
+    "aiohttp>=3.11.11,<4.0.0",
+    "httpx>=0.25.0",
+    "requests>=2.32.3",
+    "aiofiles>=23.1.0",
+    "python-multipart>=0.0.6",
+    "asyncio>=3.4.3",
+    # AI/ML Infrastructure
+    "autogen-core>=0.4.3,<0.5.0",
+    "autogen-agentchat>=0.4.3,<0.5.0",
+    "autogen-ext[openai,azure]>=0.4.3,<0.5.0",
+    "autogen-ext[docker]>=0.4.3,<0.5.0",
+    "autogen-ext[magentic-one]>=0.4.3,<0.5.0",
+    "autogen-ext[web-surfer]>=0.4.3,<0.5.0",
+    "autogen-ext[langchain]>=0.4.3,<0.5.0",
+    "magentic-one-cli>=0.2.2",
+    "agentops>=0.3.21",
+    "composio-core>=0.6.11.post1",
+    # Azure Services
+    "azure-core>=1.32.0",
+    "azure-identity>=1.19.0",
+    "azure-keyvault-secrets>=4.9.0",
+    "azure-search-documents==11.6.0b4",
+    "azure-storage-blob>=12.24.0",
+    "azure-cosmos>=4.9.0",
+    # Data Processing
+    "pandas>=2.2.3",
+    "numpy>=1.26,<2.0",
+    "matplotlib>=3.10.0",
+    "yfinance>=0.2.51",
+    "jsonlines>=4.0.0",
+    "pytz>=2024.2",
+    "pillow>=11.0.0",
+    "plotly>=5.16.0",
+    "plotly-express>=0.4.1",
+    "requests-html>=0.10.0",
+    "seaborn>=0.13.0",
+    # Web & Utilities
+    "chainlit>=2.0.6",
+    "playwright>=1.49.1,<2.0.0",
+    "beautifulsoup4>=4.12.0",
+    "bing>=0.31",
+    "markitdown>=0.0.1a3",
+    "tenacity>=9.0.0",
+    "docker>=7.1.0",
+    "opentelemetry-instrumentation-fastapi>=0.44b0",
+    # Developer Tools
+    "rich>=13.9.4",
+    "aioconsole>=0.8.1",
+    "grpcio-tools~=1.62.0",
+    "typer>=0.15.1",
+    "ruff==0.4.8",
+    "azure-ai-projects>=1.0.0b4",
+    "azure-ai-inference>=1.0.0b6",
+    "puremagic>=1.28",
+    "psutil>=5.9.6",
+    "redis>=5.2.1",
+    "axios>=0.4.0",
+    "codecov>=2.1.13",
+    "pytest-cov>=6.0.0",
+    "pytest>=8.3.4",
+    "pytest-asyncio>=0.25.2",
+    "scikit-learn>=1.6.1",
+    "ipykernel>=6.29.5",
+    "authlib>=1.4.0",
+    "starlette>=0.41.3",
+    "semantic-kernel>=1.19.0",
+    "tiktoken>=0.8.0",
+]
+[project.urls]
+Homepage = "https://github.com/qredence/agenticfleet"
+Documentation = "https://github.com/qredence/agenticfleet/tree/main/docs"
+Repository = "https://github.com/qredence/agenticfleet.git"
+Issues = "https://github.com/qredence/agenticfleet/issues"
+Source = "https://github.com/qredence/agenticfleet"
+
+[project.scripts]
+agenticfleet = "agentic_fleet.cli:main"
+post_install = "agentic_fleet.scripts:install_playwright_deps"
+
+[tool.hatch.build]
+packages = ["src/agentic_fleet"]
+exclude = [
+    # Python
+    "*.pyc",
+    "__pycache__",
+    "*.pyo",
+    "*.pyd",
+    "*.so",
+    "*.dylib",
+    "*.egg",
+    "*.egg-info",
+    # Build
+    "build",
+    "dist",
+    "eggs",
+    "sdist",
+    "develop-eggs",
+    # Directories
+    "tests",
+    "docs",
+    "examples",
+    ".git",
+    ".github",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".ruff_cache",
+    # Config files
+    ".gitignore",
+    ".env*",
+    "*.log",
+    "tox.ini",
+    ".coverage",
+    "coverage.xml",
+    # System
+    ".DS_Store",
+    "Thumbs.db",
+]
+
+
+
+[tool.hatch.version]
+path = "src/agentic_fleet/__init__.py"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --cov=src --cov-report=xml --cov-report=term-missing"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 100
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["**/test/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "pass",
+    "raise ImportError"
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.3",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.21.1",
+    "black>=23.11.0",
+    "ruff>=0.1.0",
+    "pre-commit>=3.5.0",
+    "tox>=4.11.3",
+]
+
+test = [
+    "pytest>=7.4.3",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.21.1",
+    "pytest-mock>=3.12.0",
+    "pytest-timeout>=2.2.0",
+    "pytest-xdist>=3.5.0",
+    "coverage>=7.4.0",
+]
+
+docs = [
+    "sphinx>=7.2.6",
+    "sphinx-rtd-theme>=2.0.0",
+    "sphinx-autodoc-typehints>=1.25.2",
+    "sphinx-copybutton>=0.5.2",
+    "myst-parser>=2.0.0",
+]
