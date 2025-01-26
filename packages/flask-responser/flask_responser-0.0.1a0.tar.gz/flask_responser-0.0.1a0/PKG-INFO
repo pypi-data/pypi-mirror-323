@@ -1,0 +1,120 @@
+Metadata-Version: 2.2
+Name: flask_responser
+Version: 0.0.1a0
+Summary: 一种新的方式来生成结构化的 JSON 响应，支持开发模式、自定义数据和消息，提升前后端交互的效率与一致性。
+Author: alex_zhou
+Author-email: alex@ycps.org.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: flask
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Flask Responser
+
+`flask_responser` 是一个简单的 Python 库，旨在帮助开发者快速构建标准化的 HTTP JSON 响应，尤其适用于 Flask 框架的后端开发。
+
+---
+
+## 安装
+
+```bash
+pip install flask_responser
+```
+
+---
+
+## 功能概述
+
+`flask_responser` 提供了一个灵活的 `Response` 类，用于生成符合 RESTful 风格的 JSON 响应，包含以下功能：
+
+- **支持外部消息 (ext_mes)**：用于显示给最终用户的消息。
+- **支持内部消息 (int_mes)**：用于前端开发者调试的消息。
+- **内部状态码 (int_code)**：用于前端开发者区分不同错误类型。
+- **自定义数据字段 (data)**：返回给前端的实际数据。
+- **开发模式支持**：在开发模式下，未设置的 `int_mes` 和 `int_code` 会自动与 `ext_mes` 和 `status_code` 同步。
+
+---
+
+## 使用方法
+
+### 导入模块
+
+```python
+from flask_responser import Response
+```
+
+### 示例代码
+
+#### 示例 1：基本用法
+
+```python
+from flask import Flask
+from flask_responser import Response
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    res = Response(
+        status_code=200,
+        ext_mes="请求成功",
+        data={"key": "value"}
+    )
+    return res.make()
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+#### 示例 2：启用开发模式
+
+```python
+res = Response(
+    status_code=400,
+    ext_mes="无效的请求",
+    dev=True
+)
+response = res.make()
+```
+
+在开发模式下，若未指定 `int_mes` 和 `int_code`，则：
+- `int_mes` 自动设置为 `ext_mes`。
+- `int_code` 自动设置为 `status_code`。
+
+#### 示例 3：自定义响应头
+
+```python
+res = Response(
+    status_code=200,
+    ext_mes="操作成功",
+    data={"result": "ok"},
+    custom_header="HeaderValue"
+)
+response = res.make()
+```
+
+---
+
+## 参数说明
+
+### 初始化参数
+
+| 参数名        | 类型    | 默认值 | 描述                                                                 |
+|---------------|---------|--------|----------------------------------------------------------------------|
+| `status_code` | `int`   | `200`  | HTTP 状态码，返回给浏览器。                                          |
+| `ext_mes`     | `str`   | `""`  | 显示给最终用户的外部消息。                                           |
+| `int_mes`     | `str`   | `""`  | 内部消息，用于前端开发者调试。                                       |
+| `int_code`    | `int`   | `0`    | 内部状态码，用于区分不同错误类型。                                   |
+| `data`        | `dict`  | `None` | 返回给前端的数据。                                                   |
+| `dev`         | `bool`  | `True` | 是否启用开发模式。启用后，未设置的 `int_mes` 和 `int_code` 会被自动填充。 |
+| `**kwargs`    | `dict`  | `{}`   | 其他自定义的响应头。                                                 |
