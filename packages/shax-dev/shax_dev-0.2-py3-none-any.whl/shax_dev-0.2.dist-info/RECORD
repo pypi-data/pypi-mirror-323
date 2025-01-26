@@ -1,0 +1,17 @@
+config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+config/asgi.py,sha256=pcbXCPSccL01nPT0ji26mumOrlgKn9UpezEl_S5nOFw,176
+config/custom_config.py,sha256=EU_8Zhw1z_hAVivhk9j1_gSkUTtg8OKLW8zrjOQAfCU,1466
+config/settings.py,sha256=bznkYY2IR3zAUbx1cFucZkn3tBmZSYGj87WXhBjvbns,4396
+config/urls.py,sha256=RvVFkCQGzaOXHDkSopvQqNXw06PmZPu3XuB_umGaTk4,577
+config/wsgi.py,sha256=K1tO7kmh_PYVwFK_49jAxzQDhHT6os9f4GZPe7ivbAE,176
+main/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+main/admin.py,sha256=5go9qzgDrC8KEfJpDee5DGPNFVd-LCkBAzpBBNrpwyY,876
+main/apps.py,sha256=GCA-bKqqYPXEtyzbvfwOp81VrwMfqB3EBOLaUcqD2EI,146
+main/urls.py,sha256=Vi_NeHfYmlth-W2iGtB0p9oA19-1uNgHZL3gHj4yTR8,56
+main/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+main/models/__init__.py,sha256=o-scbpeX8Zz_hh9KLh8ODPLXVO4zpP9euWzFTF-TPnc,33
+main/models/base.py,sha256=DHROgO1d1OhUe2o78sY1RUbYcdlw4L0ZyqLA6VXnDrI,235
+shax_dev-0.2.dist-info/METADATA,sha256=GXkaty0TnKNrGFEraF8Hyt9vl9YDegtb-GacXfRFybY,1188
+shax_dev-0.2.dist-info/WHEEL,sha256=mguMlWGMX-VHnMpKOjjQidIo1ssRlCFu4a4mBpz1s2M,91
+shax_dev-0.2.dist-info/top_level.txt,sha256=joKWIOZihD-0hFiM9mxzKIcA37kxRJzmEHXvh79OTuk,12
+shax_dev-0.2.dist-info/RECORD,,
