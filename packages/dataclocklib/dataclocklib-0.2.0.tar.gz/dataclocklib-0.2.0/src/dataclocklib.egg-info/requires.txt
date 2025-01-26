@@ -1,0 +1,9 @@
+matplotlib
+pandas[parquet]>=2.2.2
+pypalettes>=0.1.5
+
+[docs]
+sphinx>=8.1.3
+sphinx-autobuild>=2024.10.3
+sphinx-rtd-theme>=3.0.2
+myst-nb>=1.1.2
