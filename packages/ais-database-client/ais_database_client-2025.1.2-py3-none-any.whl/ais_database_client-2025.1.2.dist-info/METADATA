@@ -1,0 +1,52 @@
+Metadata-Version: 2.2
+Name: ais_database_client
+Version: 2025.1.2
+Summary: Python client to the Space Eye AIS database
+Author-email: "Space Eye e.V." <kontakt@space-eye.org>
+License: Apache-2.0
+Project-URL: Homepage, https://space-eye.info
+Project-URL: Bug Tracker, https://gitlab.com/satellitesearch/ais_database_client/-/issues
+Project-URL: Source Code, https://gitlab.com/satellitesearch/ais_database_client
+Keywords: AIS,SAR
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+
+# AIS Database Client
+
+Python client for the [Space Eye AIS server](). The AIS server aggregates data from AIS receives and the [UN Task Team in AIS data analyses](https://unstats.un.org/bigdata/task-teams/ais/index.cshtml).
+
+# License
+
+This project is [Apache 2.0](LICENSE.txt) licensed.
+
+
+### Deployment to Pypi
+1. Install Dependencies if you haven't already:
+
+```
+pip install .
+```
+
+2. Bump the version of the package:
+```
+bumpver update
+```
+
+
+3. Build the Package:
+
+Run the following command to build your package (Install build if you haven't already):
+``` 
+python -m build
+```
+4. Upload to PyPI:
+
+Upload your package to PyPI:
+```
+twine upload dist/*
+```
