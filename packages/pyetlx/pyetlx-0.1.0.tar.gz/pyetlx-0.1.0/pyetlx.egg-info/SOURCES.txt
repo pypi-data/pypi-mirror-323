@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+pyetlx.egg-info/PKG-INFO
+pyetlx.egg-info/SOURCES.txt
+pyetlx.egg-info/dependency_links.txt
+pyetlx.egg-info/top_level.txt
+src/__init__.py
+src/build.py
+src/etlx.py
+src/go.py
