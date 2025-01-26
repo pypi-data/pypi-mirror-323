@@ -1,0 +1,16 @@
+pybase3/__init__.py,sha256=PamuPmvtUMo59iELdGp0htpbI9080T4I0za1xF8XVH8,62815
+pybase3/__main__.py,sha256=h-sVFNosjapDrkAxJElmtZTMzbF3rJyyEbzi4pttLsg,2270
+pybase3/dbase3.py,sha256=NLqC8tLQQV218mDGA2muG593hIeNu6p70xEWiXk3aU8,73674
+pybase3/dbfquery.py,sha256=qK9hqHwVs0uNTucgbBOIwWG2xTR7vqdZeHAOqhJslaE,7734
+pybase3/dbfview.py,sha256=aBq-aLejdE-hJ36kR3RTD9xtO8RPB3Cv7aTPGcTJJ0k,6411
+pybase3/header_reader.py,sha256=zUYm6pBaDnV8jJQ3-Nzf3zc-X-yy85-JRYGhQnYPPQs,3232
+pybase3/hexreader.py,sha256=zUYm6pBaDnV8jJQ3-Nzf3zc-X-yy85-JRYGhQnYPPQs,3232
+pybase3/sqlparser.py,sha256=Vt7KRTOIbT9AQNnWsqlerC4M0LJhphRLl2_J4PjbiKY,10741
+pybase3/test.py,sha256=tojx-bJnwBBxTnk5XMvXq8ygezW0r-SdSfqsehWD8yE,5483
+pybase3/utils.py,sha256=hmxeNyxObaqNLIPEsDJlVuiAmVksyiq58DdW6UT5jdU,1405
+pybase3-1.98.3.dist-info/LICENSE,sha256=GuJAxz4RmmYLkLa9SPDpW36RJ4i47lUSLOfqD-hnDf8,1082
+pybase3-1.98.3.dist-info/METADATA,sha256=-2JH838Thfc0RmKOwmVEln5x_-GsEVhBrP3u9xP69X8,11146
+pybase3-1.98.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pybase3-1.98.3.dist-info/entry_points.txt,sha256=GfQljQMkZ3zeLvjSV057l4h28LqL4WvBB08Mf1xdRtw,184
+pybase3-1.98.3.dist-info/top_level.txt,sha256=yTbVt9S5xVAO2I83lGlpadltasnSomr64sxAIj_Zh7s,8
+pybase3-1.98.3.dist-info/RECORD,,
