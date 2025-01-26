@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: obor
+Version: 0.1.0
+Summary: A package containing pytorch utilities
+Author-email: doddy-s <doddy.s@protonmail.com>
+License: MIT
+License-File: LICENSE
+Requires-Dist: torch>=2.5.1
+Requires-Dist: tqdm>=4.67.1
