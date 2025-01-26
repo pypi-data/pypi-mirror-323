@@ -1,0 +1,12 @@
+fastapi_cache_plus/__init__.py,sha256=eEsut6ykQmPsQSFMQ_jqiCWSYwOhGgCWMrqGWBG2Rvw,174
+fastapi_cache_plus/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_cache_plus/registry.py,sha256=WGCij-UWjf_Nz5w8eQ_n3eTiXqh8AR6GIcjRkq_8zwQ,873
+fastapi_cache_plus/backends/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_cache_plus/backends/base.py,sha256=totZbE-4BboziJWwKuyTd7G7gp5l_9lLAn8md_xamvw,970
+fastapi_cache_plus/backends/memory.py,sha256=BgytGM6GjTkwif8dtBlAvujELFpnopl8AoxF1Y2ttvw,1039
+fastapi_cache_plus/backends/redis.py,sha256=Q7N_YaIaQmi95DjJ7z7TD8tvTKg6oDsNmvoRHOTs54Q,3030
+fastapi_cache_plus/backends/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_cache_plus/backends/utils/ttldict.py,sha256=BBvx0gVxO6gQfwIEVsfKp8B0SZWf6sD2K14qUV3BUNE,2061
+fastapi_cache_plus-0.2.0.dist-info/METADATA,sha256=fjh-8o5DZe7aLllYQ4fOofaQYKtWPyQk5QWzk5kyQ_A,3097
+fastapi_cache_plus-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fastapi_cache_plus-0.2.0.dist-info/RECORD,,
