@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+spydtest/__init__.py
+spydtest.egg-info/PKG-INFO
+spydtest.egg-info/SOURCES.txt
+spydtest.egg-info/dependency_links.txt
+spydtest.egg-info/entry_points.txt
+spydtest.egg-info/requires.txt
+spydtest.egg-info/top_level.txt
