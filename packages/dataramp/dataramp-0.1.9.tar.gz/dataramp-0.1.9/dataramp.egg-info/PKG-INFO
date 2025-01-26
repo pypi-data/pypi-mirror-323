@@ -1,0 +1,92 @@
+Metadata-Version: 2.2
+Name: dataramp
+Version: 0.1.9
+Summary: A Data science library for data science / data analysis teams
+Home-page: https://github.com/Kimxons/dataramp
+Author: Meshack Kitonga
+Author-email: Meshack Kitonga <kitongameshack9@gmail.com>
+Maintainer-email: Meshack Kitonga <kitongameshack9@gmail.com>
+Project-URL: Documentation, https://github.com/Kimxons/dataramp/tree/main/docs
+Project-URL: Source Code, https://github.com/Kimxons/dataramp
+Project-URL: Changes, https://github.com/dataramp/en/latest/release_notes.html
+Project-URL: Issue Tracker, https://github.com/Kimxons/dataramp/issues
+Keywords: data science,machine learning,data analysis
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.22.0
+Requires-Dist: pandas<2.1.0,>=1.5.0
+Requires-Dist: scipy<1.12.0,>=1.5.0
+Requires-Dist: scikit-learn>=1.3.0
+Requires-Dist: scikit-optimize>=0.9.0
+Requires-Dist: pyzmq>=20.0.0
+Requires-Dist: shap>=0.42.0
+Requires-Dist: statsmodels>=0.12.2
+Requires-Dist: plotly>=5.0.0
+Requires-Dist: seaborn>=0.11.1
+Requires-Dist: category-encoders<=2.5.1.post0,>=2.2.2
+Requires-Dist: lime>=0.2.0.1
+Requires-Dist: tomli>=2.0.1
+Requires-Dist: packaging>=23.0
+Requires-Dist: black[jupyter]>=22.3.0
+Provides-Extra: test
+Requires-Dist: pytest==7.1.2; extra == "test"
+Requires-Dist: pytest-xdist==2.1.0; extra == "test"
+Requires-Dist: pytest-timeout==1.4.2; extra == "test"
+Requires-Dist: pytest-cov==2.10.1; extra == "test"
+Requires-Dist: nbval==0.9.3; extra == "test"
+Requires-Dist: IPython<8.12.1,>=8.10.0; extra == "test"
+Requires-Dist: PyYAML==5.4; extra == "test"
+Requires-Dist: coverage[toml]>=6.4; extra == "test"
+Provides-Extra: dev
+Requires-Dist: ruff==0.0.228; extra == "dev"
+Requires-Dist: darglint==1.8.0; extra == "dev"
+Requires-Dist: pre-commit>=2.20.0; extra == "dev"
+Requires-Dist: dataramp[docs,test]; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: docutils<0.17,>=0.15.2; extra == "docs"
+Requires-Dist: pydata-sphinx-theme>=0.3.1; extra == "docs"
+Requires-Dist: astroid<=2.6.6; extra == "docs"
+Requires-Dist: Sphinx>=4.5.0; extra == "docs"
+Requires-Dist: nbconvert>=6.4.5; extra == "docs"
+Requires-Dist: nbsphinx<0.9.0,>=0.8.5; extra == "docs"
+Requires-Dist: sphinx-autoapi; extra == "docs"
+Requires-Dist: sphinx-inline-tabs==2022.1.2b11; extra == "docs"
+Requires-Dist: sphinx-copybutton==0.4.0; extra == "docs"
+Requires-Dist: myst-parser==0.16.1; extra == "docs"
+Provides-Extra: prophet
+Requires-Dist: prophet>=1.1.2; extra == "prophet"
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Dataramp
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Pylint](https://img.shields.io/badge/pylint-enabled-brightgreen.svg)](https://github.com/PyCQA/pylint)
+[![Flake8](https://img.shields.io/badge/flake8-enabled-blue.svg)](https://flake8.pycqa.org/en/latest/)
+[![Scikit-learn](https://img.shields.io/badge/scikit--learn-v0.24.2-blue)](https://scikit-learn.org/stable/)
+
+Welcome to the Dataramp documentation! Here you will find information about Dataramp, including some examples to get you started.
+
+## Dataramp
+
+Dataramp is a Python library designed to streamline data science and data analysis workflows. It offers a collection of utility functions and tools tailored to assist data science teams in various aspects of their projects.
+
+By providing a range of functionalities, Dataramp aims to enhance productivity and efficiency in data science projects, empowering teams to focus on deriving meaningful insights from their data.
+
+## Getting Started
+
+Read the quick start guide [here](docs/quickstart.md).
+
+If you want to see some examples, you can look at the examples in the [examples](examples/) directory.
+
+You can install Dataramp and learn more from [PyPi](https://pypi.org/project/dataramp/).
