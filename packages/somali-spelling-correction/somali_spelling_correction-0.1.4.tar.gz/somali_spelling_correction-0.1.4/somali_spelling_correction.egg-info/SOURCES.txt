@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+somali_spelling_correction/Dataset_Spelling.csv
+somali_spelling_correction/__init__.py
+somali_spelling_correction/spell_checker.py
+somali_spelling_correction.egg-info/PKG-INFO
+somali_spelling_correction.egg-info/SOURCES.txt
+somali_spelling_correction.egg-info/dependency_links.txt
+somali_spelling_correction.egg-info/top_level.txt
+tests/__init__.py
+tests/test_spelling_correction.py
