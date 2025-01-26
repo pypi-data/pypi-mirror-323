@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: aivagent
+Version: 0.2.5
+Summary: Aiv Agent
+Home-page: https://www.aiv.store
+Author: aiv.store
+Author-email: 76881573@qq.com
+License: MIT
+Keywords: Aiv Agent
+Requires-Python: >=3.9
+Requires-Dist: loguru
+Requires-Dist: psutil
