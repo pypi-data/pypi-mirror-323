@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+reborn2022/__init__.py
+reborn2022/api_solver.py
+reborn2022/recaptcha.py
+reborn2022/test_solver.py
+reborn2022.egg-info/PKG-INFO
+reborn2022.egg-info/SOURCES.txt
+reborn2022.egg-info/dependency_links.txt
+reborn2022.egg-info/requires.txt
+reborn2022.egg-info/top_level.txt
