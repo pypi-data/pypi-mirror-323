@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: llama-index-llms-deepseek
+Version: 0.1.0
+Summary: llama-index llms deepseek integration
+License: MIT
+Author: Logan Markewich
+Author-email: logan@runllama.ai
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: llama-index-llms-openai-like (>=0.3.3,<0.4.0)
+Description-Content-Type: text/markdown
+
+# LlamaIndex Llms Integration: DeepSeek
+
+This is the DeepSeek integration for LlamaIndex. Visit [DeepSeek](https://api-docs.deepseek.com/) for information on how to get an API key and which models are supported.
+
+## Installation
+
+```bash
+pip install llama-index-llms-deepseek
+```
+
+## Usage
+
+```python
+from llama_index.llms.deepseek import DeepSeek
+
+llm = DeepSeek(model="deepseek-chat", api_key="your-api-key")
+```
+
