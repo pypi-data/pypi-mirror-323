@@ -1,0 +1,9 @@
+aiogram_listview/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiogram_listview/listview.py,sha256=KKQ78COgv3D_zrod23HbL0n1EY0ykCLGX2n496kj0ds,2523
+aiogram_listview/listview_aiogram.py,sha256=dVpCMxLn88XTpx59Qx5qYXjvohoXqBXDnJz1LbFZO2Q,3805
+aiogram_listview/listview_controller.py,sha256=cF2RmJye9JEmjMvl-pOJnZ9zcXhRf6u2mRCbKTul580,392
+aiogram_listview/listview_storage.py,sha256=00kf_dQKs8uHjTh7CULkbBFNQsj9YFzAqGtscWWF_Vw,641
+aiogram_listview-0.0.1.dist-info/METADATA,sha256=c5j5rlQVpjCHOCg_vKGaL4w1SSgmsx2waKGp10ld878,395
+aiogram_listview-0.0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+aiogram_listview-0.0.1.dist-info/top_level.txt,sha256=3z3nqoFp0UfQ1g2zE0207_BZLHdR_Hm-bxS5QZhi6uQ,17
+aiogram_listview-0.0.1.dist-info/RECORD,,

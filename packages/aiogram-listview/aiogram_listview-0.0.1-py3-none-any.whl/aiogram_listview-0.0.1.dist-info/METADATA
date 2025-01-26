@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: aiogram_listview
+Version: 0.0.1
+Summary: txt
+Home-page: https://github.com/JustKovalchuk/AiogramListView
+Author: JustKovalchuk
+Author-email: kovalchuk.oleksandr.dev@gmail.com
+Requires-Python: >=3.12
+Requires-Dist: aiogram>=3.17.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
