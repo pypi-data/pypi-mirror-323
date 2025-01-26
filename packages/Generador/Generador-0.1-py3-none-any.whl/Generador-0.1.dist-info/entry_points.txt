@@ -1,0 +1,2 @@
+[console_scripts]
+generador = Generador.main:main

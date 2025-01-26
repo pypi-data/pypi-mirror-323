@@ -1,0 +1,5 @@
+Metadata-Version: 2.2
+Name: Generador
+Version: 0.1
+Requires-Dist: tkinter
+Dynamic: requires-dist
