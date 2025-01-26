@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: webscraper-once
+Version: 0.2.6
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: beautifulsoup4>=4.9.0
+Requires-Dist: lxml>=4.9.0
+Dynamic: requires-dist
