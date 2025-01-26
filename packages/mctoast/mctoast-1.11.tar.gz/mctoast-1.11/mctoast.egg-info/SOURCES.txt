@@ -1,0 +1,17 @@
+LICENSE.md
+LICENSE.让我们说中文.md
+MANIFEST.in
+README.md
+setup.py
+mctoast/__init__.py
+mctoast/__main__.py
+mctoast.egg-info/PKG-INFO
+mctoast.egg-info/SOURCES.txt
+mctoast.egg-info/dependency_links.txt
+mctoast.egg-info/entry_points.txt
+mctoast.egg-info/requires.txt
+mctoast.egg-info/top_level.txt
+mctoast/assets/mctoast/fonts/unifont.otf
+mctoast/assets/mctoast/textures/advancement.png
+mctoast/assets/mctoast/textures/recipe.png
+mctoast/assets/mctoast/textures/system.png
