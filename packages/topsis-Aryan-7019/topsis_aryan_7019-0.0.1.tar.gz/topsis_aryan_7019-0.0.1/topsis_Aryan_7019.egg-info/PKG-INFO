@@ -1,0 +1,84 @@
+Metadata-Version: 2.2
+Name: topsis-Aryan-7019
+Version: 0.0.1
+Summary: A Python package implementing the TOPSIS method
+Author: Aryan
+Author-email: asharma27_be22@thapar.edu
+License: MIT
+Project-URL: Source Repository, https://github.com/aryansharma19992e/topsis
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Topsis-Aryan-102217019
+
+A Python package for implementing the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) method, used for multi-criteria decision analysis.
+
+## Installation
+
+```bash
+pip install Topsis-Aryan-102217019 
+```
+
+## Usage
+
+The package can be used through command line:
+
+```bash
+topsis <InputDataFile> <Weights> <Impacts> <ResultFileName>
+```
+
+### Example
+
+```bash
+topsis data.xlsx "1,1,1,1,1" "+,+,+,+,+" output.csv
+```
+
+### Input Format
+* Input File:
+    * The file can be in CSV or Excel format (.csv or .xlsx).
+    * The first column should contain the names of the objects/variables.
+    * The remaining columns must contain numeric values only (criteria values).
+### Parameters
+1. <InputDataFile>: The input file name along with its path (e.g., data.csv or data.xlsx).
+2. <Weights>: A comma-separated string of numeric weight values for each criterion (e.g., "1,1,1,1").
+3. <Impacts>: A comma-separated string of + or - symbols, indicating whether the criterion is beneficial (+) or non-beneficial   (-) (e.g., "+,+,-,+").
+4. <ResultFileName>: The desired output file name including its path (e.g., output.csv).
+
+### Output
+The output file (CSV format) will include:
+
+All input data columns
+Additional columns:
+TOPSIS Score: The calculated score for each alternative.
+Rank: The rank of each alternative based on the TOPSIS score (higher score = better rank).
+
+## License
+MIT License
+
+## Author
+Aryan Sharma
+Roll Number: 102217019
+
+If you have any questions or suggestions, feel free to reach out!
