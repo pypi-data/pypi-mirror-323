@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: osbot_local_stack
+Version: 0.5.0
+Summary: OWASP Security Bot - LLM
+License: MIT
+Author: Dinis Cruz
+Author-email: dinis.cruz@owasp.org
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: osbot-aws
+Project-URL: Homepage, https://github.com/owasp-sbot/OSBot-Local-Stack
+Project-URL: Repository, https://github.com/owasp-sbot/OSBot-Local-Stack
+Description-Content-Type: text/markdown
+
+# OSBot__Repo_Template
+
+## Repo details
+
+![Current Release](https://img.shields.io/badge/release-v0.5.0-blue)
+
