@@ -1,0 +1,92 @@
+Metadata-Version: 2.4
+Name: ceylon
+Version: 0.22.3
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: networkx ==3.4.2
+Requires-Dist: pydantic ==2.10.5
+Requires-Dist: toml ==0.10.2
+Requires-Dist: loguru ==0.7.3
+Requires-Dist: mkdocs-material ==9.5.49
+License-File: LICENSE
+Summary: Ceylon is an advanced multi-agent platform specifically developed for Ceylon Aritficial Intelligence.
+Keywords: Aritifical Intelligence,Multi Agent Systems,CEYLON,Ceylon Aritficial Intelligence.
+Author: Syigen Ltd. <dewmal@syigen.com>
+Author-email: Syigen Ltd. <dewmal@syigen.com>
+License: Apache-2.0
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Project-URL: Homepage, https://ceylon.ai
+Project-URL: Documentation, https://ceylon.ai
+Project-URL: Repository, https://github.com/ceylonai/ceylon
+Project-URL: Issues, https://github.com/ceylonai/ceylon/issues
+Project-URL: Changelog, https://github.com/ceylonai/ceylon/blob/master/CHANGELOG.md
+
+# Ceylon: Multi-Agent Framework
+
+> Empowering Collaboration, Simplifying Complexity
+
+![PyPI - Version](https://img.shields.io/pypi/v/ceylon.svg) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/ceylon.svg) ![PyPI Downloads](https://img.shields.io/pypi/dm/ceylon)
+
+Ceylon is a Multi-Agent System (MAS) designed to orchestrate complex task flows among multiple AI agents, enabling collaborative AI solutions through efficient agent management and communication.
+
+![Ceylon Architecture](https://github.com/ceylonai/ceylon/blob/master/contents/images/img.png?raw=True)
+
+## Key Features
+
+- Distributed agent management and communication
+- Task automation and workflow orchestration
+- Scalable, performant architecture
+- Cross-language interoperability
+- Flexible deployment options
+
+## Getting Started
+
+Visit [docs.ceylon.ai](https://docs.ceylon.ai) for comprehensive documentation, including:
+
+- Installation and setup
+- Core concepts
+- API reference
+- Best practices
+- Advanced tutorials
+
+## Interactive Examples
+
+Try Ceylon with our Colab notebooks:
+
+- **Meeting Scheduler**: [Colab](https://colab.research.google.com/drive/1C-E9BN992k5sZYeJWnVrsWA5_ryaaT8m?usp=sharing)
+- **Single Item Auction**: [Colab](https://colab.research.google.com/drive/12o76s4CyGvOpUaACDYIaYmJgJE1hC81Y#scrollTo=_4dqqO616ifQ)
+
+Find more examples and tutorials at [docs.ceylon.ai/tutorials](https://docs.ceylon.ai/tutorials).
+
+## Roadmap
+
+- [X] Agent Stack
+- [X] Python SDK First Version Release
+- [ ] Java/Kotlin SDK
+- [ ] NodeJS SDK
+- [ ] JS/TS SDK
+- [ ] LLM Agents
+- [ ] Web Agent
+- [ ] Task Manager
+- [ ] Agent Registry
+
+## Support & License
+
+- Contact: [support@ceylon.ai](mailto:support@ceylon.ai)
+- License: Apache-2.0 ([LICENSE](LICENSE))
+
+**Note**: Ceylon implements P2P networking using libp2p Rust implementation, operating independently of blockchain technology.
+
+---
+Copyright 2024-Present, Syigen Ltd. and Syigen Private Limited. All rights reserved.
