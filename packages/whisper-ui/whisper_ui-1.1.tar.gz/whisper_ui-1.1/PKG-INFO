@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: whisper_ui
+Version: 1.1
+Summary: A GUI for OpenAI's Whisper.
+Author-email: Dan DeGenaro <drd92@georgetown.edu>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: whisper
+Project-URL: Homepage, https://github.com/dan-the-meme-man/whisper-ui
+Project-URL: Issues, https://github.com/dan-the-meme-man/whisper-ui/issues
+
+# Whisper UI
+
+A simple GUI for OpenAI's Whisper models.
+
