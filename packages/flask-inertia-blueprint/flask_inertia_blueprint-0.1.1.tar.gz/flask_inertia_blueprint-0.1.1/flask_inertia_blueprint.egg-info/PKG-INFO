@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: flask-inertia-blueprint
+Version: 0.1.1
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: flask>=1.1.2
+Requires-Dist: jsmin>=2.2.2
