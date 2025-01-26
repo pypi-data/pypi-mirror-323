@@ -1,0 +1,223 @@
+Metadata-Version: 2.4
+Name: llm-reasoner
+Version: 0.1.3
+Summary: Transform any LLM into a methodical thinker that excels at systematic reasoning like OpenAI o1 and DeepSeek R1
+Author-email: Harish Santhanalakshmi Ganesan <harishsg99@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Harish Santhanalakshmi Ganesan
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: click>=8.0.0
+Requires-Dist: litellm>=1.0.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: rich>=12.0.0
+Requires-Dist: streamlit>=1.0.0
+Provides-Extra: dev
+Requires-Dist: black>=22.0; extra == 'dev'
+Requires-Dist: mypy>=0.900; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.24.0; extra == 'dev'
+Requires-Dist: pytest>=6.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# 🤔 LLM-Reasoner
+
+Transform any LLM into a methodical thinker that excels at systematic reasoning like OpenAI o1 and DeepSeek R1
+
+- Step-by-step reasoning with detailed explanations
+- Dynamic confidence scoring and self-reflection
+- Multiple reasoning strategies and approaches
+- Robust error handling and recovery
+- Support for mathematical notation using LaTeX
+- Comprehensive thought process visualization
+- Integration with multiple LLM providers
+
+## ✨ What Makes It Special?
+
+LLM-Reasoner enhances any Language Model with advanced reasoning capabilities:
+
+- Think out loud and show its work (no more mysterious answers!)
+- Double-check its own thinking
+- Consider different angles before making up its mind
+- Tell you how confident it is at each step
+- Actually explain why it believes what it believes
+
+## 🚀 Getting Started
+
+Install LLM-Reasoner with pip:
+```bash
+pip install llm-reasoner
+```
+
+Configure your API keys:
+```bash
+# Using OpenAI? Pop this in:
+export OPENAI_API_KEY="your-key"
+
+# Team Google? Here you go:
+export VERTEX_PROJECT="your-project"
+export VERTEX_LOCATION="your-location"
+
+# Claude fan? Got you covered:
+export ANTHROPIC_API_KEY="your-key"
+```
+
+## 🎮 Quick Play
+
+Try these commands to get started:
+
+```bash
+# Check out what models you can use
+llm-reasoner models
+
+# Ask it something cool
+llm-reasoner reason "Why do planes stay up in the air?"
+
+# Want a nice UI to play with?
+llm-reasoner ui
+```
+
+## 🔧 Custom Models
+
+You can register custom models with LLM-Reasoner in three ways:
+
+### 1. Using the Web UI (Easiest):
+1. Launch the UI with `llm-reasoner ui`
+2. Click on "Register Custom Model" in the top section
+3. Fill in your model details:
+   - Model Name (e.g., "my-azure-gpt4")
+   - Provider (e.g., "azure")
+   - Context Window Size (optional)
+4. Click "Register Model" to add it to your available models
+5. Your new model will appear in the model selection dropdown
+
+### 2. Using the CLI:
+```bash
+# Register a new model
+llm-reasoner register-model my-custom-model azure --context-window 16384
+
+# Set it as default
+llm-reasoner set-model my-custom-model
+
+# View all registered models
+llm-reasoner models
+```
+
+### 3. Using Python:
+```python
+from reasonchain import model_registry
+
+# Register a custom model
+model_registry.register_model(
+    name="my-custom-model",
+    provider="custom-provider",
+    context_window=4096  # Optional
+)
+
+# Use your custom model
+chain = ReasonChain(model="my-custom-model")
+```
+
+This allows you to use any LLM provider supported by LiteLLM. See [LiteLLM's documentation](https://litellm.vercel.app/docs/providers) for the full list of supported providers.
+
+## 🎨 Interactive UI
+
+Launch the visual interface with:
+```bash
+llm-reasoner ui
+```
+
+The UI provides:
+- Model selection and registration via an easy-to-use form
+- Parameter adjustment with intuitive sliders
+- Real-time reasoning visualization
+- Interactive exploration
+- Custom model registration interface
+
+## 🛠️ Using It In Your Code
+
+Here's the simplest way to use LLM-Reasoner:
+
+```python
+from reasonchain import ReasonChain
+import asyncio
+
+async def main():
+    chain = ReasonChain()
+    async for step in chain.generate("How does evolution work?"):
+        print(f"🤔 Step {step.number}: {step.title}")
+        print(step.content)
+
+asyncio.run(main())
+```
+
+Want more control? Here's an advanced example:
+
+```python
+chain = ReasonChain(
+    model="gpt-4",                         # Pick your favorite model
+    max_tokens=1000,                       # Let it think deeper
+    temperature=0.3,                       # Control creativity
+    prompt_template="Let's explore: {prompt}"  # Make it your own
+)
+
+# Get all the details about its thinking process
+async for step in chain.generate_with_metadata("How do computers learn?"):
+    print(f"💭 Step {step.number}: {step.title}")
+    print(f"🎯 Confidence: {step.confidence}") 
+    print(f"⏱️ Thinking time: {step.thinking_time}s")
+    print(step.content)
+```
+
+## 🌟 Features in Detail
+
+Each reasoning step includes:
+- Step number (keeping things organized)
+- Clear title (what it's pondering)
+- Detailed thoughts (the good stuff)
+- Confidence score (how sure it is)
+- Thinking time (we track speed too!)
+- Timestamp (when each thought happened)
+- Next action (what it's planning)
+
+
+## Development
+
+To contribute to LLM-Reasoner:
+
+1. Clone the repository
+2. Install development dependencies: `pip install -e ".[dev]"`
+3. Run tests: `pytest`
+
+## 🤝 Contributing
+
+Found a bug or have ideas? We'd love to hear from you:
+- Open an issue on GitHub
+- Email us at harishsg99@gmail.com
+- Check out our examples
+
+## 📜 License
+
+MIT License - See LICENSE file for details.
+
+---
+
+Made with ❤️ for those who believe AI should show its work! ✍️
