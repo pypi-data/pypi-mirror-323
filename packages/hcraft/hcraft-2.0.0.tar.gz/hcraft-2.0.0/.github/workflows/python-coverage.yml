@@ -1,0 +1,30 @@
+name: Python coverage
+
+on: ["push"]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+      MPLBACKEND: Agg  # https://github.com/orgs/community/discussions/26434
+      SDL_VIDEODRIVER: "dummy" # for PyGame render https://stackoverflow.com/questions/15933493/pygame-error-no-available-video-device
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install uv
+      uses: astral-sh/setup-uv@v5
+    - name: Install dependencies
+      run: |
+        uv sync --extra gym --extra gui --extra planning --extra htmlvis
+    - name: Setup java for ENHSP
+      uses: actions/setup-java@v2
+      with:
+        distribution: "microsoft"
+        java-version: "17"
+    - name: Build coverage using pytest-cov
+      run: |
+        uv run pytest --cov=hcraft --cov-report=xml tests
+    - name: Codacy Coverage Reporter
+      uses: codacy/codacy-coverage-reporter-action@v1.3.0
+      with:
+        project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        coverage-reports: coverage.xml
