@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+JPG2HEIF/__init__.py
+JPG2HEIF/app.py
+JPG2HEIF/cli.py
+JPG2HEIF/converter.py
+jpg2heif.egg-info/PKG-INFO
+jpg2heif.egg-info/SOURCES.txt
+jpg2heif.egg-info/dependency_links.txt
+jpg2heif.egg-info/entry_points.txt
+jpg2heif.egg-info/requires.txt
+jpg2heif.egg-info/top_level.txt
