@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: percolate-db
+Version: 0.1.1
+Summary: A client for working with the percolate database
+License: MIT
+Author: mr-saoirse
+Author-email: amartey@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: docstring-parser (>=0.16,<0.17)
+Requires-Dist: loguru (>=0.7.3,<0.8.0)
+Requires-Dist: openai (>=1.60.0,<2.0.0)
+Requires-Dist: psycopg2-binary (>=2.9.10,<3.0.0)
+Requires-Dist: pydantic (>=2.10.5,<3.0.0)
+Requires-Dist: tenacity (>=9.0.0,<10.0.0)
+Description-Content-Type: text/markdown
+
+# percolate database python client
+
