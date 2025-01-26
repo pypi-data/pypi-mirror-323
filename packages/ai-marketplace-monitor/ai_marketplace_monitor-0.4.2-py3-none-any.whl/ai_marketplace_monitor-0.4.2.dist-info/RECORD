@@ -1,0 +1,16 @@
+ai_marketplace_monitor/__init__.py,sha256=16-CJ68vzq3Z4zWgSoI2Q0GtuVK9X0K7dOxL1Y_hTe4,134
+ai_marketplace_monitor/ai.py,sha256=hnZTnjRT7sGtAadBpfLcGyKt_Qri8e0zaP1gqfx0nUo,5191
+ai_marketplace_monitor/cli.py,sha256=mTGuie4jt1tER3jBbggjfGz5yTJPJhRFx_mKK0FvlDE,2593
+ai_marketplace_monitor/config.py,sha256=uLmS21OlN_81YplOVYG9r7Mq9MH0xijCr1v5FEbuK3Y,8364
+ai_marketplace_monitor/facebook.py,sha256=RQhZIDqn-YG8KF0HueuSuJ8bIkgsKLpuz2QZBrTEckA,14302
+ai_marketplace_monitor/items.py,sha256=rOdWw1lZXc7av4Sk50HtKTmSdYzvk0PdKS4UYvEtY24,241
+ai_marketplace_monitor/marketplace.py,sha256=3IbqlkeJvk8ZR_xYnUhg8NrId2ytmZc1rFfZZJTP2Tc,1016
+ai_marketplace_monitor/monitor.py,sha256=j4EoaGPBHZrfcGnct-k9OWazAS1AyUDuqV6pKcSi0ks,9741
+ai_marketplace_monitor/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ai_marketplace_monitor/users.py,sha256=G1tm9Cfulz4TGnNBfsRudCrZ0LjIxfmFtGDihAdpcbo,1730
+ai_marketplace_monitor/utils.py,sha256=uiV8pmFh5B974mR9Di-UiRVlZdO69UsK7kaNhzIYX9M,3721
+ai_marketplace_monitor-0.4.2.dist-info/LICENSE.rst,sha256=xsELFqKBJtc-zOM1lVW2mDJx0Pni4XI3ssp4bFowTNo,1078
+ai_marketplace_monitor-0.4.2.dist-info/METADATA,sha256=b2hWzkIYmEm2a7HYx2pcwWZi91M9rl0qL9aCbGv3GU8,11518
+ai_marketplace_monitor-0.4.2.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+ai_marketplace_monitor-0.4.2.dist-info/entry_points.txt,sha256=ntpATZsvo8vrsiloyhC96dcZDxLewm7TY_kJ8L87IpU,73
+ai_marketplace_monitor-0.4.2.dist-info/RECORD,,
