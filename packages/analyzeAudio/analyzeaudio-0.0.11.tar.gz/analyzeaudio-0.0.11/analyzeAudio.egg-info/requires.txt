@@ -1,0 +1,12 @@
+cachetools
+librosa
+numpy
+torch
+torchmetrics[audio]
+tqdm
+Z0Z-tools
+
+[testing]
+pytest
+pytest-cov
+pytest-env
