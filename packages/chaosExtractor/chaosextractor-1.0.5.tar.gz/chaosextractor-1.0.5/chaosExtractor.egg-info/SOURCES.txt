@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+chaosExtractor/__init__.py
+chaosExtractor/generator.py
+chaosExtractor.egg-info/PKG-INFO
+chaosExtractor.egg-info/SOURCES.txt
+chaosExtractor.egg-info/dependency_links.txt
+chaosExtractor.egg-info/requires.txt
+chaosExtractor.egg-info/top_level.txt
