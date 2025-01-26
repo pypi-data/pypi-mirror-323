@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/ntruprime/__init__.py
+src/ntruprime/_lib.py
+src/ntruprime/kem.py
+src/ntruprime.egg-info/PKG-INFO
+src/ntruprime.egg-info/SOURCES.txt
+src/ntruprime.egg-info/dependency_links.txt
+src/ntruprime.egg-info/top_level.txt
+tests/test_sntrup1013.py
+tests/test_sntrup1277.py
+tests/test_sntrup653.py
+tests/test_sntrup761.py
+tests/test_sntrup857.py
+tests/test_sntrup953.py
