@@ -1,0 +1,2 @@
+[certbot.plugins]
+dns-wedos = certbot_dns_wedos.dns_wedos:Authenticator
