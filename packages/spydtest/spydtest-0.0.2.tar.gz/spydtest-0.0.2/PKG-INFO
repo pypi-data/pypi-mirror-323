@@ -1,0 +1,25 @@
+Metadata-Version: 2.2
+Name: spydtest
+Version: 0.0.2
+Summary: Test internet speed
+Author: oskvr37
+Project-URL: homepage, https://github.com/oskvr37/spydtest
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3>=2.3.0
+
+# spydtest
+
+Test internet speed using Python
+
+```bash
+$ spydtest
+Latency: 50.41 ms
+Speed 73.09 MB/s✅
+Downloaded data: 256.00 MB
+Download time: 3.50s
+Average download speed: 73.09 MB/s
+```
