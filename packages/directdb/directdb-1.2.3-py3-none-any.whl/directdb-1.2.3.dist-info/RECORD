@@ -1,0 +1,9 @@
+directdb/__init__.py,sha256=SGd2ADVtPk6BfKr_eruk4MdRFW7T5SlIM613IlkJk5Y,64
+directdb/exceptions.py,sha256=N9NF4tmpxi8E2WDIELW2ZIRte6WE8iz6H6bRzgndwt4,2208
+directdb/postgresql.py,sha256=xbeiiwn3rYLhDyHdLAkvg2ZgdyTVk9VGL9HL0WPp7Gk,5983
+directdb/sqlite.py,sha256=K0y5bGwHhPVil73yLv3c7BOV3FTYXgtGPs-RTY5r5k4,6585
+directdb-1.2.3.dist-info/LICENSE,sha256=E_tIpsMacuDitpZQsc6-iVT3tzRJhISS3P0islvZGvo,35182
+directdb-1.2.3.dist-info/METADATA,sha256=A-aKlWYo8sa6VYpoxGNpaqIa0EeMBJjcEbj7Hyki6_g,2818
+directdb-1.2.3.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+directdb-1.2.3.dist-info/top_level.txt,sha256=5YKV6VaL4a0Rdn_SeZA6TC1WKiiBh0IZdxri74-bCWc,9
+directdb-1.2.3.dist-info/RECORD,,
