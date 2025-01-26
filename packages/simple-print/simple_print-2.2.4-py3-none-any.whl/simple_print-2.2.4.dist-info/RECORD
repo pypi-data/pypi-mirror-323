@@ -1,0 +1,16 @@
+simple_print/__init__.py,sha256=VM7Nfqn5k3_iVUn1BxkfhhXPa4JWjrdPMmyc1V_uDRA,252
+simple_print/art_enum.py,sha256=P0J4o6bH4GLJRY66yQ_zXcFsV_vOF5h1-S_xAXI3nUs,17600
+simple_print/consts.py,sha256=sG_KHxJoCqYd3L1AUoVcPz1j4r-zUCInTPKFsAHi3vg,1123
+simple_print/spprint.py,sha256=dR4egNevzHjaItMXhwQ8VwyUX53eYQvqp1MuSSnsH5o,276
+simple_print/sprint.py,sha256=VzXXaLiKBBRdxzGGElFqwQGHhZJJr6sxnQqF0lDhsZw,8099
+simple_print/sprint_err.py,sha256=w22jm4qylqXrXrJ44IY7HSF3kJgXB3LWYzB8xKyILBE,1241
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_art_enum.py,sha256=glfeg1qU1OztpOJfDKTaNw6g7j5aQpFcifHvUnjJrP8,177
+tests/test_spprint.py,sha256=wn9lOQ3QT-k0JvA4XdYXckihksuMfr3atfWpy-5ZEmM,188
+tests/test_sprint.py,sha256=rFUfrchbTf58R15vGFtjuUv_b3udnInvFR6kw_jgXS0,4228
+tests/test_sprint_err.py,sha256=7ns_aPcSOFwlEjxGYmZ-vo-B2zALAafce2XH8LCUoU0,438
+simple_print-2.2.4.dist-info/LICENSE,sha256=D2EVTI_UztUmQIzfsNpaXSuKgHLnBVY9Y56G77ZBFv0,1094
+simple_print-2.2.4.dist-info/METADATA,sha256=tZSSQYAGFfEglOG8WjpNrt7QtGZ1shuUtLM0abaMq48,3337
+simple_print-2.2.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+simple_print-2.2.4.dist-info/top_level.txt,sha256=OGpnSVvA_m-9WO1AhBFgRklKWQKPkV3CEQ-gekyvDIc,19
+simple_print-2.2.4.dist-info/RECORD,,
