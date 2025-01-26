@@ -1,0 +1,2 @@
+[console_scripts]
+langflow_install = langflow_install.langflow_install:install_langflow
