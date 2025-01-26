@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: skill-soundcloud
+Version: 0.1.6a1
+Summary: ovos skill plugin
+Home-page: https://github.com/OpenVoiceOS/skill-ovos-soundcloud
+Author: JarbasAi
+Author-email: jarbasai@mailfence.com
+License: Apache-2.0
+Keywords: ovos skill plugin
+License-File: LICENSE.md
+
+# <img src='./ui/soundcloud.png' width='50' height='50' style='vertical-align:bottom'/> Soundcloud Skill
+
+soundcloud skill for OCP
+
+## About
+
+search soundcloud by voice!
+
+![](./gui.png)
+
+## Examples
+* "play piratech in soundcloud"
+* "play piratech nuclear chill"
+
+## Credits
+JarbasAl
+
+## Category
+**Entertainment**
+
+## Tags
+- soundcloud
+- OCP
+- common play
+- music
