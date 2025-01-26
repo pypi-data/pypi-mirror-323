@@ -1,0 +1,9 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/build.py,sha256=_4D1jw_H_qkH58jqviHNSFhh35TBPFCXjEZdBeBWlHA,24911
+src/etlx.py,sha256=gEKXKjn8ymfeO461ZP0rDSRi1VLh1lMi6JnqdTZx_oc,30273
+src/go.py,sha256=gLMUMTqGrdQke8Go8HeNOyG2thhwlRPSaGfONpmZrKQ,56090
+pyetlx-0.1.1.dist-info/LICENSE,sha256=8yiblASC16LFlQeoJGVUhoiS3VG1VlEVcaKg_k-z-TI,1092
+pyetlx-0.1.1.dist-info/METADATA,sha256=xP74wtGx3g0wB6nVmMGD4HCOkxVFaFLB1-y5Qjgdo5k,866
+pyetlx-0.1.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+pyetlx-0.1.1.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+pyetlx-0.1.1.dist-info/RECORD,,
