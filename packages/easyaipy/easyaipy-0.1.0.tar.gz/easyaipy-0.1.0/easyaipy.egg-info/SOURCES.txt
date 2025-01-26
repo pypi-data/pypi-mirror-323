@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+easyaipy/__init__.py
+easyaipy/main.py
+easyaipy.egg-info/PKG-INFO
+easyaipy.egg-info/SOURCES.txt
+easyaipy.egg-info/dependency_links.txt
+easyaipy.egg-info/requires.txt
+easyaipy.egg-info/top_level.txt
