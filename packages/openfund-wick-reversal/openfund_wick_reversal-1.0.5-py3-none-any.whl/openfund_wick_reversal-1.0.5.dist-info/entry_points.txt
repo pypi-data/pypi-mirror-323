@@ -1,0 +1,3 @@
+[console_scripts]
+openfund-wick-reversal=wick_reversal.main:main
+
