@@ -1,0 +1,43 @@
+Metadata-Version: 2.2
+Name: pyionoseis
+Version: 0.0.1
+Summary: A python package for modeling and anlaysis of coseismic ionospheric disturbances
+Author-email: Dylan Mikesell <dylan.mikesell@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/dylanmikesell/pyionoseis
+Keywords: pyionoseis
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: numpy
+Provides-Extra: all
+Requires-Dist: pyionoseis[extra]; extra == "all"
+Provides-Extra: extra
+Requires-Dist: pandas; extra == "extra"
+
+# PyIonoSeis
+
+
+[![image](https://img.shields.io/pypi/v/pyionoseis.svg)](https://pypi.python.org/pypi/pyionoseis)
+[![image](https://img.shields.io/conda/vn/conda-forge/pyionoseis.svg)](https://anaconda.org/conda-forge/pyionoseis)
+
+
+**A python package for modeling and anlaysis of coseismic ionospheric disturbances**
+
+
+-   Free software: MIT License
+-   Documentation: https://dylanmikesell.github.io/pyionoseis
+    
+
+## Features
+
+-   TODO
