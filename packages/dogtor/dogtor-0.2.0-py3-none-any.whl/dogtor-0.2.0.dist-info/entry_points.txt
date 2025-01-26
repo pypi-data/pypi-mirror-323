@@ -1,0 +1,4 @@
+[console_scripts]
+dogtor-env=dogtor.env:create
+dogtor-project=dogtor.project:main
+
