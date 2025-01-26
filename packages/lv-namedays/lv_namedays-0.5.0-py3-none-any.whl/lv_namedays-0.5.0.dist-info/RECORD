@@ -1,0 +1,9 @@
+lv_namedays/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lv_namedays/nameday.py,sha256=-sJXPNvy8V75HzaeA0YlOJKeL-GfRQTTh3FMz_TbcqE,3568
+lv_namedays/data/paplasinatais_saraksts.json,sha256=2U19ntGL6BZEPZNIc74hXY8d2m_4HB0XLTpzScEDUM0,95024
+lv_namedays/data/tradic_vardadienu_saraksts.json,sha256=ZnnnlPLIQxWa-AyzlhJU8sDxJHo041KddmTAoCJIf3Y,22163
+lv_namedays-0.5.0.dist-info/METADATA,sha256=e_5g28FXkQQ5tYzndgK0ACM7ZVLruIeRq1bl18gTkDI,1991
+lv_namedays-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+lv_namedays-0.5.0.dist-info/entry_points.txt,sha256=oK-7vikmNPqmjq19nOqaKTwsvfnfdSya4OR9u4AkC5w,53
+lv_namedays-0.5.0.dist-info/licenses/LICENSE,sha256=djIVR7om6zPkHQCDS1lKKLkuzj9P-Js5FknRy8z891I,1065
+lv_namedays-0.5.0.dist-info/RECORD,,
