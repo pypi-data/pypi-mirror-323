@@ -1,0 +1,43 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    #"setuptools_scm[toml] >= 4, <6",
+    "wheel >= 0.29.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "water_column_sonar_processing"
+version = "25.1.2"
+authors = [
+  { name="Rudy Klucik", email="rudy.klucik@noaa.gov" },
+]
+description = "A processing tool for water column sonar data."
+readme = "README.md"
+#requires-python = ">=3.10"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/CI-CMG/water-column-sonar-processing"
+Issues = "https://github.com/CI-CMG/water-column-sonar-processing/issues"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["requirements_dev.txt"] }}
+
+#[tool.setuptools_scm]
+#fallback_version = "unknown"
+#local_scheme = "node-and-date"
+#write_to = "_water_column_sonar_processing_version.py"
+#write_to_template = 'version = "{version}"'
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+[tool.pre-commit-hooks.bandit]
+exclude = ["*/tests/*"]
