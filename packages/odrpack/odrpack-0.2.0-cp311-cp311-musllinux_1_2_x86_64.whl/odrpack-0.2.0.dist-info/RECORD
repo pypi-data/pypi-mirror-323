@@ -1,0 +1,16 @@
+odrpack.libs/libgcc_s-a0b57c20.so.1,sha256=XPAr2giQZFaQKDEig3i_sQM7zfbaGkuhwmZ9ryvu-Vk,148041
+odrpack.libs/libstdc++-0d31ccbe.so.6.0.32,sha256=QyUTnI2umnGgPmNJ-6F_BVIAJnq6-70cNoEWpma6EFQ,3494521
+odrpack.libs/libquadmath-2ce5a29f.so.0.0.0,sha256=1wBSZXfNozJ-X6g11Gjaimnng7VoZhGbAFnp7gKvmL4,293489
+odrpack.libs/libopenblasp-r0-79c4374e.3.28.so,sha256=Gt3fLyLK4FuVoiXbxe_f5uR7lWWwwKTMa-XeI9nyPwI,33060881
+odrpack.libs/libgfortran-a63d0bbe.so.5.0.0,sha256=_lAhX2HGq403xGW24BB4GZT3oy2-T_gmFxmf8fgVs7c,3187713
+odrpack/__odrpack.cpython-311-x86_64-linux-musl.so,sha256=U_Hhl7v8tPzyj6EzW7lNzlkFz9n8d4biCHq6gbEzh1k,544905
+odrpack/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odrpack/__odrpack.pyi,sha256=oKeFk2pRB1quvtJdoPajDX6J0_hnQT9JeLdot7ZPrNY,7707
+odrpack/exceptions.py,sha256=iECKz7S7m6FiVf_BB0rBJK4s04uyyAZxybx9p1R5pkI,242
+odrpack/driver.py,sha256=t_o1I1eLXFEXQYacRzBS24af4zsMna1H2sc3ICJYmy4,25163
+odrpack/__init__.py,sha256=0gd_kZPIfzlGA2OSKlmf9pIoYkTFvgol4umjongNy7Q,820
+odrpack/result.py,sha256=sIqCYoHT3BoovMVln5vaRxVSMmA5tzvZKTKl4-mLLXE,2636
+odrpack-0.2.0.dist-info/LICENSE,sha256=r4K4aEA_DZps6F7opJ4JOCNiXfUogVkS38C5XL0sGCk,1066
+odrpack-0.2.0.dist-info/WHEEL,sha256=dDeXr7ZmFbKSogF3t3EWEOf2eaRLXGl3XEediExIMRE,98
+odrpack-0.2.0.dist-info/RECORD,,
+odrpack-0.2.0.dist-info/METADATA,sha256=5fvjFUSf5b8XUJckotyaTG5fFfSAHVS88kGQFl6NlvU,4996
