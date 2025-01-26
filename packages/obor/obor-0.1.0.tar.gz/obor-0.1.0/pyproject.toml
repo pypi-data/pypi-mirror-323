@@ -1,0 +1,10 @@
+[project]
+name = "obor"
+version = "0.1.0"
+description = "A package containing pytorch utilities"
+authors = [{ name = "doddy-s", email = "doddy.s@protonmail.com" }]
+license = { text="MIT" }
+dependencies = [
+    "torch>=2.5.1",
+    "tqdm>=4.67.1",
+]
