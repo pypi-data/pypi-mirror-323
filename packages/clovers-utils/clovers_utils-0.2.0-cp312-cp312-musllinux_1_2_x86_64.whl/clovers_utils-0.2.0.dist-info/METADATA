@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: clovers-utils
+Version: 0.2.0
+Author-email: KarisAya <1048827424@qq.com>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: linecard
+Requires-Dist: pillow<12.0.0,>=11.1.0; extra == "linecard"
+Requires-Dist: fonttools<5.0.0,>=4.55.6; extra == "linecard"
+Provides-Extra: tools
+Requires-Dist: numpy<3.0.0,>=2.2.2; extra == "tools"
+Requires-Dist: httpx<0.29.0,>=0.28.1; extra == "tools"
+Provides-Extra: all
+Requires-Dist: pillow<12.0.0,>=11.1.0; extra == "all"
+Requires-Dist: fonttools<5.0.0,>=4.55.6; extra == "all"
+Requires-Dist: numpy<3.0.0,>=2.2.2; extra == "all"
+Requires-Dist: httpx<0.29.0,>=0.28.1; extra == "all"
+
+# clovers-utils
+
+clovers 通用小工具
