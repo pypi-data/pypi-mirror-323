@@ -1,0 +1,2 @@
+[console_scripts]
+service-template = service_template:main

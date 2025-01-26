@@ -1,0 +1,81 @@
+Metadata-Version: 2.4
+Name: service-template
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Francis Echesi <echesisuccess01@gmail.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Requires-Dist: requests>=2.32.3
+Requires-Dist: typer>=0.15.1
+Requires-Dist: uv>=0.5.23
+Description-Content-Type: text/markdown
+
+# **Service Template Project**
+
+## A Python-based service template designed to streamline the creation of scalable, well-structured microservices. This project provides a robust starting point for building RESTful APIs, complete with best practices for code organization, logging, dependency management, and more.
+
+## **Features**
+
+- 📂 **Clean Architecture**: Predefined folder structure for easy scalability and maintainability.
+- ⚙️ **Customizable CLI**: Includes a CLI for generating services with click and rich formatting.
+- 🔧 **Built-in Tools**:
+  - FastAPI for API development.
+  - SQLModel for database interactions.
+  - Uvicorn for fast and efficient server hosting.
+- 📜 **Logging**: Centralized and configurable logging system.
+- 🧪 **Pre-configured Testing**: Pytest setup with sample tests.
+- 🐳 **Dockerized**: Ready-to-use `Dockerfile` for containerized deployments.
+- 🛠️ **CI/CD Ready**: Includes a `Makefile` and GitHub pre-commit hooks for formatting and linting (`isort`, `black`, `mypy`, `flake8`).
+- 📖 **Configuration**: Environment management via `.env` files.
+
+---
+
+## **Getting Started**
+
+### **Prerequisites**
+
+1. Python 3.10+ installed.
+
+---
+
+### **Installation**
+
+1. Clone the repository:
+
+   ```bash
+   python -m pip install service-template
+   ```
+
+---
+
+### **Running the template**
+
+1. Set up a virtual environment:
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+2. Clone the repository:
+
+   ```bash
+   service template init
+   ```
+
+---
+
+## **Contributing**
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feature/your-feature`.
+3. Commit your changes: `git commit -m "Add your feature"`.
+4. Push to the branch: `git push origin feature/your-feature`.
+5. Open a pull request.
+
+---
