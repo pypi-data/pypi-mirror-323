@@ -1,0 +1,13 @@
+soliloquy/__init__.py,sha256=Fi7aBRSv1DHDXqSDy9bq502m3WyTejkaTm1Up8z4cCY,433
+soliloquy/cli.py,sha256=DGyAYQUQgvb0GdqPaIVix3pwsY9hFoa3_DpbKZiz0O0,15775
+soliloquy/poetry_ops.py,sha256=C9286Od006u8AjbuZ2ymqCn1sfB3-yl3SKvOov3VwmE,10385
+soliloquy/pyproject_ops.py,sha256=X6Q6Z6k8sczdTVTH_YJdcm7hdGNgOiyEQoc0C3D9x5U,4585
+soliloquy/recursive_build.py,sha256=0ywLGEAuS-2p_s5L5qHomsB5IZhk2VeIH4_4jy8LOT0,4629
+soliloquy/remote_ops.py,sha256=TphHWno7ky7grB-y1M-ev2ELFxixsZvitJGG0CP0BFE,6934
+soliloquy/test_ops.py,sha256=diIMT2OlYZOenbbN-Il6sB9XBxdjaKre42ggEzibt0Q,7126
+soliloquy/version_ops.py,sha256=fAYU9RD4ez1kzRJeiE7J0g3inA0rgnxXLHe0JiTx7Hc,6028
+soliloquy-0.1.1.dev6.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+soliloquy-0.1.1.dev6.dist-info/METADATA,sha256=2MGoB3bdj4yszDJFeebbUVHws6pKFuaf6MuJgRH6da4,573
+soliloquy-0.1.1.dev6.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+soliloquy-0.1.1.dev6.dist-info/entry_points.txt,sha256=uBbXvL6bcx-kn3agj2qUBt77knUVRNiBIslMWKfyxf4,48
+soliloquy-0.1.1.dev6.dist-info/RECORD,,

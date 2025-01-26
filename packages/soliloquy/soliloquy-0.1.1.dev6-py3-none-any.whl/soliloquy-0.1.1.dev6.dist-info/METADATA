@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: soliloquy
+Version: 0.1.1.dev6
+Summary: A CLI for managing a monorepo.
+License: Apache2
+Author: Jacob Stewart
+Author-email: jacob@swarmauri.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: packaging
+Requires-Dist: requests
+Requires-Dist: tomlkit
