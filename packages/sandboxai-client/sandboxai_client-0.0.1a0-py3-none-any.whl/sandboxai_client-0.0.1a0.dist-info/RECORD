@@ -1,0 +1,10 @@
+sandboxai/__init__.py,sha256=_wzkeVSpSMYyOp-qwLYYCa1-L84cZ5FhlUIbXHiOll0,28
+sandboxai/sandbox.py,sha256=kWbixlnfxUGvuYjnp4IXme5b4i-iESPJ12btN0bPySQ,2411
+sandboxai/utils.py,sha256=kvcE3cerV2QODEL6BIVGAtJ2_2uvcNJb0DkJ1NY-c6c,965
+sandboxai/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sandboxai/api/v1.py,sha256=JzgcuTngJDG5PEokiTi9cO0rZdurz6fo4ZqFdp0YsuQ,2371
+sandboxai/client/v1.py,sha256=T78L5Y5G3W8jSkP4kgpe88fgNPoK5tladYVQBNmYsW0,5521
+sandboxai/test/e2e/test_client_v1.py,sha256=YP5MUWylalWLgZls5J_InGpjdVqkjROp9jl4YjojWo0,4433
+sandboxai_client-0.0.1a0.dist-info/METADATA,sha256=b10xz6Q0JZXCa3iE9YWBsT-YmDoaZ-GECr2F-HuqBp0,390
+sandboxai_client-0.0.1a0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sandboxai_client-0.0.1a0.dist-info/RECORD,,
