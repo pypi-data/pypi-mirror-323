@@ -1,0 +1,85 @@
+Metadata-Version: 2.2
+Name: class_inspector
+Version: 0.3.1
+Summary: class inspector package
+Author: Ed Cuss
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: attrs>=22.2.0
+Requires-Dist: libcst<2,>=1.5.1
+Requires-Dist: python-dotenv>=0.20.0
+Requires-Dist: black>=24
+Requires-Dist: isort>=5
+Provides-Extra: test
+Requires-Dist: numpy>=1.19.5; extra == "test"
+Requires-Dist: pandas; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: hypothesis; extra == "test"
+Requires-Dist: pre-commit; extra == "test"
+Requires-Dist: tox; extra == "test"
+Provides-Extra: lint
+Requires-Dist: ruff; extra == "lint"
+Requires-Dist: pylint>=3.0.1; extra == "lint"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Provides-Extra: dev
+Requires-Dist: class_inspector[docs,lint,test]; extra == "dev"
+
+# Read the docs
+[class-inspector API docs](https://second-ed.github.io/class_inspector/)
+
+# Custom Validators
+Extension of the validators from the attrs library, these allow the use of type checking the constituents of a collection.
+
+### Example attrs validator and the problem this is a solution to*:
+```python
+possible: list = attr.ib(validator=[instance_of(list)])
+not_possible: List[int] = attr.ib(validator=[instance_of(List[int])])
+```
+
+This means that we can't validate the members of a collection. However, with the custom validators we can do this:
+
+```python
+now_possible: Collection = attr.ib(validator=[validate_generic_of_type(Collection, float)])
+```
+
+Meaning we can pass in any object that implements the following dunder methods `[__contains__, __iter__, __len__]` 
+AND validate that each member of the collection is a float. This is possible for other types too.
+
+*on closer inspection (ironic given this repo's name) of the attrs API reference this is a solved problem with `deep_iterable()` and `deep_mapping()`. attrs: 2, me: 0
+
+# generated repo map
+```
+└── class_inspector
+    ├── docs
+    │   └── source
+    │       └── conf.py
+    ├── src
+    │   └── class_inspector
+    │       ├── __init__.py
+    │       ├── _logger.py
+    │       ├── create_tests.py
+    │       ├── cst_walkers.py
+    │       ├── custom_validators.py
+    │       ├── data_structures.py
+    │       ├── guard_conditions.py
+    │       ├── transform.py
+    │       └── utils.py
+    ├── tests
+    │   ├── __init__.py
+    │   ├── conftest.py
+    │   ├── test_create_tests.py
+    │   ├── test_custom_validators.py
+    │   ├── test_guard_conditions.py
+    │   ├── test_transform.py
+    │   └── test_utils.py
+    ├── README.md
+    ├── pyproject.toml
+    └── setup.py
+::
+```
