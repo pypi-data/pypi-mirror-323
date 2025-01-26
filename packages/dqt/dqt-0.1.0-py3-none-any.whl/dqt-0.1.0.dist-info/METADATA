@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: dqt
+Version: 0.1.0
+Summary: 
+Author: Matt von Rohr
+Author-email: matt.vonrohr@mydata.ch
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Description-Content-Type: text/markdown
+
+# Data Quality Tool - dqt
+
+A tool to monitor and test your data.
+
+# Installation
+
+    pip install dqt
+
+
+# Publishing
+
+https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04
+
