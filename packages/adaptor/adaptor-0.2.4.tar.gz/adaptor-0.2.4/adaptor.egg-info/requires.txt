@@ -1,0 +1,14 @@
+torch>=1.7
+transformers<=4.30.2
+sentencepiece
+accelerate>=0.20.1
+
+[examples]
+comet-ml
+
+[generative]
+sacrebleu
+rouge-score
+bert-score
+fairseq
+protobuf<=3.20.1
