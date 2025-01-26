@@ -1,0 +1,12 @@
+tikara/__init__.py,sha256=pP6hPy3iL_dZtD9hndkUvj2LRO5W3zJ8PNvCJDvjf8w,351
+tikara/core.py,sha256=8dOvo9uKUoqLJliu_hdgh43MRXAJ27s8oqKvwdBTkwY,25453
+tikara/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tikara/jars/tika-app-3.0.0.jar,sha256=8sFWUz-sAE09MNMiVVux8lgaEEVYqRO_x02MSNz0VBw,55876988
+tikara/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tikara/util/java.py,sha256=9M98SDOyKGGRfp5MQb59jniRN0n_Pfl7VjuEUmb8PrM,11101
+tikara/util/misc.py,sha256=yQNT5x8JhRjFPVpQ2C8nRfk_JP8WNID9AtzKONLmFs0,560
+tikara/util/tika.py,sha256=gLpKHzN8QWwWEB3l045oMFkkIe9RJha_n0BH0j_9MC0,11938
+tikara-0.1.4.dist-info/METADATA,sha256=bUjVByDUcZnK7t9m4iJgHGxgR_hsWC7TG5ui39Wdi-g,9956
+tikara-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tikara-0.1.4.dist-info/licenses/LICENSE.txt,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+tikara-0.1.4.dist-info/RECORD,,
