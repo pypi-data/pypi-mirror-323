@@ -1,0 +1,7 @@
+mechanize
+bs4
+requests
+
+[dev]
+ruff>=0.4
+pytest
