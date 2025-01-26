@@ -1,0 +1,8 @@
+google_weather/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+google_weather/colab.py,sha256=2fBaSPUVICfp4uYkRYiFp9_23veGCe4OG9y2uLfIGgk,1181
+google_weather/lang.py,sha256=1RGC9hnvpc8LKkms8wEgYoHXXH0MWje_VY-EtlMy2tE,1154
+google_weather/weather.py,sha256=OaD7s0tty70wZ02BwNzSETciNQPIRqo-0BfjfJPYIfU,9638
+pygoogleweather-0.1.8.dist-info/METADATA,sha256=It_bYHrNMmS_PAkl-siN8btfyl5Fi9DkI5zs3U9gILs,3828
+pygoogleweather-0.1.8.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+pygoogleweather-0.1.8.dist-info/top_level.txt,sha256=8oLQWIXpwPt6pFlm2LRmDGKcAcswRYH2Ydt-PN6FIQ8,15
+pygoogleweather-0.1.8.dist-info/RECORD,,
