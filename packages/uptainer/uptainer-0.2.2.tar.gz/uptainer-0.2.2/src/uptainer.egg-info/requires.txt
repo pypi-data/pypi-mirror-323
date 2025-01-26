@@ -1,0 +1,15 @@
+GitPython
+pre_commit
+python-box
+PyYAML
+requests
+structlog
+typer
+types-PyYAML
+types-requests
+
+[dev]
+coverage
+mypy
+pytest
+ruff
