@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ps_data_science_tools
+Version: 0.2.0
+Summary: A short description of my Data Science library wil be in the future
+Home-page: https://github.com/PavelShunkevich/ps_data_science_tools.git
+Author: Pavel Shunkevich
+Author-email: pavel.shunkevich@gmail.com
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# ds_lib
+
+The development of a library  is currently in progress.
