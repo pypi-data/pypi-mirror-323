@@ -1,0 +1,122 @@
+Metadata-Version: 2.2
+Name: XTablesClient
+Version: 5.2.7
+Summary: A high-performance Python client for real-time management of XTablesServer network tables, designed for robotics and complex data-driven systems.
+Home-page: https://github.com/Kobeeeef/XTABLES
+Author: Kobe Lei
+Author-email: kobelei335@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: certifi==2024.8.30
+Requires-Dist: charset-normalizer==3.4.0
+Requires-Dist: docutils==0.21.2
+Requires-Dist: idna==3.10
+Requires-Dist: ifaddr==0.2.0
+Requires-Dist: importlib_metadata==8.5.0
+Requires-Dist: jaraco.classes==3.4.0
+Requires-Dist: jaraco.context==6.0.1
+Requires-Dist: jaraco.functools==4.1.0
+Requires-Dist: keyring==25.4.1
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: more-itertools==10.5.0
+Requires-Dist: msgpack==1.1.0
+Requires-Dist: nh3==0.2.18
+Requires-Dist: pkginfo==1.10.0
+Requires-Dist: protobuf==5.29.2
+Requires-Dist: psutil==6.1.0
+Requires-Dist: Pygments==2.18.0
+Requires-Dist: pywin32-ctypes==0.2.3
+Requires-Dist: pyzmq==26.2.0
+Requires-Dist: readme_renderer==44.0
+Requires-Dist: requests==2.32.3
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: rfc3986==2.0.0
+Requires-Dist: rich==13.9.2
+Requires-Dist: setuptools==75.1.0
+Requires-Dist: twine==5.1.1
+Requires-Dist: urllib3==2.2.3
+Requires-Dist: zipp==3.20.2
+Requires-Dist: zeroconf
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# XTablesClient
+
+**XTablesClient** is a Python client library designed to interact with the XTables server, allowing you to send and receive messages, subscribe to updates, and manage communication through ZeroMQ (ZMQ) sockets. The client supports publishing, subscribing, and retrieving various data types (strings, integers, booleans, arrays, and more) to/from the server.
+
+## Features
+
+- **Socket Communication**: Uses ZeroMQ for push, request, and subscription communication with the XTables server.
+- **Subscription Management**: Allows subscribing to specific keys or to all updates.
+- **Multiple Data Types**: Supports sending and receiving a variety of data types, including strings, integers, booleans, arrays, and raw bytes.
+- **mDNS Support**: Automatically resolves the server's IP address using Zeroconf if the hostname is not provided.
+
+## Installation
+
+To install `XTablesClient`, simply use `pip`:
+
+```bash
+pip install XTablesClient
+```
+
+## Usage
+
+### Basic Example
+
+```python
+from XTablesClient import XTablesClient
+
+# Initialize the client
+client = XTablesClient()
+
+# Publish a string message
+client.publish("some_key", b"Hello, XTables!")
+
+# Subscribe to a key and handle incoming messages
+def message_handler(message):
+    print(f"Received message for key: {message.key} with value: {message.value}")
+
+client.subscribe("some_key", message_handler)
+
+# Retrieve data
+data = client.getString("some_key")
+print(data)
+```
+
+### Available Methods
+
+#### Publishing Data
+- `publish(key: str, value: str)`: Publish a string value to the server.
+- `putString(key: str, value: str)`: Put a string value in the XTable.
+- `putInteger(key: str, value: int)`: Put an integer value.
+- `putBoolean(key: str, value: bool)`: Put a boolean value.
+
+#### Subscribing to Updates
+- `subscribe(key: str, consumer: Callable)`: Subscribe to updates for a specific key.
+- `subscribe_all(consumer: Callable)`: Subscribe to updates for all keys.
+
+#### Retrieving Data
+- `getString(key: str)`: Get a string value from the server.
+- `getInteger(key: str)`: Get an integer value.
+- `getBoolean(key: str)`: Get a boolean value.
+- `getArray(key: str)`: Get an array of values.
+
+## Documentation
+
+- **XTablesClient** is built with simplicity in mind and uses ZeroMQ for efficient communication with the XTables server. It can be easily extended or modified for custom use cases.
+- The package uses **Zeroconf** to automatically discover the server in your network if the IP is not provided.
+
+## License
+
+`XTablesClient` is licensed under the MIT License. See the LICENSE file for more details.
