@@ -1,0 +1,42 @@
+Metadata-Version: 2.3
+Name: transdoc
+Version: 1.0.1
+Summary: Transform your documentation by embedding results from Python function calls
+License: MIT
+Keywords: documentation,source,transform,parse,pre-processor
+Author: Maddy Guthridge
+Author-email: hello@maddyguthridge.com
+Requires-Python: >= 3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Pre-processors
+Classifier: Typing :: Typed
+Provides-Extra: python
+Requires-Dist: click (>=8.1.7,<9)
+Requires-Dist: colored (>=2.2.4,<3.0.0)
+Requires-Dist: transdoc-python (>=0.1.0,<1) ; extra == "python"
+Project-URL: Bug Tracker, https://github.com/MaddyGuthridge/transdoc/issues
+Project-URL: Documentation, https://maddyguthridge.github.io/transdoc
+Project-URL: Homepage, https://maddyguthridge.github.io/transdoc
+Project-URL: Repository, https://github.com/MaddyGuthridge/transdoc
+Description-Content-Type: text/markdown
+
+# 🏳️‍⚧️ Transdoc 🏳️‍⚧️
+
+Transform your documentation by embedding results from Python function calls.
+
+## Installation
+
+`pip install transdoc`
+
+To install handlers for Python, run `pip install transdoc[python]` instead.
+
+## Documentation
+
+View the documentation at <https://maddyguthridge.github.io/transdoc>.
+
