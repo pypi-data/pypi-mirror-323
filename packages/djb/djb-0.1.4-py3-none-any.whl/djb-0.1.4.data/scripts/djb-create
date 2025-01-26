@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+DJB_LIB="${DJB_LIB:-djb}"
+
+# Ensure uv is installed.
+if ! command -v "uv" >/dev/null 2>&1; then
+    echo "Installing uv..."
+    curl -LsSf https://astral.sh/uv/install.sh | sh || {
+        echo "Failed to install uv" >&2
+        exit 1
+    }
+fi
+
+# Create project.
+DJB_PROJECT_DIR_FILE=$(mktemp --suffix "-djb-project-dir.txt")
+uvx --from "$DJB_LIB" -- djb create --project-dir-file "$DJB_PROJECT_DIR_FILE" || exit 1
+DJB_PROJECT_DIR=$(cat "$DJB_PROJECT_DIR_FILE")
+
+# Suggest next steps for when this script isn't sourced.
+( return 0 2>/dev/null ) || {
+    echo "✓ Success! Your project has been created in $DJB_PROJECT_DIR"
+    echo "→ Next, to activate your project in the current shell, run:"
+    echo "cd \"$DJB_PROJECT_DIR\" && source .djbrc"
+    echo
+    echo "* Tip: djb does this automatically when sourced:"
+    echo "source <(curl -LsSf create.djb.sh)"
+    exit 0
+}
+
+#
+# The rest only applies when this script is sourced.
+#
+
+# Switch to project dir.
+cd "$DJB_PROJECT_DIR" || {
+    echo "Error: failed to switch to project directory '$DJB_PROJECT_DIR'."
+}
+echo "✓ Switched to '$DJB_PROJECT_DIR'."
+
+# Configure shell.
+echo "→ Sourcing .djbrc..."
+source .djbrc
+
+# That's it!
+echo "✓ Done!"
+
+# Cleanup functions and variables.
+unset djb_run
+unset djb_command_exists
+unset DJB_PROJECT_DIR_FILE
+# Note: We do not clean DJB_PROJECT_DIR because it's exported by .djbrc itself.
