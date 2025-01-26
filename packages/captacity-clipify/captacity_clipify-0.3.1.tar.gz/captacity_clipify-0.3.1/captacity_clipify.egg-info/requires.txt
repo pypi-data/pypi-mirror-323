@@ -1,0 +1,6 @@
+moviepy
+pillow
+openai
+
+[local_whisper]
+openai-whisper
