@@ -1,0 +1,174 @@
+Metadata-Version: 2.2
+Name: once-webscraper
+Version: 0.3.0
+Summary: Uma biblioteca simples para web scraping de fornecedores
+Home-page: https://github.com/nyronous/once-webscraper
+Author: Nyronous
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4>=4.9.3
+Requires-Dist: requests>=2.25.1
+Requires-Dist: lxml>=4.9.0
+Requires-Dist: urllib3>=1.26.0
+Requires-Dist: certifi>=2021.10.8
+Requires-Dist: charset-normalizer>=2.0.0
+Requires-Dist: idna>=3.3
+Requires-Dist: soupsieve>=2.3.1
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Once WebScraper
+
+Uma biblioteca simples para web scraping de fornecedores.
+
+## InstalaÃ§Ã£o
+
+```bash
+pip install once-webscraper
+```
+
+## Uso BÃ¡sico
+
+```python
+# Importando a biblioteca
+from once_webscraper import get_belli
+
+# URL de exemplo de um produto da Belli Kids
+url = "https://www.bellikids.com.br/conjunto-junino-banana-club-sofia-xadrez-preto"
+
+# Extrair todos os dados (comportamento padrÃ£o)
+produto_completo = get_belli(url)
+
+# Extrair apenas imagens
+produto_imagens = get_belli(url, tipo="images")
+
+# Extrair apenas informaÃ§Ãµes bÃ¡sicas
+produto_basico = get_belli(url, tipo="basic_info")
+
+# Extrair mÃºltiplos tipos de dados
+produto_parcial = get_belli(url, tipo=["basic_info", "stock"])
+
+# Exemplo de uso com tratamento de erros
+try:
+    # Acessando os dados
+    nome = produto_completo["produto"]["informacoes_basicas"]["nome"]
+    preco = produto_completo["produto"]["informacoes_basicas"]["preco"]
+    marca = produto_completo["produto"]["informacoes_basicas"]["marca"]
+    
+    # Acessando estoque
+    estoque_total = produto_completo["produto"]["estoque"]["total"]
+    variacoes = produto_completo["produto"]["estoque"]["variacoes"]
+    
+    # Acessando imagens
+    imagens = produto_completo["produto"]["midia"]["imagens"]
+    
+    # Exemplo de impressÃ£o dos dados
+    print(f"Nome: {nome}")
+    print(f"PreÃ§o: R$ {preco:.2f}")
+    print(f"Marca: {marca}")
+    print(f"Estoque Total: {estoque_total}")
+    
+    # Imprimindo variaÃ§Ãµes disponÃ­veis
+    print("\nVariaÃ§Ãµes disponÃ­veis:")
+    for var in variacoes:
+        print(f"Tamanho {var['tamanho']}: {var['quantidade']} unidades")
+
+except URLInvalidaError as e:
+    print(f"Erro: {e}")
+except Exception as e:
+    print(f"Erro ao extrair dados: {e}")
+```
+
+## Tipos de ExtraÃ§Ã£o DisponÃ­veis
+
+- `"all"`: Extrai todos os dados (padrÃ£o)
+- `"basic_info"`: Apenas informaÃ§Ãµes bÃ¡sicas (nome, SKU, marca, preÃ§o)
+- `"description"`: Apenas descriÃ§Ã£o
+- `"images"`: Apenas imagens
+- `"stock"`: Apenas estoque
+
+## Formato do Retorno
+
+O retorno Ã© um dicionÃ¡rio que contÃ©m apenas as seÃ§Ãµes solicitadas. Por exemplo:
+
+### ExtraÃ§Ã£o Completa (`tipo="all"`):
+```python
+{
+    "produto": {
+        "informacoes_basicas": {
+            "nome": str,
+            "sku": str,
+            "marca": str,
+            "preco": float
+        },
+        "descricao": {
+            "texto": str
+        },
+        "midia": {
+            "imagens": {
+                "Image_1": str,  # URL da imagem
+                "Image_2": str,
+                # ...
+            }
+        },
+        "estoque": {
+            "total": int,
+            "variacoes": [
+                {
+                    "sku": str,
+                    "tamanho": str,
+                    "quantidade": int
+                },
+                # ...
+            ]
+        },
+        "metadata": {
+            "fonte": str,
+            "url_origem": str,
+            "data_extracao": str  # ISO format
+        }
+    }
+}
+```
+
+### ExtraÃ§Ã£o Parcial (exemplo com `tipo="images"`):
+```python
+{
+    "produto": {
+        "midia": {
+            "imagens": {
+                "Image_1": str,  # URL da imagem
+                "Image_2": str,
+                # ...
+            }
+        },
+        "metadata": {
+            "fonte": str,
+            "url_origem": str,
+            "data_extracao": str
+        }
+    }
+}
+```
+
+## Funcionalidades
+
+- ExtraÃ§Ã£o seletiva de dados (escolha quais dados extrair)
+- ValidaÃ§Ã£o automÃ¡tica de URLs
+- Retorno em formato JSON padronizado
+- Tratamento de erros para URLs invÃ¡lidas
+- ExtraÃ§Ã£o automÃ¡tica de:
+  - InformaÃ§Ãµes bÃ¡sicas (nome, SKU, marca, preÃ§o)
+  - DescriÃ§Ã£o do produto
+  - Imagens em alta resoluÃ§Ã£o
+  - Estoque por tamanho
+  - Metadados da extraÃ§Ã£o 
