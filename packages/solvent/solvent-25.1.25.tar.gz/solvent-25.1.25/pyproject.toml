@@ -1,0 +1,56 @@
+[tool.poetry]
+
+name = "solvent"
+version = "25.01.25" # <year>.<month>.<day>[.post<build>]
+description = "Kills off fake grass."
+authors = ["Solvent <solvent@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+
+python = "^3.9"
+
+pomace = "~0.12.10"
+# pomace = { path = "../pomace", develop = true }
+
+caffeine = { version = "~0.5", platform = "darwin" }
+flet = "^0.25.2"
+typer = "~0.9"
+
+[tool.poetry.dev-dependencies]
+
+autoflake = "^2.1"
+black = "^23.3"
+isort = "^5.12"
+mypy = "^1.3"
+
+pyinstaller = "*"
+
+[tool.black]
+
+quiet = true
+
+[tool.isort]
+
+profile = "black"
+
+[tool.mypy]
+
+ignore_missing_imports = true
+no_implicit_optional = true
+check_untyped_defs = true
+
+cache_dir = ".cache/mypy/"
+
+plugins = ["datafiles.plugins:mypy"]
+
+[tool.poetry.scripts]
+
+solvent = "solvent:main"
+solvent-gui = "solvent.gui:main"
+
+[build-system]
+
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
