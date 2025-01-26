@@ -1,0 +1,8 @@
+README.md
+setup.py
+UserAgentReplica/__init__.py
+UserAgentReplica/main.py
+UserAgentReplica.egg-info/PKG-INFO
+UserAgentReplica.egg-info/SOURCES.txt
+UserAgentReplica.egg-info/dependency_links.txt
+UserAgentReplica.egg-info/top_level.txt
