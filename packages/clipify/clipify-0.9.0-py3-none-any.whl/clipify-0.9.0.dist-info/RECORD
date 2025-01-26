@@ -1,0 +1,17 @@
+clipify/__init__.py,sha256=CbB2-0pMpZp8OJ0cqZzWYMooZHLLug0J-FxyAs5NxUg,781
+clipify/audio/__init__.py,sha256=AdY2QQ_TDzoR035hmxlQCaPvh4hoiKjaX7qDxDOlHAs,120
+clipify/audio/extractor.py,sha256=9g_RzS-bGUITCIkxft1bsSfmw3ZEO_EcVASxqiSps3s,2536
+clipify/audio/speech.py,sha256=UPKua09JvwZzhhjZw5mUp4DQOv44Sd89BFcitKZKXMc,3006
+clipify/core/__init__.py,sha256=qznNjUQNBi50c_tAF2e4FPr1sqYMiwO8rjXvmGCS6zQ,349
+clipify/core/ai_providers.py,sha256=XGV6E5ZTWzyHqOY1lP4-1LLraPm2YBFLB0Gl_e4ZvBo,6531
+clipify/core/clipify.py,sha256=r7v0YoHDc1Yq85nbLCHE4yAdM7BAk7FguBAs5EU78QM,8153
+clipify/core/processor.py,sha256=N_f_MFnQfll3M1CO_XsTM-9AwXBGQDYKlrmF2XhGabo,9691
+clipify/core/text_processor.py,sha256=7a5dyLBIlB-K2cPtEo-vFM6AmP2r-DiGR2_2Qd2_s9k,22719
+clipify/video/__init__.py,sha256=glElfwGzxSU6Bx9YDGLxcVMoDd2w1g_uRKqSKoVfd-w,175
+clipify/video/converter.py,sha256=cjebuh7_iEbdrXGY82i2PS-gh3sb8HMHvEeECpqAF2o,4285
+clipify/video/cutter.py,sha256=7mVzdueCF5PBcx2U8HDQFBKr3W_5uEm_fwp3MPBEtu0,4069
+clipify/video/processor.py,sha256=0ZEv7CQop7hNW23p1T7s1WgL83_UTpwYU9G93KHNfD0,5682
+clipify-0.9.0.dist-info/METADATA,sha256=BE8Os6L90Jh2dKJ8EaOdFJzpGk2C0GZHytQcbnb6A2M,7098
+clipify-0.9.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+clipify-0.9.0.dist-info/top_level.txt,sha256=ASjJDTokjCs4gMSlxot5lZm9fqagveBjXtqNz32GAQk,8
+clipify-0.9.0.dist-info/RECORD,,
