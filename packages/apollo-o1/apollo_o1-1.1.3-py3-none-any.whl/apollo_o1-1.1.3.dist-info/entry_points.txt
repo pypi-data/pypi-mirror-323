@@ -1,0 +1,2 @@
+[console_scripts]
+apollo = apollo.main:apollo
