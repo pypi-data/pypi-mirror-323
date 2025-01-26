@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+combined_bukmacherska.egg-info/PKG-INFO
+combined_bukmacherska.egg-info/SOURCES.txt
+combined_bukmacherska.egg-info/dependency_links.txt
+combined_bukmacherska.egg-info/top_level.txt
