@@ -1,0 +1,58 @@
+[project]
+name = "linkedin_influencer_mcp"
+version = "0.1.1"
+description = "LinkedIn influencer automation with MCP"
+requires-python = ">=3.9"
+authors = [
+    {name = "Shrey Shah", email = "shrey.shah@vivun.com"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+keywords = ["linkedin", "automation", "influencer", "mcp"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "linkedin-api>=2.0.0",
+    "fastmcp>=0.4.1",
+    "playwright>=1.41.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=4.9.0",
+    "mcp[cli]>=1.0.0",
+    "langchain_groq>=0.1.0",
+    "pydantic>=2.5.2",
+    "uvicorn>=0.24.0",
+    "langchain_google_genai>=0.0.1",
+    "langchain_openai>=0.0.1"
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+# A regex preceded with ^/ will apply only to files and directories
+# in the root of the project.
+^/docs
+'''
+
+[tool.pylint.messages_control]
+disable = [
+    "broad-exception-raised",
+    "logging-fstring-interpolation",
+    "redefined-builtin",
+    "missing-module-docstring",
+    "missing-function-docstring",
+    "missing-class-docstring",
+] 
