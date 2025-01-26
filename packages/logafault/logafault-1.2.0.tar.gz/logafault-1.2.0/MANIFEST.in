@@ -1,0 +1,2 @@
+include README.md
+exclude tests/* requirements.in dev-requirements.in requirements.txt requirements-dev.txt .flake8 .gitignore Makefile LICENSE
