@@ -1,0 +1,8 @@
+ntruprime/__init__.py,sha256=STYXzUK734ily9_MB9X6RD_2p916zeXfP05dFaeGhlk,925
+ntruprime/_lib.py,sha256=xADidkivmLpeqEoKOi_KeDJEEBc2TaajREdmU2WqLDs,467
+ntruprime/kem.py,sha256=bGqkYVDb3EEd8z776i-Sp4r2xhZm5TlaAyKC-Z5YAWo,3445
+ntruprime-20241021.4.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+ntruprime-20241021.4.dist-info/METADATA,sha256=wdXH23BSvVITO0M5EXoKcfM_fZOO4AhkCkWDaQoK6tc,9063
+ntruprime-20241021.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+ntruprime-20241021.4.dist-info/top_level.txt,sha256=uWbEIdUB6QZc8DMPUEqWIS-gusLnoJ6yoRquaT8_WXE,10
+ntruprime-20241021.4.dist-info/RECORD,,
