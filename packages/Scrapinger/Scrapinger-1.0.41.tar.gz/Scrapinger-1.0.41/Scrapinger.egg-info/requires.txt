@@ -1,0 +1,7 @@
+LibHanger
+bs4==0.0.1
+selenium==3.141.0
+urllib3==1.26.7
+lxml==4.9.1
+wheel
+twine
