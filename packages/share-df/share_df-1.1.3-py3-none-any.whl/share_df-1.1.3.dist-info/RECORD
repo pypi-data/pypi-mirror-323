@@ -1,0 +1,10 @@
+share_df/__init__.py,sha256=lfD-q5Kye5PXS75E7HWoLKsjH9NFSYDxcdSvSQikKWU,879
+share_df/models.py,sha256=k29CLh2N4CdESn9AEWwOc49ItkRmwkSGSgUU31YN2fE,126
+share_df/server.py,sha256=e1QrOXZxlCxT4WFHuQPxcFDpnS0YOAMeWu9C1SbWz_0,3971
+share_df/static/css/styles.css,sha256=HpiIctVcOO2otYt0MWZapYQ_Kohojz1g3mWHRtfbrmY,4821
+share_df/static/js/editor.js,sha256=4tpYRq1Q-fKCi4uNBrapvtYzuh5Mb6v_P4mqbbQ3oJQ,7092
+share_df/static/templates/editor.html,sha256=LMYFAzQNFTh1AS9H2n9sGNDDNL9rfzdymqjtcc6W-Hc,2813
+share_df-1.1.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+share_df-1.1.3.dist-info/METADATA,sha256=ABE0OLaVzGSrWFwmVhw7mhL1bBi2KCAIz7GR2rpvSgM,5873
+share_df-1.1.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+share_df-1.1.3.dist-info/RECORD,,
