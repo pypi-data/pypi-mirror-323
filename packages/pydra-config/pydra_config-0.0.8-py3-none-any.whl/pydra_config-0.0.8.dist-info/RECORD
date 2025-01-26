@@ -1,0 +1,10 @@
+pydra/__init__.py,sha256=N_sjhkaHvDJC2_8QcCWL61AKHplKz0AV19uYH5SLj3o,579
+pydra/cli.py,sha256=_V5hgVGrR_pBFqmZh71_ikPq2NFlQzWCcMWO3W8xs3c,3634
+pydra/config.py,sha256=GQQRE-tNerwC2Vtq5xUT2zFWcLOxDWVcZGs0d--_wUk,2238
+pydra/parser.py,sha256=UF2Vj7sw1kyA3adYKgB3n9fRwsFLtOL2U2z-X2ygdyY,4654
+pydra/utils.py,sha256=PJoZ5UMwjokyy-DcJi9FtbsbqAIdzJxJtU9BcQLIdM4,4906
+pydra_config-0.0.8.dist-info/LICENSE,sha256=LKLY-wc88eDUIyU1KFN7syJcHx3XlYcUetJxv0StyBw,572
+pydra_config-0.0.8.dist-info/METADATA,sha256=SingQXgm949zY7pDNUjRgrRqN2Yo547gO-xux_WgG4U,9605
+pydra_config-0.0.8.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+pydra_config-0.0.8.dist-info/top_level.txt,sha256=D8Pw1DC98AV-QvicdBBTYXiBJAzbSKp-h946UGQotHk,6
+pydra_config-0.0.8.dist-info/RECORD,,
