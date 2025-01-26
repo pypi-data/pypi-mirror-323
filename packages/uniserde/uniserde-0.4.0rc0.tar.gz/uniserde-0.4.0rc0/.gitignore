@@ -1,0 +1,17 @@
+# Python Cache Files
+__pycache__
+*.pyc
+*.pyo
+
+# Rye
+/.venv
+/dist
+/requirements-dev.lock
+/requirements.lock
+
+# Editor Files
+/.vscode
+
+# Log files
+/logs
+
