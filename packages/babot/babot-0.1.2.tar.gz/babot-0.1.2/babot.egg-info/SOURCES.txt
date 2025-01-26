@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+babot/__init__.py
+babot/cli.py
+babot.egg-info/PKG-INFO
+babot.egg-info/SOURCES.txt
+babot.egg-info/dependency_links.txt
+babot.egg-info/requires.txt
+babot.egg-info/top_level.txt

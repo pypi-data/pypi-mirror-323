@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "babot"  # Cambia esto al nombre de tu proyecto
+version = "0.1.2"
+description = "Un framework para crear y gestionar agentes inteligentes"
+authors = [
+    { name = "Kevin Turquiñich", email = "turkienich@gmail.com" }
+]
+license = { file = "LICENSE" }
+dependencies = [
+    "rich",
+    "langchain_ollama",
+    "pytesseract",
+    "pdf2image",
+    "pypdf",
+    "python-dotenv",
+]
+readme = "README.md"
+requires-python = ">=3.8"

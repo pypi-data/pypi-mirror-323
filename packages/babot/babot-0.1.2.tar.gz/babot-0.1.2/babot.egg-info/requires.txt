@@ -1,0 +1,6 @@
+rich
+langchain_ollama
+pytesseract
+pdf2image
+pypdf
+python-dotenv
