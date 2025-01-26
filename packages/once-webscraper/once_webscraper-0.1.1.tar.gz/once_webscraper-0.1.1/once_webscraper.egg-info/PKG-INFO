@@ -1,0 +1,136 @@
+Metadata-Version: 2.2
+Name: once-webscraper
+Version: 0.1.1
+Summary: Uma biblioteca simples para web scraping de fornecedores
+Home-page: https://github.com/nyronous/once-webscraper
+Author: Nyronous
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4>=4.9.3
+Requires-Dist: requests>=2.25.1
+Requires-Dist: lxml>=4.9.0
+Requires-Dist: urllib3>=1.26.0
+Requires-Dist: certifi>=2021.10.8
+Requires-Dist: charset-normalizer>=2.0.0
+Requires-Dist: idna>=3.3
+Requires-Dist: soupsieve>=2.3.1
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Once WebScraper
+
+Uma biblioteca simples para web scraping de fornecedores.
+
+## InstalaÃ§Ã£o
+
+```bash
+pip install once-webscraper
+```
+
+## Uso BÃ¡sico
+
+```python
+# Importando a biblioteca
+from once_webscraper import get_belli
+
+# Exemplo de uso com tratamento de erros
+try:
+    # URL de exemplo de um produto da Belli Kids
+    url = "https://www.bellikids.com.br/conjunto-junino-banana-club-sofia-xadrez-preto"
+    
+    # Extrair dados do produto
+    produto = get_belli(url)
+    
+    # Acessando os dados
+    nome = produto["produto"]["informacoes_basicas"]["nome"]
+    preco = produto["produto"]["informacoes_basicas"]["preco"]
+    marca = produto["produto"]["informacoes_basicas"]["marca"]
+    
+    # Acessando estoque
+    estoque_total = produto["produto"]["estoque"]["total"]
+    variacoes = produto["produto"]["estoque"]["variacoes"]
+    
+    # Acessando imagens
+    imagens = produto["produto"]["midia"]["imagens"]
+    
+    # Exemplo de impressÃ£o dos dados
+    print(f"Nome: {nome}")
+    print(f"PreÃ§o: R$ {preco:.2f}")
+    print(f"Marca: {marca}")
+    print(f"Estoque Total: {estoque_total}")
+    
+    # Imprimindo variaÃ§Ãµes disponÃ­veis
+    print("\nVariaÃ§Ãµes disponÃ­veis:")
+    for var in variacoes:
+        print(f"Tamanho {var['tamanho']}: {var['quantidade']} unidades")
+
+except URLInvalidaError as e:
+    print(f"Erro: {e}")
+except Exception as e:
+    print(f"Erro ao extrair dados: {e}")
+```
+
+## Formato do Retorno
+
+O retorno Ã© um dicionÃ¡rio com a seguinte estrutura:
+
+```python
+{
+    "produto": {
+        "informacoes_basicas": {
+            "nome": str,
+            "sku": str,
+            "marca": str,
+            "preco": float
+        },
+        "descricao": {
+            "texto": str
+        },
+        "midia": {
+            "imagens": {
+                "Image_1": str,  # URL da imagem
+                "Image_2": str,
+                # ...
+            }
+        },
+        "estoque": {
+            "total": int,
+            "variacoes": [
+                {
+                    "sku": str,
+                    "tamanho": str,
+                    "quantidade": int
+                },
+                # ...
+            ]
+        },
+        "metadata": {
+            "fonte": str,
+            "url_origem": str,
+            "data_extracao": str  # ISO format
+        }
+    }
+}
+```
+
+## Funcionalidades
+
+- ExtraÃ§Ã£o de dados de produtos da Belli Kids
+- ValidaÃ§Ã£o automÃ¡tica de URLs
+- Retorno em formato JSON padronizado
+- Tratamento de erros para URLs invÃ¡lidas
+- ExtraÃ§Ã£o automÃ¡tica de:
+  - InformaÃ§Ãµes bÃ¡sicas (nome, SKU, marca, preÃ§o)
+  - DescriÃ§Ã£o do produto
+  - Imagens em alta resoluÃ§Ã£o
+  - Estoque por tamanho
+  - Metadados da extraÃ§Ã£o 
