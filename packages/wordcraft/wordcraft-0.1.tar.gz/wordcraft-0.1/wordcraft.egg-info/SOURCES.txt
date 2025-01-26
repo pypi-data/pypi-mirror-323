@@ -1,0 +1,9 @@
+README.md
+setup.py
+wordcraft/__init__.py
+wordcraft/wordcraft.py
+wordcraft.egg-info/PKG-INFO
+wordcraft.egg-info/SOURCES.txt
+wordcraft.egg-info/dependency_links.txt
+wordcraft.egg-info/requires.txt
+wordcraft.egg-info/top_level.txt
