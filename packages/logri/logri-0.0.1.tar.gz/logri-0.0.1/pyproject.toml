@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logri"
+version = "0.0.1"
+dependencies = []
+requires-python = ">=3.9"
+authors = [
+  { name = "Obvodny", email = "obvodny@yeah.net" },
+]
+maintainers = [
+  { name = "Obvodny", email = "obvodny@yeah.net" },
+]
+description = "logri planned to be a full-featured verilog simulator"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["verilog"]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Environment :: Console",
+  "License :: OSI Approved :: Mulan Permissive Software License v2 (MulanPSL-2.0)",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+]
+
+[project.scripts]
+logri = "logri.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["source"]

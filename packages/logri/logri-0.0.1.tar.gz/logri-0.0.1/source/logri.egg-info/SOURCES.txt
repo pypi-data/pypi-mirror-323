@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+source/logri/__init__.py
+source/logri/__main__.py
+source/logri/management.py
+source/logri.egg-info/PKG-INFO
+source/logri.egg-info/SOURCES.txt
+source/logri.egg-info/dependency_links.txt
+source/logri.egg-info/entry_points.txt
+source/logri.egg-info/top_level.txt
