@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: naiveautoml
+Version: 0.1.6
+Summary: Fast and Timeout-Free Automated Machine Learning for Multi-Class classification, Multi-Label classification, and regression.
+Home-page: https://github.com/fmohr/naiveautoml
+Author: Felix Mohr
+Author-email: mail@felixmohr.de
+License: MIT
+Keywords: AutoML,sklearn,naive,simple,multi-class,multi-label,regression,no timeouts
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+License-File: LICENSE.txt
+Requires-Dist: numpy<2
+Requires-Dist: pandas
+Requires-Dist: scikit-learn==1.5.2
+Requires-Dist: scikit-multilearn==0.2.0
+Requires-Dist: configspace==1.2.0
+Requires-Dist: scipy
+Requires-Dist: pynisher
+Requires-Dist: psutil
+Requires-Dist: tqdm
+Requires-Dist: parameterized
+Requires-Dist: openml
+Requires-Dist: lccv
