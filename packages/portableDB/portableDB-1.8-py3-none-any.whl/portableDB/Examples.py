@@ -1,0 +1,13 @@
+from main import DATABASE
+
+DTB = DATABASE('Database.db') #Name
+DTB.LogType('COLORFUL') #'BASE' - just normal cmd, 'NONE' - no comments when working
+DTB.CreateDatabase() #No comments
+
+DTB.WriteDatabase(['String value', 32], 'LOL') #[] - here should be your values, 'LOL' - cell (can be any type and value)
+
+DTB.WriteIndex('PON', 'LOL', 0) #'PON' - information, 'LOL' - cell (can be any type and value), 0 - index (only int)
+
+print(DTB.ReadDatabase('LOL', 'ALL')) #'LOL' - cell (can be any type and value), 'ALL' - index of array ('ALL' or any index of value in array, this argument can be ignored, in this case it will work like 'ALL' was given)
+
+# DTB.DeleteDatabase() #No comments
