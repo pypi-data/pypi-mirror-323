@@ -1,0 +1,3 @@
+[console_scripts]
+oremi-ohunerin=ohunerin:main
+
