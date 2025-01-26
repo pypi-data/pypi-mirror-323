@@ -1,0 +1,2 @@
+[console_scripts]
+viacent_package = viacent_package.cli:main
