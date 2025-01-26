@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "NeuroHEP"
+version = "0.1.0"
+authors = [
+    { name = "Mahsa Alidadi", email = "mahsa.alidadii@example.com" }
+]
+description = "A package for detecting Heartbeat Evoked Potentials (HEPs) in EEG signals"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.7"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "mne",
+    "neurokit2",
+    "pandas"
+]
+
+[project.urls]
+Homepage = "https://github.com/mahsaalidadi/NeuroHEP"
+Source = "https://github.com/mahsaalidadi/NeuroHEP"
+Tracker = "https://github.com/mahsaalidadi/NeuroHEP/issues"
