@@ -1,0 +1,15 @@
+MoDiSc/__init__.py,sha256=0IMDr8Di1muu5_ALYHbSnqwqLKuSkK8W7pGOQv1UJR0,47
+MoDiSc/packages.py,sha256=AEMgtKhG2PaMogzPD69N8kBZQKlSuKLBVfwswoBL23A,412
+MoDiSc/plot_mcmc_results.py,sha256=NyOZ8vnMkNaX-eLEx5zGyNzu5ojQ9RLkxJ4ZjOm6AZU,46087
+MoDiSc/run_modisc.py,sha256=e5wn_ixsjkTP9-XBqTfeJ5tlVLKsVfVFHDbjrtSbe_U,53306
+MoDiSc/functions/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+MoDiSc/functions/chisquare_test.py,sha256=qd7a5s_CuN1bpst9ipQTCHUF8DOM0gHi6EjM9t0rOZo,3991
+MoDiSc/functions/dataset_load_and_process.py,sha256=vp-_H0Wvz7AHBUMml4cw1GwqlwAMrvBT8ft88P-cMr8,41423
+MoDiSc/functions/mcmc_plot_results.py,sha256=7yjSstd6Zkm6LRZnQH5eObBB9OHFSqIKy8RuANmRTD8,24749
+MoDiSc/functions/noise_map_derive.py,sha256=effNZKnjFWnuMUEzYa4Irmcywz3HEjPCWE_YCf124XI,7324
+MoDiSc/functions/simulations.py,sha256=P4byZ8M8HUP8g6zE6Lm3pZ0KvLqKdyKV-LriMVYKon0,66132
+MoDiSc/functions/utils.py,sha256=2YAowS1xem1YrvEhNP6RZW49soz06DBEuSZqJqzxS0Q,22973
+modisc-1.0.1.dist-info/METADATA,sha256=zZEc0DGW44vdBi3D1XWSHMD6NUs1N8-KXB1ef2WMVUw,538
+modisc-1.0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+modisc-1.0.1.dist-info/top_level.txt,sha256=qROxyRdrB0JVmcboslQolr-SdMSthDR0VE8lPbJmftU,7
+modisc-1.0.1.dist-info/RECORD,,
