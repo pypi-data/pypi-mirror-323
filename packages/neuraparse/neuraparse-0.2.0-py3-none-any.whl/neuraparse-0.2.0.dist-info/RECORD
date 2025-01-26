@@ -1,0 +1,12 @@
+neuraparse-0.2.0-py3.12-nspkg.pth,sha256=MJHkJ58WJugLBO8Cja63YmRllVCxO9m6a91NssWJc60,488
+build/lib/neuraparse/__init__.py,sha256=Tr0hOS1DuYLS7hfyLaP_75DvXEblMI_6TQdC3nSt_TM,153
+build/lib/neuraparse/universal_scraper/__init__.py,sha256=GhfuHn-iiHWJR7PTCdOiyukerLAw0i5TunbdbGYpDqg,87
+build/lib/neuraparse/universal_scraper/scraper.py,sha256=EonM64unH3A71nkwjyTpak9Fagb2PSndd_g2sdboIiU,7560
+neuraparse/universal_scraper/__init__.py,sha256=XPDPh1Z6ASVs1NJOF4fna_pNSA0I2LXMwTT-atxd0D0,181
+neuraparse/universal_scraper/scraper.py,sha256=PGnwUBbggitX0Shsa3P6jHNMkIuJuzcTHSdXXNM8aWA,9784
+neuraparse-0.2.0.dist-info/METADATA,sha256=3o_mo48ZjtYq0yuIHu29Y6ZPQVKPUV4e2v3qcuqBAZU,890
+neuraparse-0.2.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+neuraparse-0.2.0.dist-info/entry_points.txt,sha256=nq5S5BGkaPVuKJ6gd8JtuMhlF0Mv3CeOq1KNn61zfgA,90
+neuraparse-0.2.0.dist-info/namespace_packages.txt,sha256=CasuS_YANt_edfl_7cYMGN7LlCRTYdf6bSCLjKbkc6M,11
+neuraparse-0.2.0.dist-info/top_level.txt,sha256=jyEzL7dsZvA04Rd0Bx_kZNppZNdWtiiIGjC0y7Jnem4,22
+neuraparse-0.2.0.dist-info/RECORD,,
