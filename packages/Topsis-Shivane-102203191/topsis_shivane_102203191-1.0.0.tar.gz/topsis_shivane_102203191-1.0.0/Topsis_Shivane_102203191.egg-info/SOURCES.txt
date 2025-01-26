@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Topsis_Shivane_102203191.egg-info/PKG-INFO
+Topsis_Shivane_102203191.egg-info/SOURCES.txt
+Topsis_Shivane_102203191.egg-info/dependency_links.txt
+Topsis_Shivane_102203191.egg-info/entry_points.txt
+Topsis_Shivane_102203191.egg-info/top_level.txt
+topsis/__init__.py
+topsis/__main__.py
