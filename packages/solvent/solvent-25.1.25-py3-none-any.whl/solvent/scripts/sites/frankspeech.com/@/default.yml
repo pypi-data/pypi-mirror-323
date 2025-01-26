@@ -1,0 +1,69 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: phone_number
+    locators:
+      - mode: id
+        value: number
+        index: 0
+        uses: 88
+  - verb: click
+    name: submit
+    locators:
+      - mode: text
+        value: Submit
+        index: 0
+        uses: 83
+  - verb: click
+    name: sign_up
+    locators:
+      - mode: text
+        value: Sign up
+        index: 0
+        uses: -2
+      - mode: aria-label
+        value: Sign up button
+        index: 0
+        uses: 1
+  - verb: click
+    name: profile
+    locators:
+      - mode: css
+        value: .fa-user
+        index: 0
+        uses: -2
+      - mode: id
+        value: ltkpopup-email
+        index: 0
+        uses: 1
+  - verb: fill
+    name: email
+    locators:
+      - mode: id
+        value: edit-mail
+        index: 0
+        uses: 0
+  - verb: fill
+    name: phone
+    locators:
+      - mode: id
+        value: edit-field-phone-number-0-value
+        index: 0
+        uses: -1

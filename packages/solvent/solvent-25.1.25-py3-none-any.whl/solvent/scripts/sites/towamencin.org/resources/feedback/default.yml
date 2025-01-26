@@ -1,0 +1,54 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: name
+    locators:
+      - mode: id
+        value: form_name
+        index: 0
+        uses: 2
+  - verb: fill
+    name: email
+    locators:
+      - mode: id
+        value: form_email
+        index: 0
+        uses: 2
+  - verb: fill
+    name: comments
+    locators:
+      - mode: name
+        value: Comments
+        index: 0
+        uses: 2
+  - verb: click
+    name: please_respond
+    locators:
+      - mode: id
+        value: ResponseYes
+        index: 0
+        uses: 1
+  - verb: click
+    name: send_feedback
+    locators:
+      - mode: text
+        value: Send Feedback
+        index: 0
+        uses: 2

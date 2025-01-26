@@ -1,0 +1,4 @@
+[console_scripts]
+solvent=solvent:main
+solvent-gui=solvent.gui:main
+
