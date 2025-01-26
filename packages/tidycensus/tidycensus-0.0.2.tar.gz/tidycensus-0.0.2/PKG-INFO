@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: tidycensus
+Version: 0.0.2
+Summary: A Python wrapper for the U.S. Census Bureau API.
+Project-URL: Homepage, https://github.com/alipatti/tidycensus
+Author-email: Alistair Pattison <alistairpattison@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# tidycensus
+
+A Python wrapper for the U.S. Census Bureau API.
