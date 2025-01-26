@@ -1,0 +1,15 @@
+silverspeak/__init__.py,sha256=fNF4oLyxLw7YcB0eSN0SmQh72bceG6I4eFLrgmgtIKI,126
+silverspeak/__main__.py,sha256=ieDUFQYvupkCpptIRbuLuQnB-bmmVadcdp9-aW7M_fg,4559
+silverspeak/homoglyphs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+silverspeak/homoglyphs/greedy_attack.py,sha256=OWytfXct-Fla4aFafD5eXe8c0OXMRglW68tc4sirYz8,1163
+silverspeak/homoglyphs/identical_map.json,sha256=Ex9uXAWfICMf2BpiK0iumvzKNTxSOPWFh-bN8tSpLso,2487
+silverspeak/homoglyphs/normalize.py,sha256=bfB0X3khI3ngqyHN__uvjRxYwd-1ouarhy-HQPEGrYo,484
+silverspeak/homoglyphs/ocr_chars_map.json,sha256=GZRJ3fWrDDuurU_H_tcgzg9yfQhNAyuQnp1AbLUho0o,23082
+silverspeak/homoglyphs/random_attack.py,sha256=nT1SAAkR7Jkxr73DOUjHskKrIs-w7LbZlT9PavfiCw4,2182
+silverspeak/homoglyphs/unicode_confusables_map.json,sha256=aC6y0mk6FS0jE1Pij_garwPg3dRx4OY-CYFgDwdEL9M,246254
+silverspeak/homoglyphs/utils.py,sha256=HUEdtlxGnqX4IcYJZ_IkBROPD62LUF0nl-im5voPo9I,2751
+silverspeak/utils.py,sha256=MuHzf7WGso_s4L83FNtbUL2YNLoyGO8PGHUX_jA8eD8,12179
+silverspeak-2.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+silverspeak-2.1.0.dist-info/METADATA,sha256=gkBWsbBdlbtT7O9xCY2e1m3wvkfm1nnvMhmTyVU7k9g,5224
+silverspeak-2.1.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+silverspeak-2.1.0.dist-info/RECORD,,
