@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+local_operator/__init__.py
+local_operator/agent.py
+local_operator/cli.py
+local_operator.egg-info/PKG-INFO
+local_operator.egg-info/SOURCES.txt
+local_operator.egg-info/dependency_links.txt
+local_operator.egg-info/requires.txt
+local_operator.egg-info/top_level.txt
