@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/GiftReaper/__init__.py
+src/GiftReaper/utils.py
+src/GiftReaper/voucher.py
+src/GiftReaper.egg-info/PKG-INFO
+src/GiftReaper.egg-info/SOURCES.txt
+src/GiftReaper.egg-info/dependency_links.txt
+src/GiftReaper.egg-info/requires.txt
+src/GiftReaper.egg-info/top_level.txt
