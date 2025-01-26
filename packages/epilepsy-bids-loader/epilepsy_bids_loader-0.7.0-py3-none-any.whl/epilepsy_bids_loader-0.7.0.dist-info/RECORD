@@ -1,0 +1,14 @@
+epilepsy_bids_loader/__init__.py,sha256=Kqrt9FJwnGtEZDKWzf5B0Kf1TmNlFU1FvrH2LoLxzrA,601
+epilepsy_bids_loader/bids_loader.py,sha256=9L0pBnv-gWUGpUawn7UqgJsed9s_c1U5uofKDDCRLMg,22499
+epilepsy_bids_loader/common.py,sha256=9iO5TeWEkmyupOL_Z8i5UbbQMlVfVG91l75Yw4q-Alk,5502
+epilepsy_bids_loader/cross_validation.py,sha256=COEVuchURQWtqfztLd6MW9YDbRpCDzFaYPTXS49ldRg,8318
+epilepsy_bids_loader/manifest_loader.py,sha256=3umQCWIzLoKxhzhP7pBfhVpIgwXA0pqEefvkv8pqJCA,5876
+epilepsy_bids_loader/montage.py,sha256=G6ve7gxJjmkD91Kw9bzBN_WdjD4alOCyKcnrU6-mhPU,2114
+epilepsy_bids_loader/segment.py,sha256=nEWIZLzav5qMbUcbpl539u394eSppiRExE4wUPdruX8,1106
+epilepsy_bids_loader/structs.py,sha256=z4ablJLclorO0_geuGrMGk3rtK7rrlLLJh-QdezDRio,9164
+epilepsy_bids_loader/utils.py,sha256=DbmTswG_BeZtQwkXEqj5YmsPNCWFdBpH9rnEASeGP1g,998
+epilepsy_bids_loader-0.7.0.dist-info/LICENSE,sha256=QanLeRzr-kcFdL6opYgc9x_xo1nVKrPNV7-M2Vwj2yg,1069
+epilepsy_bids_loader-0.7.0.dist-info/METADATA,sha256=vLvARiCMlDYbJLUhpNN9nq1p66jAjpAS624W0GmZdFg,571
+epilepsy_bids_loader-0.7.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+epilepsy_bids_loader-0.7.0.dist-info/top_level.txt,sha256=uxsKKf3qP0WLqvPgtmfVIQcTs7Szor2xe9SHVp7Q49E,21
+epilepsy_bids_loader-0.7.0.dist-info/RECORD,,
