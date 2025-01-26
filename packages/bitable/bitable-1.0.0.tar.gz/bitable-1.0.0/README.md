@@ -1,0 +1,62 @@
+# python-bitable
+A Python package to operate with Feishu/Lark bitable
+
+## Install
+```
+pip install python-bitable
+```
+
+## Usage
+
+### Quick Start
+
+```python
+from bitable import Table
+
+table = Table(BASE_ID, BASE_TOKEN, 'TABLE_NAME')
+
+# select records
+records = table.select() # select all records
+records = table.select({'field_name1': 'value1', 'field_name2': 'value2'}) # select with conditions
+records = table.select(Greater('FieldValue', 90))
+records = table.select(Or(Greater('FieldValue', 90), And({'FieldSingle': 'A'}, Contain('FieldText', 'text_value')))) # select with complex conditions
+
+# insert records
+table.insert({'field_name1': 'value1', 'field_name2': 'value2'}) # insert a record
+table.insert([{'field_name1': 'value1', 'field_name2': 'value2'}, {'field_name1': 'value3', 'field_name2': 'value4'}]) # insert multiple records
+
+# update records
+table.update({'FieldMultiple': ['B', 'A'], 'FieldDate':'2024-12-21'}, where={'FieldText': 'text_value'}) # update records with where conditions
+result = table.select({'FieldText': 'HelloTestUpdate'})[0]
+result['FieldText'] = 'new_value'
+table.update(result) # update records with record object
+
+# delete records
+self.table.delete(where={'FieldText': 'HelloDelete'}) # with where condition
+result = table.select({'FieldText': 'HelloTestUpdate'})[0]
+self.table.delete(results) # with selected object
+
+```
+
+### Load a table
+
+```python
+from bitable import Table
+
+table = Table(BASE_ID, BASE_TOKEN, 'TABLE_NAME')
+```
+
+BASE_ID can be found at the bitable's URL after 'base/'  
+![BASE_ID on URL](./doc_assets/base_id_on_url.png)
+
+BASE_TOKEN can be found following these steps:
+
+1. click the "Base extensions" icon on the top right:
+2. click "Customize" on the bottom right
+![Base extension and customize](./doc_assets/customize_extension.png)
+
+3. click "Get Authorization Code"
+![Get Authorization Code](./doc_assets/get_authorization_code.png)
+
+### Select Records
+
