@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+scp_api_client/__init__.py
+scp_api_client/api_client.py
+scp_api_client.egg-info/PKG-INFO
+scp_api_client.egg-info/SOURCES.txt
+scp_api_client.egg-info/dependency_links.txt
+scp_api_client.egg-info/requires.txt
+scp_api_client.egg-info/top_level.txt
+tests/test_scp_client.py
