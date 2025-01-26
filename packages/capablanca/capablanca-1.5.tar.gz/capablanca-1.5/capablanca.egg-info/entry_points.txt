@@ -1,0 +1,3 @@
+[console_scripts]
+cover = capablanca.app:main
+test_cover = capablanca.test:main

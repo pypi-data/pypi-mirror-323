@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+capablanca/__init__.py
+capablanca/algorithm.py
+capablanca/app.py
+capablanca/applogger.py
+capablanca/parser.py
+capablanca/test.py
+capablanca/utils.py
+capablanca.egg-info/PKG-INFO
+capablanca.egg-info/SOURCES.txt
+capablanca.egg-info/dependency_links.txt
+capablanca.egg-info/entry_points.txt
+capablanca.egg-info/requires.txt
+capablanca.egg-info/top_level.txt
