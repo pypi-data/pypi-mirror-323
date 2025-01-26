@@ -1,0 +1,140 @@
+# WebScraper Once
+
+Biblioteca Python para extrair dados de produtos de diversos fornecedores de forma fácil e padronizada.
+
+## Instalação
+
+Você pode instalar a biblioteca diretamente do PyPI:
+
+```bash
+pip install webscraper-once
+```
+
+Ou instalar a versão mais recente do repositório:
+
+```bash
+pip install git+https://github.com/seu-usuario/webscraper.git
+```
+
+## Requisitos
+
+- Python 3.7 ou superior
+- requests>=2.25.0
+- beautifulsoup4>=4.9.0
+- lxml>=4.9.0
+
+## Uso Básico
+
+```python
+from webscraper import get_product
+
+# Forma mais simples de uso
+produto = get_product("https://exemplo.com.br/produto/123")
+print(produto["nome"])
+print(produto["preco"])
+print(produto["disponivel"])
+
+# Verificar domínios suportados
+from webscraper import get_supported_domains
+print(get_supported_domains())
+
+# Validar URL antes de extrair
+from webscraper import validate_url
+if validate_url(url):
+    produto = get_product(url)
+```
+
+## Uso Avançado
+
+```python
+from webscraper import WebScraper
+
+# Criar instância com debug ativado
+scraper = WebScraper(debug=True)
+
+# Extrair com retry em caso de erro
+produto = scraper.get_product(url, retry_count=3)
+
+# Acessar último resultado extraído
+ultimo_produto = scraper.get_last_result()
+```
+
+## Estrutura dos Dados
+
+Cada produto extraído contém no mínimo:
+
+```python
+{
+    "nome": str,        # Nome do produto
+    "preco": float,     # Preço atual
+    "disponivel": bool, # Se está disponível para compra
+    "url": str         # URL do produto
+}
+```
+
+## Tratamento de Erros
+
+A biblioteca possui tratamento robusto de erros:
+
+```python
+from webscraper.core.exceptions import (
+    InvalidURLException,      # URL inválida
+    ProviderNotFoundException, # Fornecedor não suportado
+    ExtractionError,         # Erro na extração
+    NetworkError             # Erro de conexão
+)
+
+try:
+    produto = get_product(url)
+except InvalidURLException as e:
+    print(f"URL inválida: {e.url}")
+except ProviderNotFoundException as e:
+    print(f"Fornecedor não suportado: {e.domain}")
+except NetworkError as e:
+    print(f"Erro de conexão: {e.status_code}")
+except ExtractionError as e:
+    print(f"Erro na extração: {e.reason}")
+```
+
+## Criando um Novo Scraper
+
+Para adicionar suporte a um novo fornecedor:
+
+1. Crie uma nova classe herdando de `BaseScraper`
+2. Implemente os métodos `extract_product_data()` e `validate_url()`
+3. Registre o scraper com o padrão de domínio
+
+```python
+from webscraper.core.base_scraper import BaseScraper
+from webscraper.utils.url_matcher import URLMatcher
+
+class MeuScraper(BaseScraper):
+    def extract_product_data(self, url):
+        # Implemente a extração
+        html = self.get_page_content(url)
+        nome = # extraia o nome
+        preco = self.extract_float_price("R$ 99,90")
+        return {
+            "nome": nome,
+            "preco": preco,
+            "disponivel": True,
+            "url": url
+        }
+        
+    def validate_url(self, url):
+        return "meusite.com.br" in url.lower()
+
+# Registre o scraper
+URLMatcher.register_scraper(
+    r"(www\.)?meusite\.com\.br",
+    MeuScraper
+)
+```
+
+## Contribuindo
+
+Contribuições são bem-vindas! Por favor, sinta-se à vontade para enviar um Pull Request.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
