@@ -1,0 +1,14 @@
+LICENSE.md
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+yakyak/__init__.py
+yakyak/__main__.py
+yakyak/yakyak.py
+yakyak.egg-info/PKG-INFO
+yakyak.egg-info/SOURCES.txt
+yakyak.egg-info/dependency_links.txt
+yakyak.egg-info/entry_points.txt
+yakyak.egg-info/requires.txt
+yakyak.egg-info/top_level.txt
