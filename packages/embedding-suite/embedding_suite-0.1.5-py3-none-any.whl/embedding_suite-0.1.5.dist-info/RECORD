@@ -1,0 +1,11 @@
+embedding_suite/__init__.py,sha256=RxBYp_cUyjPzHRSf2ybBAE8iJyDUN31iLeebLWeky6s,41
+embedding_suite/client.py,sha256=eM5ScTbhdjvNF1DBq5gbYepcskGUfInDCepV37clNcc,1867
+embedding_suite/provider.py,sha256=gvXMbTotzNTkc7N26vEsS-xMNCHgLKXyReDXv4lsed0,1089
+embedding_suite/providers/cohere_provider.py,sha256=GYllwY445LGreu5aHaVyjr9SDW1Pujfp0FaFYA_7_NU,751
+embedding_suite/providers/openai_provider.py,sha256=t93rbCAvMiu14JrvjA1ecBejwT3ZTi4P7BlxgOP-mes,713
+embedding_suite/providers/voyageai_provider.py,sha256=EhQOv5jY6ZJQ7aJnGdLn0_NWFJDGXNOo-clYIoqSmy4,610
+embedding_suite/utils/config.py,sha256=zM50m-ZG45mp-K_nDqvVTyBE6U5Zj0llc0gRM0AHhj4,423
+embedding_suite-0.1.5.dist-info/METADATA,sha256=hDGzA4Y6lzs2JVmJ3KMAKSPw279_sdndWkc2mrp81s8,1686
+embedding_suite-0.1.5.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+embedding_suite-0.1.5.dist-info/top_level.txt,sha256=p-cGLrSo9t2Ut5glz69mWrx24Sfgf3-xAnlEZQNJVLA,16
+embedding_suite-0.1.5.dist-info/RECORD,,
