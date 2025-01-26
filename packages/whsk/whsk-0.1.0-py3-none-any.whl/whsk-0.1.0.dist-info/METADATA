@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: whsk
+Version: 0.1.0
+Summary: web/html scraping toolkit
+Requires-Python: >=3.10
+Requires-Dist: cssselect>=1.2.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: ipython>=8.31.0
+Requires-Dist: lxml>=5.3.0
+Requires-Dist: typer>=0.15.1
