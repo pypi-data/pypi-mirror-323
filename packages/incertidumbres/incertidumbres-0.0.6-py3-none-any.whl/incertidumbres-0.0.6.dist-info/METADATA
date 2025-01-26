@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: incertidumbres
+Version: 0.0.6
+Summary: Calcula incertidumbre de mediciones de laboratorio
+Author-email: Emerson Warhman <edwarhman@gmail.com>
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Incertidumbres
+
+Paquete creado con el proposito de realizar los calculos de incertidumbres de mediciones de laboratorio. Permite calcular error absoluto, desviación estandar, agregar calculos a hojas de datos
+
+## Instalación
+
+Para instalar el paquete, puedes usar pip:
+
+```
+pip install incertidumbres
+```
+
+## Uso
+
+Para usar el paquete, puedes importarlo en tu código Python:
+
+```python
+from incertidumbres import calcular_incertidumbre
+
+# Ejemplo de uso
+datos = [1, 2, 3, 4, 5]
+incertidumbre = calcular_incertidumbre(datos)
+print(incertidumbre)
+```
+
+Este código imprimirá el valor de la incertidumbre para los datos proporcionados.
