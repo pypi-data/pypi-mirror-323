@@ -1,0 +1,9 @@
+matplotlib
+numpy
+pandas
+Pint
+pymongo
+pymoo
+scipy
+tqdm
+pytest
