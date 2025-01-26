@@ -1,0 +1,11 @@
+pgn_tokenizer/__init__.py,sha256=gB-M9cFy9FRmlWs_UtkqixYec9lqCJZT1ARpnnBONPM,998
+pgn_tokenizer/constants.py,sha256=Gj4sryMXFOyw74fGC2G8rmvQtqspHfm2XHx888D8rRs,678
+pgn_tokenizer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgn_tokenizer/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgn_tokenizer/config/pgn-tokenizer-merges.txt,sha256=-5jI_fFEbZoEa-UQdACWy8xoTDvWDWySp1iiuXV5UBQ,25354
+pgn_tokenizer/config/pgn-tokenizer-vocab.json,sha256=zwbxGH8d_NJ3d8wtOExFOmNfkqZbwDv_qwACXdRJbn4,48959
+pgn_tokenizer/config/pgn-tokenizer.json,sha256=yunReK8TBJiiAioE5aX0duxxH4epr04eFO5OXPqym-Y,262667
+pgn_tokenizer-0.1.0.dist-info/METADATA,sha256=2D10u7MChQyh41hn_nAQskYi3M7P4ZNZd3LpksZEJC4,3619
+pgn_tokenizer-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pgn_tokenizer-0.1.0.dist-info/entry_points.txt,sha256=wUoUnK2NdbDIG5_rx1BjY4Okf_g9Nh1IPo9F7-2rjNU,53
+pgn_tokenizer-0.1.0.dist-info/RECORD,,
