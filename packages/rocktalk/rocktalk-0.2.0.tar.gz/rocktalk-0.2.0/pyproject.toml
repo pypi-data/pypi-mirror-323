@@ -1,0 +1,74 @@
+[project]
+name = "rocktalk"
+version = "0.2.0"
+description = "A locally running ChatBot WebApp with Streamlit, LangChain, and Amazon Bedrock"
+readme = "README.md"
+authors = [
+    { name = "Tyler House", email = "26489166+tahouse@users.noreply.github.com" },
+]
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+keywords = [
+    "streamlit",
+    "chatbot",
+    "langchain",
+    "amazon-bedrock",
+    "bedrock",
+    "ai-chat",
+    "llm",
+    "chat-interface",
+    "aws",
+    "conversational-ai",
+    "gen-ai",
+]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "langchain>=0.3.4",
+    "langchain-aws>=0.2.2",
+    "boto3>=1.35.44",
+    "python-dotenv>=1.0.1",
+    "pydantic>=2.9.2",
+    "pandas>=2.2.3",
+    "streamlit>=1.41.0",
+    "streamlit-keywords>=0.1.11",
+    "streamlit-authenticator>=0.4.1",
+    "streamlit-chat-prompt>=0.3.5",
+    "streamlit-js-eval>=0.1.7",
+    "streamlit-shortcuts>=0.1.9",
+    "streamlit_float>=0.3.5",
+    "st-theme>=1.2.3",
+    "typing_extensions>=4.12.2",
+    "boto3-stubs[bedrock]==1.36.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/tahouse/rocktalk"
+Documentation = "https://github.com/tahouse/rocktalk/blob/main/README.md"
+"Issue Tracker" = "https://github.com/tahouse/rocktalk/issues"
+Repository = "https://github.com/tahouse/rocktalk"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.2", "black>=23.11.0", "flake8>=6.1.0", "mypy>=1.7.0"]
+
+[build-system]
+requires = ["setuptools>=67.0.0", "wheel>=0.38.0"]
+build-backend = "setuptools.build_meta"
+
+
+# [tool.setuptools.packages.find]
+# where = ["."]
+# include = ["rocktalk"]
+[project.scripts]
+rocktalk = "rocktalk.__main__:main"
