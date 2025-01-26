@@ -1,0 +1,8 @@
+certbot_dns_wedos/__init__.py,sha256=EwWPqWkFYeMRNFrHjMxnPgh9AFBgvFBpO15MicJwtzA,674
+certbot_dns_wedos/dns_wedos.py,sha256=_qs_fKtCcTYuwualTPCIkPIx1eVFaq3vfzhZoJVBvvc,7442
+certbot_dns_wedos-2.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+certbot_dns_wedos-2.4.dist-info/METADATA,sha256=2zj1ybakX2yVH_W3a5FsW8YrZxpmgvzUVzypPCXYx3k,8586
+certbot_dns_wedos-2.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+certbot_dns_wedos-2.4.dist-info/entry_points.txt,sha256=wfdlI6I9lhnY92KSe92sZXGlfiDJibjogkmTeOdwj3o,72
+certbot_dns_wedos-2.4.dist-info/top_level.txt,sha256=8Scqdlbz7nccRz_G-v9371NuT2pCw-nO3H6kFYTBpEY,18
+certbot_dns_wedos-2.4.dist-info/RECORD,,
