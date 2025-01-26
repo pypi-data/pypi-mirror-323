@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DataFrame Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.4.4/css/tabulator.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/styles.css') }}">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.4.4/js/tabulator.min.js"></script>
+</head>
+<body>
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div id="loading-text" class="loading-text">Loading data...</div>
+    </div>
+
+    <div class="bg-glow">
+        <div class="bg-gradient"></div>
+    </div>
+
+    <div class="content">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">DataFrame Editor</h1>
+                
+                <div class="button-container">
+                    <div class="button-group">
+                        <button onclick="addNewColumn()" class="button add-button">
+                            <span>+ Add Column</span>
+                        </button>
+                        <button onclick="addNewRow()" class="button add-button">
+                            <span>+ Add Row</span>
+                        </button>
+                    </div>
+                    
+                    <button onclick="saveData()" class="button save-button">
+                        <span>✓ Save Changes</span>
+                    </button>
+                    
+                    <button onclick="shutdownServer()" class="button send-button">
+                        <span>→ Send Data</span>
+                    </button>
+                    
+                    <button onclick="cancelChanges()" class="button cancel-button">
+                        <span>✕ Cancel</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <div class="table-container">
+                <div id="data-table"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', path='/js/editor.js') }}"></script>
+</body>
+</html>
