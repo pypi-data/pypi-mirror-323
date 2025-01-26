@@ -1,0 +1,3 @@
+[console_scripts]
+jpg2heif = JPG2HEIF.cli:main
+
