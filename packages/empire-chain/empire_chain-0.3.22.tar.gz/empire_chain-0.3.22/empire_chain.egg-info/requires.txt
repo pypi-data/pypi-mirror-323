@@ -1,0 +1,8 @@
+openai
+anthropic
+groq
+python-dotenv
+qdrant-client
+requests
+PyPDF2
+python-docx
