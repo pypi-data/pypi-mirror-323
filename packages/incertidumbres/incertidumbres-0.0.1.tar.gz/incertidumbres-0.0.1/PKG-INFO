@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: incertidumbres
+Version: 0.0.1
+Summary: Calcula incertidumbre de mediciones de laboratorio
+Author: Emerson Warhman
+Author-email: <edwarhman@gmail.com>
+Keywords: python,incertidumbre,medicion indirecta
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: numpy
+Requires-Dist: sympy
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: summary
+
+Paquete creado con el proposito de realizar los calculos de incertidumbres de mediciones de laboratorio. Permite calcular error absoluto, desviación estandar, agregar calculos a hojas de datos
