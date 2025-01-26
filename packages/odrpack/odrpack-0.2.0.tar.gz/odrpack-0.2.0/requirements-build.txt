@@ -1,0 +1,7 @@
+meson
+meson-python
+ninja
+nanobind
+numpy
+pytest
+pytest-cov
