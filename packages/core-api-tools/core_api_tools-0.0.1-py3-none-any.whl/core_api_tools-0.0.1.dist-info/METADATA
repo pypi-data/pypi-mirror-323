@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: core-api-tools
+Version: 0.0.1
+Summary: This is the simplest module for quick work with fastapi.
+Home-page: https://github.com/zahardimidov/apicore
+Author: ZaharDimidov
+Author-email: zahar_dimidov@mail.ru
+Project-URL: GitHub, https://github.com/zahardimidov/apicore
+Keywords: fastapi
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: annotated-types ==0.7.0
+Requires-Dist: anyio ==4.8.0
+Requires-Dist: argon2-cffi ==23.1.0
+Requires-Dist: argon2-cffi-bindings ==21.2.0
+Requires-Dist: certifi ==2024.12.14
+Requires-Dist: cffi ==1.17.1
+Requires-Dist: fastapi ==0.115.7
+Requires-Dist: h11 ==0.14.0
+Requires-Dist: httpcore ==1.0.7
+Requires-Dist: httpx ==0.28.1
+Requires-Dist: idna ==3.10
+Requires-Dist: iniconfig ==2.0.0
+Requires-Dist: Jinja2 ==3.1.5
+Requires-Dist: MarkupSafe ==3.0.2
+Requires-Dist: packaging ==24.2
+Requires-Dist: pluggy ==1.5.0
+Requires-Dist: pycparser ==2.22
+Requires-Dist: pydantic ==2.10.6
+Requires-Dist: pydantic-core ==2.27.2
+Requires-Dist: PyJWT ==2.10.1
+Requires-Dist: pytest ==8.3.4
+Requires-Dist: python-multipart ==0.0.20
+Requires-Dist: setuptools ==75.8.0
+Requires-Dist: sniffio ==1.3.1
+Requires-Dist: sqladmin ==0.20.1
+Requires-Dist: SQLAlchemy ==2.0.37
+Requires-Dist: starlette ==0.45.3
+Requires-Dist: typing-extensions ==4.12.2
+Requires-Dist: WTForms ==3.1.2
+
+# fastapi_core
