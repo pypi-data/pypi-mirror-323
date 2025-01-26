@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Python Lib/__init__.py
+Python Lib/mul_div.py
+Python Lib/plus_minus.py
+pycalcx.egg-info/PKG-INFO
+pycalcx.egg-info/SOURCES.txt
+pycalcx.egg-info/dependency_links.txt
+pycalcx.egg-info/top_level.txt
