@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: MoDiSc
+Version: 1.0.4
+Summary: MoDiSc constrains the morphology and photometry of a disk detected in scattered-light.
+Home-page: https://github.com/cdesgrange/MoDiSc
+Author: Célia Desgrange
+Author-email: celia.desgrange@gmail.com
+Project-URL: Docs, https://docs.example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
