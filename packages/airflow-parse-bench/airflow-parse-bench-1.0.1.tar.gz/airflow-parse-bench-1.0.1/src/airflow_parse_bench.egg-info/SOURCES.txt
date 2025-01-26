@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/airflow_parse.py
+src/bench_db_utils.py
+src/dag_parse.py
+src/airflow_parse_bench.egg-info/PKG-INFO
+src/airflow_parse_bench.egg-info/SOURCES.txt
+src/airflow_parse_bench.egg-info/dependency_links.txt
+src/airflow_parse_bench.egg-info/entry_points.txt
+src/airflow_parse_bench.egg-info/requires.txt
+src/airflow_parse_bench.egg-info/top_level.txt
