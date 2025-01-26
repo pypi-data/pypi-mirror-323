@@ -1,0 +1,15 @@
+keywordsai_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keywordsai_sdk/keywordsai_types/_internal_types.py,sha256=Vj-AcMBJFsfgu-hDU-NQotXYqj1jVLiK_GucYZtrsgc,34732
+keywordsai_sdk/keywordsai_types/chat_completion_types.py,sha256=1eeesYjJK7CmFaOq1VgsDLX1yiYwOhhhWMZYiL2EcBI,899
+keywordsai_sdk/keywordsai_types/param_types.py,sha256=vKolWeyKsTqY5vI7rEaDdwjwA96YQE3n2LfO3etZ2Qo,5413
+keywordsai_sdk/keywordsai_types/span_types.py,sha256=AfZVsFbWU7jgnQ9JDufncnt-YdZwkUWVTJqNn1Oi0U8,1464
+keywordsai_sdk/utils/__init__.py,sha256=C2SPb2K60_aTwvfkggg_PaMyYTbeDe90h3TGjZY5pig,44
+keywordsai_sdk/utils/bgcolors.py,sha256=O_FdI7A5-SHg7fzS4EM8Ygu4LdqxpAPlD99bQFfOlNE,228
+keywordsai_sdk/utils/conversion.py,sha256=ntp4XImJrmyaB_hAJ-QAj8f1Z2e0HD3iAKg5Pw0SYss,12825
+keywordsai_sdk/utils/crypto.py,sha256=SQ8Wc7yUlB3wQXMNyCABqw8RJf_QTu63QjIiAXf0V7M,4591
+keywordsai_sdk/utils/debug_print.py,sha256=5zEVTAxZdYM-cAWn0G1jHkcN_Pqz78HBjolZW68Hm04,1219
+keywordsai_sdk/utils/pre_processing.py,sha256=5LyHTOWzxtCeram5jphCX_aAX913OMHcjTqTYvR4uqw,7359
+keywordsai_sdk/utils/type_conversion.py,sha256=5O5MasZgGu5z_cIRNxYv5Q3C5KN7rewPHo4SyyhYR6Q,2635
+keywordsai_sdk-0.3.38.dist-info/METADATA,sha256=6sjtjMvuP2c1W1Tj8_TuOErNTCVCucMck0dZNZ7NXOE,1236
+keywordsai_sdk-0.3.38.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+keywordsai_sdk-0.3.38.dist-info/RECORD,,
