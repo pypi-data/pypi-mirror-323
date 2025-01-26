@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: graphai-lib
+Version: 0.0.2
+Summary: 
+License: MIT
+Author: Aurelio AI
+Author-email: hello@aurelio.ai
+Requires-Python: >=3.10,<3.14
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: matplotlib (>=3.10.0,<4.0.0)
+Requires-Dist: networkx (>=3.4.2,<4.0.0)
+Requires-Dist: semantic-router (>=0.1.0.dev4)
+Description-Content-Type: text/markdown
+
+# Philosophy
+
+1. Async-first
+2. Minimize abstractions
+3. One way to do one thing
+4. Graph-based AI
