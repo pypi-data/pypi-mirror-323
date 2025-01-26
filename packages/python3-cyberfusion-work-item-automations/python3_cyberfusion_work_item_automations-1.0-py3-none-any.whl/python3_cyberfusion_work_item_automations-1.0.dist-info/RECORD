@@ -1,0 +1,10 @@
+cyberfusion/WorkItemAutomations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cyberfusion/WorkItemAutomations/automations.py,sha256=h7EW1M4ss7ufgWOypBKSBXPQoWp-l2zJ_i2s4zbZ6Js,3425
+cyberfusion/WorkItemAutomations/cli.py,sha256=mkf60sh0hcMZtyt-_ORrUueATsyhlgYpup3IiRE7wOU,1481
+cyberfusion/WorkItemAutomations/config.py,sha256=PddIv6qytHzY9vO_eIshwXqMxnkM73SkKnLam8GD1Aw,1992
+cyberfusion/WorkItemAutomations/gitlab.py,sha256=dhhpDmOHdgGUA7o0dWDQ8SQ_KF8usJAs4bo2q4cL4bM,240
+python3_cyberfusion_work_item_automations-1.0.dist-info/METADATA,sha256=SqvDKwgNndD_zhb7088ZYOo2ibAr4Gw29FpDoFFAwUE,3032
+python3_cyberfusion_work_item_automations-1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+python3_cyberfusion_work_item_automations-1.0.dist-info/entry_points.txt,sha256=LNaQQtaGfZRVHx5FjyhHmPJpRcGiverbBFSyR8cBjSQ,67
+python3_cyberfusion_work_item_automations-1.0.dist-info/top_level.txt,sha256=ss011q9S6SL_KIIyq7iujFmIYa0grSjlnInO7cDkeag,12
+python3_cyberfusion_work_item_automations-1.0.dist-info/RECORD,,
