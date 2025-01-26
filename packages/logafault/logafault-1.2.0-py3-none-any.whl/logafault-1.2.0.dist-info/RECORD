@@ -1,0 +1,11 @@
+logafault/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logafault/auth.py,sha256=bsvDjOcPvIxF8_-XrFAQV1zJUOt4TNtstj1Db2yJ-xw,1322
+logafault/exceptions.py,sha256=u1_veAIAmdZNM4pNH9obWuunpMVrZ1x2Sb7T10gUbak,187
+logafault/faults.py,sha256=wEKy_IfUO7FZOUGi9rMQUc6dWs8T23h36xsWcqf37Ms,2198
+logafault/models.py,sha256=ZZycvo2dJjhxvuKoWZX5ALHkSbgURL3PSCHcYqA5wrU,1063
+logafault/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logafault-1.2.0.dist-info/LICENSE,sha256=_ZpbYIlMSoYIVIRUgjIMRhuaL3sBN67Aqts-Mle4w30,1172
+logafault-1.2.0.dist-info/METADATA,sha256=qDvboCfUFsiLuELn3jNfKdr_dnNpllXVEjefL5MizwQ,5091
+logafault-1.2.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+logafault-1.2.0.dist-info/top_level.txt,sha256=ZtohkcV74lKDdAJxEeuiW2eYGfr3Seh27wkOffrYW70,10
+logafault-1.2.0.dist-info/RECORD,,
