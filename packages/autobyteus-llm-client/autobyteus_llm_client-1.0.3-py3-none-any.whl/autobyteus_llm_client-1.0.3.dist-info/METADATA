@@ -1,0 +1,97 @@
+Metadata-Version: 2.2
+Name: autobyteus_llm_client
+Version: 1.0.3
+Summary: Async Python client for Autobyteus LLM API
+Home-page: https://github.com/AutoByteus/autobyteus_llm_client.git
+Author: Ryan Zheng
+Author-email: ryan.zheng.work@gmail.com
+Keywords: llm client async
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: httpx
+Provides-Extra: test
+Requires-Dist: pytest-asyncio; extra == "test"
+Requires-Dist: python-dotenv; extra == "test"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Autobyteus LLM Client
+
+Async Python client for Autobyteus LLM API.
+
+## Installation
+
+```bash
+pip install autobyteus_llm_client
+```
+
+## Building and Publishing the Package
+
+### Prerequisites
+
+1. Create a PyPI account at https://pypi.org/account/register/
+2. Install build and twine:
+```bash
+pip install build twine
+```
+
+### Building the Package
+
+To build the package, run:
+```bash
+python -m build
+```
+
+This will create two files in the `dist` directory:
+- A source archive (.tar.gz)
+- A wheel (.whl)
+
+### Publishing to PyPI
+
+#### Test PyPI (Recommended for Testing)
+
+1. Register an account at https://test.pypi.org/
+2. Upload to Test PyPI:
+```bash
+python -m twine upload --repository testpypi dist/*
+```
+3. Install from Test PyPI:
+```bash
+pip install --index-url https://test.pypi.org/simple/ autobyteus_llm_client
+```
+
+#### Production PyPI
+
+When ready to publish to production:
+```bash
+python -m twine upload dist/*
+```
+
+Note: You'll need to provide your PyPI username and password when uploading.
+
+## Development
+
+### Requirements
+- Python 3.8 or higher
+- httpx
+
+### Installing Development Dependencies
+```bash
+pip install -e ".[test]"
+```
+
+## License
+
+This project is licensed under the MIT License.
