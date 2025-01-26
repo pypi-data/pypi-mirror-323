@@ -1,0 +1,2 @@
+[console_scripts]
+topsis_calculator_abhai = topsis_calculator_abhai.topsis:main
