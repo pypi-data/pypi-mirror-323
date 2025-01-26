@@ -1,0 +1,3 @@
+[console_scripts]
+ats_friendly_resume = src.main:main
+
