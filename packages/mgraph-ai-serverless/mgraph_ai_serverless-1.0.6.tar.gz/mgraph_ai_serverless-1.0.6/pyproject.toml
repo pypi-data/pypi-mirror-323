@@ -1,0 +1,25 @@
+[tool.poetry]
+name        = "mgraph_ai_serverless"
+version     = "v1.0.6"
+description = "MGraph-AI - Serverless"
+authors     = ["Dinis Cruz <dinis.cruz@owasp.org>"]
+license     = "Apache 2.0"
+readme      = "README.md"
+homepage    = "https://github.com/owasp-sbot/MGraph-AI-Serverless"
+repository  = "https://github.com/owasp-sbot/MGraph-AI-Serverless"
+
+[tool.poetry.dependencies]
+python           = "^3.11"
+mgraph-ai        = "*"
+osbot-utils      = "*"
+osbot-aws        = "*"
+osbot-fast-api   = "*"
+mangum           = "*"
+httpx            = "*"
+uvicorn          = "*"
+graphviz         = "*"
+
+
+[build-system]
+requires        = ["poetry-core>=1.0.0"]
+build-backend   = "poetry.core.masonry.api"
