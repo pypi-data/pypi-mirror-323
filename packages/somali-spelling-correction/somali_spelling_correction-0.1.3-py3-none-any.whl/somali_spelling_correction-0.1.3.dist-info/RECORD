@@ -1,0 +1,10 @@
+somali_spelling_correction/__init__.py,sha256=EApf7um-AJMO4gHt0acp2kHbFmUJHBvV-W-wNy9TjSA,57
+somali_spelling_correction/spell_checker.py,sha256=cpPcSsMpFIBEWqqriVENMcD-1eCRrmBVnrF0HANXZGU,1845
+somali_spelling_correction/spelling_correction.py,sha256=nOmnrhkrvBlv24S9iTxwn3_3G3swFi6znoohtVBAiME,1742
+somali_spelling_correction/data/dataset.csv,sha256=JunKjDiYUwGfrnv37cwSnf3_wIZR54gO9J2HKQocXos,52533633
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_spelling_correction.py,sha256=JFreQQk5KSB0zC0xCLGjPwagRRd2bBSqZGP6r3lR0zM,654
+somali_spelling_correction-0.1.3.dist-info/METADATA,sha256=luXtv1rAWBCvmb_s-KfpiXkjbbqoSixghyEz7BOzfw4,545
+somali_spelling_correction-0.1.3.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+somali_spelling_correction-0.1.3.dist-info/top_level.txt,sha256=f4xCyQ54afAcffLvliA0bvbxuV4ve03NNud1qG645PM,33
+somali_spelling_correction-0.1.3.dist-info/RECORD,,
