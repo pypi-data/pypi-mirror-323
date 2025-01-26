@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: topsis-calculator-abhai
+Version: 2.0.0
+Summary: A Python package for TOPSIS calculation
+Home-page: https://github.com/yourusername/topsis-calculator
+Author: abahji
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# TOPSIS Calculator
+
+A Python package to perform TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) calculations.
+
+## Installation
+
+```bash
+pip install topsis-calculator
