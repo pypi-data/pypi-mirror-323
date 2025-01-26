@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: RemoteNowApiWrapper
+Version: 0.0.7
+Summary: Wrapper for the RemoteNowApi
+Home-page: https://github.com/Tabisch/RemoteNowApi
+Author: Tabisch
+Author-email: tobithieman@gmail.com
+Project-URL: Bug Tracker, https://github.com/Tabisch/RemoteNowApi/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# remoteNowApiWrapper
+ 
+This is a generic implementation of the remoteNow-Client for TVs \
+The primary usecase for this will be a home assistant integration
+
+Special Thanks to: \
+MrAsterisco: https://github.com/MrAsterisco/homebridge-hisense-tv \
+Krazy998: https://github.com/Krazy998/mqtt-hisensetv
