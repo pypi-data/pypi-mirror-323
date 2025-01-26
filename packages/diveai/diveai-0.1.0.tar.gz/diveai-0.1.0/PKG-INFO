@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: diveai
+Version: 0.1.0
+Summary: 
+Author: savi
+Author-email: shekhawatsavindra@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: ipykernel (>=6.29.5,<7.0.0)
+Requires-Dist: ipywidgets (>=8.1.5,<9.0.0)
+Requires-Dist: matplotlib (>=3.10.0,<4.0.0)
+Requires-Dist: numpy (>=2.2.2,<3.0.0)
+Description-Content-Type: text/markdown
+
+

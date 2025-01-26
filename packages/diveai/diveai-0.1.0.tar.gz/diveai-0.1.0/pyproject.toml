@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "diveai"
+version = "0.1.0"
+description = ""
+authors = ["savi <shekhawatsavindra@gmail.com>"]
+readme = "README.md"
+
+packages = [
+    { include = "diveai", from = "." },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^2.2.2"
+matplotlib = "^3.10.0"
+ipykernel = "^6.29.5"
+ipywidgets = "^8.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
