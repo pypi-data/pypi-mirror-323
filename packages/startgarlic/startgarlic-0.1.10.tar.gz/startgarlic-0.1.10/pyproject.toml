@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "startgarlic"
+version = "0.1.10"
+description = "A RAG-based company information retrieval system"
+readme = "README.md"
+authors = [
+    { name = "Bogdan Ciolac", email = "bogdan@startgarlic.com" },
+    { name = "May Elshater", email = "may@startgarlic.com" }
+]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "numpy>=1.23.5,<2.0.0",
+    "pandas>=2.0.0",
+    "postgrest-py==0.4.0",
+    "httpx>=0.16.1,<0.17.0",
+    "websockets>=9.1,<10.0",
+    "requests>=2.27.0,<3.0.0",
+    "python-dotenv",
+    "sentence-transformers",
+    "langchain>=0.2.15",
+    "langchain-community>=0.2.15",
+    "langchain-huggingface>=0.0.3",
+    "supabase>=2.11.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/startgarlic/MVP"
+
+[project.scripts]
+startgarlic = "startgarlic.cli:main"
