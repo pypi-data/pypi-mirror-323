@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: nao_context_manager
+Version: 0.1.0
+Summary: A context manager for nao's use.
+Project-URL: Homepage, https://github.com/XMENTROPY/nao_context_manager
+Description-Content-Type: text/markdown
+
+# nao_context_manager
+ 

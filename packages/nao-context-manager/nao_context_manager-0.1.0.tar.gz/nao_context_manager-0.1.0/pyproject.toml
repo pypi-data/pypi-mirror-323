@@ -1,0 +1,9 @@
+[project]
+name = "nao_context_manager"
+version = "0.1.0"
+description = "A context manager for nao's use."
+readme = "README.md"
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/XMENTROPY/nao_context_manager"
