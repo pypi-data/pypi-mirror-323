@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+directdb/__init__.py
+directdb/exceptions.py
+directdb/postgresql.py
+directdb/sqlite.py
+directdb.egg-info/PKG-INFO
+directdb.egg-info/SOURCES.txt
+directdb.egg-info/dependency_links.txt
+directdb.egg-info/requires.txt
+directdb.egg-info/top_level.txt
