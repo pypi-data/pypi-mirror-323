@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+TAPLite/__init__.py
+TAPLite.egg-info/PKG-INFO
+TAPLite.egg-info/SOURCES.txt
+TAPLite.egg-info/dependency_links.txt
+TAPLite.egg-info/top_level.txt
+TAPLite/bin/TAPLite.dll
