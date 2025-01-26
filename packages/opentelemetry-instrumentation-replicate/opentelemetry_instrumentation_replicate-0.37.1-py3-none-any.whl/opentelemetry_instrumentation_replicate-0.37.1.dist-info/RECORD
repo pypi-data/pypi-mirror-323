@@ -1,0 +1,8 @@
+opentelemetry/instrumentation/replicate/__init__.py,sha256=RA_x-p8zpGT0MqW26iOau4FTXcTJoRHyo6rX7WpwtpE,5808
+opentelemetry/instrumentation/replicate/config.py,sha256=CtypZov_ytI9nSrfN9lWnjcufbAR9sfkXRA0OstDEUw,42
+opentelemetry/instrumentation/replicate/utils.py,sha256=E4Ur_vkGqrfsNpFJ4oU72GQudgyH0-NFsbOYjLfEkIo,809
+opentelemetry/instrumentation/replicate/version.py,sha256=05a0sNQ4-NqJ7OA2CyOpYZPDIdruLdsog-uy0kipmTI,23
+opentelemetry_instrumentation_replicate-0.37.1.dist-info/METADATA,sha256=mJ9TpfKQpIIwaCLen_HAWVrsz4Vwu82LVq5blFt1oyE,2200
+opentelemetry_instrumentation_replicate-0.37.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+opentelemetry_instrumentation_replicate-0.37.1.dist-info/entry_points.txt,sha256=YDOSAhxrkimcGYNOJLwqT1VoPS9YM-mXd1DT4hBk0Oc,102
+opentelemetry_instrumentation_replicate-0.37.1.dist-info/RECORD,,
