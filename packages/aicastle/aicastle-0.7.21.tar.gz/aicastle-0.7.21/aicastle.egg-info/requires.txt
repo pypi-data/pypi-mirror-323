@@ -1,0 +1,11 @@
+click
+boto3
+paramiko
+pyyaml
+streamlit
+openai
+tiktoken
+pathspec
+pymupdf
+python-dotenv
+pillow
