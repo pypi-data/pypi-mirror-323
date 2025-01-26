@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: legislice
+Version: 0.8.1
+Summary: API client for fetching and comparing passages from legislation
+Home-page: https://github.com/mscarey/legislice
+Author: Matt Carey
+Author-email: matt@authorityspoke.com
+Project-URL: Bug Tracker, https://github.com/mscarey/legislice/issues
+Project-URL: Documentation, https://legislice.readthedocs.io/en/latest/
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Legal Industry
+Classifier: License :: Free To Use But Restricted
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Topic :: Sociology :: History
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# Legislice
+
+[![An Ethical Open Source Project](https://img.shields.io/badge/open-ethical-%234baaaa)](https://ethicalsource.dev/licenses/) [![Tests](https://github.com/mscarey/legislice/actions/workflows/python-package-2.yml/badge.svg)](https://github.com/mscarey/legislice/actions) [![Coverage Status](https://coveralls.io/repos/github/mscarey/legislice/badge.svg?branch=master)](https://coveralls.io/github/mscarey/legislice?branch=master) [![Documentation Status](https://readthedocs.org/projects/legislice/badge/?version=latest)](https://legislice.readthedocs.io/en/latest/?badge=latest)[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/legislice)](https://pypi.org/project/legislice/)
+
+
+Legislice is a utility for downloading the text of statutes and constitutional provisions, and then creating computable objects representing passages from those provisions. Legislice is used by [AuthoritySpoke](https://authorityspoke.readthedocs.io).
+
+View the [documentation on ReadTheDocs](https://legislice.readthedocs.io/en/latest/).
