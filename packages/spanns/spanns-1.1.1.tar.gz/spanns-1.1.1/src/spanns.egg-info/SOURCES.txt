@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/spanns/__init__.py
+src/spanns/spanns.py
+src/spanns.egg-info/PKG-INFO
+src/spanns.egg-info/SOURCES.txt
+src/spanns.egg-info/dependency_links.txt
+src/spanns.egg-info/requires.txt
+src/spanns.egg-info/top_level.txt
