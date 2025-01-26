@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "randip"
+description = "Random IP generator"
+authors = [
+	{name = "PICOPress"}
+]
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[project.scripts]
+randip = "randip.cli:main"
