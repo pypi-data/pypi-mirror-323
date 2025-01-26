@@ -1,0 +1,10 @@
+can_source
+can_source/can_ast
+can_source/can_compiler
+can_source/can_error
+can_source/can_lexer
+can_source/can_macros
+can_source/can_parser
+can_source/can_utils
+can_source/llvm_core
+can_source/web_core
