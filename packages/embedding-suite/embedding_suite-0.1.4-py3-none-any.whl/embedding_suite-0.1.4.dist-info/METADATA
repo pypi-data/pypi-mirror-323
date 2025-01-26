@@ -1,0 +1,45 @@
+Metadata-Version: 2.2
+Name: embedding-suite
+Version: 0.1.4
+Summary: A simple, unified interface for generating embeddings from various providers.
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: openai>=1.60.1
+Requires-Dist: python-dotenv>=1.0.1
+
+# Embedding Suite
+
+A simple, unified interface for generating embeddings from various providers.
+
+## Installation
+
+### Pip
+
+```bash
+pip install embedding-suite
+```
+
+### Poetry
+
+```bash
+poetry add embedding-suite
+```
+
+### UV (recommended)
+
+```bash
+uv add embedding-suite
+```
+
+## Usage
+
+```python
+from embedding_suite import EmbeddingSuiteClient
+
+client = EmbeddingSuiteClient(provider_configs={"openai": {
+    "api_key": "XXX"}})
+
+embeddings = client.generate_embeddings(
+    model="openai:text-embedding-3-large", inputs=["Hi", "Hello"])
+```
