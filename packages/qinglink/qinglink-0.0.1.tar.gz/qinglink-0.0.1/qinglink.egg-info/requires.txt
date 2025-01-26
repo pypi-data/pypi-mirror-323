@@ -1,0 +1,7 @@
+typer
+httpx
+tqdm
+safetensors
+torch
+numpy
+torchvision

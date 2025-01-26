@@ -1,0 +1,88 @@
+Metadata-Version: 2.2
+Name: qinglink
+Version: 0.0.1
+Summary: The toolset for link project
+Home-page: https://github.com/Alndaly/qinglink
+Author: Kinda Hall
+Author-email: 1142704468@qq.com
+Maintainer: Kinda Hall
+Maintainer-email: 1142704468@qq.com
+License: Copyright (c) 2024 Kinda Hall
+        
+        What you can do:
+        
+        - improve the code and send the improvements back to the community
+        - use the code to help you study the subject
+        - use the code as a starting point for your own project
+        
+        What you can't do:
+        
+        - use the code, or any derivative of the code, for any commercial purpose
+        - hold the copyright to the modifications you make to the code
+        - sell the code or any derivative of the code
+        - remove this license information from the code
+        - claim that the code is your original work
+        
+        you may not use the code for any illegal purpose.
+        
+        **NOTE**: You **can not** do any other thing without my permission.
+Keywords: pip,tools
+Platform: any
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer
+Requires-Dist: httpx
+Requires-Dist: tqdm
+Requires-Dist: safetensors
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: torchvision
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: platform
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# aiop
+
+一个AI脚本集，正在开发中
+
+
+## 获取模型文件的模型信息（civitai）
+
+```shell
+aiop info -p path/to/your/file
+```
+
+- `-p` 要获取信息的文件路径
+
+## 获取当前文件夹下所有模型文件的预览图并且按名字保存到当前目录
+
+```shell
+aiop preview -p path/to/the/dir -r
+```
+
+- `-p` 要获取预览图的文件夹路径
+- `-r` 是否递归子文件夹
+
+## 给当前文件夹下所有模型文件进行分类
+
+> [!tip]
+> 这个函数还不是很好，最好只用一次，第二次会出现文件夹套文件夹很不美观，待优化
+
+```shell
+aiop classify -p path/to/the/dir -r
+```
+
+- `-p` 要分类的文件夹路径
+- `-r` 是否递归子文件夹
+- `-a` 遇到没有预览文件的模型是否自动下载预览图片
