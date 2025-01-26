@@ -1,0 +1,53 @@
+from generativepy.bitmap import Scaler
+from generativepy.nparray import (make_nparray_data, make_npcolormap, save_nparray,
+                                  load_nparray, save_nparray_image, apply_npcolormap)
+from generativepy.color import Color
+import numpy as np
+import sys
+from cmath import asin as sin
+def folder():
+    a = sys.argv[0]
+    a=a.replace("burn-ship.py","burn-ship.png")
+    return a
+MAX_COUNT = 300
+WIDTH = 256
+HEIGHT = 200
+def calc(c1, c2):
+    x = y = 0
+    for i in range(MAX_COUNT):
+        x, y = x/(i+1) - y/(i+1) + c1, abs(2*x*y) + c2
+        if abs(x*x) + abs(y*y) > 4:
+            return i + 1
+    return 0
+
+
+def paint(image, pixel_width, pixel_height, frame_no, frame_count):
+    scaler = Scaler(pixel_width, pixel_height, width=3.2, startx=-2, starty=-1.8)
+
+    for px in range(pixel_width):
+        for py in range(pixel_height):
+            x, y = scaler.device_to_user(px, py)
+            count = calc(x, y)
+            image[py, px] = count
+
+
+def colorise(counts):
+    counts = np.reshape(counts, (counts.shape[0], counts.shape[1]))
+
+    colormap = make_npcolormap(MAX_COUNT+1,
+                               [Color('black'), Color('red'), Color('orange'), Color('yellow'), Color('white')],
+                               [16, 8, 32, 128])
+
+    outarray = np.zeros((counts.shape[0], counts.shape[1], 3), dtype=np.uint8)
+    apply_npcolormap(outarray, counts, colormap)
+    return outarray
+
+
+data = make_nparray_data(paint, WIDTH, HEIGHT, channels=1)
+
+save_nparray(folder(), data)
+data = load_nparray(folder())
+
+frame = colorise(data)
+
+save_nparray_image('burn-ship.png', frame)

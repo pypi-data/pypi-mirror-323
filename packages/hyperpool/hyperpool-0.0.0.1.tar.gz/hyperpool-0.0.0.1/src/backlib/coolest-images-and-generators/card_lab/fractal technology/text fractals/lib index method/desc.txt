@@ -1,0 +1,3 @@
+speed:0.2
+readability:0.95
+cool:0.05
