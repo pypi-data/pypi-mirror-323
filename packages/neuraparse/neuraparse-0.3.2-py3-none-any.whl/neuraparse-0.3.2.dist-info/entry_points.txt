@@ -1,0 +1,2 @@
+[console_scripts]
+neuraparse-universal-scrape = neuraparse.universal_scraper.scraper:main

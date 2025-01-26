@@ -1,0 +1,50 @@
+Metadata-Version: 2.2
+Name: neuraparse
+Version: 0.3.2
+Summary: Universal web scraper package under neuraparse namespace
+Home-page: 
+Author: Bayram EKER
+Author-email: eker600@gmail.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/bayrameker
+Project-URL: Source, https://github.com/bayrameker
+Keywords: web scraping,selenium,beautifulsoup,requests,lxml,undetected-chromedriver
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+Requires-Dist: lxml
+Requires-Dist: html5lib
+Requires-Dist: undetected-chromedriver
+Requires-Dist: urllib3
+Requires-Dist: dataclasses; python_version < "3.7"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Neuraparse Universal Scraper
+
+Bu paket, `neuraparse` namespace’i altında evrensel bir web scraper sağlar.
+
+## Kurulum
+
+```bash
+pip install neuraparse-universal-scraper
