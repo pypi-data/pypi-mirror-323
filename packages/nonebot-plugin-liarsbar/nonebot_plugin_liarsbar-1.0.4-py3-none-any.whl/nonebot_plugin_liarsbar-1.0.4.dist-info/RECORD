@@ -1,0 +1,10 @@
+nonebot_plugin_liarsbar/__init__.py,sha256=4JegXIz3QcZkbA57imn8vGm1pTBpL39G5BPZ1DAEYyo,760
+nonebot_plugin_liarsbar/config.py,sha256=kRaMNEep23Z_2WISqJ8W_u_VdHzoD7VvSRD2-EPzxQg,319
+nonebot_plugin_liarsbar/liars/__init__.py,sha256=4KFqEP2QHFbPN66eQJMdGsmNz2v7ywWv_FR1pW_kkLk,19
+nonebot_plugin_liarsbar/liars/definitions.py,sha256=4nb6o8RA3Ug7Vio2BMUkU8HriGwFPiHDbRKbga2DYI8,15654
+nonebot_plugin_liarsbar/liars/main.py,sha256=QfN6pXkBoKkI8V7reHsxQvy0Ff6twmYHOCvI3j_wZQM,7887
+nonebot_plugin_liarsbar-1.0.4.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+nonebot_plugin_liarsbar-1.0.4.dist-info/METADATA,sha256=8N5mDLwpyIlfmbu7zfRIL2SObHL3MYiZjAw2n9MFUDo,4700
+nonebot_plugin_liarsbar-1.0.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+nonebot_plugin_liarsbar-1.0.4.dist-info/top_level.txt,sha256=Auh-s2pJNcKw-v6yfwdp7qKz_mFix0W581wM1OeMIHo,24
+nonebot_plugin_liarsbar-1.0.4.dist-info/RECORD,,
