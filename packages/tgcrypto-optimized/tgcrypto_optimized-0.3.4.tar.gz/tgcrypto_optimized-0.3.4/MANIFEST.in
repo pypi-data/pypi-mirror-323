@@ -1,0 +1,4 @@
+include Cargo.toml Cargo.lock
+recursive-include src *
+global-exclude .git*
+global-exclude .git/**

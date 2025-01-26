@@ -1,0 +1,13 @@
+[package]
+name = "tgcrypto_optimized"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "tgcrypto_optimized"
+crate-type = ["cdylib"]
+
+[dependencies]
+grammers-crypto = "0.3.0"
+pyo3 = { version = "0.17.1", features = ["extension-module"] }
+aes = "0.8.1"

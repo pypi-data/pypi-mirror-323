@@ -1,0 +1,13 @@
+Cargo.lock
+Cargo.toml
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/lib.rs
+tgcrypto_optimized/__init__.py
+tgcrypto_optimized.egg-info/PKG-INFO
+tgcrypto_optimized.egg-info/SOURCES.txt
+tgcrypto_optimized.egg-info/dependency_links.txt
+tgcrypto_optimized.egg-info/not-zip-safe
+tgcrypto_optimized.egg-info/top_level.txt
