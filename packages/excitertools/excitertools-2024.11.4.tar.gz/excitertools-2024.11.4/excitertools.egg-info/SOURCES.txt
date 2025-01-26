@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+excitertools.py
+setup.py
+excitertools.egg-info/PKG-INFO
+excitertools.egg-info/SOURCES.txt
+excitertools.egg-info/dependency_links.txt
+excitertools.egg-info/requires.txt
+excitertools.egg-info/top_level.txt
+tests/test_applications.py
+tests/test_custom.py
+tests/test_main.py
+tests/test_more_itertools.py
+tests/test_open.py
