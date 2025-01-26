@@ -1,0 +1,2 @@
+[console_scripts]
+adv-searchfor = adv_searchfor.adv_searchfor:main
