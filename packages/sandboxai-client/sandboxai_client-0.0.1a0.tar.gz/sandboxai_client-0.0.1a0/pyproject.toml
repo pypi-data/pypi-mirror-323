@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sandboxai-client"
+version = "0.0.1-alpha0"
+description = "Secure sandboxes for AI agents and LLMs."
+
+# TODO figure out how to make relative path work correctly with uv build.
+# readme = "../docs/README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "pydantic",
+    "requests",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/substratusai/sandboxai"
+Repository = "https://github.com/substratusai/sandboxai.git"
+Documentation = "https://github.com/substratusai/sandboxai"
+
+[tool.hatch.build.targets.wheel]
+packages = ["sandboxai"]

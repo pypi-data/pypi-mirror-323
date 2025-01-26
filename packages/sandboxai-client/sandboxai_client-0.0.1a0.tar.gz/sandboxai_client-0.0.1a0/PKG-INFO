@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: sandboxai-client
+Version: 0.0.1a0
+Summary: Secure sandboxes for AI agents and LLMs.
+Project-URL: Homepage, https://github.com/substratusai/sandboxai
+Project-URL: Repository, https://github.com/substratusai/sandboxai.git
+Project-URL: Documentation, https://github.com/substratusai/sandboxai
+Requires-Python: >=3.10
+Requires-Dist: pydantic
+Requires-Dist: requests
