@@ -1,0 +1,12 @@
+tests/__init__.py,sha256=01BSDBeJkZ3uviRRG69wXwo2go0iaUvqlcZEa-5P9NE,35
+tests/test_api.py,sha256=jt2VFaxPBU8JmoB3WVUaDEC2_TxGFi_TlPSJjAYpzWs,921
+tzsmmpay_django/__init__.py,sha256=DVi33fvvBXyiofbIzP96os3AIxi_xvEhZcMrzdx4xkY,102
+tzsmmpay_django/api.py,sha256=xZKGtVIVvwkQ_pGumLUMb7O8XrB9g-S7Kt2BOAuxVLY,1273
+tzsmmpay_django/exceptions.py,sha256=I3WNlHrzoMaaHqlUA40_G2Sdn5J4LhZYlfI8pfeqcow,370
+tzsmmpay_django/utils.py,sha256=zFnI4ANZcabuI_9VnQOk4bvIEY_ei5iSYiIsGPtbc9A,570
+tzsmmpay_django/version.py,sha256=lzGFsymf0DtA_1oAZcPbeQ557iY-1BRkekhfA2qaFh8,18
+tzsmmpay_django-1.0.0.dist-info/LICENSE,sha256=5kam7RO2WK4ZcOIxlO17SDXb6XZ9J1bZ77KD81N6R54,482
+tzsmmpay_django-1.0.0.dist-info/METADATA,sha256=mhibd6PjtVIyzlU2llDpkWOvQfhfQ5lKvWJt2uvlV0o,993
+tzsmmpay_django-1.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+tzsmmpay_django-1.0.0.dist-info/top_level.txt,sha256=Y3sTya4uqfmyNWUTzGdYQOuil7Zc5917P7eoz3M4cuw,22
+tzsmmpay_django-1.0.0.dist-info/RECORD,,
