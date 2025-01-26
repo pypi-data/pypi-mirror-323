@@ -1,0 +1,17 @@
+WebtoonScraper/__init__.py,sha256=aRjQ6Jn3QgHGpFMK5I230cYc3IYcMxKRXiWL2ytcRGk,2305
+WebtoonScraper/__main__.py,sha256=RQt0ZChLYuKLCCTtz4BBqZtdfmTzNSSIJMjcNzumZHA,11788
+WebtoonScraper/base.py,sha256=XIy_sWfKdVjRw-pg3jqE9lAy2FuJqVl2PPlNRX3VGYc,1138
+WebtoonScraper/directory_state.py,sha256=NkylBt8bRk_hOfYXLlVXdUWLk12zQ0ueH0xTSqtC7ig,9098
+WebtoonScraper/exceptions.py,sha256=okArfcdi4SMT0ADGbliLgT6XL8uNg3eh8d8qSj5YzL0,5600
+WebtoonScraper/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+WebtoonScraper/scrapers/__init__.py,sha256=CPD50v1Ed5wqiPmpey3-DA3CzEi7kkVTCScEc_um_bk,613
+WebtoonScraper/scrapers/_helpers.py,sha256=qnhjRg2wUJngYZ1NZ8QgZAYZUjPyCJLo3tuQBLxZjc4,9543
+WebtoonScraper/scrapers/_lezhin_comics.py,sha256=u0GOnhQ3CeBIJQSmyx_Xf9kT_pzuxYwhaYw5K_V09DU,19041
+WebtoonScraper/scrapers/_lezhin_unshuffler.py,sha256=YFGntkTXgGqknSobU6HoGwu3NtDvrcIP54V2qiRwWnE,7326
+WebtoonScraper/scrapers/_naver_webtoon.py,sha256=T_F3qw4Od-6QVZLq65PmT593UQnuJTcDUkaRmfVJvzk,11102
+WebtoonScraper/scrapers/_scraper.py,sha256=JLQfilHiXFNLFrGdCVFK1Jv4MDhC4K3ziSXKmO6GHEs,44909
+webtoonscraper-5.2.1.dist-info/METADATA,sha256=L2_4n-OzLu4UCe6ufZho_kQtOZOcrpRWmz-LotSYGwI,2945
+webtoonscraper-5.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+webtoonscraper-5.2.1.dist-info/entry_points.txt,sha256=aI4j6vnraKxY9EYPtI8olEzvNMOaQxPQ0jw1Tevy37I,103
+webtoonscraper-5.2.1.dist-info/licenses/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+webtoonscraper-5.2.1.dist-info/RECORD,,
