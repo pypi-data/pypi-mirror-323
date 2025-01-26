@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: jtlutil
+Version: 0.1.6
+Summary: Support routines for League infrastructure
+Author-email: Eric Busboom <eric@civicknowledge.com>
+Requires-Python: >=3.11
+Requires-Dist: docker>=7.1.0
+Requires-Dist: flask-login>=0.6.3
+Requires-Dist: flask-session>=0.8.0
+Requires-Dist: flask>=3.1.0
+Requires-Dist: ipykernel>=6.29.5
+Requires-Dist: names-generator>=0.2.0
+Requires-Dist: paramiko>=3.5.0
+Requires-Dist: pycryptodome>=3.21.0
+Requires-Dist: pyjwt>=2.10.1
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: python-slugify>=8.0.4
+Requires-Dist: pytz>=2024.2
+Requires-Dist: requests>=2.32.3
+Requires-Dist: sqlitedict>=2.1.0
+Description-Content-Type: text/markdown
+
+# League Infrastructure Utilities
+
+
+## Development
+
+We're using `uv` for project management. 
+
+* Create a virtenv: `uv venv` or `uv venv --link-mode symlink`
+* build: `uv build`.venv
+* publish to PyPi: uv publish --token $UV_PUBLISH_TOKEN
