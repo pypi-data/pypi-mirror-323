@@ -1,0 +1,17 @@
+LICENSE
+README-pypi.md
+README.md
+pyproject.toml
+setup.py
+src/stiqueue/__init__.py
+src/stiqueue/sqclient.py
+src/stiqueue/sqserver.py
+src/stiqueue.egg-info/PKG-INFO
+src/stiqueue.egg-info/SOURCES.txt
+src/stiqueue.egg-info/dependency_links.txt
+src/stiqueue.egg-info/top_level.txt
+tests/test_client.py
+tests/test_client_ack.py
+tests/test_client_long_txt.py
+tests/test_client_no_ack.py
+tests/test_examples.py
