@@ -1,0 +1,3 @@
+include startgarlic/.env
+include startgarlic/utils/config.py
+recursive-include startgarlic * 

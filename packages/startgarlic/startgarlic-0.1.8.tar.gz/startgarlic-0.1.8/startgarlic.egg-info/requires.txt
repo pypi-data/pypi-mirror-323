@@ -1,0 +1,13 @@
+numpy<2.0.0,>=1.23.5
+pandas>=2.0.0
+supabase-py==0.0.2
+postgrest-py==0.4.0
+gotrue==0.2.0
+httpx<0.17.0,>=0.16.1
+websockets<10.0,>=9.1
+requests==2.25.1
+python-dotenv
+sentence-transformers
+langchain>=0.2.15
+langchain-community>=0.2.15
+langchain-huggingface>=0.0.3
