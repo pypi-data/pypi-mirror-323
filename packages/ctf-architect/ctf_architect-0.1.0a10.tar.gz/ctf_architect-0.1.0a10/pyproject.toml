@@ -1,0 +1,35 @@
+[project]
+name = "ctf-architect"
+version = "0.1.0a10"
+description = "A CTF challenge management tool"
+license = "MIT"
+readme = "README.md"
+authors = [
+    { name = "Jus-Codin", email = "70018166+Jus-Codin@users.noreply.github.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "cyclopts>=3.1.2",
+    "pydantic>=2.10.4",
+    "pyyaml>=6.0.2",
+    "readchar>=4.2.1",
+    "rich>=13.9.4",
+    "tomlkit>=0.13.2",
+]
+
+[project.scripts]
+ctf-architect = "ctf_architect.cli:main"
+ctfa = "ctf_architect.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.4",
+]
+docs = [
+    "mkdocs-material>=9.5.50",
+    "mkdocstrings[python]>=0.27.0",
+]
