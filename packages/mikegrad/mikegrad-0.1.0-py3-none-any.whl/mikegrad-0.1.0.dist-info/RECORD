@@ -1,0 +1,8 @@
+mikegrad/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mikegrad/engine.py,sha256=RYS-WK_tUECwCuixhjoXWvYMyBgZkFR5ZsfuiZtyk94,3089
+mikegrad/nn.py,sha256=y4vx-Z10Mi9_rCFk_Oynz8_clP0zh5KKv-TwM89siHs,1269
+mikegrad-0.1.0.dist-info/LICENSE,sha256=CI4PVFQGX1Sg3r_PYw-kBSs6NoWf5Kb-7t-wifvZAtQ,1095
+mikegrad-0.1.0.dist-info/METADATA,sha256=HrDs6-RiYLi1zKZiIDigIjPyQeYyQzCBlXPxkXyl7DA,1287
+mikegrad-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+mikegrad-0.1.0.dist-info/top_level.txt,sha256=vb9TsuB0k1tD__fCmhPy3A-ivCDiHSYTauVP9MQaTq8,9
+mikegrad-0.1.0.dist-info/RECORD,,
