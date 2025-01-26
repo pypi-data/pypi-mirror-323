@@ -1,0 +1,3 @@
+[console_scripts]
+agenticfleet = agentic_fleet.cli:main
+post_install = agentic_fleet.scripts:install_playwright_deps
