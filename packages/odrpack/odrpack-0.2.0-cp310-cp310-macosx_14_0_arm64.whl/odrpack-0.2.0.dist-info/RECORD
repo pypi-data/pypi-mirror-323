@@ -1,0 +1,15 @@
+odrpack-0.2.0.dist-info/RECORD,,
+odrpack-0.2.0.dist-info/LICENSE,sha256=r4K4aEA_DZps6F7opJ4JOCNiXfUogVkS38C5XL0sGCk,1066
+odrpack-0.2.0.dist-info/WHEEL,sha256=_cS6fEsxLUIcIdoA6Si0dddGONVIRpHlSl13K8j9MME,93
+odrpack-0.2.0.dist-info/METADATA,sha256=5fvjFUSf5b8XUJckotyaTG5fFfSAHVS88kGQFl6NlvU,4996
+odrpack/__odrpack.cpython-310-darwin.so,sha256=7p1r_2w_Lk7yRn7HW_tTd5lad4zyhuZlCIHIwIQBIzQ,492240
+odrpack/__odrpack.pyi,sha256=oKeFk2pRB1quvtJdoPajDX6J0_hnQT9JeLdot7ZPrNY,7707
+odrpack/__init__.py,sha256=0gd_kZPIfzlGA2OSKlmf9pIoYkTFvgol4umjongNy7Q,820
+odrpack/result.py,sha256=sIqCYoHT3BoovMVln5vaRxVSMmA5tzvZKTKl4-mLLXE,2636
+odrpack/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odrpack/exceptions.py,sha256=iECKz7S7m6FiVf_BB0rBJK4s04uyyAZxybx9p1R5pkI,242
+odrpack/driver.py,sha256=t_o1I1eLXFEXQYacRzBS24af4zsMna1H2sc3ICJYmy4,25163
+odrpack/.dylibs/libstdc++.6.dylib,sha256=4NyBJVpFOZtqW1YWjwluE-gtXPOyS56Yn_nKYM4F0Bk,3371040
+odrpack/.dylibs/libgfortran.5.dylib,sha256=ntFJxwdkYOr5i8p60xHZwiGsXAaASMwbQCbsMn_CRPk,1902144
+odrpack/.dylibs/libquadmath.0.dylib,sha256=TESKRuQ5wHUJnIL4GMSr-lk17PfkksLA4Zyouc6QMYU,364064
+odrpack/.dylibs/libgcc_s.1.1.dylib,sha256=8uOvDBAecteADqS44iEPnEokMpZJjRujAx2fXFmStsQ,183168
