@@ -1,0 +1,6 @@
+[console_scripts]
+aggregator = smart_tools.aggregator.main:main
+comparator = smart_tools.comparator.main:main
+dissector = smart_tools.dissector.main:main
+fusioner = smart_tools.fusioner.main:main
+morpher = smart_tools.morpher.main:main
