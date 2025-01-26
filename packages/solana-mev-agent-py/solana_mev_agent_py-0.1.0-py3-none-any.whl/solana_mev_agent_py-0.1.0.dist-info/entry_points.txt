@@ -1,0 +1,5 @@
+[console_scripts]
+mcli=src.main:main
+start_server=src.protocol_server.utils.server_utils:start_server
+stop_server=src.protocol_server.utils.server_utils:stop_server
+
