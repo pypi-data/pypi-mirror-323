@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: fastapi-forge
+Version: 0.1.14
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pydantic
+Requires-Dist: cookiecutter
+Requires-Dist: click
+Dynamic: requires-dist
