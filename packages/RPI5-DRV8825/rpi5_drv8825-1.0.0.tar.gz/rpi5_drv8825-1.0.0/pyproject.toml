@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "RPI5_DRV8825"
+version = "1.0.0"
+description = "An updated DRV8825 stepper motor driver library for Raspberry Pi 5"
+readme = "README.md"
+dependencies = [
+  "lgpio"
+]
+authors = [
+    { name = "Alexandru Gadin", email = "112425293+agadin@users.noreply.github.com" }
+]
+license = { text = "Unlicense" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Public Domain",
+    "Operating System :: POSIX :: Linux"
+]
+
+requires-python = ">=3.6"
+
+[project.urls]
+Homepage = "https://github.com/agadin/RPI5_DRV8825"

@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+RPI5_DRV8825.py
+pyproject.toml
+RPI5_DRV8825.egg-info/PKG-INFO
+RPI5_DRV8825.egg-info/SOURCES.txt
+RPI5_DRV8825.egg-info/dependency_links.txt
+RPI5_DRV8825.egg-info/requires.txt
+RPI5_DRV8825.egg-info/top_level.txt
