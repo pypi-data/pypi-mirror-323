@@ -1,0 +1,16 @@
+LICENSE.rst
+MANIFEST.in
+README.rst
+pyproject.toml
+juham_core/__init__.py
+juham_core/juham.py
+juham_core/rcloud.py
+juham_core/rthread.py
+juham_core/timeutils.py
+juham_core.egg-info/PKG-INFO
+juham_core.egg-info/SOURCES.txt
+juham_core.egg-info/dependency_links.txt
+juham_core.egg-info/requires.txt
+juham_core.egg-info/top_level.txt
+tests/__init__.py
+tests/test_juham.py
