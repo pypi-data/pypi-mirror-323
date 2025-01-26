@@ -1,0 +1,9 @@
+chirpier/__init__.py,sha256=scU9ZLsMjbI9oRszUS7rH7sKBUI5aUf1Gs6vM9pWsfY,297
+chirpier/client.py,sha256=lel_pPpsG9SdYU3CXE19NxrvGzRPME5w1C3czUCpgq0,7325
+chirpier/errors.py,sha256=cF2FkHjLcknPxlaizE-i1xQlYa3cxoBHlAh2AhGEBH0,450
+chirpier/event.py,sha256=5hM9gldp4_zcBD4qZQMwwjyPwYcriiYIjpHljCrghJs,1523
+chirpier/utils.py,sha256=dvm_OHRZJuPkCCA4l-eRcrdcXxIDaZoaBWLn8NuZiUE,1185
+chirpier-0.0.6.dist-info/LICENCE,sha256=uo4vZHmyWB8ma3tBau6qjo9_RrOlcpQ9WpnhBVWBPOE,1071
+chirpier-0.0.6.dist-info/METADATA,sha256=UfXXabE2fitILO1ingWnHrSxEz0RSDN9uRYtcVyTgsE,3173
+chirpier-0.0.6.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+chirpier-0.0.6.dist-info/RECORD,,
