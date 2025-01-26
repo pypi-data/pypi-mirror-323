@@ -1,0 +1,2 @@
+[console_scripts]
+relppy = relppy.main:cli
