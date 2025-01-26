@@ -1,0 +1,4 @@
+requests
+feedparser
+html2text
+youtube_search

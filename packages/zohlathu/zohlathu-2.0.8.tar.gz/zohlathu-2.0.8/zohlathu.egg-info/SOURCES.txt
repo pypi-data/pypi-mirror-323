@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+zohlathu/__init__.py
+zohlathu/lyrics.py
+zohlathu.egg-info/PKG-INFO
+zohlathu.egg-info/SOURCES.txt
+zohlathu.egg-info/dependency_links.txt
+zohlathu.egg-info/requires.txt
+zohlathu.egg-info/top_level.txt

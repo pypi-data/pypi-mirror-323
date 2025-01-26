@@ -1,0 +1,77 @@
+Metadata-Version: 2.2
+Name: zohlathu
+Version: 2.0.8
+Summary: A A Python package for fetching Mizo song lyrics from Zohlathu.in
+Home-page: https://github.com/RSR-TG-Info/ZoHlathu
+Author: RSR
+Author-email: imrsrmizo@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: feedparser
+Requires-Dist: html2text
+Requires-Dist: youtube_search
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+A Python package for fetching Mizo song lyrics from www.zohlathu.in
+
+
+## Installation
+
+You can install the package using pip:
+```bash
+pip3 install zohlathu
+```
+
+## Usage
+```python
+from zohlathu import get_lyrics
+
+
+song_name = "C. Sanga - Tawnmang Lasi"  # Replace with your request song name
+lyrics = get_lyrics(song_name) # Get the lyrics
+if lyrics:
+    # Format the response
+    response = (
+        f"{lyrics['title']}\n\n"
+        f"{lyrics['lyrics']}\n\n"
+        f"Source: {lyrics['source_url']}"
+    )
+    print(respose)
+```
+
+* `lyrics['title']` = The title of lyrics
+* `lyrics['lyrics']` = The lyrics
+* `lyrics['source_url']` = Link of the lyrics
+
+## Handle Errors
+```python
+try:
+    song_name = "C. Sanga - Tawnmang Lasi"  # Replace with your request song name
+    lyrics = get_lyrics(song_name) # Get the lyrics
+    if lyrics:
+        # Format the response
+        response = (
+            f"{lyrics['title']}\n\n"
+            f"{lyrics['lyrics']}\n\n"
+            f"Source: {lyrics['source_url']}"
+        )
+        print(respose)
+except Exception as e:
+    print(f"An error occurred: {e}")
+```
+
+
+Required Python 3.7 +
