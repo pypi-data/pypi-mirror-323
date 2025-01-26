@@ -1,0 +1,2 @@
+[console_scripts]
+pytregex = pytregex.main:main
