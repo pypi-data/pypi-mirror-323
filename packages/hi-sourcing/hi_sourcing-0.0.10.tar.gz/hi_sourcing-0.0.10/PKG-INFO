@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: hi-sourcing
+Version: 0.0.10
+Summary: A similarity search utility for data sourcing
+Home-page: https://github.com/xileven/hi-sourcing
+Author: J L
+Author-email: jliu5277@gmail.com
+Project-URL: Documentation, https://github.com/xileven/hi-sourcing
+Project-URL: Source, https://github.com/xileven/hi-sourcing
+Project-URL: Tracker, https://github.com/xileven/hi-sourcing/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: faiss-cpu
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# hi-sourcing
+
+package for data sourcing/retrieval
