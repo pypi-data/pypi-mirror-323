@@ -1,0 +1,135 @@
+Metadata-Version: 2.2
+Name: Gpt4Zero
+Version: 0.1
+Summary: Gpt4Zero - python библиотека для бесплатного взаимодействия с передовыми нейросетями.
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+![banner](https://i.ibb.co/zrpfMXh/3-20250125121647.png)
+
+# Документация для библиотеки `Gpt4Zero` (v0.1) <img src="https://cdn-icons-png.flaticon.com/512/3098/3098090.png" width="28">
+
+## 1. Установка <a name="1-установка"></a>
+
+```bash
+pip install Gpt4Zero
+```
+
+**Совет:** Используйте виртуальное окружение:
+```bash
+python -m venv gpt4zero-env && source gpt4zero-env/bin/activate
+```
+
+---
+
+## 2. Использование <a name="2-использование"></a>
+
+### Быстрый старт
+```python
+from gpt4zero import AI_Client
+
+client = AI_Client()
+print(client.list_models())  # ['claude-sonnet-3.5', 'gpt-4o', 'gemini-1.5', 'deepseek-r1']
+```
+
+### Доступные модели
+| Модель | Описание |
+|--------|----------|
+| **claude-sonnet-3.5** | Баланс скорости и качества |
+| **gpt-4o** | Максимальная производительность |
+| **gemini-1.5** | Быстрые ответы |
+| **deepseek-r1** | Специализация на генерации кода |
+
+---
+
+## Примеры <a name="примеры"></a>
+
+### Базовый запрос
+```python
+response = client.chat(
+    messages=[{"role": "user", "content": "Напиши hello world на Python"}]
+)
+```
+
+### Генерация кода
+```python
+response = client.chat(
+    messages=[{"role": "user", "content": "Реализуй бинарный поиск на C++"}],
+    model="deepseek-r1"
+)
+```
+
+### Потоковая передача
+```python
+stream = client.chat(
+    messages=[{"role": "user", "content": "Опиши процесс фотосинтеза"}],
+    stream=True
+)
+```
+
+---
+
+## 3. Рекомендации <a name="3-советы"></a>
+
+**Оптимальный выбор модели:**
+```python
+# Для технических вопросов
+client.chat(..., model="deepseek-r1")
+
+# Для творческих задач
+client.chat(..., model="gpt-4o")
+```
+
+**Форматирование ответов:**
+```python
+# Использование Markdown
+response = client.chat([{"role": "user", "content": "Опиши REST API в markdown"}])
+```
+
+---
+
+## 4. Обработка ошибок <a name="4-ошибки"></a>
+
+```python
+try:
+    response = client.chat(...)
+except Exception as e:
+    print(f"Ошибка: {str(e)}")
+```
+
+---
+
+## 5. Поддержка <a name="5-поддержка"></a>
+
+<div align="left">
+  <a href="https://t.me/termiss_it" target="_blank" rel="noopener">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" 
+         alt="Telegram"
+         width="28"
+         style="vertical-align: middle; margin-right: 10px;">
+    Telegram-канал
+  </a>
+  ᅠ 
+  <a href="https://github.com/qwez-source" target="_blank" rel="noopener">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" 
+         alt="GitHub"
+         width="28"
+         style="vertical-align: middle; margin-right: 10px;">
+    GitHub автора
+  </a>
+</div>
+
+---
+*Версия 1.2 | Обновлено: 15 июля 2024*  
+
+**Лицензия:** MIT  
+**Статус:** Активно развивается
