@@ -1,0 +1,9 @@
+mcp_server_esignatures/__init__.py,sha256=KNZ1bD9ZGfyZwlv91Ueeega_1lsRDLs2fYQDgNbBdtc,212
+mcp_server_esignatures/input_schema_contracts.py,sha256=Zty1tKflUUaJ-1P4PDXz_WVAbMjKo-uqTb47kuC71T0,9625
+mcp_server_esignatures/input_schema_document_elements.py,sha256=guh_p7soXuT6SWZgRaxqJw4K3lcbWz7uUjuOwywQiO8,6741
+mcp_server_esignatures/input_schema_templates.py,sha256=k0iLT6RtHMYZowTNJ7jQx84aIepH-X-PkEgXkaOmF5Y,2024
+mcp_server_esignatures/server.py,sha256=Ucn_eKHvWVgnhw3VvVt5qgy3_G5_Ehy4vCyU0z6D3Ag,7727
+mcp_server_esignatures-0.1.0.dist-info/METADATA,sha256=GzeYkijJZuoWAFhsNf1wWPz3t2rCB25o2qmdYkk5zNk,5336
+mcp_server_esignatures-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_server_esignatures-0.1.0.dist-info/entry_points.txt,sha256=6-OsuWZYue_txVzHKfOlB4eMjsLfAh8GiJDHVr-b-KQ,71
+mcp_server_esignatures-0.1.0.dist-info/RECORD,,
