@@ -1,0 +1,9 @@
+django
+django-unfold==0.43.0
+django-tinymce
+django-lifecycle
+djangorestframework
+loguru
+kavenegar
+drf-spectacular
+django-image-uploader-widget
