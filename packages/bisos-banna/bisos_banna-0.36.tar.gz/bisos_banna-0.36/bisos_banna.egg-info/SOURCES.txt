@@ -1,0 +1,14 @@
+README.rst
+_description.org
+lh-agpl3-LICENSE.txt
+pyproject.toml
+setup.py
+bin/bannaInfo.cs
+bisos/__init__.py
+bisos/banna/__init__.py
+bisos/banna/bannaPortNu.py
+bisos_banna.egg-info/PKG-INFO
+bisos_banna.egg-info/SOURCES.txt
+bisos_banna.egg-info/dependency_links.txt
+bisos_banna.egg-info/not-zip-safe
+bisos_banna.egg-info/top_level.txt
