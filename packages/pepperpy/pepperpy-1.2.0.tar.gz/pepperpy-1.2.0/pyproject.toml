@@ -1,0 +1,104 @@
+[tool.poetry]
+name = "pepperpy"
+version = "1.2.0"
+description = "A Python library for building AI agents"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{ include = "pepperpy" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+openai = "^1.59.7"
+aiohttp = "^3.11.11"
+pydantic = "^2.10.5"
+jinja2 = "^3.1.5"
+python-dateutil = "^2.9.0.post0"
+structlog = "^25.1.0"
+pyyaml = "^6.0.2"
+python-dotenv = "^1.0.1"
+pymupdf = "^1.25.2"
+markdown = "^3.7"
+beautifulsoup4 = "^4.12.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-asyncio = "^0.25.2"
+black = "^24.10.0"
+ruff = "^0.9.2"
+mypy = "^1.14.1"
+pytest-cov = "^6.0.0"
+pytest-mock = "^3.14.0"
+types-pyyaml = "^6.0.12.20241230"
+pydeps = "^3.0.0"
+pylint = "^3.3.3"
+
+[tool.poetry.extras]
+llms = ["anthropic", "openrouter"]
+tools = ["google-api-python-client", "beautifulsoup4", "requests"]
+data-stores = ["chromadb", "faiss-cpu", "sentence-transformers"]
+integrations = ["pyautogen", "langchain", "crewai", "semantic-kernel"]
+all = [
+    "anthropic",
+    "openrouter",
+    "google-api-python-client",
+    "beautifulsoup4",
+    "requests",
+    "chromadb",
+    "faiss-cpu",
+    "sentence-transformers",
+    "pyautogen",
+    "langchain",
+    "crewai",
+    "semantic-kernel",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+select = ["E", "F", "I", "N", "W", "B", "UP"]
+ignore = []
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[tool.semantic_release]
+version_variables = ["pyproject.toml:version"]
+commit_author = "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+commit_parser = "angular"
+branch = "main"
+upload_to_pypi = true
+build_command = "poetry build"
+repository = "pepperpy-core"
+repository_owner = "felipepimentel"
+
+[tool.semantic_release.remote]
+type = "github"
+token = "${GH_TOKEN}"
+
+[tool.semantic_release.publish]
+dist_glob_patterns = ["dist/*"]
+upload_to_vcs_release = true
+upload_to_repository = true
+
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease_token = "rc"
+prerelease = false
+
+[tool.semantic_release.publish.pypi]
+build = true
+remove_dist = true
+token = "${POETRY_PYPI_TOKEN_PYPI}"
