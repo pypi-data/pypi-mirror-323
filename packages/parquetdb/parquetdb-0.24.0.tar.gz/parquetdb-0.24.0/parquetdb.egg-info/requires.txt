@@ -1,0 +1,17 @@
+python-dotenv
+pyarrow
+pandas
+variconfig
+matplotlib
+beautifulsoup4
+requests
+dill
+pathos
+dask
+distributed
+
+[dev]
+sphinx
+sphinx_rtd_theme
+pymongo
+pymatgen
