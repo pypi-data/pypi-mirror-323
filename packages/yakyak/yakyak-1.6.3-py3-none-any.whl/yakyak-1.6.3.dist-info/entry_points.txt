@@ -1,0 +1,2 @@
+[console_scripts]
+yakyak = yakyak.__main__:main
