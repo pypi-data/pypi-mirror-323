@@ -1,0 +1,11 @@
+pixsaw/__init__.py,sha256=MzpC3wAHOSuBLWQw30xfG7Mgq4tXuzVH700U6iXuSew,9
+pixsaw/_version.py,sha256=LBK46heutvn3KmsCrKIYu8RQikbfnjZaj2xFrXaeCzQ,22
+pixsaw/base.py,sha256=KvJZgLkOgNk-1tlB5pj5FJQVZOaWJkUIz1xdR-xKzWk,14059
+pixsaw/script.py,sha256=1hHnlcJW4Gb_JGn-22LzeVgbp2G948T_iDgh-d8RJYE,1706
+pixsaw/tools.py,sha256=DcAZyUxEcjeT6hPwz4LYeZVbVpHFFgOaW17Rwk-TY2I,4422
+pixsaw-0.5.0.dist-info/METADATA,sha256=svrol9Eg6IVaY26Z6Oo2KwqKWKwSxt2hbYYtlEdTaQ0,3093
+pixsaw-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pixsaw-0.5.0.dist-info/entry_points.txt,sha256=2ijaPjIrGrnXjtwWuEhqY2ryYe8lt2QfXhsG7Lfge1g,46
+pixsaw-0.5.0.dist-info/licenses/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pixsaw-0.5.0.dist-info/licenses/COPYING.LESSER,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+pixsaw-0.5.0.dist-info/RECORD,,
