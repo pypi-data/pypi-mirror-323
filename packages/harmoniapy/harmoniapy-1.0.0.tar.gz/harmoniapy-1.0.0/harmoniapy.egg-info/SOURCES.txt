@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+harmonia/checker.py
+harmonia/cli.py
+harmonia/dictionary.py
+harmonia/suggest.py
+harmonia/utils.py
+harmoniapy.egg-info/PKG-INFO
+harmoniapy.egg-info/SOURCES.txt
+harmoniapy.egg-info/dependency_links.txt
+harmoniapy.egg-info/entry_points.txt
+harmoniapy.egg-info/requires.txt
+harmoniapy.egg-info/top_level.txt
