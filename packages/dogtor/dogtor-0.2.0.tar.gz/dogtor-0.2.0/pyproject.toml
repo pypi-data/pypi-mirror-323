@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "dogtor"
+version = "0.2.0"
+description = "Python project scaffolding tool."
+authors = ["Suman Saurabh <sumanan047@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+dogtor-env = "dogtor.env:create"
+dogtor-project = "dogtor.project:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
