@@ -1,0 +1,12 @@
+argparse
+cryptography
+JSON_minify~=0.3.0
+
+[connectors]
+carconnectivity-connector-volkswagen
+carconnectivity-connector-skoda
+
+[plugins]
+carconnectivity-plugin-mqtt
+carconnectivity-plugin-abrp
+carconnectivity-plugin-homekit
