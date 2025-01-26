@@ -1,0 +1,9 @@
+README.md
+setup.py
+pyideai/__init__.py
+pyideai/main.py
+pyideai.egg-info/PKG-INFO
+pyideai.egg-info/SOURCES.txt
+pyideai.egg-info/dependency_links.txt
+pyideai.egg-info/requires.txt
+pyideai.egg-info/top_level.txt

@@ -1,0 +1,92 @@
+# 🐍 PyIdeAI
+
+Welcome to **PyIdeAI**! This Python module allows you to interact with the [ideai.dev](https://ideai.dev) website using Selenium WebDriver. With PyIdeAI, you can easily retrieve similar products to your ideas, thanks to our friends at [ideai.dev](https://ideai.dev) & power of web scraping.
+
+## 🚀 Features
+
+- **Browser Compatibility**: Choose between Firefox and Chrome for your preference.
+- **Easy to Use**: Simple methods to retrieve project information based on user prompts.
+- **Headless Mode**: Run the browser in headless mode for faster execution without a GUI.
+
+## 📦 Installation
+
+You can install PyIdeAI directly from PyPI using pip:
+
+```bash
+pip install pyideai
+```
+
+Alternatively, if you want to install it from the source, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://gitlab.com/mutkuoz/pyideai.git
+   cd pyideai
+   ```
+
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Install the module:
+   ```bash
+   pip install .
+   ```
+
+## 🛠️ Usage
+
+Here's how to use the PyIdeAI module in your Python scripts:
+
+```python
+from pyideai import PyIdeAI
+
+# Initialize the PyIdeAI class
+ideai = PyIdeAI(browser="c", is_shown=True)  # Use "f" for Firefox
+
+# Retrieve similar projects based on your idea
+user_input = "Your innovative project idea"
+result = ideai.retrieve_similar_projects(user_input)
+
+# Print the results
+for project in result:
+    print(f"Title: {project['title']}")
+    print(f"Description: {project['description']}")
+    print(f"Link: {project['link']}")
+    print(f"Tags: {', '.join(project['tags'])}\n")
+```
+
+### 🌐 Example
+
+If you want to find projects similar to "AI-Powered Chatbot", you can run:
+
+```python
+result = ideai.retrieve_similar_projects("AI-Powered Chatbot")
+```
+
+## 📄 Documentation
+
+### Class: `PyIdeAI`
+
+- **`__init__(self, browser="f", driver_options=None, is_shown=False)`**: Initializes the PyIdeAI class with the specified browser and options.
+  - `browser`: Choose "f" for Firefox or "c" for Chrome.
+  - `driver_options`: Options for the selected browser.
+  - `is_shown`: Set to `True` to run the browser in visible mode.
+
+- **`retrieve_similar_projects(user_prompt)`**: Navigates to ideai.dev, submits a user prompt, and returns a list of projects extracted from the resulting page.
+
+## 🤝 Contributing
+
+We welcome contributions! If you have suggestions or improvements, feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+For any inquiries, please reach out to [Mehmet Utku ÖZTÜRK](mailto:mutkuoz@proton.me).
+
+---
+
+Happy coding! 🎉
