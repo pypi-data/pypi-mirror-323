@@ -1,0 +1,3 @@
+[console_scripts]
+source-zendesk-chat=source_zendesk_chat.run:run
+
