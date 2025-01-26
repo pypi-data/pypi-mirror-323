@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: shax_dev
+Version: 0.1
+Summary: Django Base Setup
+Home-page: https://github.com/Bobur2828/django_base.git
+Author: Bobur Gulomov
+Author-email: farmusic@inbox.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: asgiref ==3.8.1
+Requires-Dist: certifi ==2024.8.30
+Requires-Dist: charset-normalizer ==3.4.0
+Requires-Dist: Django ==5.1.2
+Requires-Dist: django-ckeditor ==6.7.2
+Requires-Dist: django-cors-headers ==4.5.0
+Requires-Dist: django-js-asset ==2.2.0
+Requires-Dist: django-unfold ==0.43.0
+Requires-Dist: djangorestframework ==3.15.2
+Requires-Dist: drf-yasg ==1.21.8
+Requires-Dist: idna ==3.10
+Requires-Dist: inflection ==0.5.1
+Requires-Dist: packaging ==24.2
+Requires-Dist: pillow ==11.0.0
+Requires-Dist: pytz ==2024.2
+Requires-Dist: PyYAML ==6.0.2
+Requires-Dist: requests ==2.32.3
+Requires-Dist: setuptools ==70.1.1
+Requires-Dist: soupsieve ==2.6
+Requires-Dist: sqlparse ==0.5.1
+Requires-Dist: tzdata ==2024.2
+Requires-Dist: uritemplate ==4.1.1
+Requires-Dist: urllib3 ==2.2.3
+Requires-Dist: gunicorn
+Requires-Dist: psycopg2
+

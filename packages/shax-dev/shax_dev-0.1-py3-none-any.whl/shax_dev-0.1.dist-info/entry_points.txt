@@ -1,0 +1,2 @@
+[console_scripts]
+shax_dev = shax_dev.manage:django_base
