@@ -1,0 +1,5 @@
+build==1.2.2.post1
+coverage==7.6.10
+pip==24.3.1
+pylint==3.3.3
+pytest==8.3.4
