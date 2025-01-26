@@ -1,0 +1,9 @@
+embedding_suite/__init__.py,sha256=MF64bwUCd4sm3dvcxZnkb4ujHtxT_KeuXdD0nVieEt4,27
+embedding_suite/client.py,sha256=HZFV9NkgUox0u5r3xSGnmSbLT07XKnjJKk12trD9Vdw,1337
+embedding_suite/provider.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+embedding_suite/providers/openai_provider.py,sha256=10C0OgHj5z44sEYbgRTk8vPBlYOmf8LtsID-sNph678,671
+embedding_suite/utils/config.py,sha256=zM50m-ZG45mp-K_nDqvVTyBE6U5Zj0llc0gRM0AHhj4,423
+embedding_suite-0.1.3.dist-info/METADATA,sha256=KMcrVlMMbDZa9LnsKq1640sAr_c4rBwCStqflLR7abA,292
+embedding_suite-0.1.3.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+embedding_suite-0.1.3.dist-info/top_level.txt,sha256=p-cGLrSo9t2Ut5glz69mWrx24Sfgf3-xAnlEZQNJVLA,16
+embedding_suite-0.1.3.dist-info/RECORD,,
