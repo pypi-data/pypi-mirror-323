@@ -1,0 +1,42 @@
+Metadata-Version: 2.2
+Name: skq
+Version: 0.1.0
+Summary: Scientific Toolkit for Quantum Computing
+Author-email: Carlo Lepelaars <info@carlolepelaars.nl>
+License: Apache-2.0
+Requires-Python: <4,>=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2.0,>=1.21
+Requires-Dist: plotly>=5.22.0
+Requires-Dist: nbformat>=5.10.4
+Requires-Dist: qiskit>=1.2.0
+Requires-Dist: matplotlib>=3.9.1
+Requires-Dist: pylatexenc>=2.10
+Requires-Dist: scipy>=1.14.0
+Requires-Dist: pennylane>=0.37.0
+Requires-Dist: pyquil==4.14.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.4; extra == "dev"
+Requires-Dist: ruff>=0.8.4; extra == "dev"
+
+# skq
+
+Scientific Toolkit for Quantum Computing
+
+This library is used in the [q4p (Quantum Computing for Programmers)](https://github.com/CarloLepelaars/q4p) course.
+
+NOTE: This library is developed for educational purposes. While we strive for correctness of everything, the code is provided as is and not guaranteed to be bug-free. For sensitive applications make to check computations. 
+
+## Why SKQ?
+
+- Exploration: Play with fundamental quantum building blocks (NumPy).
+- Education: Learn quantum computing concepts and algorithms.
+- Integration: Combine classical components with quantum components.
+- Democratize quantum for Python programmers and data scientists: Develop quantum algorithms in your favorite environment and easily export to your favorite quantum computing platform for running on real quantum hardware.
+
+## Install
+
+```bash
+pip install skq
+```
