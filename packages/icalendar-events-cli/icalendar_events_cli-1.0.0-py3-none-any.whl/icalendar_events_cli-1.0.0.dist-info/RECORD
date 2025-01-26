@@ -1,0 +1,13 @@
+icalendar_events_cli-1.0.0.dist-info/METADATA,sha256=fmfMuo8IGNHOaw7SoxxylekqN5bzKyDheXV581PMWsw,10023
+icalendar_events_cli-1.0.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+icalendar_events_cli-1.0.0.dist-info/entry_points.txt,sha256=R1ZEdlwKR2jVWZUrZd6Ow3Z06GuXEHn3DNFi0t-fJlo,91
+icalendar_events_cli-1.0.0.dist-info/licenses/LICENSE,sha256=VMNRqNjjlAj58av8QYDG29jshQvvIM8YfpS50NBcBPI,1085
+icalendar_events_cli/__init__.py,sha256=fUje7vgFT24oJYk375-geUaz4RIVixNYE5PqOL9VmUo,19
+icalendar_events_cli/__main__.py,sha256=6X7Faf6vK7DovEfpKiQNXvCTRjWEie8S5AB22dUbzhI,2040
+icalendar_events_cli/argparse.py,sha256=8B56Vcfnyi066w4gfb2fPYknEk7LMdwAc2DqV_jFdt8,6299
+icalendar_events_cli/argparse.py.orig,sha256=hOpOKCgf4NL4dwdC6YOVmL1qgtzh86POGpvwBrXaVUs,4285
+icalendar_events_cli/downloader.py,sha256=5fOPyAevWSSZnK4C0w8VqYEjqEuaMZO6_SuDQsTDpNg,1214
+icalendar_events_cli/downloader.py.orig,sha256=IKeUeAsDe7RV3eM7SvsDcxZa9jXLJfPBf4-Pp8U7zSY,1287
+icalendar_events_cli/icalendar.py,sha256=RSEXJQeeolvpGt1BSMomid6ufh6mzYmsMQKqqtex3wc,4927
+icalendar_events_cli/output.py,sha256=u_rgZd1-T83RZQAIJkTAbORI-32Vjpv7a2SAoEP1CjQ,4970
+icalendar_events_cli-1.0.0.dist-info/RECORD,,
