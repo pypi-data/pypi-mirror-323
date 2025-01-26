@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lucidate"
+version = "1.0.1"
+description = "Clean and contextual error reports."
+requires-python = ">=3.9"
+authors = [{name = "Arun Malani", email = "arun@malani.org"}]
+dependencies = ["typer", "groq", "python-dotenv"]
+
+[project.scripts]
+lucidate = "lucidate.cli:app"

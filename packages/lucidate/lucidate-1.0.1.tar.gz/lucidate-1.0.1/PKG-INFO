@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: lucidate
+Version: 1.0.1
+Summary: Clean and contextual error reports.
+Author-email: Arun Malani <arun@malani.org>
+Requires-Python: >=3.9
+Requires-Dist: groq
+Requires-Dist: python-dotenv
+Requires-Dist: typer
