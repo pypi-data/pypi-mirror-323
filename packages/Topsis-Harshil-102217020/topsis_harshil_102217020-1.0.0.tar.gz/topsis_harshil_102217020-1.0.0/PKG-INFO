@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: Topsis-Harshil-102217020
+Version: 1.0.0
+Summary: A Python package to implement the TOPSIS algorithm for decision-making.
+Home-page: https://github.com/Harshil7051/Topsis-Harshil-102217020
+Author: Harshil Garg
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pandas
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Topsis-Harshil-102217020
+
+A Python package to implement the TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) algorithm for multi-criteria decision-making.
+
+## Features
+- Handles multi-criteria decision-making problems.
+- Supports weighted and impact-based criteria (+/-).
+- Outputs TOPSIS scores and ranks.
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install Topsis-Harshil-102217020

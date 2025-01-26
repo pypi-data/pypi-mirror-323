@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+Topsis_Harshil_102217020.egg-info/PKG-INFO
+Topsis_Harshil_102217020.egg-info/SOURCES.txt
+Topsis_Harshil_102217020.egg-info/dependency_links.txt
+Topsis_Harshil_102217020.egg-info/requires.txt
+Topsis_Harshil_102217020.egg-info/top_level.txt
+topsis/102217020.py
+topsis/__init__.py
