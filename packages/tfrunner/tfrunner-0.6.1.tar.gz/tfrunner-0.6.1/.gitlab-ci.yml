@@ -1,0 +1,26 @@
+stages:
+- test
+- deploy
+
+variables:
+  PYTHON_IMAGE: ghcr.io/astral-sh/uv:python3.13-bookworm
+
+before_script:
+- echo "==> Installing python dependencies"
+- uv sync --frozen --no-cache --all-groups
+
+test-package:
+  image: $PYTHON_IMAGE
+  stage: test
+  script:
+  - uv run python -m pytest tests
+
+deploy-package:
+  image: $PYTHON_IMAGE
+  stage: deploy
+  when: manual
+  needs:
+    - test-package
+  script:
+    - uv build
+    - uv publish --token $PYPI_TOKEN

@@ -1,0 +1,18 @@
+state_backend:
+  kind: gitlab
+  spec:
+    url: https://gitlab.com
+    project_id: 62914610
+    token_var: KUBORG_TOKEN
+
+secrets_backend:
+  kind: gitlab
+  spec:
+    url: https://gitlab.com
+    project_id: 62914610
+    token_var: KUBORG_TOKEN
+
+projects:
+  scaleway: # Reflects name of the environment
+    path: ../koctl/infra/cluster/scaleway
+    state_name: example
