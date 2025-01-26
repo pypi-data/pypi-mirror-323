@@ -1,0 +1,6 @@
+[console_scripts]
+format=scripts.dev:format
+lint=scripts.dev:lint
+lxmfy=lxmfy.cli:main
+scan=scripts.dev:scan
+
