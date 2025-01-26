@@ -1,0 +1,83 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+option java_package = "ex.jaisongrpc";
+option objc_class_prefix = "jaisongrpc";
+
+package jaisongrpc;
+
+service MetadataInformer {
+  rpc metadata (google.protobuf.Empty) returns (Metadata) {}
+}
+message Metadata {
+  string id = 1;
+  string name = 2;
+  string type = 3;
+  bool is_windows_compatible = 4;
+  bool is_unix_compatible = 5;
+  string windows_run_script = 6;
+  string unix_run_script = 7;
+}
+
+service STTComponentStreamer {
+  rpc invoke (stream STTComponentRequest) returns (stream STTComponentResponse) {}
+}
+message STTComponentRequest {
+  string run_id = 1;
+  bytes audio = 2;
+  int32 channels = 3;
+  int32 sample_width = 4;
+  int32 sample_rate = 5;
+}
+
+message STTComponentResponse {
+  string run_id = 1;
+  string content_chunk = 2;
+}
+
+service T2TComponentStreamer {
+  rpc invoke (stream T2TComponentRequest) returns (stream T2TComponentResponse) {}
+}
+message T2TComponentRequest {
+  string run_id = 1;
+  string system_input = 2;
+  string user_input = 3;
+}
+message T2TComponentResponse {
+  string run_id = 1;
+  string content_chunk = 2;
+}
+
+service TTSGComponentStreamer {
+  rpc invoke (stream TTSGComponentRequest) returns (stream TTSGComponentResponse) {}
+}
+message TTSGComponentRequest {
+  string run_id = 1;
+  string content = 2;
+}
+message TTSGComponentResponse {
+  string run_id = 1;
+  bytes audio_chunk = 2;
+  int32 channels = 3;
+  int32 sample_width = 4;
+  int32 sample_rate = 5;
+}
+
+service TTSCComponentStreamer {
+  rpc invoke (stream TTSCComponentRequest) returns (stream TTSCComponentResponse) {}
+}
+message TTSCComponentRequest {
+  string run_id = 1;
+  bytes audio = 2;
+  int32 channels = 3;
+  int32 sample_width = 4;
+  int32 sample_rate = 5;
+}
+message TTSCComponentResponse {
+  string run_id = 1;
+  bytes audio_chunk = 2;
+  int32 channels = 3;
+  int32 sample_width = 4;
+  int32 sample_rate = 5;
+}
+
