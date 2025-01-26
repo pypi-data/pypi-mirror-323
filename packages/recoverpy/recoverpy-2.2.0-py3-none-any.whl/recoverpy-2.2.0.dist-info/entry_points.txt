@@ -1,0 +1,2 @@
+[console_scripts]
+recoverpy = recoverpy.__init__:main
