@@ -1,0 +1,9 @@
+cloudcoil/models/cert_manager/__init__.py,sha256=NugvcIrQ7ZQ0uNsVH_rF10ZsG9Wx__2_an5J85mLHB4,111
+cloudcoil/models/cert_manager/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudcoil/models/cert_manager/v1.py,sha256=ph0anSjYeZqTJ3sN1PXS-iswnWLxCda8C4nMqyE_02E,660114
+cloudcoil/models/cert_manager/acme/__init__.py,sha256=U3fQWdHLGBVdt5xmPpP5uOXCr8M_Zskn2gC9DDT7TsU,84
+cloudcoil/models/cert_manager/acme/v1.py,sha256=PKG1Kwp4F3icJDNXHETPI_kru3uv5yuj-lg4dkOz4wA,352945
+cloudcoil_models_cert_manager-1.16.3.4.dist-info/METADATA,sha256=N6sdIOgg8hthc3wUncVwocQUD94MYnER8IMAVCc1GIs,7398
+cloudcoil_models_cert_manager-1.16.3.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cloudcoil_models_cert_manager-1.16.3.4.dist-info/licenses/LICENSE,sha256=9mpycVvCCD7ofOehOGlZDoT8wntDVXA9O6MZJv6Hh4E,11345
+cloudcoil_models_cert_manager-1.16.3.4.dist-info/RECORD,,
