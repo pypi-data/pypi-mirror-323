@@ -1,0 +1,2 @@
+[console_scripts]
+topsis-calc = topsis_HimanshuBhumbla_102203043.main:main

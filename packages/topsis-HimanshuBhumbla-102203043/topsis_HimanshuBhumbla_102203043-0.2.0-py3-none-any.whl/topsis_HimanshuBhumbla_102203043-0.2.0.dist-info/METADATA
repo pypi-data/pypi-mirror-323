@@ -1,0 +1,65 @@
+Metadata-Version: 2.2
+Name: topsis-HimanshuBhumbla-102203043
+Version: 0.2.0
+Summary: A Python package to perform Topsis analysis.
+Home-page: https://github.com/BHimanshu3114/Topsis
+Author: Himanshu Bhumbla
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# TOPSIS Command Line Program
+
+A Python program to perform the **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)** analysis on a given dataset.
+
+## Description
+
+TOPSIS is a multi-criteria decision-making approach that ranks a set of alternatives based on their distance to the ideal best and ideal worst solutions. This program:
+
+1. **Normalizes** the criteria values.
+2. Applies **user-defined weights**.
+3. Identifies the **ideal best (v+)** and **ideal worst (v-)** values.
+4. Calculates the **Euclidean distance** of each alternative from these ideal solutions.
+5. Computes the **TOPSIS score** (`dist_worst / (dist_best + dist_worst)`).
+6. **Ranks** the alternatives (higher score â†’ better rank).
+
+## Requirements
+
+- **Python 3.x**
+- **pandas** (Install via `pip install pandas`)
+- **numpy** (Install via `pip install numpy`)
+
+## File Structure
+
+- **Script Name**: `setup.py`  
+  
+
+- **Input CSV File**: `102203043-data.csv`  
+  - Must contain at least 3 columns.
+  - The **first column** is the identifier (e.g., M1, M2, ...).
+  - The **remaining columns** are numeric (no missing or non-numeric values).
+
+- **Output CSV File**: `102203043-result.csv`  
+  - Will contain the original columns plus two additional columns:  
+    - **Topsis Score**  
+    - **Rank**
+
+## Usage
+
+Open a terminal/command prompt in the directory containing your Python script and run:
+
+```bash
+python setup.py <InputDataFile> <Weights> <Impacts> <ResultFileName>
+```
+
