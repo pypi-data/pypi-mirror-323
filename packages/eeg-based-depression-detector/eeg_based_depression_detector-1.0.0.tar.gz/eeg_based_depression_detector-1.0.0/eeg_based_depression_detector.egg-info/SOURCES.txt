@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+eeg_based_depression_detector/__init__.py
+eeg_based_depression_detector/predictor.py
+eeg_based_depression_detector.egg-info/PKG-INFO
+eeg_based_depression_detector.egg-info/SOURCES.txt
+eeg_based_depression_detector.egg-info/dependency_links.txt
+eeg_based_depression_detector.egg-info/entry_points.txt
+eeg_based_depression_detector.egg-info/requires.txt
+eeg_based_depression_detector.egg-info/top_level.txt
+eeg_based_depression_detector/data/depression_detection_model.pkl

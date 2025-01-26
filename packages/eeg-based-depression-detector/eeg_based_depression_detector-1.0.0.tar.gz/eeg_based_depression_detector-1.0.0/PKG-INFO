@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: eeg_based_depression_detector
+Version: 1.0.0
+Summary: eeg-based Depression Detection System
+Author: Yujie Huang
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: scipy>=1.6.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: networkx>=3.0
+Requires-Dist: node2vec>=0.4.6
+Requires-Dist: gensim>=4.0.0
+Requires-Dist: joblib>=1.0.0
+
+# Depression Detector
+
+EEG-based depression detection system using graph neural networks.
+
+## 安装
+```bash
+pip install .

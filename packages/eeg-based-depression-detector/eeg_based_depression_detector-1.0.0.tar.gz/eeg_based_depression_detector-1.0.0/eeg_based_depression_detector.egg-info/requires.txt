@@ -1,0 +1,7 @@
+numpy>=1.20.0
+scipy>=1.6.0
+scikit-learn>=1.0.0
+networkx>=3.0
+node2vec>=0.4.6
+gensim>=4.0.0
+joblib>=1.0.0

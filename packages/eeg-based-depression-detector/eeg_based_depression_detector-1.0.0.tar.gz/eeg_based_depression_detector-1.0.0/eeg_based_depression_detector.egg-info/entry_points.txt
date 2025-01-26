@@ -1,0 +1,2 @@
+[console_scripts]
+eeg_based_depression_detector = eeg_based_depression_detector.predictor:main
