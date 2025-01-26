@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "birbtalk"
+version = "0.1.1"
+authors = [
+  { name="Alex Karev", email="karev.as99@gmail.com" },
+]
+description = "Modular Python library for working with LLM-based chat bots."
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = [
+  "haystack-ai==2.9.0",
+  "tiktoken==0.8.0",
+  "jsonschema==4.23.0"
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+memory = [
+  "onnxruntime==1.19.0",
+  "fastembed-haystack==1.4.1",
+  "qdrant-haystack==7.0.0",
+]
+search = [
+  "duckduckgo-search==7.2.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/alex-karev/birbtalk"
+Issues = "https://github.com/alex-karev/birbtalk/issues"
