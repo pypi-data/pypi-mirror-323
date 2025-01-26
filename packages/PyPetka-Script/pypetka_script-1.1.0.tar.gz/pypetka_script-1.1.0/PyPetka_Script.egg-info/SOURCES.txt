@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+PyPetka_Script.egg-info/PKG-INFO
+PyPetka_Script.egg-info/SOURCES.txt
+PyPetka_Script.egg-info/dependency_links.txt
+PyPetka_Script.egg-info/top_level.txt
+package/__init__.py
+package/example.py
+package/pypetka_script.py
