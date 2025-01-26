@@ -1,0 +1,54 @@
+Metadata-Version: 2.3
+Name: simplyprint-ws-client
+Version: 1.0.1rc3
+Summary: SimplyPrint Websocket Client
+License: AGPL-3.0-or-later
+Keywords: simplyprint,websocket,client
+Author: SimplyPrint
+Author-email: contact@simplyprint.io
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: uvloop
+Requires-Dist: aiohttp (>=3.10.11,<4.0.0) ; python_version < "3.9"
+Requires-Dist: aiohttp (>=3.11.11,<4.0.0) ; python_version >= "3.9"
+Requires-Dist: async-timeout ; python_version < "3.11"
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: netifaces (>=0.11.0,<0.12.0)
+Requires-Dist: platformdirs (>=4.3.6,<5.0.0)
+Requires-Dist: psutil (>=6.0.0,<7.0.0)
+Requires-Dist: pydantic (>2.7)
+Requires-Dist: sentry-sdk (>=2.19.2,<3.0.0)
+Requires-Dist: strenum ; python_version < "3.11"
+Requires-Dist: typing-extensions
+Requires-Dist: yarl (>=1.15.2,<2.0.0) ; python_version < "3.9"
+Requires-Dist: yarl (>=1.18.3,<2.0.0) ; python_version >= "3.9"
+Project-URL: Bug Tracker, https://github.com/SimplyPrint/printer-ws-client/issues
+Project-URL: Homepage, https://simplyprint.io
+Project-URL: Repository, https://github.com/SimplyPrint/printer-ws-client
+Description-Content-Type: text/markdown
+
+# SimplyPrint Websocket Client
+
+> A python package to simplify the use of the SimplyPrint websocket API to easily integrate with
+> the <https://simplyprint.io> platform.
+
+This package version v1.0.0 is under major development and is not yet ready for use. API is not stable and will change.
+
+## Usage
+
+TBD
+
+## TODO
+
+- [ ] Add usage documentation
+- [ ] Add examples
+- [ ] Add tests for event system and reactivity
+- [ ] Improve reactivity API and internals (move away from traitlets)
+- [ ] Unify event bus api with printer events.
