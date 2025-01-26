@@ -1,0 +1,11 @@
+autogram/__init__.py,sha256=8GWeuYRJ4fFGuklQYQb9MPMGJT7IGDDvNSUhzGRbl24,246
+autogram/actions.py,sha256=ckE6TwYQkkrVL-prX-goUxdn4PMZVcX_O8TdOK8MaL4,236
+autogram/autogram.py,sha256=pHI0RlFATr9Gg2QBvFHdyI1F07sZq9hRAvW8VWCc3i4,757
+autogram/base.py,sha256=0j22ZA8HNwKT7dCWwPdaqdvYSVWoPMcvT2OuXVKdNmY,11565
+autogram/config.py,sha256=PTartAv7ZHiT1R8JtJQQf77ig29HaAXyis2Xt6gG038,1509
+autogram/types.py,sha256=Vx6EO0jB6KolhNX_HBhw95pk6VawyLvCeSzZcdZd1NM,1743
+autogram-3.7.0.dist-info/LICENSE,sha256=PuTjnLrhHoEWhGE2m6UjVdGZ4CCP9yAtZKtpIYGN4r8,1088
+autogram-3.7.0.dist-info/METADATA,sha256=OJzBv5-3D2gjw4Prhq-3g6ZbnyPVkTfD92h0MYQIGgw,5422
+autogram-3.7.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+autogram-3.7.0.dist-info/top_level.txt,sha256=M4ZGLCyQcwI_4cmd7qjq1o7einboJw9PzD-eBcy69Lo,9
+autogram-3.7.0.dist-info/RECORD,,
