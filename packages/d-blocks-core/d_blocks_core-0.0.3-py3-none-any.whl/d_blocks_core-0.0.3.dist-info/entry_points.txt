@@ -1,0 +1,4 @@
+[console_scripts]
+debbie=dblocks_core.script.debbie:main
+wasp=dblocks_core.script.wasp:main
+
