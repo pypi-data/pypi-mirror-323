@@ -1,0 +1,32 @@
+Metadata-Version: 2.2
+Name: analog-nasbench
+Version: 0.1.1
+Summary: A package for querying NAS benchmark with analog hardware metrics
+Home-page: https://github.com/anissbslh/analognasbench
+Author: Aniss Bessalah
+Author-email: ka_bessalah@esi.dz
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# NASBench Analog
+
+A Python package for querying Neural Architecture Search (NAS) benchmark with analog hardware metrics.
+
+## Installation
+
+```bash
+pip install analog-nasbench
