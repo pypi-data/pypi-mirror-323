@@ -1,0 +1,11 @@
+smart_scraping_agent/__init__.py,sha256=H0ZKjyTJZNF1YRHuZsMBQhB0Fq_kiKWC1EyFcUJ3UIs,66
+smart_scraping_agent/custom_json_parser.py,sha256=gtIfj6k3VJYJUlH1z3_V7rWPdi8HfBdtfKgByg4u8tk,1639
+smart_scraping_agent/llm_friendly_loader.py,sha256=hMelN-xUF8PL5HsUaxgixAi4_C0_5kQs6uMjCxBs-4g,19766
+smart_scraping_agent/prompt_factory.py,sha256=EPtrBv87uVdTz6NsaVsj5zB21cpnTtr0F6I5oM_e2uM,6200
+smart_scraping_agent/smart_scraper.py,sha256=rdJDq51XZGOXHMccaflkF_LVY_O0qjJpmK2mO-hbJnI,11343
+smart_scraping_agent/utils.py,sha256=zG92VB2vAi5JnK9y83wTjfXaJocTNDoSaZckshBVT-M,1904
+smart_scraping_agent-0.0.10.dist-info/LICENSE,sha256=pZUWuFbxxV7JTGsYFSMeM9l241qV_0gPHvbk6zEqpQI,1076
+smart_scraping_agent-0.0.10.dist-info/METADATA,sha256=hzWrc1PBQyUq1n_1XnqcrN5Q_rKzdeuk8KYqz8whXgw,6047
+smart_scraping_agent-0.0.10.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+smart_scraping_agent-0.0.10.dist-info/top_level.txt,sha256=sBYB3OLhtPuODe8kM0D3qyKBlimKEMthOwdZmLeN8rw,21
+smart_scraping_agent-0.0.10.dist-info/RECORD,,
