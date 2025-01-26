@@ -1,0 +1,8 @@
+README.md
+setup.py
+andre_blaze.egg-info/PKG-INFO
+andre_blaze.egg-info/SOURCES.txt
+andre_blaze.egg-info/dependency_links.txt
+andre_blaze.egg-info/top_level.txt
+to_upload/__init__.py
+to_upload/clases.py
