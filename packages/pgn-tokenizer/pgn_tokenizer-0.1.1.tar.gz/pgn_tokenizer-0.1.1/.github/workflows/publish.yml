@@ -1,0 +1,40 @@
+# adapted from:
+#  https://til.simonwillison.net/pypi/pypi-releases-from-github
+#  https://github.com/snok/install-poetry
+#  https://jacobian.org/til/github-actions-poetry/
+#  https://github.com/orgs/community/discussions/25305#discussioncomment-8256560
+
+name: Publish Python Package
+
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/pgn-tokenizer
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the latest version of uv and set the python version
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          python-version: "3.10"
+
+      - name: Build
+        run: |
+          uv build
+
+      - name: Publish
+        run: uv publish --trusted-publishing always
