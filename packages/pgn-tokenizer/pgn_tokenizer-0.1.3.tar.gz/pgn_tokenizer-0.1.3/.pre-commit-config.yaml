@@ -1,0 +1,55 @@
+default_install_hook_types: [pre-commit, commit-msg, pre-push]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-merge-conflict
+        name: No merge conflict markers
+        stages: [pre-commit]
+      - id: mixed-line-ending
+        name: No mixed line endings (LF and CRLF)
+        stages: [pre-commit]
+
+  - repo: https://github.com/psf/black
+    rev: 22.6.0
+    hooks:
+      - id: black
+        stages: [pre-commit]
+        types: [python]
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.0.262
+    hooks:
+      - id: ruff
+        args: [--fix]
+        stages: [pre-commit]
+        types: [python]
+
+  - repo: local
+    hooks:
+      - id: mypy-all
+        name: MyPy (all)
+        pass_filenames: false
+        files: pgn-tokenizer/
+        entry: uv run mypy . --disable-error-code=import-untyped
+        stages: [pre-push]
+        language: system
+      - id: pytest
+        name: pytest
+        stages: [pre-push]
+        language: system
+        entry: uv run pytest
+        types: [python]
+        pass_filenames: false
+        verbose: true
+
+  # conventional commits
+  - repo: https://github.com/espressif/conventional-precommit-linter
+    rev: v1.6.0
+    hooks:
+      - id: conventional-precommit-linter
+        stages: [commit-msg]
+        args:
+          - --types=chore,feat,fix,ci,docs,refactor,revert,test
+          - --allow-breaking
