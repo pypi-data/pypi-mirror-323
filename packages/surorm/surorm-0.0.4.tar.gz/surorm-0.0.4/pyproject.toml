@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "surorm"
+version = "0.0.4"
+description = "Set of tools to use surreal database from python code."
+authors = ["Sultan Nasyrov <tightbtctrader@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.10.6"
+aiohttp = "^3.11.11"
+requests = "^2.32.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
