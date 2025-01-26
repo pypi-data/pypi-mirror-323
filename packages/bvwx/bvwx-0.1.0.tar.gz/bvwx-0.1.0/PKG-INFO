@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: bvwx
+Version: 0.1.0
+Summary: Bit Vectors With Xes
+Project-URL: Repository, https://github.com/cjdrake/bvwx.git
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# Bit Vectors With Xes
