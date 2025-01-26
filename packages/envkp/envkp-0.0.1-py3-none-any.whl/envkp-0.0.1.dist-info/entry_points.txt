@@ -1,0 +1,3 @@
+[console_scripts]
+envkp = envkp.core:cli
+envkp-dump = envkp.core:dump
