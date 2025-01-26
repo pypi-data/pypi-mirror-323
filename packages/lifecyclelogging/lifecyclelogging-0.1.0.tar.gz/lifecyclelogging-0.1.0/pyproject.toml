@@ -1,0 +1,137 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lifecyclelogging"
+dynamic = ["version"]
+description = "A comprehensive logging utility for managing application lifecycle logs"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+readme = "README.md"
+keywords = ["logging", "lifecycle", "debug"]
+authors = [{ name = "Jon Bogaty", email = "jon@jonbogaty.com" }]
+maintainers = [{ name = "Jon Bogaty", email = "jon@jonbogaty.com" }]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Typing :: Typed",
+]
+dependencies = [
+    "rich>=13.0.0",
+    "extended-data-types>=1.0.2",
+    'typing-extensions>=4.0.0; python_version < "3.10"',
+]
+
+[project.urls]
+Documentation = "https://github.com/user/lifecyclelogging#readme"
+Issues = "https://github.com/user/lifecyclelogging/issues"
+Source = "https://github.com/user/lifecyclelogging"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "pytest-xdist>=3.6.1",
+    "coverage[toml]>=7.6.0",
+    "hypothesis>=6.0.0",
+]
+docs = ["sphinx>=7.0", "sphinx-rtd-theme>=1.0", "sphinx-autodoc2>=0.2.0"]
+dev = ["ruff>=0.2.0", "mypy>=1.0.0", "tox>=4.0.0", "tox-gh-actions>=2.0.0"]
+
+[tool.hatch.version]
+path = "src/lifecyclelogging/__init__.py"
+pattern = "^__version__ = ['\"](?P<version>.+)['\"]$"
+
+[tool.pytest.ini_options]
+addopts = ["-ra", "--strict-markers", "--strict-config"]
+testpaths = "tests"
+xfail_strict = true
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = ["lifecyclelogging"]
+
+[tool.coverage.paths]
+source = ["src", ".tox/py*/**/site-packages"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
+
+[tool.ruff]
+target-version = "py38"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "ANN",  # Type annotations are handled by mypy
+    "COM",  # Command formatting is handled by a formatter
+    "D205", # One blank line required between summary line and description
+    "D415", # First line should end with a period
+    "E501", # Line length is handled by a formatter
+    "TD",   # TODO comments allowed
+    "FIX",  # FIXME comments allowed
+    "ISC",  # Implicit string concatenation is handled by a formatter
+    "W191", # Indentation is handled by a formatter
+]
+
+[tool.ruff.lint.per-file-ignores]
+"docs/conf.py" = [
+    "D100",   # Missing docstring in public module — not needed for conf.py
+    "INP001", # Implicit namespace package is acceptable for docs
+    "PTH100", # Path handling is fine for Sphinx conf
+]
+"src/lifecyclelogging/logging.py" = [
+    "A005",    # Module can shadow stdlib — acceptable for logging
+    "SLF001",  # Private member access required for stdlib logging
+    "PLR0913", # Many arguments are acceptable for logging interface
+    "FBT001",  # Boolean args are acceptable for configuration
+    "FBT002",  # Boolean defaults are acceptable for configuration
+    "C901",    # Complex functions are acceptable in logging
+    "PLW2901", # Loop variable reassignment is intentional
+    "TRY003",  # Long error messages are acceptable
+    "EM102",   # f-strings in errors are acceptable
+]
+"tests/*.py" = [
+    "INP001", # Implicit namespace package is acceptable in tests
+    "TC001",  # Type checking imports not needed in tests
+    "TC003",  # Type checking imports not needed in tests
+    "S101",   # Assert statements are acceptable in pytest
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+lines-between-types = 1
+lines-after-imports = 2
+
+[tool.mypy]
+python_version = "3.8"
+strict = true
+show_error_codes = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+ignore_errors = true
+
+[tool.semantic_release]
+branch = "main"
+allow_zero_version = true
+major_on_zero = false
+version_variables = [
+    "src/lifecyclelogging/__init__.py:__version__",
+    "docs/conf.py:version",
+]

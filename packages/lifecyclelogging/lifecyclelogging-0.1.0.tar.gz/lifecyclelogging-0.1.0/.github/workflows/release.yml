@@ -1,0 +1,118 @@
+name: Continuous Delivery
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  initial_build_and_inspect:
+    name: Initial Build and Inspect
+    runs-on: ubuntu-latest
+    outputs:
+      artifact_name: ${{ steps.inspect.outputs.artifact-name }}
+      dist: ${{ steps.inspect.outputs.dist }}
+      supported_pythons: ${{ steps.inspect.outputs.supported_python_classifiers_json_array }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build & Inspect Package
+        id: inspect
+        uses: hynek/build-and-inspect-python-package@v2
+
+  test:
+    name: Test Package with Tox
+    needs: initial_build_and_inspect
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ${{ fromJson(needs.initial_build_and_inspect.outputs.supported_pythons) }}
+
+    steps:
+      - name: Download Built Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.initial_build_and_inspect.outputs.artifact_name }}
+          path: dist
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: pip install tox
+
+      - name: Run Tests with Tox
+        run: |
+          tar xf dist/*.tar.gz --strip-components=1
+          tox run -e py${{ matrix.python-version }}
+
+  release:
+    name: Semantic Release and Signed Build
+    needs: [initial_build_and_inspect, test]
+    runs-on: ubuntu-latest
+    concurrency: release
+    permissions:
+      id-token: write
+      contents: write
+      attestations: write
+    outputs:
+      released: ${{ steps.release.outputs.released }}
+      version: ${{ steps.release.outputs.version }}
+      tag: ${{ steps.release.outputs.tag }}
+      signed_artifact_name: ${{ steps.signed_inspect.outputs.artifact-name }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Semantic Version Release
+        id: release
+        uses: python-semantic-release/python-semantic-release@v9.16.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git_committer_name: "github-actions"
+          git_committer_email: "actions@users.noreply.github.com"
+
+      - name: Signed Attestation Build & Inspect
+        if: steps.release.outputs.released == 'true'
+        id: signed_inspect
+        uses: hynek/build-and-inspect-python-package@v2
+        with:
+          attest-build-provenance-github: "true"
+          upload-name-suffix: "-signed"
+
+      - name: Publish to GitHub Releases
+        if: steps.release.outputs.released == 'true'
+        uses: python-semantic-release/publish-action@v9.16.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ steps.release.outputs.tag }}
+
+  publish:
+    name: Publish to PyPI
+    needs: release
+    if: needs.release.outputs.released == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/lifecyclelogging/
+    permissions:
+      id-token: write
+
+    steps:
+      - name: Download Signed Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.release.outputs.signed_artifact_name }}
+          path: dist
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
