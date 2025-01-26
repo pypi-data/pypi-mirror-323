@@ -1,0 +1,14 @@
+svc_ttk/__init__.py,sha256=j0Q-9wL56uv4aqt2K80LRTv0O4a8yg4CIB6AQB3r7GE,1386
+svc_ttk/example.py,sha256=RScgMbvy1tYU54G_xX8pmgVcx88nLS9QgAuWdXffzJQ,11534
+svc_ttk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+svc_ttk/svc.tcl,sha256=RFuH-iJYVUx6yE-yorIUtTcc_7JlYyBq0tiJltC2Wd0,6229
+svc_ttk/theme/dark.tcl,sha256=6zFU9mGM6Pijn4RBLOaFEKS8vF1B_6Qb4IfJSMwdAzw,16198
+svc_ttk/theme/light.tcl,sha256=qAf-NJqRJj8Ybozuyxpbaoir--kAAZZloqDUA4Xl0tA,16361
+svc_ttk/theme/sprites_dark.tcl,sha256=YGHzPKk0_mCAmlclLCBJtXdMZtdOOfsadCV-DPBFn9o,3227
+svc_ttk/theme/sprites_light.tcl,sha256=gr7sfeXyBGZQETv8_jtO61B37vPRD6pxceeFElpmScM,3045
+svc_ttk/theme/spritesheet_dark.png,sha256=7rBlx8EECVeDTxtJ6xeh5k12xJGjNy2nMSN9b__hoKk,18555
+svc_ttk/theme/spritesheet_light.png,sha256=ay1v1nqdk_iL4OjSMYlgIjWhi2C5FR6LkZLNUhkvAKc,18432
+svc_ttk-2.6.4.dist-info/METADATA,sha256=WMEcFv7vWTWnKkCcPNwZ3fz31STZZONN1WFKqbFHYE0,3421
+svc_ttk-2.6.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+svc_ttk-2.6.4.dist-info/top_level.txt,sha256=zFKkK0jkJ4VYgaX4IkcaYAIg9_kIbdjEPasqur2edtU,8
+svc_ttk-2.6.4.dist-info/RECORD,,
