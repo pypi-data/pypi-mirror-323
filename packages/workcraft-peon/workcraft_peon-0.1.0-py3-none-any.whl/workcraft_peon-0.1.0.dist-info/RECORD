@@ -1,0 +1,8 @@
+workcraft/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+workcraft/__main__.py,sha256=tsTJaZwOuQRyxyZSg_mH44hOaOlBnDHZN51qeowWsfM,1731
+workcraft/models.py,sha256=EwynaaOPO3ZqPjvZ9Mnkl3rGet5_hZDFKwA7jstLaGo,6557
+workcraft/peon.py,sha256=KSFF27v_jtx2rd3WaWk55yFiaGsUd20Wi39o_XVLzN4,19255
+workcraft/utils.py,sha256=-V1srJaU9P3SuF_1yBJAxqvxX9VBmtTS62UkwUSYF-U,2481
+workcraft_peon-0.1.0.dist-info/METADATA,sha256=mKbDIY7qGdIQYy8BM4v6Nh5SSUZhDGUj9mPHPiZd5yQ,652
+workcraft_peon-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+workcraft_peon-0.1.0.dist-info/RECORD,,
