@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+nnumplot.egg-info/PKG-INFO
+nnumplot.egg-info/SOURCES.txt
+nnumplot.egg-info/dependency_links.txt
+nnumplot.egg-info/top_level.txt
+numplot/__init__.py
+numplot/task_1.py
+numplot/task_2.py
+numplot/task_3.py
+numplot/task_4.py
+numplot/task_5.py
