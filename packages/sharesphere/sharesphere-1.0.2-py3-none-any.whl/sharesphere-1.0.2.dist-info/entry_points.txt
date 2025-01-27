@@ -1,0 +1,3 @@
+[console_scripts]
+sharesphere=sharesphere.cli:main
+
