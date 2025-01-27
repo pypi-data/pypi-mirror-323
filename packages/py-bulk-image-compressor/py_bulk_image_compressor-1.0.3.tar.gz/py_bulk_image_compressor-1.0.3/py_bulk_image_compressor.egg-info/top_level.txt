@@ -1,0 +1,1 @@
+py_bulk_image_compressor
