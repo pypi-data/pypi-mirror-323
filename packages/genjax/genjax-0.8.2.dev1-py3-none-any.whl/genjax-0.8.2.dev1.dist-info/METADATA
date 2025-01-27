@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: genjax
+Version: 0.8.2.dev1
+Summary: Probabilistic programming with Gen, built on top of JAX.
+Home-page: https://github.com/probcomp/genjax
+License: Apache 2.0
+Keywords: artificial-intelligence,probabilistic-programming,bayesian-inference,differentiable-programming
+Author: McCoy R. Becker
+Author-email: mccoyb@mit.edu
+Maintainer: McCoy R. Becker
+Maintainer-email: mccoyb@mit.edu
+Requires-Python: >=3.10,<3.13
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: all
+Provides-Extra: genstudio
+Requires-Dist: beartype (>=0.18.5,<0.19.0)
+Requires-Dist: deprecated (>=1.2.14,<2.0.0)
+Requires-Dist: genstudio (==2024.11.015) ; extra == "genstudio" or extra == "all"
+Requires-Dist: jax (>=0.4.24,<0.5.0)
+Requires-Dist: jaxtyping (>=0.2.24,<0.3.0)
+Requires-Dist: numpy (>=1.22,<2.0.0)
+Requires-Dist: penzai (>=0.2.2,<0.3.0)
+Requires-Dist: tensorflow-probability (>=0.23.0,<0.24.0)
+Requires-Dist: treescope (>=0.1.5,<0.2.0)
+Project-URL: Changelog, https://github.com/probcomp/genjax/releases
+Project-URL: Documentation, https://genjax.gen.dev/
+Project-URL: Repository, https://github.com/probcomp/genjax
+Description-Content-Type: text/markdown
+
+# GenJAX
+
+[Full documentation available here](https://genjax.gen.dev/).
+
+## Installation
+
+```bash
+pip install genjax
+```
+
