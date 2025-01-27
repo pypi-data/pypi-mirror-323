@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pycppstreams
+Version: 0.0.2
+Summary: A C++ style stream library for Python
+Home-page: https://pypi.org
+Author: dianbtcmputr
+Author-email: 3663144423@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires: pyttsx4
+Description-Content-Type: text/plain
+Requires-Dist: pyttsx4
+
+Use C++ style stream to read and write data in Python
+It supports:
+- C++ style iostream
+- C++ style stringstream
+- C++ style fstream
+- C++ style but only in this library:
+    bytesstream
+    voicestream (use voicestream_init(pyttsxn.init()) to initialize (n ∈ {blank, 2, 3, 4}))
+    only on Windows: keystream (use keystream_init() to initialize, use keybd >> var to read key and keybd << bytes to write chars)
+
+Special thanks to:
+- pyttsx4
