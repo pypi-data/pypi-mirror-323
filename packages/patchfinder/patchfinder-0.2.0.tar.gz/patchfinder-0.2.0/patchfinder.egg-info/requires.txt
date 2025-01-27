@@ -1,0 +1,8 @@
+Pillow>=10.0.0
+numpy>=2.2.2
+torch>=2.0.0
+transformers>=4.40.0
+pytest>=7.0.0
+scipy>=1.11.0
+torchvision>=0.15.0
+fire>=0.5.0
