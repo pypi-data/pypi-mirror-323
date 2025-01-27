@@ -1,0 +1,4 @@
+[console_scripts]
+build-docs=siaql.scripts.build_docs:main
+siaql=siaql.cli.main:app
+
