@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+ergup/__init__.py
+ergup/ergup.py
+ergup.egg-info/PKG-INFO
+ergup.egg-info/SOURCES.txt
+ergup.egg-info/dependency_links.txt
+ergup.egg-info/entry_points.txt
+ergup.egg-info/top_level.txt
