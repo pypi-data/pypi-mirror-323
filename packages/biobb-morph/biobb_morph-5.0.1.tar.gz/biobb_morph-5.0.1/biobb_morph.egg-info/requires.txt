@@ -1,0 +1,10 @@
+biobb_common==5.0.0
+torch
+numpy-stl
+numpy
+trimesh
+matplotlib
+scikit-learn
+scipy
+meshio
+Rtree

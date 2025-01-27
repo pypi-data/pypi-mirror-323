@@ -1,0 +1,2 @@
+[console_scripts]
+morph = biobb_morph.morph.morph:main
