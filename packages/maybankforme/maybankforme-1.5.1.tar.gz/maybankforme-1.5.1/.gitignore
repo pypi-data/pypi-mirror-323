@@ -1,0 +1,149 @@
+# exclude dataset folder
+dataset/
+
+# exclude _version
+src/maybankforme/_version.py
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+installed.cfg
+lib/
+lib64/
+parts/
+
+# Generated files
+*.egg-info/
+*.egg/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Package files
+#.chk
+.eggs/
+.installer.cfg
+.installed.cfg
+*.egg
+manifest.pyc
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Object files
+*.o
+
+# Unit tests and IPython
+*.ipynb_checkpoints/
+.ipynb
+
+# Setuptools distribution folder
+/_build/
+
+# Sphinx documentation
+docs/_build/
+docs/source/conf.py
+docs/source/theme/
+docs/source/_static/
+docs/source/_templates/
+
+# PyInstaller
+# Usually these files are written by a python script from a template
+# before Pyinstaller runs, so as to inject date/other values into it.
+*.manifest
+*.spec
+
+# Installer logs
+dist/
+build/
+pip-wheel-metadata/
+
+# Thonny IDE
+.thonny
+
+# PyCharm
+/.idea
+
+# Spyder
+.spyderproject/
+.spyproject
+
+# Virtualenv
+.venv/
+env/
+venv/
+ENV/
+
+# VSCode
+.vscode/
+
+# PyTorch
+.cache/
+
+# General Python
+dist
+.pydevproject
+
+# .local
+.local/
+
+# Python logs
+*.log
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnp/
+.pnp.js
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# parcel-bundler cache
+.cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build output
+.nuxt
+
+# Gatsby files
+.cache/
+public
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
