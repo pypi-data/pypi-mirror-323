@@ -1,0 +1,5 @@
+[![license](https://img.shields.io/github/license/makukha/tox-multipython.svg)](https://github.com/makukha/tox-multipython/blob/main/LICENSE)
+[![pypi](https://img.shields.io/pypi/v/tox-multipython.svg#v0.4.0)](https://pypi.python.org/pypi/tox-multipython)
+[![python versions](https://img.shields.io/pypi/pyversions/tox-multipython.svg)](https://pypi.org/project/tox-multipython)
+[![tested with multipython](https://img.shields.io/badge/tested_with-multipython-x)](https://github.com/makukha/multipython)
+[![uses docsub](https://img.shields.io/badge/uses-docsub-royalblue)](https://github.com/makukha/docsub)
