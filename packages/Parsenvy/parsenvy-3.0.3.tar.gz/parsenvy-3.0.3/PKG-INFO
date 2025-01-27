@@ -1,0 +1,130 @@
+Metadata-Version: 2.4
+Name: Parsenvy
+Version: 3.0.3
+Summary: Enviously elegant environment variable parsing
+Author-email: Nik Kantar <nik@nkantar.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2017, Nik Kantar
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+          list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice,
+          this list of conditions and the following disclaimer in the documentation
+          and/or other materials provided with the distribution.
+        
+        * Neither the name of the copyright holder nor the names of its
+          contributors may be used to endorse or promote products derived from
+          this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+
+########################################################
+Parsenvy: Enviously Elegant Environment Variable Parsing
+########################################################
+
+**Parsenvy** is an *enviously* elegant environment variable parsing Python library.
+
+.. image:: https://readthedocs.org/projects/parsenvy/badge/?version=latest&style=plastic
+        :target: https://parsenvy.readthedocs.io/latest
+        :alt: main Documentation Status
+
+.. image:: https://github.com/nkantar/Parsenvy/actions/workflows/code-quality-checks.yml/badge.svg?branch=main
+        :target: https://github.com/nkantar/Parsenvy/actions/workflows/code-quality-checks.yml
+        :alt: Github Actions
+
+.. image:: https://badge.fury.io/py/parsenvy.svg
+        :target: https://badge.fury.io/py/parsenvy
+        :alt: badgefury svg
+
+.. image:: https://img.shields.io/github/commits-since/nkantar/Parsenvy/3.0.3
+        :target: https://github.com/nkantar/Parsenvy/blob/main/CHANGELOG.md#unreleased
+        :alt: Unreleased chages
+
+.. image:: https://img.shields.io/github/license/nkantar/Parsenvy
+        :target: https://github.com/nkantar/Parsenvy/blob/main/LICENSE
+        :alt: License: BSD-3-Clause
+
+Environment variables are strings by default. This can be *rather* inconvenient if you're dealing with a number of them, and in a variety of desired types. Parsenvy aims to provide an intuitive, explicit interface for retrieving these values in appropriate types with *human-friendly* syntax.
+
+
+Features
+--------
+
+- Compatible with Python 3.9+ only (the last Python 2 compatible version was `1.0.2 <https://github.com/nkantar/Parsenvy/releases/tag/1.0.2>`_).
+- Fully tested on Linux, macOS, and Windows.
+- No dependencies outside of the Python standard library.
+- BSD (3-Clause) licensed.
+- Utterly awesome.
+- Now with `docs <https://parsenvy.readthedocs.io>`_!
+
+
+Examples
+--------
+
+.. code-block:: python
+
+    >>> import parsenvy
+
+    >>> parsenvy.bool('DEBUG_ENABLED')  # DEBUG_ENABLED=True
+    True
+
+    >>> parsenvy.int('POSTS_PER_PAGE')  # POSTS_PER_PAGE=13
+    13
+
+    >>> parsenvy.float('EXCHANGE_RATE')  # EXCHANGE_RATE=42.911
+    42.911
+
+    >>> parsenvy.list('INVALID_USERNAMES')  # INVALID_USERNAMES=admin,superuser,user,webmaster
+    ['admin', 'superuser', 'user', 'webmaster']
+
+    >>> parsenvy.tuple('SAMPLE_GREETING')  # SAMPLE_GREETING=Hello,world!
+    ('Hello', 'world!')
+
+    >>> parsenvy.set('ALLOWED_CATEGORIES')  # ALLOWED_CATEGORIES=python,vim,git
+    {'python', 'vim', 'git'}
+
+    >>> parsenvy.str('DB_PREFIX')  # DB_PREFIX=dj_
+    'dj_'
+
+
+Install
+-------
+
+.. code-block:: shell
+
+    pip install parsenvy
+
+
+Contributing
+------------
+
+Contributions are welcome, and more information is available in the `contributing guide <https://parsenvy.readthedocs.io/en/latest/contributing.html>`_.
