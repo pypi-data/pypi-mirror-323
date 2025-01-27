@@ -1,0 +1,5 @@
+polars_opt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+polars_opt/main.py,sha256=tg3oNzfdVV7CzBuBkp11mm18mNv0NMuK-dV3tu5ifDw,104
+polars_optimization-0.1.0.dist-info/METADATA,sha256=o_xGlYzZpK-SKu6VNwuDkGp3zo_UGvGPWQ2lUZK3plc,351
+polars_optimization-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+polars_optimization-0.1.0.dist-info/RECORD,,
