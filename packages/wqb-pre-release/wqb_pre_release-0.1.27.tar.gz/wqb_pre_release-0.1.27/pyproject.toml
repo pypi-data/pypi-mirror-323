@@ -1,0 +1,19 @@
+[build-system]
+requires = ['setuptools', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'wqb-pre-release'
+version = '0.1.27'
+authors = [{ name = 'Rocky Haotian Du', email = 'qq2712479005@gmail.com' }]
+description = 'A better machine lib.'
+requires-python = '>=3.11'
+dependencies = ['requests']
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+]
+
+[tool.setuptools.packages.find]
+include = ['wqb']
