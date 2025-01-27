@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: vid-mng
+Version: 1.0.0
+Summary: sort videos by duration and resolution
+Author-Email: tadeasf <business@tadeasfort.com>
+Requires-Python: >=3.8
+Requires-Dist: ffmpeg-python>=0.2.0
+Requires-Dist: pathlib>=1.0.1
+Description-Content-Type: text/markdown
+
+# vid-mng
+
+Describe your project here.

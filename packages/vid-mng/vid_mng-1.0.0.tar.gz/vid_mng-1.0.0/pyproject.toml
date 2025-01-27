@@ -1,0 +1,27 @@
+[project]
+name = "vid-mng"
+version = "1.0.0"
+description = "sort videos by duration and resolution"
+authors = [
+    { name = "tadeasf", email = "business@tadeasfort.com" },
+]
+dependencies = [
+    "ffmpeg-python>=0.2.0",
+    "pathlib>=1.0.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+vid-mng = "vid_mng.vid_mng:main"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
