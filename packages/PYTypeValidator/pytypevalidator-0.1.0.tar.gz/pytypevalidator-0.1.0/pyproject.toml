@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "PYTypeValidator"
+version = "0.1.0"
+description = "A simple utility class to validate and convert types in Python"
+authors = ["Ch Ahmed ahmedchouikh78@gmail.com"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Ahmed775c6/TypeValidatorv1"
+repository = "https://github.com/Ahmed775c6/TypeValidatorv1"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+type-validator = "type_validator:main"
