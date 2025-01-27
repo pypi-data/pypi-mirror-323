@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: cli-config-validator
+Version: 0.1.0
+Summary: Validate configuration from multiple configuration files against a Python pydantic class Model.
+License: Apache-2.0 license
+Author: Mitesh Singh Jat
+Author-email: mitesh.singh.jat@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Requires-Dist: pyyaml (==5.4.1)
+Requires-Dist: toml (==0.10.2)
+Description-Content-Type: text/markdown
+
+# cli_config_validator
+
+> Validate configuration from multiple configuration files against a Python pydantic class Model.
+
+## Usage
+
+```sh
+./cli_config_validator.py -v config.yaml -v config2.yaml -m model.py -c ConfigModel
+```
+
