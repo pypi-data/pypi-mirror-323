@@ -1,0 +1,16 @@
+numpy
+resampy
+soundfile
+packaging
+scipy
+
+[PyTorch]
+torch
+
+[testing]
+pytest
+pytest-cov
+pytest-mock
+pytest-xdist
+pandas
+torch
