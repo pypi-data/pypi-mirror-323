@@ -1,0 +1,8 @@
+README.md
+setup.py
+subbrute/__init__.py
+subbrute/core.py
+subbrute.egg-info/PKG-INFO
+subbrute.egg-info/SOURCES.txt
+subbrute.egg-info/dependency_links.txt
+subbrute.egg-info/top_level.txt

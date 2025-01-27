@@ -1,0 +1,74 @@
+# SubBrute
+
+SubBrute is a lightweight Python package for brute-forcing subdomains of a given domain using a wordlist.
+
+## Installation
+
+To install `subbrute`, run the following command:
+
+```bash
+pip install subbrute
+```
+
+## Usage
+
+### Python Script
+
+```python
+import subbrute
+
+domain = "example.com"
+wordlist = subbrute.load("list.txt")
+
+def the_update(subdomain, ip, status):
+    if status == "valid":
+        print(f"Found Subdomain: {subdomain} IP: {ip}")
+    else:
+        print(f"Not Found: {subdomain}")
+
+results = subbrute.scan(domain, wordlist, callback=the_update)
+
+print("Scan complete!")
+```
+
+### Example Wordlist (`list.txt`)
+
+Create a text file named `list.txt` with subdomain names like this:
+
+```plaintext
+www
+api
+mail
+test
+```
+
+### Example Output
+
+```plaintext
+Found Subdomain: www.example.com IP: 93.184.216.34
+Not Found: api.example.com
+Not Found: mail.example.com
+Found Subdomain: test.example.com IP: 93.184.216.35
+Scan complete!
+```
+
+
+### Customizing the Function
+
+You can customize the live update function to display the results, log them, or perform other actions as needed. Here's an example of a more advanced function:
+
+```python
+def advanced_update(subdomain, ip, status):
+    if status == "valid":
+        print(f"Subdomain found: {subdomain} -> {ip}")
+    else:
+        print(f"Subdomain not found: {subdomain}")
+```
+
+## Thanks
+
+Thank you for using SubBrute! 
+
+## License
+
+This project is licensed under the MIT License.
