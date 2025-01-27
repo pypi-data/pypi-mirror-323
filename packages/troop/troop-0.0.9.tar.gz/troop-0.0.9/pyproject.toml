@@ -1,0 +1,25 @@
+[project]
+name = "troop"
+version = "0.0.9"
+description = "A lightweight framework for multi-agent orchestration, forked from OpenAI's Swarm library."
+authors = []
+dependencies = [
+    "anthropic>=0.43.1",
+    "openai>=1.59.7",
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "pytest>=8.3.4",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
+asyncio_default_fixture_loop_scope = "function"
