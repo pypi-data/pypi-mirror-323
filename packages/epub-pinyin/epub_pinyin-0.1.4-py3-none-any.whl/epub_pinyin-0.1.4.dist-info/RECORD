@@ -1,0 +1,10 @@
+epub_pinyin/__init__.py,sha256=ymd6qDECNOnfxfd1n93LK8LCD3s6XsvINjIh6rRuZ8s,157
+epub_pinyin/epub_parser.py,sha256=q-zX5iz-sJ9KHs7wm00YKYmi5o3Qwo9pI2EUlsXfhEM,8901
+epub_pinyin/main.py,sha256=DhZjEADLxsR1KzQFmg8nH8kFG6Phqj0hvoPM0uqyQzQ,2437
+epub_pinyin/text_processor.py,sha256=yJ6MgcefIfJXIQk8iHolkjdwvA4bNB896v-eLBrCibE,3815
+epub_pinyin-0.1.4.dist-info/LICENSE,sha256=SruQOGQRMfJ_ZhPg-ts1qjPhN8nGylKvX4qCkqSI3bI,1061
+epub_pinyin-0.1.4.dist-info/METADATA,sha256=z2LGNwmbuxpJ0rUjxIdEVDtQQwM51oMjGTi6T7wqgOw,3628
+epub_pinyin-0.1.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+epub_pinyin-0.1.4.dist-info/entry_points.txt,sha256=W7EI0hF4m61eOzW71m2hcnPdhQz4lCKlgsfpmq8b8W0,54
+epub_pinyin-0.1.4.dist-info/top_level.txt,sha256=XV50qS7_KiEYiR_zXtexI-LSS6Phgo9yvfRg07zaXbE,12
+epub_pinyin-0.1.4.dist-info/RECORD,,
