@@ -1,0 +1,2 @@
+[console_scripts]
+ros-to-markdown = ros_to_markdown.cli:main
