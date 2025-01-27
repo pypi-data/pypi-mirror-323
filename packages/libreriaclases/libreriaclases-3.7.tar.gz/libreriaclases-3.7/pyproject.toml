@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "libreriaclases"
+version = "3.7"
+authors = [
+    { name="uxueballarin", email="uxue.ballarin@alumni.mondragon.edu" },
+]
+description = "Libreria preproceso"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/uxueballarin/PBLgrupo6"
+"Bug Tracker" = "https://github.com/uxueballarin/PBLgrupo6/issues"
