@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: assystem
+Version: 1.0.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/plain; charset=UTF-8
+
+ASSystem (a.k.a. "ASS") is a small one-file key-value database
+
+Python support is limited, but it should be fine for most usecases
+
+=== INSTALLATION ===
+
+```
+pip install assystem
+```
+
+=== USAGE ===
+
+```
+import assystem
+a = assystem.ASS("db.ass")
+a.set(b"key", b"value")
+print(a.get(b"key"))
+a.remove(b"key")
+```
+
