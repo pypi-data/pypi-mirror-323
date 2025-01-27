@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: pixelkit
+Version: 0.0.1a0
+Summary: A versatile toolkit for all your image processing needs! 🚀
+Project-URL: Homepage, https://github.com/rokmr/pypi-utilities
+Project-URL: Issues, https://github.com/rokmr/pypi-utilities/issues
+Author-email: Avnish Kumar <kumaravnish.456@gmail.com>, Rohit Kumar <sahil15rohit88@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9.5
+Description-Content-Type: text/markdown
+
+# pypi-utilities
+
+
+```bash
+source ~/.bashrc
+
+```
