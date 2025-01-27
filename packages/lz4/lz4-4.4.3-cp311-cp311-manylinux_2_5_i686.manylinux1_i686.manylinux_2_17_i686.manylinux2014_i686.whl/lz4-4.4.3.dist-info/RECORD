@@ -1,0 +1,12 @@
+lz4-4.4.3.dist-info/LICENSE,sha256=4qxD1uuA605SFBgXyBJDfguYGx17LcfMhsfvVSQETG8,1495
+lz4-4.4.3.dist-info/WHEEL,sha256=mhUBnmmZYdZ6kCWBRUJL3R5txoLrGbdrhgVSfzJzit4,216
+lz4-4.4.3.dist-info/RECORD,,
+lz4-4.4.3.dist-info/top_level.txt,sha256=cX6_gxFUdNSo40TfxrGpTCgu7epGm3yW3m2k7irTDzI,4
+lz4-4.4.3.dist-info/METADATA,sha256=mEjaZ1g_wuXh5o3r_9F61O8CVKG5itTaD9hbR2KsNqo,3816
+lz4/__init__.py,sha256=etsV-XG9vgCn-EKrFpzWJsGIp-VUtH-tpNrQmMmDECU,627
+lz4/_version.cpython-311-i386-linux-gnu.so,sha256=UEeQuQF4cmVB9x5ElPj8_wOy5JAWIpSZc_8CcA92tOU,801288
+lz4/version.py,sha256=pBRtcfgtvEWQclVCbfzNyzjLXtlpJ1ylJeUJ-pdiD-k,411
+lz4/block/_block.cpython-311-i386-linux-gnu.so,sha256=HwC82iOlmdyB4J-0B1YZo88HaRFNTaHQBIjhCeD8qU4,1342876
+lz4/block/__init__.py,sha256=KsSQGgaPpJtVPJ5QfMadVGFduMy0hSetJHWGNmOvpso,70
+lz4/frame/_frame.cpython-311-i386-linux-gnu.so,sha256=UGwkULrt-PQYJvoVEmGbXGPyhioe8gU31DdwxTH8cP0,1524040
+lz4/frame/__init__.py,sha256=EqfNnlmPh7PD0t-DvfKejRWmIsR7Uf5OJKWdlC3SU3A,31131
