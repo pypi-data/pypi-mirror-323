@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: iteraa
+Version: 0.1.0
+Summary: A package to conduct accelerated archetypal analysis with an iterative approach.
+License: MIT
+Author: Jonathan Yik Chang Ting
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: matplotlib (>=3.9.1,<4.0.0)
+Requires-Dist: natsort (>=8.4.0,<9.0.0)
+Requires-Dist: numpy (<2.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: scikit-learn (>=1.5.1,<2.0.0)
+Requires-Dist: scipy (>=1.14.0,<2.0.0) ; python_version >= "3.10" and python_version < "4.0"
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Description-Content-Type: text/markdown
+
+# Iterative Archetypal Analysis (IAA)
+
+## Description
+
+`IAA` is a package that provides functionalities to conduct accelerated archetypal analysis via an iterative approach.
+
+## Background
+* Archetypal analysis is an unsupervised learning technique that uses a convex polytope to summarise multivariate data.
+* The classical algorithm involves an alternating minimisation algorithm, which grows quadratically in complexity.
+* An iterative approach could be implemented to accelerate the execution of the archetypal analysis algorithm.
+* The acceleration achieved by the iterative approach is in addition to the acceleration as a result of the optimisation of other portions of the algorithm execution, as was typically done in the past.
+
+## Features
+* Implementation of an iterative approach to conduct archetypal analysis.
+* Implementation of a parallelised iterative approach to conduct archetypal analysis.
+* Utilisation of high-performance-computing cluster for parallelisation of individual archetypal analysis execution on data subsets.
+
+## Installation
+
+Use `pip` or `conda` to install `IAA`:
+
+```bash
+$ pip install iaa
+```
+
+```bash
+$ conda install -c conda-forge iaa
+```
+
+## Usage
+
+```python
+from iaa import ArchetypalAnalysis
+
+X = getExampleData()  # Replace with your data
+aa = ArchetypalAnalysis()
+aa.fit(X)
+```
+
+Check out the notebooks for demonstrations of the [iterative](https://github.com/Jon-Ting/iaa/blob/main/docs/iaaDemo.ipynb) and [parallel iterative](https://github.com/Jon-Ting/iaa/blob/main/docs/piaaDemo.ipynb) approaches.
+
+## Documentation
+
+Detailed [documentations](https://iaa.readthedocs.io/en/latest/) are hosted by `Read the Docs`.
+
+## Contributing
+
+`IAA` appreciates your enthusiasm and welcomes your expertise!
+
+Please check out the [contributing guidelines](https://github.com/Jon-Ting/iaa/blob/main/CONTRIBUTING.md) and [code of conduct](https://github.com/Jon-Ting/iaa/blob/main/CONDUCT.md). 
+By contributing to this project, you agree to abide by its terms.
+
+## License
+
+The project was created by Jonathan Yik Chang Ting. It is licensed under the terms of the [MIT license](https://github.com/Jon-Ting/iaa/blob/main/LICENSE).
+
+## Credits
+
+The package was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+The code is developed based on the [code structure and functionalities for visualisation of the *archetypes.py* written by Benyamin Motevalli](https://researchdata.edu.au/archetypal-analysis-package/1424520), who in turn developed his code based on ["Archetypal Analysis" by Adele Cutler and Leo Breiman, Technometrics, November 1994, Vol.36, No.4, pp. 338-347](https://www.jstor.org/stable/1269949).
+
+## Contact
+
+Email: `Jonathan.Ting@anu.edu.au`/`jonting97@gmail.com`
+
+Feel free to reach out if you have any questions, suggestions, or feedback.
+
