@@ -1,0 +1,15 @@
+df/__init__.py,sha256=3ivt5Oqeftuy0lLxZZcR6jX1-711WPOwEq5zaaNzAJ4,343
+df/code.py,sha256=xtlIIkuYfh2M-SmqUVSqIm4BmhVdOXhvX5_t-Wxb7p0,5857
+df/codeclient.py,sha256=A3dN5k1ECvhYwkZ-Sb-4YbasFqkmGr59PRln6iqmAsk,12836
+df/enums.py,sha256=9Y7EdXDm-M_PLFVQYWCnBVFLDX5X9E_AzlOfT__r0BA,1691
+df/exceptions.py,sha256=vJbNZBxH3_RBy89ZToePu0nuM7YX75z2jY3Mg9E2IzE,197
+df/template.py,sha256=4wZ8bh7kRAPd5QCnmEWJ2Bgo7gOVX2aG7ZwLNE8fuRA,7395
+df/values.py,sha256=TYqnTarS8fn2PyPCuqxHQVxg6Gkq4kvNKQhSvpUvhIw,12560
+test/basic.py,sha256=Z1ZkynpwdsLvqMR_OaNXTMamMEPUTE_x-7m978ABxHA,527
+test/codeclient_test.py,sha256=qg3ixRLe478SCUVAttzO4tUEsiqZXueqyXbVZQ8rz3E,327
+test/count.py,sha256=3GXnr8umYyKFK-UZgGWNBsyKw7gz8IFN77bdQ3H4vVA,593
+DiamondFire.py-0.0.4.dist-info/LICENSE,sha256=GuGe_L3xyavid6Wf8vytbr-ZQ0ZJb2UoT6qi-KBKpZw,1099
+DiamondFire.py-0.0.4.dist-info/METADATA,sha256=bYbmbcH-cekEYixD6NvcWxYYerscj4kVDWT2xX7eD18,3027
+DiamondFire.py-0.0.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+DiamondFire.py-0.0.4.dist-info/top_level.txt,sha256=2cOLB9b0mjo4zmQV6vjzoplc3QBVNbLbUt2mm62mUdQ,8
+DiamondFire.py-0.0.4.dist-info/RECORD,,
