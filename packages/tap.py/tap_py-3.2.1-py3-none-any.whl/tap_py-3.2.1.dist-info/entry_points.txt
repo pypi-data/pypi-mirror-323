@@ -1,0 +1,3 @@
+[console_scripts]
+tap = tap.main:main
+tappy = tap.main:main
