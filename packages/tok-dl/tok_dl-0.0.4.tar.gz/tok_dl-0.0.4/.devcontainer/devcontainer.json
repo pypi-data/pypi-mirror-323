@@ -1,0 +1,27 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/python:3",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "tamasfe.even-better-toml"
+      ],
+      "settings": {
+        "workbench.editor.showTabs": "single",
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.fontSize": 16,
+        "workbench.colorTheme": "Monokai",
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff"
+        }
+      }
+    }
+  },
+  "postCreateCommand": [
+    "pipx",
+    "install",
+    "poetry"
+  ]
+}
