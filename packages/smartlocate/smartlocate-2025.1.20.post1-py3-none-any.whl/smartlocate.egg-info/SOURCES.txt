@@ -1,0 +1,14 @@
+.install.sh
+.smartlocate.py
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+smartlocate
+smartlocate.egg-info/PKG-INFO
+smartlocate.egg-info/SOURCES.txt
+smartlocate.egg-info/dependency_links.txt
+smartlocate.egg-info/requires.txt
+smartlocate.egg-info/top_level.txt

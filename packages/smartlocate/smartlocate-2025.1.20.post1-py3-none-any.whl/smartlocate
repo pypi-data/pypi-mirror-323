@@ -1,0 +1,23 @@
+#!/bin/bash
+
+ORIGINAL_PWD=$(pwd)
+export ORIGINAL_PWD
+
+SCRIPT_DIR=$(dirname $(realpath "$0"))
+export SCRIPT_DIR
+
+cd $SCRIPT_DIR
+
+source .install.sh
+
+if [[ -z $FLAMEPROF ]]; then
+	python3 .smartlocate.py $*
+else
+	python3 -m cProfile -o input.prof .smartlocate.py $*
+
+	flameprof input.prof > output.svg
+
+	rm input.prof
+fi
+
+exit $?
