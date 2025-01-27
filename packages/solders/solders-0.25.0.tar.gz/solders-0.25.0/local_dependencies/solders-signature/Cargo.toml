@@ -1,0 +1,18 @@
+
+[package]
+name = "solders-signature"
+version = "0.23.0"
+edition = "2021"
+include = ["/src"]
+license = "MIT"
+repository = "https://github.com/kevinheavey/solders"
+description = "Solders signature crate."
+
+[dependencies]
+pyo3 = { version = "0.23", default-features = false , features = ["macros"] }
+solders-traits-core = { path = "../solders-traits-core" }
+solders-macros = { path = "../solders-macros" }
+solders-pubkey = { path = "../solders-pubkey" }
+solana-sdk = { version = "2.1.0", features = ["openssl-vendored"] }
+serde = "^1.0.188"
+derive_more = "0.99.17"

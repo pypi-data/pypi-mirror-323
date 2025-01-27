@@ -1,0 +1,28 @@
+
+[package]
+name = "solders-litesvm"
+version = "0.1.0"
+edition = "2021"
+include = ["/src"]
+license = "MIT"
+repository = "https://github.com/kevinheavey/solders"
+description = "Solders LiteSVM crate."
+
+[dependencies]
+pyo3 = { version = "0.23", default-features = false , features = ["macros"] }
+serde = "^1.0.188"
+litesvm = { version = "0.5.0", features = ["nodejs-internal", "serde"] }
+solana-sdk = { version = "2.1.0", features = ["openssl-vendored"] }
+solders-account = { path = "../solders-account" }
+solders-compute-budget = { path = "../solders-compute-budget" }
+solders-hash = { path = "../solders-hash" }
+solders-instruction = { path = "../solders-instruction" }
+solders-macros = { path = "../solders-macros" }
+solders-primitives = { path = "../solders-primitives" }
+solders-pubkey = { path = "../solders-pubkey" }
+solders-signature = { path = "../solders-signature" }
+solders-traits = { features = ["litesvm"] , path = "../solders-traits" }
+solders-traits-core = { path = "../solders-traits-core" }
+solders-transaction = { path = "../solders-transaction" }
+solders-transaction-error = { path = "../solders-transaction-error" }
+solders-transaction-return-data = { path = "../solders-transaction-return-data" }

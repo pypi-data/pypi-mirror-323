@@ -1,0 +1,18 @@
+
+[package]
+name = "solders-compute-budget"
+version = "0.23.0"
+edition = "2021"
+include = ["/src"]
+license = "MIT"
+repository = "https://github.com/kevinheavey/solders"
+description = "Solders compute budget crate."
+
+[dependencies]
+pyo3 = { version = "0.23", default-features = false , features = ["macros"] }
+solana-compute-budget = "2.1.10"
+solana-sdk = { version = "2.1.0", features = ["openssl-vendored"] }
+solders-macros = { path = "../solders-macros" }
+solders-pubkey = { path = "../solders-pubkey" }
+solders-instruction = { path = "../solders-instruction" }
+solders-traits-core = { path = "../solders-traits-core" }
