@@ -1,0 +1,10 @@
+local_operator/__init__.py,sha256=t8kpWb_uJEQc8ztkQwq0RvUUeomJbwtpsoF50zh_Vac,66
+local_operator/agent.py,sha256=4RPXuJAwAYEyNNB8TW0HN1bEJhs3c2SP5g8Wu9tlvxM,22543
+local_operator/cli.py,sha256=oasd-h1eZBpDLJ0FmBsnX6AzYlqI1BlKMBRw-zkSic4,2351
+local_operator/credentials.py,sha256=3ctLbSnS0xMIPMZzKRlDneq_VguhjvHoFuYqlK8_UEo,3241
+local_operator-0.0.17.dist-info/LICENSE,sha256=LOb3oIbc5GUnQghD0djAAhOOGDO4db7PueK3DLaHj5s,1068
+local_operator-0.0.17.dist-info/METADATA,sha256=_Jc7JQid2fVxJeKNIp5pOsFPVsG4HkBo4QHKYlGuPgA,34628
+local_operator-0.0.17.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+local_operator-0.0.17.dist-info/entry_points.txt,sha256=xZv7oJdnzL_21jyabRJFxStgGrjPam-UnmDww7Q9dlA,59
+local_operator-0.0.17.dist-info/top_level.txt,sha256=CNAhpbm8y8CSHaq3eOv7qXX0Qu28ENBRd97MsCW-KhM,15
+local_operator-0.0.17.dist-info/RECORD,,
