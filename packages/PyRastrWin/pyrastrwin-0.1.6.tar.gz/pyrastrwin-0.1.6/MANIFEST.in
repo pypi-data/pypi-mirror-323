@@ -1,0 +1,7 @@
+# Включаем основные файлы
+include README.md
+include LICENSE
+include CHANGELOG.md
+
+# Включаем папку tests с файлами
+recursive-include tests *.py
