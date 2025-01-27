@@ -1,0 +1,3 @@
+[console_scripts]
+modernpackage = modernpackage.main:main
+mp = modernpackage.main:main
