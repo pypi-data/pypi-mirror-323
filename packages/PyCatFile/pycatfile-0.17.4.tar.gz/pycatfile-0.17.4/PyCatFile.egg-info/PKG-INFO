@@ -1,0 +1,47 @@
+Metadata-Version: 2.2
+Name: PyCatFile
+Version: 0.17.4
+Summary: A tar like file format name catfile after unix cat command (concatenate files) .
+Home-page: https://github.com/GameMaker2k/PyCatFile
+Download-URL: https://github.com/GameMaker2k/PyCatFile/archive/master.tar.gz
+Author: Kazuki Przyborowski
+Author-email: kazuki.przyborowski@gmail.com
+Maintainer: Kazuki Przyborowski
+Maintainer-email: kazuki.przyborowski@gmail.com
+License: Revised BSD License
+Keywords: cat catfile cat-archive catfile-archive pycatfile python python-catfile neko nekofile neko-archive nekofile-archive pynekofile python python-nekofile compression tarball gzip tar bzip2 tar-archive lzma xz gz lzma2 xz2 tarlike tarlite hairball
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: OS/2
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: platform
+Dynamic: summary
+
+A tar like file format name catfile after unix cat command (concatenate files) .
