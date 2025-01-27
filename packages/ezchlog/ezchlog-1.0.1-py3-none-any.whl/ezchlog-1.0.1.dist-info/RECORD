@@ -1,0 +1,13 @@
+ezchlog/__init__.py,sha256=QzpDZWz_YGI2mZrBK0bXwWXysQFVSdT_xF_kXCjQNM0,53
+ezchlog/__main__.py,sha256=34HX9HvqUvMEM6Q4xOTXvYi5Yn9tm13gqqeqxuhuljM,67
+ezchlog/cli.py,sha256=djvnndRRlcdqYvuma65DkFtMUUzVyZ_ES4HgljBV5LQ,10053
+ezchlog/config.py,sha256=LHFauignk89oKZSAF3_bYIpijmryEA-6IYoChU1DoCU,6037
+ezchlog/ezchlog.py,sha256=NZJBdlLxuwoCpxgIBUjRfe_kiGokI8BdZnjB2uckLAU,6124
+ezchlog/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ezchlog/CHANGELOG.md,sha256=Z82CAP5KHtz_htmgxRwEkDU0aWTZ8eUCxA_-rdQQ5DU,969
+ezchlog/README.md,sha256=4bsOnw_gKGTmJrdndq4BdjHnTRKCLAhE1LEsuUoSTEE,3839
+ezchlog-1.0.1.dist-info/METADATA,sha256=K-eiCpIZMNAj3IMx4nLN4D_HQ1BS9OwHdU2mL8uavC8,5362
+ezchlog-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ezchlog-1.0.1.dist-info/entry_points.txt,sha256=Ixy6FiwigqqoKQqNN6nHRxcZBTfPKJeervR63ih3NQU,41
+ezchlog-1.0.1.dist-info/licenses/LICENSE,sha256=QhVHUcZBh9AUvM0JjSc2scxfU4Vzs64MhTA5QgY1mdU,1074
+ezchlog-1.0.1.dist-info/RECORD,,
