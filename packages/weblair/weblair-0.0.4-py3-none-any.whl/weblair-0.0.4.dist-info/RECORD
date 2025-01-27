@@ -1,0 +1,8 @@
+weblair/__init__.py,sha256=nAHBghd7xj45_tcy5iYwbR80ns6mhruzGfwWsv979vE,22
+weblair/weblair.py,sha256=b0qeU3qgGTvHW3fm8wT_bZjYcvcd16DoOvsETE58Fxc,12867
+weblair/weblair_extended.py,sha256=lzPVEzeJRPkGz_-klkur1Q5H3CLn83v-sHYjdPOEfis,41466
+weblair/weblair_sync.py,sha256=ECsxWp7qiq6h7teoMLUuq-sAFeman0cqNL1o4J4jIZ4,4937
+weblair-0.0.4.dist-info/METADATA,sha256=r4OxLn2ta0rvh1mLGkdkZxsuVd7Pa0kGwOtqazdeniw,3241
+weblair-0.0.4.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+weblair-0.0.4.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weblair-0.0.4.dist-info/RECORD,,
