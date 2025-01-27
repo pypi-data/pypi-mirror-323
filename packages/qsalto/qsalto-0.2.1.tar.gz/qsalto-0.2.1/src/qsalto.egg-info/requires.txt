@@ -1,0 +1,4 @@
+numpy>=1.22
+
+[Precision]
+mpmath>=1.0

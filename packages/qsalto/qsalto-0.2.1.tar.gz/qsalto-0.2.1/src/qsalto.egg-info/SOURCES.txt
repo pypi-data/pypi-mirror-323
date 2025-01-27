@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/qsalto/__init__.py
+src/qsalto/matrices.py
+src/qsalto/mp_not_available.py
+src/qsalto/naive_matrices.py
+src/qsalto/single_entry.py
+src/qsalto/single_entry_precise.py
+src/qsalto/single_shot.py
+src/qsalto.egg-info/PKG-INFO
+src/qsalto.egg-info/SOURCES.txt
+src/qsalto.egg-info/dependency_links.txt
+src/qsalto.egg-info/requires.txt
+src/qsalto.egg-info/top_level.txt
+tests/test_matrices.py
