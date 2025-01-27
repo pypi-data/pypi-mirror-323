@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/bmp_lib/__init__.py
+src/bmp_lib/bmp_func.py
+src/bmp_lib.egg-info/PKG-INFO
+src/bmp_lib.egg-info/SOURCES.txt
+src/bmp_lib.egg-info/dependency_links.txt
+src/bmp_lib.egg-info/requires.txt
+src/bmp_lib.egg-info/top_level.txt
