@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/hwh_backend/__init__.py
+src/hwh_backend/build.py
+src/hwh_backend/hwh_config.py
+src/hwh_backend/parser.py
+src/hwh_backend.egg-info/PKG-INFO
+src/hwh_backend.egg-info/SOURCES.txt
+src/hwh_backend.egg-info/dependency_links.txt
+src/hwh_backend.egg-info/requires.txt
+src/hwh_backend.egg-info/top_level.txt
