@@ -1,0 +1,7 @@
+typing-extensions==4.12.2
+uuid==1.30
+pydantic==2.10.5
+orjson==3.10.15
+asyncio==3.4.3
+aioboto3==13.4.0
+aiobotocore==2.18.0
