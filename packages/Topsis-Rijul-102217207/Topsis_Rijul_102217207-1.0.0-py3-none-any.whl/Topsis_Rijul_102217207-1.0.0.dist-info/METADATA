@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: Topsis-Rijul-102217207
+Version: 1.0.0
+Summary: A Python package for implementing the TOPSIS decision-making method
+Home-page: UNKNOWN
+Author: Rijul Bansal
+Author-email: your-email@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.1.0
+Requires-Dist: numpy>=1.19.0
+
+# Topsis-<FirstName>-<RollNumber>
+
+A Python package to implement the TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) decision-making method.
+
+## Installation
+
+```bash
+pip install Topsis-Rijul-102217207
+
+from topsis import topsis
+
+# Example usage
+topsis.topsis('<InputFile>', '<Weights>', '<Impacts>', '<ResultFile>')
+
+python <program.py> <InputDataFile> <Weights> <Impacts> <ResultFileName>
+
+
