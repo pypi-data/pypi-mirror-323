@@ -1,0 +1,14 @@
+Wsgi-15Watt/BaseController.py,sha256=_bL_gaikx0AhMnlFjl4Qw7Z7A_chKsxi-BjMLTTKDak,882
+Wsgi-15Watt/BaseTplController.py,sha256=RY1thOu7NlrXV78Qu2zOqiWu3yRsDZT0e8GNLJ2vNOY,867
+Wsgi-15Watt/Cookie.py,sha256=EfVmjMwgajZDUUS6WkmOa1XVUp57NqdyyCR-BQp1yFs,471
+Wsgi-15Watt/Exceptions.py,sha256=psue6TuJOvKz2Ee4y2LWlCQOH2eLGEncIwZpSxdLVA4,2275
+Wsgi-15Watt/Kernel.py,sha256=u5ErYWTWhtv71e5rClcZuZObEO27ORWLIZtGZNlWf8Y,4775
+Wsgi-15Watt/Request.py,sha256=EbF5tsCq0iQsz-zTP-n9z4rDNXyVJAMUd7bsGIqnMuA,4637
+Wsgi-15Watt/Response.py,sha256=3C25DP3JDfEWptgYF0dZCZS7TsTua1df4DedBORCe_0,5864
+Wsgi-15Watt/Route.py,sha256=VtO8MlwZrdGB_O90d0lxuDfm63DIB3ynCTu0t4LXPeY,4698
+Wsgi-15Watt/__init__.py,sha256=4z50Zhno0aHWpAFIZmG5Ky73QUNBP9Mj3wJ-_fIUOdU,219
+Wsgi-15Watt/multipart.py,sha256=wYROEyo8L3C15os9LK3bG2rr5O5Sd1caW-TB-OuC6FM,17332
+Wsgi_15Watt-0.9.5.dist-info/METADATA,sha256=_uBCnf46-KJ-k68bfwgocq0ps1TOv7gTHSlHw74ByPw,9155
+Wsgi_15Watt-0.9.5.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+Wsgi_15Watt-0.9.5.dist-info/top_level.txt,sha256=pe0ve-VrhZb8oSJp3LWMw7cA94wvz-yTm2FdxAE4mrg,12
+Wsgi_15Watt-0.9.5.dist-info/RECORD,,
