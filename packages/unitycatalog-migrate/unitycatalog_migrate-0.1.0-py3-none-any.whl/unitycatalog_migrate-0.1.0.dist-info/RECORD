@@ -1,0 +1,10 @@
+unitycatalog_migrate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unitycatalog_migrate/coro.py,sha256=fZ2BfVw-SRRhgknITLkMyWAq6d5Q4vTbjyZiIDk9gkk,2294
+unitycatalog_migrate/main.py,sha256=8XL4m5dFbZyl8dBhfXWRQpm9pCFWf-ydYsq-sc2N5uU,2424
+unitycatalog_migrate/output.py,sha256=lSaSCzwG1aAzLW0tk9crpawaw4B_Oy8J0yCtJ3QEX58,915
+unitycatalog_migrate/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unitycatalog_migrate/uc.py,sha256=ccyV11ptrO00N9-SCsHeuWj51mRTpmjJP-sxD-vDTkU,2785
+unitycatalog_migrate-0.1.0.dist-info/METADATA,sha256=GmrVp7xK8XL1DFD6WrM3I_ZjLHqga5dlv0l4Dm3jwUk,2022
+unitycatalog_migrate-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+unitycatalog_migrate-0.1.0.dist-info/entry_points.txt,sha256=oJMO_U-lS3gbGWDwThuFtBxGcwrLmcDyY4mJ34x36_w,55
+unitycatalog_migrate-0.1.0.dist-info/RECORD,,
