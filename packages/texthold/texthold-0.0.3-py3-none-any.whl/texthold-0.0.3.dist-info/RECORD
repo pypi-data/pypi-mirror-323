@@ -1,0 +1,9 @@
+texthold/__init__.py,sha256=OEaqF8gm90Ypdb5IREuX3lZtHmC4y_DhsDNkNTekimg,57
+texthold/core/__init__.py,sha256=caUgGaCgdekvpZOdS2O0AqA9NgtdFZns8aGXEuavkcU,2212
+texthold/tests/__init__.py,sha256=yaYbBVfYZp8rBijiq-h3d4j4ztBcOXNNbFdOK2Q9yuM,296
+texthold/tests/test_0.py,sha256=aEuEDkGa2WgSJjrsmXie3r4ILH98CCpGm91x5pFISd4,1560
+texthold-0.0.3.dist-info/LICENSE.txt,sha256=fOh9FHccUt9OcJPBaVJ482GX4yrl_FxCUk9YRZ53JOI,1074
+texthold-0.0.3.dist-info/METADATA,sha256=UyqX3zs58sWTi1pwmhnSBLpVdIJHJmw559Mm1aq7m6M,2314
+texthold-0.0.3.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+texthold-0.0.3.dist-info/top_level.txt,sha256=sumlW1hfCM5ksZa43UaSsX4pr1LzfPWMx2flPoU-wOw,9
+texthold-0.0.3.dist-info/RECORD,,
