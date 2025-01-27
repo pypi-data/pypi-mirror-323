@@ -1,0 +1,8 @@
+pip-tools
+pydantic
+pytest
+requests
+wexample-filestate==0.0.22
+wexample-helpers-git==0.0.22
+wexample-helpers==0.0.22
+wexample-prompt==0.0.21
