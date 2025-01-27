@@ -1,0 +1,10 @@
+mpfa/__init__.py,sha256=YNpsyzg1l5Rf9NvLVaTV-KFSQszIBV6tv5MZ28aNoOQ,88
+mpfa/__main__.py,sha256=Taj528jtyp91vKMa68V9TN3o33cG78B6tTY1h1qKGcI,61
+mpfa/core/__init__.py,sha256=-UmfYEmQNUYFs-KOWjKS4fKRMyCWeAD8ePWhEVgX3dM,47
+mpfa/tests/__init__.py,sha256=KbDsqsA2GCfd0LG72SD3vsCTsHQYzSfIA60hI6f5OC8,292
+mpfa/tests/test_1984.py,sha256=GPfy8FPaGbj-w9uGHkJYSjmlSReVAXwiHS8JydJaERw,187
+mpfa-0.0.0.dev0.dist-info/LICENSE.txt,sha256=fOh9FHccUt9OcJPBaVJ482GX4yrl_FxCUk9YRZ53JOI,1074
+mpfa-0.0.0.dev0.dist-info/METADATA,sha256=OPTUe5vHfvYNKwECHtHov-93xgghqvGWIf-mxJEovA0,2577
+mpfa-0.0.0.dev0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+mpfa-0.0.0.dev0.dist-info/top_level.txt,sha256=vc5umcpMx-V8w5XPqBWZGHf54S1sdMyGKkncFhTppbw,5
+mpfa-0.0.0.dev0.dist-info/RECORD,,
