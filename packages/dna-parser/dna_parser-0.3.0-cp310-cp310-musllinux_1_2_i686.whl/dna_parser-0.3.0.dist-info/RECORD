@@ -1,0 +1,9 @@
+dna_parser-0.3.0.dist-info/METADATA,sha256=Dd68dFFaX67259QTZZR3foQ-CJGTO66hkXVeZODvEPA,1677
+dna_parser-0.3.0.dist-info/WHEEL,sha256=USqslp_LkvPrjvikII3R4Uv8zm_gZxn3yIFSuCKczGI,105
+dna_parser-0.3.0.dist-info/licenses/LICENSE,sha256=ujwDvjuabVdRGMNaqXlZkbJqdxWQG5eo13VKUGWubKY,1065
+dna_parser.libs/libgcc_s-b5472b99.so.1,sha256=wh8CpjXz9IccAyeERcB7YDEx7NH2jF-PykwOyYNeRRI,453841
+dna_parser/__init__.py,sha256=HVhzGek1oW4MUVM0XPwzebNL1c1a4luBOgo_Oo5rx_E,180
+dna_parser/call_functions.py,sha256=xi-f4aydZX8CJK5ZqOQ4MMK1CkkDH6zTcwrFtm6IwbM,2236
+dna_parser/tfidf_class.py,sha256=cQADEDXc09fkx2KU0EzaKxeIJAOHigtKIO6ehddt5Hk,3629
+dna_parser/dna_parser.cpython-310-i386-linux-gnu.so,sha256=WdeGzEfhmXTip3o1Bcm1sng5m_GaMl7ZDBLAO6yR1Do,1035077
+dna_parser-0.3.0.dist-info/RECORD,,
