@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/xig/__init__.py
+src/xig.egg-info/PKG-INFO
+src/xig.egg-info/SOURCES.txt
+src/xig.egg-info/dependency_links.txt
+src/xig.egg-info/top_level.txt
