@@ -1,0 +1,85 @@
+Metadata-Version: 2.2
+Name: orin3-message-client
+Version: 1.0.226
+Summary: Package for a gRPC client connecting to ORiN3 Remote Engine / ORiN3 Provider.
+Author: densowave
+Author-email: contact.iot@denso-wave.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: grpcio~=1.68.0
+Requires-Dist: grpcio-tools~=1.68.0
+
+# Overview
+
+This package is a gRPC client that implements the interfaces of ORiN3 Remote Engine and ORiN3 Provider.  
+It allows user applications to call various functions of ORiN3 Remote Engine and ORiN3 Provider.
+
+# How to use
+A sample is shown below to explain how to use it. This sample does the following:
+* Communicates with ORiN3 Remote Engine and starts ORiN3 Provider (Mock).
+* Communicates with ORiN3 Provider (Mock) and sets values ​​to ORiN3 variables.
+
+``` py
+import asyncio
+from orin3_provider_client.v1.client_creator import ClientCreator
+from orin3_provider_client.v1.common import ORiN3ValueType
+from orin3_remote_engine_client.v1.remote_engine_client import ProtocolType, ProviderEndpoint, RemoteEngineClient, TelemetryOption, LogLevel
+
+async def debug_main():
+    # Connect to Remote Engine
+    async with RemoteEngineClient("127.0.0.1", 7103) as remote_engine:
+
+        # Launch a Mock Provider
+        provider_endpoints = [ProviderEndpoint(ProtocolType.HTTP, "127.0.0.1", 0)]
+        telemetry_endpoints = []
+        telemetry_attributes = {}
+        telemetry_option = TelemetryOption(telemetry_attributes, True, telemetry_endpoints)
+        extensions = {}
+        result = await remote_engine.wakeup_provider_async(
+            id="643D12C8-DCFC-476C-AA15-E8CA004F48E8",
+            version="1.0.84",
+            thread_safe_mode=True,
+            endpoints=provider_endpoints,
+            log_level=LogLevel.INFORMATION,
+            telemetry_option=telemetry_option,
+            extension=extensions)
+
+        provider_information = result.provider_information
+        endpoints = provider_information.endpoints
+        endpoint = endpoints[0]
+
+        async with await ClientCreator.attach_root_object_async(endpoint.ip_address, endpoint.port) as root_object:
+            # TODO: Add processing from here on down if necessary.
+
+            # Create a controller
+            controller_name = "GeneralPurposeController"
+            controller_type = "ORiN3.Provider.ORiNConsortium.Mock.O3Object.Controller.GeneralPurposeController, ORiN3.Provider.ORiNConsortium.Mock"
+            controller_option = '{"@Version":"1.0.84"}'
+            controller = await ClientCreator.create_controller_async(root_object, controller_name, controller_type, controller_option)
+            await controller.connect_async()
+
+            # Create a variable
+            variable_name = "Int32Variable"
+            variable_type = "ORiN3.Provider.ORiNConsortium.Mock.O3Object.Variable.Int32Variable, ORiN3.Provider.ORiNConsortium.Mock"
+            variable_option = '{"@Version":"1.0.84"}'
+            variable = await ClientCreator.create_variable_async(controller, variable_name, variable_type, variable_option, ORiN3ValueType.ORIN3_INT32)
+
+            # SetValue/GetValue
+            await variable.set_value_async(100)
+            value = await variable.get_value_async()
+            print(value)
+
+            # Shutdown Provider
+            await root_object.shutdown_async()
+
+if __name__ == '__main__':
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    asyncio.run(debug_main())
+```
+
+# Reference
+The original proto file is stored in the following location:
+- https://github.com/ORiN-Consortium/ORiN3
