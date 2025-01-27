@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Jadio/__init__.py
+Jadio/module.py
+Jadio.egg-info/PKG-INFO
+Jadio.egg-info/SOURCES.txt
+Jadio.egg-info/dependency_links.txt
+Jadio.egg-info/requires.txt
+Jadio.egg-info/top_level.txt
