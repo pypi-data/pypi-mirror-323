@@ -1,0 +1,12 @@
+[project]
+name = "autogen-llama-cpp-chat-completion"
+version = "0.1.0"
+dependencies = [
+    "autogen-core>=0.4,<0.5",
+    "pydantic",
+    "llama-cpp",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
