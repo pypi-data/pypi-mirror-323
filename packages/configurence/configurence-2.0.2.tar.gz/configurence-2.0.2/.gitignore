@@ -1,0 +1,11 @@
+*.pyc
+dist/*
+build/*
+.cache
+.eggs
+.python-version
+configurence.egg-info/
+.tox/
+venv
+.env
+.ipynb_checkpoints

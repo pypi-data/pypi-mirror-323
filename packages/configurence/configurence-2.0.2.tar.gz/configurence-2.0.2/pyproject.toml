@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "configurence"
+version = "2.0.2"
+authors = [
+  {name = "Josh Holbrook", email = "josh.holbrook@gmail.com"}
+]
+description = "A simple CLI configuration library"
+readme = "README.md"
+keywords = []
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+dependencies = [
+  "appdirs",
+  "click",
+  "pyyaml",
+]
+
+[project.scripts]
+configurence = "configurence:main"
+
+[dependency-groups]
+dev = [
+  "flake8",
+  "flake8-black",
+  "pytest",
+  "black",
+  "click",
+  "isort",
+  "jupyter-console",
+  "mkdocs",
+  "mkdocs-include-markdown-plugin",
+  "mkdocstrings[python]",
+  "syrupy",
+  "tox",
+  "validate-pyproject[all]",
+]
+
+[tool.uv]
+package = true
+
+[tool.isort]
+profile = "appnexus"
+known_application = "configurence"
+
+[tool.pyright]
+include = ["configurence", "tests"]
+
+[tool.pytest]
+addopts = "--verbose -s"
+testpaths = [ "tests" ]
+
+[tool.setuptools]
+packages = [ "configurence" ]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
