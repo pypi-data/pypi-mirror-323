@@ -1,0 +1,62 @@
+Metadata-Version: 2.4
+Name: vsscunet
+Version: 2.0.0
+Summary: SCUNet function for VapourSynth
+Project-URL: Homepage, https://github.com/HolyWu/vs-scunet
+Project-URL: Issues, https://github.com/HolyWu/vs-scunet/issues
+Author-email: HolyWu <holywu@gmail.com>
+License-File: LICENSE
+Keywords: PyTorch,SCUNet,TensorRT,VapourSynth
+Classifier: Environment :: GPU :: NVIDIA CUDA
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Multimedia :: Video
+Requires-Python: >=3.10
+Requires-Dist: einops
+Requires-Dist: numpy
+Requires-Dist: requests
+Requires-Dist: timm
+Requires-Dist: torch>=2.6.0.dev
+Requires-Dist: tqdm
+Requires-Dist: vapoursynth>=66
+Description-Content-Type: text/markdown
+
+# SCUNet
+Practical Blind Denoising via Swin-Conv-UNet and Data Synthesis, based on https://github.com/cszn/SCUNet.
+
+
+## Dependencies
+- [PyTorch](https://pytorch.org/get-started/) 2.6.0.dev or later
+- [VapourSynth](http://www.vapoursynth.com/) R66 or later
+
+`trt` requires additional packages:
+- [TensorRT](https://developer.nvidia.com/tensorrt) 10.4.0 or later
+- [Torch-TensorRT](https://pytorch.org/TensorRT/) 2.6.0.dev or later
+
+To install the latest nightly build of PyTorch and Torch-TensorRT, run:
+```
+pip install -U packaging setuptools wheel
+pip install --pre -U torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu126
+pip install --no-deps --pre -U torch_tensorrt --index-url https://download.pytorch.org/whl/nightly/cu126
+pip install -U tensorrt --extra-index-url https://pypi.nvidia.com
+```
+
+
+## Installation
+```
+pip install -U vsscunet
+```
+
+If you want to download all models at once, run `python -m vsscunet`. If you prefer to only download the model you
+specified at first run, set `auto_download=True` in `scunet()`.
+
+
+## Usage
+```python
+from vsscunet import scunet
+
+ret = scunet(clip)
+```
+
+See `__init__.py` for the description of the parameters.
