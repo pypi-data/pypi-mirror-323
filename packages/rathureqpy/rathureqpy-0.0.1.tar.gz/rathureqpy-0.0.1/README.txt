@@ -1,0 +1,1 @@
+Some handy fonctions that are used everywhere.
