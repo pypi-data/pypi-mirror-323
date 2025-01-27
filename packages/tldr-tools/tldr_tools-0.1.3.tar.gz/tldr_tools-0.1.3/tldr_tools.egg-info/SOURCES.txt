@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+tldr_tools/__init__.py
+tldr_tools/tldr_download.py
+tldr_tools/tldr_endpoint.py
+tldr_tools/tldr_status.py
+tldr_tools/tldr_submit.py
+tldr_tools.egg-info/PKG-INFO
+tldr_tools.egg-info/SOURCES.txt
+tldr_tools.egg-info/dependency_links.txt
+tldr_tools.egg-info/entry_points.txt
+tldr_tools.egg-info/requires.txt
+tldr_tools.egg-info/top_level.txt
