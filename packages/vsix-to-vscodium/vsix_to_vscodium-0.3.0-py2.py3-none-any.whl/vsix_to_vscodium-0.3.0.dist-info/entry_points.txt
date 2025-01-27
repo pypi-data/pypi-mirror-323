@@ -1,0 +1,3 @@
+[console_scripts]
+vsix-to-vscodium=vsix_to_vscodium.cli:main
+
