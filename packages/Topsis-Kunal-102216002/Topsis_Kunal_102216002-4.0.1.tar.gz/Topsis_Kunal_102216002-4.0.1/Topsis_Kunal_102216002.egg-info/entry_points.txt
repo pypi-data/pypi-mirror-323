@@ -1,0 +1,2 @@
+[console_scripts]
+topsis = Topsis_Kunal_102216002.topsis:main
