@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: zxart
+Version: 0.1.0
+Summary: Unofficial zxart.ee API client.
+Author: Sergey V. DUDANOV
+Author-email: sergey.dudanov@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.11.11,<4.0.0)
+Requires-Dist: mashumaro[orjson] (>=3.15,<4.0)
+Description-Content-Type: text/markdown
+
+# zxart
+
+Simple Python client for [zxart](https://zxart.ee/) site.
+
