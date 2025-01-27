@@ -1,0 +1,2 @@
+[console_scripts]
+yandex-images-crawler = yandex_images_crawler:main
