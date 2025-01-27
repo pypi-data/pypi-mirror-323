@@ -1,0 +1,14 @@
+{
+    "cleaning": {
+        "version": "1.0.0",
+        "description": "Image reduction/cleaning, including cosmic ray removal."
+    },
+    "extraction": {
+        "version": "1.0.0",
+        "description": "Spectral extraction from a cleaned/stacked image."
+    },
+    "analysis": {
+        "version": "1.0.0",
+        "description": "Image reduction/cleaning, including cosmic ray removal."
+    }
+}

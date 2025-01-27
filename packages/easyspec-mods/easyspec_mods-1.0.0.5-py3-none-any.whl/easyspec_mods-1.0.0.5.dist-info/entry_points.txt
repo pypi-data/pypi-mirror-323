@@ -1,0 +1,2 @@
+[console_scripts]
+easyspec = easyspec_mods.__main__:main_cli
