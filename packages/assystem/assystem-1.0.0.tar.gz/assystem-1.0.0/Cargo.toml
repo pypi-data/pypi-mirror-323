@@ -1,0 +1,13 @@
+[package]
+name = "assystem_python"
+version = "1.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "assystem"
+crate-type = ["cdylib"]
+
+[dependencies]
+assystem = "1.0.0"
+pyo3 = "0.23.3"
