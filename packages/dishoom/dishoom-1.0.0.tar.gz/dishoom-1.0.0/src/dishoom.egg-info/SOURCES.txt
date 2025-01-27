@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/dishoom/__init__.py
+src/dishoom/dishoom.py
+src/dishoom.egg-info/PKG-INFO
+src/dishoom.egg-info/SOURCES.txt
+src/dishoom.egg-info/dependency_links.txt
+src/dishoom.egg-info/entry_points.txt
+src/dishoom.egg-info/requires.txt
+src/dishoom.egg-info/top_level.txt
