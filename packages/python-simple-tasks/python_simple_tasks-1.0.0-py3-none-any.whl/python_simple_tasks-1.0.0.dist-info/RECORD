@@ -1,0 +1,14 @@
+python_simple_tasks/__init__.py,sha256=J-j-u0itpEFT6irdmWmixQqYMadNl1X91TxUmoiLHMI,22
+python_simple_tasks/cli.py,sha256=BBvXlqxWuN2HNVFu2IJAmlDLDcODj4E4u0fInYQgV1Q,1660
+python_simple_tasks/scheduler.py,sha256=c-rdxONpMX1O0_kYQwQ6ZwROmTQs43fNN37Mhq4VWJ4,3667
+python_simple_tasks/utils.py,sha256=vSNCLcTWizaxiGbYGZdjGEP9tNANHwazoCyEv9SRJwA,2139
+python_simple_tasks/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_simple_tasks/tests/settings.py,sha256=8UxEpQRmv8L_B2C5xtt2N4douz1afSV89t9qNuA8Tfw,194
+python_simple_tasks/tests/test_cli.py,sha256=GD8W_xNqrKLyRcObawGFgQ9p6UuD442K2Kqv6JsjJMY,1530
+python_simple_tasks/tests/test_scheduler.py,sha256=Ll0q5J3ZciWZ3KEPWkm2y0kYuVjOKlTBWpDp9FyFYrs,3825
+python_simple_tasks/tests/test_utils.py,sha256=XknrQLOuBGOTH7mI4BKpK3HbcfiDSuAOdQruQf0xy7I,784
+python_simple_tasks-1.0.0.dist-info/METADATA,sha256=NnwAkqgpN78ThyaFF-AgIP7QINXiFCJ563rYXqn3_qA,5586
+python_simple_tasks-1.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+python_simple_tasks-1.0.0.dist-info/entry_points.txt,sha256=I5XFewAKOUaUkCv_dnh_3TvVZnU5CxS8OlJ-EubXlks,53
+python_simple_tasks-1.0.0.dist-info/top_level.txt,sha256=z_OsuaI_yIHFDQ-SCA5PNAGAgXtQuCrMDqKt34EoQq8,20
+python_simple_tasks-1.0.0.dist-info/RECORD,,
