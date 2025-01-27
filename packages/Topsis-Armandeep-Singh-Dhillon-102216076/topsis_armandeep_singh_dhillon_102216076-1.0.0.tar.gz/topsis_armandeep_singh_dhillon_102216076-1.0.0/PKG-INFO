@@ -1,0 +1,122 @@
+Metadata-Version: 2.2
+Name: Topsis_Armandeep_Singh_Dhillon_102216076
+Version: 1.0.0
+Summary: A Python implementation of the TOPSIS decision-making method
+Home-page: https://github.com/dhillonarman/Topsis-Armandeep-102216076
+Author: Armandeep_Singh_Dhillon
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+### **README**
+
+# **TOPSIS Analysis in Jupyter Notebook**
+
+This README provides step-by-step instructions on how to use the TOPSIS package in a Jupyter Notebook.
+
+---
+
+## **Installation**
+
+Before running the TOPSIS function, ensure the package is installed. You can either install it from PyPI or locally:
+
+### From PyPI:
+```bash
+!pip install Topsis_102216076_Armandeep_Singh_Dhillon
+```
+
+### Locally:
+If the package is not uploaded to PyPI, navigate to the folder containing the `setup.py` file and run:
+```bash
+!pip install .
+```
+
+---
+
+## **Usage**
+
+### **Step 1: Import the Package**
+Use the following code to import the `topsis` function:
+```python
+from Topsis_102216076_Armandeep_Singh_Dhillon import topsis
+```
+
+
+---
+
+### **Step 2: Prepare Input Data**
+Ensure you have a CSV file (e.g., `data.csv`) with the following structure:
+1. **First column:** Object/variable names (e.g., M1, M2, M3).
+2. **Second to last columns:** Numeric data for evaluation.
+
+Example CSV (`data.csv`):
+| Object | Criterion 1 | Criterion 2 | Criterion 3 | Criterion 4 |
+|--------|-------------|-------------|-------------|-------------|
+| M1     | 250         | 16          | 12          | 5           |
+| M2     | 200         | 12          | 15          | 8           |
+| M3     | 300         | 18          | 10          | 6           |
+| M4     | 275         | 20          | 14          | 7           |
+
+---
+
+### **Step 3: Define Inputs**
+Specify the following parameters:
+- `input_file`: Path to the CSV file (e.g., `data.csv`).
+- `weights`: Comma-separated weights for the criteria (e.g., `1,1,1,2`).
+- `impacts`: Comma-separated impacts (`+` for beneficial, `-` for non-beneficial, e.g., `+,+,-,+`).
+- `output_file`: Name of the output file to save the results (e.g., `result.csv`).
+
+---
+
+### **Step 4: Run the TOPSIS Function**
+Use the following code to run the TOPSIS analysis:
+```python
+# Import the necessary function
+from Topsis_102216076_Armandeep_Singh_Dhillon import topsis
+
+# Define inputs
+input_file = "data.csv"
+weights = "1,1,1,2"
+impacts = "+,+,-,+"
+output_file = "result.csv"
+
+# Run TOPSIS
+topsis(input_file, weights, impacts, output_file)
+
+# Display the output file (optional)
+import pandas as pd
+result = pd.read_csv(output_file)
+print(result)
+```
+
+---
+
+### **Step 5: Output**
+The output CSV file (`result.csv`) will include all original columns, along with two additional columns:
+1. **Topsis Score:** The computed TOPSIS score for each object.
+2. **Rank:** The rank of each object based on the TOPSIS score (higher score = better rank).
+
+Example Output (`result.csv`):
+| Object | Criterion 1 | Criterion 2 | Criterion 3 | Criterion 4 | Topsis Score | Rank |
+|--------|-------------|-------------|-------------|-------------|--------------|------|
+| M1     | 250         | 16          | 12          | 5           | 0.85         | 1    |
+| M2     | 200         | 12          | 15          | 8           | 0.65         | 3    |
+| M3     | 300         | 18          | 10          | 6           | 0.70         | 2    |
+| M4     | 275         | 20          | 14          | 7           | 0.60         | 4    |
+
+---
+
