@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 356 356" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g>
+        <clipPath id="_clip1">
+            <rect x="-1.917" y="1.334" width="356" height="356"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <rect x="-122" y="-29" width="576" height="431.917" style="fill-rule:nonzero;"/>
+        </g>
+        <path d="M0.083,355.25L352,355.25L351.999,3.334L0.083,3.334L0.083,355.25Z" style="fill:rgb(128,128,128);fill-rule:nonzero;"/>
+        <path d="M35.249,320.084L316.75,320.084L316.749,38.5L35.249,38.5L35.249,320.084Z" style="fill:rgb(0,0,128);fill-rule:nonzero;"/>
+        <path d="M57,261L300,261" style="fill:none;stroke:white;stroke-width:6px;"/>
+        <g transform="matrix(1,0,0,1.01562,0,-4.07812)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:5.95px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,16.5,0)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:6px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.953125,32.5,12.2344)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:6.14px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.109375,-111.5,232.453)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:8.43px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.890625,48.5,28.5469)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:6.34px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.203125,-95.5,207.984)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:8.32px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.765625,64.5,61.1719)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:6.74px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.359375,-79.5,167.203)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:7.99px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.609375,80.5,101.953)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:7.25px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.546875,-63.5,118.266)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:7.44px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.421875,96.5,150.891)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:7.82px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.671875,-47.5,85.6406)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:7.04px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.265625,112.5,191.672)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:8.2px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.796875,-31.5,53.0156)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:6.64px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.132812,128.5,226.336)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:8.41px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+        <g transform="matrix(1,0,0,0.921875,-15.5,20.3906)">
+            <rect x="162" y="69" width="6" height="192" style="fill:rgb(235,235,235);stroke:white;stroke-width:6.24px;stroke-linecap:square;stroke-linejoin:miter;"/>
+        </g>
+    </g>
+</svg>
