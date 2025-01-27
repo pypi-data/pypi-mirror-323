@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+topsis/__init__.py
+topsis_adityapandey_102217092.egg-info/PKG-INFO
+topsis_adityapandey_102217092.egg-info/SOURCES.txt
+topsis_adityapandey_102217092.egg-info/dependency_links.txt
+topsis_adityapandey_102217092.egg-info/requires.txt
+topsis_adityapandey_102217092.egg-info/top_level.txt
