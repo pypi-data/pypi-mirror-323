@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+domain_analysis_reporter/__init__.py
+domain_analysis_reporter/script.py
+domain_analysis_reporter/website_analysis.py
+domain_analysis_reporter.egg-info/PKG-INFO
+domain_analysis_reporter.egg-info/SOURCES.txt
+domain_analysis_reporter.egg-info/dependency_links.txt
+domain_analysis_reporter.egg-info/entry_points.txt
+domain_analysis_reporter.egg-info/requires.txt
+domain_analysis_reporter.egg-info/top_level.txt
