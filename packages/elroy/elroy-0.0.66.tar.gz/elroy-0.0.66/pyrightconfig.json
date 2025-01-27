@@ -1,0 +1,9 @@
+{
+    "python.analysis.typeCheckingMode": "standard",
+    "include": ["elroy"],
+    "executionEnvironments": [
+        {
+            "root": "elroy"
+        }
+    ]
+}
