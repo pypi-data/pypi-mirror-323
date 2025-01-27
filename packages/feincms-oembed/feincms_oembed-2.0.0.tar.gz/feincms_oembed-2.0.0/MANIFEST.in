@@ -1,0 +1,5 @@
+include MANIFEST.in
+include README.rst
+recursive-include feincms_oembed/static *
+recursive-include feincms_oembed/locale *
+recursive-include feincms_oembed/templates *

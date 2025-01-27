@@ -1,0 +1,4 @@
+
+[tests]
+coverage
+feincms>=22.0

@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: feincms-oembed
+Version: 2.0.0
+Summary: OEmbed anything.
+Home-page: https://github.com/feincms/feincms-oembed/
+Author: FEINHEIT GmbH
+Author-email: dev@feinheit.ch
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+License-File: LICENSE
+Provides-Extra: tests
+Requires-Dist: coverage; extra == "tests"
+Requires-Dist: feincms>=22.0; extra == "tests"
