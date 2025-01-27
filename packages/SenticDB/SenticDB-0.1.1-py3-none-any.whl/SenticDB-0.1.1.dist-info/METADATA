@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: SenticDB
+Version: 0.1.1
+Summary: A lightweight SenticDB connector for Python 3.x
+Home-page: https://github.com/Sentic/SenticDB
+Author: Sentic
+Author-email: senticsoftware@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pymongo>=4.0
+
+# SenticDB
+
+SenticDB, Python 3.7 ve Ã¼stÃ¼ sÃ¼rÃ¼mlerle uyumlu MongoDB baÄŸlantÄ± modÃ¼lÃ¼dÃ¼r. Basit bir `connect` fonksiyonu saÄŸlar.
+
+## Kurulum
+
+SenticDB'yi yÃ¼klemek iÃ§in:
+
+```bash
+pip install SenticDB
