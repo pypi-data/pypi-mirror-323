@@ -1,0 +1,62 @@
+Metadata-Version: 2.2
+Name: maybankforme
+Version: 1.4.0
+Summary: This projects converts maybank credit card statement pdf files to a single csv file that allows to be ingestable in other workflow.
+Author-email: Zharif Zakaria <z@zhrif.com>
+License: MIT
+Project-URL: Homepage, https://github.com/zhrif/maybankforme
+Project-URL: Documentation, https://github.com/zhrif/maybankforme/tree/main#maybankforme
+Project-URL: Repository, https://github.com/zhrif/maybankforme
+Project-URL: Changelog, https://github.com/zhrif/maybankforme/releases
+Keywords: cli,tool
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pypdf
+Requires-Dist: cryptography>=3.1
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: black>=23.3.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest-cov>=4.0.0; extra == "test"
+Requires-Dist: tox>=4.0.0; extra == "test"
+
+# maybankforme
+This projects converts maybank credit card statement pdf files to a single csv file that allows to be ingestable in other workflow.
+
+# Usage
+
+## Python module
+
+TBD
+
+## Docker (Recommended)
+
+```bash
+docker run zhrif/maybankforme -h
+usage: maybankforme [-h] [--password PASSWORD]
+                    [--dataset_folder DATASET_FOLDER]
+                    input_folder output_file
+
+positional arguments:
+  input_folder          Folder containing pdf files
+  output_file           csv file to save transactions
+
+options:
+  -h, --help            show this help message and exit
+  --password PASSWORD   Password to open pdf files
+  --dataset_folder DATASET_FOLDER
+                        Folder containing dataset
+```
+
+```bash
+docker pull ghcr.io/zhrif/maybankforme
+docker run -v dataset:/dataset ghcr.io/zhrif/maybankforme /dataset/pdf /dataset/Output.csv --password=<REDACTED> --dataset_folder /dataset
+```
