@@ -1,0 +1,2 @@
+[console_scripts]
+ergup = ergup.__init__:main
