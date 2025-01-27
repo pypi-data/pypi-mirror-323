@@ -1,0 +1,17 @@
+tldr_download/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tldr_download/tldr_download.py,sha256=dSR_RAiBd8eumej7i84T3QXLax_ED89B5ALGi0GsVZI,2006
+tldr_download/tldr_endpoint.py,sha256=degOiDa8y4BPzTN6Bv1rRyb0kDoa0eBC0DUBfZCm0o0,5808
+tldr_download/tldr_status.py,sha256=U484LcyO3wKXj1y4Fcdlm88P3A495mOBWXgOjfc8ntI,796
+tldr_download/tldr_submit.py,sha256=D7XbWIREo85R6c7aR9K72n_Dq5yzY8yIkcqaMQPhUQE,6822
+tldr_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tldr_tools/tldr_download.py,sha256=Kck2Lti-KvwBUSyzqGudgRUGPpUgI3PQ5wFFlHZTfUo,2017
+tldr_tools/tldr_endpoint.py,sha256=pWJzXDCsFYmg5VtTAkxO7kvZ14-T_yfOkCNkiEtNclU,5857
+tldr_tools/tldr_setup.py,sha256=xUBjBY5Apk023m4FPvzB66MBED-zo2O_iSmV7x62wpI,1658
+tldr_tools/tldr_status.py,sha256=jSMIIBX_jzZniNSkTDG5PeOfcnd4vS4i_zCnrVqNPdY,807
+tldr_tools/tldr_submit.py,sha256=onm9SlfbLdfJU1FBGCYB-CX4v2cxcZS5hAGPS0vc6sc,6833
+tldr_tools-0.1.3.dist-info/LICENSE,sha256=ghfXNGtnMm49f1F4SBlyn43HrcWsbA9V1oYmQYsT81w,1065
+tldr_tools-0.1.3.dist-info/METADATA,sha256=ri738-ZFkNpG9jdUvCxnBzqe3UHfr-LZg3PYAECN1-M,2291
+tldr_tools-0.1.3.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+tldr_tools-0.1.3.dist-info/entry_points.txt,sha256=78_HxvXnHv46mY2F4OD1DGurXeMXyTqElEWmCFJEtXg,148
+tldr_tools-0.1.3.dist-info/top_level.txt,sha256=_92KiuDMQMRr1F2lkw61yqVYHdaNOPjvsfIVTBnS_PU,11
+tldr_tools-0.1.3.dist-info/RECORD,,
