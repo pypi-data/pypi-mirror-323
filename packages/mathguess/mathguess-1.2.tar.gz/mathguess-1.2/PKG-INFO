@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: mathguess
+Version: 1.2
+Summary: generates random multiplication numbers
+Home-page: https://github.com/yourusername/my_program
+Author: Adrian
+Author-email: openbioscience@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
