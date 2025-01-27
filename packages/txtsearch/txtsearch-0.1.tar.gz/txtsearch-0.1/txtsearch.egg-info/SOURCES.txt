@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+txtsearch/__init__.py
+txtsearch/main.py
+txtsearch.egg-info/PKG-INFO
+txtsearch.egg-info/SOURCES.txt
+txtsearch.egg-info/dependency_links.txt
+txtsearch.egg-info/requires.txt
+txtsearch.egg-info/top_level.txt
