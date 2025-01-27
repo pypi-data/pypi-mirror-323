@@ -1,0 +1,37 @@
+name: Publish Python Package
+
+on:
+    push:
+        tags:
+            - "v*.*.*-upload*"
+
+jobs:
+    build-and-publish:
+        runs-on: ubuntu-latest
+        environment: Pypi-Update
+
+        steps:
+            -   name: Checkout repository
+                uses: actions/checkout@v3
+
+            -   name: Set up Python
+                uses: actions/setup-python@v4
+                with:
+                    python-version: '3.12.4'
+
+            -   name: Install dependencies
+                run: |
+                    python -m pip install --upgrade pip
+                    pip install hatch twine
+
+            -   name: Build package
+                run: |
+                    hatch version patch
+                    hatch build
+
+            -   name: Publish package
+                env:
+                    TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+                    TWINE_USERNAME: __token__
+                run: |
+                    twine upload ./dist/*
