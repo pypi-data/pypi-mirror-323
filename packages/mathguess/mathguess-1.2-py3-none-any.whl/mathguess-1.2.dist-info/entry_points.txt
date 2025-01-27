@@ -1,0 +1,3 @@
+[console_scripts]
+mathguess = mathguess.main:main
+
