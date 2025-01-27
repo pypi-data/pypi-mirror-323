@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: inspectpd
+Version: 0.1.0
+Summary: inspectpd: Inspection, Comparison and Visualisation of Data Frames
+Home-page: http://github.com/alastairrushworth/inspectpd
+Author: Alastair Rushworth
+Author-email: alastairmrushworth@gmail.com
+License: MIT
+License-File: LICENSE.txt

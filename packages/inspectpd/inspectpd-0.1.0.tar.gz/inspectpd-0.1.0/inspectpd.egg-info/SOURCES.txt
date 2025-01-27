@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+inspectpd/__init__.py
+inspectpd.egg-info/PKG-INFO
+inspectpd.egg-info/SOURCES.txt
+inspectpd.egg-info/dependency_links.txt
+inspectpd.egg-info/not-zip-safe
+inspectpd.egg-info/requires.txt
+inspectpd.egg-info/top_level.txt
