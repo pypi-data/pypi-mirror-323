@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+MySqlWebApp.egg-info/PKG-INFO
+MySqlWebApp.egg-info/SOURCES.txt
+MySqlWebApp.egg-info/dependency_links.txt
+MySqlWebApp.egg-info/requires.txt
+MySqlWebApp.egg-info/top_level.txt
+MySqlWebApp/templates/config_mysql.html
+MySqlWebApp/templates/home.html
+MysqlWebApp/MysqlApplication.py
+MysqlWebApp/__init__.py
