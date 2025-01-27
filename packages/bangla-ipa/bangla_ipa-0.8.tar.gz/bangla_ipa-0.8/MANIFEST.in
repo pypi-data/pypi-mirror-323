@@ -1,0 +1,4 @@
+include requirements.txt
+include README.md
+include LICENSE
+recursive-include your_module_name/data *.csv *.pkl
