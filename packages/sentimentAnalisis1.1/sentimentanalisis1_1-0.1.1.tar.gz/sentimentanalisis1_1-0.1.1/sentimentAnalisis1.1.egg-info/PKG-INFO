@@ -1,0 +1,49 @@
+Metadata-Version: 2.2
+Name: sentimentAnalisis1.1
+Version: 0.1.1
+Summary: Library untuk analisis sentimen menggunakan SVM dan TF-IDF
+Home-page: https://github.com/SandyNugraha6/sentimentAnalyzer
+Author: Ardyva Sandy Nugraha
+Author-email: sandysan.asn2003@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: imbalanced-learn
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Sentiment Analysis Library
+
+Library untuk analisis sentimen menggunakan SVM dan TF-IDF.
+
+## Instalasi
+
+pip install sentimentAnalisis
+
+## Penggunaan
+
+from sentimentAnalisis.main import main
+
+main()
+
+## Kontribusi
+
+Silakan buka isu atau pull request di [GitHub](https://github.com/nama_anda/sentimentAnalyzer).
+
+## Lisensi
+
+[MIT](LICENSE)

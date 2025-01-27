@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+sentimentAnalisis/__init__.py
+sentimentAnalisis/main.py
+sentimentAnalisis1.1.egg-info/PKG-INFO
+sentimentAnalisis1.1.egg-info/SOURCES.txt
+sentimentAnalisis1.1.egg-info/dependency_links.txt
+sentimentAnalisis1.1.egg-info/requires.txt
+sentimentAnalisis1.1.egg-info/top_level.txt
+tests/test_main.py
