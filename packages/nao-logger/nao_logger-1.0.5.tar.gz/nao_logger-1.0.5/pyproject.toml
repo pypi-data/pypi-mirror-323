@@ -1,0 +1,9 @@
+[project]
+name = "nao_logger"
+version = "1.0.5"
+description = "A logger for nao's use."
+readme = "README.md"
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/XMENTROPY/nao_logger"
