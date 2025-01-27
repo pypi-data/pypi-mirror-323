@@ -1,0 +1,5 @@
+[console_scripts]
+vid-mng = vid_mng.vid_mng:main
+
+[gui_scripts]
+
