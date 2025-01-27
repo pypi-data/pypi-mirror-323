@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+edmartzholamundoplayer/__init__.py
+edmartzholamundoplayer/lala.py
+edmartzholamundoplayer/player.py
+edmartzholamundoplayer.egg-info/PKG-INFO
+edmartzholamundoplayer.egg-info/SOURCES.txt
+edmartzholamundoplayer.egg-info/dependency_links.txt
+edmartzholamundoplayer.egg-info/top_level.txt
