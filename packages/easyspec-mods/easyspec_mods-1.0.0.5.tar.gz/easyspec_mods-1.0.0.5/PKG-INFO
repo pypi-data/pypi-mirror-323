@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: easyspec-mods
+Version: 1.0.0.5
+Summary: The easiest way to do long-slit spectroscopy.
+Project-URL: Homepage, https://github.com/ranieremenezes/easyspec
+Project-URL: Issues, https://github.com/ranieremenezes/easyspec
+Author-email: Raniere de Menezes <raniere.m.menezes@gmail.com>
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
