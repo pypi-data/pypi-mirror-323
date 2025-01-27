@@ -1,0 +1,16 @@
+GDV_feature_shows/__init__.py,sha256=Bl-x1n7NSxCwZMKlHmU_nm5YKR4YtXO8yH8nAL3I134,39
+GDV_feature_shows/api_client.py,sha256=xsTzx8t9qr4BtIKpDXHIv8kd_8Pm-EWm6Yg4UjNpA-A,4551
+GDV_feature_shows/excel_forming_logic.py,sha256=HSzO7xxzZEBNiKR7iT8VNQHVUHL4_vLwESDH3mfd7o8,7272
+GDV_feature_shows/feature_extraction.py,sha256=wHLVfn0vC_EdSgq56pAXCq7xXn-PzQ5VtYqDAIhfVXE,31058
+GDV_feature_shows/interface_gradio.py,sha256=nYzBewnHgsUpZrSginILfOANt74LncU1Cfvlz8xgLa4,9251
+GDV_feature_shows/main.py,sha256=4ff9WHf0WpKqZs6DfV47ry_ZfblcBRdzO4SWxZeCSxU,1538
+GDV_feature_shows/name_volume.py,sha256=ZlZFUYm-leLJkCQ6DoAhf7wdX5QQ4dzxL33AWQlJtE0,4986
+GDV_feature_shows/parsing.py,sha256=HDePjHJS8-0-JXQU9tfQ7248vguiOmAK4BayN3ljT_A,543
+GDV_feature_shows/process.py,sha256=VimEy6LUwjxvYswVyVIMzjieNGsZkAJUNVZv2h--QOQ,19751
+GDV_feature_shows/resource_manager.py,sha256=ZfmLy1-n7YejnbjxTbHT-iHwqDYZYOvIVmTJosOur7w,566
+GDV_feature_shows/settings_handler.py,sha256=bJ10JnKhbsM2fFtixF9D-vrgscRfV-ALXWVltqZDgiw,2942
+GDV_feature_shows-0.2.0.dist-info/METADATA,sha256=EjO4c3f_Fr1aVwpcSXEvPtoNTGPyJZCqs3WxwrsiyXU,633
+GDV_feature_shows-0.2.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+GDV_feature_shows-0.2.0.dist-info/entry_points.txt,sha256=ZHTcLssBBAloGR1ZyDXhPLZDsoHrCvioSMNs5RriZGA,66
+GDV_feature_shows-0.2.0.dist-info/top_level.txt,sha256=99NYYZHxO33CBCoNI0asfD2JfFSede96lWRrT6W2GiY,18
+GDV_feature_shows-0.2.0.dist-info/RECORD,,
