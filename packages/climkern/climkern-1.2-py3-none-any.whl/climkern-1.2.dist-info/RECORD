@@ -1,0 +1,12 @@
+climkern/__init__.py,sha256=CFvCQdLmWnU1cpNkLXGNvJoZXrsfTwJLoMEC6dbyJrA,660
+climkern/__main__.py,sha256=ofJ0p4NMhM94FKYNe7fGndUvNAl_YCQHu4jEVrAYX2k,497
+climkern/download.py,sha256=3GchWX2w3gIimA20r0aUkbHNxklce8RYgi2NQ62ApWY,596
+climkern/frontend.py,sha256=fhaYIB7ImayGq0USnUghxIZEE41DveKQGmn-yBE7Ap4,51672
+climkern/util.py,sha256=fth4xjk-HAnb5VSS2ieEI1qYV6cQ9cQzt6YCIdq5Z5k,9434
+climkern/tests/conftest.py,sha256=fDhaFPy6_bLpoMTvuONGKqTSCwXsu9pLQB71QAv6sIQ,433
+climkern/tests/test_frontend.py,sha256=TQQdxLxyQz8eaPbduo5bIRrQvgpV0E5hyZ-ViC9sfxE,1215
+climkern-1.2.dist-info/LICENSE,sha256=omQaR4dgUUvDhTc289J-khA9dn1Fe5s8ynvsn98LdJ8,1067
+climkern-1.2.dist-info/METADATA,sha256=cULYlm5QGOOF2oTAmQt43r7pJxcEB6rY5S1KUijWUwY,9723
+climkern-1.2.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+climkern-1.2.dist-info/top_level.txt,sha256=HzwgizQanpvKJSx6fShuQGWUYtHSMTC0ORXD2RCD9cQ,9
+climkern-1.2.dist-info/RECORD,,
