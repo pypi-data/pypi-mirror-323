@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: NEIST-APG1
+Version: 0.1
+Summary: A package for loading DNN models DNN_MS_NEIST_APG1 and DNN_NEIST_APG1
+Home-page: 
+Author: Amit Kumar Pathak
+Author-email: arjunpthk@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow
+
+# NEIST_APG1
+
+This package includes the `DNN_MS_NEIST_APG1` and `DNN_NEIST_APG1` models.
+
+## Installation
+
+```bash
+pip install .
