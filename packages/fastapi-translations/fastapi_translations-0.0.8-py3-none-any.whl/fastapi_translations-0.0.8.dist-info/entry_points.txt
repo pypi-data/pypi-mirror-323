@@ -1,0 +1,2 @@
+[console_scripts]
+fastapi_translations = fastapi_translations.cli:main
