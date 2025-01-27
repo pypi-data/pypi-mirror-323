@@ -1,0 +1,12 @@
+catboost
+xgboost
+lightgbm
+optuna
+scikit-learn
+numpy
+pandas
+SQLAlchemy
+timeout-decorator
+
+[shap]
+shap
