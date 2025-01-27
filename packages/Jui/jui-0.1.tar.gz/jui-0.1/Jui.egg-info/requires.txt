@@ -1,0 +1,4 @@
+Pillow
+
+[email_support]
+smtplib
