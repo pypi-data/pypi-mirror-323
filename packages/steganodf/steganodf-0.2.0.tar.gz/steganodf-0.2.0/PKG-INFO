@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: steganodf
+Version: 0.2.0
+Summary: A library for hiding a secret message on tabulated data
+Author-email: Sacha Schutz <sacha.schutz@pm.me>
+Requires-Dist: polars
+Requires-Dist: reedsolo
+Provides-Extra: dev
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: numpy; extra == 'dev'
+Requires-Dist: pandas; extra == 'dev'
+Requires-Dist: pyarrow; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
