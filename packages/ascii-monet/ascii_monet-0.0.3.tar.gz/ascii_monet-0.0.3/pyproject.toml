@@ -1,0 +1,31 @@
+[build-system]
+requires = [
+    "hatchling"
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages=["src/ascii_monet"]
+
+[project]
+name = "ascii-monet"
+version = "0.0.3"
+authors = [{ name="Matt Stirling", email="stirlingmattmarkus@gmail.com" }]
+description = "A CLI utility for turning images into colored ascii art in the terminal!"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+dependencies = [ "pillow" ]
+
+[project.scripts]
+ascii-monet = "ascii_monet.cli:main"
+
+
+[project.urls]
+Homepage = "https://github.com/MattThePerson/ascii-monet"
+Changelog = "https://github.com/MattThePerson/ascii-monet/blob/main/CHANGELOG.md"
