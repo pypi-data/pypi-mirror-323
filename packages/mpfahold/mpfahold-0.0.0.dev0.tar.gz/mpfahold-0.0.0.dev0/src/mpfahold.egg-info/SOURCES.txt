@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/mpfahold/__init__.py
+src/mpfahold/__main__.py
+src/mpfahold.egg-info/PKG-INFO
+src/mpfahold.egg-info/SOURCES.txt
+src/mpfahold.egg-info/dependency_links.txt
+src/mpfahold.egg-info/top_level.txt
+src/mpfahold/core/__init__.py
+src/mpfahold/tests/__init__.py
+src/mpfahold/tests/test_1984.py
