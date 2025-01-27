@@ -1,0 +1,8 @@
+cvx/finance/Finance.py,sha256=VKwq2GxlvHBi-2qv6vywQ3cEHPtg17UqmH2RGt3kh3o,3371
+cvx/finance/__init__.py,sha256=rhphQoHkvyL9kmrvBcxLkUJw5a03yvkov1o_TEpppqc,582
+cvx/finance/cvxRegression.py,sha256=hmSXJ193oI50Iu3Kc3ZwZzWqnUWM68zCDxKOr5Zk3hY,1648
+cvx/finance/util.py,sha256=MaJTdGAoZ-b2-PAjTIcXuX7TPx52kTZXhSYqn2K8HMo,928
+cvxfin-0.0.10.dist-info/METADATA,sha256=2WYr6SzcjA_cm_s2n1NPytbZYk2Rr1EcedCDUCmb3iY,12813
+cvxfin-0.0.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cvxfin-0.0.10.dist-info/licenses/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+cvxfin-0.0.10.dist-info/RECORD,,
