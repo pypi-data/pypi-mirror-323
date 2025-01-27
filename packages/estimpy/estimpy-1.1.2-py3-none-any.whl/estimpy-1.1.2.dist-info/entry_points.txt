@@ -1,0 +1,3 @@
+[console_scripts]
+estimpy-player = estimpy.cli_player:main
+estimpy-visualizer = estimpy.cli_visualizer:main
