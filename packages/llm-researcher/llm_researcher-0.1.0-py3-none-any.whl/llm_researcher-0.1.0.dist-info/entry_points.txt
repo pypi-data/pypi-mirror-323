@@ -1,0 +1,5 @@
+[console_scripts]
+llm-jina-research = llm_jina_research:main
+
+[llm]
+jina_research = llm_jina_research
