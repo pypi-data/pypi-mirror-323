@@ -1,0 +1,17 @@
+[package]
+name = "rustme"
+version = "0.1.35"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+name = "rustme_rust"  # Renamed from "rustme" to "rustme_rust"
+
+[dependencies]
+pyo3 = { version = "0.18", features = ["extension-module"] }
+numpy = "0.18"
+ndarray = { version = "0.15", features = ["blas"] }
+statrs = "0.16"
+
+[dev-dependencies]
+# optional dev deps

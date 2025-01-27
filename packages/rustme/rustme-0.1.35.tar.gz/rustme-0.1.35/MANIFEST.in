@@ -1,0 +1,2 @@
+include rustme/*.py
+include README.md
