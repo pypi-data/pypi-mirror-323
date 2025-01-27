@@ -1,0 +1,9 @@
+README.md
+setup.py
+zimbabwean_id_number_validator/__init__.py
+zimbabwean_id_number_validator/constants.py
+zimbabwean_id_number_validator/validator.py
+zimbabwean_id_number_validator.egg-info/PKG-INFO
+zimbabwean_id_number_validator.egg-info/SOURCES.txt
+zimbabwean_id_number_validator.egg-info/dependency_links.txt
+zimbabwean_id_number_validator.egg-info/top_level.txt
