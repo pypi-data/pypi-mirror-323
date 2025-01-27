@@ -1,0 +1,38 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools>=61.0",
+]
+
+[project]
+authors = [
+    { email = "johannes-programming@mailfence.com", name = "Johannes" },
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Typing :: Typed",
+]
+dependencies = [
+    "Bio>=1.7.1",
+]
+description = "This project provides classes for the storing of FASTA data."
+keywords = []
+name = "fastahold"
+readme = "README.rst"
+requires-python = ">=3.8"
+version = "0.0.1.dev0"
+
+[project.license]
+file = "LICENSE.txt"
+
+[project.urls]
+Download = "https://pypi.org/project/fastahold/#files"
+Index = "https://pypi.org/project/fastahold/"
+Source = "https://github.com/johannes-programming/fastahold/"
+Website = "https://fastahold.johannes-programming.online/"
