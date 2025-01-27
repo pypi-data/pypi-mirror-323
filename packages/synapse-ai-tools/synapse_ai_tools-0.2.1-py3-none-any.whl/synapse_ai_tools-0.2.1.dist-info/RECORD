@@ -1,0 +1,8 @@
+synapse_ai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+synapse_ai/mel_spectrograms.py,sha256=ghQ05pWtXTnYZqDIBxAM3UIPACUBf1Ze6FVpmiT_Z2w,2826
+synapse_ai/phonemes.py,sha256=ND95BvT16ZnsctaFkzt7h9LG3E1dYeqjTshzjGpO3L0,19570
+synapse_ai_tools-0.2.1.dist-info/LICENSE,sha256=tebx1xjB_fudH8uLnRPHd0vPSEnJOjHHB8zKn19KhAY,1090
+synapse_ai_tools-0.2.1.dist-info/METADATA,sha256=syMZuB5K5V_3IMK4lFMBTvlA17NmeP-7t4AIQX0_mKA,1589
+synapse_ai_tools-0.2.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+synapse_ai_tools-0.2.1.dist-info/top_level.txt,sha256=Llt-N_zRZ9L-XtgaWDAavFhWiYQjBe8eDf6aahHwlDo,11
+synapse_ai_tools-0.2.1.dist-info/RECORD,,
