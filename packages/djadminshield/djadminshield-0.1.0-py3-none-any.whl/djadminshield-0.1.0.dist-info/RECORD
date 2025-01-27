@@ -1,0 +1,17 @@
+djadminshield/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djadminshield/admin.py,sha256=vHh_BkzMveEZvQ15rLEMPs5eoZ-myf2p-bILFOgXxU4,346
+djadminshield/asgi.py,sha256=gtKjmghkfsnyMqK-NwDEgfd1_6yTcnAc4tkZBRow7YU,419
+djadminshield/models.py,sha256=OYJcYdHBlTmi7QpmS2A07_YI9qqJ_yhBI8DgMzDnUt4,778
+djadminshield/settings.py,sha256=kMk4bw_w9rnvUbt2rhvrROgXgWD4tbJIb64BH2SdhoA,3387
+djadminshield/urls.py,sha256=Dgw50hmCJYCNyOp6Mn0AOY6u7U4Dxw1dGJTvdknTJO4,899
+djadminshield/views.py,sha256=wtXrbIxGpuPHgFDDNZ1thsDD0HMCHfNHxfHTHIL0t-0,4107
+djadminshield/wsgi.py,sha256=kMKH-c4KdN3lYcF4Hw4L8N6EtcFndzDy0SK3tfW4gvs,419
+djadminshield/migrations/0001_initial.py,sha256=w07XmT3VC19kU0rmx5xUj0pvLQccmJNGuY1BL7nbXLo,1149
+djadminshield/migrations/0002_unauthorizedaccessattempt_description.py,sha256=f7Da0FhwHr_JTAkoc4PRp9GM4tpHO3OAnfObts_du_Q,429
+djadminshield/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djadminshield/templates/djadminshield/admin/login.html,sha256=5bBS3o-Pf2rJoWOXYrtbbOhRyKrpFza-2sONaG1bbQc,1967
+djadminshield-0.1.0.dist-info/LICENSE,sha256=zl8yBWuZ-DgufuTCCangInw_Wo98V5PNEKHdJhC82mE,1110
+djadminshield-0.1.0.dist-info/METADATA,sha256=mINcatf8amgwiZ4VjFNcnjnaUVIbnwPweuLxssmCloQ,3268
+djadminshield-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+djadminshield-0.1.0.dist-info/top_level.txt,sha256=MIDZl7l2uvywuaiSneaMF_N8OKeXJtr4z3B7oQzyvK0,14
+djadminshield-0.1.0.dist-info/RECORD,,
