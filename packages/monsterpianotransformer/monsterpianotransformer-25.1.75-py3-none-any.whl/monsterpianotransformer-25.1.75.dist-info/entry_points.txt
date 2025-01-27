@@ -1,0 +1,2 @@
+[console_scripts]
+monsterpianotransformer-gradio = monsterpianotransformer.gradio.__main__:main
