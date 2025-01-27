@@ -1,0 +1,14 @@
+mavisim/__init__.py,sha256=SjnJOdj6HI6ws1RVplSIedCb5gipkTquyzSGPCzycXU,588
+mavisim/__main__.py,sha256=03wrmucOjb9tJ2K6DJaf5JFc895P-0Y9xAQ2_JCc0Sk,5394
+mavisim/astromsim.py,sha256=foEfQrIsjRthSdV317M7omQtfvFUIF4wBSLd8NwQlPs,25836
+mavisim/generate_image.py,sha256=mTiNcQYdV2y43Krhn1-8DUFgUUaF89geK71J1rdT2lE,14727
+mavisim/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mavisim/source.py,sha256=1bohzT5lqhT_5YXbaaQoSLeYW5iwLMye2gZ4GFx7oPU,11689
+mavisim/util.py,sha256=5cdNJVlCz3epsgyVqQjftSk2gEbW3ajrAmpQtilEXLg,8165
+mavisim/wrapper_for_pyxel.py,sha256=oNotEDt-5rXu1csdmC_Sm7ivHN3wafNdRI00TMQxnPE,2607
+mavisim-1.1.20.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mavisim-1.1.20.dist-info/METADATA,sha256=Lwo97Ixm8jCA1q4X4Zduu76bju11FAdudmrmsaH7T7E,4053
+mavisim-1.1.20.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+mavisim-1.1.20.dist-info/entry_points.txt,sha256=ajWz1RmV28DI4v53Xfgs8r6A7N-g-GOCaedxD13jsjI,50
+mavisim-1.1.20.dist-info/top_level.txt,sha256=bj78u9ivOXFaOA_6NLq0pmqmZyeJIviSImMIMUH6xVQ,8
+mavisim-1.1.20.dist-info/RECORD,,
