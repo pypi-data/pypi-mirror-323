@@ -1,0 +1,4 @@
+exclude publish.sh
+exclude build_fr_address.py
+exclude *.csv
+include src/gridding/utils/fr_dictionary.txt
