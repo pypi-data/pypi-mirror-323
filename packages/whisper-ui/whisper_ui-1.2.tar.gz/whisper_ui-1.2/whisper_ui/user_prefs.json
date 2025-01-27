@@ -1,0 +1,16 @@
+{
+    "output_dir": "C:\\Users\\danie\\OneDrive\\Desktop\\Current\\Whisper UI\\test_outputs1",
+    "model": "tiny.en",
+    "language": "English",
+    "do_translate": false,
+    "text_template": "<<<TEXT>>>",
+    "segmentation_template": "<<<SEG>>>\t<<<START>>>\t<<<END>>>",
+    "text_insertion_symbol": "<<<TEXT>>>",
+    "segment_insertion_symbol": "<<<SEG>>>",
+    "start_time_insertion_symbol": "<<<START>>>",
+    "end_time_insertion_symbol": "<<<END>>>",
+    "do_text": true,
+    "do_segmentation": true,
+    "do_json": true,
+    "DEBUG": false
+}
