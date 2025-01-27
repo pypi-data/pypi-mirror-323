@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pelicandbms"
+version = "0.5.70"
+authors = [
+  { name="Dmitry Vorontsov", email="dv1555@hotmail.com" },
+]
+description = "Ultrafast binary JSON-oriented NoSQL"
+readme = "README.RST"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "filelock"
+]
+
+
+[project.urls]
