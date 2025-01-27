@@ -1,0 +1,34 @@
+Metadata-Version: 2.3
+Name: aibaba_ai_cli
+Version: 0.0.38
+Summary: CLI for interacting with Aibaba AI
+License: MIT
+Author: Erick Friis
+Author-email: erick@langchain.dev
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: serve
+Requires-Dist: aibaba_ai_api[all] (>=0.3.1)
+Requires-Dist: gitpython (>=3,<4)
+Requires-Dist: gritql (>=0.2.0,<0.3.0)
+Requires-Dist: tomlkit (>=0.12)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Requires-Dist: uvicorn (>=0.23,<1.0)
+Project-URL: Repository, https://github.com/aibaba-ai/aibaba-ai
+Project-URL: Release Notes, https://github.com/aibaba-ai/aibaba-ai/releases?q=tag%3A%22aibaba_ai_cli%3D%3D0%22&expanded=true
+Project-URL: Source Code, https://github.com/aibaba-ai/aibaba-ai/tree/master/libs/cli
+Description-Content-Type: text/markdown
+
+# langchain-cli
+
+This package implements the official CLI for Aibaba AI. Right now, it is most useful
+for getting started with Aibaba AI Templates!
+
+[CLI Docs](https://github.com/aibaba-ai/aibaba-ai/blob/master/libs/cli/DOCS.md)
+
