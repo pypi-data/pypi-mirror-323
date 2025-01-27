@@ -1,0 +1,8 @@
+dalmatian/__init__.py,sha256=56FnG4TlZkgc07QpUuU8q7lbuwdE_VPEY4QtE-_iq6g,121
+dalmatian/core.py,sha256=VHVm96nQVUfVmvAGvc5jcV-TcEqte93U8cCBJT_8z2Q,40420
+dalmatian/schema.py,sha256=0zmYv5F487aO7PO6fPYOH3vAKy1fHUwMEqW9HBeomD4,4815
+dalmatian/wmanager.py,sha256=IlCMCANB3u3AWJ24Umkmfb-MVe_mA-p9LqNxzmeDgqo,100726
+firecloud_dalmatian-0.0.20.dist-info/METADATA,sha256=zPZ8-nsLIbip_5l1YTkPSKQx1haN7xI1ULCvd6G4xiM,5174
+firecloud_dalmatian-0.0.20.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+firecloud_dalmatian-0.0.20.dist-info/top_level.txt,sha256=256y2mFQ0uezKVDJaXNVztAFdUYcWEEnWX5-I6TOJ2c,10
+firecloud_dalmatian-0.0.20.dist-info/RECORD,,
