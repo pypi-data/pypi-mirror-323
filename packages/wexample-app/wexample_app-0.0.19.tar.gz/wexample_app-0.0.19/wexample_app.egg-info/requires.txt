@@ -1,0 +1,9 @@
+pip-tools
+pydantic
+pytest
+python-dotenv
+wexample-filestate==0.0.22
+wexample-helpers-yaml==0.0.21
+wexample-helpers==0.0.22
+wexample-prompt==0.0.21
+wexample-wex-addon-app==0.0.16
