@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "openapi_description_generator"
+version = "3.1.1.0"
+authors = [
+  { name="Michael", email="michael.smith.ok@gmail.com" },
+]
+description = "A framework agnostic library to generate openapi description files"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/smwa/openapi_description_generator"
+Issues = "https://github.com/smwa/openapi_description_generator/issues"

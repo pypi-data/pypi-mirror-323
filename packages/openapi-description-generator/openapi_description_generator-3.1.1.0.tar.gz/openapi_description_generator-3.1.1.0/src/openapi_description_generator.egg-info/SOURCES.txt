@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/openapi_description_generator.egg-info/PKG-INFO
+src/openapi_description_generator.egg-info/SOURCES.txt
+src/openapi_description_generator.egg-info/dependency_links.txt
+src/openapi_description_generator.egg-info/top_level.txt
+src/openapi_description_generator_smwa/__init__.py

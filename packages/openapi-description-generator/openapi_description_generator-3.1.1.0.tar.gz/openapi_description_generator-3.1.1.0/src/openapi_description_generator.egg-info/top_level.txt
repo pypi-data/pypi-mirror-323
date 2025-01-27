@@ -1,0 +1,1 @@
+openapi_description_generator_smwa
