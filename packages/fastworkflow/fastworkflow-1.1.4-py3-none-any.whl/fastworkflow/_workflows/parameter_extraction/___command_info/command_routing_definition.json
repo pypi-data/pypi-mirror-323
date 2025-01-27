@@ -1,0 +1,11 @@
+{
+    "workflow_folderpath": "./fastworkflow/_workflows/parameter_extraction",
+    "map_workitem_paths_2_commandkey_map": {
+        "/parameter_extraction": {
+            "map_command_2_command_key": {
+                "abort": "_commands/abort",
+                "*": "_commands/*"
+            }
+        }
+    }
+}
