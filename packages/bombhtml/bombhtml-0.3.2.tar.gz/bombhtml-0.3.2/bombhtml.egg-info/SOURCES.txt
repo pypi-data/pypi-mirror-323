@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+bombhtml/__init__.py
+bombhtml/bomb.py
+bombhtml.egg-info/PKG-INFO
+bombhtml.egg-info/SOURCES.txt
+bombhtml.egg-info/dependency_links.txt
+bombhtml.egg-info/top_level.txt
