@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+showcount/__init__.py
+showcount.egg-info/PKG-INFO
+showcount.egg-info/SOURCES.txt
+showcount.egg-info/dependency_links.txt
+showcount.egg-info/requires.txt
+showcount.egg-info/top_level.txt

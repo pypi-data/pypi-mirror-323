@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: showcount
+Version: 0.0.1
+Summary: Python package powering showcount.com.
+Home-page: https://github.com/henryrobbins/showcount-python.git
+Author: Henry Robbins
+Author-email: hw.robbins@gmail.com
+License: GNU Affero General Public License v3.0
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-python
+Dynamic: summary
+
+# showcount
