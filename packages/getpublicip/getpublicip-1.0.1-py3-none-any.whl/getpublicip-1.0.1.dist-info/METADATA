@@ -1,0 +1,42 @@
+Metadata-Version: 2.2
+Name: getpublicip
+Version: 1.0.1
+Summary: A package for fetching public ip
+Home-page: https://github.com/jayaramyalla/publicip
+Author: jayaram yalla
+Author-email: jayaram@duck.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: colorama
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# publicip
+
+publicip is a Python package to know your publicip. This package provides tools and utilities to help developers get the publicip.
+
+## Features
+
+- Fetch public IP addresses
+- Perform REST API calls with robust error handling
+
+## Installation
+
+You can install the package using pip:
+
+- ```pip3 install requests```
+- ```pip3 install colorama```
+
+# install the above module before installing
+- ```pip install publicip```
