@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+Topsis_Palak_102216032.egg-info/PKG-INFO
+Topsis_Palak_102216032.egg-info/SOURCES.txt
+Topsis_Palak_102216032.egg-info/dependency_links.txt
+Topsis_Palak_102216032.egg-info/entry_points.txt
+Topsis_Palak_102216032.egg-info/requires.txt
+Topsis_Palak_102216032.egg-info/top_level.txt
+tests/test_topsis.py
+topsis_palak/__init__.py
+topsis_palak/topsis.py
