@@ -1,0 +1,13 @@
+ner_entity_annotator/__init__.py,sha256=9oK-CvThA42UEMCJjZfEYIjVoAlAk4yuueOLuwP0p4M,1631
+ner_entity_annotator/example.py,sha256=oTj-ZjlPCPkat0cqWEXD6a4x2WAvcvPBQPFuNu6smIY,642
+ner_entity_annotator/frontend/build/asset-manifest.json,sha256=AewwZicgyyC2ocmTsBZ5YUgmcpGluxnQhz8A-LeBa_Y,221
+ner_entity_annotator/frontend/build/bootstrap.min.css,sha256=hTwg6axJ8dAPmGVJmYTrsQS3JhKWA0skJ-td54UbEOk,197459
+ner_entity_annotator/frontend/build/index.html,sha256=Mh40xxteKoLfX7jO8m-sy5C54nl58Vv0tJzq3SVb6ws,492
+ner_entity_annotator/frontend/build/static/js/main.e2b65f40.js,sha256=bU9E5isjRLzyy14oRl-gQRDSayKR79lNPfq_GRqh-F0,329386
+ner_entity_annotator/frontend/build/static/js/main.e2b65f40.js.LICENSE.txt,sha256=cmjEMovgjlkZ-Bs7b5rRQ8FsJtL1F77Y3YkM2E9yfUs,1293
+ner_entity_annotator/frontend/build/static/js/main.e2b65f40.js.map,sha256=TTFLKAmGUodcCV3rgwrfRuRXroiX8qsreDoCxL9-gQE,3434324
+ner_entity_annotator-0.0.4.dist-info/LICENSE,sha256=9VDWIUfeWnnobvVpN2KtC5cHaNpAmxhdjyF4LivEPNw,1063
+ner_entity_annotator-0.0.4.dist-info/METADATA,sha256=Yd6voxLFsTgbJ4WsgvaGFdrBSs3sTYjeOAvRwhVVLDA,2382
+ner_entity_annotator-0.0.4.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+ner_entity_annotator-0.0.4.dist-info/top_level.txt,sha256=si3TD57MlZ1bc_OKnVpChxUrmcXCPycgOU146KdBBhg,21
+ner_entity_annotator-0.0.4.dist-info/RECORD,,
