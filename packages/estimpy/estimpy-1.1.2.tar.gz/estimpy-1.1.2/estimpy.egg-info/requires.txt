@@ -1,0 +1,14 @@
+colorama
+flatdict
+matplotlib>=3.7.2
+mutagen
+numpy
+pydub
+pygame
+pyqt6
+pyyaml
+scipy
+tqdm
+
+[:python_version >= "3.13"]
+audioop-lts
