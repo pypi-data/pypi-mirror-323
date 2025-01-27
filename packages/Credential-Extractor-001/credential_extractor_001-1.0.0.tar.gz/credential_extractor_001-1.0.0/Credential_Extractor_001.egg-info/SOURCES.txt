@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Credential_Extractor_001/__init__.py
+Credential_Extractor_001/extractor.py
+Credential_Extractor_001.egg-info/PKG-INFO
+Credential_Extractor_001.egg-info/SOURCES.txt
+Credential_Extractor_001.egg-info/dependency_links.txt
+Credential_Extractor_001.egg-info/requires.txt
+Credential_Extractor_001.egg-info/top_level.txt

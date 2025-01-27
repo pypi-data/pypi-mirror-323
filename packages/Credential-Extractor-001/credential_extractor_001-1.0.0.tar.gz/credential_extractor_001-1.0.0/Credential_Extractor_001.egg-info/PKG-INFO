@@ -1,0 +1,36 @@
+Metadata-Version: 2.2
+Name: Credential_Extractor_001
+Version: 1.0.0
+Summary: A tool to extract email and password pairs from HTML files
+Author: a random dude
+Author-email: jcccadet3175@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bs4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+# Credentials Extractor
+
+A simple Python package to extract email and password pairs from HTML files containing tables.
+
+## Features
+
+- Extracts email-password pairs from HTML tables.
+- Supports extraction from multiple HTML files in a directory.
+- Easy to use and integrate into other projects.
+
+## Installation
+
+You can install the `credentials_extractor` package from PyPI using `pip`:
+
+```bash
+pip install credentials_extractor
