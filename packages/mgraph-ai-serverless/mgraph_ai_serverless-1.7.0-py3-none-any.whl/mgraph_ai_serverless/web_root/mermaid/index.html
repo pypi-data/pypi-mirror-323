@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffffff;
+        }
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+        }
+        .mermaid {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+            graph TD
+                A-->B;
+                A-->C;
+                B-->D;
+                C-->D;
+        </div>
+    </div>
+    <script>
+        mermaid.initialize({
+            startOnLoad : true,
+            theme       : 'default',
+            sequence: {
+                useMaxWidth: false,
+                // width: 800,
+                // height: 600,
+                boxMargin: 10
+            }
+        });
+    </script>
+</body>
+</html>
