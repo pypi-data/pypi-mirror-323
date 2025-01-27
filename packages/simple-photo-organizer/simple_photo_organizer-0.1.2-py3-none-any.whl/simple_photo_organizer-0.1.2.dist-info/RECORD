@@ -1,0 +1,10 @@
+simple_photo_organizer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_photo_organizer/cli.py,sha256=VFy96BY0gI2j-hf7FYpjBSjEQvjapF3R3q42oZgdnsk,450
+simple_photo_organizer/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_photo_organizer/utils/helper_functions.py,sha256=YcC8a9xv97Rc1IipijNAc_QJq71rjP7mzNWHwqoOqx4,10308
+simple_photo_organizer-0.1.2.dist-info/LICENSE,sha256=L8Es1yjiidq7s05tohXJJhpHIhychiks8Zf3gyyx3ws,1067
+simple_photo_organizer-0.1.2.dist-info/METADATA,sha256=EoW7ruY0TT-S2CvstL2O3-i07-HYUPQREDSDTYFObPI,1159
+simple_photo_organizer-0.1.2.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+simple_photo_organizer-0.1.2.dist-info/entry_points.txt,sha256=z_CnaWMUmRhbHbwkP-4h_zs97J7InaKP4mwSA1Gimc4,114
+simple_photo_organizer-0.1.2.dist-info/top_level.txt,sha256=ntPoZJ7aMXGTVHUWIQqFp7kGoeg-1Sq4AL2wYL4__NY,23
+simple_photo_organizer-0.1.2.dist-info/RECORD,,
