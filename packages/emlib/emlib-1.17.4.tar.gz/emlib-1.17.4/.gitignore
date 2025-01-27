@@ -1,0 +1,14 @@
+build/
+dist/
+*.egg*
+__pycache__
+*.pyc
+*.pyo
+*.bak
+old/
+.idea
+.mypy_cache
+*~.*
+.*
+docs/_build
+docs/api
