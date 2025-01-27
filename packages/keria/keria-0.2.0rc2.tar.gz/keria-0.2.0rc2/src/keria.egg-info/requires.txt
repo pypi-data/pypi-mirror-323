@@ -1,0 +1,16 @@
+hio==0.6.14
+keri==1.2.4
+mnemonic==0.21
+multicommand==1.0.0
+falcon==4.0.2
+http_sfv==0.9.9
+dataclasses_json==0.6.7
+apispec==6.8.1
+
+[docs]
+sphinx
+sphinx-rtd-theme
+
+[test]
+pytest
+coverage
