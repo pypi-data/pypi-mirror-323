@@ -1,0 +1,41 @@
+Metadata-Version: 2.2
+Name: checkkar
+Version: 0.1.0
+Summary: A simple library to check if a number is 69
+Home-page: https://github.com/VaibhavMurarka/checkkar
+Author: Vaibhav Murarka
+Author-email: vaibhavmurarka14@gmail.com.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# Checkkar
+
+A simple Python library to check if a number is 69.
+
+## Installation
+
+```
+pip install checkkar
+```
+
+## Usage
+
+```python
+from checkkar import is_69
+
+print(is_69(69))  # True
+print(is_69(42))  # False
+```
+

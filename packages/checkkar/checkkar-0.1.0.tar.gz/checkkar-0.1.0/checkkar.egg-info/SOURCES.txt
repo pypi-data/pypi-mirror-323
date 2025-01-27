@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+checkkar/__init__.py
+checkkar/main.py
+checkkar.egg-info/PKG-INFO
+checkkar.egg-info/SOURCES.txt
+checkkar.egg-info/dependency_links.txt
+checkkar.egg-info/top_level.txt
