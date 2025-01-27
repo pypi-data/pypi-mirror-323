@@ -1,0 +1,9 @@
+topic_autolabel/__init__.py,sha256=-seh7f8MDn8IdzaGv6KNz0iKGFXUtsyii-5OaiOS-Js,2950
+topic_autolabel/core/__init__.py,sha256=tw3RwZ78ph8rM6cK0xeCFNZe-kaVH63C_esIoceEJk4,69
+topic_autolabel/core/data_loader.py,sha256=5pbLc7pSJfDwq5E19vS-gfHNS_eBOnZIsVlvm3QkPaw,568
+topic_autolabel/core/labeler.py,sha256=Japhhh4xIPBphfeIek49AI-qLl82QKDanxZeFByQ0WU,10654
+topic_autolabel-0.1.6.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+topic_autolabel-0.1.6.dist-info/METADATA,sha256=c1lMMpHq0Zkjw-IGGnCJFZkraqZq5C6kGXbajRquAOc,3308
+topic_autolabel-0.1.6.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+topic_autolabel-0.1.6.dist-info/top_level.txt,sha256=yMZJZ_HMu289iDhPhBG7IYlGYxS3JcHkN4vkKDrIrGM,16
+topic_autolabel-0.1.6.dist-info/RECORD,,
