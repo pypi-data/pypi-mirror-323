@@ -1,0 +1,20 @@
+{
+    "project_name": {
+        "default": "fastapi_forge"
+    },
+    "use_postgres": {
+        "default": true
+    },
+    "use_sqlalchemy": {
+        "default": true
+    },
+    "create_daos": {
+        "default": true
+    },
+    "create_routes": {
+        "default": true
+    },
+    "models": {
+        "models": []
+    }
+}
