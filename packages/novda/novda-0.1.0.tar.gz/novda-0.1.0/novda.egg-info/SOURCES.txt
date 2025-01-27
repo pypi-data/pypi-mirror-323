@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+novda.egg-info/PKG-INFO
+novda.egg-info/SOURCES.txt
+novda.egg-info/dependency_links.txt
+novda.egg-info/top_level.txt
