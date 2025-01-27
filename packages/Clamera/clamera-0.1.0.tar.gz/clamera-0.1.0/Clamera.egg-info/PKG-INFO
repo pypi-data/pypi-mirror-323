@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: Clamera
+Version: 0.1.0
+Summary: A versatile 2D camera library for top-down games using Pygame.
+Home-page: https://github.com/ClartTheRoyalAcademyOfArt/Clamera
+Author: Clart
+Author-email: lmk.kadlecek@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: pygame
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

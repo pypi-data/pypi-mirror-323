@@ -1,0 +1,8 @@
+setup.py
+Clamera.egg-info/PKG-INFO
+Clamera.egg-info/SOURCES.txt
+Clamera.egg-info/dependency_links.txt
+Clamera.egg-info/requires.txt
+Clamera.egg-info/top_level.txt
+clamera/__init__.py
+clamera/camera.py
