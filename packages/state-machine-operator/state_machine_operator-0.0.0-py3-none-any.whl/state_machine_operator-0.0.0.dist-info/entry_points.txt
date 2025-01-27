@@ -1,0 +1,2 @@
+[console_scripts]
+state-machine-manager = state_machine_operator.manager:main
