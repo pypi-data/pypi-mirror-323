@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+nordigen_account/__init__.py
+nordigen_account.egg-info/PKG-INFO
+nordigen_account.egg-info/SOURCES.txt
+nordigen_account.egg-info/dependency_links.txt
+nordigen_account.egg-info/requires.txt
+nordigen_account.egg-info/top_level.txt
