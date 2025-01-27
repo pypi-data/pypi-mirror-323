@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: HyperGP
+Version: 0.1.1
+Summary: A high performance heterogeneous parallel GP framework
+Home-page: https://github.com/MZT-srcount/HyperGP
+Author: Zhitong Ma
+Author-email: cszhitongma@mail.scut.edu.cn
+License: BSD-3-Clause
+Keywords: Genetic Programming,GPU Acceleration,Open-Source
+Requires-Python: >=3.9, <=3.13
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: dill
+Requires-Dist: matplotlib
+Requires-Dist: psutil
+Requires-Dist: tqdm
