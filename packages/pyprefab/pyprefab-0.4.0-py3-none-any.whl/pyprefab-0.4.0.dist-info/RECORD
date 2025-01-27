@@ -1,0 +1,20 @@
+pyprefab/__init__.py,sha256=sH32_-e6RpZDLP5JQgYD9bffOAnLioCnvRlGaljvNvI,742
+pyprefab/cli.py,sha256=XxIFvHY7lizJSdGmLpkuFnsRLA4QbbKGa3iohJFWkSk,4315
+pyprefab/templates/.gitignore.j2,sha256=MmMf6dB9Ym1ynRcQmn8fzyGxvxWWTS5SbHMtRBcHju4,3401
+pyprefab/templates/.pre-commit-config.yaml.j2,sha256=OktwJnnwqp9fAOYgQjZle9jzurdZrlo-sPnKyDOMocs,565
+pyprefab/templates/CHANGELOG.md.j2,sha256=0hZtjmzA_zp5xkf84bwW4SBCBpkyTNsVg0_6hG5RbXo,213
+pyprefab/templates/CONTRIBUTING.md.j2,sha256=Mt4Ck5HE9dF0DUmc2Nhu7LvTfJfZOHwRxjSfMWmWKN8,4640
+pyprefab/templates/README.md.j2,sha256=uA5d6v2hWisGuIrt3p2yPISqQ5eJZspSNEJlK-Ypal0,40
+pyprefab/templates/pyproject.toml.j2,sha256=UZp-sE92xRylaOeBJpNhbVldAdY8uNkqBquPU9MEh6c,1016
+pyprefab/templates/.github/workflows/ci.yaml.j2,sha256=Sfk-OgU883kmNii-XHYBAjV5m0K2B7AxjSBhjid8aag,2727
+pyprefab/templates/.github/workflows/publish-pypi-test.yaml.j2,sha256=mWRYK2qV-VckbEhwcZdE9iYs1ET5ka43VcrQpifOPPY,2228
+pyprefab/templates/.github/workflows/publish-pypi.yaml.j2,sha256=1R7hI-HfDYNU7LBTe6nhmmifU2U9exUFmdr_snyW3GE,3507
+pyprefab/templates/src/{{ project_name }}/__init__.py.j2,sha256=t_iEGrRKo0-hXgVSi2B4D2BLRuCGp-0kGS9NB1kkK4E,752
+pyprefab/templates/src/{{ project_name }}/app.py.j2,sha256=ICwQhflBqUJCY98iPhq110e-44ZsBDR2sATZNqiXT7s,195
+pyprefab/templates/test/test_app.py,sha256=DeQoCDWzgFy3qqkKHxYNJV2_O288UWLvbzsEu1p-sGs,90
+pyprefab-0.4.0.dist-info/LICENSE,sha256=Is9RG0xG5jLBaEjfwOYJvkwUYhH7SYdNKaIHtwwk8hk,1068
+pyprefab-0.4.0.dist-info/METADATA,sha256=pvYQ3hb3LirVmQqiiR9ySdgzxsHIIgD92lJTYElq8b0,6751
+pyprefab-0.4.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+pyprefab-0.4.0.dist-info/entry_points.txt,sha256=hUBqciPnKoFkbyxZGqBG7Y2e5qBorbnuTee4TGW7H1E,46
+pyprefab-0.4.0.dist-info/top_level.txt,sha256=s1byaUMkJxCnAIhGTI7OwNjPo8vLNc-tFSXIiize-F4,9
+pyprefab-0.4.0.dist-info/RECORD,,
