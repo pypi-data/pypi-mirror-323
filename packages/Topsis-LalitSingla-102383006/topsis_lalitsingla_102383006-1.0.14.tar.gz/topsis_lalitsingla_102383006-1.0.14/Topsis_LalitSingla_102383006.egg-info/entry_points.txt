@@ -1,0 +1,2 @@
+[console_scripts]
+Topsis_LalitSingla_102383006 = Topsis_LalitSingla_102383006.topsis:main
