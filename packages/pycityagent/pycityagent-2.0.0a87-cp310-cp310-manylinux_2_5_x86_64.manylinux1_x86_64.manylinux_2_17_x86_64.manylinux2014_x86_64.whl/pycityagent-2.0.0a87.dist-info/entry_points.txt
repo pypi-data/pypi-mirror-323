@@ -1,0 +1,3 @@
+[console_scripts]
+pycityagent-sim = pycityagent.cli.wrapper:pycityagent_sim
+pycityagent-ui = pycityagent.cli.wrapper:pycityagent_ui
