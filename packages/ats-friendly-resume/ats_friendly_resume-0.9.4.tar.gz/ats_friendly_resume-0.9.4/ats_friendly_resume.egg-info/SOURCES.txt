@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+ats_friendly_resume.egg-info/PKG-INFO
+ats_friendly_resume.egg-info/SOURCES.txt
+ats_friendly_resume.egg-info/dependency_links.txt
+ats_friendly_resume.egg-info/entry_points.txt
+ats_friendly_resume.egg-info/requires.txt
+ats_friendly_resume.egg-info/top_level.txt
+src/__init__.py
+src/constants.py
+src/main.py
