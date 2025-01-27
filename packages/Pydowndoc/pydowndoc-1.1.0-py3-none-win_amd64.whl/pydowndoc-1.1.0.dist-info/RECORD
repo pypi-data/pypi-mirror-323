@@ -1,0 +1,11 @@
+pydowndoc/__init__.py,sha256=9JMMSlaDGfUUy_vb8sRVyz1a_opazPmLNOn0Trgretw,3276
+pydowndoc/__main__.py,sha256=AVo9tEac4OUKs3FyoYvphxjSr0nX6nrdIfWAS23dkA4,309
+pydowndoc/hatch_hooks.py,sha256=zPfDtgGhi-XMKfB8s_DwkDueWDOXYhzcx1S_YAaUMWk,3641
+pydowndoc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydowndoc-1.1.0.data/scripts/downdoc.exe,sha256=JuGf_eR8Ufw4IPnNoFTTZ7xedpfASkGdpOnJXjYoqxA,37739410
+pydowndoc-1.1.0.dist-info/METADATA,sha256=hkYf1Xq_NnODNW1FhIrA0--DZbo6CfeYw8Me1szLqCk,9041
+pydowndoc-1.1.0.dist-info/WHEEL,sha256=Vhj7RpPOKCXcsr4rUs7q4pISuo5nT6VsOuaQwH9GILY,94
+pydowndoc-1.1.0.dist-info/entry_points.txt,sha256=asNACNZ4l3BKXok2P0biZhWquGpKQd4ldmsP6pc8x5o,47
+pydowndoc-1.1.0.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pydowndoc-1.1.0.dist-info/licenses/LICENSE-downdoc-binary,sha256=iWwc6s5RNAfCCb6DER8Yrs5UcmfjZdD8U3UtoHWHQMo,1087
+pydowndoc-1.1.0.dist-info/RECORD,,
