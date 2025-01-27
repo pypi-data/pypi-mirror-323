@@ -1,0 +1,2 @@
+[console_scripts]
+py-bulk-image-compressor = py_bulk_image_compressor.main:main
