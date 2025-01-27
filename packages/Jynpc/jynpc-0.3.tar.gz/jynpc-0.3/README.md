@@ -1,0 +1,280 @@
+PC/COMPUTER utils: from Jynpc import *
+
+### **1. `find_files_by_extension`**
+Finds files with a specified extension in a directory.
+
+**Parameters:**
+- `directory` (str): Path to the directory.
+- `extension` (str): File extension to look for.
+
+**Example Usage:**
+```python
+txt_files = find_files_by_extension("/path/to/dir", ".txt")
+```
+
+---
+
+### **2. `get_curr_dir`**
+Returns the current working directory.
+
+**Example Usage:**
+```python
+cwd = get_curr_dir()
+```
+
+---
+
+### **3. `ccc`**
+Executes a function while limiting the process to specified CPU cores.
+
+**Parameters:**
+- `core_count` (int): Number of cores to use.
+- `function` (callable): Function to execute.
+- `*args, **kwargs`: Arguments for the function.
+
+**Example Usage:**
+```python
+result = ccc(2, sum, [1, 2, 3])
+```
+
+---
+
+### **4. `check_if_file_exists`**
+Checks if a file exists.
+
+**Parameters:**
+- `file_path` (str): Path to the file.
+
+**Example Usage:**
+```python
+exists = check_if_file_exists("/path/to/file.txt")
+```
+
+---
+
+### **5. `monitor_new_files`**
+Monitors a directory for new files and triggers a callback.
+
+**Parameters:**
+- `directory` (str): Path to the directory.
+- `callback` (callable): Function to call when new files are detected.
+
+**Example Usage:**
+```python
+monitor_new_files("/path/to/dir", lambda files: print("New files:", files))
+```
+
+---
+
+### **6. `get_system_uptime`**
+Returns the system uptime in seconds.
+
+**Example Usage:**
+```python
+uptime = get_system_uptime()
+```
+
+---
+
+### **7. `get_cpu_templinux`**
+Gets the CPU temperature on Linux systems.
+
+**Example Usage:**
+```python
+cpu_temp = get_cpu_templinux()
+```
+
+---
+
+### **8. `monitor_file_changes`**
+Monitors a file for changes and triggers a callback.
+
+**Parameters:**
+- `file_path` (str): Path to the file.
+- `callback` (callable): Function to call when changes are detected.
+
+**Example Usage:**
+```python
+monitor_file_changes("/path/to/file.txt", lambda: print("File changed!"))
+```
+
+---
+
+### **9. `write_to_file`**
+Writes content to a file.
+
+**Parameters:**
+- `filename` (str): Path to the file.
+- `content` (str): Content to write.
+
+**Example Usage:**
+```python
+write_to_file("output.txt", "Hello, World!")
+```
+
+---
+
+### **10. `read_from_file`**
+Reads the content of a file.
+
+**Parameters:**
+- `filename` (str): Path to the file.
+
+**Example Usage:**
+```python
+content = read_from_file("input.txt")
+```
+
+---
+
+### **11. `parse_json`**
+Parses a JSON string into a Python object.
+
+**Parameters:**
+- `json_string` (str): JSON string.
+
+**Example Usage:**
+```python
+data = parse_json('{"key": "value"}')
+```
+
+---
+
+### **12. `create_file_if_not_exists`**
+Creates an empty file if it does not exist.
+
+**Parameters:**
+- `filename` (str): Path to the file.
+
+**Example Usage:**
+```python
+create_file_if_not_exists("new_file.txt")
+```
+
+---
+
+### **13. `create_directory`**
+Creates a directory if it does not exist.
+
+**Parameters:**
+- `directory` (str): Path to the directory.
+
+**Example Usage:**
+```python
+create_directory("/path/to/new_dir")
+```
+
+---
+
+### **14. `track_mouse_position`**
+Tracks mouse position and calls a callback with the coordinates.
+
+**Parameters:**
+- `callback` (callable): Function to call with x, y coordinates.
+
+**Example Usage:**
+```python
+track_mouse_position(lambda x, y: print(f"Mouse moved to {x}, {y}"))
+```
+
+---
+
+### **15. `get_cpu_usage`**
+Returns CPU usage as a percentage.
+
+**Example Usage:**
+```python
+cpu_usage = get_cpu_usage()
+```
+
+---
+
+### **16. `get_memory_usage`**
+Returns memory usage as a percentage.
+
+**Example Usage:**
+```python
+memory_usage = get_memory_usage()
+```
+
+---
+
+### **17. `create_zip_file`**
+Creates a ZIP archive of a directory.
+
+**Parameters:**
+- `source_dir` (str): Directory to compress.
+- `output_zip` (str): Output ZIP file name.
+
+**Example Usage:**
+```python
+create_zip_file("/path/to/dir", "archive")
+```
+
+---
+
+### **18. `extract_zip_file`**
+Extracts a ZIP archive.
+
+**Parameters:**
+- `zip_file` (str): Path to the ZIP file.
+- `extract_dir` (str): Directory to extract to.
+
+**Example Usage:**
+```python
+extract_zip_file("archive.zip", "/path/to/extract")
+```
+
+---
+
+### **19. `move_file`**
+Moves a file to a new location.
+
+**Parameters:**
+- `source` (str): Path to the file.
+- `destination` (str): Destination path.
+
+**Example Usage:**
+```python
+move_file("source.txt", "destination.txt")
+```
+
+---
+
+### **20. `copy_file`**
+Copies a file to a new location.
+
+**Parameters:**
+- `source` (str): Path to the file.
+- `destination` (str): Destination path.
+
+**Example Usage:**
+```python
+copy_file("source.txt", "destination.txt")
+```
+
+---
+
+### **21. `show_file_properties`**
+Returns file properties like size and last modified time.
+
+**Parameters:**
+- `file_path` (str): Path to the file.
+
+**Example Usage:**
+```python
+properties = show_file_properties("/path/to/file.txt")
+```
+
+---
+
+### **22. `run_shell_command`**
+Runs a shell command and returns its output and errors.
+
+**Parameters:**
+- `command` (str): Shell command to execute.
+
+**Example Usage:**
+```python
+stdout, stderr = run_shell_command("ls -l")
+```

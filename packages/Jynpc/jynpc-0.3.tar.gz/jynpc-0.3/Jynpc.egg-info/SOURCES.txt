@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Jpc/__init__.py
+Jpc/module.py
+Jynpc.egg-info/PKG-INFO
+Jynpc.egg-info/SOURCES.txt
+Jynpc.egg-info/dependency_links.txt
+Jynpc.egg-info/requires.txt
+Jynpc.egg-info/top_level.txt
