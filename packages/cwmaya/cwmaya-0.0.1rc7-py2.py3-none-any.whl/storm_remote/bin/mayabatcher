@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Function to display usage
+usage() {
+    echo "Usage: $0 -proj <proj> -file <file> -data <data>"
+    exit 1
+}
+
+# Function to log messages
+log() {
+    local message="$1"
+    echo "[INFO] $message"
+}
+
+log "Starting mayabatcher..."
+
+
+# Parse arguments
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        -proj)
+            proj="$2"
+            log "Project path set to: $proj"
+            shift
+            ;;
+        -file)
+            file="$2"
+            log "File path set to: $file"
+            shift
+            ;;
+        -data)
+            data="$2"
+            log "Data string set to: $data"
+            shift
+            ;;
+        *)
+            log "Invalid argument: $1"
+            usage
+            ;;
+    esac
+    shift
+done
+
+# Call the maya command with the provided arguments
+maya_command="maya -batch -proj \"$proj\" -file \"$file\" -script \"pyPayloadExecutor.mel\" -command \"pyPayloadExecutor(\\\"$data\\\")\""
+log "Executing command: $maya_command"
+
+eval $maya_command
+
+log "Script mayabatcher completed."
