@@ -1,0 +1,3 @@
+[console_scripts]
+meshroom=meshroom.cli.cli:meshroom
+
