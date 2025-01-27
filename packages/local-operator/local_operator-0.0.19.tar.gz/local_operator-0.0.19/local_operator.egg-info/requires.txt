@@ -1,0 +1,10 @@
+langchain-openai
+langchain-ollama
+python-dotenv
+pydantic
+
+[dev]
+black
+isort
+pylint
+pyright
