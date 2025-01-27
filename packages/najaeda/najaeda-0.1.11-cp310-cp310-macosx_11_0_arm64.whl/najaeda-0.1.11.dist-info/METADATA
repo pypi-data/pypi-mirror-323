@@ -1,0 +1,203 @@
+Metadata-Version: 2.1
+Name: najaeda
+Version: 0.1.11
+Summary: Naja EDA Python package
+Author-Email: Naja Authors <contact@keplertech.io>
+License: Apache License 2.0
+Project-URL: Homepage, https://github.com/najaeda/naja
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+
+Naja EDA Python Package
+=======================
+
+Naja EDA is a Python package that provides data structures and APIs for developing post-synthesis Electronic Design Automation (EDA) algorithms.
+
+Naja EDA provides a powerful yet simple framework designed to help software
+and hardware developers efficiently navigate and manipulate electronic
+design automation (EDA) workflows.
+
+With Naja EDA, you can:
+
+* Explore Netlists with Ease:
+
+  * Navigate netlist hierarchy and connectivity effortlessly.
+  * Browse at multiple levels of detail:
+
+    * Bit-level or bus-level granularity.
+    * Instance-by-instance exploration or flattened views at the primitives level.
+    * Localized per-instance connections or comprehensive equipotential views.
+
+* Perform ECO (Engineering Change Order) Transformations:
+
+  * Seamlessly apply and manage changes to your designs.
+
+* Prototype EDA Ideas Quickly:
+
+  * Use an intuitive API to experiment with new EDA concepts and workflows.
+
+* Develop Custom EDA Tools:
+
+  * Build fast, tailored tools for solving specific challenges without relying on costly, proprietary EDA software.
+
+Naja EDA empowers developers to innovate, adapt, and accelerate their EDA
+processes with minimal overhead.
+
+Naja EDA is the Python counterpart of the `Naja C++ project <https://github.com/najaeda/naja>`_.
+
+Installation
+------------
+
+Install Naja EDA using pip:
+
+.. code-block:: bash
+
+    pip install najaeda
+
+Documentation
+-------------
+
+Naja EDA online documentation is available `here <https://najaeda.readthedocs.io/en/latest/index.html>`_.
+
+Examples
+--------
+
+Load a design from a liberty file and a Verilog file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Following snippet shows how to load primitive cells from a liberty file and
+a netlist from a Verilog file.
+
+.. code-block:: python
+
+    benchmarks = path.join('..','benchmarks')
+    liberty_files = [
+        'NangateOpenCellLibrary_typical.lib',
+        'fakeram45_1024x32.lib',
+        'fakeram45_64x32.lib'
+    ]
+    liberty_files = list(map(lambda p:path.join(benchmarks, 'liberty', p), liberty_files))
+        
+    netlist.load_liberty(liberty_files)
+    top = netlist.load_verilog([path.join(benchmarks, 'verilog', 'tinyrocket.v')])
+    
+    top.dump_verilog('.', 'tinyrocket_naja.v')
+
+Load a design with pre-existing libraries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In FPGA design environments, Liberty files are often unavailable.
+
+To address this, the following example demonstrates how to load primitives
+without relying on Liberty files.
+
+Naja EDA comes with pre-configured libraries to simplify this process.
+Currently, it includes support for partial Xilinx primitives, but this can be
+easily extended in the future. Don't hesitate to reach out if you need help.
+
+.. code-block:: python
+
+    netlist.load_primitives('xilinx')
+    benchmarks = path.join('..','benchmarks')
+    top = netlist.load_verilog([path.join(benchmarks, 'verilog', 'vexriscv.v')])
+
+Print all the instances in the netlist
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Next example shows how to browse all the netlist and print all its content recursively.
+
+.. code-block:: python
+
+    def print_netlist(instance):
+        for child_instance in instance.get_child_instances():
+            print(f"{child_instance}:{child_instance.get_model_name()}")
+            print_netlist(child_instance)
+
+Similar to the previous example, but utilizing an instance visitor.
+This approach allows you to perform operations on each instance while
+also defining conditions for stopping or continuing exploration.
+
+.. code-block:: python
+
+    def print_instance(instance):
+        print(f"{instance}:{instance.get_model_name()}")
+    visitor_config = instance_visitor.VisitorConfig(callback=print_instance)
+    instance_visitor.visit(top, visitor_config)
+
+Counting the Number of Leaves in a Netlist
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The instance visitor provides a tool for collecting various types of information
+about a netlist.
+
+The following example demonstrates how to use the visitor’s callback
+function to transmit user-defined arguments, allowing for flexible data processing.
+
+This specific use case shows how to count the number of leaf instances in a netlist.
+
+.. code-block:: python
+
+    leaves = {"count": 0, "assigns": 0, "constants": 0}
+    def count_leaves(instance, leaves):
+        if instance.is_leaf():
+            if instance.is_assign():
+                leaves["assigns"] += 1
+            elif instance.is_const():
+                leaves["constants"] += 1
+            else:
+                leaves["count"] += 1
+    visitor_config = instance_visitor.VisitorConfig(callback=count_leaves, args=(leaves,))
+    instance_visitor.visit(top, visitor_config)
+    print(f"{top} leaves count")
+    print(f"nb_assigns={leaves['assigns']}")
+    print(f"nb constants={leaves['constants']}")
+    print(f"nb other leaves={leaves['count']}")
+
+DLE (Dead Logic Elimination)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This example demonstrates how to perform Dead Logic Elimination (DLE) on a netlist.
+
+.. code-block:: python
+
+    def apply_dle(top):
+        # Trace back from design outputs
+        visited = set()
+        traced_terms = top.get_flat_output_terms()
+        for leaf in top.get_leaf_children():
+            atrributes =  list(leaf.get_attributes())
+            for attr in atrributes:
+                if attr.get_name() == 'DONT_TOUCH' or attr.get_name() == 'KEEP' or attr.get_name() == 'preserve' or attr.get_name() == 'noprune':
+                    for term in leaf.get_flat_input_terms():
+                        traced_terms.append(term)
+        for termToTrace in traced_terms:
+            queue = deque([termToTrace])
+            while queue:
+                term = queue.popleft()
+                if term in visited:
+                    continue
+                visited.add(term)
+                equipotential = term.get_equipotential()
+                leaf_drivers = equipotential.get_leaf_drivers()
+                for driver in leaf_drivers:
+                    instance = driver.get_instance()
+                    instances.add(instance)
+                    input_terms = instance.get_flat_input_terms()
+                    queue.extend(input_terms)
+        
+        
+        to_delete = [leaf for leaf in top.get_leaf_children() if leaf not in instances]
+        for leaf in to_delete:
+            leaf.delete()
+        return to_delete
+
+Documentation
+-------------
+Naja EDA is a work in progress, and the documentation is still under development.
+
+Naja documentation is available on the `Naja GitHub repository <https://github.com/najaeda/naja>`_.
+
+Support
+-------
+If you encounter any issues or have questions, please report them on the
+`Naja issue tracker <https://github.com/najaeda/naja/issues>`_.
+
+License
+-------
+This project is licensed under the Apache License 2.0. \
+See the `LICENSE <https://github.com/najaeda/naja/blob/main/LICENSE>`_ file for details.
