@@ -1,0 +1,9 @@
+sqlift/__init__.py,sha256=J9JC5a9fcKDhuhy5vqan0l2iLFO-DrNZ95U28Xuj-7w,53
+sqlift/clients.py,sha256=nOym0C7l9H5QiU_mneOPILhEn68OXFn2G9se4HCX850,1369
+sqlift/exceptions.py,sha256=pJUGfmXTPP_yVivo5v_koswf5GqweMqV2GXUiDt5GXY,52
+sqlift/main.py,sha256=EO907NkuYBlJhGkoWcdsDRfW0QjdAf1l5MJ08fbtYhM,4596
+sqlift-0.2.2.dist-info/LICENSE,sha256=Tz4OfUG4JVx390QqWBeY1wNwrJVwzYLniAlREGtkFtc,1068
+sqlift-0.2.2.dist-info/METADATA,sha256=WK0hMyXWrqrHuNTKqIXAXvMI1MkGscxbDWu57CSUlGA,6301
+sqlift-0.2.2.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+sqlift-0.2.2.dist-info/entry_points.txt,sha256=Id4YOd61UdYDrLFQZDLMYFrGQVvf_0NkOH14qiIvxqQ,42
+sqlift-0.2.2.dist-info/RECORD,,
