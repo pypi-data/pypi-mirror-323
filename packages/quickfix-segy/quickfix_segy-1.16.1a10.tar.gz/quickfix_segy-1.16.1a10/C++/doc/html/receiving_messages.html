@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+<head>
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+
+  <title>Receiving Messages</title>
+</head>
+
+<body>
+  <div class='header'>
+    <div class='headertitle'>
+      Receiving Messages
+    </div>
+  </div>
+
+  <div class='contents'>
+    <p>Most of the messages you will be interested in looking at
+    will be arriving in your overloaded <b>fromApp</b> function of
+    your application. All messages have a header and a trailer. If
+    you want to see those fields, you must call <b>getHeader()</b>
+    or <b>getTrailer()</b> on the message to access them.</p>
+
+    <hr/>
+    <h2>Type Safe Messages And Fields</h2>
+
+    <p>QuickFIX has a class for all messages defined in the
+    standard spec.</p>
+    <pre class='fragment'>
+void fromApp( const FIX::Message&amp; message, const FIX::SessionID&amp; sessionID )
+  throw( FIX::FieldNotFound&amp;, FIX::IncorrectDataFormat&amp;, FIX::IncorrectTagValue&amp;, FIX::UnsupportedMessageType&amp; )
+{
+  crack(message, sessionID);
+}
+
+void onMessage( const FIX42::NewOrderSingle&amp; message, const FIX::SessionID&amp; )
+{
+  FIX::ClOrdID clOrdID;
+  message.get(clOrdID);
+
+  FIX::ClearingAccount clearingAccount;
+  message.get(clearingAccount);
+}
+
+void onMessage( const FIX41::NewOrderSingle&amp; message, const FIX::SessionID&amp; )
+{
+  FIX::ClOrdID clOrdID;
+  message.get(clOrdID);
+
+  // compile time error!! field not defined in FIX41
+  FIX::ClearingAccount clearingAccount;
+  message.get(clearingAccount);
+}
+
+void onMessage( const FIX42::OrderCancelRequest&amp; message, const FIX::SessionID&amp; )
+{
+  FIX::ClOrdID clOrdID;
+  message.get(clOrdID);
+
+  // compile time error!! field not defined for OrderCancelRequest
+  FIX::Price price;
+  message.get(price);
+}
+</pre>
+
+    <p>In order to use this you must use the <b>MessageCracker</b>
+    as a mixin to your application. This will provide you with the
+    <b>crack</b> function and allow you to overload specific
+    message functions. Any function you do not overload will by
+    default throw an <b>UnsupportedMessageType</b> exception<br>
+    <br>
+    Define your application like this:</p>
+    <pre class='fragment'>
+#include "quickfix/Application.h"
+#include "quickfix/MessageCracker.h"
+
+class MyApplication
+: public FIX::Application,
+  public FIX::MessageCracker
+</pre>
+
+    <br/><hr/>
+    <h2>Type Safe Fields Only</h2>
+
+    <p>Use the <b>getField</b> method to get any field from any
+    message.</p>See this code in <a href=
+    "python/receiving_messages_2.html">PYTHON</a>, <a href=
+    "ruby/receiving_messages_2.html">RUBY</a>
+    <pre class='fragment'>
+void fromApp( const FIX::Message&amp; message, const FIX::SessionID&amp; sessionID )
+  throw( FIX::FieldNotFound&amp;, FIX::IncorrectDataFormat&amp;, FIX::IncorrectTagValue&amp;, FIX::UnsupportedMessageType&amp; )
+{
+  // retrieve value into field class
+  FIX::Price price;
+  message.getField(price);
+
+  // another field...
+  FIX::ClOrdID clOrdID;
+  message.getField(clOrdID);
+}
+</pre>
+
+    <br/><hr/>
+    <h2>No Type Safety</h2>
+
+    <p>Create your own fields using tag numbers.</p>See this code
+    in <a href="python/receiving_messages_1.html">PYTHON</a>,
+    <a href="ruby/receiving_messages_1.html">RUBY</a>
+    <pre class='fragment'>
+void fromApp( const FIX::Message&amp; message, const FIX::SessionID&amp; sessionID )
+  throw( FIX::FieldNotFound&amp;, FIX::IncorrectDataFormat&amp;, FIX::IncorrectTagValue&amp;, FIX::UnsupportedMessageType&amp; )
+{
+  // retreive value into string with integer field ID
+  std::string value;
+  value = message.getField(44);
+
+  // retrieve value into a field base with integer field ID
+  FIX::FieldBase field(44, "");
+  message.getField(field);
+
+  // retreive value with an enumeration, a little better
+  message.getField(FIX::FIELD::Price);
+}
+</pre>
+  </div>
+</body>
+</html>
