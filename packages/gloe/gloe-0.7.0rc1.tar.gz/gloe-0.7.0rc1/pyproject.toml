@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gloe"
+dynamic = ["version"]
+authors = [
+  { name="Samir Braga", email="samirchavess@gmail.com" },
+]
+description = "Gloe is a general-purpose library designed to guide developers in expressing their code as a flow."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'typing_extensions~=4.7',
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "gloe.__version__"}
+
+[project.urls]
+Homepage = "https://gloe.ideos.com.br"
+Documentation = "https://gloe.ideos.com.br"
+Issues = "https://github.com/ideos/gloe/issues"
+Repository = "https://github.com/ideos/gloe"
+
+[project.optional-dependencies]
+plot = ['pygraphviz>=1.11']
+types = ['mypy~=1.7.0']
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "gloe"
+]
