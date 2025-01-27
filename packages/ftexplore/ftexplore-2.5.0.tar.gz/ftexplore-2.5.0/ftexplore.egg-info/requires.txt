@@ -1,0 +1,11 @@
+
+[keyboard]
+keyboard
+
+[remote]
+cffi
+pynng
+
+[usb]
+libusb
+pyusb
