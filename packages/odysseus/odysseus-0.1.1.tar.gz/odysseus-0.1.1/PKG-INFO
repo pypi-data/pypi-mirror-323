@@ -1,0 +1,63 @@
+Metadata-Version: 2.2
+Name: odysseus
+Version: 0.1.1
+Summary: A client for CodeTitans Odysseus Logging Platform.
+Author-email: Paweł Hofman <pawel@codetitans.pl>
+License: Copyright (c) 2018 The Python Packaging Authority
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+        
+Project-URL: Homepage, https://github.com/codetitans/odysseus-py
+Project-URL: Issues, https://github.com/codetitans/odysseus-py/issues
+Keywords: logs,logging,Odysseus
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests<3.0,>=2.32.3
+Requires-Dist: tzlocal<6.0,>=5.2
+
+# Odysseus Platform - Python client
+
+This repository contains full source code of the simple Python project capable of uploading log entries or events happening on a backend application - back to the [Odysseus Logging Platform](https://odysseus.codetitans.dev).
+
+Once it's added as a dependency of your Python application, it has to be connected with your existing logging system and logs serialization has to be redirected to be able to process them and pass back to the server.
+
+## Disclaimer
+
+Full utilization of the Odysseus Logging Platform services is subject to the proper contract and not part of that client functionality. By using this software you essentially agree that since it's an open-source project you read it and understand all repercussions of using it. Thus you will never claim or call for any compensations or damages in connection with downtime of your own services caused by this software.
+
+## Build
+
+To create the new bundled release simply call following command:
+
+```shell
+$ ./build.sh package
+```
+
+What it does internally, is only performs several checks around missing environmental setup and calls the build command:
+
+```shell
+$ python3 -m build
+```
+
+-----
+CodeTitans Sp. z o.o. (2025-)
