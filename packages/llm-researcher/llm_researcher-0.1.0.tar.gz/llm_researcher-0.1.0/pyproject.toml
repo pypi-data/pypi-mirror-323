@@ -1,0 +1,39 @@
+[project]
+name = "llm-researcher"
+version = "0.1.0"
+description = "LLM plugin for comprehensive research using Jina AI's Search Foundation APIs"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name="Thomas Hughes", email="irthomasthomas@gmail.com" }
+]
+license = { file="LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+[project.urls]
+Homepage = "https://github.com/simonw/llm-jina-research"
+Changelog = "https://github.com/simonw/llm-jina-research/releases"
+Issues = "https://github.com/simonw/llm-jina-research/issues"
+
+[project.scripts]
+llm-jina-research = "llm_jina_research:main"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.20.0",
+    "pytest-mock>=3.0.0"
+]
+
+[build-system]
+requires = ["setuptools>=65.5.1", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.entry-points."llm"]
+jina_research = "llm_jina_research"

@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+llm_jina_research/__init__.py
+llm_researcher.egg-info/PKG-INFO
+llm_researcher.egg-info/SOURCES.txt
+llm_researcher.egg-info/dependency_links.txt
+llm_researcher.egg-info/entry_points.txt
+llm_researcher.egg-info/requires.txt
+llm_researcher.egg-info/top_level.txt
