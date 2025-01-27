@@ -1,0 +1,39 @@
+site_name: Flexitext
+repo_url: https://github.com/tomicapretto/flexitext
+repo_name: tomicapretto/flexitext
+nav:
+  - Introduction: index.md
+  - Usage:
+      - Overview: usage/index.md
+      - Functional: usage/functional.md
+      - OOP: usage/OOP.md
+  - Reference:
+      - flexitext: reference/flexitext.md
+      - FlexiText: reference/FlexiText.md
+      - Style: reference/Style.md
+      - Text: reference/Text.md
+theme:
+  name: material
+  palette:
+    accent: blue
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - toc.integrate
+extra_css:
+  - assets/stylesheets/colors.css
+  - assets/stylesheets/logo.css
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+plugins:
+- search
+- mkdocstrings:
+    handlers:
+      python:
+        options:
+          docstring_style: numpy
