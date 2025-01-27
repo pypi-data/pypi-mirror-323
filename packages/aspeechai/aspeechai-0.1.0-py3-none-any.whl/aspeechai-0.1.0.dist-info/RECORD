@@ -1,0 +1,16 @@
+afritextai/__init__.py,sha256=fGLpQ6xDJzjO1yodn-bRXp5Fh1igvs_EMU38lhDjjnQ,168
+afritextai/__version__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+afritextai/afritextai_types.py,sha256=uO_Ic0Ml7-10sem56ALWCIawpQLeoUTU23Pj9AyQQrM,889
+afritextai/client.py,sha256=GiVOgpdso5rpfcmn2xsJq_-oVIMXGdwp--J-1WrB4sw,1766
+afritextai/transcriber.py,sha256=TcOMudM0kNvYFgYV4CyMRzgmnfcY8o-Fsk0tLud9JGc,3605
+afritextai/utils.py,sha256=ws-R_m2UOHbroI8EWnrA3quPIcfYScXdb96iFSi4xtA,694
+aspeechai/__init__.py,sha256=fGLpQ6xDJzjO1yodn-bRXp5Fh1igvs_EMU38lhDjjnQ,168
+aspeechai/__version__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+aspeechai/aspeechai_types.py,sha256=771Hqt93rvfDk83wdLnq9DQLWToHiPJt9H-O4eJFyas,917
+aspeechai/client.py,sha256=UcPvGbIshQuClCoHneg0GvIzg3Wm9z2_-IM_gyRvTXc,2043
+aspeechai/transcriber.py,sha256=VmGYvHiOqaRN2o1UUA_xgprYfkCsGDFf2EwWyqnIjA0,4470
+aspeechai/utils.py,sha256=TED704h1Y3OKeNq85gvjItZIbcZONE6WeUn8Od4xySw,1322
+aspeechai-0.1.0.dist-info/METADATA,sha256=UfHJHh6bN7XnU1f-jFdzpcb09EtK0G5D2SXvOUpQcXQ,2310
+aspeechai-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aspeechai-0.1.0.dist-info/top_level.txt,sha256=jvUjFPqze0hEmq1-xUhUFzQw0Iq4sXshrWO_MUNjYKw,10
+aspeechai-0.1.0.dist-info/RECORD,,

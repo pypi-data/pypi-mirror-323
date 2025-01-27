@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: aspeechai
+Version: 0.1.0
+Summary: ASpeechAI Python SDK
+Home-page: https://github.com/ASpeechAI/aspeechai-python-sdk
+Author: ASpeechAI
+Author-email: contact@a-speechai.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: httpx (>=0.19.0)
+Requires-Dist: pydantic (>=2.9.2)
+Requires-Dist: typing-extensions (>=3.7)
+Requires-Dist: websockets (>=11.0)
+Provides-Extra: extras
+Requires-Dist: pyaudio (>=0.2.13) ; extra == 'extras'
+
+# ASpeechAI's Python SDK
+
+This project is aimed at providing a Python SDK for our A-SpeechAI API. It allows developers to easily integrate the A-SpeechAI capabilities into their Python applications to transcribe and understand audio
+
+## Installation
+
+Before starting, you need to set the API key. If you don't have one yet, [sign up for one](https://platform.a-speechai.com/login)!
+
+To install the A-SpeechAI Python SDK, simply run the following command:
+
+```
+pip install aspeechai
+```
+
+## Usage
+
+To use the A-SpeechAI Python SDK, you need to import the `Transcriber` and `Client` classes from the `aspeechai` module. Here's an example of how to use it:
+
+```python
+from aspeechai import Transcriber as tr, Client
+
+# Create an instance of the A-SpeechAI class
+
+TOKEN="af_zf......."
+EMAIL="example@example.com"
+
+client = Client(token=TOKEN,
+                email=EMAIL)
+
+# Call the desired API method
+transcriber = tr(client=client)
+response = transcriber.transcribe(data="audio_file",
+                                language_code="fon",
+                                )
+print(response)
+```
+
+## Documentation
+
+For detailed documentation on how to use the A-SpeechAI Python SDK, please refer to the [official documentation](https://platform.a-speechai.com/).
+
+## Contributing
+
+Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request on the [GitHub repository](https://github.com/A-speechAI/aspeechai-python-sdk).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
