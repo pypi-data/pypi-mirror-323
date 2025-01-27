@@ -1,0 +1,17 @@
+.venv
+.idea
+build
+dist
+/docs/_minted-Programatorska_dokumentacia
+/docs/_minted-Uzivatelska_dokumentacia
+matrix_operations_cuni.egg-info
+matrix_operations_cuni/__pyccache__
+/docs/Programatorska_dokumentacia.aux
+/docs/Programatorska_dokumentacia.log
+/docs/Programatorska_dokumentacia.out
+/docs/Programatorska_dokumentacia.synctex.gz
+/docs/Uzivatelska_dokumentacia.aux
+/docs/Uzivatelska_dokumentacia.log
+/docs/Uzivatelska_dokumentacia.out
+/docs/Uzivatelska_dokumentacia.synctex.gz
+/docs/.Rhistory

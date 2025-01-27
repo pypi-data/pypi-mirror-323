@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: matrix_operations_cuni
+Version: 0.6.2
+Summary: A library for basic matrix operations.
+Author: Samo Kosik
+Author-email: samokosik@samokosik.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
