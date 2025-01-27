@@ -1,0 +1,15 @@
+temporalcache/__init__.py,sha256=QQOVKaRWmjLDYIhhGHQ0mTreWG3QfSpdy-Er2PmTQWI,632
+temporalcache/expire.py,sha256=uIVcAEYXpPgoPyeXCVEqhoKDAVHmQtfnHu0hUtLAZz8,4276
+temporalcache/interval.py,sha256=sPGzjovWvoyqe0sVCnarqNzouPlSn24p1oU_11T8SAc,2598
+temporalcache/persistent_lru_cache.py,sha256=bSO09PFYff0vKGBHiD05MOYlquTIt_-qh1mHlJ9Y5ec,10410
+temporalcache/utils.py,sha256=3l_VPa4i4pYDfT0N0MrsvpSXW5sc2TW7F1X6Onnd9vM,4615
+temporalcache/tests/__init__.py,sha256=aee7IkDa_bdDaMb1prf2Sg7nADxcXgCEFA3SsJmDV8k,296
+temporalcache/tests/test_all.py,sha256=wJkXXze8s6rlMgaH49UrdAEseqFLEuDBuAEOrVe7Hqo,344
+temporalcache/tests/test_expire.py,sha256=bGJ9Hom-J2DOlgyLKfKYpNkfYCKgNAVfOiId1qh7588,9609
+temporalcache/tests/test_interval.py,sha256=WbvMPxEynleg_ULh31krgkHu8aow7J6WmcHJGxUyn7Y,5354
+temporalcache/tests/test_persistent.py,sha256=DQOPzg9p2-CIG_HA0gGSvmPy55JrKjAyi-ffCxiOoyE,1722
+temporalcache/tests/test_utils.py,sha256=CVS6unelgX3UceBOXgCUsO_rrkFvVjIcCbFhhewJYWE,5098
+temporal_cache-0.1.6.dist-info/METADATA,sha256=gcKMTEU08o_UGRSIhW_RVHArzeym_67ppcciSqXCniM,2955
+temporal_cache-0.1.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+temporal_cache-0.1.6.dist-info/licenses/LICENSE,sha256=a-TCum3WOx8RyaOFW9EIsSSx8EoSXrOxllYF6onvkOU,11356
+temporal_cache-0.1.6.dist-info/RECORD,,
