@@ -1,0 +1,8 @@
+httpx
+pydantic
+pydantic_settings[toml]
+
+[dev]
+
+[pandas]
+pandas
