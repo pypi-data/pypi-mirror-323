@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: liteauto
+Version: 0.0.39
+Summary: free google results
+Home-page: https://github.com/santhosh/
+License: MIT
+Author: Kammari Santhosh
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: certifi (>=2024.12.14,<2025.0.0)
+Requires-Dist: googlesearch-python (>=1.3.0,<2.0.0)
+Requires-Dist: pyautogui (>=0.9.54,<0.10.0)
+Project-URL: Repository, https://github.com/santhosh/
+Description-Content-Type: text/markdown
+
+Plan
+1. Automate Huggingchat with playwright (Done)
+2. OpenAI compatible response (Done)
+3. Add username, password environment compatible (Pending)
+3. handle system prompt, supports only prompt message (Pending)
+4. create openai compatible api (Pending)
+5. create ollama compatible api (pending)
