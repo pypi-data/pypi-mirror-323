@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "venvmngr"
+version = "0.1.13"
+description = "managing a local environment"
+authors = ["JulianKimmig <julian.kimmig@gmx.net>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+requests = "*"
+packaging = "*"
+subprocess-monitor = ">=0.2.0"
+uv = ">=0.5.21"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
