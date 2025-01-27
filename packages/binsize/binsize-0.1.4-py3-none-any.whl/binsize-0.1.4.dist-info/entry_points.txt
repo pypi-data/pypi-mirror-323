@@ -1,0 +1,3 @@
+[console_scripts]
+binsize=binsize.cli.binsize:cli
+
