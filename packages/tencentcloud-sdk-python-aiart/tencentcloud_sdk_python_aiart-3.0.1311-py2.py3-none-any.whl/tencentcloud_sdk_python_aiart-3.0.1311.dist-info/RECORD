@@ -1,0 +1,10 @@
+tencentcloud/__init__.py,sha256=euWu6bgbn8CFX6wlKWiSX3bZxAH-wcIiP_PuJJP3Keo,631
+tencentcloud/aiart/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/aiart/v20221229/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/aiart/v20221229/aiart_client.py,sha256=E8ShRnc_9zqKb48UbrkcUXCqy80u1mV8i-eGOvdNkYw,24826
+tencentcloud/aiart/v20221229/errorcodes.py,sha256=Vaofe0Q5YAxZcvdoEvMGVwFVPD0MGk5kmT0TyhFxPII,4005
+tencentcloud/aiart/v20221229/models.py,sha256=-YGDa2SBu78Hbn5Z8XYinMIAV3828ybvVXSA4BqguRk,126839
+tencentcloud_sdk_python_aiart-3.0.1311.dist-info/METADATA,sha256=hHr5QHeQb9F17LLFRAz4cckY3b0dPiKEE3DdQ8MMrhA,1506
+tencentcloud_sdk_python_aiart-3.0.1311.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tencentcloud_sdk_python_aiart-3.0.1311.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_aiart-3.0.1311.dist-info/RECORD,,
