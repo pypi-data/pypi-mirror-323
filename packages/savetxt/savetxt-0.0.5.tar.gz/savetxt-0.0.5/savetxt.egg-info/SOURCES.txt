@@ -1,0 +1,12 @@
+LICENSE
+pyproject.toml
+readme.md
+savetxt/__init__.py
+savetxt/savetxt.py
+savetxt.egg-info/PKG-INFO
+savetxt.egg-info/SOURCES.txt
+savetxt.egg-info/dependency_links.txt
+savetxt.egg-info/entry_points.txt
+savetxt.egg-info/requires.txt
+savetxt.egg-info/top_level.txt
+tests/test_cli.py

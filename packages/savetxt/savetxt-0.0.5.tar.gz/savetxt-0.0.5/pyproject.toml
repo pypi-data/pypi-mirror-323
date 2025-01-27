@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "savetxt"
+version = "0.0.5"
+authors = [
+  { name = "Aditya", email = "todo@createanemail.com" }
+]
+description = "CLI program to save and view text with corresponding tags."
+readme = "readme.md"
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+dependencies = ["pandas>=1.2.5"]
+
+[project.scripts]
+savetxt = "savetxt.savetxt:main"
+
+[project.urls]
+Homepage = "https://github.com/AND2797/savetxt"
+Issues = "https://github.com/AND2797/savetxt/issues"
