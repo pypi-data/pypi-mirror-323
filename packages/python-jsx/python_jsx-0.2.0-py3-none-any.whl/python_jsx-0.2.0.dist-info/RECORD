@@ -1,0 +1,14 @@
+pyjsx/__init__.py,sha256=qzJUkO28BSw0HqjGL9C2txSsIlA1B-ZjA_jRJZqdeAQ,216
+pyjsx/__main__.py,sha256=RHczjgYBIiQoR23GQQd8Mq9U7yIaGO3ARCwB1MrF_MA,560
+pyjsx/auto_setup.py,sha256=EKY3ZkU1K8DkMblUHi76SKijZDtRorzN7XWkaXzp_qA,129
+pyjsx/codecs.py,sha256=lyQ11WTIfWnYJZ35FTzUgHHYp6gkFO3c0Ti0zoVuoU0,971
+pyjsx/elements.py,sha256=wvHRdsRbr_DZD54TpfOwTFBc8W5JG1S5bpk1qzkIaX8,1817
+pyjsx/import_hook.py,sha256=D9pbhiob4UYpKaOVCc1mxg8I8bpx4W3NHh6IItvUEg4,2117
+pyjsx/jsx.py,sha256=4CRlH0QuAwUOaubwD1mnE18tZZHIoV0Nn2twSVSFTmk,3255
+pyjsx/tokenizer.py,sha256=5XGGtbjd04Q8mqqwbImKErTigHXRt-35QfYJeVtDNNA,16457
+pyjsx/transpiler.py,sha256=1kcGjyfXu7BhO0G_D5qyg6nXQ6GlLAcxYLMbcHUL0ho,9310
+pyjsx/util.py,sha256=63MI0666TEo41eeIy5dXM8Y0xqfiSUPvvmitNrMO7G8,1163
+python_jsx-0.2.0.dist-info/METADATA,sha256=KhbIEVT1JruHVY_VmgCPbBs5MpAEiOUB06Tw05NuBaM,4319
+python_jsx-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+python_jsx-0.2.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+python_jsx-0.2.0.dist-info/RECORD,,
