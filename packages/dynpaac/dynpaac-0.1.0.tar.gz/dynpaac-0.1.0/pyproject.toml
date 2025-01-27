@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "dynpaac"
+version = "0.1.0"
+description = "Accessor for applying class methods and properties to Pandas Series."
+authors = ["Christian Schreinemachers (Cs137)"]
+license = "MIT"
+readme = "README.md"
+keywords = ["pandas", "series", "accessor", "dynamic", "pandas-extension", "dynamic-accessor"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.urls]
+"Changelog" = "https://codeberg.org/Cs137/DynPaAc/src/branch/main/CHANGELOG.md"
+"Issues" = "https://codeberg.org/Cs137/DynPaAc/issues"
+"Repository" = "https://codeberg.org/Cs137/DynPaAc"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+pandas = "^2.2.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

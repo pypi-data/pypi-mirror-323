@@ -1,0 +1,192 @@
+Metadata-Version: 2.1
+Name: dynpaac
+Version: 0.1.0
+Summary: Accessor for applying class methods and properties to Pandas Series.
+License: MIT
+Keywords: pandas,series,accessor,dynamic,pandas-extension,dynamic-accessor
+Author: Christian Schreinemachers (Cs137)
+Requires-Python: >=3.9
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Project-URL: Changelog, https://codeberg.org/Cs137/DynPaAc/src/branch/main/CHANGELOG.md
+Project-URL: Issues, https://codeberg.org/Cs137/DynPaAc/issues
+Project-URL: Repository, https://codeberg.org/Cs137/DynPaAc
+Description-Content-Type: text/markdown
+
+[![License](https://img.shields.io/pypi/l/dynpaac?color=blue)](https://codeberg.org/Cs137/DynPaAc/src/branch/main/LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/dynpaac.svg)](https://pypi.org/project/dynpaac/)
+[![PyPI Downloads](https://static.pepy.tech/badge/dynpaac)](https://pepy.tech/projects/dynpaac)
+
+
+# DynPaAc - Dynamic Pandas Accessors
+
+A Python package to dynamically create Pandas Series accessors for any classes.
+
+This package allows you to dynamically access methods and properties of a target
+class on a Pandas Series. By registering the accessor, you can apply the methods
+and properties of the class to any Series element. The return values of these
+methods and properties are given back as a Pandas Series. The module includes
+validation to ensure that the Series elements are compatible with the class, and
+allows the exclusion of certain attributes. It also supports custom methods that
+can be defined and applied to the Series alongside the methods and properties of
+the target class.
+
+```{warning}
+The project is currently in an early stage of development and changes in its behaviour might be introduced.
+```
+
+
+## Installation
+
+DynPaAc is not yet published on PyPI.
+The development version can be installed from
+[the Git repository](https://codeberg.org/Cs137/DynPaAc) using `pip`:
+
+```sh
+# Via https
+pip install git+https://codeberg.org/Cs137/DynPaAc.git
+
+# Via ssh
+pip install git+ssh://git@codeberg.org:Cs137/DynPaAc.git
+```
+
+
+## Usage
+
+The package provides the `DynamicSeriesAccessor` class, a wrapper to access methods
+and properties of a target class from a pandas Series. The target class must be
+initialisable with not more than one argument, and the arguments type must correspond
+to the type of the series values.
+
+Since the `DynamicSeriesAccessor` class is initialised by pandas, there is the
+`create_dynamic_series_accessor()` function, which allows to preconfigure an
+accessor for a certain target class and register it as pandas series accessor.
+A `name` for the accessor and the desired `target_class` have to be defined.
+The accessors can be called via the `name` attribute of series instances with
+values of valid input parameter types.
+
+Moreover, the exclusion of certain attributes is possible and the declaration of
+custom methods that can be applied to the series alongside the methods and
+properties of the target class is supported.
+
+The creation function is all you need to dynamically create a series accessor for
+a certain target class, simply import it as follows:
+
+```python
+from dynpaac.dynamic_series_accessor import create_dynamic_series_accessor
+```
+
+If you have any questions or need assistance, feel free to
+[open an issue on the repository](https://codeberg.org/Cs137/DynPaAc/issues).
+
+### Example
+
+```python
+import pandas as pd
+from dynpaac.dynamic_series_accessor import create_dynamic_series_accessor
+
+class MyClass:
+    def __init__(self, value: str):
+        self.value = value
+
+    @property
+    def length(self) -> int:
+        return len(self.value)
+
+    def add(self, string: str) -> str:
+        return self.value + string
+
+def custom_method(x: str, prefix: str) -> str:
+    return prefix + x
+
+# Register the accessor and define its name
+create_dynamic_series_accessor("mycls", MyClass, custom_methods={"custom": custom_method})
+
+# Create a pandas Series with strings
+data = pd.Series(["hello", "world"])
+
+# Use the dynamic accessor to apply methods and properties
+print(data.mycls.length)      # Access the 'length' property
+print(data.mycls.add("!!!"))  # Access the 'add' method
+print(data.mycls.custom(">>> "))  # Access the 'custom_method'
+```
+
+#### Output
+```
+0    5
+1    5
+dtype: int64
+
+0    hello!!!
+1    world!!!
+dtype: object
+
+0    >>> hello
+1    >>> world
+dtype: object
+```
+
+
+## Changes
+
+All notable changes to this project are documented in the file
+[`CHANGELOG.md`](https://codeberg.org/Cs137/DynPaAc/src/branch/main/CHANGELOG.md).
+
+
+## Contributing
+
+Contributions to the `DynPaAc` package are very welcomed. Feel free to submit a
+pull request, if you would like to contribute to the project. In case you are
+unfamiliar with the process, consult the
+[forgejo documentation](https://forgejo.org/docs/latest/user/pull-requests-and-git-flow/)
+and follow the steps using this repository instead of the `example` repository.
+
+Create your [pull request (PR)](https://codeberg.org/Cs137/DynPaAc/pulls) to
+inform that you start working on a contribution. Provide a clear description
+of your envisaged changes and the motivation behind them, prefix the PR's title
+with ``WIP: `` until your changes are finalised.
+
+All kind of contributions are appreciated, whether they are
+bug fixes, new features, or improvements to the documentation.
+
+
+## Development
+
+### Installing for development
+
+To install the package in development mode, clone the Git repository and install
+the package using Poetry, as shown in the code block underneath. To install Poetry,
+which is required for virtual environment and dependency management, follow the
+instructions on the [Poetry website](https://python-poetry.org/docs/#installation).
+
+```bash
+git clone https://codeberg.org/Cs137/DynPaAc.git
+cd dynpaac
+poetry install
+```
+
+This will create a virtual environment and install the package dependencies and
+the package itself in editable mode, allowing you to make changes to the code and
+see the effects immediately in the corresponding virtual environment. Alternatively,
+you can install it via `pip install -e` in an existing virtual environment.
+
+
+## License
+
+DynPaAc is open source software released under the MIT License.
+See [LICENSE](https://codeberg.org/Cs137/DynPaAc/src/branch/main/LICENSE) file for details.
+
+---
+
+This package was created and is maintained by Christian Schreinemachers, (C) 2025.
+
+
