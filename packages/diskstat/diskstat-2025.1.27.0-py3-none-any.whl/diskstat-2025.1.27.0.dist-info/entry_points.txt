@@ -1,0 +1,5 @@
+[console_scripts]
+diskstat = diskstat.entry:main
+diskstat-server = diskstat.server:main
+diskstat-show = diskstat.http_show:main
+diskstat-stop = diskstat.http_stop:main
