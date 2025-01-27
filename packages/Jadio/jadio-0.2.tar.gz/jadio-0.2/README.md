@@ -1,0 +1,79 @@
+AUDIO/MIC utils: from Jadio import *
+
+Here’s a complete example-based guide for **all functions** in your code, written in a consistent style:
+
+---
+
+### **1. Text-to-Speech**
+#### **`play_audio`**
+Converts a given text into speech using the `pyttsx3` library.
+
+**Example Usage:**
+```python
+play_audio("Hello! How can I help you?")
+# The program will audibly say: "Hello! How can I help you?"
+```
+
+---
+
+### **2. Record Audio**
+#### **`record_audio`**
+Listens for audio input via a microphone and converts it to text using the Google Speech Recognition API.
+
+**Example Usage:**
+```python
+text = record_audio()
+print(f"You said: {text}")
+# You say: "I love coding!" -> Output: "You said: I love coding!"
+```
+
+**Error Handling:**
+- If the input is not recognized: *"Sorry, I couldn't understand that."*
+- If there's a network issue: *"Could not request results; check your network connection."*
+
+---
+
+### **3. Filter Profanity**
+#### **`filter_swears_in_text`**
+Cleans a given string by censoring offensive words using the `better_profanity` library.
+
+**Example Usage:**
+```python
+filtered_text = filter_swears_in_text("This is a damn test.")
+print(filtered_text)
+# Output: "This is a test."
+```
+
+---
+
+### **4. Speech-to-Text with Profanity Filtering**
+#### **`speech_to_text_with_filter`**
+Captures audio input, converts it to text, and censors any offensive words.
+
+**Example Usage:**
+```python
+filtered_text = speech_to_text_with_filter()
+print(f"Filtered text: {filtered_text}")
+# You say: "This is a damn test." -> Output: "This is a test"
+```
+
+**Error Handling:**
+- If the audio isn't recognized: *"Sorry, I couldn't understand what you said."*
+- If there's a network issue: *"Error with the speech recognition service."*
+
+---
+
+### **5. Simple Speech-to-Text**
+#### **`speech_to_text`**
+Captures audio input and converts it to text without any additional processing.
+
+**Example Usage:**
+```python
+text = speech_to_text()
+print(f"You said: {text}")
+# You say: "It's a sunny day!" -> Output: "You said: It's a sunny day!"
+```
+
+**Error Handling:**
+- If the input isn't recognized: *"Could not understand audio."*
+- If there's a network issue: *"Could not request results."*
