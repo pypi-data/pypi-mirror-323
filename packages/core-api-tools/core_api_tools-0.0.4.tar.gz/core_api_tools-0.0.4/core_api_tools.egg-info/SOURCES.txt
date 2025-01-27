@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+core-api-tools/__init__.py
+core-api-tools/admin.py
+core-api-tools/auth.py
+core-api-tools/conftest.py
+core-api-tools/tests.py
+core_api_tools.egg-info/PKG-INFO
+core_api_tools.egg-info/SOURCES.txt
+core_api_tools.egg-info/dependency_links.txt
+core_api_tools.egg-info/requires.txt
+core_api_tools.egg-info/top_level.txt
