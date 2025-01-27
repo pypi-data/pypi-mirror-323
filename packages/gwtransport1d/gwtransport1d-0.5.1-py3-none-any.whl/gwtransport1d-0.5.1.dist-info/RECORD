@@ -1,0 +1,11 @@
+gwtransport1d/__init__.py,sha256=Q5ly3tqEReW8bDrM5SBhZI3la1XeV0TBfOCPXSUnzqY,172
+gwtransport1d/advection.py,sha256=YEf6ttdp8AEOZSkKqABlPqYd0E8CH8BukBSCtUOgG5g,4171
+gwtransport1d/deposition.py,sha256=7d5O8bpvV6OfIAsbo9hJWPC78AQCWoFWNRLCIovjq9k,11210
+gwtransport1d/diffusion.py,sha256=9GIR5x25sVR4GE0mfQH6bLMAIbas4XOXVi85dHLzIvQ,10247
+gwtransport1d/gamma.py,sha256=m6Oxhf0t0Q0ke7qBHAe9ytq5NJAfM5FDTp_0O0tA0j0,6980
+gwtransport1d/residence_time.py,sha256=ZGI5eigoqUJtyZJ49IPGXvf5bSo9zwWJgWpZqX2cUzE,3747
+gwtransport1d/utils.py,sha256=2Y78yx35nWM9vTv4jKtjwPQrnYFilzGPss93s9-Yt8U,3709
+gwtransport1d-0.5.1.dist-info/METADATA,sha256=L_qY-j4GL8vrSGfvSIOyFTqb6Q74W0f4Wk2JsPjBb8k,45023
+gwtransport1d-0.5.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gwtransport1d-0.5.1.dist-info/licenses/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+gwtransport1d-0.5.1.dist-info/RECORD,,
