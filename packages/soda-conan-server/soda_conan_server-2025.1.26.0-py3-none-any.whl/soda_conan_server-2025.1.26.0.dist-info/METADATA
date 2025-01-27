@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: soda-conan-server
+Version: 2025.1.26.0
+Summary: soda's conan server
+Project-URL: Repository, https://github.com/soda92/conan/tree/my-server
+License-File: LICENSE.md
+Requires-Python: >=3.10
+Requires-Dist: bottle>=0.13.2
+Requires-Dist: fasteners>=0.19
+Requires-Dist: jinja2>=3.1.5
+Requires-Dist: patch-ng>=1.18.1
+Requires-Dist: pluginbase>=1.0.1
+Requires-Dist: pyjwt>=2.10.1
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: urllib3>=2.3.0
+Description-Content-Type: text/markdown
+
+# Soda's conan server
+
+<a href="https://pypi.org/project/soda-conan-server/">
+    <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/soda-conan-server">
+</a>
+
+Currently(2025-01-27) conan-server was not supported in python 3.13 due to cgi module removed and (unupgraded) bottle dependency. So I created this package.
+
+Conflict with official `conan` and `conan_server` package. Use virtual environment.
+
+Will not keep sync with official repo; use at your own risk.
