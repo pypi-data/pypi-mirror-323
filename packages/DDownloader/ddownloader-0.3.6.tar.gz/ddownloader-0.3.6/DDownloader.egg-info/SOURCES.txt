@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+DDownloader/__init__.py
+DDownloader/main.py
+DDownloader.egg-info/PKG-INFO
+DDownloader.egg-info/SOURCES.txt
+DDownloader.egg-info/dependency_links.txt
+DDownloader.egg-info/entry_points.txt
+DDownloader.egg-info/top_level.txt
+DDownloader/modules/__init__.py
+DDownloader/modules/args_parser.py
+DDownloader/modules/banners.py
+DDownloader/modules/downloader.py
+DDownloader/modules/helper.py
+DDownloader/modules/streamlink.py
