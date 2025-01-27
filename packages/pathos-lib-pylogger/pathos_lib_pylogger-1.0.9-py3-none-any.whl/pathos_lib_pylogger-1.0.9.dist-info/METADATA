@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: pathos_lib_pylogger
+Version: 1.0.9
+Summary: A custom JSON-based logger with console and file support.
+Author: Krishnendra Nandi
+Requires-Python: >=3.9
