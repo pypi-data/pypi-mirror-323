@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+movoid_fsm/__init__.py
+movoid_fsm/fsm.py
+movoid_fsm.egg-info/PKG-INFO
+movoid_fsm.egg-info/SOURCES.txt
+movoid_fsm.egg-info/dependency_links.txt
+movoid_fsm.egg-info/requires.txt
+movoid_fsm.egg-info/top_level.txt
