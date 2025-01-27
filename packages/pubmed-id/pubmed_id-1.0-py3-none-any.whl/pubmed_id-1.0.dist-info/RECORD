@@ -1,0 +1,9 @@
+pubmed_id/__init__.py,sha256=h2SbqsdypCDJ0zMk_Zdi629vMs8S2fe8lIW_If-U-C4,26
+pubmed_id/__main__.py,sha256=T3k27ioB_y-2eVzKxWr511QG7JOOL_cIRlDsepMlzm4,86
+pubmed_id/api.py,sha256=QuP_jeaqYGG3U1wTHBZGuKRhjUrqCAOpeMsbgqEiIeY,9405
+pubmed_id/cli.py,sha256=EVtYqdyV7zu9B92eYmMgm9P2zbtIWRAfcPbNvj3099Q,2709
+pubmed_id-1.0.dist-info/METADATA,sha256=-EVKO6o6teziLgI3KSi0gjUfD4JtoHicpTeIMry6hac,4652
+pubmed_id-1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+pubmed_id-1.0.dist-info/entry_points.txt,sha256=Ru6t4_CwC7tRywxGtKOToG3S2QO5iUgcwJHgyh5Lugc,49
+pubmed_id-1.0.dist-info/top_level.txt,sha256=CxRfuP247--jAEER0cqfuu-5x21gMpGOXGgQBi3T5eg,10
+pubmed_id-1.0.dist-info/RECORD,,
