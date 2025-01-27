@@ -1,0 +1,8 @@
+bojan/__init__.py,sha256=Z_yBa6nLgXvNTxZUYUiV2yBNgVRKOiTdZJE3a9H8KHY,35
+bojan/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bojan/src/bojan.py,sha256=ie2EIZvIg3SFV7nRTxtn4Ll4fx1dwiFKUj5FpV_2vZg,8247
+bojan-0.0.15.dist-info/LICENSE.txt,sha256=nCLxLvCYShEnK72fEja7ywfIW3Zl-syN6vDH7rNHvIg,1089
+bojan-0.0.15.dist-info/METADATA,sha256=RFPrqUn_JuHx6LyqLLE_uqMmsdFP05hmQEfFo7D7TvI,3008
+bojan-0.0.15.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+bojan-0.0.15.dist-info/top_level.txt,sha256=a6GBuHMccZrxWADMyaD-7ukCTHtGTmUuRW_AuDPZI7s,6
+bojan-0.0.15.dist-info/RECORD,,
