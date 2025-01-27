@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Jstnum/__init__.py
+Jstnum/module.py
+Jstnum.egg-info/PKG-INFO
+Jstnum.egg-info/SOURCES.txt
+Jstnum.egg-info/dependency_links.txt
+Jstnum.egg-info/requires.txt
+Jstnum.egg-info/top_level.txt

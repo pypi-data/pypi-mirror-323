@@ -1,0 +1,4 @@
+better_profanity
+textblob
+scikit-learn
+pyperclip
