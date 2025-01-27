@@ -1,0 +1,13 @@
+pillow
+argparse
+ksupk
+matplotlib
+numpy
+opencv-python
+tqdm
+gradio
+requests
+beautifulsoup4
+lxml
+pandas
+openpyxl
