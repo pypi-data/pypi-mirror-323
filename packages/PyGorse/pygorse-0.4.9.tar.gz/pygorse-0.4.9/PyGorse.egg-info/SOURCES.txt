@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+PyGorse.egg-info/PKG-INFO
+PyGorse.egg-info/SOURCES.txt
+PyGorse.egg-info/dependency_links.txt
+PyGorse.egg-info/requires.txt
+PyGorse.egg-info/top_level.txt
+gorse/__init__.py
+tests/test_gorse.py
