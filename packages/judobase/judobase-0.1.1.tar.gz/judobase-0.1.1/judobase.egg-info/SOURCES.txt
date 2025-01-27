@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+judobase/__init__.py
+judobase/base.py
+judobase/judobase_api.py
+judobase/schemas.py
+judobase/version.py
+judobase.egg-info/PKG-INFO
+judobase.egg-info/SOURCES.txt
+judobase.egg-info/dependency_links.txt
+judobase.egg-info/requires.txt
+judobase.egg-info/top_level.txt

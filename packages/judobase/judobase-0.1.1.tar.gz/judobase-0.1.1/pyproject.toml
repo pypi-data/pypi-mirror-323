@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "judobase"
+dynamic = ["version"]
+description = "Python Judobase API async client"
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [
+    {name = "ddzgoev", email = "ddzgoev@gmail.com"}
+]
+license = {text = "MIT"}
+keywords = ["judobase", "wrapper", "client", "async", "api"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "aioresponses>=0.7.7",
+    "aiohttp>=3.11.11",
+    "pydantic>=2.10.5",
+    "setuptools>=75.6.0"
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/DavidDzgoev/judobase"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.dynamic]
+version = {attr = "judobase.version.__version__"}
+
+[tool.ruff]
+line-length = 100
+
+[project.optional-dependencies]
+tests = [
+    "pytest>=8.3.4"
+]
