@@ -1,0 +1,3 @@
+[console_scripts]
+type-validator=type_validator:main
+
