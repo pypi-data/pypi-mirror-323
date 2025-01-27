@@ -1,0 +1,30 @@
+[run]
+branch = True
+source =
+    src
+    tests
+omit =
+    */conftest.py
+    */test_*_fuzz.py
+    */assert_valid_name.py
+    */cached_property.py
+    */character_classes.py
+    */is_iterable.py
+    */subscription/__init__.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    except ImportError:
+    \# Python <
+    sys\.version_info <
+    raise NotImplementedError
+    raise TypeError\(f?"Unexpected
+    assert False,
+    \s+next\($
+    if MYPY:
+    if TYPE_CHECKING:
+    ^\s+\.\.\.$
+    ^\s+pass$
+    \: \.\.\.$
+ignore_errors = True
