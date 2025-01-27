@@ -1,0 +1,11 @@
+PPIFold/File_proteins.py,sha256=6DCKQj6-f8VmwSeoBO4vMmH-qOjMh0XhX1feCLXcCmM,13578
+PPIFold/PPIFold.py,sha256=QSW9Wbnu5FMEt28_3ZgRyG3vPWOGkmONlzaZtT1ESi0,2278
+PPIFold/Utils.py,sha256=fKaQKvASZ7-7jlC_73tsOJYuLTXc5qaG-JSKHBrhIRk,33120
+PPIFold/__init__.py,sha256=N69lQBtbXE1yzKnQBaE1EUg6VzTcgX_HTioZXEvpEYc,14
+PPIFold/create_individual_feature_modif.py,sha256=crmduCs6gFWmzAQUK_1hVcl0mwNOPL78qKzQLhN-rK4,21292
+PPIFold-0.2.3b0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+PPIFold-0.2.3b0.dist-info/METADATA,sha256=kRTVbb1HHQLyo4v-FSr1qcU5ceA3QbovGpuIsch3aP8,537
+PPIFold-0.2.3b0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+PPIFold-0.2.3b0.dist-info/entry_points.txt,sha256=Chy41cVE_EyFnXNOhsLR6mtYD-baNqyuBFI7TXA9IHw,49
+PPIFold-0.2.3b0.dist-info/top_level.txt,sha256=n8KWbQKuD4AI-rlv5VsDSqXquuTX9FpC-LI8GJumaU4,8
+PPIFold-0.2.3b0.dist-info/RECORD,,
