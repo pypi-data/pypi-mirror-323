@@ -1,0 +1,12 @@
+feincms_oembed/__init__.py,sha256=XuE6UTDO4akSJK-MjFNq5uFXu5ZQE5GMStLE_tAU7K4,62
+feincms_oembed/admin.py,sha256=dsgFqe0tUysmRjxFXCy3kgo3tQa7VHH9lbVAWs3CTn4,367
+feincms_oembed/contents.py,sha256=jVKYyR3VaiWRd_hOFQz_JVbi4Z9_I9eZoB5oBANCcjo,4336
+feincms_oembed/models.py,sha256=GpJfgPRBkWvdVq8HA8BT-NThh99cbwfiYq54QgAsgvk,3726
+feincms_oembed/providers.py,sha256=z_gpyMKFEhaEBUvDIW2zQXiFOljJNfoHxFBz_dk4xFo,557
+feincms_oembed/migrations/0001_initial.py,sha256=KseA-vZnUe6nCYqgJfyaIs6VR1Cv1qXAzzITaHKCWHw,1784
+feincms_oembed/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+feincms_oembed-2.0.0.dist-info/LICENSE,sha256=tFWqIhRfFq0boCJqGaYpUQNVm9qAbqdp5yH5U6B2Odo,1557
+feincms_oembed-2.0.0.dist-info/METADATA,sha256=dU3J6H6q1BAcXbapf3aZd31v2efw0B0Sd1CEsJRnHXY,725
+feincms_oembed-2.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+feincms_oembed-2.0.0.dist-info/top_level.txt,sha256=CC6u-7B93LuFciUZoYXl8VcpQINThXpjjb2q677fkhM,15
+feincms_oembed-2.0.0.dist-info/RECORD,,
