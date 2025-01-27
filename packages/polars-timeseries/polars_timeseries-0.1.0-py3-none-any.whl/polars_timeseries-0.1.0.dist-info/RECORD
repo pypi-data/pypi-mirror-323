@@ -1,0 +1,7 @@
+polars_ts/__init__.py,sha256=oHI2yeBabpvthhmswXsbq8h1wYaa3Tz1NfHSnmQgttc,46
+polars_ts/main.py,sha256=tg3oNzfdVV7CzBuBkp11mm18mNv0NMuK-dV3tu5ifDw,104
+polars_ts/metrics/__init__.py,sha256=X703-CaAIO-_JsIVHrS4hNEsmZGVPjw3O1oSIo9X2CI,788
+polars_ts/metrics/kaboudan.py,sha256=XrAiot4-iqwvK2KjBMDhl4keOqac2462EILsFX_ajxc,9310
+polars_timeseries-0.1.0.dist-info/METADATA,sha256=6C-pcPaPsXfqfvsf1s3vQ5tF06RqRwAxelDV7QiU93A,1819
+polars_timeseries-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+polars_timeseries-0.1.0.dist-info/RECORD,,
