@@ -1,0 +1,2 @@
+[console_scripts]
+smart_calculator = smart_calculator.__main__:main
