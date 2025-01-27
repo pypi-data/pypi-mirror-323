@@ -1,0 +1,74 @@
+Metadata-Version: 2.2
+Name: sierra-ils-utils
+Version: 0.0.1a20250126
+Summary: Python wrappers for working with the Sierra ILS
+Home-page: https://github.com/chimpy-me/sierra-ils-utils/
+Author: Ray Voelker
+Author-email: ray.voelker@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx<0.29.0,>=0.28.0
+Requires-Dist: pymarc<6.0.0,>=5.2.0
+Provides-Extra: test
+Requires-Dist: pytest>=8.3.4; extra == "test"
+Requires-Dist: pytest-asyncio>=0.25.0; extra == "test"
+Requires-Dist: respx>=0.22.0; extra == "test"
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
+
+# sierra-ils-utils
+
+**sierra-ils-utils** is a Python library / wrapper around [HTTPX](https://www.python-httpx.org/) -- providing largely the same fully featured HTTP client for Python 3).
+
+The library provides convenient synchronous and asynchronous methods for working with the Sierra ILS REST API. The client provided by the library automatically handles the token-based authentication (client-credentials flow) and includes configurable retry and backoff logic.
+
+---
+
+## Installation
+
+```bash
+# You can install sierra-ils-utils from PyPI:
+pip install sierra-ils-utils
+```
+
+## Quick Start
+
+```python
+from sierra_ils_utils import SierraAPI
+
+client = SierraRESTClient(
+    base_url="https://catalog.library.org/iii/sierra-api/v6/",
+    client_id="YOUR_CLIENT_ID",
+    client_secret="YOUR_CLIENT_SECRET"
+)
+
+# Make a synchronous request (returns a httpx.Response)
+response = client.request("GET", "info/token")  # <Response [200 200]>
+response.raise_for_status()
+
+# Or, make an async request (returns a httpx.Response)
+response = await client.async_request("GET", "info/token")  # <Response [200 200]>
+response.raise_for_status()
+```
+
+The `request()` and `async_request()` client methods will return [httpx.Response](https://www.python-httpx.org/api/#response) objects.
+
+## License
+
+This project is released under the [MIT License](./LICENSE).
+
+## Authors
+
+Ray Voelker – [ray.voelker@gmail.com](mailto:ray.voelker@gmail.com)
+
+## Issues and Support
+
+Please open an issue on GitHub if you encounter problems, bugs, or have feature requests. We welcome all contributions and feedback!
