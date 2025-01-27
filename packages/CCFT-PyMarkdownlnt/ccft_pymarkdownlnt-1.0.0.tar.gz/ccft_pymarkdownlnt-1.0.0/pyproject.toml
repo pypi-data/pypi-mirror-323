@@ -1,0 +1,25 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project]
+authors = [{ name = "Matt Norton", email = "matt@carrotmanmatt.com" }]
+classifiers = ["Development Status :: 7 - Inactive"]
+dependencies = ["CCFT-PyMarkdown"]
+description = "You tried to install \"CCFT-PyMarkdownlnt\". The correct package name is \"CCFT-PyMarkdown\"."
+name = "CCFT-PyMarkdownlnt"
+readme = { content-type = "text/markdown", text = "You tried to install \"CCFT-PyMarkdownlnt\". The correct package name is \"CCFT-PyMarkdown\"." }
+version = "1.0.0"
+
+[project.urls]
+Repository = "https://github.com/CarrotManMatt/CCFT-PyMarkdown"
+
+
+[tool.hatch.build.targets.wheel]
+only-include = [""]
+
+
+[tool.uv]
+managed = false
+package = false
+trusted-publishing = "always"
