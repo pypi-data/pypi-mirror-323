@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pypaas
+Version: 0.1.0
+Summary: Python as a Service (pypaas): A library for creating Python-based tasks without worrying about deployment.
+Home-page: https://github.com/BarBQ-code/pypaas
+Author: Michael Ben Yosef
+Author-email: mishico5@gmail.com
+License: MIT
+Description: # pypaas
+        Python as a Service (pypaas)
+        
+        A library for creating Python-based tasks without worrying about deployment.
+        
+        
+        ## Installation
+        ```bash
+        pip install pypaas
+        ```
+        
+        ## Usage
+        ```python
+        from pypaas import task
+        
+        @task
+        def my_task():
+            print('This runs in the cloud whenever I want :)')
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
