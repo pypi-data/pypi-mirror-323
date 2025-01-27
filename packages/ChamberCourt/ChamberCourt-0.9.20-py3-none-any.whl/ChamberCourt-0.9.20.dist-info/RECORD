@@ -1,0 +1,25 @@
+chambercourt/__init__.py,sha256=kmYtN8NaX5-vJhKUpppgZKDFnhb95MjHqIh60hF4XUo,610
+chambercourt/__main__.py,sha256=oMR7gvjjUWBzYhuLETdBJJORlBWCCKuEKvvaIbNpgYU,274
+chambercourt/chambercourt_game.py,sha256=rhspl9wd6dcnJY18Lehcv8jwM9vzfGDyS7l6XfOjLZs,668
+chambercourt/event.py,sha256=1tR1pLKt8oxr9Xz4Tkf3AFVo2cRO4z1XyhzGr0jPfIU,883
+chambercourt/game.py,sha256=JwJmLqEgCjjtmSi58GBnzs_fB3Vx-S72H_hSIfaM_6U,34231
+chambercourt/langdetect.py,sha256=w5PN7P9t_9nNceKXsYNX65GKNR-ngPCeet0mEj8RqGk,1697
+chambercourt/ptext.py,sha256=ffslgqrCGxMgXRh5wYwjjAj975-jHKfz-DoE0mnQd2E,38558
+chambercourt/py.typed,sha256=bWew9mHgMy8LqMu7RuqQXFXLBxh2CRx0dUbSx-3wE48,27
+chambercourt/warnings_util.py,sha256=Ki6KU58jrd1MLFIEB4L1qAi7Qk48W01AXT0uwDHzGnk,1136
+chambercourt/levels/01 Plain map.tmx,sha256=eyvKzHFkKhzjkzp-7TTxR07gswX2iS4rK1u-MppPe9U,694
+chambercourt/levels/Brick.png,sha256=-0CvBuHVrtUkdFR-GKzhXw6fCwduj_oVrJPhO1YY6QY,4233
+chambercourt/levels/Gap.png,sha256=78IUuXtDxHFN_S8xh853jH0JJOnDhwjvCK46yyWdXf4,4202
+chambercourt/levels/Hero.png,sha256=qJN7-pn7IOIZWVwNgAMvaKW4cG-BhUSMQ8NSFp-NEZs,4512
+chambercourt/levels/Tileset.tsx,sha256=dSbwc9hLgvLzIv-bw-9yP0PzbEqfVdno3NA8SPlLuYs,495
+chambercourt/levels/acorn-mode-1.ttf,sha256=AO4ehoXNGm5WIQAqWeK9vKHCAV1YHFRTzOoT0ckFXb0,37232
+chambercourt/levels/app-icon.png,sha256=qJN7-pn7IOIZWVwNgAMvaKW4cG-BhUSMQ8NSFp-NEZs,4512
+chambercourt/levels/title.png,sha256=ASnnP2z4_QHzMLtz_JQZ2X3rrWf3MfA23KViCNP9KqQ,7022
+chambercourt/locale/el/LC_MESSAGES/chambercourt.mo,sha256=JPnIseufLC64fOt8myobzFbccurl4vTLk8kG2V5WO70,1429
+chambercourt/locale/fr/LC_MESSAGES/chambercourt.mo,sha256=7kB17bhLIGof9cf5SjCpNRGYZjRifLkTTszJFMHRO5Q,1531
+ChamberCourt-0.9.20.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ChamberCourt-0.9.20.dist-info/METADATA,sha256=03PsjyPJj56y0Uzdcqawp6lKsiWMJrymDTahRXetKg0,2888
+ChamberCourt-0.9.20.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+ChamberCourt-0.9.20.dist-info/entry_points.txt,sha256=vLZeM9eOg_H6MDLmJxuE_2RURw-JYxVf5aQEUX8eMMo,51
+ChamberCourt-0.9.20.dist-info/top_level.txt,sha256=qchNBPVkQ_kpz6BqbNXQuoX5Vg5Ia__6fYZG7aqRx90,13
+ChamberCourt-0.9.20.dist-info/RECORD,,
