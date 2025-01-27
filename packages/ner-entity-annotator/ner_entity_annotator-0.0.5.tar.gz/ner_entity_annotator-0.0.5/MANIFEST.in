@@ -1,0 +1,1 @@
+recursive-include ner_entity_annotator/frontend/build *
