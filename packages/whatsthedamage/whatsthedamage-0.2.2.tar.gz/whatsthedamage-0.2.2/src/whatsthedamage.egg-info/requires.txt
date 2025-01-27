@@ -1,0 +1,10 @@
+pandas>=1.5.0
+
+[dev]
+coverage
+mypy
+pytest
+pytest-cov
+ruff
+mccabe
+panda-stubs
