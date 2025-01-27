@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: davidkhala.data.format
+Version: 0.0.2
+Summary: 
+Author: David Liu
+Author-email: david-khala@hotmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: arrow
+Provides-Extra: avro
+Provides-Extra: gcp
+Requires-Dist: davidkhala-gcp[auth] ; extra == "gcp"
+Requires-Dist: fastavro ; extra == "avro"
+Requires-Dist: pyarrow ; extra == "arrow"
+Description-Content-Type: text/markdown
+
+# pypi `davidkhala.data.format`
+

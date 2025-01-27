@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "davidkhala.data.format"
+version = "0.0.2"
+description = ""
+authors = ["David Liu <david-khala@hotmail.com>"]
+readme = "README.md"
+packages = [{ include = "davidkhala" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+# for extras
+fastavro = { version = "*", optional = true }
+pyarrow = { version = "*", optional = true }
+davidkhala-gcp = { version = "*", optional = true, extras = ["auth"] }
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+
+[tool.poetry.extras]
+avro = ["fastavro"]
+arrow = ['pyarrow']
+gcp = ['davidkhala-gcp']
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
