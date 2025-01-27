@@ -1,0 +1,5 @@
+[console_scripts]
+mctoast = mctoast.__main__:mian
+
+[gui_scripts]
+mctoastw = mctoast.__main__:mian
