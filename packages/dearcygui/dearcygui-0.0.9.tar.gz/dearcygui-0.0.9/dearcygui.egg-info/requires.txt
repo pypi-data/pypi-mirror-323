@@ -1,0 +1,6 @@
+numpy
+freetype-py
+scipy
+
+[svg]
+skia-python
