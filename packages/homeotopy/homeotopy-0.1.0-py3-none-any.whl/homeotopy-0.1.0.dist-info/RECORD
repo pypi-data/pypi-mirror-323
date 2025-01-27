@@ -1,0 +1,11 @@
+homeotopy/__init__.py,sha256=BzoZqh0bUE4pilrPgniI8dtqt7Baw2YkYV7sJqROXRw,1134
+homeotopy/_ball.py,sha256=kzeJKtDiK6w8V04RpBVh8qNZayINY8smN8dEiw2ChXY,1390
+homeotopy/_cube.py,sha256=CcjVgomC4vJ79ZTROwK6qEAqhwsSKe7fgFqJ8Rz8DVw,713
+homeotopy/_homeomorphism.py,sha256=0WTjBTx_8DzD6M-ZokmabN_nucRNGqNZKfTGM4KAuIQ,2720
+homeotopy/_plane.py,sha256=KZOkURC3ycDK8ORJ6bFiiKwlhJWMs1GVm9c08cEeJjk,1008
+homeotopy/_simplex.py,sha256=R0gPfj2HVxDQP1AJQ9F63vz9iWr-XFkZ8wbUqIFzpfM,1933
+homeotopy/_sphere.py,sha256=SQbGUVI35Vl-m-0Zpadzj_qqMB7wKQHBXSQepm5A4SE,1667
+homeotopy-0.1.0.dist-info/LICENSE,sha256=Ea8s53I7I-569j5Qr1r1kuzGPnzXgF_pG5x9LTEso8A,1070
+homeotopy-0.1.0.dist-info/METADATA,sha256=hAnet5kf23cPZfR8VXB9sTbK-vQMFW5wU0Jd0jSdsFo,926
+homeotopy-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+homeotopy-0.1.0.dist-info/RECORD,,
