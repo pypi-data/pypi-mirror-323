@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+pyranking.egg-info/PKG-INFO
+pyranking.egg-info/SOURCES.txt
+pyranking.egg-info/dependency_links.txt
+pyranking.egg-info/requires.txt
+pyranking.egg-info/top_level.txt
