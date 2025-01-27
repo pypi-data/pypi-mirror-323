@@ -1,0 +1,13 @@
+README.md
+setup.py
+aspeechai/__init__.py
+aspeechai/__version__.py
+aspeechai/aspeechai_types.py
+aspeechai/client.py
+aspeechai/transcriber.py
+aspeechai/utils.py
+aspeechai.egg-info/PKG-INFO
+aspeechai.egg-info/SOURCES.txt
+aspeechai.egg-info/dependency_links.txt
+aspeechai.egg-info/requires.txt
+aspeechai.egg-info/top_level.txt
