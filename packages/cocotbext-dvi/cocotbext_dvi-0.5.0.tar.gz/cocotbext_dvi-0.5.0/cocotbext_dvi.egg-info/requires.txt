@@ -1,0 +1,10 @@
+cocotb
+cocotb-bus
+opencv-python
+
+[test]
+cocotb-test
+mypy
+pyflakes
+pytest
+ruff
