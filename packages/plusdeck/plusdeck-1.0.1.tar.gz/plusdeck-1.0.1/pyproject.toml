@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plusdeck"
+version = "1.0.1"
+authors = [
+  {name = "Josh Holbrook", email = "josh.holbrook@gmail.com"}
+]
+description = "Serial client for Plus Deck 2C PC Cassette Drive"
+readme = "README.md"
+keywords = []
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Other/Nonlisted Topic",
+]
+
+requires-python = ">=3.11"
+dependencies = [
+  "appdirs",
+  "click",
+  "configurence",
+  "ipywidgets",
+  "pyee",
+  "pyserial",
+  "pyserial-asyncio"
+]
+
+[project.scripts]
+plusdeck = "plusdeck.cli:main"
+
+[dependency-groups]
+dev = [
+  "flake8",
+  "flake8-black",
+  "pytest",
+  "pytest-asyncio",
+  "black",
+  "isort",
+  "jupyterlab",
+  "mkdocs",
+  "mkdocs-include-markdown-plugin",
+  "mkdocstrings[python]",
+  "rich",
+  "tox",
+  "twine",
+  "validate-pyproject[all]",
+]
+
+[tool.uv]
+package = true
+
+[tool.isort]
+profile = "appnexus"
+known_application = "plusdeck"
+
+[tool.pyright]
+include = ["plusdeck", "tests"]
+
+[tool.pytest]
+addopts = "--verbose -s"
+testpaths = [ "tests" ]
+
+[tool.setuptools]
+packages = [ "plusdeck" ]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+optional-dependencies.dev = { file = ["requirements_dev.txt"] }
