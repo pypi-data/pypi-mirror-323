@@ -1,0 +1,12 @@
+si4onnx/__init__.py,sha256=cSbDIwBnthh9DqsNgx8LiMvpvHcUX6LPa6ITwRaQyQw,713
+si4onnx/data.py,sha256=vVk6n4hSyYxiL8_zaFlPTX7W4m_p1bnhtwDQWvpyMLA,4589
+si4onnx/hypothesis.py,sha256=PppfBeeOtuJyUnQJ9EkP8tAzM40SAreYsS2H6eInxXk,23644
+si4onnx/layers.py,sha256=z_qEMHuIYQIyAuQVp0EU6rTRFgPq8YHodFylpsEnA24,48097
+si4onnx/nn.py,sha256=p2ZqJg0-6-CjE82fWoK0ConOm8yaEfxfqPSEz10mNHc,13499
+si4onnx/operators.py,sha256=bGWAjM0oGgDMLLJUhQKqeQlAaz6Xm3Yk02CC_c_88dw,11141
+si4onnx/si.py,sha256=EPYQJpaGgtBWVM7tSIVjnrYwLoK8Pmub1N077ja2aVI,10527
+si4onnx/utils.py,sha256=2dfHPb9AMRfpYJz-szw9wJuym1ihHa17npE2tJJIzvg,5561
+si4onnx-0.1.7.dist-info/METADATA,sha256=DMtHQyN3nQpfyuDqLDXYsXHlSF-eT0sRkh9Tj6WgRPY,1782
+si4onnx-0.1.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+si4onnx-0.1.7.dist-info/licenses/LICENSE,sha256=s_SCCQfcBLLNOqQNKxU3rQUyocxCo-EVx54k1MxFwfE,1078
+si4onnx-0.1.7.dist-info/RECORD,,
