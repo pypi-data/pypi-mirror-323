@@ -1,0 +1,51 @@
+Metadata-Version: 2.3
+Name: scvi-colab
+Version: 0.13.0
+Summary: Lightweight helper to install scvi-tools in Google Colab.
+License: BSD-3-Clause
+Author: The scvi-tools development team
+Author-email: ori.kronfeld@weizmann.ac.il
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Provides-Extra: dev
+Requires-Dist: black (>=24.1) ; extra == "dev"
+Requires-Dist: codecov (>=2.0.8) ; extra == "dev"
+Requires-Dist: flake8 (>=7.0.0) ; extra == "dev"
+Requires-Dist: importlib-metadata (>=8.0.0) ; python_version < "3.13"
+Requires-Dist: isort (>=5.7) ; extra == "dev"
+Requires-Dist: pre-commit (>=4.0.0) ; extra == "dev"
+Requires-Dist: pynndescent (>=0.5.11) ; extra == "dev"
+Requires-Dist: pytest (>=8.0.0) ; extra == "dev"
+Requires-Dist: rich
+Requires-Dist: scanpy (>=1.10) ; extra == "dev"
+Requires-Dist: setuptools (>=75.0.0) ; extra == "dev"
+Project-URL: Documentation, https://scvi-tools.org
+Project-URL: Homepage, https://github.com/scverse/scvi-colab
+Description-Content-Type: text/markdown
+
+# scvi-colab
+
+```
+!pip install scvi-colab
+
+from scvi_colab import install
+
+# default
+install()
+
+# from a GitHub branch
+install(branch="1.2.x")
+
+# A specific PyPI version
+install(version="1.2.2")
+
