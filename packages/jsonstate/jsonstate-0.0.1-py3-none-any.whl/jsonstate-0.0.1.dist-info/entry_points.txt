@@ -1,0 +1,3 @@
+[console_scripts]
+jsonstate = jsonstate.main:main
+mp = jsonstate.main:main
