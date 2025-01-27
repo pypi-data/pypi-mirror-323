@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+qdrant_odm/__init__.py
+qdrant_odm/crud.py
+qdrant_odm/dataclass.py
+qdrant_odm/model.py
+qdrant_odm.egg-info/PKG-INFO
+qdrant_odm.egg-info/SOURCES.txt
+qdrant_odm.egg-info/dependency_links.txt
+qdrant_odm.egg-info/requires.txt
+qdrant_odm.egg-info/top_level.txt
+qdrant_odm/index/__init__.py
+qdrant_odm/index/payload.py
+qdrant_odm/index/vectors.py

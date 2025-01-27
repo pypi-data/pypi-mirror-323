@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: qdrant-odm
+Version: 0.0.3
+Summary: Object-Document Mapping Library for Qdrant
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: loguru>=0.7.2
+Requires-Dist: qdrant-client>=1.12.1
+
+# qdrant_odm
+ Object-Document Mapping Library for Qdrant
+
+
+```bash
+pip install qdrant-odm
+```
