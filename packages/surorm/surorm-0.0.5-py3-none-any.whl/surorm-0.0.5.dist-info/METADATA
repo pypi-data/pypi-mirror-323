@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: surorm
+Version: 0.0.5
+Summary: Set of tools to use surreal database from python code.
+Author: Sultan Nasyrov
+Author-email: tightbtctrader@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.11.11,<4.0.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# SORM
+Set of tool that help use surreal db from python environment
+
