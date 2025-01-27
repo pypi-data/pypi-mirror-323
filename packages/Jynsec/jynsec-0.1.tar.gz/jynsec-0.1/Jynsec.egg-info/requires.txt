@@ -1,0 +1,6 @@
+qrcode[pil]
+Pillow
+better-profanity
+
+[email_support]
+smtplib
