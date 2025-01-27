@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: papertools
+Version: 1.14
+Home-page: https://www.github.com/PaperTarsier692/papertools
+Author: PaperTarsier692
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+
+Small collection of various Python tools.
