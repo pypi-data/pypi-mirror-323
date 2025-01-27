@@ -1,0 +1,3 @@
+[console_scripts]
+p115filedb=p115filedb.__main__:main
+
