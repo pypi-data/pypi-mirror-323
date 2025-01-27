@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: huey-mongodb
+Version: 1.1.0
+Summary: huey MongoDB backend
+Author-Email: Leon <leon0824@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Leon0824/huey-mongodb
+Requires-Python: >=3.9
+Requires-Dist: huey<2.6,>=2.5
+Requires-Dist: pymongo<4.11,>=4.9
+Description-Content-Type: text/markdown
+
+# huey-mongodb
+huey MongoDB Backend
+
+```python
+from huey_mongo import MongoHuey
+huey = MongoHuey(database='my_database', host='mongodb://mongodb0.example.com:27017')
+```
