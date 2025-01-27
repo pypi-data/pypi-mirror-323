@@ -1,0 +1,12 @@
+kin_tokenizer/__init__.py,sha256=di7a80bbrRhjvBYNgRJCYVF1gwxl7DUaUeLH7WCqjcA,90
+kin_tokenizer/test_my_code.py,sha256=-1opx6ppRqzuFvB98jDLFerwa2AlbGeIDeHT-RhWKDQ,6800
+kin_tokenizer/tokenizer.py,sha256=A0uVTXetr67LGpy1xneDteLehNfTXgVoeQjSS59m3EI,25089
+kin_tokenizer/utils.py,sha256=0QZMbACD59pRHfYGCwYJIhV7KIrsCle6KJcXFjBD0v8,9838
+kin_tokenizer/version.py,sha256=Rw-oWRWLvp4TJ_KdCZVpl_5uQTz7imtFZLfFi6FNqQk,15
+kin_tokenizer/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kin_tokenizer/data/kin_tokenizer.pkl,sha256=4hcHKi4Hyu1dbmp_aNcAzSf7zlPmg5SKpuKdR-wGOas,776104
+kin_tokenizer/data/non_kinyarwanda_words.pkl,sha256=61HjKjx0AZflGrSqLsjFrlOzxVcqwuCSZ8fHTyruRRo,3060149
+alta_tokenizer-1.1.dist-info/METADATA,sha256=lz2Q3DDYof2xOAUhUIHpjqutPTpTI2hQwovbqwl1GPw,5807
+alta_tokenizer-1.1.dist-info/WHEEL,sha256=HiCZjzuy6Dw0hdX5R3LCFPDmFS4BWl8H-8W39XfmgX4,91
+alta_tokenizer-1.1.dist-info/top_level.txt,sha256=6JGAROUjx22foEm6FVNAKayvJ9SeGWUFYUz7f5c2o9w,14
+alta_tokenizer-1.1.dist-info/RECORD,,
