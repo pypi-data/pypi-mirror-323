@@ -1,0 +1,9 @@
+versionman/__init__.py,sha256=VXj8chP-7S6Z11uxskgs1ip22q-dYhZ-EMKOgP3Ltho,67
+versionman/pep440_semver.py,sha256=pdRDPKfxJRo4VQH3t9_L4MwjXflHKCnwrQZJGp2verg,9196
+versionman/exception/__init__.py,sha256=L77aoRaWl_zuAUmu4lxV3pHn_lqRY23WZ3xsl30_-ZU,158
+versionman/exception/base.py,sha256=tlQOzwaTdNRQMGVOgMkLL2uEftmNRkrMmOFuBCMxuGc,181
+versionman/exception/pep440_semver.py,sha256=yFgWxBjynuMu2LvZ0bTNDvH1m_xg64vMdhnjO5uL2gU,637
+VersionMan-0.0.0.dev250.dist-info/METADATA,sha256=IlYPjGmyqa45OvWcDl8b8Vw5-KQTg5giGd7Ik6fDMHA,120
+VersionMan-0.0.0.dev250.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+VersionMan-0.0.0.dev250.dist-info/top_level.txt,sha256=l85PThpiuoYTk1_AWE4kNEO5yJ7zfBcG3OfjM_unjm4,11
+VersionMan-0.0.0.dev250.dist-info/RECORD,,
