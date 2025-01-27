@@ -1,0 +1,4 @@
+toml>=0.10.2
+
+[:python_version >= "3.11" and python_version < "4"]
+licensecheck>=2024.3
