@@ -1,0 +1,61 @@
+Metadata-Version: 2.2
+Name: beangrow
+Version: 1.0.1
+Summary: Returns calculations on portfolios in Beancount Resources
+Author-email: Martin Blais <blais@furius.ca>
+Maintainer-email: Martin Blais <blais@furius.ca>
+Keywords: accounting,ledger,beancount,returns,investments
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: SQL
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: matplotlib>=3.9.0
+Requires-Dist: beancount>=2.3.6
+Requires-Dist: scipy>=1.13.1
+Requires-Dist: beanprice>=1.2.1
+Requires-Dist: pandas-stubs>=2.2.2.240514
+Requires-Dist: matplotlib-stubs>=0.2.0
+Requires-Dist: protobuf>=5.29.3
+
+# Compute Returns
+
+This directory contains code which computes investment returns on a variety of
+assets, as recorded by Beancount, fed directly from a Beancount file.
+
+See this document for details:
+https://docs.google.com/document/d/1nPsMIunLnDvdsg6TSsd0PZb7jngojNpFlqnaX36WRp8/
+
+## Scripts
+
+There are three related scripts:
+
+- configure.py: This attempts to automatically infer and generate configuration
+  to compute returns from an existing Beancount ledger.
+
+- compute_returns.py: This extracts data for each of the investments defined in
+  the configuration and computes the returns and generates output for each
+  requested returns report.
+
+- download_prices.py: The compute_returns.py script outputs a list of missing
+  (or inadequately dated) price directives to properly do its job as a
+  side-product. This script can read that file and fetch those missing dates,
+  which you can insert in your ledger and then rerun compute_returns.py for a
+  more precise calculation.
+
+## Example
+
+To run the example:
+```
+cd example
+uv run beangrow-returns ledger.beancount config.pbtxt ./reports
+```
+
+The reports are available at `example/reports/groups`.
