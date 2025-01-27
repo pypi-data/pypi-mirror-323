@@ -1,0 +1,106 @@
+allee	all
+allees	all
+avenue	av
+avenu	av
+ave	av
+avn	av
+avenues	av
+boulev	bd
+boulevard	bd
+boulevar	bd
+blvd	bd
+bvd	bd
+bld	bd
+brd	bd
+che	ch
+chemin	ch
+chemins	ch
+chm	ch
+cour	crs
+cours	crs
+domaine	dom
+domaines	dom
+escalier	esc
+escaliers	esc
+impas	imp
+impasse	imp
+impasses	imp
+lotissement	lot
+lotissements	lot
+passage	pass
+passages	pass
+pce	pl
+place	pl
+places	pl
+plc	pl
+porte	pte
+prte	pte
+quai	qu
+quais	qu
+residence	res
+residences	res
+route	rte
+routes	rte
+r	rue
+ru	rue
+ruelle	rle
+ruelles	rle
+rues	rue
+sent	snt
+sente	snt
+squa	sq
+square	sq
+villa	vla
+villas	vla
+voie	voi
+voies	voi
+bis	b
+bi	b
+bs	b
+ter	t
+tr	t
+quater	q
+quat	q
+quinquies	c
+qui	c
+sexies	s
+sex	s
+septies	z
+sep	z
+octies	o
+oct	o
+novies	n
+nov	n
+decies	d
+dec	d
+du	
+de	
+des	
+d	
+le	
+la	
+les	
+l	
+et	
+general	gal
+gnrl	gal
+gl	gal
+president	pdt
+grande	gd
+grandes	gd
+grand	gd
+grands	gd
+petite	pt
+petites	pt
+petit	pt
+petits	pt
+saint	st
+sainte	st
+saints	st
+saintes	st
+cedex	
+cedx	
+cdex	
+cx	
+cdx	
+faubourg	fbg

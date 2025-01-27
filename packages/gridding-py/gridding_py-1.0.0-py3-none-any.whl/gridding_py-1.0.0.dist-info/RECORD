@@ -1,0 +1,17 @@
+gridding/__init__.py,sha256=cDSIbge7z_I6hhCUL_nZCTLo4JAEgHFkAvDFqBJoXr4,177
+gridding/__main__.py,sha256=POQeSZ_GLUZ6tsUkndyIZ6Ui_xWe8U_6h8MkK0vYzp8,1857
+gridding/coordinates.py,sha256=C-zshkBRxeDBiBrE5dIBaCcfigLTkohPqsGy0z9hCFs,3125
+gridding/gis.py,sha256=gri8hpqoZI9XNQltq_PZgh8bVmo6WjGW2ssQDs3-CXw,3505
+gridding/grid.py,sha256=sV-OdusmhRzo91R19jBFEvUo80eZAnNUcnxZeriidZA,6135
+gridding/projection.py,sha256=wvkTdD0yh8oSdfDSgKyqtFVwxsyvEjHm6WV96gzzitA,2736
+gridding/repository.py,sha256=QpouP7MXsMSBUt_ZEnYkrzM7SxP6epzRha850Np3FzM,3292
+gridding/utils/__init__.py,sha256=TErT4aGT8QVsIR1LmriNBa9W-Q5_dSyd07CuPrlB6RI,45
+gridding/utils/fr_dictionary.txt,sha256=Nhv2aMK0g7ADgu4arahVSrm1WYt0B3HQbxshDTYHS8Q,946
+gridding/utils/hash.py,sha256=yzj0RDTj0O8p7BfxLQZuk49wJ42Qu7MZiy4X1yH_HzE,687
+gridding/utils/normalize.py,sha256=uZwsROIfPSxuOfK5UrjLPngRZQZqDn2v3a2q7JYYyq4,2169
+gridding_py-1.0.0.dist-info/LICENSE,sha256=R7RvnokQkDHOfbAgiEaJwYN5sZTw_GjZZm4yOybhCrA,1068
+gridding_py-1.0.0.dist-info/METADATA,sha256=PJRDbxR4ituWpJZ3wB4iiSucZULlhqqRqM0nh6YSFoI,11234
+gridding_py-1.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+gridding_py-1.0.0.dist-info/entry_points.txt,sha256=lTZVD7f35pg6It0aI5inUqNL709GA-vzi9RDB5iPomE,55
+gridding_py-1.0.0.dist-info/top_level.txt,sha256=cEzpN__uDf5aUSnR7kL7QGuvyGoHjxLe-aUtJPK23uk,9
+gridding_py-1.0.0.dist-info/RECORD,,
