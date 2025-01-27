@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="language" content="en">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns and Drawdowns Over 10 Years</title>
+    <script src="//cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            gap: 2rem;
+            margin: 2rem 10vw;
+            justify-items: center;
+        }
+        .buttons {
+            margin-top: 1rem;
+        }
+        #returns-plot, #drawdown-plot {
+            width: 100%;
+        }
+    </style>
+</head>
+<body onkeydown="handleKeyDown(event)" onkeyup="handleKeyUp(event)">
+    <div class="container">
+        <div id="returns-plot"></div>
+        <div id="drawdown-plot"></div>
+        <div class="buttons">
+            <button onclick="setDateRange(180)">6M</button>
+            <button onclick="setDateRange(365)">1Y</button>
+            <button onclick="setDateRange(1095)">3Y</button>
+            <button onclick="setDateRange(1825)">5Y</button>
+            <button onclick="setDateRange('max')">MAX</button>
+        </div>
+    </div>
+
+    <script>
+        let allDates;
+        let returnsPlot;
+        let drawdownPlot;
+
+        function getPlotDimensions() {
+            let width = window.innerWidth - 40; // 20px margin on each side
+            let height = Math.floor(width / 2.7); // initial height based on aspect ratio
+            
+            // Ensure height doesn't exceed 40% of viewport height
+            const maxHeight = Math.floor(window.innerHeight * 0.4);
+            if (height > maxHeight) {
+                height = maxHeight;
+                width = Math.floor(height * 2.7);
+            }
+            
+            return { width, height };
+        }
+
+        function updatePlotDimensions() {
+            const dims = getPlotDimensions();
+            Plotly.relayout('returns-plot', dims);
+            Plotly.relayout('drawdown-plot', dims);
+        }
+
+        // Add resize listener
+        window.addEventListener('resize', updatePlotDimensions);
+
+        function handleKeyDown(event) {
+            if (event.code === 'Space') {
+                event.preventDefault();
+                updateDragMode('zoom');
+            }
+        }
+
+        function handleKeyUp(event) {
+            if (event.code === 'Space') {
+                updateDragMode('pan');
+            }
+        }
+
+        function updateDragMode(mode) {
+            Plotly.relayout('returns-plot', {dragmode: mode});
+            Plotly.relayout('drawdown-plot', {dragmode: mode});
+        }
+
+        function updatePlots(xrange) {
+            // Update both plots' x-axis range
+            const update = {'xaxis.range': xrange};
+            Promise.all([
+                Plotly.relayout('returns-plot', update),
+                Plotly.relayout('drawdown-plot', update)
+            ]).then(() => {
+                // Reset returns scale after both plots are updated
+                resetReturnsScale();
+            });
+        }
+
+        function resetReturnsScale() {
+            const xrange = Plotly.d3.select('#returns-plot').layout.xaxis.range;
+            if (!xrange) return;
+
+            const plot = document.getElementById('returns-plot');
+            const traces = plot.data;
+            traces.forEach((trace, i) => {
+                const visiblePoints = trace.x.map((x, idx) => ({
+                    x: new Date(x),
+                    y: trace.y[idx]
+                })).filter(p => {
+                    const date = new Date(p.x);
+                    return date >= new Date(xrange[0]) && date <= new Date(xrange[1]);
+                });
+
+                if (visiblePoints.length > 0) {
+                    const firstValue = visiblePoints[0].y;
+                    const newY = trace.y.map(y => y / firstValue);
+                    Plotly.restyle('returns-plot', {'y': [newY]}, [i]);
+                }
+            });
+        }
+
+        Promise.all([
+            fetch('returns.json').then(response => response.json()),
+            fetch('data.json').then(response => response.json())
+        ]).then(([returnsData, drawdownData]) => {
+            allDates = drawdownData.dates;
+            
+            const firstDate = new Date(allDates[0]).toLocaleDateString();
+            const lastDate = new Date(allDates[allDates.length - 1]).toLocaleDateString();
+            const yearDiff = Math.round((new Date(lastDate) - new Date(firstDate)) / (1000 * 60 * 60 * 24 * 365));
+
+            const createTraces = (data) => [
+                {
+                    x: data.dates,
+                    y: data.XLK,
+                    name: 'XLK',
+                    type: 'scatter',
+                    visible: true
+                },
+                {
+                    x: data.dates,
+                    y: data.SPY,
+                    name: 'SPY',
+                    type: 'scatter',
+                    visible: true
+                },
+                {
+                    x: data.dates,
+                    y: data.NIFTYBEES,
+                    name: 'NIFTYBEES',
+                    type: 'scatter',
+                    visible: true
+                }
+            ];
+
+            const dims = getPlotDimensions();
+            const baseLayout = {
+                xaxis: { 
+                    title: 'Date',
+                    fixedrange: false
+                },
+                showlegend: true,
+                dragmode: 'pan',
+                ...dims,
+                margin: {             // Adjust margins to maximize plot area
+                    l: 50,
+                    r: 50,
+                    t: 80,
+                    b: 50
+                }
+            };
+
+            const returnsLayout = {
+                ...baseLayout,
+                title: {
+                    text: 'Returns Over 10 Years<br>' +
+                          `<sup>Data from ${firstDate} to ${lastDate}, ${yearDiff} years. All data in USD.</sup>`,
+                    font: { size: 24 }
+                },
+                yaxis: {
+                    title: 'Return',
+                    fixedrange: true,
+                    tickformat: '.2%'
+                },
+            };
+
+            const drawdownLayout = {
+                ...baseLayout,
+                title: {
+                    text: 'Drawdowns Over 10 Years',
+                    font: { size: 24 }
+                },
+                yaxis: {
+                    title: 'Drawdown',
+                    fixedrange: true,
+                    tickformat: '.2%'
+                }
+            };
+
+            // Modify the layouts to include the relayout handler
+            const baseConfig = {
+                displayModeBar: true,
+                scrollZoom: true,  // Enable mouse wheel zoom
+                modeBarButtonsToAdd: [{
+                    name: 'Reset zoom',
+                    click: function() {
+                        updatePlots([allDates[0], allDates[allDates.length - 1]]);
+                    }
+                }]
+            };
+
+            Plotly.newPlot('returns-plot', createTraces(returnsData), returnsLayout, baseConfig);
+            Plotly.newPlot('drawdown-plot', createTraces(drawdownData), drawdownLayout, baseConfig);
+
+            // Add manual double-click handlers
+            document.getElementById('returns-plot').on('plotly_doubleclick', function() {
+                updatePlots([allDates[0], allDates[allDates.length - 1]]);
+            });
+
+            document.getElementById('drawdown-plot').on('plotly_doubleclick', function() {
+                updatePlots([allDates[0], allDates[allDates.length - 1]]);
+            });
+
+            // Add manual drag handlers
+            ['returns-plot', 'drawdown-plot'].forEach(plotId => {
+                document.getElementById(plotId).on('plotly_relayout', function(evt) {
+                    if (evt['xaxis.range[0]'] && evt['xaxis.range[1]']) {
+                        updatePlots([evt['xaxis.range[0]'], evt['xaxis.range[1]']]);
+                    }
+                });
+            });
+
+            // Set initial plot dimensions
+            updatePlotDimensions();
+        });
+
+        function setDateRange(days) {
+            const endDate = new Date(allDates[allDates.length - 1]);
+            
+            if (days === 'max') {
+                updatePlots([allDates[0], allDates[allDates.length - 1]]);
+                return;
+            }
+
+            const startDate = new Date(endDate);
+            startDate.setDate(startDate.getDate() - days);
+            updatePlots([startDate.toISOString(), endDate.toISOString()]);
+        }
+    </script>
+</body>
+</html>
