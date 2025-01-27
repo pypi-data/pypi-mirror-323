@@ -1,0 +1,7 @@
+better_profanity
+textblob
+scikit-learn
+pyperclip
+
+[email_support]
+smtplib
