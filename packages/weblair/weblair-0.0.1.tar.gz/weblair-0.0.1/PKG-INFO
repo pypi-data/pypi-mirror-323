@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: weblair
+Version: 0.0.1
+Summary: agents based on pyautogui
+Home-page: https://github.com/santhosh/
+License: MIT
+Author: Kammari Santhosh
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pytest-playwright (>=0.6.2,<0.7.0)
+Project-URL: Repository, https://github.com/santhosh/
+Description-Content-Type: text/markdown
+
+
