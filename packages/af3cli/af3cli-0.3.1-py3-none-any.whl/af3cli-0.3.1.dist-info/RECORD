@@ -1,0 +1,16 @@
+af3cli/__init__.py,sha256=J8ZEZ4hVb9NCMjmxXxLwdpLTbfl9K8oJd3hshA7seCQ,401
+af3cli/__main__.py,sha256=PpwJnGbAAjW2Jo3GEoxN_KXYFSPHiM0Mk_bAamPbtz8,40914
+af3cli/bond.py,sha256=dFQLHSO-_tylqXQ45dtIXXLcQY4OolmmcFZxCzkCYzc,2890
+af3cli/builder.py,sha256=VRMxNGd6Y0y3n1oAgr8i7YEDrXiRHExRV1su2aUxhRI,5704
+af3cli/exception.py,sha256=-q__gLv9T-sn4t_8xUbJEFLydhwm5pZ_PdNi2wLBj5g,623
+af3cli/input.py,sha256=iT5zS9-S0s42RqQYIn-1ixCR47nusA-oQmjRPq9FHRo,7740
+af3cli/io.py,sha256=W9R4xLI3CKLitE0z19wRLuKTpeFMBRJz8sE6tR6xaHM,12437
+af3cli/ligand.py,sha256=Aa9toMBOv1VhnCKHoQcbqNvfZvSWZad08YddDPG9QZc,4551
+af3cli/mixin.py,sha256=xuzjlSvqEjtXqSvzPg3lo4xmKj0Ub1WWKlORSJZvBQo,523
+af3cli/seqid.py,sha256=Fe-bOa_D6ZnJWiO-w9PqdHm0OxSO3Mwwl6E4K8ppD2U,6153
+af3cli/sequence.py,sha256=oPRsHhbU0ERu0pwAoLXpNSyLBV45C3tSw-PZE5pqsDA,19841
+af3cli-0.3.1.dist-info/METADATA,sha256=o1fzuAL4eKLZBz6rsuRgRTz_w2OAov9jHcdPsomcMRo,15530
+af3cli-0.3.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+af3cli-0.3.1.dist-info/entry_points.txt,sha256=ExF4uOtynhPXizzyDVgIY_ZIIXrnMTUgm4D4J5JJfzA,48
+af3cli-0.3.1.dist-info/licenses/LICENSE,sha256=0n6sla0lvfAKzM4cHSJ9C7hrNWrEDDrSNX718zX3VUM,1070
+af3cli-0.3.1.dist-info/RECORD,,
