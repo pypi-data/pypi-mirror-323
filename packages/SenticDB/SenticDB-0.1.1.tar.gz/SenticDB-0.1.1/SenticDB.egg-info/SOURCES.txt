@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+SenticDB/SenticDB.py
+SenticDB/__init__.py
+SenticDB.egg-info/PKG-INFO
+SenticDB.egg-info/SOURCES.txt
+SenticDB.egg-info/dependency_links.txt
+SenticDB.egg-info/requires.txt
+SenticDB.egg-info/top_level.txt
