@@ -1,0 +1,9 @@
+README.md
+setup.py
+once_webscraper/__init__.py
+once_webscraper/belli.py
+once_webscraper.egg-info/PKG-INFO
+once_webscraper.egg-info/SOURCES.txt
+once_webscraper.egg-info/dependency_links.txt
+once_webscraper.egg-info/requires.txt
+once_webscraper.egg-info/top_level.txt
