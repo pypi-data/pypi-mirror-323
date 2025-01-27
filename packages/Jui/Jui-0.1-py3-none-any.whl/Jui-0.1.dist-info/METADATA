@@ -1,0 +1,218 @@
+Metadata-Version: 2.1
+Name: Jui
+Version: 0.1
+Summary: JynPopMod Python Module
+Home-page: https://github.com/Jynoqtra/JynPopMod
+Author: Jynoqtra
+Author-email: Jynoqtra@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow
+Provides-Extra: email_support
+Requires-Dist: smtplib; extra == "email-support"
+
+GUI/INTERFACE utils: from JynPopMod.utils.gui_utils import *
+
+### **1. `show_error_messagebox`**
+
+This function creates and displays an error message in a `Tkinter` `messagebox`.
+
+**Example Usage:**
+```python
+show_error_messagebox("An error occurred!")
+```
+
+---
+
+### **2. `Jwin` Class**
+
+The `Jwin` class allows you to create a customizable window with widgets like buttons, labels, and more, arranged based on a grid layout.
+
+**Example Usage:**
+```python
+layout = """
++--------+--------+  
+|12345678|12345678|  
+|12345678|12345678|  
+|12345678|12345678|  
++--------+--------+  
+"""
+widgets_config = [
+    {"type": "button", "position": (0, 0), "options": {"text": "Click Me", "id": "button1"}},
+    {"type": "label", "position": (1, 0), "options": {"text": "Hello"}}
+]
+app = Jwin(layout, widgets_config)
+app.run()
+```
+
+---
+
+### **3. `JynPopMod`**
+
+This function outputs a message about the JynPopMod project created by Jynoqtra.
+
+**Example Usage:**
+```python
+JynPopMod()  # Outputs message about JynPopMod
+```
+
+---
+
+### **4. `switch_case`**
+
+This function simulates a switch-case behavior using a dictionary to map conditions to corresponding actions, like functions or values.
+
+**Example Usage:**
+```python
+result = switch_case("option1", {"option1": lambda: "Selected option 1", "option2": lambda: "Selected option 2"})
+print(result)  # Outputs: "Selected option 1"
+```
+
+---
+
+### **5. `pop`**
+
+This function creates a simple pop-up window with the message passed to it.
+
+**Example Usage:**
+```python
+pop("This is an information pop-up!")
+```
+
+---
+
+### **6. `popinp`**
+
+This function prompts the user to input text through a pop-up input dialog.
+
+**Example Usage:**
+```python
+user_input = popinp("Enter your name:")
+print(user_input)  # Outputs the input provided by the user
+```
+
+---
+
+### **7. `pop_with_image`**
+
+This function shows a message in a pop-up along with an image (specified by a file path).
+
+**Example Usage:**
+```python
+pop_with_image("Message with image", "path/to/image.png")
+```
+
+---
+
+### **8. `set_theme`**
+
+This function changes the window theme between "light" and "dark", adjusting the background color accordingly.
+
+**Example Usage:**
+```python
+set_theme(root, "dark")  # Sets the theme of the window to dark
+```
+
+---
+
+### **9. `track_interaction`**
+
+This function allows tracking interactions with widgets, such as clicks or key presses, and logs the event.
+
+**Example Usage:**
+```python
+track_interaction("button1", "clicked")  # Outputs: "Interaction with button1: clicked"
+```
+
+---
+
+### **10. `main_win`**
+
+This function creates and returns the main Tkinter window, ready to be customized further.
+
+**Example Usage:**
+```python
+root = main_win()  # Creates the main window
+```
+
+---
+
+### **11. Window Management Functions**
+
+These functions enable window customization, such as setting the size, title, icon, and opacity.
+
+**Example Usage:**
+```python
+set_window_size(root, width=500, height=400)  # Resizes the window
+set_window_title(root, "New Title")  # Sets the window title
+```
+
+---
+
+### **12. `show_info_messagebox`**
+
+This function shows an informational message in a messagebox.
+
+**Example Usage:**
+```python
+show_info_messagebox("This is an informational message.")
+```
+
+---
+
+### **13. `show_warning_messagebox`**
+
+This function displays a warning message in a messagebox.
+
+**Example Usage:**
+```python
+show_warning_messagebox("This is a warning message.")
+```
+
+---
+
+### **14. `ask_yes_no_question`**
+
+This function prompts the user with a yes/no question in a messagebox and returns the answer.
+
+**Example Usage:**
+```python
+response = ask_yes_no_question("Do you want to continue?")
+print(response)  # True for 'Yes', False for 'No'
+```
+
+---
+
+### **15. `create_checkbox_widget`**
+
+This function creates a checkbox widget in a window, allowing the user to check or uncheck it.
+
+**Example Usage:**
+```python
+checkbox = create_checkbox_widget(root, "Accept terms", default=True)
+```
+
+---
+
+### **16. `validate_input`**
+
+This function validates user input based on the specified type (e.g., integer, float, etc.) and prompts the user for correct input if necessary.
+
+**Example Usage:**
+```python
+valid_age = validate_input("Enter your age:", "int")  # Ensures input is an integer
+```
+
+---
+
+### **17. `animate_widget`**
+
+This function animates a widget by smoothly transitioning it from one position to another within a specified duration.
+
+**Example Usage:**
+```python
+animate_widget(button, 0, 0, 200, 200, duration=1000)  # Moves button over 1 second
+```
