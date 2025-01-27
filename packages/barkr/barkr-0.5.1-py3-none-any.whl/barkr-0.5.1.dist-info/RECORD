@@ -1,0 +1,17 @@
+barkr/__init__.py,sha256=Ns6rlQCejCs2QgmChdHIQ-D1yQQm7MSHBv7v0Kfo5D8,491
+barkr/connections/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+barkr/connections/base.py,sha256=6sPnOwKlVIOxvjZuP4Fg5mWOJEct9A1pVy5Zh3Z3rMs,2889
+barkr/connections/bluesky.py,sha256=VRMP76usrW6BeeVh9lrWIFJTQGf_BmAv6JS3y4gcEbU,4316
+barkr/connections/mastodon.py,sha256=VHoG3GeeDwpESZAAkTtg4A8yz1uyPLtmYoWozFYKF3k,3818
+barkr/connections/telegram.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+barkr/connections/twitter.py,sha256=3sORazOrgZuWx2ngZXNO9BplEhcr-5cN31LcijZNvFs,3199
+barkr/main.py,sha256=noFxtK3-RrQ9BTioEJK5V_NfxYnAFdxf_WNjI2kGANM,3762
+barkr/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+barkr/models/message.py,sha256=1Sx1h4wG81IE667EsnKbmG4Ik57t0pOwSWKnx8m4TGE,624
+barkr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+barkr/utils.py,sha256=Z92v_ZdM_B92eDejMdzANWpgif1oAuydI9sn1MFiwn8,631
+barkr/yop.py,sha256=11wxewMN652QgZ6dcZX7thkzo2_f7OK-Ey_e5vDQAcY,740
+barkr-0.5.1.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+barkr-0.5.1.dist-info/METADATA,sha256=AN0UNG1qr2YRG1960nW-qfiYmATxuarOBpFqyre7qvk,5147
+barkr-0.5.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+barkr-0.5.1.dist-info/RECORD,,
