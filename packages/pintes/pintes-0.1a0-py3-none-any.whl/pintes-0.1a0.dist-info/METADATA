@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: pintes
+Version: 0.1a0
+Summary: A Python-based static HTML page generator similar to TKinter.
+Project-URL: Source, https://github.com/FormunaGit/Pintes
+Project-URL: Issues, https://github.com/FormunaGit/Pintes/issues
+Author-email: Formuna <no@thankyou.com>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE
+Keywords: generator,html,tkinter
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# Pintes
+*An amalgamation of horror.*
+Pintes is a tool made in Python that allows users to develop static HTML pages with ease.
+
+## Why?
+- For the actual tool, I have no idea. I had an idea and I worked on it.
+- For the name, I also have no idea.
+
+## How?
+Pintes internally uses a list that the tag create functions append to. This list is then joined and written to a file after the necessary tags are added.
+
+## Usage
+As of 0.1:PRERELEASE, Pintes is not on PyPI. And since I don't understand how to use setup.py, you'll have to clone the repository and use the `pintes.py` file as a module.
+Use the `demo.py` file as a reference to how to use Pintes.
