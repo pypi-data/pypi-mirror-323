@@ -1,0 +1,16 @@
+com/__init__.py,sha256=BFjS3yYJxFSaVMoEKiA02BdbAmPg89QotqeT7ABCHuA,48
+com/ilderness/__init__.py,sha256=BFjS3yYJxFSaVMoEKiA02BdbAmPg89QotqeT7ABCHuA,48
+com/ilderness/solo/__init__.py,sha256=BFjS3yYJxFSaVMoEKiA02BdbAmPg89QotqeT7ABCHuA,48
+com/ilderness/solo/model/__init__.py,sha256=BFjS3yYJxFSaVMoEKiA02BdbAmPg89QotqeT7ABCHuA,48
+com/ilderness/solo/model/account_pb2.py,sha256=I1kredRya-UsRFm9OxOx_9xaTZtMkWAznNBdQpDLSpc,1855
+com/ilderness/solo/model/account_pb2.pyi,sha256=o369w29U9wQL-04jV4g4sWZ4I_MN3_7vsl0ha8GVo8U,733
+com/ilderness/solo/model/account_pb2_grpc.py,sha256=VAZeAFJgIRCkSbigzOYnIQ08mfqR1OaSDnrl6MGgdO4,913
+com/ilderness/solo/service/__init__.py,sha256=BFjS3yYJxFSaVMoEKiA02BdbAmPg89QotqeT7ABCHuA,48
+com/ilderness/solo/service/account_service_pb2.py,sha256=bnxm2nNI9kmKurMU9rP6lgGIYKK5jhe0XBQleExqVfE,2666
+com/ilderness/solo/service/account_service_pb2.pyi,sha256=-5pIUHxJGOxkRfNL0VyEdlJBTLcbf1tuv5E_Rqq027I,793
+com/ilderness/solo/service/account_service_pb2_grpc.py,sha256=MGwQ3SLmm1t2aUz_JODdujSwoakF2VmCdOW7MRLwmc8,10004
+solo_proto-0.0.2.dist-info/LICENSE,sha256=Q2ptU2E48gOsMzhYz_kqVovmJ5d1KzrblLyqD2_-fvY,1235
+solo_proto-0.0.2.dist-info/METADATA,sha256=nMc3y_coqybIzLr2r6nr1XQJUHI3mHGa_H9TU-akzFs,519
+solo_proto-0.0.2.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+solo_proto-0.0.2.dist-info/top_level.txt,sha256=A7eVUp0bsHtbJ7vD4f_Ju79_mDJojU9deED6-LV9_s0,4
+solo_proto-0.0.2.dist-info/RECORD,,
