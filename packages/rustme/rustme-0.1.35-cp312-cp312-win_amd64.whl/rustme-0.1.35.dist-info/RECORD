@@ -1,0 +1,7 @@
+rustme-0.1.35.dist-info/METADATA,sha256=wBbI5OLHJC74BLju-3zZIzw97AzSbXtfK_Gpacquz3c,12985
+rustme-0.1.35.dist-info/WHEEL,sha256=2fdNHxJvS2bAcI00delQ4QrnR7Oujl4cP2y-SRm5elU,96
+rustme/__init__.py,sha256=03H8i6BxrCXfA0QY6VClxdBviUkoyZsMIglc9A3KGAc,178
+rustme/ame_chunk.py,sha256=cfrtbui6Z8HbMzPSKc93U1blfPf7Wtd7YknS16vbfMI,5178
+rustme_rust/__init__.py,sha256=uINaw4nGI4fG-3NuKS7Otp8u_jpkj6noQCNZty73SLY,127
+rustme_rust/rustme_rust.cp312-win_amd64.pyd,sha256=idRI68X3KbXnXQ4e1KfCaDGk5T-P3RUvn9_3dV-vkNg,395776
+rustme-0.1.35.dist-info/RECORD,,
