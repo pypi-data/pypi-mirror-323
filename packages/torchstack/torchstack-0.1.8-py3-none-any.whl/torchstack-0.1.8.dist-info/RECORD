@@ -1,0 +1,25 @@
+torchstack/__init__.py,sha256=V040f-p1O1wiEokueK6qeUgYs7MJIbO0FhVlpeY4C-0,692
+torchstack/configuration.py,sha256=h0RlDHrjYqgnO4DOfew5LU7jSlq_UmJbc4psF5k6jTY,424
+torchstack/distribute.py,sha256=kHcjm2FSEdFzNVoS3Or39NmsvusV1bMFU19gV0JiaQs,1725
+torchstack/ensemble.py,sha256=KlKZKyXXgZkYnRM6o1sSIVtCpWJkCvyrUznQp_GKJ1I,2274
+torchstack/member.py,sha256=K2vWjtI8yRts-gtRWwBPG_dH7gzowS2afudA2WGb87Q,2643
+torchstack/backup/_optimization.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torchstack/backup/cag copy.py,sha256=t8lPRji2hiq1fFT5L058RAlJgj-rNTuwUtqSl_UUgJE,6239
+torchstack/backup/ensemble_generator.py,sha256=eyc5AWON_C4t5xpaIP6w2QFcWd0iLUmM6y7cqUSoVA8,10359
+torchstack/backup/generator.py,sha256=oPAbQ18PXGyVhhwnneVdhL7WjNbrYZxAWdX-LPdTNAc,10807
+torchstack/backup/tokenization/__init__.py,sha256=lO3c-6GrSBce9mAnKcdbsTI5q2Uc6jmB2enSDZyyoPo,183
+torchstack/backup/tokenization/base.py,sha256=UB7M8szxZ7FptkcYBOqac8aXWN4C6PRPmLsz7HT2iys,379
+torchstack/backup/tokenization/projection.py,sha256=nHZVh_kJpV03Y4QRZu8c5OaOpJAWVnMLhng_fJRhdng,428
+torchstack/backup/tokenization/union_vocabulary.py,sha256=mjkneG8UBhz23KSGWK4tAtI94Ieu4bx4oYxzb55xXzQ,695
+torchstack/models/__init__.py,sha256=i7-pdDkMcf6aTY-s5wYVCx6BV6FBPgZXs2J66Yg_5ac,147
+torchstack/models/causal_model.py,sha256=qnaJJ_1N1QPybHzdKcTFEth68deu5HwpnpM2eY4L-CE,2672
+torchstack/strategies/__init__.py,sha256=ESRU1ogxRsllDsmQsceQwJ1nxBHqVtYMsov0ktx966Q,285
+torchstack/strategies/base.py,sha256=WNwUByEDGb0Pvk62Mhwsdaj4zwCtzuejNAsGZACX7i4,654
+torchstack/strategies/cag.py,sha256=RHCgZfpvALOnHSRpADGKGQF1cea7tyx1oXg84r8LAcU,5895
+torchstack/strategies/deepen.py,sha256=2CowOkbpL2iW-BffEngAVAjwystQ3UtuVqmRZxWgt60,582
+torchstack/strategies/unite.py,sha256=eOPWMyIGXVCzI7ynvoCK-j1014L5Ja8jZuQVruO-qOw,585
+torchstack-0.1.8.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+torchstack-0.1.8.dist-info/METADATA,sha256=ru4nhsFThCL5feCuf_liCXUhwyNQZFIpf55-vdIdkSw,4523
+torchstack-0.1.8.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+torchstack-0.1.8.dist-info/top_level.txt,sha256=PxxrSxBQAZrw4808twCwhi-l3PLWUT5oxAKRphbA4kQ,11
+torchstack-0.1.8.dist-info/RECORD,,
