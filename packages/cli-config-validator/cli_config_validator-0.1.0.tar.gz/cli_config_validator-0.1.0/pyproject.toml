@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "cli-config-validator"
+version = "0.1.0"
+description = "Validate configuration from multiple configuration files against a Python pydantic class Model."
+authors = ["Mitesh Singh Jat <mitesh.singh.jat@gmail.com>"]
+license = "Apache-2.0 license"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = "^2.10.6"
+pyyaml = "5.4.1"
+toml = "0.10.2"
+
+
+[tool.poetry.group.dev.dependencies]
+build = "^1.2.2.post1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
