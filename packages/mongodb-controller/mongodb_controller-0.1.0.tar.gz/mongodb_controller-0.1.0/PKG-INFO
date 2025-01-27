@@ -1,0 +1,68 @@
+Metadata-Version: 2.2
+Name: mongodb_controller
+Version: 0.1.0
+Summary: A Python module for managing fund time series data using MongoDB
+Home-page: https://github.com/nailen1/mongodb_controller.git
+Author: June Young Park
+Author-email: juneyoungpaak@gmail.com
+Keywords: mongodb database fund time-series data-management
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: pymongo>=4.10.1
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: aws-s3-controller>=0.6.1
+Requires-Dist: shining-pebbles>=0.2.72
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# MongoDB Fund Data Controller
+
+A Python module for managing fund time series data using MongoDB. This module provides reliable data upload, management, and retrieval capabilities.
+
+## Features
+- Secure MongoDB connection management
+- Reliable data upload and validation
+- Efficient time series data querying
+- Error handling and logging
+
+## Installation
+```bash
+pip install -r requirements.txt
+```
+
+## Project Structure
+```
+mongodb_controller/
+├── doc/
+│   ├── design.md
+│   ├── context.md
+│   └── commands-cascade.md
+├── src/
+│   └── mongodb_controller/
+├── tests/
+├── requirements.txt
+└── README.md
+```
+
+## Usage
+Documentation will be updated as the project progresses.
+
+## Development
+This project is under active development.
