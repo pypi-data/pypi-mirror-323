@@ -1,0 +1,11 @@
+TableProcessor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+TableProcessor/blank.py,sha256=fKARSB4ZNyIo3j1xn8dbzx2ZBWqi7iUIXXH7TP_pzko,4805
+TableProcessor/config.py,sha256=GujOd2OpvADRqaGlFCq2av1LNPZXkkwLhp3i4kiAl5E,22560
+TableProcessor/process_pipeline.py,sha256=SqHettPl5xdTWLyrq_x_yfbqahCewK75PMhONmPw3aI,1730
+TableProcessor/processing.py,sha256=1m2AMxcGLRSbR1QZHJRO9yFStB2NxfmDSOdywACUstA,12015
+TableProcessor/utils.py,sha256=cTg1ucO5BEHLvT6jiZyvybg4_4ou2Ys9v6UQuYLbY0c,2803
+output/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+TableProcessor-1.0.6.dist-info/METADATA,sha256=5RP_rXu_nB6C18oFCTrZ9CFbuN0ULDX7Zt2hTUiWUhg,533
+TableProcessor-1.0.6.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+TableProcessor-1.0.6.dist-info/top_level.txt,sha256=w9IAvS9ERhb_Eb02ynt7gTe2ZR3mjFERdkc12Gj3V14,15
+TableProcessor-1.0.6.dist-info/RECORD,,
