@@ -1,0 +1,111 @@
+Metadata-Version: 2.4
+Name: EN-ENcrypt
+Version: 1.0.1.1
+Summary: A matrix-based encryption library developed for TUBITAK 2204-a
+Project-URL: Homepage, https://github.com/TheBruh141/89crypt
+Project-URL: Repository, https://github.com/TheBruh141/89crypt
+Project-URL: Documentation, https://89crypt.readthedocs.io
+Project-URL: Bug_Tracker, https://github.com/TheBruh141/89crypt/issues
+Author-email: Bruh141 <141bruh@gmail.com>
+License: GNU GPLv3
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Security :: Cryptography
+Requires-Python: >=3.8
+Requires-Dist: mpmath~=1.3.0
+Requires-Dist: numpy~=2.2.1
+Provides-Extra: dev
+Requires-Dist: black>=24.1.0; extra == 'dev'
+Requires-Dist: isort>=5.13.0; extra == 'dev'
+Requires-Dist: mypy>=1.8.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'dev'
+Requires-Dist: pytest>=8.0.0; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: myst-parser>=2.0.0; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints>=1.25.0; extra == 'docs'
+Requires-Dist: sphinx-book-theme>=1.1.3; extra == 'docs'
+Requires-Dist: sphinx>=7.2.0; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# 89crypt | (ENcrypt)
+
+> A secure and efficient matrix-based encryption library for specific use cases developed for TUBITAK 2204-a project.
+
+## Features
+
+- Matrix-based encryption using periodic decimal expansions
+- Support for custom alphabets and character sets
+- High-precision numerical operations
+- Comprehensive error handling
+- Type-safe implementation with full type hints
+- Extensive documentation and examples
+
+## Installation
+
+```bash
+pip install EN-ENcrypt
+```
+
+For development installation with documentation tools:
+
+```bash
+pip install "EN-ENcrypt[dev,docs]"
+```
+
+## Quick Start
+
+```python
+from encryptlib import ENcrypt
+
+# Create an encryptor with a key
+encryptor = ENcrypt(59)
+
+# Encrypt a message
+encrypted = encryptor.encrypt("Hello World")
+print(f"Encrypted matrix:\n{encrypted}")
+
+# Decrypt the message
+decrypted = encryptor.decrypt(encrypted)
+print(f"Decrypted message: {decrypted}")
+```
+
+## Documentation
+
+Full documentation is available at [here!](http://thebruh141.github.io/89crypt/).
+
+## Development
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/TheBruh141/89crypt.git
+   cd 89crypt
+   ```
+
+2. Install development dependencies:
+   ```bash
+   pip install -e ".[dev,docs]"
+   ```
+
+3. Run tests:
+   ```bash
+   pytest
+   ```
+
+4. Build documentation:
+   ```bash
+   cd docs
+   make html
+   ```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the GNU General Public License v3 - see the [LICENSE](LICENSE) file for details.
