@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scpyce"
+version = "0.1.1"
+authors = [
+    {name = "Nicolo Bencini", email = "nicbencini@gmail.com"},
+]
+description = "SQL based library for building and visualising finite element models."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    # More classifiers can be found at
+]
+dependencies = [
+    "numpy",
+    "sqlite3",
+    "matplotlib",
+    "PyQt6"
+]
+
+[project.urls]
+Homepage = "https://github.com/nicbencini/scpyce"
+Issues = "https://github.com/nicbencini/scpyce/issues"
