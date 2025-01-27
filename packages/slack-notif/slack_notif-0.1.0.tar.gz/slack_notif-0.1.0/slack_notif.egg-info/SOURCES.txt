@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+slack_notif.egg-info/PKG-INFO
+slack_notif.egg-info/SOURCES.txt
+slack_notif.egg-info/dependency_links.txt
+slack_notif.egg-info/requires.txt
+slack_notif.egg-info/top_level.txt

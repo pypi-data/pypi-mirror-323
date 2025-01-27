@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slack-notif"
+version = "0.1.0"
+description = "A simple slack notification tool to alert you when scripts finish running."
+authors = [
+  { name="Jesse Gordon", email="jesse@vamos-labs.com" }
+]
+license = { file="LICENSE" }
+readme = "README.md"
+keywords = ["slack", "notification", "alert"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent"
+]
+dependencies = [
+    "slack-sdk>=3.27.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/vamos-lab/slack-notif"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=24.0.0",
+    "isort>=5.13.0",
+]

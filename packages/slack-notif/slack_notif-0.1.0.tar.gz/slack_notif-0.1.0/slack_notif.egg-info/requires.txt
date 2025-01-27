@@ -1,0 +1,6 @@
+slack-sdk>=3.27.0
+
+[dev]
+pytest>=7.0.0
+black>=24.0.0
+isort>=5.13.0
