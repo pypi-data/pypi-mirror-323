@@ -1,0 +1,74 @@
+[tool.poetry]
+name = "gaclw"
+version = "0.1.4"
+description = "Wrapper for Google API Client Library"
+authors = ["aYukiYoshida <yuki.yoshida@access-company.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+google-api-python-client = "^2.159.0"
+google-auth-httplib2 = "^0.2.0"
+google-auth-oauthlib = "^1.2.1"
+pydantic = "^2.10.5"
+pydantic-settings = "^2.7.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.2"
+mypy = "^1.14.1"
+poethepoet = "^0.32.1"
+
+[tool.ruff]
+fix = true
+line-length = 90
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle
+    "F",    # Pyflakes
+    "I",    # isort
+]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+ignore_missing_imports = true
+enable_incomplete_feature = "Unpack"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.executor]
+type = "virtualenv"
+location = ".venv"
+
+[tool.poe.tasks.format]
+cmd = "ruff check"
+help = "format code"
+
+[tool.poe.tasks.lint]
+cmd = "ruff format"
+help = "lint code"
+
+[tool.poe.tasks.check]
+cmd = "rm -rf dist"
+help = "static type check"
+
+[tool.poe.tasks.clean]
+cmd = "rm -rf dist"
+help = "clean up build artifacts"
+
+[tool.poe.tasks.build]
+cmd = "poetry build --format sdist"
+help = "build package"
+
+[tool.poe.tasks.publish]
+cmd = "poetry publish"
+help = "publish package"
