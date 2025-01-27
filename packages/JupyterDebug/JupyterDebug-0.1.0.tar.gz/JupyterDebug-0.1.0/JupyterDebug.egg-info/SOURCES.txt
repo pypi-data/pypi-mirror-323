@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+JupyterDebug/__init__.py
+JupyterDebug/core.py
+JupyterDebug/utils.py
+JupyterDebug.egg-info/PKG-INFO
+JupyterDebug.egg-info/SOURCES.txt
+JupyterDebug.egg-info/dependency_links.txt
+JupyterDebug.egg-info/requires.txt
+JupyterDebug.egg-info/top_level.txt
