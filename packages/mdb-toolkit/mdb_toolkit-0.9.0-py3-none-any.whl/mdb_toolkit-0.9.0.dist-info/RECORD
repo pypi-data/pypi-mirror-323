@@ -1,0 +1,17 @@
+build/lib/build/lib/mdb_toolkit/__init__.py,sha256=x2EIaxj9mp8htcaBHExtMPbDeJRJOs9X4QeNvyATjpk,240
+build/lib/build/lib/mdb_toolkit/core.py,sha256=EbA84OXcJhX-NH_IfBz13UpN3G-7_9Y1HZaELabNNTs,19247
+build/lib/build/lib/scripts/demo-kg.py,sha256=q3aK877xgmpIY5WCbIqse6k2EEcUxg-jjWka_nExyiE,5420
+build/lib/build/lib/scripts/demo.py,sha256=H0BQlYJdjm2plt4DboPpEDmWPTnZ_s66Zy9mhsh11FI,718
+build/lib/mdb_toolkit/__init__.py,sha256=x2EIaxj9mp8htcaBHExtMPbDeJRJOs9X4QeNvyATjpk,240
+build/lib/mdb_toolkit/core.py,sha256=EbA84OXcJhX-NH_IfBz13UpN3G-7_9Y1HZaELabNNTs,19247
+build/lib/scripts/demo-kg.py,sha256=q3aK877xgmpIY5WCbIqse6k2EEcUxg-jjWka_nExyiE,5420
+build/lib/scripts/demo.py,sha256=H0BQlYJdjm2plt4DboPpEDmWPTnZ_s66Zy9mhsh11FI,718
+mdb_toolkit/__init__.py,sha256=x2EIaxj9mp8htcaBHExtMPbDeJRJOs9X4QeNvyATjpk,240
+mdb_toolkit/core.py,sha256=EbA84OXcJhX-NH_IfBz13UpN3G-7_9Y1HZaELabNNTs,19247
+scripts/demo-kg.py,sha256=q3aK877xgmpIY5WCbIqse6k2EEcUxg-jjWka_nExyiE,5420
+scripts/demo.py,sha256=H0BQlYJdjm2plt4DboPpEDmWPTnZ_s66Zy9mhsh11FI,718
+mdb_toolkit-0.9.0.dist-info/LICENSE,sha256=r5iHDpNBctrdDUZWPACCbPDL9II4BzUNnEoprHHgryA,1068
+mdb_toolkit-0.9.0.dist-info/METADATA,sha256=D6TpZEKDVIvglhjgxyIJuMsJTr0lq7hASRG5QbKBiOA,10445
+mdb_toolkit-0.9.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+mdb_toolkit-0.9.0.dist-info/top_level.txt,sha256=Qlc8k3n1FyNgdyXvbCU_ghwgfkbJN7S54IJeOxKhdxg,26
+mdb_toolkit-0.9.0.dist-info/RECORD,,
