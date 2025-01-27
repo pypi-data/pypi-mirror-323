@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ae5d0d0a-e8bb-4c73-9a7f-0acd4750f228" name="Changes" comment="Add to development how-to" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gutow&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JupyterPhysSciLab/JPSL_Tools_Menu.git&quot;,
+    &quot;accountId&quot;: &quot;9f502e84-c538-4642-a4b9-7d3d56f76577&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2iySn8a82787gTl049uwctCUXl7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jonathan/GIT/JPSL_Tools_Menu&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-1b1018131e27-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae5d0d0a-e8bb-4c73-9a7f-0acd4750f228" name="Changes" comment="" />
+      <created>1720461488053</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720461488053</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial structure">
+      <option name="closed" value="true" />
+      <created>1720462350562</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720462350562</updated>
+    </task>
+    <task id="LOCAL-00002" summary="All menu items working">
+      <option name="closed" value="true" />
+      <created>1720488237759</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720488237759</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Menu, README.md &amp; CHANGELOG.md tweaks">
+      <option name="closed" value="true" />
+      <created>1720488674698</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720488674698</updated>
+    </task>
+    <task id="LOCAL-00004" summary="v0.2.0rc0">
+      <option name="closed" value="true" />
+      <created>1720538870942</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720538870942</updated>
+    </task>
+    <task id="LOCAL-00005" summary="v0.2.0">
+      <option name="closed" value="true" />
+      <created>1720542344020</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720542344020</updated>
+    </task>
+    <task id="LOCAL-00006" summary="case change for npm">
+      <option name="closed" value="true" />
+      <created>1720542995554</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720542995554</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix date in CHANGELOG.md">
+      <option name="closed" value="true" />
+      <created>1720636621067</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720636621067</updated>
+    </task>
+    <task id="LOCAL-00008" summary="hide before print now collapes code cells">
+      <option name="closed" value="true" />
+      <created>1737503324629</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737503324629</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add to development how-to">
+      <option name="closed" value="true" />
+      <created>1737848611932</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1737848611932</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial structure" />
+    <MESSAGE value="All menu items working" />
+    <MESSAGE value="Menu, README.md &amp; CHANGELOG.md tweaks" />
+    <MESSAGE value="v0.2.0rc0" />
+    <MESSAGE value="v0.2.0" />
+    <MESSAGE value="case change for npm" />
+    <MESSAGE value="fix date in CHANGELOG.md" />
+    <MESSAGE value="hide before print now collapes code cells" />
+    <MESSAGE value="Add to development how-to" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add to development how-to" />
+  </component>
+</project>
