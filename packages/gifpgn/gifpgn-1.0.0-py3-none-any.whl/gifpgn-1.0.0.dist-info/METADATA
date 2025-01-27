@@ -1,0 +1,139 @@
+Metadata-Version: 2.2
+Name: gifpgn
+Version: 1.0.0
+Summary: Chess GIF Generator for Python
+Home-page: http://github.com/prozn/gifpgn
+Author: Matthew Hambly
+License: GPLv3+
+Keywords: chess pgn uci analysis stockfish gif acpl
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Typing :: Typed
+Classifier: Topic :: Games/Entertainment :: Board Games
+Classifier: Topic :: Games/Entertainment :: Real Time Strategy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: pillow==11.1.0
+Requires-Dist: chess==1.11.1
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+gifpgn: Chess GIF Generator for Python
+======================================
+
+.. image:: https://img.shields.io/pypi/v/gifpgn?color=blue
+    :target: https://pypi.org/project/gifpgn/
+    :alt: PyPI
+
+.. image:: https://img.shields.io/pypi/dm/gifpgn
+    :target: https://pypistats.org/packages/gifpgn
+    :alt: Downloads
+
+.. image:: https://github.com/prozn/gifpgn/actions/workflows/run_tests.yml/badge.svg
+    :target: https://github.com/prozn/gifpgn/actions/workflows/run_tests.yml
+    :alt: Coverage Status
+
+Introduction
+------------
+
+Generate a GIF of a chess game from a PGN with optional:
+
+* Analysis bar
+* Analysis chart
+* Numerical Annotation Glyphs (NAGs)
+* Move and check arrows
+* PGN module to add engine evaluations and calculate ACPL
+
+
+    **Details on breaking changes in the 1.0.0 release**
+    
+    This release brings new features such as headers with player names, taken pieces and clocks, and Numeric Annotation Glyphs (NAGs).
+
+    The module was also restructured for easier usage and extensibility. Code using version 0.2.0 and earlier will not work with version 1.0.0 - minor changes will be required to get back up and running again.
+
+    Please see the examples and documentation for details.
+
+
+Demo
+----
+
+GIF with all features enabled
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+    import chess
+    import chess.engine
+    import chess.pgn
+    import io
+    from gifpgn import CreateGifFromPGN
+    from gifpgn.utils import PGN
+
+    pgn_string = ...
+    game = chess.pgn.read_game(io.StringIO(pgn_string))
+    if not PGN(game).has_analysis():
+        with chess.engine.SimpleEngine.popen_uci("/path/to/stockfish") as engine:
+            game = PGN(game).add_analysis(engine, chess.engine.Limit(depth=18))
+    g = CreateGifFromPGN(game)
+    g.enable_arrows()
+    g.add_headers(height=20)
+    g.add_analysis_bar()
+    g.add_analysis_graph()
+    g.enable_nags()
+    gif = g.generate("test_gif.gif")
+
+
+
+.. image:: https://i.imgur.com/hxQM0cl.gif
+
+
+Small GIF with no analysis
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+    import chess.pgn
+    import io
+    from from gifpgn import CreateGifFromPGN
+
+    pgn_string = ...
+    game = chess.pgn.read_game(io.StringIO(pgn_string))
+    g = CreateGifFromPGN(game)
+    g.board_size = 240
+    g.generate("test_small_gif.gif")
+
+
+
+.. image:: https://i.imgur.com/HkT2K8k.gif
+
+Installing
+----------
+
+Install with pip:
+
+::
+
+    pip install gifpgn
+
+
+Documentation
+-------------
+
+`View on Read The Docs <https://gifpgn.readthedocs.io/en/latest/>`_
+
+
