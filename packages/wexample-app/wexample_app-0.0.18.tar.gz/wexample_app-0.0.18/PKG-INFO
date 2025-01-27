@@ -1,0 +1,62 @@
+Metadata-Version: 2.2
+Name: wexample-app
+Version: 0.0.18
+Summary: Helpers for building Python app or cli.
+Author-email: weeger <contact@wexample.com>
+License: MIT
+Project-URL: homepage, https://github.com/wexample/python-app
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pip-tools
+Requires-Dist: pydantic
+Requires-Dist: pytest
+Requires-Dist: python-dotenv
+Requires-Dist: wexample-filestate==0.0.21
+Requires-Dist: wexample-helpers-yaml==0.0.20
+Requires-Dist: wexample-helpers==0.0.21
+Requires-Dist: wexample-prompt==0.0.20
+Requires-Dist: wexample-wex-addon-app==0.0.15
+
+# App
+
+Helpers for building Python app or cli.
+
+Version: 0.0.18
+
+## Requirements
+
+- Python >=3.6
+
+## Dependencies
+
+- pip-tools
+- pydantic
+- pytest
+- python-dotenv
+- wexample-filestate==0.0.21
+- wexample-helpers-yaml==0.0.20
+- wexample-helpers==0.0.21
+- wexample-prompt==0.0.20
+- wexample-wex-addon-app==0.0.15
+
+## Installation
+
+```bash
+pip install wexample-app
+```
+
+## Links
+
+- Homepage: https://github.com/wexample/python-app
+
+## License
+
+MIT
+## Credits
+
+This package has been developed by [Wexample](https://wexample.com), a collection of tools and utilities to streamline development workflows.
+
+Visit [wexample.com](https://wexample.com) to discover more tools and resources for efficient development.
