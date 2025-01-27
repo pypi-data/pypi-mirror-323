@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: harichselvamc
+Version: 0.3
+Summary: A simple Python package to generate Pascal's Triangle.
+Home-page: https://github.com/harichselvamc/harichselvamc
+Author: harichselvam
+Author-email: harichselvamc@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/plain
+
+
+    A Python package that generates Pascal's Triangle up to the specified number of rows. 
+    The package is ideal for learning about number patterns and exploring the properties of binomial coefficients. 
+
+    Features:
+    - Generate the first N rows of Pascal's Triangle
+    - Simple, easy-to-use interface
+    
+    This package may be extended in future versions to include optimizations and additional functionality.
+    
