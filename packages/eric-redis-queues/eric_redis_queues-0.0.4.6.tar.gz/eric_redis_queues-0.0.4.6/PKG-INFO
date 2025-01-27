@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: eric-redis-queues
+Version: 0.0.4.6
+Summary: Redis support for eric-sse
+License: MIT
+Author: Luca Stretti
+Author-email: laxertu@gmail.com
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: eric-sse (==0.6.3.10)
+Requires-Dist: redis (>=5.2.1,<6.0.0)
+Description-Content-Type: text/markdown
+
+Redis support for eric-sse
+
+A queue here is a Redis key value, where key is listener id and value is a list of Json data with messages information.
+
+Example of usage:
+
+    from eric_sse.prefabs import SSEChannel
+    from eric_redis_queues.eric_redis_queues import RedisQueueFactory
+    
+    c = SSEChannel(queues_factory=RedisQueueFactory())
+
