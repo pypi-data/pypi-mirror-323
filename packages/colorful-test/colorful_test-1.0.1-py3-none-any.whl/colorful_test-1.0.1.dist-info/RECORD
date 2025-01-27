@@ -1,0 +1,10 @@
+colorful_test/__init__.py,sha256=GGzMnwUP6N1jztd8yZlYJgzGnyOvZFCC8Jp9dOxPvUM,291
+colorful_test/__main__.py,sha256=u6PXTaXhJ1g8vqV8iHpIoVjjwNOVb2LJX9vMzb5wMk0,1124
+colorful_test/exceptions.py,sha256=QCr0PJzS-p-ZjbzhFa3WLdHwqsDpnZJOPtigS1sP4oI,97
+colorful_test/message.py,sha256=1MR04L05O_jVxUEnffDjyQkS9hqEPY1C6EwLHRh_6lw,1646
+colorful_test/skip_test.py,sha256=wLyTT-8ZcUd6lEwx2p_1Y5ASntjkoBD8AVh7t_x_71I,1518
+colorful_test/testcase.py,sha256=fXSCG5vWJFgcBMbhDHN_-ZP0XaiUexNA-KysVLBKuyQ,21081
+colorful_test-1.0.1.dist-info/LICENSE,sha256=TfT836iZ0tCpgMDSfzVXEZTHUFpDVCc7SonfJw9bQe4,11345
+colorful_test-1.0.1.dist-info/METADATA,sha256=wMHlyS2vldwGFGAQu3ORYEsc-9d8uLUYQoTWdzIrN5s,7046
+colorful_test-1.0.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+colorful_test-1.0.1.dist-info/RECORD,,
