@@ -1,0 +1,74 @@
+Metadata-Version: 2.4
+Name: random-shapes
+Version: 0.0.2
+Summary: Generate random shapes with ease.
+Project-URL: Documentation, https://relativityhd.github.io/random-shapes/
+Project-URL: Repository, https://github.com/relativityhd/random-shapes
+Project-URL: Issues, https://github.com/relativityhd/random-shapes/issues
+Author-email: Tobias Hölzer <tobiashoelzer@hotmail.com>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: bezier>=2024.6.20
+Requires-Dist: opencv-python>=4.11.0.86
+Requires-Dist: scipy>=1.15.1
+Provides-Extra: viz
+Requires-Dist: matplotlib>=3.10.0; extra == 'viz'
+Description-Content-Type: text/markdown
+
+# random-shapes
+
+Generate random shapes with ease.
+
+![Logo](docs/_static/random-shape-logo.png)
+
+## Installation
+
+You can install random-shapes via pip:
+
+```sh
+    pip install random-shapes
+```
+
+However, `uv` is recommended for installing python packages:
+
+```sh
+    uv add random-shapes
+```
+
+## Usage
+
+Install the optional library `matplotlib` for visualization:
+
+```sh
+    pip install random-shapes[viz]
+    # or
+    uv add random-shapes --extra viz
+```
+
+With random-shapes it is easy to generate a random shape (`bezier.Curve`):
+
+```python
+
+    from random_shapes import get_random_shape
+
+    shp = get_random_shape(n=10, r=0.05, edgy=0.2)
+    shp.plot(pts_per_edge=10)
+```
+
+![Random shape example](docs/_static/shape-example.png)
+
+This shape can then be turned into a binary image:
+
+```python
+    import matplotlib.pyplot as plt
+
+    from random_shapes import bezier_polygon_to_binary_image
+
+    binary_image = bezier_polygon_to_binary_image(shp)
+    plt.imshow(binary_image, cmap="gray")
+```
+
+![Binary image example](docs/_static/rasterize-example.png)
