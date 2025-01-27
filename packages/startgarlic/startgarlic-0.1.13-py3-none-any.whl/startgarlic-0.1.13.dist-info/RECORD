@@ -1,0 +1,17 @@
+startgarlic/__init__.py,sha256=hnye58ZpEGG5wGtisUu1hHn-29uxyu2JuSTKVmG1Tts,150
+startgarlic/cli.py,sha256=7WJ-gRatyYo_OmDsHUPezm5s7iWqLRQeuuXVh0uFOdY,801
+startgarlic/core copy.py,sha256=6EmyFf5N5v6r1IYttls40I8rmrOG9tgdFg652r3f7Zs,5330
+startgarlic/core.py,sha256=4bMbWtRe4Fbnw8X2IfPDwoeRqv_0M_50XMtBy78krV0,6922
+startgarlic/utils/__init__.py,sha256=9APOP_uI1Io1R0AsM9X1e5Q83Y6OkIoJMCFHzsWVcjg,390
+startgarlic/utils/analytics.py,sha256=3ZIScIpbLWhCblR_OpDrnjKGCdc0rwXuSaRdAAMSigk,2688
+startgarlic/utils/auction.py,sha256=oXmLl2FgFdXpJV1_otzJUhwlpeG_q1XDmbh0Onc9vgU,2853
+startgarlic/utils/config.py,sha256=HSvnwfQJTyaMJRs1QilENs6EaZ91mr2UhWWsd4fF3LA,483
+startgarlic/utils/database.py,sha256=gRTvQ7gnH6O8QPzG-0P5MGItWuLuRzloFuJIiYckvhc,9935
+startgarlic/utils/embeddings.py,sha256=QENqvYqKnX2VRJch2kKnUau9UJnhThWbCto-sGjQ2y4,3286
+startgarlic/utils/prompts copy.py,sha256=JUDFLiZ3zBmeoZmNJ0KCGyIqvgTepgZT3d045HxHq3c,2421
+startgarlic/utils/prompts.py,sha256=wGL1Elt46cK-kb-rCm-UZSh5WfsAUrsoPNdvKiLpsC8,2803
+startgarlic-0.1.13.dist-info/METADATA,sha256=5P_8zw_gODG1UpUsDB9MsEevcxKqJdN-A5OGQ6YlyP0,2393
+startgarlic-0.1.13.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+startgarlic-0.1.13.dist-info/entry_points.txt,sha256=ecmEf4OA3pJrMsQ4N7QpX11FSIQCIpsqFz9slzb1Wy8,53
+startgarlic-0.1.13.dist-info/top_level.txt,sha256=hMbU2lgm0hzvXCgm5Lqq3_qikOyjo-vcwDItY7aFiXk,12
+startgarlic-0.1.13.dist-info/RECORD,,
