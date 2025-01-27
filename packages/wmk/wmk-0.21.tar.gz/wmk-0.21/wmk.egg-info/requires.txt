@@ -1,0 +1,13 @@
+pyglet>=2.0.0
+click>=8.0.0
+urllib3>=2.3.0
+tqdm>=4.67.0
+
+[dev]
+jsonschema-gentypes
+sphinx
+sphinx-rtd-theme
+
+[test]
+pytest
+numpy

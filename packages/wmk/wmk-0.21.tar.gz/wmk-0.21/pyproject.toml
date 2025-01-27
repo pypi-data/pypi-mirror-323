@@ -1,0 +1,41 @@
+[project]
+name = "wmk"
+version = "0.21"
+description = "World Model Kit"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "Journee"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "pyglet>=2.0.0",
+    "click>=8.0.0",
+    "urllib3>=2.3.0",
+    "tqdm>=4.67.0",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/journee-live/wmk"
+Changelog = "https://github.com/journee-live/wmk/releases"
+Issues = "https://github.com/journee-live/wmk/issues"
+CI = "https://github.com/journee-live/wmk/actions"
+
+[project.scripts]
+wmk = "wmk.cli:cli"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "numpy",
+]
+dev = [
+    "jsonschema-gentypes",
+    "sphinx",
+    "sphinx-rtd-theme",
+]
