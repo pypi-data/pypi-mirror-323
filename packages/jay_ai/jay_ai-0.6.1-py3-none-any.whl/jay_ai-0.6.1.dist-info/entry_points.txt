@@ -1,0 +1,3 @@
+[console_scripts]
+jay=jay_ai.main:cli
+
