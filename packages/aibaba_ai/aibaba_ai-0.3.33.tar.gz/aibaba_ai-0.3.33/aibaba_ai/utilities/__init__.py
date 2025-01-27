@@ -1,0 +1,168 @@
+"""**Utilities** are the integrations with third-part systems and packages.
+
+Other Aibaba AI classes use **Utilities** to interact with third-part systems
+and packages.
+"""
+
+from typing import TYPE_CHECKING, Any
+
+from langchain._api import create_importer
+
+if TYPE_CHECKING:
+    from aibaba_ai_community.utilities import (
+        AlphaVantageAPIWrapper,
+        ApifyWrapper,
+        ArceeWrapper,
+        ArxivAPIWrapper,
+        BibtexparserWrapper,
+        BingSearchAPIWrapper,
+        BraveSearchWrapper,
+        DuckDuckGoSearchAPIWrapper,
+        GoldenQueryAPIWrapper,
+        GoogleFinanceAPIWrapper,
+        GoogleJobsAPIWrapper,
+        GoogleLensAPIWrapper,
+        GooglePlacesAPIWrapper,
+        GoogleScholarAPIWrapper,
+        GoogleSearchAPIWrapper,
+        GoogleSerperAPIWrapper,
+        GoogleTrendsAPIWrapper,
+        GraphQLAPIWrapper,
+        JiraAPIWrapper,
+        LambdaWrapper,
+        MaxComputeAPIWrapper,
+        MerriamWebsterAPIWrapper,
+        MetaphorSearchAPIWrapper,
+        NasaAPIWrapper,
+        OpenWeatherMapAPIWrapper,
+        OutlineAPIWrapper,
+        Portkey,
+        PowerBIDataset,
+        PubMedAPIWrapper,
+        Requests,
+        RequestsWrapper,
+        SceneXplainAPIWrapper,
+        SearchApiAPIWrapper,
+        SearxSearchWrapper,
+        SerpAPIWrapper,
+        SparkSQL,
+        SQLDatabase,
+        StackExchangeAPIWrapper,
+        SteamWebAPIWrapper,
+        TensorflowDatasets,
+        TextRequestsWrapper,
+        TwilioAPIWrapper,
+        WikipediaAPIWrapper,
+        WolframAlphaAPIWrapper,
+        ZapierNLAWrapper,
+    )
+
+# Create a way to dynamically look up deprecated imports.
+# Used to consolidate logic for raising deprecation warnings and
+# handling optional imports.
+DEPRECATED_LOOKUP = {
+    "AlphaVantageAPIWrapper": "aibaba_ai_community.utilities",
+    "ApifyWrapper": "aibaba_ai_community.utilities",
+    "ArceeWrapper": "aibaba_ai_community.utilities",
+    "ArxivAPIWrapper": "aibaba_ai_community.utilities",
+    "BibtexparserWrapper": "aibaba_ai_community.utilities",
+    "BingSearchAPIWrapper": "aibaba_ai_community.utilities",
+    "BraveSearchWrapper": "aibaba_ai_community.utilities",
+    "DuckDuckGoSearchAPIWrapper": "aibaba_ai_community.utilities",
+    "GoldenQueryAPIWrapper": "aibaba_ai_community.utilities",
+    "GoogleFinanceAPIWrapper": "aibaba_ai_community.utilities",
+    "GoogleLensAPIWrapper": "aibaba_ai_community.utilities",
+    "GoogleJobsAPIWrapper": "aibaba_ai_community.utilities",
+    "GooglePlacesAPIWrapper": "aibaba_ai_community.utilities",
+    "GoogleScholarAPIWrapper": "aibaba_ai_community.utilities",
+    "GoogleTrendsAPIWrapper": "aibaba_ai_community.utilities",
+    "GoogleSearchAPIWrapper": "aibaba_ai_community.utilities",
+    "GoogleSerperAPIWrapper": "aibaba_ai_community.utilities",
+    "GraphQLAPIWrapper": "aibaba_ai_community.utilities",
+    "JiraAPIWrapper": "aibaba_ai_community.utilities",
+    "LambdaWrapper": "aibaba_ai_community.utilities",
+    "MaxComputeAPIWrapper": "aibaba_ai_community.utilities",
+    "MerriamWebsterAPIWrapper": "aibaba_ai_community.utilities",
+    "MetaphorSearchAPIWrapper": "aibaba_ai_community.utilities",
+    "NasaAPIWrapper": "aibaba_ai_community.utilities",
+    "OpenWeatherMapAPIWrapper": "aibaba_ai_community.utilities",
+    "OutlineAPIWrapper": "aibaba_ai_community.utilities",
+    "Portkey": "aibaba_ai_community.utilities",
+    "PowerBIDataset": "aibaba_ai_community.utilities",
+    "PubMedAPIWrapper": "aibaba_ai_community.utilities",
+    # We will not list PythonREPL in __all__ since it has been removed from community
+    # it'll proxy to community package, which will raise an appropriate exception.
+    "PythonREPL": "aibaba_ai_community.utilities",
+    "Requests": "aibaba_ai_community.utilities",
+    "SteamWebAPIWrapper": "aibaba_ai_community.utilities",
+    "SQLDatabase": "aibaba_ai_community.utilities",
+    "SceneXplainAPIWrapper": "aibaba_ai_community.utilities",
+    "SearchApiAPIWrapper": "aibaba_ai_community.utilities",
+    "SearxSearchWrapper": "aibaba_ai_community.utilities",
+    "SerpAPIWrapper": "aibaba_ai_community.utilities",
+    "SparkSQL": "aibaba_ai_community.utilities",
+    "StackExchangeAPIWrapper": "aibaba_ai_community.utilities",
+    "TensorflowDatasets": "aibaba_ai_community.utilities",
+    "RequestsWrapper": "aibaba_ai_community.utilities",
+    "TextRequestsWrapper": "aibaba_ai_community.utilities",
+    "TwilioAPIWrapper": "aibaba_ai_community.utilities",
+    "WikipediaAPIWrapper": "aibaba_ai_community.utilities",
+    "WolframAlphaAPIWrapper": "aibaba_ai_community.utilities",
+    "ZapierNLAWrapper": "aibaba_ai_community.utilities",
+}
+
+_import_attribute = create_importer(__package__, deprecated_lookups=DEPRECATED_LOOKUP)
+
+
+def __getattr__(name: str) -> Any:
+    """Look up attributes dynamically."""
+    return _import_attribute(name)
+
+
+__all__ = [
+    "AlphaVantageAPIWrapper",
+    "ApifyWrapper",
+    "ArceeWrapper",
+    "ArxivAPIWrapper",
+    "BibtexparserWrapper",
+    "BingSearchAPIWrapper",
+    "BraveSearchWrapper",
+    "DuckDuckGoSearchAPIWrapper",
+    "GoldenQueryAPIWrapper",
+    "GoogleFinanceAPIWrapper",
+    "GoogleLensAPIWrapper",
+    "GoogleJobsAPIWrapper",
+    "GooglePlacesAPIWrapper",
+    "GoogleScholarAPIWrapper",
+    "GoogleTrendsAPIWrapper",
+    "GoogleSearchAPIWrapper",
+    "GoogleSerperAPIWrapper",
+    "GraphQLAPIWrapper",
+    "JiraAPIWrapper",
+    "LambdaWrapper",
+    "MaxComputeAPIWrapper",
+    "MerriamWebsterAPIWrapper",
+    "MetaphorSearchAPIWrapper",
+    "NasaAPIWrapper",
+    "OpenWeatherMapAPIWrapper",
+    "OutlineAPIWrapper",
+    "Portkey",
+    "PowerBIDataset",
+    "PubMedAPIWrapper",
+    "Requests",
+    "SteamWebAPIWrapper",
+    "SQLDatabase",
+    "SceneXplainAPIWrapper",
+    "SearchApiAPIWrapper",
+    "SearxSearchWrapper",
+    "SerpAPIWrapper",
+    "SparkSQL",
+    "StackExchangeAPIWrapper",
+    "TensorflowDatasets",
+    "RequestsWrapper",
+    "TextRequestsWrapper",
+    "TwilioAPIWrapper",
+    "WikipediaAPIWrapper",
+    "WolframAlphaAPIWrapper",
+    "ZapierNLAWrapper",
+]
