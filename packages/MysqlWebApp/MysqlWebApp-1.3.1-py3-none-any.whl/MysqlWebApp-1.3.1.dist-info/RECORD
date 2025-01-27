@@ -1,0 +1,9 @@
+MysqlWebApp/MysqlApplication.py,sha256=ry59BQu6SSXWEWo8og_YRT-js_eRGgCYzZSXk7NekPA,7896
+MysqlWebApp/__init__.py,sha256=OE00zYMNhDNjb_kQTfgukrJ4thoDgrhdFMyz7AwdZI8,78
+MysqlWebApp/templates/config_mysql.html,sha256=H07PK6yiKOUJgO7pKw4sjijxQ_RQof31e5z1Oe46NbA,3412
+MysqlWebApp/templates/home.html,sha256=tNs8zWqlCx4pAge-CXyjbLfv2VMnQGLCrSIJRiiruG4,10815
+MysqlWebApp-1.3.1.dist-info/LICENSE.txt,sha256=V-ulqpgZ07us2O_84sNh8joH2KGpAOHULd4N7-pUTEI,599
+MysqlWebApp-1.3.1.dist-info/METADATA,sha256=eIWB-2oGWhISGBqlbLACplfTsDgU5rUXe-C0_UsgFvA,5822
+MysqlWebApp-1.3.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+MysqlWebApp-1.3.1.dist-info/top_level.txt,sha256=j1n1jlJvtwauhtupMc3xevHM3V6fzlKoqfzdtefGNsA,12
+MysqlWebApp-1.3.1.dist-info/RECORD,,
