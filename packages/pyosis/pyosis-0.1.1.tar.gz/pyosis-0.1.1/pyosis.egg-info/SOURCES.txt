@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+pyosis/__init__.py
+pyosis/models.py
+pyosis.egg-info/PKG-INFO
+pyosis.egg-info/SOURCES.txt
+pyosis.egg-info/dependency_links.txt
+pyosis.egg-info/requires.txt
+pyosis.egg-info/top_level.txt
+test/test_models.py
