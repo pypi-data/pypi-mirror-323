@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[project]
+name = "pintes"
+version = "0.1.alpha"
+authors = [
+  { name="Formuna", email="no@thankyou.com" },
+]
+description = "A Python-based static HTML page generator similar to TKinter."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICEN[CS]E*"]
+keywords = ["html", "generator", "tkinter"]
+
+[project.urls]
+Source = "https://github.com/FormunaGit/Pintes"
+Issues = "https://github.com/FormunaGit/Pintes/issues"
