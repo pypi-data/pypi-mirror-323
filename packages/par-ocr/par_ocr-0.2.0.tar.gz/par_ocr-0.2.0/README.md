@@ -1,0 +1,201 @@
+# PAR AI OCR
+
+[![PyPI](https://img.shields.io/pypi/v/par_ocr)](https://pypi.org/project/par_ocr/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/par_ocr.svg)](https://pypi.org/project/par_ocr/)  
+![Runs on Linux | MacOS | Windows](https://img.shields.io/badge/runs%20on-Linux%20%7C%20MacOS%20%7C%20Windows-blue)
+![Arch x86-63 | ARM | AppleSilicon](https://img.shields.io/badge/arch-x86--64%20%7C%20ARM%20%7C%20AppleSilicon-blue)  
+![PyPI - License](https://img.shields.io/pypi/l/par_ocr)
+
+PAR AI OCR is a command-line tool that uses artificial intelligence to perform Optical Character Recognition (OCR) on PDF files and images. 
+It extracts text from the input files and generates markdown output.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/probello3)
+
+## Screenshots
+![PAR Scrape Screenshot](https://raw.githubusercontent.com/paulrobello/par_ocr/main/Screenshot.png)
+
+## Features
+- Extracts text for PDFs and images to Markdown while preserving as much formatting as possible.
+- Works with most providers and vision models (quality will vary depending on provider and model used)
+- Uses my [PAR AI Core](https://github.com/paulrobello/par_ai_core)
+
+
+## Known Issues
+- Providers other than OpenAI and Anthropic are hit-and-miss depending on provider / model / data being extracted.
+
+## Prerequisites
+
+### Install poppler (Used for PDF processing)
+
+#### Linux
+```bash
+apt install poppler-utils
+```
+
+#### Mac
+```bash
+brew install poppler
+```
+
+#### Windows
+```bash
+scoop install poppler
+```
+
+### uv is recommended
+
+#### Linux and Mac
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+#### Windows
+```bash
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+
+## Installation
+
+### Installation From Source
+Clone the repository and install the package:
+
+```bash
+git clone https://github.com/paulrobello/par_ocr.git
+cd par_ocr
+uv sync
+```
+
+### From PiPy
+
+```bash
+uv tool install par_ocr
+```
+
+## Usage
+
+Basic usage from source:
+
+```bash
+uv run par_ocr
+```
+
+
+Basic usage if installed:
+
+```bash
+par_ocr
+```
+
+### Command Line Parameters
+
+- `--ai-provider`, `-a`: AI provider to use for processing [Ollama|LlamaCpp|OpenAI|Groq|XAI|Anthropic|Google|Bedrock|Github|Mistral] (default: OpenAI)
+- `--model`, `-m`: AI model to use for processing (default: provider-specific)
+- `--ai-base-url`, `-b`: Override the base URL for the AI provider
+- `--system-prompt-file`, `-p`: File containing custom system prompt, if you want to use one other than the default
+- `--input-file`, `-i`: File to process, supported extensions: .pdf, .png, .jpg
+- `--pricing`, `-p`: Configure pricing summary display [none|price|details] (default: price)
+- `--pages`: Comma-separated page numbers or hyphen-separated range (e.g., '1,3,5-7')
+- `--output`, `-o`: Output directory for markdown files (default same folder as input file)
+- `--debug`, `-D`: Output extra debug info (Default: false)
+- `--version`, `-v`: Show version information and exit
+
+### Examples
+
+Note: If running from source prepend "uv run" to the beginning of the example commands.
+
+1. Process a PDF file using the default settings:
+   ```bash
+   par_ocr --input-file path/to/your/file.pdf
+   ```
+
+2. Use a specific AI provider and model:
+   ```bash
+   par_ocr --ai-provider ANTHROPIC --model claude-3-5-sonnet-20241022 --input-file path/to/your/file.pdf
+   ```
+
+3. Process specific pages of a PDF:
+   ```bash
+   par_ocr --input-file path/to/your/file.pdf --pages 1,3,5-7
+   ```
+
+4. Specify an output directory:
+   ```bash
+   par_ocr --input-file path/to/your/file.pdf --output path/to/output/directory
+   ```
+
+5. Enable pricing details:
+   ```bash
+   par_ocr --pricing details --input-file path/to/your/file.pdf 
+   ```
+
+## Note
+
+Make sure to set the appropriate environment variables for the AI provider you're using (e.g., OPENAI_API_KEY for OpenAI).
+you may also create a file `~/.par_ocr_config` with your API Keys such as:
+
+```shell
+# AI API KEYS
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+GROQ_API_KEY=
+XAI_API_KEY=
+GOOGLE_API_KEY=
+MISTRAL_API_KEY=
+GITHUB_TOKEN=
+OPENROUTER_API_KEY=
+# Used by Bedrock
+AWS_PROFILE=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+
+
+### Tracing (optional)
+LANGCHAIN_TRACING_V2=false
+LANGCHAIN_ENDPOINT=https://api.smith.langchain.com
+LANGCHAIN_API_KEY=
+LANGCHAIN_PROJECT=par_ocr
+```
+
+### AI API KEYS
+
+* ANTHROPIC_API_KEY is required for Anthropic. Get a key from https://console.anthropic.com/
+* OPENAI_API_KEY is required for OpenAI. Get a key from https://platform.openai.com/account/api-keys
+* GITHUB_TOKEN is required for GitHub Models. Get a free key from https://github.com/marketplace/models
+* GOOGLE_API_KEY is required for Google Models. Get a free key from https://console.cloud.google.com
+* XAI_API_KEY is required for XAI. Get a free key from https://x.ai/api
+* GROQ_API_KEY is required for Groq. Get a free key from https://console.groq.com/
+* MISTRAL_API_KEY is required for Mistral. Get a free key from https://console.mistral.ai/
+* OPENROUTER_KEY is required for OpenRouter. Get a key from https://openrouter.ai/
+* AWS_PROFILE or AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are used for Bedrock authentication. The environment must
+  already be authenticated with AWS.
+* No key required to use with Ollama or LlamaCpp.
+
+### Open AI Compatible Providers
+
+If a specify provider is not listed but has an OpenAI compatible endpoint you can use the following combo of vars:
+* PARAI_AI_PROVIDER=OpenAI
+* PARAI_MODEL=Your selected model
+* PARAI_AI_BASE_URL=The providers OpenAI endpoint URL
+
+## Whats New
+- Version 0.2.0:
+  - Updated ai lib and other dependencies
+  - Added debug flag
+- Version 0.1.1:
+  - Updated ai lib
+  - Fixed markdown fences
+- Version 0.1.0:
+  - Initial release
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Paul Robello - probello@gmail.com

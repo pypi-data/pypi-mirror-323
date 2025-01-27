@@ -1,0 +1,97 @@
+[project]
+name = "par_ocr"
+dynamic = ["version"]
+description = "Use AI vision to OCR PDF and image files to markdown."
+url = "https://github.com/paulrobello/par_ocr"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Paul Robello", email = "probello@gmail.com" }]
+maintainers = [{ name = "Paul Robello", email = "probello@gmail.com" }]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Markup :: Markdown",
+    "Typing :: Typed"
+]
+keywords = ["ocr", "markdown", "ai", "pdf"]
+dependencies = [
+    "asyncio>=3.4.3",
+    "pydantic-core>=2.27.2",
+    "pydantic>=2.10.6",
+    "python-dotenv>=1.0.1",
+    "rich>=13.9.4",
+    "typer>=0.15.1",
+    "par-ai-core>=0.1.11",
+    "pdf2image>=1.17.0",
+    "psycopg[binary]>=3.2.4"
+]
+
+packages = [
+    "src/par_ocr"
+]
+
+[project.urls]
+Homepage = "https://github.com/paulrobello/par_ocr"
+Documentation = "https://github.com/paulrobello/par_ocr/blob/main/README.md"
+Repository = "https://github.com/paulrobello/par_ocr"
+Issues = "https://github.com/paulrobello/par_ocr/issues"
+Discussions = "https://github.com/paulrobello/par_ocr/discussions"
+Wiki = "https://github.com/paulrobello/par_ocr/wiki"
+
+[project.scripts]
+par_ocr = "par_ocr.__main__:app"
+
+[build-system]
+requires = ["hatchling", "wheel"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "build>=1.2.1",
+    "twine>=6.1.0",
+    "pyright>=1.1.379",
+    "pre-commit>=4.1.0",
+    "ruff>=0.9.3",
+    "pyinstrument>=5.0.1",
+]
+
+[tool.hatch.version]
+path = "src/par_ocr/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/par_ocr"]
+include = [
+    "py.typed",
+    "**/*.py",
+    "**/*.html",
+    "**/*.gif",
+    "**/*.jpg",
+    "**/*.png",
+    "**/*.md",
+    "**/*.tcss",
+]
+exclude = [
+    "test_data"
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/par_ocr",
+    "LICENSE",
+    "README.md",
+    "pyproject.toml"
+]
+exclude = [
+    "*.pyc",
+    "__pycache__",
+    "*.so",
+    "*.dylib"
+]
