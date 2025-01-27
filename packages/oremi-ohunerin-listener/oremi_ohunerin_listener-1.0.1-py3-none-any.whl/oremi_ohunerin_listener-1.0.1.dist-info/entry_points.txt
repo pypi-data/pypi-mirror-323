@@ -1,0 +1,3 @@
+[console_scripts]
+oremi-ohunerin-listener=ohunerin:main
+
