@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: RMT-Audio
+Version: 0.3.1
+Summary: Default template for PDM package
+Author-Email: khr0106 <kanghr990106@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: pytest>=8.3.4
+Requires-Dist: pandas>=2.2.3
+Description-Content-Type: text/markdown
+
+# RMT-Audio
+
+- 원격 블루투스 오디오
+- remote bluetooth audio
+
+
+### Dev
+```bash
+$ git clone ...
+$ pdm venv create
+$ source .venv/bin/activate
+$ pdm install
+$ pytest
+```
+
+
+
+# use
+```bash
+$ pip install RMT-Audio OR pdm add Remote
+$ python
+>>> from rmt_audio.remote import remote
+>>> remote(1,2,3)
+'Not Yet, Wait a minute, sir!'
+```
