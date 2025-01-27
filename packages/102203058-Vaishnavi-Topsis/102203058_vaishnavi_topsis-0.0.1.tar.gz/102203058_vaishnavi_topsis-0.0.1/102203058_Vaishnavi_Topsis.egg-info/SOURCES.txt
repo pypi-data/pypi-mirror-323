@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+102203058_Vaishnavi_Topsis.egg-info/PKG-INFO
+102203058_Vaishnavi_Topsis.egg-info/SOURCES.txt
+102203058_Vaishnavi_Topsis.egg-info/dependency_links.txt
+102203058_Vaishnavi_Topsis.egg-info/entry_points.txt
+102203058_Vaishnavi_Topsis.egg-info/requires.txt
+102203058_Vaishnavi_Topsis.egg-info/top_level.txt
