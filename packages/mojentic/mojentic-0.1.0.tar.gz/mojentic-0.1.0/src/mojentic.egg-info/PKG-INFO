@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: mojentic
+Version: 0.1.0
+Summary: Mojentic is an agentic framework that aims to provide a simple and flexible way to assemble teams of agents to solve complex problems.
+Author-email: Stacey Vetzal <stacey@mojility.ca>
+Project-URL: Homepage, https://github.com/mojility/mojentic
+Project-URL: Issues, https://github.com/mojility/mojentic/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: ollama
+Requires-Dist: pydantic
+Requires-Dist: pytest
+Requires-Dist: pytest-mock
+
+# Mojentic
+
+Mojentic is an agentic framework that aims to provide a simple and flexible way to assemble teams of agents to solve
+complex problems. Design goals are to be asynchronous with a pubsub messaging architecture.
+
+Visit [the documentation](https://mojility.github.io/mojentic/) for more.
+
+This code is under heavy development, and will change often. It is not recommended for production use at this time.
+
+This code is Copyright 2025 Mojility, Inc. and is freely provided under the terms of the [MIT license](LICENSE.md).
