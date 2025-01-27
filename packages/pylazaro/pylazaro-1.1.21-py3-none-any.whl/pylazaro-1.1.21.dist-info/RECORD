@@ -1,0 +1,13 @@
+pylazaro/__init__.py,sha256=c6jOkBObv6OmKb3zLYw2QhAKfC2hoqUt1IBD5-OoEno,35
+pylazaro/__main__.py,sha256=qbK7vvUJHwJHz6Jo4mKpjzXT0RY0h4_Ey71kScD-Qqk,2122
+pylazaro/borrowing.py,sha256=iOze25zNfIM2B2osJbQ3m37mdjlqVLYUBc4qhcIrZNo,3664
+pylazaro/classifiers.py,sha256=kuY9lJDsOASrtRfPes5hnZmtezNOmWdw2awDjWw1ShI,9095
+pylazaro/constants.py,sha256=UQRLzdhJh4fyc6HwRPRYQ0o4iDYcFYwErDf3ho-Zat4,1301
+pylazaro/lazaro.py,sha256=n41vIneExKIkYWmQdGiqJazibZMbcAB0vCtY5fHdyBg,3197
+pylazaro/output.py,sha256=C_RylaNWngYN80b2loO-kw7NImSBaOMQP_wRA9L3XG8,11538
+pylazaro/token.py,sha256=pRBQ_u2plaPDhFAMGHVLPy0xCBtAI9r1qeNWIIkp7ro,1951
+pylazaro/utils.py,sha256=LxP7yo9wUM9267h_kOPNm_HigiE8KCKHyY5QwsVNNqo,34769
+pylazaro-1.1.21.dist-info/METADATA,sha256=bnby_nOn7tSEXkFNvpqSsY8R1IDCogdfdG2l3Hn1m_8,2634
+pylazaro-1.1.21.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pylazaro-1.1.21.dist-info/top_level.txt,sha256=NdqbRmqYT1PI84Hl038hV5p6mR8OCxttwXV0FClHB0I,9
+pylazaro-1.1.21.dist-info/RECORD,,
