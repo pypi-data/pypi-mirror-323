@@ -1,0 +1,24 @@
+var NAVTREEINDEX0 =
+{
+"files.html":[2,0],
+"index.html":[],
+"md_README.html":[0],
+"md_README.html#autotoc_md1":[0,0],
+"md_README.html#autotoc_md3":[0,1],
+"md_README.html#autotoc_md4":[0,2],
+"minecraftchest1_8us_8py.html":[2,0,0],
+"minecraftchest1_8us_8py.html#a6498d3c2a0bf9a2aa54a0e38b838ac32":[2,0,0,0],
+"namespacemembers.html":[1,1,0],
+"namespacemembers_func.html":[1,1,1],
+"namespacemembers_vars.html":[1,1,2],
+"namespaceminecraftchest1.html":[1,0,0],
+"namespaceminecraftchest1.html#a6498d3c2a0bf9a2aa54a0e38b838ac32":[1,0,0,0],
+"namespaces.html":[1,0],
+"namespacetest__dnscode.html":[1,0,1],
+"namespacetest__dnscode.html#af764333f3e7e8c6f988625404a2a931d":[1,0,1,1],
+"namespacetest__dnscode.html#af7a0f556ce61b4540c68c557a209ec76":[1,0,1,0],
+"pages.html":[],
+"test__dnscode_8py.html":[2,0,1],
+"test__dnscode_8py.html#af764333f3e7e8c6f988625404a2a931d":[2,0,1,1],
+"test__dnscode_8py.html#af7a0f556ce61b4540c68c557a209ec76":[2,0,1,0]
+};
