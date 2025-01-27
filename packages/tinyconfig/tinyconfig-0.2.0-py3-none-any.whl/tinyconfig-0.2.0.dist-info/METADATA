@@ -1,0 +1,42 @@
+Metadata-Version: 2.3
+Name: tinyconfig
+Version: 0.2.0
+Summary: 
+License: MIT
+Author: Hamlet
+Author-email: hamlets849@gmail.com
+Requires-Python: >=3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pyyaml (>=6.0.2)
+Requires-Dist: tomlkit (>=0.13.2)
+Description-Content-Type: text/markdown
+
+# tinyconfig
+
+![GitHub License](https://img.shields.io/github/license/HamletSargsyan/tinyconfig)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/HamletSargsyan/tinyconfig)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/tinyconfig)
+![PyPI - Version](https://img.shields.io/pypi/v/tinyconfig)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tinyconfig)
+![Checks](https://github.com/HamletSargsyan/tinyconfig/actions/workflows/check.yml/badge.svg)
+![Documentation](https://github.com/HamletSargsyan/tinyconfig/actions/workflows/documentation.yml/badge.svg)
+
+> [!WARNING]
+> work in progress
+
+## Installation
+
+```bash
+pip install tinyconfig
+```
+
+## License
+
+This project is licensed under the [MIT License](https://github.com/HamletSargsyan/tinyconfig/blob/main/LICENSE).
+
