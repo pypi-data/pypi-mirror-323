@@ -1,0 +1,4 @@
+[console_scripts]
+build-ui=build_ui:main
+moatless-api=moatless.api:run_api
+
