@@ -1,0 +1,14 @@
+sillyorm/__init__.py,sha256=Sbqb9L7XNRiFZi_5gOlsLAbCQiP47TxosZZxehoUjbs,71
+sillyorm/environment.py,sha256=_ZFu0oebabWvwzhmijp7Vpyyny_D0MfaEgoaTZMyiSA,3586
+sillyorm/exceptions.py,sha256=CBa-xvnk8xNp_WIptlZZGw-dAQNo4-MtrxfCFCARj1s,84
+sillyorm/fields.py,sha256=nq-ELy2Dij9DnD0N2t0K8I3YugT03RReKCzVHzTqkmM,17602
+sillyorm/model.py,sha256=p3VP52h1w9yIAefgEBFQ0mZhwt09MBDAV7My_5HHuKk,13243
+sillyorm/sql.py,sha256=z-oxM1L9r1m8An4unZccqD-CeDd03PIlDvdFDhQ5NiE,25060
+sillyorm/dbms/__init__.py,sha256=cACVlsuyOffxdxAJxDeN_D_ViC4rPdQZCimCoXphziU,85
+sillyorm/dbms/postgresql.py,sha256=Tk0ikWgf3M5AE-7wPShGes_gVGGpoWYNJdHm-ZfGB9g,4214
+sillyorm/dbms/sqlite.py,sha256=hnk8IPd3gfja_DhIwZo4XwQY09hIJmbOwkB81q0Ja4o,2801
+sillyORM-0.8.1.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+sillyORM-0.8.1.dist-info/METADATA,sha256=1sJu-sO_WPVDkWeI9IBVgtIjvNf5UJbfNIsBS9wtXD8,11471
+sillyORM-0.8.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+sillyORM-0.8.1.dist-info/top_level.txt,sha256=-EGyfpUd11h2mTElGthLOXgaajGIwFCxkDxcqtrkTUE,9
+sillyORM-0.8.1.dist-info/RECORD,,
