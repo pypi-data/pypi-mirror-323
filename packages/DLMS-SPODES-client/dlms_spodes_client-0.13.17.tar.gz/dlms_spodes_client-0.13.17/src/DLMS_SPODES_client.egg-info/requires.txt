@@ -1,0 +1,4 @@
+pycryptodomex>=3.15
+DLMS-SPODES-communications<1.5,>=1.4.9
+DLMSComProf>=0.0.3
+DLMSadapter>=0.5.8
