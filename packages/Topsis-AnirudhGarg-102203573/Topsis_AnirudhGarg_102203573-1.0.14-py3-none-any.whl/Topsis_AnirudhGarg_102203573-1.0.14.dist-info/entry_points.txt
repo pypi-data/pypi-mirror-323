@@ -1,0 +1,2 @@
+[console_scripts]
+Topsis_AnirudhGarg_102203573 = Topsis_AnirudhGarg_102203573.topsis:main
