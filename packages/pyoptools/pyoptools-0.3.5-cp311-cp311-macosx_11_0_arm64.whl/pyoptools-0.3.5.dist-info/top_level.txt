@@ -1,0 +1,7 @@
+Notebooks
+Tutorial
+debian
+dist
+doc
+pyoptools
+tests
