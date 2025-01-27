@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: ascii-monet
+Version: 0.0.4
+Summary: A CLI utility for turning images into colored ascii art in the terminal!
+Project-URL: Homepage, https://github.com/MattThePerson/ascii-monet
+Project-URL: Changelog, https://github.com/MattThePerson/ascii-monet/blob/main/CHANGELOG.md
+Author-email: Matt Stirling <stirlingmattmarkus@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: numpy>=2.2.2
+Requires-Dist: pillow>=11.1.0
+Description-Content-Type: text/markdown
+
+# Ascii Monet!
+
+description and stuff here!
+
