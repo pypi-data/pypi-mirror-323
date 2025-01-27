@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: mathstat
+Version: 1.0.0
+Summary: Extension for math
+Author: amogusbazed
+Author-email: amogusbazed@gmail.com
+Keywords: files speedfiles
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: requires-python
+Dynamic: summary
+
+# Numplot File Library #
+
+## What is this? ##
+The module allows you to work with files in just one line of code, without the need to manually open and close the file each time
+
+## Quick Guide ##
+The module is based on the following structure:
+
+    
+    f = open('data.txt')
+    data = f.readlines()
+    f.close()
+    
+Which Python provides by standard.
+
+
+----------

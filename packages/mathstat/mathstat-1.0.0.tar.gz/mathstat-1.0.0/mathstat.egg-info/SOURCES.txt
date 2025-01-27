@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+mathstat.egg-info/PKG-INFO
+mathstat.egg-info/SOURCES.txt
+mathstat.egg-info/dependency_links.txt
+mathstat.egg-info/top_level.txt
+numplot/__init__.py
+numplot/task_1.py
+numplot/task_2.py
+numplot/task_3.py
+numplot/task_4.py
+numplot/task_5.py
