@@ -1,0 +1,66 @@
+Metadata-Version: 2.2
+Name: pantheon-agents
+Version: 0.1.1
+Summary: A framework for building distributed LLM based multi-agent system.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: executor-engine>=0.3.0
+Requires-Dist: fire>=0.7.0
+Requires-Dist: funcdesc>=0.1.7.2
+Requires-Dist: litellm>=1.56.4
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: magique>=0.1.2
+Requires-Dist: openai>=1.58.1
+Requires-Dist: rich>=13.9.4
+Requires-Dist: textual>=1.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.4; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.25.0; extra == "dev"
+Provides-Extra: tool
+Requires-Dist: crawl4ai>=0.4.23; extra == "tool"
+Requires-Dist: duckduckgo-search>=7.1.1; extra == "tool"
+
+<div align="center">
+  <h1> Pantheon </h1>
+
+  <p> A framework for building distributed LLM based multi-agent system. </p>
+
+  <p>
+    <a href="https://github.com/aristoteleo/pantheon-agents/actions/workflows/test.yml">
+        <img src="https://github.com/aristoteleo/pantheon-agents/actions/workflows/test.yml/badge.svg" alt="Build Status">
+    </a>
+    <a href="https://pypi.org/project/pantheon-agents/">
+      <img src="https://img.shields.io/pypi/v/pantheon-agents.svg" alt="Install with PyPi" />
+    </a>
+    <a href="https://github.com/aristoteleo/pantheon-agents/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/aristoteleo/pantheon-agents" alt="MIT license" />
+    </a>
+  </p>
+</div>
+
+
+**Work In Progress**
+
+
+## Installation
+
+```bash
+# Install with the built-in tools
+pip install pantheon-agents[tool]
+```
+
+See the [examples](examples) folder for more details.
+
+
+## TODO
+
+- [x] REPL for meeting and agent
+- [x] Reasoning with O1 / Gemini Flash Thinking / Deepseek-R1
+- [x] Distributed
+  + [x] Tools
+  + [ ] Agents
+- [x] Code Execution
+- [ ] RAG
+- [ ] Long Term Memory
+- [ ] Documentation
