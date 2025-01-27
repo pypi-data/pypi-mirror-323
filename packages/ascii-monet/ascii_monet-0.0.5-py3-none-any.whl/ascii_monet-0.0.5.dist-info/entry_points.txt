@@ -1,0 +1,2 @@
+[console_scripts]
+ascii-monet = ascii_monet.cli:main
