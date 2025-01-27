@@ -1,0 +1,8 @@
+appdirs
+click
+configurence
+ipywidgets
+pyee
+pyserial
+pyserial-asyncio
+pyyaml
