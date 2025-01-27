@@ -1,0 +1,11 @@
+numpy
+appdirs
+tabulate
+send2trash
+matplotlib
+pillow
+
+sphinx-autodoc-typehints
+sphinx-automodapi
+piccolo-theme
+autodocsumm
