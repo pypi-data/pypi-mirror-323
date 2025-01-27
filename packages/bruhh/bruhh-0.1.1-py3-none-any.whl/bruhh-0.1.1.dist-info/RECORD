@@ -1,0 +1,10 @@
+bruhh/cli/main.py,sha256=CcFX_Ox4vvXIP-ZW3uUkzoxCMijLA6PM5A3MgAGmWf0,549
+bruhh/cli/subcommands/__init__.py,sha256=4dJhB1FANXxi9tvRQBThJX-s5swa60TpPvXw_JQArQg,76
+bruhh/cli/subcommands/system.py,sha256=o5BjB8_x88ag1QIlUAnvOJamWTdFaPY94XQHntFy1WA,5928
+bruhh/cli/system/service-requirements.txt,sha256=Uk7ebh2IEMgv66Giv9R91t9X9cLj1-fsNAGgLHrxdPw,59
+bruhh/daemon/main.py,sha256=vRBWh1y25cqK87nX5IRSiJ6tXD7sd_fPgZeiFsfuX1E,743
+bruhh-0.1.1.dist-info/LICENSE,sha256=9ccCCWRHVL20dhpdD0DtmQ_MST4SHL4VoR2Wd8rVW2Y,1070
+bruhh-0.1.1.dist-info/METADATA,sha256=RHAYXxjOh6ZRHDwIoUW-H53m5QYjraowSnpTsSsC5WM,535
+bruhh-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+bruhh-0.1.1.dist-info/entry_points.txt,sha256=AdEHzbYGetptBxAfvbtv719acaBswFLEaNl0wAPNf8A,44
+bruhh-0.1.1.dist-info/RECORD,,
