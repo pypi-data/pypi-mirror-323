@@ -1,0 +1,11 @@
+pyyaml
+
+[ci]
+generate[style,test]
+
+[style]
+ruff
+mypy
+
+[test]
+pytest
