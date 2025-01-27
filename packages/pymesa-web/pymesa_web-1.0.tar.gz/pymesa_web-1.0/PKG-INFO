@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: pymesa-web
+Version: 1.0
+Summary: Python support for the MESA-Web stellar evolution portal
+Project-URL: Repository, https://github.com/rhdtownsend/pymesa-web/
+Project-URL: Issues, https://github.com/rhdtownsend/pymesa-web/issues
+Author-email: Rich Townsend <rhtownsend@wisc.edu>
+License-File: COPYING
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: astropy>=5.3.2
+Requires-Dist: numpy>=1.15.0
+Description-Content-Type: text/x-rst
+
+#############################
+The PyMESA-Web Python Package
+#############################
+
+.. image:: https://img.shields.io/github/license/rhdtownsend/pymesa-web
+   :alt: GitHub
+   :target: https://github.com/rhdtownsend/pymesa-web/blob/main/COPYING
+.. image:: https://img.shields.io/github/issues/rhdtownsend/pymesa-web
+   :alt: GitHub issues
+   :target: https://github.com/rhdtownsend/pymesa-web/issues
+
+Overview
+========
+	    
+PyMESA-Web is a Python package that provides support for the `MESA-Web
+stellar evolution portal
+<http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web>`__. Releases
+are hosted on `PyPI <https://pypi.org/>`__; therefore, the easiest way
+to install is to use `pip` or a similar tool::
+
+  pip install pymesa-web

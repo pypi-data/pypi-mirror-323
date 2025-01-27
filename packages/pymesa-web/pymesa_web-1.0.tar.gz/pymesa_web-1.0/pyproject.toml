@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pymesa-web"
+dynamic = ["version"]
+authors = [
+  { name="Rich Townsend", email="rhtownsend@wisc.edu" },
+]
+description = "Python support for the MESA-Web stellar evolution portal"
+readme = "README.rst"
+requires-python = ">=3.7"
+dependencies = [
+    "numpy>=1.15.0",
+    "astropy>=5.3.2"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/rhdtownsend/pymesa-web/"
+Issues = "https://github.com/rhdtownsend/pymesa-web/issues"
+
+[tool.hatch.version]
+path = "src/pymesa_web/_version.py"
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src"]
