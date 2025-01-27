@@ -1,0 +1,12 @@
+[project]
+name = "html-scrubber"
+version = "0.0.2"
+description = "A simple HTML cleaner utility built with BeautifulSoup. This library allows you to easily clean HTML content by removing unwanted tags like styles, scripts, iframes, and more. It provides an easy-to-use interface for cleaning HTML from various sources, making it ideal for web scraping, data extraction, or sanitizing HTML content before processing."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4",
+]
+
+[tool.poetry.dev-dependencies]
+black = ">=24.10.0"

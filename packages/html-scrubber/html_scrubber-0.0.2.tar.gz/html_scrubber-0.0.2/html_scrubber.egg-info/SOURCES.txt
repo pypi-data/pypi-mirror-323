@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+html_scrubber/__init__.py
+html_scrubber/cleaner.py
+html_scrubber.egg-info/PKG-INFO
+html_scrubber.egg-info/SOURCES.txt
+html_scrubber.egg-info/dependency_links.txt
+html_scrubber.egg-info/requires.txt
+html_scrubber.egg-info/top_level.txt
+tests/test_cleaner.py
