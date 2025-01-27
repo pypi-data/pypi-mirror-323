@@ -1,0 +1,9 @@
+README.md
+setup.py
+somali_abbreviation/__init__.py
+somali_abbreviation/abbreviation.py
+somali_abbreviation.egg-info/PKG-INFO
+somali_abbreviation.egg-info/SOURCES.txt
+somali_abbreviation.egg-info/dependency_links.txt
+somali_abbreviation.egg-info/top_level.txt
+somali_abbreviation/data/abbreviation_dict.json
