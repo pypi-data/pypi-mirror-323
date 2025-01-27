@@ -1,0 +1,14 @@
+[project]
+name = "seqlogic"
+version = "0.40.0"
+description = "Sequential Logic"
+readme = "README.md"
+
+requires-python = ">=3.12"
+dependencies = ["bvwx", "pyvcd"]
+
+[project.urls]
+Repository = "https://github.com/cjdrake/seqlogic.git"
+
+[tool.black]
+line-length = 100
