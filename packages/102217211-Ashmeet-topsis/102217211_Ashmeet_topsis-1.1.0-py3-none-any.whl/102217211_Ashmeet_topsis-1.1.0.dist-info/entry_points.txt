@@ -1,0 +1,2 @@
+[console_scripts]
+102217211_Ashmeet_topsis = 102217211_Ashmeet_topsis.topsis:main
