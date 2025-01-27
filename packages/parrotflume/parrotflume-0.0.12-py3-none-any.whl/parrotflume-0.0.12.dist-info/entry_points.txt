@@ -1,0 +1,2 @@
+[console_scripts]
+parrotflume = parrotflume.__main__:main
