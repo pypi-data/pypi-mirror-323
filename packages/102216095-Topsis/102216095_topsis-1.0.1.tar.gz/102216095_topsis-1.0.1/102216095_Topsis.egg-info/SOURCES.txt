@@ -1,0 +1,9 @@
+setup.py
+102216095_Topsis.egg-info/PKG-INFO
+102216095_Topsis.egg-info/SOURCES.txt
+102216095_Topsis.egg-info/dependency_links.txt
+102216095_Topsis.egg-info/entry_points.txt
+102216095_Topsis.egg-info/requires.txt
+102216095_Topsis.egg-info/top_level.txt
+topsis/__init__.py
+topsis/topsis.py
