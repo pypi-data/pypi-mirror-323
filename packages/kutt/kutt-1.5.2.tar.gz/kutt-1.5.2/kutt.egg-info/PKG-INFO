@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: kutt
+Version: 1.5.2
+Summary: API wrapper and CLI for kutt.it
+Home-page: http://github.com/amirali/kutt
+Author: Amirali Esfandiari
+Author-email: amiralinull@gmail.com
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3
+License-File: LICENSE
+Requires-Dist: fire
+Requires-Dist: requests
+Requires-Dist: toml
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
