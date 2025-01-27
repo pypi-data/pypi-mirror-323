@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+my_timer/__init__.py
+my_timer/timer.py
+my_timer_daniel.egg-info/PKG-INFO
+my_timer_daniel.egg-info/SOURCES.txt
+my_timer_daniel.egg-info/dependency_links.txt
+my_timer_daniel.egg-info/top_level.txt

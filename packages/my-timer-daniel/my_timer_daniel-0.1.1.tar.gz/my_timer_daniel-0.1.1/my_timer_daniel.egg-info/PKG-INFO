@@ -1,0 +1,36 @@
+Metadata-Version: 2.2
+Name: my-timer-daniel
+Version: 0.1.1
+Summary: A simple Timer class to measure execution time.
+Author-email: Daniel Ariza <danielarizae@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/darizae/my-timer
+Keywords: timer,time,utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# my-timer
+
+A simple Python Timer utility.
+
+## Installation
+
+```bash
+pip install my-timer-daniel
+```
+
+## Usage
+```
+from mytimer import Timer
+
+t = Timer()
+t.start()
+
+# ... do something ...
+
+t.stop()
+t.print_elapsed_time
+```
