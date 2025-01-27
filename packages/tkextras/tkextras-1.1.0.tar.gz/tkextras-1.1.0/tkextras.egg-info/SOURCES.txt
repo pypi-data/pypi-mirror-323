@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+examples/example_treeview_dataframe.py
+examples/example_widgets_render.py
+tkextras/__init__.py
+tkextras/treeview_dataframe.py
+tkextras/widgets_render.py
+tkextras.egg-info/PKG-INFO
+tkextras.egg-info/SOURCES.txt
+tkextras.egg-info/dependency_links.txt
+tkextras.egg-info/requires.txt
+tkextras.egg-info/top_level.txt
