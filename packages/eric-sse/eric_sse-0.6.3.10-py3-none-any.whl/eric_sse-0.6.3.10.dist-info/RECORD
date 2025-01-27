@@ -1,0 +1,12 @@
+eric_sse/__init__.py,sha256=hnd7snsrZt1XfgupfrRBK1MlvRig9JcVVjrqJZI32_M,468
+eric_sse/clients.py,sha256=DnWWS_57xH033tT9cYwAf_1Z5mcdyoGK03ecBrI3K3E,2304
+eric_sse/entities.py,sha256=trpSXgBn8AT0X20_4GlS8II7ocyds4DmXS5yLjsZ0xY,5578
+eric_sse/exception.py,sha256=nhuvWLUSWmnqiMzvVOaj0VG6axpzIdZlBheYeHx5lrY,258
+eric_sse/message.py,sha256=Jh54Rg-RBOjunxYid4ErIztlVoqrpGGRWv_DRUYO7E8,1557
+eric_sse/prefabs.py,sha256=_Fcw5aPiA8plr5mHYmRMR4rstkDLxc_8geOUhdM4hEY,5493
+eric_sse/queue.py,sha256=CVt6wDC5dA5mp9qZ2V-ag66WP6hWN96wbjI4GQW9v1Q,1272
+eric_sse/servers.py,sha256=UuIsPz5n-ftM-2veUF-AmEP7892-r6beP6daFaP0R1Q,5820
+eric_sse-0.6.3.10.dist-info/LICENSE,sha256=3tC87d1at_76LKdchmFtrrXiU6_3xK8j4a7Sl-vC08c,1069
+eric_sse-0.6.3.10.dist-info/METADATA,sha256=n0SVzcPPOo1tH3-oyaP6mVdhqtspfDbi70jLtlLTU4A,1668
+eric_sse-0.6.3.10.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+eric_sse-0.6.3.10.dist-info/RECORD,,
