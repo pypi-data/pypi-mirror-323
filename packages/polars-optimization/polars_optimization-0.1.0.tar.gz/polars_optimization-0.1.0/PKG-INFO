@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: polars-optimization
+Version: 0.1.0
+Summary: Polars Optimization Extension
+Project-URL: Source, https://github.com/drumtorben/polars-opt.git
+Author: Jack Rodenberg, Torben Windler
+Requires-Python: <3.13,>=3.12
+Requires-Dist: polars>=1.20.0
+Description-Content-Type: text/markdown
+
+# polars-opt
+Polars Optimization Extension
