@@ -1,0 +1,12 @@
+cradle/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cradle/cli.py,sha256=cXoFg3rqdpnAUFLauRTbQYt8xj8GNjuf2CUtA5RIbS0,4352
+cradle/templates.yaml,sha256=2LEyxyB65I0fIraE7uzcebx2QJzmjHzow9rPCeuitNQ,385
+cradle/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cradle/utils/git.py,sha256=LLzBBT5IDtapuU-Edwm6d5aNabepC_1TdT91FmS4ySQ,3619
+cradle/utils/questions.py,sha256=NGWLt6tyKBQgOgkGy8n8FD34UKpREAYK_cFlntax3y4,2778
+cradle/utils/shell.py,sha256=AW70nXl8v3vJv0dsGSx4T-w_eA8n07hjinp-qsJRQnI,678
+qcradle-0.1.6.dist-info/METADATA,sha256=WPLMJXmnOEU62OHdTqbg5HUfMrK9IsttMd38aX53rOU,5383
+qcradle-0.1.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+qcradle-0.1.6.dist-info/entry_points.txt,sha256=8_zvnHHa9LkqSSPd68LO7HFIf-DyVyVznzHEklnATRA,44
+qcradle-0.1.6.dist-info/licenses/LICENSE,sha256=iFK9pty9SZbssugIfrx-2NP22FL9L4u9sOw8v9m8Jzk,1083
+qcradle-0.1.6.dist-info/RECORD,,
