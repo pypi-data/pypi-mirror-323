@@ -1,0 +1,53 @@
+[project]
+name = "agefreighter"
+authors = [
+    {name = "Rio Fujita", email = "rifujita@microsoft.com"},
+]
+version = "0.7.0"
+license = {file = "LICENSE"}
+description = "AgeFreighter is a Python package that helps you to create a graph database using Azure Database for PostgreSQL."
+readme = "README.md"
+requires-python = ">=3.9.21"
+dependencies = [
+    "asyncio>=3.4.3",
+    "azure-identity>=1.19.0",
+    "azure-mgmt-postgresqlflexibleservers>=1.0.0",
+    "azure-mgmt-storage>=22.0.0",
+    "azure-storage-blob>=12.24.0",
+    "fastavro>=1.10.0",
+    "gremlinpython>=3.7.3",
+    "neo4j>=5.27.0",
+    "nest-asyncio>=1.6.0",
+    "networkx>=3.2.1",
+    "pandas>=2.2.3",
+    "psycopg>=3.2.4",
+    "psycopg-pool>=3.2.4",
+    "pyarrow>=19.0.0",
+]
+
+[tool.uv.workspace]
+members = ["agefreighter"]
+
+[project.urls]
+Homepage = "https://github.com/rioriost/agefreighter"
+Issues = "https://github.com/rioriost/agefreighter/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/agefreighter/*.py",
+  "/tests",
+  "/docs",
+  "/data",
+]
+exclude = [
+  "/data/payment_large",
+  "uv.lock",
+  "dist/.DS_Store",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agefreighter"]
