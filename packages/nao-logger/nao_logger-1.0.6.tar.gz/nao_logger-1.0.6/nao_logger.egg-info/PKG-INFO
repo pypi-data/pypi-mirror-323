@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: nao_logger
+Version: 1.0.6
+Summary: A logger for nao's use.
+Project-URL: Homepage, https://github.com/XMENTROPY/nao_logger
+Description-Content-Type: text/markdown
+
+# nao_logger
+ A simple logger
