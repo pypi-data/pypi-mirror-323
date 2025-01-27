@@ -1,0 +1,252 @@
+[build-system]
+requires = ["setuptools >= 64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+##
+# Project / Setuptools definition
+##
+[project]
+name = "dwas"
+version = "0.0.5"
+description = "dwas is a command line tool to define and run your development workflows"
+readme = "README.rst"
+requires-python = ">= 3.8"
+authors = [
+    { name = "Benjamin Schubert", email = "contact@benschubert.me" }
+]
+keywords = ["workflows", "virtual", "environments", "isolated", "testing"]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Utilities",
+]
+dynamic = ["dependencies", "optional-dependencies"]
+
+[project.urls]
+homepage = "https://github.com/BenjaminSchubert/dwas"
+repository = "https://github.com/BenjaminSchubert/dwas"
+tracker = "https://github.com/BenjaminSchubert/dwas/issues"
+documentation = "https://dwas.readthedocs.io/en/latest/"
+changelog = "https://github.com/BenjaminSchubert/dwas/CHANGELOG.rst"
+
+[project.entry-points.console_scripts]
+dwas = "dwas.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dwas = ["py.typed"]
+
+[tool.setuptools.dynamic]
+dependencies.file = "requirements/requirements.txt"
+optional-dependencies.test.file = "requirements/requirements-test.txt"
+optional-dependencies.docs.file = "requirements/requirements-docs.txt"
+
+
+##
+# Linters / Formatters
+##
+
+##
+# Black
+[tool.black]
+line-length = 79
+
+##
+# Docformatter
+[tool.docformatter]
+black = true
+recursive = true
+make-summary-multi-line = true
+pre-summary-newline = true
+wrap-summaries = 89
+wrap-descriptions = 72
+
+##
+# Isort
+[tool.isort]
+profile = "black"
+line_length = 79
+skip_gitignore = true
+
+##
+# Mypy
+[tool.mypy]
+check_untyped_defs = true
+ignore_missing_imports = false
+strict = true
+warn_no_return = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+allow_untyped_defs = true
+allow_untyped_calls = true
+
+[[tool.mypy.overrides]]
+module = "virtualenv.*"
+ignore_missing_imports = true
+
+##
+# Pylint
+[tool.pylint.main]
+load-plugins = "pylint.extensions.docparams"
+
+[tool.pylint.format]
+good-names = ["id", "fd"]
+
+[tool.pylint."MESSAGE CONTROL"]
+disable = [
+    "fixme",
+    # This one can never be disabled per-file.
+    "duplicate-code",
+    # Stylistic decisions
+    "too-few-public-methods",
+    "too-many-arguments",
+    # XXX: Mypy and pylint sometimes conflict here, but mypy will check too
+    # Mainly around callback protocols
+    # See https://github.com/python/mypy/issues/5876
+    "arguments-differ",
+    # TODO: enable those, we want documentation
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "missing-module-docstring",
+    # Taken care of by ruff
+    "broad-exception-caught",
+]
+
+[tool.pylint.variables]
+"init-import" = true
+
+##
+# Ruff
+[tool.ruff]
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    ##
+    # Typing
+    "ANN401",  # Allow typing with ANY
+    ##
+    # Format
+    "COM812",  # Don't put trailing commas everywhere
+    "E501",  # line length is handled by black
+    ##
+    # Docs
+    "D200",
+    "D203",
+    "D212",
+    "D404",
+    ##
+    # Stylistic decisions
+    "PLR0911",  # pylint too many return statements
+    "PLR0912",  # pylint too many branches
+    "PLR0913",  # pylint too many arguments
+    "PLR0915",  # pylint too many statements
+    "N818",  # we name exception as Exception not Error
+    "FIX",  # We want to put fixmes longterm
+    "TD",  # We want to be able to add todos without issu links
+    "INP001",  # Not every .py file is part of a package
+    "S101",  # Allow asserts
+    "TID252",  # We want relative imports
+    "PLR2004",  # Disable magic numbers check
+    # Exception handling
+    "EM101",
+    "EM102",
+    "RSE102",
+    "TRY002",
+    "TRY003",
+    # We are not doing cryptographic stuff
+    "S311",
+    # This is buggy and doesnt' say how to validate
+    "S603",
+    # We want to be able tor rely on PATH and not hardcode binaries
+    "S607",
+]
+
+flake8-pytest-style.parametrize-values-type = "tuple"
+flake8-pytest-style.parametrize-values-row-type = "tuple"
+flake8-pytest-style.fixture-parentheses = false
+isort.known-first-party = ["dwas"]
+
+[tool.ruff.lint.per-file-ignores]
+"docs/*" = ["D"]
+"tests/*" = [
+    # No need to type annotate tests
+    "ANN",
+    # No need to document tests
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    # too many arguments, acceptable for tests
+    "PLR0913",
+    # Allow prints in tests
+    "T201",
+]
+
+
+##
+# Testing
+##
+
+##
+# Pytest
+[tool.pytest.ini_options]
+addopts = "--ignore tests/predefined/examples --verbose --verbose --cov --cov-config=pyproject.toml --cov-report="
+log_level = "DEBUG"
+xfail_strict = true
+markers = [
+    "predefined: tests for the predefined steps provided by dwas",
+    "project: the project in which to run tests (only used by test setup)"
+]
+filterwarnings = [
+    "error",
+    "ignore:The --rsyncdir command line argument.*:DeprecationWarning"
+]
+
+##
+# Coverage
+[tool.coverage.run]
+branch = true
+source = [
+    "dwas",
+    "tests/",
+]
+
+[tool.coverage.paths]
+source = [
+    "src/dwas",
+    "**/src/dwas",
+    "**/site-packages/dwas/",
+]
+tests = [
+    "tests/",
+    "**/tests/",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "# pragma: nocover",
+    "^if TYPE_CHECKING:$",
+    "@(abc\\.)?abstractmethod",
+    # This is '...' alone on a line
+    "^\\s*\\.\\.\\.$",
+]
