@@ -1,0 +1,4 @@
+pyttsx3
+keyboard
+deep_translator
+ftfy
