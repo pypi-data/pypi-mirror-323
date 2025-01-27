@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ner_entity_annotator/__init__.py
+ner_entity_annotator/example.py
+ner_entity_annotator.egg-info/PKG-INFO
+ner_entity_annotator.egg-info/SOURCES.txt
+ner_entity_annotator.egg-info/dependency_links.txt
+ner_entity_annotator.egg-info/requires.txt
+ner_entity_annotator.egg-info/top_level.txt
