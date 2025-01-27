@@ -1,0 +1,7 @@
+setup.py
+pycppstreams/__init__.py
+pycppstreams.egg-info/PKG-INFO
+pycppstreams.egg-info/SOURCES.txt
+pycppstreams.egg-info/dependency_links.txt
+pycppstreams.egg-info/requires.txt
+pycppstreams.egg-info/top_level.txt
