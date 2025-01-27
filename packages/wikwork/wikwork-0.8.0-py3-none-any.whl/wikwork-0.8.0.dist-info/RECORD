@@ -1,0 +1,13 @@
+wikwork/__init__.py,sha256=v-ya53ca-YRcQeYzNi33qaMfHnIb5qFVj8ZNYr2IJsc,5005
+wikwork/czech.py,sha256=-N2j4GHO7ckKC5eBQvokUyGXU9C5RLJxOe63KQWNz44,34229
+wikwork/german.py,sha256=brpdOQY0XMxQYqZbdasq0NicecWOA1_i3r5hO_Sdmn0,26711
+wikwork/io_options.py,sha256=ACMqYD9TErDArY3k-ywEIcC_fG-xR9DicaDSL9lZUGg,13097
+wikwork/page_media.py,sha256=f75WV5KLXUgclA50SVeyl30zm-HmPWujxbb89Xv84EE,78402
+wikwork/parse.py,sha256=vlCwMREvCWqRr1HZq1fK6-bXcWjh_jEj4PTvqPXo87Y,18359
+wikwork/polish.py,sha256=OWo6O1OCX6WoHbJmMXHVQTeyQhBPzHv6wDkY22zxrH8,31622
+wikwork/wrapper.py,sha256=kTjWj3VfQvtqidPdBkAEiF95iafEc-QCFkwqO97ArXk,20026
+wikwork-0.8.0.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+wikwork-0.8.0.dist-info/METADATA,sha256=c1MQ3MQACd0Ly0v7if_LPM-h2HIUM98D9hjVmKSVzoc,62495
+wikwork-0.8.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+wikwork-0.8.0.dist-info/top_level.txt,sha256=-YNs-Cv1D3RVvO6qqIXOmhL0VtNvjmqOLS6pMO24QU8,8
+wikwork-0.8.0.dist-info/RECORD,,
