@@ -1,0 +1,4 @@
+[console_scripts]
+aibaba_ai=aibaba_ai_cli.cli:app
+aibaba_ai_cli=aibaba_ai_cli.cli:app
+
