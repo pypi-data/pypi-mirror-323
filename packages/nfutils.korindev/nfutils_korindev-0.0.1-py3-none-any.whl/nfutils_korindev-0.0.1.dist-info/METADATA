@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: nfutils.korindev
+Version: 0.0.1
+Summary: A parser for NFormat files.
+Author-email: Korin <korin@itskorin.online>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
