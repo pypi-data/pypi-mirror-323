@@ -1,0 +1,2 @@
+[console_scripts]
+smartmutate = smartmutate.__main__:smartmutate

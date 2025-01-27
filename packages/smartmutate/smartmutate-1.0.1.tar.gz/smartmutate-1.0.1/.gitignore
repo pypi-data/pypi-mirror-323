@@ -1,0 +1,11 @@
+.vscode/
+venv*/
+.env
+.pypirc
+__pycache__/
+dist/
+build/
+sample.json
+test.py
+*.egg-info/
+deploy.py
