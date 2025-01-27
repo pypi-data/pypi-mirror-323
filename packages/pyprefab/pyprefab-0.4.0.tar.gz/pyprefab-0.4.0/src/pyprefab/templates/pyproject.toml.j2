@@ -1,0 +1,56 @@
+[project]
+name = "{{ project_name }}"
+dynamic = ['version']
+description = "{{ description }}"
+authors = [{name = "{{ author }}"}]
+maintainers = [{name = "{{ author }}"}]
+license = {text = 'MIT License'}
+
+requires-python = '>=3.9'
+readme = 'README.md'
+
+dependencies = [
+    'structlog',
+]
+
+[dependency-groups]
+dev = [
+    'coverage',
+    'pre-commit',
+    'pytest',
+    'pytest-random-order>=1.1.1',
+    'ruff',
+]
+
+[project.scripts]
+{{ project_name }} = '{{ project_name }}.app:main'
+
+[project.urls]
+
+[build-system]
+requires = ['setuptools>=45', 'wheel', 'setuptools_scm>=8']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools.packages.find]
+namespaces = true
+where = ['src']
+
+[tool.setuptools_scm]
+fallback_version = '0.0.0.dev0'
+local_scheme = 'no-local-version'
+
+[tool.pytest.ini_options]
+addopts = '--random-order'
+testpaths = [
+    'test',
+]
+
+[tool.ruff]
+line-length = 120
+lint.extend-select = ['I', 'Q']
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = 'single'
+
+[tool.ruff.format]
+quote-style = 'single'

@@ -1,0 +1,34 @@
+.gitignore
+.pre-commit-config.yaml
+.python-version
+CHANGELOG.md
+CONTRIBUTING.md
+LICENSE
+README.md
+pyproject.toml
+uv.lock
+.github/workflows/ci.yaml
+.github/workflows/publish-pypi-test.yaml
+.github/workflows/publish-pypi.yaml
+src/pyprefab/__init__.py
+src/pyprefab/cli.py
+src/pyprefab.egg-info/PKG-INFO
+src/pyprefab.egg-info/SOURCES.txt
+src/pyprefab.egg-info/dependency_links.txt
+src/pyprefab.egg-info/entry_points.txt
+src/pyprefab.egg-info/requires.txt
+src/pyprefab.egg-info/top_level.txt
+src/pyprefab/templates/.gitignore.j2
+src/pyprefab/templates/.pre-commit-config.yaml.j2
+src/pyprefab/templates/CHANGELOG.md.j2
+src/pyprefab/templates/CONTRIBUTING.md.j2
+src/pyprefab/templates/README.md.j2
+src/pyprefab/templates/pyproject.toml.j2
+src/pyprefab/templates/.github/workflows/ci.yaml.j2
+src/pyprefab/templates/.github/workflows/publish-pypi-test.yaml.j2
+src/pyprefab/templates/.github/workflows/publish-pypi.yaml.j2
+src/pyprefab/templates/src/{{ project_name }}/__init__.py.j2
+src/pyprefab/templates/src/{{ project_name }}/app.py.j2
+src/pyprefab/templates/test/test_app.py
+test/test_cli.py
+test/test_templates.py
