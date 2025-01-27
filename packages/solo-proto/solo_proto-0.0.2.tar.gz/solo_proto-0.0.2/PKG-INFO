@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: solo_proto
+Version: 0.0.2
+Summary: solo proto package
+Author: Roman Połchowski
+Author-email: rp@ilderness.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: protobuf==5.28.3
+Requires-Dist: grpcio==1.67.1
+Requires-Dist: grpcio-tools==1.67.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
