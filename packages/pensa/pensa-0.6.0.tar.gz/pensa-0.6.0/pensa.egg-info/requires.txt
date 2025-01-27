@@ -1,0 +1,8 @@
+numpy>=1.23
+scipy
+pandas
+matplotlib
+deeptime
+MDAnalysis==2.8
+biotite
+gpcrmining
