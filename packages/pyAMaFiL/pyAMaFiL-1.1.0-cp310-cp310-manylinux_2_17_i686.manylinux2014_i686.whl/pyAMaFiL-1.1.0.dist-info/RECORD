@@ -1,0 +1,10 @@
+pyAMaFiL-1.1.0.dist-info/WHEEL,sha256=Gawk2Os8MADtcq2fmQ1J4mxliR_O229rA_CHNte5ViM,147
+pyAMaFiL-1.1.0.dist-info/RECORD,,
+pyAMaFiL-1.1.0.dist-info/top_level.txt,sha256=V1Zhq67_QGtlhxGTorxWsAJt_My4JhE0spKj06FVCbw,9
+pyAMaFiL-1.1.0.dist-info/LICENCE.md,sha256=r4gpXvPk7Zq5SlhkgFLbtRrsIysN3BpNYGrFo9jPMlE,1138
+pyAMaFiL-1.1.0.dist-info/METADATA,sha256=yHSXlMjtkS5ZaODKXJl0i0sUXQ05FH9c8f-mFpPPFx0,1471
+pyAMaFiL/mag_field_wrapper.py,sha256=5T5cvHl_KlwE1_8OfVaFTJITouSsvi9pj7xPhvRAto4,11952
+pyAMaFiL/mag_field_proc.py,sha256=xZY5E8wOuN1oPv_-ne5QGneFpviUR_fNWR8DTHnjt0Y,8941
+pyAMaFiL/mag_field_lin_fff.py,sha256=y_UGGfOnSLHF3mktVZrE2xGwFLlcjZ7wRLjqYqjoHx8,5547
+pyAMaFiL/__init__.py,sha256=KwtZMRHRdBf8wXsMT4je32-3r3PhdWucji9EynQEqeo,30
+pyAMaFiL/WWNLFFFReconstruction.cpython-310-i386-linux-gnu.so,sha256=gal9mQjERYgzqnakYRbR32J8GnjrqZhknj2hS6gvCdw,2115920
