@@ -1,0 +1,6 @@
+Modules
+=======
+
+.. toctree::
+    discretization
+    utils

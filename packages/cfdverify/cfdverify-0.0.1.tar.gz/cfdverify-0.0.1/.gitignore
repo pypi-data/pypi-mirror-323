@@ -1,0 +1,5 @@
+*.pyc
+*.png
+analysis/*
+docs/build
+docs/source/generated
