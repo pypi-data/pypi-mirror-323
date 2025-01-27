@@ -1,0 +1,3 @@
+[console_scripts]
+gender_identification_client=phonexia_gender_identification_client:main
+
