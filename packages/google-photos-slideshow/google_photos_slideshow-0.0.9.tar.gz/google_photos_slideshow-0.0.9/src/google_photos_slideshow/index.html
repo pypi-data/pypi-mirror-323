@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Photos Slideshow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 2em;
+            padding: 0;
+            height: 100%;
+            background-color: black;
+            color: white;
+        }
+
+        #container {
+            position: relative;
+            width: 100%; /* Adjusted to 100vw for full width */
+            height: 70vh;
+            display: flex; /* Added for centering */
+            justify-content: center; /* Added for centering */
+            align-items: center; /* Added for centering */
+            overflow: hidden;
+        }
+
+        #slideshow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%; /* Set width to fill the container */
+            height: 100%; /* Set height to fill the container */
+            object-fit: contain; /* Fit the image within the container without cropping */
+            opacity: 0; /* Start fully transparent */
+            transition: opacity 0.5s ease-in-out; /* Short transition effect for opacity */
+        }
+
+        #controls {
+            margin-top: 3em;
+            display: flex; /* Use flexbox to layout child elements */
+            justify-content: center; /* Center children horizontally */
+            align-items: center; /* Center children vertically */
+            gap: 1em; /* Add some space between controls */
+        }
+
+        #controls button {
+            padding: 0.5em;
+            border-radius: 0.5em;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #speed-select {
+            position: relative; /* For absolute positioning of dropdown */
+            padding: 0.5em;
+            border-radius: 0.5em;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .speed-dropdown {
+            display: none; /* Initially hide dropdown */
+            position: absolute;
+            bottom: 100%; /* Position it above the speed select */
+            left: 0;
+            background-color: #555;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+
+        .speed-dropdown div {
+            padding: 12px 16px;
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .speed-dropdown div:hover {
+            background-color: #666;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1000px) {
+            #slideshow {
+                object-fit: contain; /* Cover the container area, may crop the image */
+            }
+            body {
+                font-size: 2em;
+            }
+            #controls button, #controls input[type=range] {
+                font-size: 1em;
+                margin-left: 2em;
+                margin-right: 2em;
+            }
+        }
+
+        a {
+            color: blue;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none;
+        }
+
+        .external-link::after {
+            content: '\f35d'; /* This is the Unicode for Font Awesome's external link icon */
+            font-family: 'Font Awesome 5 Free'; /* Specify the font family */
+            font-weight: 900; /* Font Awesome 5 requires this for solid icons */
+            padding-left: 0.5em; /* Add some space between the text and the icon */
+            font-size: 0.75em; /* Adjust the size of the icon */
+        }
+
+    </style>
+</head>
+<body>
+    <a id="source" target="_blank"  class="external-link"></a>
+    <div id="container">
+        <img id="slideshow" src="" alt="Slideshow Image">
+    </div>
+    <div id="controls">
+        <button id = "previous" onclick="slideshow.action('previous')"><i class="fas fa-step-backward"></i></button>
+        <button id="pause" onclick="slideshow.pause()"><i class="fas fa-pause"></i></button>
+        <button id="play" onclick="slideshow.play()" class="hidden"><i class="fas fa-play"></i></button>
+        <button id="next" onclick="slideshow.action('next')"><i class="fas fa-step-forward"></i></button>
+        <div id="speed-select" onclick="slideshow.toggleSpeedDropdown()">1x
+            <div id="speed-dropdown" class="speed-dropdown">
+                <div onclick="slideshow.setSpeed(0.25)">0.25x</div>
+                <div onclick="slideshow.setSpeed(0.5)">0.5x</div>
+                <div onclick="slideshow.setSpeed(1)">1x <i class="fas fa-check"></i></div> <!-- 1x is default -->
+                <div onclick="slideshow.setSpeed(2)">2x</div>
+                <div onclick="slideshow.setSpeed(4)">4x</div>
+            </div>
+
+        </div>
+        <button id="fullscreen-toggle" onclick="toggleFullscreen()"><i class="fas fa-expand"></i></button>
+        <button id="castButton" is="google-cast-button" style="height:2.5em"></button>
+
+    </div>
+
+
+    <script>
+        // Ensure the Cast SDK is loaded
+if (window.cast && chrome.cast && chrome.cast.isAvailable) {
+    initializeCastApi();
+} else {
+    window.__onGCastApiAvailable = function(isAvailable) {
+        if (isAvailable) {
+            initializeCastApi();
+        }
+    };
+}
+
+function initializeCastApi() {
+    window.cast.framework.CastContext.getInstance().setOptions({
+        receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
+        autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
+    });
+
+    const castButton = document.getElementById('castButton');
+    if (castButton) {
+        castButton.addEventListener('click', function() {
+            const castSession = window.cast.framework.CastContext.getInstance().getCurrentSession();
+            if (!castSession) {
+                window.cast.framework.CastContext.getInstance().requestSession().catch(function(error) {
+                    console.error('Error requesting cast session:', error);
+                });
+            }
+        });
+    } else {
+        console.error('Cast button not found');
+    }
+}
+
+
+
+
+        class Slideshow{
+            constructor(ws){
+                this.ws = ws;
+                this.previousEl = document.getElementById('previous');
+                this.pauseEl = document.getElementById('pause');
+                this.playEl = document.getElementById('play');
+                this.nextEl = document.getElementById('next');
+                this.speedSelectEl = document.getElementById('speed-select');
+                this.speedDropdownEl = document.getElementById('speed-dropdown');
+                this.slideshowEl = document.getElementById('slideshow');
+                this.sourceEl = document.getElementById('source');
+                this.containerEl = document.getElementById('container');
+                this.fullscreenToggleEl = document.getElementById('fullscreen-toggle');
+                this.castButtonEl = document.getElementById('castButton');
+
+
+                let faviconLink = document.querySelector('link[rel="icon"]');
+                if (!faviconLink) {
+                    faviconLink = document.createElement('link');
+                    faviconLink.rel = 'icon';
+                    document.head.appendChild(faviconLink);
+                }
+                this.faviconEl = faviconLink;
+
+                this.updateFavicon = this.updateFavicon.bind(this);
+                this.action = this.action.bind(this);
+                this.pause = this.pause.bind(this);
+                this.play = this.play.bind(this);
+                this.next = this.next.bind(this);
+                this.previous = this.previous.bind(this);
+                this.setSpeed = this.setSpeed.bind(this);
+                this.toggleSpeedDropdown = this.toggleSpeedDropdown.bind(this);
+                this.closeDropdown = this.closeDropdown.bind(this);
+                this.fadeIn = this.fadeIn.bind(this);
+                this.setUrl = this.setUrl.bind(this);
+                this.toggleFullscreen = this.toggleFullscreen.bind(this);
+                this.onFullscreenChange = this.onFullscreenChange.bind(this);
+                this.onKeydown = this.onKeydown.bind(this);
+                this.castMedia = this.castMedia.bind(this);
+
+
+                this.fullscreenToggleEl.addEventListener('click', this.toggleFullscreen);
+
+                document.addEventListener('fullscreenchange', this.onFullscreenChange);
+                document.addEventListener('keydown', this.onKeydown);
+
+                this.ws.onmessage = this.onmessage.bind(this);
+
+                window.addEventListener('click', this.closeDropdown);
+            }
+            onmessage (event) {
+                var data = JSON.parse(event.data);
+                if (data.action === 'speed') {
+                    this.setSpeed(data.speed);
+                }else if (data.action === 'pause') {
+                    this.pause(false);
+                }else if (data.action === 'play') {
+                    this.play(false);
+                } else if (data.action === 'title') {
+                    document.title = data.title;
+                    this.sourceEl.innerHTML = data.title;
+                } else if (data.action === 'source'){
+                    this.sourceEl.href = data.source;
+                }else{
+                    this.setUrl(data.url, data['content-type']);
+                }
+            }
+            updateFavicon(imageUrl) {
+                /* Update the favicon (tab icon) to the current image */
+                this.faviconEl.href = imageUrl;
+            }
+            action(action, value = null) {
+                this.ws.send(JSON.stringify({action, value}));
+            }
+            pause(send = true) {
+                if (send){
+                    this.action('pause');
+                }
+                this.pauseEl.classList.add('hidden');
+                this.playEl.classList.remove('hidden');
+            }
+            play(send = true) {
+                if (send){
+                    this.action('play');
+                }
+                this.playEl.classList.add('hidden');
+                this.pauseEl.classList.remove('hidden');
+            }
+            next() {
+                this.action('next');
+            }
+            previous() {
+                this.action('previous');
+            }
+            setSpeed(speed) {
+                this.action('speed', speed);
+                this.speedSelectEl.childNodes[0].nodeValue = speed + 'x'; // Update the display to the selected speed
+                // Update dropdown options to show a checkmark next to the selected speed
+                const options = this.speedDropdownEl.children;
+                for (let i = 0; i < options.length; i++) {
+                    if (options[i].innerHTML == speed + 'x') {
+                        options[i].innerHTML += ' <i class="fas fa-check"></i>'; // Add checkmark next to selected speed
+                    }else{
+                        options[i].innerHTML = options[i].innerHTML.replace(' <i class="fas fa-check"></i>', ''); // Remove checkmark from other speeds
+                    }
+                }
+                this.closeDropdown(); // Close the dropdown after selection
+            }
+            toggleSpeedDropdown() {
+                this.speedDropdownEl.style.display = this.speedDropdownEl.style.display === "block" ? "none" : "block";
+            }
+            closeDropdown(event) {
+                if ((event===undefined) || (!event.target.matches('#speed-select'))) {
+                    this.speedDropdownEl.style.display = "none";
+                }
+            }
+
+            fadeIn() {
+                this.slideshowEl.style.opacity = 1;
+            }
+            setUrl(url, contentType = null) {
+                // Reset opacity and set up a slight delay before changing the src
+                this.slideshowEl.style.opacity = 0;
+                setTimeout(() => {
+                    this.slideshowEl.src = url;
+                    this.castMedia(url, contentType);
+                    this.updateFavicon(url);
+                    // Use the 'onload' event to ensure the image fades in after it's fully loaded
+                    this.fadeIn();
+                }, 200); // Delay can be adjusted as needed
+            }
+            castMedia(url, contentType = null) {
+                if (!window.cast){
+                    this.castButtonEl.classList.add('hidden');
+                    return;
+                }
+                this.castButtonEl.classList.remove('hidden');
+
+                const castSession = cast.framework.CastContext.getInstance().getCurrentSession();
+                if (castSession) {
+                    console.warn('casting', url, contentType);
+                    const mediaInfo = new chrome.cast.media.MediaInfo(url, contentType || 'image/jpeg');
+                    const request = new chrome.cast.media.LoadRequest(mediaInfo);
+                    castSession.loadMedia(request).then(
+                        () => console.log('Media loaded successfully'),
+                        (error) => console.error('Error loading media:', error)
+                    );
+
+                }
+            }
+
+            toggleFullscreen() {
+                if (!document.fullscreenElement) {
+                    this.containerEl.requestFullscreen().catch(err => {
+                        console.error(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+                    });
+                } else if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+            onFullscreenChange() {
+                if (document.fullscreenElement) {
+                    this.fullscreenToggleEl.innerHTML = '<i class="fas fa-compress"></i>'; // Change to compress icon when in fullscreen
+                } else {
+                    this.fullscreenToggleEl.innerHTML = '<i class="fas fa-expand"></i>'; // Change back to expand icon when not in fullscreen
+                }
+            }
+
+            onKeydown(event) {
+                if (event.key === "Escape" && document.fullscreenElement) {
+                    document.exitFullscreen();
+                }
+            }
+
+
+        }
+
+        let ws = new WebSocket("ws://" + location.hostname + ":6789/");
+        let slideshow = new Slideshow(ws);
+    </script>
+
+</body>
+</html>
