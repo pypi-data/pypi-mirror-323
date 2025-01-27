@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "G:/llvm-mingw-20250114-msvcrt-x86_64/include/**",
+                "C:/Users/Administrator/AppData/Local/Programs/Python/Python312/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "windows-clang-x64",
+            "compilerPath": "G:\\\\llvm-mingw-20250114-msvcrt-x86_64\\\\bin\\\\clang++.exe"
+        }
+    ],
+    "version": 4
+}
