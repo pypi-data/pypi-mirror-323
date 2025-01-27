@@ -1,0 +1,3 @@
+[console_scripts]
+pty-server=pty_server.server:main
+
