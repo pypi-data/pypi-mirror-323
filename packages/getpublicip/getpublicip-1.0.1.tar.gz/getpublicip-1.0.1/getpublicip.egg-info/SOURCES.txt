@@ -1,0 +1,10 @@
+README.md
+setup.py
+getpublicip/__init__.py
+getpublicip/getpublicip.py
+getpublicip.egg-info/PKG-INFO
+getpublicip.egg-info/SOURCES.txt
+getpublicip.egg-info/dependency_links.txt
+getpublicip.egg-info/entry_points.txt
+getpublicip.egg-info/requires.txt
+getpublicip.egg-info/top_level.txt

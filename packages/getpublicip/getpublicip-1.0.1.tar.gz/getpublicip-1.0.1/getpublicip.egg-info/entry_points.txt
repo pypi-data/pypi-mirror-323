@@ -1,0 +1,2 @@
+[console_scripts]
+publicip = publicip.publicip:main
