@@ -1,0 +1,7 @@
+setup.py
+KaedeDB_Server.egg-info/PKG-INFO
+KaedeDB_Server.egg-info/SOURCES.txt
+KaedeDB_Server.egg-info/dependency_links.txt
+KaedeDB_Server.egg-info/entry_points.txt
+KaedeDB_Server.egg-info/requires.txt
+KaedeDB_Server.egg-info/top_level.txt

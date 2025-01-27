@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: KaedeDB-Server
+Version: 1
+Summary: KaedeDB Server component
+Home-page: https://github.com/DarsheeeGamer/KaedeDB
+Author: Kento Hinode
+Author-email: cleaverdeath@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+Requires-Dist: Flask
+Requires-Dist: cryptography
+
+KaedeDB Server - Lightweight File-Based Database with REST API
