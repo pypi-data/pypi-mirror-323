@@ -1,0 +1,11 @@
+gitlab_async_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitlab_async_client/client.py,sha256=Mj5Glfrnx7EzZwW4Xt2mGnPeGgD3EJDy7S2XDBuhlHI,4141
+gitlab_async_client/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitlab_async_client/types/__init__.py,sha256=6SbyGkIQSvX8-YFqgwpIFxEhCSmUTyv1DKxTL8L4ue4,209
+gitlab_async_client/types/base.py,sha256=9o9qruvwxdPgtQkuFrPAgT6bGnawO7FJLcKOOnuQ-7U,160
+gitlab_async_client/types/extend.py,sha256=vCURiip9-HhDlgxbd6Bn0MY-M3_pyvrcuOfcfnQMud0,898
+gitlab_async_client/types/mr.py,sha256=qX3gVsC74p_kKkGD-1S2lc8-qlHE7jqLDS-FMVKC6C0,1894
+gitlab_async_client/types/project.py,sha256=-VNfTx4G0LbPwJYT3c2QqH51_u7pcZWroWXpz3Ylu90,418
+gitlab_async_client-0.2.0.dist-info/METADATA,sha256=gXYQoh-4Jd_s_YK7RMfWbSDpiLSQXzxDmDVwpM4P3ss,528
+gitlab_async_client-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gitlab_async_client-0.2.0.dist-info/RECORD,,
