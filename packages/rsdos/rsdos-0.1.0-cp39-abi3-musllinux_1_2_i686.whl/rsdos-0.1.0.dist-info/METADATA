@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: rsdos
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: pytest ~=8.3 ; extra == 'tests'
+Requires-Dist: disk-objectstore ~=1.1 ; extra == 'bench'
+Requires-Dist: pytest-benchmark ~=4.0 ; extra == 'bench'
+Provides-Extra: tests
+Provides-Extra: bench
+Author: Jusong Yu <jusong.d.yu@gmail.com>
+Author-email: Jusong Yu <jusong.d.yu@gmail.com>
+Requires-Python: >=3.11
