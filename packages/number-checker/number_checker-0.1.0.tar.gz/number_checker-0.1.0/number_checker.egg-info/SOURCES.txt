@@ -1,0 +1,7 @@
+setup.py
+number_checker/__init__.py
+number_checker/checker.py
+number_checker.egg-info/PKG-INFO
+number_checker.egg-info/SOURCES.txt
+number_checker.egg-info/dependency_links.txt
+number_checker.egg-info/top_level.txt
