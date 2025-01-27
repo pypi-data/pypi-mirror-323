@@ -1,0 +1,11 @@
+polychromos/__init__.py,sha256=O9fSywEFdDGfGCAZZxH_qf5xJiYeEMUyPPYP4bsQCls,81
+polychromos/easing.py,sha256=K2frEawSrpHfnCD6xO2gDIMz71LM7JiVtJZZqrQKjb0,4793
+polychromos/palette.py,sha256=qPn3ZaDe-SaAxxiRQMVctZk4GepZlRpmLqyuyoltS6I,26257
+polychromos/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+polychromos/color/__init__.py,sha256=FgF3k7E5N6QmdD8ZheV4JY4A6ihLkkRDEDaxc-bfJME,81
+polychromos/color/color.py,sha256=WCMN7WO9Hfap00DFVy9ohO6GN58r7m8NecBsrwolQU8,11697
+polychromos/color/web.py,sha256=Bd66y8RoKYm1QL22NDoq5tGZJq_h0L4FqMwmlmgPgbM,8361
+polychromos-1.1.0.dist-info/METADATA,sha256=43AMJiEd_nSGDSt0uXCA7cPNUOZwxStFqCMlcL6wNO8,19261
+polychromos-1.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+polychromos-1.1.0.dist-info/licenses/LICENSE,sha256=tvrUMB4IHwGDeYucC4YR4WTUQ0RmerkzlWi4ScDl_mI,1062
+polychromos-1.1.0.dist-info/RECORD,,
