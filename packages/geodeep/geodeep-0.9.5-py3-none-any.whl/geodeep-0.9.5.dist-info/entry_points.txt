@@ -1,0 +1,2 @@
+[console_scripts]
+geodeep = geodeep.scripts.main:main
