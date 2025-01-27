@@ -1,0 +1,8 @@
+README.md
+setup.py
+smart_calculator/__init__.py
+smart_calculator/main.py
+smart_calculator.egg-info/PKG-INFO
+smart_calculator.egg-info/SOURCES.txt
+smart_calculator.egg-info/dependency_links.txt
+smart_calculator.egg-info/top_level.txt
