@@ -1,0 +1,16 @@
+openseries/__init__.py,sha256=DrWDr7AJuhhBVivuFyLRIcVIYepuDoJO4k0ztQT9MR0,1035
+openseries/_common_model.py,sha256=w80ce2Qw9eV75m3DWmuLfg_Bf3T1LN7m3_x6Qlfoz7c,73771
+openseries/_risk.py,sha256=Dx-ZcQpc27qCs3j6o_Q1WshJ5m-vvf2ufYrKWD_q7PE,2085
+openseries/datefixer.py,sha256=2QvioTNIzL067srtzBWB8mEgbPYydiNmjTPM9YICPl0,12300
+openseries/frame.py,sha256=3uqlGTY6wu5OhXaS7gwhroj4gEjeEGE7zJjqrr9lCdg,55407
+openseries/load_plotly.py,sha256=-s_KkLSU0Zvw3bdjV1kFtbNd5ShS-z5nd46tzGvZiYU,1959
+openseries/owntypes.py,sha256=TwKCjD_911x2mEUcK_KM0d-I5sNH46OKt8ttLq-33-Q,7317
+openseries/plotly_captor_logo.json,sha256=F5nhMzEyxKywtjvQqMTKgKRCJQYMDIiBgDSxdte8Clo,178
+openseries/plotly_layouts.json,sha256=ahx8-dL4_RPzvHtBOX0SiL0AH7xQJzNRSDhGrSmU-Og,1429
+openseries/portfoliotools.py,sha256=eVFs-ded4mt4IqdDS2S665_u0P213oC4ZkW_nmc-mWw,19180
+openseries/series.py,sha256=vtjnn1UJedXqFIMJSG0DaVt-MyIw58qnxwyG2nfqG-w,27598
+openseries/simulation.py,sha256=3bMG9wYKMlXY6BZuORGAPQvLvvDg3qp7e2JPSwMHyOo,13881
+openseries-1.8.0.dist-info/LICENSE.md,sha256=IQ8_IMXgHxyv4M48G14fJsjcrkiSASdalASTXWCOsj4,1515
+openseries-1.8.0.dist-info/METADATA,sha256=gXQGuyWqwhd7gMSw5DvMOQOW_kC4l6saD4kvICDV6AM,43789
+openseries-1.8.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+openseries-1.8.0.dist-info/RECORD,,
