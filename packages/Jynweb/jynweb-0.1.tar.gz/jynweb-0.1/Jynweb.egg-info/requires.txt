@@ -1,0 +1,4 @@
+requests
+
+[email_support]
+smtplib
