@@ -1,0 +1,24 @@
+[project]
+name = "nmu"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "tyang", email = "ytong@datav.com" }
+]
+requires-python = ">= 3.10"
+dependencies = [
+    "dbutils>=3.1.0",
+    "ddddocr>=1.5.6",
+    "httpx>=0.28.1",
+    "psycopg2-binary>=2.9.10",
+    "selenium>=4.28.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.workspace]
+exclude = ["out", "chrome"]
+members = ["nmu"]
