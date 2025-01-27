@@ -1,0 +1,2 @@
+[console_scripts]
+image_grouping = image_grouping_tool.__main__:cli
