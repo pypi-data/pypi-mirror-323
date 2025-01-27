@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: pensa
+Version: 0.6.0
+Summary: exploratory analysis and comparison of biomolecular conformational ensembles.
+Author-email: "Martin Voegele, Neil Thomson, Sang Truong, Jasper McAvity" <martinvoegele1989@gmail.com>
+License: MIT
+Project-URL: Documentation, https://pensa.readthedocs.io/en/latest/
+Project-URL: Source, http://github.com/drorlab/pensa
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: ==3.10.*
+License-File: LICENSE
+Requires-Dist: numpy>=1.23
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: deeptime
+Requires-Dist: MDAnalysis==2.8
+Requires-Dist: biotite
+Requires-Dist: gpcrmining
