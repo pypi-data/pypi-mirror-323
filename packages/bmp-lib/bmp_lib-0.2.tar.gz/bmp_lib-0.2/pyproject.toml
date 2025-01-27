@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "twine"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bmp_lib"
+version = "0.2"
+authors = [
+  { name = "Taoufiq OUEDRAOGO", email = "taoufiq2827.ouedraogo@gmail.com" }
+]
+dynamic = ["dependencies", "optional-dependencies"]
+
+description = "This package implements all the logic of Brief My Press.AI"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/Taoufiq-Ouedraogo/Brief-My-Press-AI-Library"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["bmp_lib"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
