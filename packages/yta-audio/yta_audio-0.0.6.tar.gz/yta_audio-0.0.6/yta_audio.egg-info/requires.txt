@@ -1,0 +1,16 @@
+yta_general_utils
+pydub
+moviepy
+deepfilternet
+whisper_timestamped
+faster_whisper
+torch
+pyttsx3
+gtts
+scamp
+elevenlabs
+pymusixmatch
+librosa
+pedalboard
+soundfile
+scipy
