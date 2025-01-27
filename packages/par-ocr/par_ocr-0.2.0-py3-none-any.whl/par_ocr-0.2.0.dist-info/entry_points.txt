@@ -1,0 +1,2 @@
+[console_scripts]
+par_ocr = par_ocr.__main__:app
