@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/mpfa/__init__.py
+src/mpfa/__main__.py
+src/mpfa.egg-info/PKG-INFO
+src/mpfa.egg-info/SOURCES.txt
+src/mpfa.egg-info/dependency_links.txt
+src/mpfa.egg-info/top_level.txt
+src/mpfa/core/__init__.py
+src/mpfa/tests/__init__.py
+src/mpfa/tests/test_1984.py
