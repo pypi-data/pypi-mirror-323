@@ -1,0 +1,22 @@
+[project]
+name = "OFTP-News"
+#dynamic = ["version"]
+version = "0.1.2"
+license = {text = "Proprietary"}
+authors = [{name = "Chris Hanlon, emmail = <arbalister@gmail.com>"}]
+readme = "README.md"
+description = "News aggregation for Ontario Federation of Teaching Parents"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas >= 2.2.3",
+    "requests >= 2.32.3",
+    "openpyxl >= 3.1.5"
+]
+
+[tool.poetry]
+#version = "0.1.2" # base version
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

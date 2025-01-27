@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: OFTP-News
+Version: 0.1.2
+Summary: News aggregation for Ontario Federation of Teaching Parents
+License: Proprietary
+Author: Chris Hanlon, emmail =
+Author-email: arbalister@gmail.com
+Requires-Python: >=3.10
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: openpyxl (>=3.1.5)
+Requires-Dist: pandas (>=2.2.3)
+Requires-Dist: requests (>=2.32.3)
+Description-Content-Type: text/markdown
+
+
