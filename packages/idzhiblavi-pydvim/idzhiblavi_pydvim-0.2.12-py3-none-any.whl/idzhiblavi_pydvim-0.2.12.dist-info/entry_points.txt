@@ -1,0 +1,2 @@
+[console_scripts]
+pdvim = dvim.__main__:cli_entrypoint
