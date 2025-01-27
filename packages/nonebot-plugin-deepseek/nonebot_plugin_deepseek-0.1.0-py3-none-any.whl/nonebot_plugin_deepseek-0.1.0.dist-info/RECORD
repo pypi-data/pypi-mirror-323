@@ -1,0 +1,16 @@
+nonebot_plugin_deepseek-0.1.0.dist-info/METADATA,sha256=7FDKL8pnieIW6XxawRny-h2kv5Crap8N3vsryhn6A_8,5217
+nonebot_plugin_deepseek-0.1.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+nonebot_plugin_deepseek-0.1.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+nonebot_plugin_deepseek-0.1.0.dist-info/licenses/LICENSE,sha256=4-bNU7T9j8MsmXqL_eKyVJmxM72N9rUfeDvYCWGUUUo,1065
+nonebot_plugin_deepseek/__init__.py,sha256=C6BYTX8am1TCuU8-1wVOWr7c89iQ6EUwL1NfhlevgeY,4029
+nonebot_plugin_deepseek/apis/__init__.py,sha256=g4wgHFK5mNtQS0OgdwxyBuQxepYWyXPtCXMN0DiXUvc,32
+nonebot_plugin_deepseek/apis/request.py,sha256=YwRTrnC6tgthaFr8rrvSvklfDVIbvFdiOjlS_BsWCUY,2064
+nonebot_plugin_deepseek/config.py,sha256=RN1QlXK2rDX8L08rEG3ZfJfbiQUrVv65fwEsqv79ViM,540
+nonebot_plugin_deepseek/extension.py,sha256=XPac-NbEkpi1lIHfLdaclNG41XkR4MEPYGNhy-StKCs,653
+nonebot_plugin_deepseek/schemas/__init__.py,sha256=VdbpQ4IME69cFu2mALJUB020_b6u2iIOz6lHMWOyaNk,141
+nonebot_plugin_deepseek/schemas/balance.py,sha256=I81gfJbkQYy5f2Q8zAYd4UHuxdZE0Ya0wDjcRXYaNaY,722
+nonebot_plugin_deepseek/schemas/chat.py,sha256=Ys_M8vxyiuGmgYzv8DP6kCZIJXptSLufllCtbgJvXIE,1755
+nonebot_plugin_deepseek/schemas/logprobs.py,sha256=HCJ9ojKymwsCdCMLLUxe59L2TJifjA9zja5THwb9t1A,2186
+nonebot_plugin_deepseek/schemas/message.py,sha256=E9odTIB6t23Jf_IIPTRzNtVjT0bPpuf-PKGRnjhjtLM,1398
+nonebot_plugin_deepseek/schemas/usage.py,sha256=mhMmFyo6vQ3PmMV1EaiCjaxdGubx0GAEKcEeO835TXw,1461
+nonebot_plugin_deepseek-0.1.0.dist-info/RECORD,,
