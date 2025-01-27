@@ -1,0 +1,2 @@
+::: whistlingduck.analyzers.Size
+
