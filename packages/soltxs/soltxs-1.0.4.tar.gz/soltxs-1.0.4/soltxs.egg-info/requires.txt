@@ -1,0 +1,5 @@
+qborsh==1.0.1
+qbase58==1.0.4
+
+[dev]
+pytest
