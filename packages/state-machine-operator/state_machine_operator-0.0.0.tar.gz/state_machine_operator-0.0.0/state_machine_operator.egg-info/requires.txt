@@ -1,0 +1,5 @@
+python-statemachine
+jsonschema
+Jinja2
+pyyaml
+kubernetes
