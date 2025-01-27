@@ -1,0 +1,14 @@
+README.md
+setup.py
+gapred/__init__.py
+gapred.egg-info/PKG-INFO
+gapred.egg-info/SOURCES.txt
+gapred.egg-info/dependency_links.txt
+gapred.egg-info/requires.txt
+gapred.egg-info/top_level.txt
+gapred/core/__init__.py
+gapred/core/layers.py
+gapred/core/loss_functions.py
+gapred/core/optimizers.py
+gapred/core/simple_nn.py
+gapred/core/tensor.py
