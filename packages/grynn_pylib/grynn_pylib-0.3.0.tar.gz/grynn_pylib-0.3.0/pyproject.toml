@@ -1,0 +1,23 @@
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project]
+name = "grynn_pylib"
+description = "A Python library of general utility functions, by & for Grynn."
+version = "0.3.0"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [ "pandas>=2.2", "loguru>=0.7.2", "scipy>=1.14", "numpy>=2.1.2", "toml>=0.10", "click>=8.1", "yfinance>=0.2.51", "matplotlib>=3.10.0", "exchange-calendars>=4.7", "jinja2>=3.1.5", "xlsxwriter>=3.2.1", "tabulate>=0.9.0",]
+[[project.authors]]
+name = "Vishal Doshi"
+email = "vishal.doshi@gmail.com"
+
+[dependency-groups]
+dev = [ "ipykernel>=6.29.5", "ipython>=8.31.0", "ipywidgets>=8.1.5", "pytest>=8.3.4",]
+
+[tool.ruff.lint]
+ignore = [ "E701",]
+
+[tool.hatch.build.targets.sdist]
+include = [ "tests/", "grynn_pylib/", "pyproject.toml", "README.md", "LICENSE", "requirements.txt", "examples/",]
