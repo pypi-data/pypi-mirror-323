@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: voltus
+Version: 0.0.1
+Summary: A Python client for the Voltus API
+Author: Carlos Tarjano
+Author-email: carlos.t.santos@inesctec.pt
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+
