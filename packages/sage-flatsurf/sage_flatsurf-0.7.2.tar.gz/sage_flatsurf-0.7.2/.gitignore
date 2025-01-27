@@ -1,0 +1,15 @@
+build/
+*.pyc
+*~
+*.ps
+doc/_build/*
+*.swp
+dist/
+MANIFEST
+/rever
+.DS_Store
+/.asv
+/pkgs
+# pixi environments
+.pixi
+*.egg-info

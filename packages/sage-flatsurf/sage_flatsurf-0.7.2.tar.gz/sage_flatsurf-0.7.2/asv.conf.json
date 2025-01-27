@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "dvcs": "git",
+  "project": "sage-flatsurf",
+  "project_url": "https://github.com/flatsurf/sage-flatsurf",
+  "show_commit_url": "https://github.com/flatsurf/sage-flatsurf/commit/",
+  "repo": ".",
+  "build_command": "",
+  "install_command": "pip install .",
+  "environment_type": "conda",
+  "conda_environment_file": "asv.environment.yml",
+  "benchmark_dir": "benchmark",
+  "env_dir": ".asv/env",
+  "results_dir": ".asv/results",
+  "html_dir": ".asv/html",
+  "branches": ["master"]
+}
