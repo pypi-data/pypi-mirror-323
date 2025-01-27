@@ -1,0 +1,15 @@
+
+language python
+
+// This migration is generated automatically - do not manually edit this file
+pattern langchain_migrate_fireworks() {
+  find_replace_imports(list=[
+    [`aibaba_ai_community.chat_models.fireworks`, `ChatFireworks`, `langchain_fireworks`, `ChatFireworks`],
+    [`aibaba_ai_community.llms.fireworks`, `Fireworks`, `langchain_fireworks`, `Fireworks`],
+    [`aibaba_ai_community.chat_models`, `ChatFireworks`, `langchain_fireworks`, `ChatFireworks`],
+    [`aibaba_ai_community.llms`, `Fireworks`, `langchain_fireworks`, `Fireworks`]
+  ])
+}
+
+// Add this for invoking directly
+langchain_migrate_fireworks()
