@@ -1,0 +1,2 @@
+[console_scripts]
+dishoom = dishoom.dishoom:main
