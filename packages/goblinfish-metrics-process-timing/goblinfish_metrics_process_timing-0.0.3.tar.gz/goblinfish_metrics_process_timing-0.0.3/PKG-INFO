@@ -1,0 +1,109 @@
+Metadata-Version: 2.2
+Name: goblinfish-metrics-process_timing
+Version: 0.0.3
+Summary: Context-managed metrics tracking and output, including but not limited to process/subprocess latencies.
+Author-email: Brian Allbee <brian.allbee+goblinfish.process_timing+@gmail.com>
+Maintainer-email: Brian Allbee <brian.allbee+goblinfish.process_timing+@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Brian D. Allbee
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: aws,cloudwatch,log,metrics,process timing
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: System :: Monitoring
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# The goblinfish.metrics.process_timing Package
+
+> Provides context-manager classes to name, track and report elapsed-time and other metrics for top-level process entry-points (like AWS Lambda Function handlers) and sub-processes within them.
+
+## Quick Start
+
+Install in your project:
+
+```shell
+# Install with pip
+pip install goblinfish-metrics-process_timing
+```
+
+```shell
+# Install with pipenv
+pipenv install goblinfish-metrics-process_timing
+```
+
+Import in your code:
+
+```python
+from goblinfish.metrics.process_timing import ProcessTimer
+```
+
+Create the timing-tracker instance:
+
+```python
+tracker = ProcessTimer()
+```
+
+Decorate your top-level/entry-point function:
+
+```python
+@tracker.track
+def some_function():
+    ...
+```
+
+Add any sub-process timers:
+
+```python
+@tracker.track
+def some_function():
+    ...
+
+    with tracker.timer('some_process_name'):
+        # Do stuff here
+        ...
+```
+
+When this code is executed, after the context created by the `@tracker.track` decorator is complete, it will `print` something that looks like this:
+
+```json
+{"some_process_name": 0.0, "some_function": 0.0}
+```
+
+More detailed examples can be found in [the `examples` directory](https://bitbucket.org/stonefish-software-studio/stonefish-metrics-process_timer-package/src/main/examples/) in the repository.
+
+## Contribution guidelines
+
+At this point, contributions are not accepted — I need to finish configuring the repository, deciding on whether I want to set up automated builds for pull-requests, and probably several other items.
+
+## Who do I talk to?
+
+The current maintainer(s) will always be listed in the `[maintainers]` section of [the `pyproject.toml` file](https://bitbucket.org/stonefish-software-studio/stonefish-metrics-process_timer-package/src/main/pyproject.toml) in the repository.
