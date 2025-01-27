@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: nexify
+Version: 0.1.0
+Summary: Nexify is a web framework for building APIs with AWS Lambda Python runetime based on standard Python type hints.
+Author-Email: junah201 <junah.dev@gmail.com>
+License: MIT
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Internet :: WWW/HTTP
+Project-URL: Homepage, https://github.com/junah201/nexify
+Project-URL: Documentation, https://nexify.junah201.dev
+Project-URL: Repository, https://github.com/junah201/nexify
+Project-URL: Issues, https://github.com/junah201/nexify/issues
+Project-URL: Changelog, https://nexify.junah201.dev/release-notes
+Requires-Python: >=3.10
+Requires-Dist: pydantic!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=2.0.0
+Requires-Dist: typing-extensions>=4.8.0
+Provides-Extra: dev
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: ruff>=0.9.0; extra == "dev"
+Provides-Extra: test
+Requires-Dist: mypy; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Description-Content-Type: text/markdown
+
+# Nexify
+
+<p align="center">
+<a href="https://github.com/junah201/nexify/actions?query=workflow%3ATest+event%3Apush+branch%3Amaster" target="_blank">
+    <img src="https://github.com/junah201/nexify/workflows/Test/badge.svg?event=push&branch=master" alt="Test">
+</a>
+<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/junah201/nexify" target="_blank">
+    <img src="https://coverage-badge.samuelcolvin.workers.dev/junah201/nexify.svg" alt="Coverage">
+</a>
+<a href="https://pypi.org/project/nexify" target="_blank">
+    <img src="https://img.shields.io/pypi/v/nexify?color=%2334D058&label=pypi%20package" alt="Package version">
+</a>
+<a href="https://pypi.org/project/nexify" target="_blank">
+    <img src="https://img.shields.io/pypi/pyversions/nexify.svg?color=%2334D058" alt="Supported Python versions">
+</a>
+</p>
+
+---
+
+Nexify is a web framework for building APIs with AWS Lambda Python runetime based on standard Python type hints.
