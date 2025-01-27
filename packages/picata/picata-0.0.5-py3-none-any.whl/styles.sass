@@ -1,0 +1,302 @@
+@use "tailwindcss/base"
+@use "tailwindcss/components"
+@use "tailwindcss/utilities"
+
+// Pygments styles for syntax highlighting
+@use "pygments.sass"
+
+// Base typography
+@layer base
+  body
+    @apply text-base font-serif font-light
+
+  h1, h2, h3, h4, h5, h6
+    @apply font-heading font-normal
+    &:not(:first-child)
+      @apply mt-8
+  h1
+    @apply text-3xl leading-tight
+  h2
+    @apply text-2xl leading-tight
+  h3
+    @apply text-xl leading-snug
+  h4
+    @apply text-lg leading-normal
+  h5
+    @apply text-base leading-relaxed
+  h6
+    @apply text-sm leading-relaxed
+  strong, b
+    @apply font-bold
+  em, i
+    @apply italic
+  code, pre
+    @apply font-mono font-light
+    &.strong
+      @apply font-semibold
+  .highlight
+    @apply font-highlight font-bold
+
+// Main page layout
+html
+  scroll-behavior: smooth
+
+p, ul
+  @apply my-4
+
+body
+  @apply flex flex-col min-h-screen bg-base-100
+  > header
+    z-index: 30
+    @apply bg-base-300 pt-5 pb-4 ml-neg-safe-left mr-neg-safe-right shadow-lg
+    > div
+      @apply flex flex-col flex-1 px-7 w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto
+
+#top-bar
+  @apply flex justify-end
+  &.debug
+    @apply justify-between
+  #debug-container
+    @apply flex justify-between
+    > div
+      @apply absolute -mt-2 px-2 items-center justify-center text-xs font-bold text-white rounded
+
+#search-wrapper
+  @apply flex mr-2
+  > #search-toggle
+    @apply btn-neutral btn btn-sm !rounded-l-full
+  form > #search-field
+    @apply transition-all duration-300 ease-in-out placeholder-gray-400
+    @apply border border-gray-300 focus:border-primary focus:ring focus:ring-primary/50
+    @apply rounded-r-full text-primary-content px-2
+    &:focus
+      @apply outline-none
+    &.search-hidden
+      @apply w-0 opacity-0 px-0
+  .search-visible
+    @apply w-48 opacity-100
+
+#theme-wrapper
+  @apply flex indicator
+  button
+    @apply btn-neutral
+    > svg
+      @apply size-5
+  > #theme-reset
+    @apply group-hover:opacity-100 indicator-item
+    @apply transition scale-50 pl-4 pb-1 bg-transparent
+    > svg
+      @apply size-6
+
+#menu-block
+  @apply flex flex-wrap items-end pt-3 sm:pt-0
+  .profile
+    @apply flex items-end
+    > img
+      @apply w-24 h-24 rounded-full ring-2 ring-profile-ring mr-6
+    > h1
+      @apply flex flex-col text-2xl font-bold leading-tight
+      > .name
+        font-family: 'Sacramento', cursive
+        font-weight: 400 // Regular weight for Sacramento
+        font-size: 2.5rem
+      > .tagline
+        @apply text-lg font-normal text-base-content -mt-3 mb-0.5
+  nav
+    @apply flex flex-wrap justify-center grow pt-4
+    a
+      @apply btn btn-ghost px-4 h-8 min-h-8
+      font-size: 1.125rem
+
+body
+  @apply min-h-screen
+  > main
+    @apply bg-base-200 pt-10 pb-6 w-full mx-auto px-7 flex flex-grow sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl
+    > article
+      @apply max-w-full
+
+    // Big, single, flat 'ol page template
+    &.one-column
+      > article
+        @apply mx-auto
+
+    // Main takes a series of `div`s, which each take up half the page at a time at 'sm' width
+    // and above. All content is centre-justified.
+    &.split-view
+      @apply flex flex-wrap items-start gap-x-12 gap-y-4 relative flex-col sm:flex-row
+      > div
+          @apply w-full sm:flex-[0_0_calc(50%-1.5rem)] flex flex-col justify-start sm:justify-center text-center
+          > *
+            @apply mx-auto
+      &:before
+          @apply hidden sm:block bg-base-100
+          content: ""
+          position: absolute
+          top: 0
+          bottom: 0
+          left: calc(50% - 1px)
+          width: 2px
+
+    // Main takes a `dl`, alternates a 25%-width left column of `dt`s with
+    // 75%-width `dd`s, and there's a 2px vertical line down the gap between 'em
+    &.definition-list
+      @apply flex flex-col sm:flex-row relative
+      dl
+        @apply flex flex-wrap w-full self-start
+        dt
+          @apply sm:flex-none sm:w-1/4 text-right sm:pr-8
+        dd
+          @apply sm:flex-none sm:w-3/4 text-left sm:pl-2
+      &:before
+        @apply hidden sm:block bg-base-100
+        content: ""
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 25%
+        width: 2px
+      @media (max-width: 640px)
+        &:before
+          display: none
+
+    // - At 'large' and above, the `aside` covers 25% width, leaving 50% for
+    //   the `article`, before the `nav takes the remaining 25%
+    // - On 'small' and 'medium' screens, the `aside` lives above the `nav` in
+    //   a 25%-width left column leaving the remaining 75% for the `article`
+    // - For 'extra-small' (and smaller) views, the `nav`, `article`, and `aside`
+    //   collapse into a single column, in that order
+    &.three-column
+      @apply grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-12 gap-7 sm:grid-rows-[auto_minmax(0,1fr)] lg:auto-rows-min
+      > aside
+        @apply order-3 sm:order-1 sm:col-span-1 lg:col-span-3 lg:row-start-1 self-start
+      > nav
+        @apply order-1 sm:order-3 sm:col-span-1 sm:row-start-2 lg:col-span-3 lg:col-start-10 lg:row-start-1 self-start
+      > article
+        @apply order-2 sm:order-2 sm:col-span-3 lg:col-span-6 lg:col-start-4 lg:col-end-10 sm:row-span-2 lg:row-span-1
+
+  > footer
+    @apply bg-base-300 pt-5 pb-5 ml-neg-safe-left mr-neg-safe-right
+    z-index: 30
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1)
+    > div
+      @apply flex flex-col flex-1 px-7 w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto
+
+// Element styles
+a
+  @apply transition-colors duration-150 underline
+  &:focus
+    @apply underline outline-none ring-1 ring-offset-1
+  &:not(:visited)
+    @apply text-primary decoration-primary/0
+    &:hover
+      @apply text-primary/75 decoration-primary/75
+  &:visited
+    @apply text-secondary decoration-secondary/0
+    &:hover
+      @apply text-primary/75 decoration-primary/75
+
+h1, h2, h3, h4, h5, h6
+  @apply scroll-mt-8
+  a.target-link
+    @apply ml-3 opacity-0 text-neutral-500 font-mono transition-opacity ease-in-out text-sm align-middle
+    &:hover, &:focus
+      @apply no-underline
+  &:hover
+    a.target-link
+      @apply opacity-100
+
+
+[data-theme="fl"] .btn-active
+  --btn-neutral-shadow: color-mix(in srgb, color-mix(in srgb, oklch(var(--n)) 80%, black 20%), transparent 40%)
+
+[data-theme="ad"] .btn-active
+  --btn-neutral-shadow: color-mix(in srgb, color-mix(in srgb, oklch(var(--n)) 80%, white 20%), transparent 60%)
+
+.btn-active
+  @apply shadow-md transition-shadow
+  box-shadow: 0px 0px 3px 2px var(--btn-neutral-shadow, rgba(0, 0, 0, 0.2))
+
+.pill-button-divider
+  @apply h-full w-0.5
+  background-color: calc(oklch(var(--n)) * 0.8)
+
+div.pygments
+  @apply relative overflow-hidden rounded-lg
+  > pre
+    @apply overflow-x-auto max-w-full bg-base-300 px-5 py-6
+    font-size: 0.92rem
+    span
+      line-height: 1.47
+
+@layer utilities
+  .shadow-fade-right
+    @apply relative overflow-x-auto
+    &::after
+      content: ""
+      @apply absolute top-0 right-0 bottom-0 w-6
+      width: 3.5rem
+      pointer-events: none
+  [data-theme-mode="dark"] .shadow-fade-right
+    &::after
+      background: linear-gradient(to left, color-mix(in srgb, oklch(var(--b3)), transparent 33%), transparent)
+  [data-theme-mode="light"] .shadow-fade-right
+    &::after
+      background: linear-gradient(to left, color-mix(in srgb, oklch(var(--b3)), rgb(0 0 0 / 0.17)), transparent)
+
+
+// Template styles
+main.post-list
+  .meta-data
+    @apply text-xs pt-6
+    h2
+      @apply font-cursive
+    span
+      @apply whitespace-nowrap
+  .preview
+    @apply pt-5
+    h3
+      @apply text-2xl
+  dd.title
+    @apply pb-4
+
+main.article
+  aside
+    .tagline
+      @apply hidden sm:block text-center
+    hr
+      @apply border-neutral-500 mt-6 mb-7
+    // @apply leading-none
+    span
+      @apply whitespace-nowrap
+  article > h1
+    @apply mb-4
+
+main.search-results
+  h1 + h2
+    @apply mt-0
+
+nav
+  @apply relative
+
+.toc
+  @apply bg-base-300 rounded-lg shadow-md p-4 sticky flex flex-col items-start top-0
+  ul
+    @apply list-none pl-2 m-0
+  > ul
+    @apply pl-0
+  li
+    @apply text-sm text-neutral-600 hover:text-neutral-800 mt-3 leading-tight
+  a
+    @apply no-underline
+
+
+// Block styles
+ul.icon-link-list
+  @apply flex flex-wrap justify-center list-none gap-x-6 gap-y-4
+  > li
+    @apply flex items-center
+    > a
+      @apply flex items-center
+    svg
+      @apply w-4 h-4 fill-current align-middle mr-2
+      margin-bottom: -1px
