@@ -1,0 +1,13 @@
+drf_apischema/__init__.py,sha256=J7jJXNVDavjKNpngdOM1msETIl0JyJYRjMPaMGNf_sM,502
+drf_apischema/core.py,sha256=S7KYdLaU_2q7UUzIoybGoXkUy7D8cp-t4ANjRUaoH6E,13603
+drf_apischema/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drf_apischema/request.py,sha256=np1sAs6cjMZOrdY-n1IeC7W6M4ahdN0PF59Hmn6merU,262
+drf_apischema/response.py,sha256=TIL-nva2MbkNMmpWrry7UV5nc8n_sRVHHEiYzsQ2Rw8,1017
+drf_apischema/settings.py,sha256=LGhwGRmMTUU_1iD6eMIt4kVR4bu_2FRJ4Qvd_N_GxKg,1960
+drf_apischema/urls.py,sha256=rOT0XCZNkvOeLz5AlBK8Xfb9H2J3VGLVDydtZ89A6Mg,1888
+drf_apischema/utils.py,sha256=fswqkeldJbzLhSm0dMlDTcuFMiPx20Nm9Kngu_mdU0A,800
+drf_apischema/locale/zh_HAns/LC_MESSAGES/django.po,sha256=D3zF_MM1EEdj6PMlV7vqNEpBf-P2kqn1aDwq4a4RQQo,937
+drf_apischema-0.1.17.dist-info/METADATA,sha256=0oeai9j3h4WRGAGpDN6OduS0fnBbsUvCUpBTWQWSIPY,6332
+drf_apischema-0.1.17.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+drf_apischema-0.1.17.dist-info/licenses/LICENSE,sha256=CMz8Wv0TPqPYLHh0JeR0oODGOivJPNx951lSJYdR8pY,1062
+drf_apischema-0.1.17.dist-info/RECORD,,
