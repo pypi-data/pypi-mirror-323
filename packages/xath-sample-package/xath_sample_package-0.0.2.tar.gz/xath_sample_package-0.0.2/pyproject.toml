@@ -1,0 +1,22 @@
+[project]
+name = "xath-sample-package"
+version = "0.0.2"
+description = "A small example package"
+authors = [
+    { name="Satria Ady Pradana", email="xathrya@reversing.id" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/xath_sample_package.egg-info/PKG-INFO
+src/xath_sample_package.egg-info/SOURCES.txt
+src/xath_sample_package.egg-info/dependency_links.txt
+src/xath_sample_package.egg-info/top_level.txt
