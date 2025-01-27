@@ -1,0 +1,8 @@
+difflib_parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+difflib_parser/diff_line.py,sha256=OuVFN9jb8yOu4u6wTFeP1h8LIrQObO5S5uXwa7zcdec,863
+difflib_parser/difflib_parser.py,sha256=wbr9uCfIl7d6lWrXdyiUK5--bsfxTl-6BIOVVthZHdU,4083
+difflib_parser/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+difflib_parser-1.2.1.dist-info/METADATA,sha256=8uv2N1CFsVm2uQfDKZr57uUyXRSJ_mJu84mcMr2X4XA,4552
+difflib_parser-1.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+difflib_parser-1.2.1.dist-info/licenses/LICENSE,sha256=9Kxq9GGG8cw33s0joQYTkVryROn0lhBriX6T0LZoeWc,1063
+difflib_parser-1.2.1.dist-info/RECORD,,
