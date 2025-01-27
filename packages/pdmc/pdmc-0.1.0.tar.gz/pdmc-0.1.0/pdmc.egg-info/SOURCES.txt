@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+pdmc/__init__.py
+pdmc.egg-info/PKG-INFO
+pdmc.egg-info/SOURCES.txt
+pdmc.egg-info/dependency_links.txt
+pdmc.egg-info/not-zip-safe
+pdmc.egg-info/requires.txt
+pdmc.egg-info/top_level.txt
+src/cudualmc.cu
+src/cudualmc.h
+src/pybind.cpp
