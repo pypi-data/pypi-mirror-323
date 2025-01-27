@@ -1,0 +1,61 @@
+[project]
+name = "lll_taskmanager"
+version = "0.1.1rc3"
+description = "Unsupervised task detection in lifelong learning systems using autoencoders for task similarity detection and statistical analysis."
+authors = [
+    {name = "Ferdinand Koenig", email="ferdinand@koenix.de"},
+    {name = "Omid Gheibi"},
+    {name = "Danny Weyns"}
+]
+readme = "README.md"
+requires-python = ">=3.9,<3.11"
+dependencies = [
+    # TensorFlow IO for Windows and Linux
+    "tensorflow-io-gcs-filesystem (==0.31.0) ; sys_platform == \"win32\"",
+    "tensorflow-io-gcs-filesystem ; sys_platform == \"linux\"",
+
+    # NumPy dependency
+    "numpy (>=1.21.6,<1.23)",
+
+    # TensorFlow and Keras for Windows
+    "tensorflow (==2.11) ; sys_platform == \"win32\"",
+    "keras (>=2.11.0,<2.12) ; sys_platform == \"win32\"",
+
+    # TensorFlow and Keras for macOS
+    "tensorflow-macos (==2.11.0) ; sys_platform == \"darwin\"",
+    "tensorflow-metal (==0.7.0) ; sys_platform == \"darwin\"",
+    "keras (>=2.11.0,<2.12) ; sys_platform == \"darwin\"",
+
+    # TensorFlow and Keras for Linux
+    "tensorflow (==2.11) ; sys_platform == \"linux\"",
+    "keras (>=2.11.0,<2.12) ; sys_platform == \"linux\"",
+
+    # Scikit-learn and SciPy dependencies
+    "scikit-learn (>=1.6.1,<2.0.0)",
+    "scipy (>=1.13.1,<2.0.0)",
+
+    # Keras Tuner dependency
+    "keras-tuner (>=1.4.7,<2.0.0)"
+]
+
+
+
+license = "CC BY 4.0"
+
+url = "https://github.com/ferdinand-koenig/llltaskmanager"
+
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
