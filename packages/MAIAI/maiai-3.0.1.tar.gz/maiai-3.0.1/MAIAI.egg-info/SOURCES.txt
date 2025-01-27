@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+MAIAI/__init__.py
+MAIAI/agent.py
+MAIAI/moderation.py
+MAIAI/task.py
+MAIAI.egg-info/PKG-INFO
+MAIAI.egg-info/SOURCES.txt
+MAIAI.egg-info/dependency_links.txt
+MAIAI.egg-info/requires.txt
+MAIAI.egg-info/top_level.txt
