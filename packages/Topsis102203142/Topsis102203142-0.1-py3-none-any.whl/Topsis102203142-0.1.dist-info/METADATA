@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: Topsis102203142
+Version: 0.1
+Summary: A package for TOPSIS analysis.
+Home-page: https://github.com/yourusername/Topsis102203142
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# Topsis102203142
+
+This package performs TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) analysis for multi-criteria decision-making problems.
+
+## Installation
+Install the package using:pip install Topsis102203142
+
