@@ -1,0 +1,61 @@
+Metadata-Version: 2.2
+Name: pyutils-sqlmodel
+Version: 0.2.3
+Summary: Configuracion inicial hacia conexion a base de datos con SQLModel y un repositorio con las operaciones CRUD utilizando genericos para el ahorro de codigo
+Author: Christian Carballo Cano
+Maintainer: Christian Carballo Cano
+Maintainer-email: c.cano2908@outlook.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: psycopg2-binary==2.9.10
+Requires-Dist: setuptools==75.6.0
+Requires-Dist: sqlmodel==0.0.22
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PyUtils SQLModel
+
+Este repositorio contiene utilidades para trabajar con SQLModel en Python. Proporciona herramientas y ejemplos para facilitar la interacción con bases de datos PostgreSQL utilizando SQLModel.
+
+## Autor
+
+Este proyecto fue creado por Christian Carballo Cano. Puedes encontrar más información sobre mí en mi [LinkedIn](https://www.linkedin.com/in/cano2908/).
+
+## Configuración de la conexión a PostgreSQL
+
+Para configurar la conexión a la base de datos PostgreSQL, necesitas definir las siguientes variables de entorno:
+
+```env
+SGDB - sqlite, mysql, postgresql
+USER_DB - username
+PASS_DB - password
+HOST_DB - hostname o ip addres
+PORT_DB - port number
+NAME_DB - database name
+```
+
+Asegúrate de que estas variables estén correctamente configuradas antes de ejecutar las utilidades proporcionadas en este repositorio.
+
+## Instalación
+
+Para instalar las dependencias necesarias, ejecuta:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Uso
+
+Puedes encontrar ejemplos de uso en el directorio `database/core/model_repository`. Asegúrate de revisar y adaptar los ejemplos según tus necesidades específicas.
+
+## Licencia
+
+Este proyecto está licenciado bajo los términos de la licencia MIT. Consulta el archivo `LICENSE` para obtener más información.
