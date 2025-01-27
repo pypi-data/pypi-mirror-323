@@ -1,0 +1,69 @@
+[project]
+name = "openoperator"
+description = "Operate any browser, desktop, device or robot."
+authors = [
+    { name = "Kevin Raetz" }
+]
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "MainContentExtractor>=0.0.4",
+    "beautifulsoup4>=4.12.3",
+    "httpx>=0.27.2",
+    "langchain==0.3.14",
+    "langchain-openai==0.3.1",
+    "langchain-anthropic==0.3.3",
+    "langchain-ollama==0.2.2",
+    "langchain-fireworks>=0.2.6",
+    "langchain-aws>=0.2.11",
+    "langchain-google-genai==2.0.8",
+    "pydantic>=2.10.4",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+    "posthog>=3.7.0",
+    "playwright>=1.49.0",
+    "setuptools>=75.8.0",
+    "lmnr[langchain]>=0.4.53",
+    "tld==0.13",
+]
+
+[project.optional-dependencies]
+dev = [
+    "tokencost>=0.1.16",
+    "hatch>=1.13.0",
+    "build>=1.2.2",
+    "pytest>=8.3.3",
+    "pytest-asyncio>=0.24.0",
+    "black>=24.10.0",
+]
+examples = [
+    "discord>=2.3.2",
+    "pypdf2>=3.0.1",
+]
+
+[tool.ruff]
+line-length = 130
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+extend-ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "tab"
+docstring-code-format = true
+
+[tool.black]
+line-length = 130
+target-version = ["py311"]
+skip-string-normalization = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
