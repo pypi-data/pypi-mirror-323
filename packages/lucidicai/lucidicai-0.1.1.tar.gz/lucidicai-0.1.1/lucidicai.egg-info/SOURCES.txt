@@ -1,0 +1,11 @@
+README.md
+setup.py
+lucidicai/__init__.py
+lucidicai/api.py
+lucidicai.egg-info/PKG-INFO
+lucidicai.egg-info/SOURCES.txt
+lucidicai.egg-info/dependency_links.txt
+lucidicai.egg-info/requires.txt
+lucidicai.egg-info/top_level.txt
+tests/__init__.py
+tests/test_api.py
