@@ -1,0 +1,11 @@
+LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+p115filedb/__init__.py,sha256=3abe_s27BPwakPl8Sg9WSxjPMN0kBvzaKpVLxCZJA6o,215
+p115filedb/__main__.py,sha256=RoqqPkS76EX2t4wsWIarA6N71f4---3knUm86lehQnU,3087
+p115filedb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+p115filedb/updatedb.py,sha256=8Jej-Toamer7dcLwoWivJf5GQantuU8KLQH_PW7FwWc,13849
+p115filedb-0.0.1.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+p115filedb-0.0.1.dist-info/LICENSE_zh,sha256=q-myI00wQhoEr6FKz3tNdaQSXmUpfKM8we90pvvVGJM,28917
+p115filedb-0.0.1.dist-info/METADATA,sha256=nEwRLp47XNwv8GBmzhcY8pSd13vj2KV8sCcswLqcWjI,3229
+p115filedb-0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+p115filedb-0.0.1.dist-info/entry_points.txt,sha256=8Ve5GFgiYbC1uqG9x37l_Hq9VD6_wU7dwrvuhnN47No,55
+p115filedb-0.0.1.dist-info/RECORD,,
