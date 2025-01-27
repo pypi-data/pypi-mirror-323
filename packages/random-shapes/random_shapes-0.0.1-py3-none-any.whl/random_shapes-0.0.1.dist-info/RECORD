@@ -1,0 +1,10 @@
+random_shapes/__init__.py,sha256=KEX8segA8Z5yf8XEPjvQti7KZde_pWaaNixtrQSDsu0,766
+random_shapes/helper.py,sha256=kpgjMmh-kUkhhZnsAoJneoJ6XKjskE1qgwX7c8WY3hY,444
+random_shapes/image.py,sha256=O4X6MqaLFhTRJqRICIctmJrTd0jR7iZwm42loTcoK-0,1098
+random_shapes/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+random_shapes/rnd.py,sha256=_O1LaEXJuUCPWnf47s5ouXCG9u_naeGBhaRT9rPDiHA,2037
+random_shapes/shape.py,sha256=1Hwy_QV_181KWVx3Fw7JcwJPaLMe3zQXSJNG-KRIc9w,2909
+random_shapes/types.py,sha256=oSe4FZlPwUQuSJWyd-R8ZLlEV_chUs9dUi0oLb673EU,874
+random_shapes-0.0.1.dist-info/METADATA,sha256=2Dh5r4Q_nqNc-DD9oV2nD5Vz_Yoa2dcZ-W_aZNhWJfE,1442
+random_shapes-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+random_shapes-0.0.1.dist-info/RECORD,,
