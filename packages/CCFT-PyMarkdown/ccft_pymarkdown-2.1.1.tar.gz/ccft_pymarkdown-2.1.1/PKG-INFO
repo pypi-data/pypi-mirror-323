@@ -1,0 +1,151 @@
+Metadata-Version: 2.4
+Name: CCFT-PyMarkdown
+Version: 2.1.1
+Summary: A Python wrapper around jackdewinter's PyMarkdown linter to suppress errors, caused by custom-formatted tables in Markdown files
+Project-URL: Issues, https://github.com/CarrotManMatt/CCFT-PyMarkdown/issues
+Project-URL: Repository, https://github.com/CarrotManMatt/CCFT-PyMarkdown
+Author-email: Matt Norton <matt@carrotmanmatt.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Keywords: linter,markdown,static analysis
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Text Processing :: Markup :: Markdown
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Requires-Dist: click>=8.1
+Requires-Dist: inflect>=7.5
+Requires-Dist: pymarkdownlnt>=0.9
+Provides-Extra: git-python
+Requires-Dist: gitpython>=3.1; extra == 'git-python'
+Description-Content-Type: text/markdown
+
+# CCFT-PyMarkdown
+
+![CCFT-PyMarkdown](https://img.shields.io/badge/%F0%9F%A5%95-CCFT--PyMarkdown-blue)
+![PyPI Version](https://img.shields.io/pypi/v/CCFT-PyMarkdown)
+![Python Version](https://img.shields.io/pypi/pyversions/CCFT-PyMarkdown?logo=Python&logoColor=white&label=Python)
+![PyMarkdown Version](https://img.shields.io/endpoint?url=https://toml-version-extractor.carrotmanmatt.com/lock/CarrotManMatt/CCFT-PyMarkdown&logo=Markdown&label=PyMarkdown)
+![Tests Status](https://github.com/CarrotManMatt/CCFT-PyMarkdown/actions/workflows/check-build-publish.yaml/badge.svg)
+![mypy Status](https://img.shields.io/badge/mypy-checked-%232EBB4E&label=mypy)
+![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)
+![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)
+
+A [Python](https://python.org) wrapper around [jackdewinter](https://github.com/jackdewinter)'s [PyMarkdown](https://github.com/jackdewinter/pymarkdown) linter to suppress errors, caused by custom-formatted tables in Markdown files
+
+When running [PyMarkdown](https://github.com/jackdewinter/pymarkdown) it may incorrectly flag errors inside a table that has correct formatting.
+Using this wrapper, the errors will be suppressed by temporarily cleaning any custom-formatted tables.
+
+## Installation
+
+**Run as a [uv tool](https://docs.astral.sh/uv/guides/tools) (no installation necessary)**
+
+uvx -- ccft-pymarkdown --help
+
+**[Install permenantly as a uv tool](https://docs.astral.sh/uv/guides/tools#installing-tools)**
+
+uv tool install CCFT-PyMarkdown
+
+**Install using [pip](https://pip.pypa.io) after [creating a virtual environment](https://docs.python.org/3/tutorial/venv)**
+
+path/to/venv/python -m pip install CCFT-PyMarkdown
+
+### The `+[git-python]+` https://packaging.python.org/specifications/dependency-specifiers#extras[Extra]
+
+This package can also be installed with the `[git-python]` [optional dependency](https://packaging.python.org/specifications/dependency-specifiers#extras).
+This will allow the identification of hidden/excluded files to make use of your project’s `.gitignore` file.
+
+**Run as a [uv tool](https://docs.astral.sh/uv/guides/tools) (no installation necessary)**
+
+uvx --from CCFT-PyMarkdown[git-python] -- ccft-pymarkdown --help
+
+**[Install permenantly as a uv tool](https://docs.astral.sh/uv/guides/tools#installing-tools)**
+
+uv tool install CCFT-PyMarkdown[git-python]
+
+**Install using [pip](https://pip.pypa.io) after [creating a virtual environment](https://docs.python.org/3/tutorial/venv)**
+
+path/to/venv/python -m pip install CCFT-PyMarkdown[git-python]
+
+## Usage
+
+These commands will only work correctly either after installation as a [permenant uv tool](https://docs.astral.sh/uv/guides/tools#installing-tools), or after activating a virtual environment with CCFT-PyMarkdown installed.
+Replace the command name `ccft-pymarkdown` with `uvx -- ccft-pymarkdown`, to run any of the following commands in an ephemeral envrionment.
+
+**💡 TIP**\
+If you require sending additional arguments to the `pymarkdown` command you must [manually clean](#manually-cleaning-custom-formatted-tables) any custom-formatted tables and then [manually restore](#manually-restoring-https://wikipedia.org/wiki/markdown[markdown]-files) the [MarkDown](https://wikipedia.org/wiki/Markdown) files.
+
+**Output the help message**
+
+ccft-pymarkdown --help
+
+**Run with increased verbosity**
+
+ccft-pymarkdown &lt;command> -v
+
+**Run without any logging output (incompatible with the `-v` flag)**
+
+ccft-pymarkdown &lt;command> -q
+
+**Output the current version number**
+
+ccft-pymarkdown --version
+
+### Scanning All Files After Cleaning Custom-Formatted Tables
+
+**To perform linting using [PyMarkdown](https://github.com/jackdewinter/pymarkdown), after cleaning custom-formatted tables within any [MarkDown](https://wikipedia.org/wiki/Markdown) files, use the `scan-all` action**
+
+ccft-pymarkdown scan-all
+
+**Scan files according to your `.gitignore` file (Not available when the `[git-python]` extra is not installed)**
+
+ccft-pymarkdown scan-all --with-git
+
+**Scan files without ignoring any hidden/excluded files**
+
+ccft-pymarkdown scan-all --no-git
+
+### Manually Cleaning Custom-Formatted Tables
+
+**To manually clean custom-formatted-tables within any [MarkDown](https://wikipedia.org/wiki/Markdown) files without running [PyMarkdown](https://github.com/jackdewinter/pymarkdown), use the `clean` action**
+
+ccft-pymarkdown clean MyNotes.md MyReport.md
+
+**Clean a whole directory and additional files**
+
+ccft-pymarkdown clean my-notes/ MyReport.md
+
+**Clean a whole directory according to your .gitignore file (Not available when the [git-python] extra is not installed)**
+
+ccft-pymarkdown clean --with-git my-notes/
+
+**Clean a whole directory without ignoring any hidden/excluded files**
+
+ccft-pymarkdown clean --no-git my-notes/
+
+**Clean files without making any changes, only report what would have been changed**
+
+ccft-pymarkdown clean --dry-run MyNotes.md MyReport.md
+
+### Manually Restoring https://wikipedia.org/wiki/Markdown[MarkDown] Files
+
+**To manually restore any [MarkDown](https://wikipedia.org/wiki/Markdown) files without running [PyMarkdown](https://github.com/jackdewinter/pymarkdown), use the `restore` action**
+
+ccft-pymarkdown restore MyNotes.md MyReport.md
+
+**Restore a whole directory and additional files**
+
+ccft-pymarkdown restore my-notes/ MyReport.md
+
+**Restore files without making any changes, only report what would have been changed**
+
+ccft-pymarkdown restore --dry-run MyNotes.md MyReport.md
