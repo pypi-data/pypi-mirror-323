@@ -1,0 +1,5 @@
+setup.py
+otho.egg-info/PKG-INFO
+otho.egg-info/SOURCES.txt
+otho.egg-info/dependency_links.txt
+otho.egg-info/top_level.txt
