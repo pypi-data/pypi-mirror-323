@@ -1,0 +1,16 @@
+landowner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+landowner/core.py,sha256=5FQ0s_2rPa2Vpj_dOhp6usXXAHPT9X-MBVVZLP2Uoqo,23
+landowner/helpers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/deserializers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/deserializers/test_base.py,sha256=xl9ukbvoW-qa0JwYZIoBA4ZqFV-Ah71vfNzL0uAwszE,1945
+tests/deserializers/test_facebook.py,sha256=mcbPVwdHRMIDAC9Rjw_U0cBIRAN5SglwpEyGVUKREZ8,6738
+tests/deserializers/test_instagram.py,sha256=B4l8o-DX1u643R1wN8pzn7tgKgmobIxHkyke9LosDEc,5063
+tests/entities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/entities/test_base.py,sha256=f1eEXYaUgncPZp93fdtreQgnRzY-V8ApeCsklGLpQO4,786
+tests/entities/test_facebook.py,sha256=v-sG9sSf9vUypYIZ0f6MTsF3oyUiqARTrmFTEw3_Obo,5407
+tests/entities/test_instagram.py,sha256=QaREc8n0B0nUQvov1OSWUL_NJgeKS-l3Idgu5FD5A2I,2530
+landowner-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+landowner-0.1.1.dist-info/METADATA,sha256=pHLc146eeo2feei3qWj6Es1ChU8JNnjb1-Ft5-QR7i8,42796
+landowner-0.1.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+landowner-0.1.1.dist-info/top_level.txt,sha256=WtwW_z2nAN_qj3a1IjTfunLFHlfw4KsLDDm28aywvck,16
+landowner-0.1.1.dist-info/RECORD,,
