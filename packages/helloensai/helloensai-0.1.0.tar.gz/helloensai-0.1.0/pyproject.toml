@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "helloensai"
+version = "0.1.0"
+description = "Projet helloensai pour exemple de publication de livrable sur pypi"
+authors = ["Antoine Brunetti"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
