@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: autogen-llama-cpp-chat-completion
+Version: 0.1.0
+License-File: LICENSE
+Requires-Dist: autogen-core<0.5,>=0.4
+Requires-Dist: pydantic
+Requires-Dist: llama-cpp
+
