@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+autogen_llama_cpp_chat_completion.egg-info/PKG-INFO
+autogen_llama_cpp_chat_completion.egg-info/SOURCES.txt
+autogen_llama_cpp_chat_completion.egg-info/dependency_links.txt
+autogen_llama_cpp_chat_completion.egg-info/entry_points.txt
+autogen_llama_cpp_chat_completion.egg-info/requires.txt
+autogen_llama_cpp_chat_completion.egg-info/top_level.txt
