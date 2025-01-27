@@ -1,0 +1,2 @@
+[console_scripts]
+linkedin-influencer-mcp = linkedin_influencer_mcp.main:main
