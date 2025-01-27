@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/RemoteNowApiWrapper/__init__.py
+src/RemoteNowApiWrapper/hisense.cert
+src/RemoteNowApiWrapper/keys.py
+src/RemoteNowApiWrapper.egg-info/PKG-INFO
+src/RemoteNowApiWrapper.egg-info/SOURCES.txt
+src/RemoteNowApiWrapper.egg-info/dependency_links.txt
+src/RemoteNowApiWrapper.egg-info/top_level.txt
