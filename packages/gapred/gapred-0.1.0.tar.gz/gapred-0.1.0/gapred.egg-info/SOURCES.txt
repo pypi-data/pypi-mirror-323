@@ -1,0 +1,7 @@
+README.md
+setup.py
+gapred.egg-info/PKG-INFO
+gapred.egg-info/SOURCES.txt
+gapred.egg-info/dependency_links.txt
+gapred.egg-info/requires.txt
+gapred.egg-info/top_level.txt
