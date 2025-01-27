@@ -1,0 +1,2 @@
+[console_scripts]
+Topsis_AbhiroopSingh_102213027 = Topsis_AbhiroopSingh_102213027.topsis:main
