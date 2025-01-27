@@ -1,0 +1,6 @@
+README.md
+setup.py
+pysparkpandassql.egg-info/PKG-INFO
+pysparkpandassql.egg-info/SOURCES.txt
+pysparkpandassql.egg-info/dependency_links.txt
+pysparkpandassql.egg-info/top_level.txt
