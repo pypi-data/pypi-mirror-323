@@ -1,0 +1,8 @@
+LICENSE.md
+README.md
+setup.py
+Topsis_AgambirSinghDuggal_102203130.egg-info/PKG-INFO
+Topsis_AgambirSinghDuggal_102203130.egg-info/SOURCES.txt
+Topsis_AgambirSinghDuggal_102203130.egg-info/dependency_links.txt
+Topsis_AgambirSinghDuggal_102203130.egg-info/requires.txt
+Topsis_AgambirSinghDuggal_102203130.egg-info/top_level.txt
