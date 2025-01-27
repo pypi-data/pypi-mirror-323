@@ -1,0 +1,8 @@
+wkbparse-0.2.0.dist-info/METADATA,sha256=gpMpFZalPZyxlJqh4hlhPum44E3UfOWuV3KkzGI8kEY,6396
+wkbparse-0.2.0.dist-info/WHEEL,sha256=2DV2o9nipXplBZmxLqqNlfrUo6FLhLO4K46OySjBPHk,104
+wkbparse-0.2.0.dist-info/licenses/LICENSE,sha256=R66QCXCJTm4oeaNIfspYoOKrxYVTVmQZdeKivBNM8Hs,2231
+wkbparse/__init__.py,sha256=RbOyV1PF7BhmUWYWErALm1ILAPbmFo4k_DtIXx4NUNo,124
+wkbparse/wkbparse.pyi,sha256=bnebv2H65QrkXD1pLhM4Y-NToP59JVY7k8UwuLZXZdw,1785
+wkbparse/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wkbparse/wkbparse.cpython-311-darwin.so,sha256=mfxvojh-b335tAAFiUqxddzE6SGXLrw4SbomfcyzzKM,538464
+wkbparse-0.2.0.dist-info/RECORD,,
