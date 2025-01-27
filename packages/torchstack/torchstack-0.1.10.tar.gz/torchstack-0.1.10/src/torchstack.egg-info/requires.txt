@@ -1,0 +1,5 @@
+numpy<2.0,>=1.23.5
+pydantic>=2.10.1
+ruff>=0.7.4
+torch>=2.4.1
+transformers>=4.45.2
