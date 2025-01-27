@@ -1,0 +1,13 @@
+README.md
+setup.py
+tryonai/__init__.py
+tryonai/auth.py
+tryonai/model_swap.py
+tryonai/outfit.py
+tryonai/utils.py
+tryonai/virtual_try_on.py
+tryonai.egg-info/PKG-INFO
+tryonai.egg-info/SOURCES.txt
+tryonai.egg-info/dependency_links.txt
+tryonai.egg-info/requires.txt
+tryonai.egg-info/top_level.txt
