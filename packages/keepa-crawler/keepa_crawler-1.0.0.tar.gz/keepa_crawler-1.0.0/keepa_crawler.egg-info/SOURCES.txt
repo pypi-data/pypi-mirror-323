@@ -1,0 +1,9 @@
+README.md
+setup.py
+keepa_crawler.egg-info/PKG-INFO
+keepa_crawler.egg-info/SOURCES.txt
+keepa_crawler.egg-info/dependency_links.txt
+keepa_crawler.egg-info/requires.txt
+keepa_crawler.egg-info/top_level.txt
+src/__init__.py
+src/client.py
