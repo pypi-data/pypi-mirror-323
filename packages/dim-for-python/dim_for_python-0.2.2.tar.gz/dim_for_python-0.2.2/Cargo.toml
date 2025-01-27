@@ -1,0 +1,20 @@
+[package]
+name = "dim-for-python"
+version = "0.2.2"
+edition = "2021"
+authors = ["Xinyu Bao <baoxinyuworks@163.com>"]
+description =  "Vectorization with LLMs for Python"
+readme = "README.md"
+repository =  "https://github.com/AspadaX/dim-python"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "dim_python"
+crate-type = ["cdylib"]
+
+[dependencies]
+async-openai = "0.26"
+image = "0.25.5"
+pyo3-asyncio = { version = "0.20.0", features = ["tokio", "tokio-runtime"] }
+pyo3 = "0.20"
+dim-rs = { git = "https://github.com/AspadaX/dim", branch = "main" }

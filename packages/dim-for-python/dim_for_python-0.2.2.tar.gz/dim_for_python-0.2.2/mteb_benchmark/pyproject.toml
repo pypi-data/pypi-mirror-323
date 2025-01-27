@@ -1,0 +1,11 @@
+[project]
+name = "mteb-benchmark"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["asyncio>=3.4.3", "mteb>=1.15.3"]
+
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
