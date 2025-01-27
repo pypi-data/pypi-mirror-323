@@ -1,0 +1,2 @@
+[console_scripts]
+topsis = 102203058_Vaishnavi_topsis.topsis:main
