@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/timestrike/__init__.py
+src/timestrike/timing.py
+src/timestrike.egg-info/PKG-INFO
+src/timestrike.egg-info/SOURCES.txt
+src/timestrike.egg-info/dependency_links.txt
+src/timestrike.egg-info/top_level.txt

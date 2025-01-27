@@ -1,0 +1,11 @@
+[project]
+name = 'timestrike'
+version = '0.1.10'
+description = 'Timing attacks'
+readme = 'README.md'
+license = {file = 'LICENSE'}
+requires-python = '>=3.10'
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
