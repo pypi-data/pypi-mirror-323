@@ -1,0 +1,6 @@
+Ais-cryoET>=1.0.40
+matplotlib
+openpyxl
+pandas
+streamlit
+streamlit-aggrid
