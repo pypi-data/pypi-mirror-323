@@ -1,0 +1,3 @@
+[console_scripts]
+moatless-api=moatless.api:run_api
+
