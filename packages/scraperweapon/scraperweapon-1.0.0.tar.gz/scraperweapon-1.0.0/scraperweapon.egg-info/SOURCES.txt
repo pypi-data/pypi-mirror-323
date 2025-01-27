@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+scraperweapon/__init__.py
+scraperweapon/browser_emulator.py
+scraperweapon/captcha_solver.py
+scraperweapon/proxy_manager.py
+scraperweapon/scraper.py
+scraperweapon/utils.py
+scraperweapon.egg-info/PKG-INFO
+scraperweapon.egg-info/SOURCES.txt
+scraperweapon.egg-info/dependency_links.txt
+scraperweapon.egg-info/requires.txt
+scraperweapon.egg-info/top_level.txt
