@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gym-CTgraph
+Version: 1.0
+Summary: This is the implementation for the configurable tree graph (CT-graph)
+Home-page: https://github.com/soltoggio/CT-graph
+Author: Andrea Soltoggio, Eseoghene Benjamin, Christos Peridis, Pawel Ladosz, Jeffery Dick
+Author-email: a.soltoggio@lboro.ac.uk
+License: GPL
+Project-URL: Homepage, https://github.com/soltoggio/CT-graph
+Project-URL: Repository, https://github.com/soltoggio/CT-graph
+Keywords: Deep reinforcement learning,dynamic rewards,continual learning,adaptation,partially observable Markov decision problems,POMDP,gym environment
+License-File: LICENSE
+Requires-Dist: gymnasium
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: scikit-image
+
