@@ -1,0 +1,28 @@
+[project]
+name = "torchstack"
+version = "0.1.13"
+description = "Leverage torchstack to build transfor based ensembles"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy<2.0,>=1.23.5",  # Compatible with most libraries in Colab
+    "pydantic>=2.10.1",
+    "ruff>=0.7.4",
+    "torch>=2.4.1",
+    "transformers>=4.45.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/bodeby/torchstack"
+Issues = "https://github.com/bodeby/torchstack/issues"
+Documentation = "https://bodeby.github.io/torchstack/"
+
+[tool.uv]
+dev-dependencies = [
+    "huggingface-hub[cli]>=0.25.1",
+    "pipdeptree>=2.24.0",
+    "pytest>=8.3.3",
+]
+
+[tool.ruff]
+extend-exclude = ["*.ipynb"]
