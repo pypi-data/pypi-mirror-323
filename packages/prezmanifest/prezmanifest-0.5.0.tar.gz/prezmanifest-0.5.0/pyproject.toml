@@ -1,0 +1,27 @@
+[project]
+name = "prezmanifest"
+version = "0.5.0"
+description = "A Python package that provides a series of functions to work with Prez Manifests."
+authors = [
+    {name="Nicholas Car", email="nick@kurrawong.ai"}
+]
+license = "BSD-3-Clause"
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+
+[tool.poetry.dependencies]
+pyshacl = "^0.29.0"
+kurra = "^1.0.0"
+labelify = "^0.4"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+black = "^24.10.0"
+testcontainers = "^4.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+requires-poetry = ">=2.0"
