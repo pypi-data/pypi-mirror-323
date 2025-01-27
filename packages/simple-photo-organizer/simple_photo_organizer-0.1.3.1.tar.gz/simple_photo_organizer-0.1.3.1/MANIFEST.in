@@ -1,0 +1,17 @@
+# Exclude the virtual environment directory
+exclude .venv/*
+exclude .venv
+
+# Exclude build artifacts
+exclude build/*
+exclude dist/*
+exclude *.egg-info/*
+
+# Exclude Python cache files
+exclude __pycache__/*
+exclude *.pyc
+
+# Exclude .git directory
+exclude .git/*
+exclude .git
+exclude .gitignore
