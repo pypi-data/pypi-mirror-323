@@ -1,0 +1,7 @@
+requests>=2.26.0
+python-binance>=1.0.16
+python-dateutil>=2.8.2
+
+[test]
+pytest>=7.0.0
+pytest-cov>=2.0.0
