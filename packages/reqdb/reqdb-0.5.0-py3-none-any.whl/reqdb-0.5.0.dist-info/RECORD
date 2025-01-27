@@ -1,0 +1,8 @@
+reqdb/__init__.py,sha256=bEvyoGKYl3tpmWYQ_2W6GkaTl5kI2Pl0ArHVQYKQxgU,3577
+reqdb/api.py,sha256=S4aO9uy-6GJEjesCmCOa_CqjP7cN7UA0CPKxavLFDfs,1787
+reqdb/models.py,sha256=0e7MwgbABk9fSqV3kX_-9iG7U_Sc_TmWrsm3Y-pPyEQ,5063
+reqdb/schemas.py,sha256=vzttjuGoyIqgrnsp_wH7zdgjddQAX0y3W4VWJ2CIs9E,4282
+reqdb-0.5.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+reqdb-0.5.0.dist-info/METADATA,sha256=g5W7HWmMvpmeNVhnl29TWnPUqMAPHRrlk3ifNTz1HcU,2183
+reqdb-0.5.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+reqdb-0.5.0.dist-info/RECORD,,
