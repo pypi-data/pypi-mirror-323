@@ -1,0 +1,13 @@
+jsonschema_autodoc/__init__.py,sha256=KDyStNT34t9Qe_TMsPUq7TzXZWKFdQrLe0b16t3syzk,4354
+jsonschema_autodoc/document.py,sha256=QC1BXKfxlF_0s6BodffTxmYSSXMFg32X8uVIYUdPIP4,15100
+jsonschema_autodoc/meta.py,sha256=VtNrYy-1ZIty0BeQgp27KQWQJjsvZYhQERR8dE64Hms,4545
+jsonschema_autodoc/protocol.py,sha256=sjoGzIGcfkb2Dq1zFAXCHyOvYh7WP55UpuXzfbqYTv4,2730
+jsonschema_autodoc/registry.py,sha256=Hdfq8DKX1FK7ZjlCla9ebpxmhz4x97mNtGkMlmT6emA,3056
+jsonschema_autodoc/schema.py,sha256=9OIAsM3JTh8fWVdKtqhl1hopRLVFgNnBr7LTaeB1As4,3261
+jsonschema_autodoc/sphinx.py,sha256=KN3onEf0K0UzPZhm0bGDY68BlyJFyYDumqB9CuI9308,930
+jsonschema_autodoc/page/__init__.py,sha256=yGDGNo3GsSHgfKDqCqQDBvUvKpH3L2UlxJcpT0QaVcU,65
+jsonschema_autodoc/page/default.py,sha256=iUbclIxAxPBW4kb_oL8e_SBxYDDYL1UoJYQSinSuYHg,30442
+JSONSchema_AutoDoc-0.0.0.dev8.dist-info/METADATA,sha256=qfiUsgNJEqvvvFT6QJuAbjlQ6kFMwC_pPUG3EeFLG-Q,261
+JSONSchema_AutoDoc-0.0.0.dev8.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+JSONSchema_AutoDoc-0.0.0.dev8.dist-info/top_level.txt,sha256=fegsIuvuJy2v7m6k8ZpL4X8q_2E2kEj_6bnOb8strSQ,19
+JSONSchema_AutoDoc-0.0.0.dev8.dist-info/RECORD,,
