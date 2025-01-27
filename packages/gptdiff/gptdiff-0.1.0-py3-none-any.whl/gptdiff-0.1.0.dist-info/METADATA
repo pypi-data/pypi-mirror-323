@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: gptdiff
+Version: 0.1.0
+Summary: A tool to generate git diffs using GPT-4
+Author: 255labs
+Requires-Dist: openai>=1.0.0
+Requires-Dist: tiktoken>=0.5.0
+Requires-Dist: ai_agent_toolbox>=0.1.0
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-mock; extra == "test"
+Provides-Extra: docs
+Requires-Dist: mkdocs; extra == "docs"
+Requires-Dist: mkdocs-material; extra == "docs"
+Dynamic: author
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
