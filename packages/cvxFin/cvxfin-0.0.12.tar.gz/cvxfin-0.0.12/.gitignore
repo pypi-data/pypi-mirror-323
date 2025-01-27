@@ -1,0 +1,12 @@
+.idea
+.task
+
+html-coverage
+__pycache__
+.venv
+.pytest_cache
+
+.coverage
+.ipynb_checkpoints
+
+README2.md
