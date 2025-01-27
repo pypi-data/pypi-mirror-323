@@ -1,0 +1,9 @@
+ipykernel
+ipython
+jupyter
+jupyter-client
+jupyter-console
+jupyter-core
+jupyterlab-pygments
+jupyterlab-widgets
+pandas_profiling

@@ -1,0 +1,10 @@
+setuptools
+statsmodels<1.0.0
+pandas<3.0.0
+numpy<2.0.0
+#Autoregressive Conditional Heteroskedasticity (ARCH) and other tools for financial econometrics
+arch<8.0.0
+matplotlib<4.0.0
+dask[complete]
+pyspark==3.5.4
+polars

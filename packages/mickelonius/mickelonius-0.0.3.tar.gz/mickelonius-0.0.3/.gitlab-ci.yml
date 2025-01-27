@@ -1,0 +1,50 @@
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: always
+    - when: never
+
+stages:
+  - build
+  - test
+  - publish
+
+variables:
+  IMAGE_NAME: "$DOCKERHUB_USERNAME/mickelonius:${CI_COMMIT_REF_SLUG}"
+  LATEST_IMAGE_NAME: "$DOCKERHUB_USERNAME/mickelonius:latest"
+  DOCKER_IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+
+default:
+  image: docker:20.10.7
+  services:
+    - docker:20.10.7-dind
+
+build:
+  stage: build
+  before_script:
+    - echo "Password length ${#DOCKERHUB_PASSWORD}"
+    - echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USERNAME" --password-stdin
+  script:
+    - docker build --no-cache -t $IMAGE_NAME -t $LATEST_IMAGE_NAME .
+    - docker push $IMAGE_NAME
+    - docker push $LATEST_IMAGE_NAME
+
+test:
+  stage: test
+  script:
+    - docker pull $IMAGE_NAME
+    - docker run --rm $IMAGE_NAME pytest
+
+publish:
+  stage: publish
+  only:
+    - main
+  before_script:
+    - docker pull $IMAGE_NAME
+  script:
+    - docker run --rm -v $(pwd):/app $IMAGE_NAME bash -c "cd /app && python setup.py sdist bdist_wheel && twine upload -u __token__ -p $PYPI_KEY --verbose dist/*"
+
+# Add these environment variables as protected variables in GitLab CI/CD settings:
+# - DOCKERHUB_USERNAME: Your DockerHub username
+# - DOCKERHUB_PASSWORD: Your DockerHub password
+# - PYPI_KEY: Your PyPI ssh key

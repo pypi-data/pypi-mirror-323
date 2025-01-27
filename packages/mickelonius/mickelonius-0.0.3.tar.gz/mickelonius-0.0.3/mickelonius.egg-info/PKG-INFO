@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: mickelonius
+Version: 0.0.3
+Summary: Package containing various data analysis tools
+Author: Mike Lee
+Author-email: mike@mickelonius.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: summary
+
+# Mickelonius' Analytics Framework
