@@ -1,0 +1,9 @@
+pytest
+pytest-cov
+flake8
+black
+pre-commit
+ipykernel
+sphinx
+sphinx-rtd-theme
+coverage
