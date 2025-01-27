@@ -1,0 +1,5 @@
+[console_scripts]
+niceterm = niceterminal.cli:main [cli]
+
+[gui_scripts]
+
