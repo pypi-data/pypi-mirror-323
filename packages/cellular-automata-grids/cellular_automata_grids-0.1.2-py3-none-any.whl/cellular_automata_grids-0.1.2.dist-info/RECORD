@@ -1,0 +1,17 @@
+cellular_automata_grids/__init__.py,sha256=YvuYzWnKtqBb-IqG8HAu-nhIYAsgj9Vmc_b9o7vO-js,22
+cellular_automata_grids/__main__.py,sha256=90SCHFV-VyIrCCNuV7nbvZYy_6mO2eDaju21Zre8mR0,2201
+cellular_automata_grids/settings.py,sha256=eJxyfnKHJbbC4aV8OeaW0ajdd2v4P-un57IDIJ5A0Zg,66
+cellular_automata_grids/grids/__init__.py,sha256=m7t8Yq4y32X2nfFDDoX8RNMf-6WvH36jp_41Pgty5bA,154
+cellular_automata_grids/grids/base_grid.py,sha256=KlwL5huwUWhVeDjhvqSPUtcyEAeUA-LyrqOf5MW8Dnw,2615
+cellular_automata_grids/grids/hexagonal_grid.py,sha256=AH9ekrHLK2Hdyn5LWaTewnJWUBFRlwyiQXtZcbva_ro,1588
+cellular_automata_grids/grids/square_grid.py,sha256=0qfbyuNd6pWaiJ7k4YzVC2PwYNMHkvdsp8eUPMpAMXc,935
+cellular_automata_grids/grids/triangular_grid.py,sha256=4maaoNgN1WlSLFBIqWBFBDqOmGY_W2jdmtVGSvuoJu4,1174
+cellular_automata_grids/homemade/__init__.py,sha256=btBmCC7QcPAOeIsOP7cOqOx-uj9ZbZt-7x77BpjRH9U,77
+cellular_automata_grids/homemade/triangular_grid_generator.py,sha256=SOp2W_K9Q1oF7uXEYJnJ0Xyu8h1wwyrA5TRx7IoPV4c,1003
+cellular_automata_grids/vendor/hexagons.py,sha256=rlkMRjdg69izoqXxeB-_Ly5oNVio5ohmw9CnbLjeTpA,10787
+cellular_automata_grids-0.1.2.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+cellular_automata_grids-0.1.2.dist-info/METADATA,sha256=kqLbYZLNc9caiLiExJnE2AmVMwTMYGwsHooFGCELCDk,22949
+cellular_automata_grids-0.1.2.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+cellular_automata_grids-0.1.2.dist-info/entry_points.txt,sha256=7Jl6E1BwM8OZB0vQzsV1JxyB9CxOk_NCejDAe6KPxlw,63
+cellular_automata_grids-0.1.2.dist-info/top_level.txt,sha256=VRhMHHRzi1Hf3mQ_3_GXZMLIkkmcruEQzaStBlPR584,24
+cellular_automata_grids-0.1.2.dist-info/RECORD,,

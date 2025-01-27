@@ -1,0 +1,2 @@
+[console_scripts]
+demo = cellular_automata_grids.__main__:main
