@@ -1,0 +1,5 @@
+python_package/__init__.py,sha256=lzExFzBMsy7iyjFMNK8mMGAXs5QbtWpNDc9LlhmyPPI,371
+python_package/hello_world.py,sha256=Hvx1ClE5jopCv8eSU8ZL7f9Kn0PXoUNvU_pSvXEwn2s,675
+ksj_rpc-0.0.2.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+ksj_rpc-0.0.2.dist-info/METADATA,sha256=C1pLuFK-T-laDFcJV5CzSvAThvBN7zr91gxpyp8JfIM,16711
+ksj_rpc-0.0.2.dist-info/RECORD,,
