@@ -1,0 +1,2 @@
+[console_scripts]
+jan883-codebase = jan883_codebase.main:main
