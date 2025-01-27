@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+topsis/__main__.py
+topsis_sidaknoor_102203262.egg-info/PKG-INFO
+topsis_sidaknoor_102203262.egg-info/SOURCES.txt
+topsis_sidaknoor_102203262.egg-info/dependency_links.txt
+topsis_sidaknoor_102203262.egg-info/entry_points.txt
+topsis_sidaknoor_102203262.egg-info/requires.txt
+topsis_sidaknoor_102203262.egg-info/top_level.txt
