@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools >= 61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scala_option"
+version = "1.0.1"
+dependencies = []
+requires-python = ">=3.12"
+authors = [{ name = "Alex Suopanki", email = "alex.suopanki@gmail.com" }]
+description = "Scala like Option type in Python"
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { text = "MIT" }
+keywords = ["option", "optional", "maybe", "functional"]
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Libraries",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
+[project.urls]
+Repository = "https://github.com/Suopunki/scala_option"
