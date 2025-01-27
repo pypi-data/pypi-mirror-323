@@ -1,0 +1,32 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Mac OS
+.DS_Store
+
+# Output
+mermaid-images/
+*.png
+*.pdf
+*.html
+
+# pytest
+.pytest_cache/
+pytest.xml
+pytest-coverage.txt
+
+# Coverage
+.coverage
+lcov.info
+
+# External static files
+src/pandoc_mermaid_selenium_filter/static/npm/*/
+!src/pandoc_mermaid_selenium_filter/static/templates/mermaid.html

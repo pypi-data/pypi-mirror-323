@@ -1,0 +1,71 @@
+[project]
+name = "pandoc-mermaid-selenium-filter"
+version = "1.0.0"
+description = "A Pandoc filter that converts Mermaid code blocks to images using Selenium"
+long_description = "file: README.md"
+long_description_content_type = "text/markdown"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "itTkm" }
+]
+keywords = ["pandoc", "filter", "mermaid", "markdown", "selenium"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Documentation",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+dependencies = [
+    "pandocfilters>=1.5.1",
+    "selenium>=4.27.1",
+    "webdriver-manager>=4.0.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/itTkm/pandoc-mermaid-selenium-filter"
+Repository = "https://github.com/itTkm/pandoc-mermaid-selenium-filter.git"
+Issues = "https://github.com/itTkm/pandoc-mermaid-selenium-filter/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest-cov>=6.0.0",
+    "pytest>=8.3.4",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.force-include]
+"src/pandoc_mermaid_selenium_filter/static/templates/" = "src/pandoc_mermaid_selenium_filter/static/templates/"
+
+[tool.hatch.build.hooks.custom]
+# keep this for reading hooks from `hatch_build.py`
+
+[tool.hatch.build.targets.sdist]
+include = ["LICENSE", "README.md", "pyproject.toml", "src", "tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pandoc_mermaid_selenium_filter"]
+
+[project.scripts]
+pandoc-mermaid-selenium-filter = "pandoc_mermaid_selenium_filter.filter:main"
+
+[tool.coverage.report]
+exclude_lines = [
+  "pragma: no cover",
+  "if __name__ == .__main__.:",
+]
+
+[tool.pytest.ini_options]
+addopts = "-v --cov=src/pandoc_mermaid_selenium_filter --cov-report=term-missing --cov-report=lcov:lcov.info --junitxml=pytest.xml"
+pythonpath = [".", "src"]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
