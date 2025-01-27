@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maybankforme"
+dynamic = ["version"]
+authors = [
+    {name = "Zharif Zakaria", email = "z@zhrif.com"},
+]
+description = "This projects converts maybank credit card statement pdf files to a single csv file that allows to be ingestable in other workflow."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+keywords = ["cli", "tool"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "pypdf",
+    "cryptography>=3.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/zhrif/maybankforme"
+Documentation = "https://github.com/zhrif/maybankforme/tree/main#maybankforme"
+Repository = "https://github.com/zhrif/maybankforme"
+Changelog = "https://github.com/zhrif/maybankforme/releases"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["maybankforme"]
+
+[tool.setuptools_scm]
+version_file = "src/maybankforme/_version.py"
+version_scheme = "release-branch-semver"
+local_scheme = "no-local-version"
+
+[project.scripts]
+maybankforme = "maybankforme.main:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=23.3.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0"
+]
+test = [
+    "pytest-cov>=4.0.0",
+    "tox>=4.0.0"
+]

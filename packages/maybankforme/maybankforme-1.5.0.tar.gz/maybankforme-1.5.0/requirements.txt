@@ -1,0 +1,6 @@
+pypdf
+cryptography>=3.1
+setuptools
+build
+twine
+wheel
