@@ -1,0 +1,2 @@
+[autogen.extensions]
+llama-cpp-chat-completion = autogen_llama_cpp_chat_completion.llama_cpp_extension:LlamaCppChatCompletionClient
