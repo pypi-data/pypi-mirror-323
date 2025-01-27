@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+epub_pinyin/__init__.py
+epub_pinyin/epub_parser.py
+epub_pinyin/main.py
+epub_pinyin/text_processor.py
+epub_pinyin.egg-info/PKG-INFO
+epub_pinyin.egg-info/SOURCES.txt
+epub_pinyin.egg-info/dependency_links.txt
+epub_pinyin.egg-info/entry_points.txt
+epub_pinyin.egg-info/requires.txt
+epub_pinyin.egg-info/top_level.txt
+tests/test_epub_parser.py
+tests/test_text_processor.py
