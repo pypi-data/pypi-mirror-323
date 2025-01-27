@@ -1,0 +1,9 @@
+ocf_blosc2/__init__.py,sha256=0wubvnW7_-A_S7aej79KwI4hPuQKzHAxABBoKvjIhPE,55
+ocf_blosc2/ocf_blosc2.py,sha256=wGqZ8YSM97wh3cASkCfM4xppyiTY452cwDt2fWO68VU,1455
+ocf_blosc2/ocf_blosc2_v3.py,sha256=PT4Hv35NpJ4nADLbrLNt4_K4sc4UlHrRE_5sPdYGmfo,161
+ocf_blosc2-0.0.14.dist-info/LICENSE,sha256=F-Q3UFCR-BECSocV55BFDpn4YKxve9PKrm-lTt6o_Tg,1073
+ocf_blosc2-0.0.14.dist-info/METADATA,sha256=ST2gQWIwnYGLPWF5qEh1C4gSPGUi9S8btoHIXm2s2uE,2833
+ocf_blosc2-0.0.14.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+ocf_blosc2-0.0.14.dist-info/entry_points.txt,sha256=raKj5i7N4CEXCgxGIaymcaEFTc6Yg3qU3Osi_y3atQQ,46
+ocf_blosc2-0.0.14.dist-info/top_level.txt,sha256=dcTxZhd1EQvnAVfH4mbdrvvs-LQhkJrXwRn2ZJLK0_Y,11
+ocf_blosc2-0.0.14.dist-info/RECORD,,
