@@ -1,0 +1,6 @@
+_proc
+config
+input
+nbs
+output
+sindr
