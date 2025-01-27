@@ -1,0 +1,13 @@
+models/label.py,sha256=LHmK-WC2PgL2gQ2muwSksnIweckneo3svw5RywjHH0c,447
+models/models.py,sha256=RCPsYQtcgE-W5ZmhwGDejAI76nHZ9-1X-x5GeTG4RnI,637
+models/project.py,sha256=MIn_xWTxsxBlXS9hgQWsILvNVD-6fNN_LMjw-SMooeM,1149
+models/task.py,sha256=nuTN6lIE2N-aheO2n4UleEOw1eUt7RwSwACTrb7_dm4,4143
+models/team.py,sha256=gKl9BJhk8Wd2kJxqzPcQ1EENeARlJw1gTn6irr94k9g,549
+models/user.py,sha256=Ynkvcgv_3xBUzkXepGrAWlAuxsKHdwaK19_dTInH1dw,300
+models/enum/repeat_mode.py,sha256=T0cOJcCYJjewZ9dQ41cEFYmOEEfW73cM4xxNYmH8y6s,106
+models/enum/task_priority.py,sha256=aVz1HEofIqwUkXG0vYm58n_vLNbgqtbvHuQ5K-YQqA0,119
+py_vikunja-0.1.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+py_vikunja-0.1.dist-info/METADATA,sha256=Dt3BNr0RXIpu7YDDNoGHtfeqPNkwktnXawbcd9rUfwY,188
+py_vikunja-0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+py_vikunja-0.1.dist-info/top_level.txt,sha256=vH5ByFtkqB2bXlXOuK5zaaM_1GFEE9six0KgGIdPaU0,7
+py_vikunja-0.1.dist-info/RECORD,,
