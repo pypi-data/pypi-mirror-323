@@ -1,0 +1,7 @@
+setup.py
+kaededb/__init__.py
+kaededb.egg-info/PKG-INFO
+kaededb.egg-info/SOURCES.txt
+kaededb.egg-info/dependency_links.txt
+kaededb.egg-info/requires.txt
+kaededb.egg-info/top_level.txt

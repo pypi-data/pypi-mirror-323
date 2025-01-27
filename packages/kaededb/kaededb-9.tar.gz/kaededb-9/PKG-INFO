@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kaededb
+Version: 9
+Summary: KaedeDB Python Client Library
+Home-page: https://github.com/DarsheeeGamer/KaedeDB
+Author: Kento Hinode
+Author-email: cleaverdeath@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
