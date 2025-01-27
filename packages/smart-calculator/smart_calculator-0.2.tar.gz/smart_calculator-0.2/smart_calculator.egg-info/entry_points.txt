@@ -1,0 +1,4 @@
+[console_scripts]
+addition = smart_calculator:addition
+multiplication = smart_calculator:mult
+subtraction = smart_calculator:sub
