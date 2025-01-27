@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Jamnsee/__init__.py
+Jamnsee/module.py
+Jamnsee.egg-info/PKG-INFO
+Jamnsee.egg-info/SOURCES.txt
+Jamnsee.egg-info/dependency_links.txt
+Jamnsee.egg-info/requires.txt
+Jamnsee.egg-info/top_level.txt
