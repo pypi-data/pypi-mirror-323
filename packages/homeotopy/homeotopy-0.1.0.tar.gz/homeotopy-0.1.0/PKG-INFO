@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: homeotopy
+Version: 0.1.0
+Summary: A library for computing homeomorphisms between some common stnandard topologies
+License: MIT
+Author: Erik Brinkman
+Author-email: erik.brinkman@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numba (>=0.61.0,<0.62.0)
+Description-Content-Type: text/markdown
+
+# Homotopy
+
+A python library for computing homeomorphisms between some common continuous
+spaces.
+
+## Installation
+
+```sh
+pip install homeotopy
+```
+
+## Usage
+
+```py
+import homeotopy
+
+points = ...
+# create a mapping from the simplex to the surface of the sphere
+mapping = homeotopy.homeomorphism(homeotopy.simplex(), homeotopy.sphere())
+sphere_points = mapping(points)
+
+rev_mapping = reversed(mapping)
+duplicate_points = rev_mapping(sphere_points)
+```
+
