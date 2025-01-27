@@ -1,0 +1,11 @@
+aiohttp[speedups]>=3.11.11
+alembic>=1.14.0
+configargparse>=1.7
+defusedxml>=0.7.1
+pickle-secure>=0.99.9
+pillow>=11.0.0
+python-magic>=0.4.27
+qrcode>=8.0
+slixmpp>=1.8.6
+sqlalchemy>=2.0.36
+thumbhash>=0.1.2
