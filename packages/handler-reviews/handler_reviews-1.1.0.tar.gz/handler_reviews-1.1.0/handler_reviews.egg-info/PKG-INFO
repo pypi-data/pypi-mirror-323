@@ -1,0 +1,65 @@
+Metadata-Version: 2.2
+Name: handler_reviews
+Version: 1.1.0
+Summary: This is the module for work with handlers of reviews by templates or GPT
+Home-page: 
+Author: 1mlnmyfavoriteinteger
+Author-email: romansergeev7680@gmail.com
+Project-URL: GitHub, https://github.com/Azakaim
+Keywords: reviews,handler
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Handler Reviews #
+
+## What is this? ##
+The module allows process reviews of your clients by tamplates or AI.
+
+## Quick Guide ##
+The module is based on the following structure:
+
+    
+    handler = ReviewsHandlerProvider()
+    gpt_handler = handler.fetch_handler(handler_type=HandlerType.GPTHANDLER, api_key=api_key_gpt)
+    template_handler = handler.fetch_handler(handler_type=HandlerType.TEMPLATEHANDLER)
+    
+Which Python provides by standard.
+
+----------
+
+### Using ###
+
+
+Using the library is as simple and convenient as possible:
+
+Let's import it first:
+First, import everything from the library (use the `from `...` import *` construct).
+
+    handler = ReviewsHandlerProvider()
+    gpt_handler = handler.fetch_handler(handler_type=HandlerType.GPTHANDLER, api_key=api_key_gpt)
+    template_handler = handler.fetch_handler(handler_type=HandlerType.TEMPLATEHANDLER)
+
+#Get your data like name_client, review, grade, return_amount_tokens
+
+response_gpt = gpt_handler.get_response(name_client, review, grade, return_amount_tokens)
+response_tamplate = template_handler.get_response(name_client, grade)
+
+----------
+
+
+## Developer ##
+My site: [link](https://github.com/Azakaim/) 

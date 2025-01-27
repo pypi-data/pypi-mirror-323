@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+handler_reviews.egg-info/PKG-INFO
+handler_reviews.egg-info/SOURCES.txt
+handler_reviews.egg-info/dependency_links.txt
+handler_reviews.egg-info/requires.txt
+handler_reviews.egg-info/top_level.txt
