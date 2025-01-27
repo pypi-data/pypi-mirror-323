@@ -1,0 +1,15 @@
+gapred/__init__.py,sha256=9yKVNppgtnwFx7VtnnkugxeX7iELCydaGFz1VnWuObY,173
+gapred/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gapred/core/layers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gapred/core/loss_functions.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gapred/core/optimizers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gapred/core/simple_nn.py,sha256=6hXElyjLR5YtojD0MvydvwLmOcDTobmN2CgNPuXY4Aw,2616
+gapred/core/tensor.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gapred/reinforced/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gapred/supervised/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gapred/supervised/knn.py,sha256=6hXElyjLR5YtojD0MvydvwLmOcDTobmN2CgNPuXY4Aw,2616
+gapred/unsupervised/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gapred-0.9.0.dist-info/METADATA,sha256=cVbmCgGds4pvj-ZS9wtgb8FQQcLXQrV1QLZ3aLijQuA,610
+gapred-0.9.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+gapred-0.9.0.dist-info/top_level.txt,sha256=P8SvfDxCnIIZu13pL-eAtnCHTAg294rnm76QWQqMe-I,7
+gapred-0.9.0.dist-info/RECORD,,
