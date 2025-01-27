@@ -1,0 +1,5 @@
+[console_scripts]
+consumer=exchange_radar.consumer.main:main
+producer=exchange_radar.producer.main:main
+scheduler=exchange_radar.scheduler.main:main
+
