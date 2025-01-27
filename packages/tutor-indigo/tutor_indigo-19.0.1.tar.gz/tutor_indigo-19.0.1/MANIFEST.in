@@ -1,0 +1,2 @@
+recursive-include tutorindigo/templates *
+recursive-include tutorindigo/patches *
