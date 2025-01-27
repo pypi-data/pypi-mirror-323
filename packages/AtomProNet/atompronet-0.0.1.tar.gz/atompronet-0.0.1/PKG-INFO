@@ -1,0 +1,283 @@
+Metadata-Version: 2.2
+Name: AtomProNet
+Version: 0.0.1
+Summary: A Python package for pre and post-process VASP/Quantum ESPRESSO data into machine learning interatomic potential (MLIP) format.
+Home-page: https://github.com/MusannaGalib/AtomProNet
+Author: Musanna Galib
+Author-email: galibubc@student.ubc.ca
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: ase
+Requires-Dist: mp-api
+Requires-Dist: scipy
+Requires-Dist: pymatgen==2023.11.12
+Requires-Dist: statsmodels
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+<!---![PyPI downloads](https://img.shields.io/pypi/dm/your-package-name)-->
+<!---![![Paper](https://img.shields.io/badge/Journal-Nat.Comput.Sci.-blue)](https://doi.org/your-paper-doi)-->
+[![arXiv](https://img.shields.io/badge/arXiv-2501.14039-red)](https://arxiv.org/abs/2501.14039)
+[![Python 3.6+](https://img.shields.io/badge/python-3.6+-red.svg)](https://www.python.org/downloads/)
+[![Release](https://img.shields.io/badge/release-v0.0.1-brightgreen)](https://github.com/MusannaGalib/AtomProNet)
+[![License: MIT](https://img.shields.io/badge/license-MIT_2.0-yellow)](https://opensource.org/licenses/MIT)
+
+# AtomProNet: Atomic Data Processing for Neural Network
+<div align="center">
+  <img src="https://raw.githubusercontent.com/MusannaGalib/AtomProNet/main/AtomProNet/AtomProNet_logo.jpg" alt="AtomProNet Logo" width="200">
+</div>
+
+
+This package demonstrates a data processing workflow involving Bash script, Python conversion scripts, which automatically converts pre and post-process VASP/Quantum ESPRESSO data into machine learning interatomic potential (MLIP) training format (extxyz or npz).
+
+```
+AtomProNet
+    |
+    ├── Data collection from materials project database
+    │   │
+    │   ├── Atomic energy, position, lattice parameters                   
+    │   └── Supercell formation  
+    |
+    |
+    ├── Data generation using DFT simulation (VASP/Quantum ESPRESSO)
+    │   │
+    │   ├── Batch job preparation  
+    │   ├── Batch job submission                   
+    │   └── Batch data collection            
+    │
+    │
+    ├── Pre-processing for Neural Network  (Post-processing of DFT simulation)             
+    │   │
+    │   └── DFT folders 
+    │       │       
+    │       ├── energy
+    │       ├── forces
+    │       ├── pressure      
+    │       └── lattice parameters            
+    │            │
+    │            └── extxyz/npz format
+    │
+    │
+    └── Post-processing
+        ├── Machine Learning Interatomic Potential (MLIP)         
+        │   │                 
+        │   ├── Parity plots
+        │   └── Cumulative distributions
+        │
+        └── Classical Molecular Dynamics (LAMMPS) 
+            │   
+            └── Computational Performance Assesment 
+                ├── Simulation cell size
+                └── CPU allocation
+```
+
+## Tutorial
+
+Example notebook of using AtomProNet's 4 modules- <a href="https://colab.research.google.com/drive/1RZ4txh0NH7t5kEyNNxojxVN8c5QAky5P?usp=sharing" target="_blank"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" style="vertical-align: middle;"></a>
+
+
+## Installation and Usage Guide
+
+This guide provides detailed instructions on how to install and use the AtomProNet package.
+
+### Prerequisites
+- Python 3.6 or later
+- Pip (Python package manager)
+- Bash Shell (e.g., Git Bash, Cygwin, or WSL on Windows) to execute .sh scripts.
+
+### Installation
+1. **Install Using Git:**
+   - Open a command prompt or terminal.
+   - Navigate to the directory where you extracted the package.
+   - Install the package by running the command:
+     ```
+     git clone https://github.com/MusannaGalib/AtomProNet.git
+     cd AtomProNet
+     pip install .
+     ```
+
+2. **Install Using PyPI:**
+   - AtomProNet can also be installed from PyPI:
+     ```
+     pip install AtomProNet
+     ```
+This command installs the package along with its dependencies.
+
+
+## Using the Package
+
+### Example Usage
+
+Example datasets are given in 'example_dataset' folder. You can use the following commands to play with that by executing the python wrapper file.
+
+```python
+cd AtomProNet
+python3 process_and_run_script.py
+```
+
+### Workflow Overview
+
+1. **Bash Scripts (`.sh` files):**
+   - Takes a user-provided file path, process VASP and Quantum ESPRESSO job submission
+   - Takes a user-provided file path, runs over all VASP and Quantum ESPRESSO simulation folders
+   - Collect all the required information (energy, force, atomic positions, pressure in eV, lattice parameters)
+
+2. **Python Converter (`.py` files):**
+   - Processes the files generated by the Bash script.
+   - Outputs the converted npz and extxyz files.
+   - Post-process MLIP data to get parity plots and cumulative distributions.
+
+
+### Options
+
+To use this package, use the following options:
+
+```python
+Choose an option:
+1. Data from Materials Project
+2. Pre-processing for DFT simulation
+3. Pre-processing for Neural Network
+4. Post-processing
+```
+**Option 1**
+```python
+Enter your choice (1/2/3/4 or 'exit'): 1
+Enter your Materials Project API key (press Enter to use default): 
+Enter the material ID (e.g., mp-1234), compound formula (e.g., Al2O3), or elements (e.g., Li, O, Mn): Al2O3
+Do you want to create supercells for all structures? (yes/no): yes
+Enter the supercell size (e.g., 2 2 2): 2 3 4
+Do you want to download energy+lattice data for the materials? (yes/no): yes
+```
+**Option 2**
+```python
+Enter your choice (1/2/3/4 or 'exit'): 2
+Options:
+1: VASP
+        Enter your choice: 1
+        VASP Options:
+        1: Prepare VASP job submission folders
+               1. Enter the full path to the folder containing multiple POSCAR files
+               2. Do you want to strain hydrostatically one POSCAR structure
+                     Do you want to modify the EXX range in the script? (yes/no): yes
+                     Enter the new range for EXX:
+                     Start (e.g., -0.05): 
+                     Step size (e.g., 0.01): 
+                     End (e.g., 0.05): 
+               3. Do you want to strain volumetrically one POSCAR structure
+                     Do you want to modify the EXX, EYY, and EZZ ranges in the script? (yes/no): yes
+                     Enter the new range for EXX, EYY, and EZZ:
+                     Start (e.g., -0.05): 
+                     Step size (e.g., 0.01): 
+                     End (e.g., 0.05): 
+        2: VASP job submission
+        3: Post-processing of VASP jobs 
+        4: Convergence check of VASP jobs      
+        q: Quit
+2: Quantum ESPRESSO
+        Enter your choice: 2
+        Quantum ESPRESSO Options:
+        1: Prepare Quantum ESPRESSO job submission folders
+        2: Quantum ESPRESSO job submission
+        3: Post-processing of Quantum ESPRESSO jobs
+        q: Quit
+q: Quit
+```
+**Instruction for preparing VASP jobs:**
+   - `"INCAR", "KPOINTS", "vasp_jobsub.sh"` files must be outside of the folder containing all the `POSCAR` files
+   - `POTCAR` files must be provided as `POTCAR_$atomsymbol` (e.g. `POTCAR_Al`, `POTCAR_O`)
+
+**Instruction for preparing Quantum ESPRESSO jobs:**
+   - The code will prepare `input_template` and `qe_jobsub.sh` one level up of the provided `POSCAR` files
+   - Update the `input_template` and `qe_jobsub.sh` as needed 
+   - Pesudopotentials files must be provided as `$atomsymbol_*.UPF` (e.g. `li_pbe_v1.4.uspp.F.UPF`, `O.pbe-n-kjpaw_psl.0.1.UPF`)
+
+**Option 3**
+```python
+Enter your choice (1/2/3/4 or 'exit'): 3
+Do you want to run the first step (execute post-processing script)? (yes/no): yes
+        Select the system for post-processing:
+        1. VASP
+              Enter your choice (1/2): 1
+                Select the extraction type for VASP:
+                1. Extract ionic last step (Self-Consistent simulations)
+                   Do you want to split the Data files? (yes/no):
+                2. Extract all ionic steps (Ab-initio MD)
+                   Do you want to split the Data files? (yes/no):
+        2. Quantum ESPRESSO
+           Do you want to split the Data files? (yes/no): 
+Do you want to split the dataset into train, test, and validation sets? (yes/no): yes
+```
+**Option 4**
+```python
+Enter your choice (1/2/3/4 or 'exit'): 4
+Post-Processing Options:
+1. Post-Processing of MLIP
+2. Post-Processing of LAMMPS
+```
+
+<details>
+<summary>📖 Read More</summary>  
+
+<br> 
+
+### Pre-processing for DFT simulation (VASP)
+Hydrostatically/Volumetrically strain a structure:
+**`INCAR`, `KPOINTS`, `POTCAR`, `POSCAR`, `vasp_job.sh` must be in the `hydrostatic_strain.sh`/`volumetric_strain.sh` folder**
+
+
+### VASP/Quantum ESPRESSO job submission
+
+Max number of job submission:
+```bash
+    job_submission.sh
+    └── max_jobs=${1:-999}  (Limit 999 job submission; change it based on server)
+```
+**2: VASP job submission:**
+  -  `last_job.txt` keeps track of how many jobs are submitted. While rerunning `2: VASP job submission`, it will use `last_job txt`to continue submitting remaining jobs.
+  - `job_submission.log` keeps track of how many jobs falied to resubmit later.
+
+
+</details>
+
+## Authors
+This Software is developed by Musanna Galib
+
+
+## Citing This Work
+If you use this software in your research, please cite the following paper:
+
+
+```python
+BibTeX entry:
+@misc{galib2025atompronetdataflowmachine,
+      title={AtomProNet: Data flow to and from machine learning interatomic potentials in materials science}, 
+      author={Musanna Galib and Mewael Isiet and Mauricio Ponga},
+      year={2025},
+      eprint={2501.14039},
+      archivePrefix={arXiv},
+      url={https://doi.org/10.48550/arXiv.2501.14039}, 
+}
+```
+
+### Contact, questions, and contributing
+If you have questions, please don't hesitate to reach out to galibubc[at]student[dot]ubc[dot]ca
+
+If you find a bug or have a proposal for a feature, please post it in the Issues. If you have a question, topic, or issue that isn't obviously one of those, try our GitHub Disucssions.
+
+If your post is related to the framework/package, please post in the issues/discussion on that repository. 
+
