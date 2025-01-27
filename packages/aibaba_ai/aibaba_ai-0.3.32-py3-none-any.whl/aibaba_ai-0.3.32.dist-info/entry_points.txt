@@ -1,0 +1,3 @@
+[console_scripts]
+aibaba_ai_server=aibaba_ai.server:main
+
