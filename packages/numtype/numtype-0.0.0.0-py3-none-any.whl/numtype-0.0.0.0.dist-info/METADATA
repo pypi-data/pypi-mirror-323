@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: numtype
+Version: 0.0.0.0
+Summary: Coming soon
+Project-URL: Homepage, https://numpy.org/
+Project-URL: Repository, https://github.com/jorenham/numtype/
+Author-email: Joren Hammudoglu <jhammudoglu@gmail.com>
+Maintainer-email: NumPy Developers <numpy-discussion@python.org>
+License-Expression: BSD-3-Clause
+License-File: LICENSE
+Keywords: numpy,stubs,typing
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Typing :: Stubs Only
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# numtype
+
+Under development &mdash; use at your own risk!
