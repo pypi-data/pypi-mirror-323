@@ -1,0 +1,4 @@
+numpy
+blosc2
+numcodecs
+zarr>3
