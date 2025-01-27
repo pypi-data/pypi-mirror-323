@@ -1,0 +1,9 @@
+fitparse
+gpxpy
+pandas
+plotly
+pydantic
+marshmallow
+numpy
+jupyter
+scikit-learn
