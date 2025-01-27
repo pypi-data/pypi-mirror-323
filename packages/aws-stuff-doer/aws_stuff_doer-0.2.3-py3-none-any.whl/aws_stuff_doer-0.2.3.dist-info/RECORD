@@ -1,0 +1,13 @@
+aws_stuff_doer/__init__.py,sha256=F7H91PdjIKozAh3b-MBczT_6FzUTPXvTChPNpd2A5cc,48
+aws_stuff_doer/cmd/__init__.py,sha256=YzGluK0UsHjAZZ07Z7lFkSb5oy26pD7KuXtx3ESAaMI,36
+aws_stuff_doer/cmd/aws_auth.py,sha256=QHdYwsmR-gWVOAdd78xonB_63P8L8yVMo6asNy0FUZA,10650
+aws_stuff_doer/cmd/config.py,sha256=cEiAH3-toj6c7Ztn4OO5SeayCu0nzMPTzoq1YqiJm9g,3585
+aws_stuff_doer/cmd/s3stuff/__init__.py,sha256=V5m7umZ0-yf_tleJjN3gwTr56D-UHnEFGEI9Yxyqhak,72
+aws_stuff_doer/cmd/s3stuff/s3app.css,sha256=R4lprOdlapfiOVbLQABIE9EC3O7ZH-ZqEZpsSF5-BlE,427
+aws_stuff_doer/cmd/s3stuff/s3stuff.py,sha256=3oG-UzE4z_gC-XgjqsSh7_sRTdQK1Xo34tJqQFve7xw,6818
+aws_stuff_doer/main.py,sha256=VsKm09AABt6x42J16T7ZLatza59SkF12Xs3dgzScqTg,4596
+aws_stuff_doer-0.2.3.dist-info/LICENSE,sha256=ewsA_NvGoDYHiq2E0LwPriQKxnFEuGyREUnC2qN8n4U,1062
+aws_stuff_doer-0.2.3.dist-info/METADATA,sha256=T0MmTFVTsVbz7FLNi50Am-KVH1cLdmSyCGEr7qOwvYQ,9473
+aws_stuff_doer-0.2.3.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+aws_stuff_doer-0.2.3.dist-info/entry_points.txt,sha256=urfjMo-owvpfgVq64v7xL6WNEF5vCse1CaZoL1i1t8w,47
+aws_stuff_doer-0.2.3.dist-info/RECORD,,
