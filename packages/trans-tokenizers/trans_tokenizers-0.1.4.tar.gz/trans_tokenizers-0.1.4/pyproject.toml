@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trans-tokenizers"
+description = "Token translation for language models."
+authors = [
+    {name = "Pieter Delobelle", email="pieter.delobelle@kuleuven.be"},
+    {name = "François Remy", email="Francois.Remy@UGent.be"}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers=[
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.9'
+]
+dynamic = ["version"]
+dependencies = [
+    "torch>=1.9.0",
+    "transformers>=4.0.0",
+    "datasets>=1.0.0",
+    "tqdm>=4.60.0",
+    "numpy>=1.19.2",
+    "langcodes>=3.3.0",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "transtokenizers.__version__"}
+
+[project.urls]
+homepage = "https://github.com/LAGoM-NLP/transtokenizer"
+
+[tool.setuptools]
+packages = [
+     "transtokenizers"
+]

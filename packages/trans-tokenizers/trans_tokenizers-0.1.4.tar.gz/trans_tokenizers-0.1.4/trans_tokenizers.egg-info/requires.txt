@@ -1,0 +1,6 @@
+torch>=1.9.0
+transformers>=4.0.0
+datasets>=1.0.0
+tqdm>=4.60.0
+numpy>=1.19.2
+langcodes>=3.3.0
