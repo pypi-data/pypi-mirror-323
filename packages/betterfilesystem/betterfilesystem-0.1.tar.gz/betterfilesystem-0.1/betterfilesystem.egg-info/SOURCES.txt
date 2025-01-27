@@ -1,0 +1,8 @@
+README.md
+setup.py
+betterfilesystem/__init__.py
+betterfilesystem/main.py
+betterfilesystem.egg-info/PKG-INFO
+betterfilesystem.egg-info/SOURCES.txt
+betterfilesystem.egg-info/dependency_links.txt
+betterfilesystem.egg-info/top_level.txt
