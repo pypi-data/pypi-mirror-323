@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+setup.py
+PyLite/.testfile.py
+PyLite/LICENSE
+PyLite/mmbConfig.json
+PyLite/PyLite/__init__.py
+PyLite/PyLite/core.py
+PyLite/PyLite/models.py
+PyLite/dwpylite.egg-info/PKG-INFO
+PyLite/dwpylite.egg-info/SOURCES.txt
+PyLite/dwpylite.egg-info/dependency_links.txt
+PyLite/dwpylite.egg-info/top_level.txt
