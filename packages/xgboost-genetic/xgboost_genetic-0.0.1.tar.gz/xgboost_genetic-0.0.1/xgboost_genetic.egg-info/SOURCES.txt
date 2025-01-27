@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+xgboost_genetic/__init__.py
+xgboost_genetic/data_loader.py
+xgboost_genetic/genetic_optimizer.py
+xgboost_genetic/graphics.py
+xgboost_genetic/main.py
+xgboost_genetic/model.py
+xgboost_genetic/preprocessing.py
+xgboost_genetic/utils.py
+xgboost_genetic.egg-info/PKG-INFO
+xgboost_genetic.egg-info/SOURCES.txt
+xgboost_genetic.egg-info/dependency_links.txt
+xgboost_genetic.egg-info/requires.txt
+xgboost_genetic.egg-info/top_level.txt
