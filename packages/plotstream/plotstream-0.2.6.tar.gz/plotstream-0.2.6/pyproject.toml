@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plotstream"
+version = "0.2.6"
+authors = [
+  { name="blu3c0ral", email="blu3c0ral@protonmail.ch" },
+]
+description = "plotstream is a Python package that allows you to stream plots to a web browser using Streamlit."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "streamlit",
+    "pandas",
+    "numpy",
+    "dill",
+    "plotly",
+    "scipy",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/blu3c0ral/PlotStream"
+"Bug Tracker" = "https://github.com/blu3c0ral/PlotStream/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
