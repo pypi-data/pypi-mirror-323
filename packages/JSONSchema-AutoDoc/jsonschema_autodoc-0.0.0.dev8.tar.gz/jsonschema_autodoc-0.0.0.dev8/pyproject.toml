@@ -1,0 +1,29 @@
+
+[build-system]
+requires = ["setuptools>=61.0", "versioningit"]
+build-backend = "setuptools.build_meta"
+
+
+# ----------------------------------------- setuptools -------------------------------------------
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+
+# ----------------------------------------- Project Metadata -------------------------------------
+#
+[project]
+version = "0.0.0.dev8"
+name = "JSONSchema-AutoDoc"
+requires-python = ">=3.10"
+dependencies = [
+    "MDit == 0.0.0.dev58",
+    "PySerials == 0.0.0.dev61",
+    "PyLinks == 0.0.0.dev71",
+    "JSONSchemata == 0.0.0.dev57",
+    "sphinx",
+]
