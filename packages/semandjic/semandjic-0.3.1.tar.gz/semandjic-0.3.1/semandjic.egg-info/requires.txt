@@ -1,0 +1,15 @@
+Django>=3.2
+
+[dev]
+black
+isort
+flake8
+mypy
+twine
+build
+
+[test]
+pytest>=7.0.0
+pytest-django>=4.5.0
+pytest-cov>=4.0.0
+coverage>=7.0.0
