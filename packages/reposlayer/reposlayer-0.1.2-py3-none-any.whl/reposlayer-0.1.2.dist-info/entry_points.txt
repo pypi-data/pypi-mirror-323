@@ -1,0 +1,2 @@
+[console_scripts]
+reposlayer = reposlayer.cli:main
