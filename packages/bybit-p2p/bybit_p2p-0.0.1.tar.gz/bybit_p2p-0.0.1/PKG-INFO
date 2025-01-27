@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: bybit_p2p
+Version: 0.0.1
+Summary: Bybit P2P API integration library
+Project-URL: Homepage, https://github.com/kolya5544/bybit_p2p
+Project-URL: Issues, https://github.com/kolya5544/bybit_p2p/issues
+Author-email: Nickolay Kushnarenko <kolya@nk.ax>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# bybit_p2p
+Bybit P2P API integration library written in Python.

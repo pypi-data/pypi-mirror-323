@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bybit_p2p"
+version = "0.0.1"
+authors = [
+  { name="Nickolay Kushnarenko", email="kolya@nk.ax" },
+]
+description = "Bybit P2P API integration library"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/kolya5544/bybit_p2p"
+Issues = "https://github.com/kolya5544/bybit_p2p/issues"
