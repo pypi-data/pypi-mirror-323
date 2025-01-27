@@ -1,0 +1,4 @@
+[console_scripts]
+lyrics-transcriber=lyrics_transcriber.cli.cli_main:main
+test-cov=tests.conftest:main
+
