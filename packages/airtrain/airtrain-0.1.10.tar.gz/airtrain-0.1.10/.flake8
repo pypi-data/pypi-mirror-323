@@ -1,0 +1,14 @@
+[flake8]
+max-line-length = 88
+# E203 Whitespace before ':' https://www.flake8rules.com/rules/E203.html
+# W503 Line break occurred before a binary operator https://www.flake8rules.com/rules/W503.html
+# W504 Line break occurred after a binary operator https://www.flake8rules.com/rules/W504.html
+# * Rationale  for E203, W503, W504: 
+#    https://black.readthedocs.io/en/stable/faq.html#why-are-flake8-s-e203-and-w503-violated
+#    https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#line-breaks-binary-operators
+ignore = E203,W503
+enable-extensions = W504
+per-file-ignores =
+    entities/prompts.py: E501
+    entities/error.py: E501
+    validators/sigma_validator.py: E501
