@@ -1,0 +1,7 @@
+[console_scripts]
+dbfheader = pybase3.header_reader:main
+dbfquery = pybase3.dbfquery:main
+dbftest = pybase3.test:testdb
+dbfview = pybase3.dbfview:main
+pybase3 = pybase3.__main__:main
+
