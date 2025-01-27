@@ -1,0 +1,7 @@
+cognite_kuiper-0.14.1.dist-info/METADATA,sha256=r3W6K50W4XX7V_qDzeqJIhJ_H62RUaAZVe_EWO8CEGU,2075
+cognite_kuiper-0.14.1.dist-info/WHEEL,sha256=lWK3-Bgk0WnWBByE5b3Cq5VR1998HCQ2lZtuFHoBwss,104
+kuiper/__init__.py,sha256=AAn8YXHCMW4EL5okpVW71cwmTYg608hpp7FJDUnafo0,611
+kuiper/kuiper.pyi,sha256=RW6RQDiC8LnaHs5DDRg-bUYIhuUm8O0Q-fZyW4nGz_4,453
+kuiper/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kuiper/kuiper.cpython-312-darwin.so,sha256=OFLiO39Mibu5iH2ZuTSyPn5dt0Z4V7a8PVDWn7q1t3Q,3865824
+cognite_kuiper-0.14.1.dist-info/RECORD,,
