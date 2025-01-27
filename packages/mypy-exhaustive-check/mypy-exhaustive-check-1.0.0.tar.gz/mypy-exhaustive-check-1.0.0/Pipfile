@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+typing-extensions = "~=4.0"
+mypy = "~=1.0"
+
+[dev-packages]
+pytest = "==8.3.4"
+pytest-cov = "==6.0.0"
+exceptiongroup = "==1.2.2"
+pre-commit = "==4.1.0"
+
+[scripts]
+test = "pytest ."
+format = "pre-commit run --all-files"
