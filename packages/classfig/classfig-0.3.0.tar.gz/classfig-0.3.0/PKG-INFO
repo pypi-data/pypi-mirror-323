@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: classfig
+Version: 0.3.0
+Summary: Matplotlib wrapper for comfortable figure handling
+License: MIT
+Keywords: matplotlib,figure
+Author: Fabian Stutzki
+Author-email: fast@fast-apps.de
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: matplotlib (>=3,<4)
+Project-URL: Homepage, https://pypi.org/project/classfig/
+Description-Content-Type: text/markdown
+
+# classfig
+
+classfig is dicontinued, please use [fast_fig](/https://pypi.org/project/fast_fig/) instead.
+
+This package is no longer maintained.
+
+Written by Fabian Stutzki
+
+
