@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: zycelium
+Version: 2025.4.0
+Summary: Personal Communication and Automation Network
+License: BSD-3-Clause
+Keywords: automation,chat,communication,framework,network,personal,self-hosted
+Author: Harshad Sharma
+Author-email: harshad@sharma.io
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+Requires-Dist: apscheduler (>=3.11.0,<4.0.0)
+Requires-Dist: asgiref (>=3.8.1,<4.0.0)
+Requires-Dist: asyncgnostic (>=0.1.2,<0.2.0)
+Requires-Dist: nats-py (>=2.9.0,<3.0.0)
+Project-URL: Bug Tracker, https://github.com/zycelium/zycelium/issues
+Project-URL: Documentation, https://zycelium.readthedocs.io
+Project-URL: Homepage, https://github.com/zycelium/zycelium
+Description-Content-Type: text/markdown
+
+# zycelium
+
+Personal Communication and Automation Network
+
+- Documentation: <https://zycelium.readthedocs.io/>
+- Python Package: <https://pypi.org/project/zycelium/>
+

@@ -1,0 +1,9 @@
+[console_scripts]
+build=scripts.build:main
+devsetup=scripts.devsetup:main
+docs=scripts.docs:main
+licenses=scripts.licenses:main
+pypi=scripts.pypi:main
+testpypi=scripts.testpypi:main
+tests=scripts.tests:main
+
