@@ -1,0 +1,16 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+requirements.txt
+setup.py
+AbuCrudApp/MysqlApplication.py
+AbuCrudApp/__init__.py
+AbuCrudApp.egg-info/PKG-INFO
+AbuCrudApp.egg-info/SOURCES.txt
+AbuCrudApp.egg-info/dependency_links.txt
+AbuCrudApp.egg-info/requires.txt
+AbuCrudApp.egg-info/top_level.txt
+AbuCrudApp/templates/config_mysql.html
+AbuCrudApp/templates/home.html
