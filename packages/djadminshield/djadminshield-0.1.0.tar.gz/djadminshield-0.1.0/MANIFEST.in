@@ -1,0 +1,2 @@
+recursive-include djadminshield/static *
+recursive-include djadminshield/templates *
