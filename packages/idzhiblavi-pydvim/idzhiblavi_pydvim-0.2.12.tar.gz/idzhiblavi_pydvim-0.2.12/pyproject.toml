@@ -1,0 +1,23 @@
+[project]
+name = "idzhiblavi_pydvim"
+version = "0.2.12"
+description = "Neovim wrapper"
+authors = [
+    {name = "Ibragim Dzhiblavi",email = "dzhiblavi@gmail.com"}
+]
+dependencies = [
+    "setuptools==69.1.0",
+    "click==8.1.7",
+]
+
+[project.scripts]
+pdvim = "dvim.__main__:cli_entrypoint"
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+extraPaths = "dvim"

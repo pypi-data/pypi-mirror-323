@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+dvim/__init__.py
+dvim/__main__.py
+dvim/runner.py
+idzhiblavi_pydvim.egg-info/PKG-INFO
+idzhiblavi_pydvim.egg-info/SOURCES.txt
+idzhiblavi_pydvim.egg-info/dependency_links.txt
+idzhiblavi_pydvim.egg-info/entry_points.txt
+idzhiblavi_pydvim.egg-info/requires.txt
+idzhiblavi_pydvim.egg-info/top_level.txt
