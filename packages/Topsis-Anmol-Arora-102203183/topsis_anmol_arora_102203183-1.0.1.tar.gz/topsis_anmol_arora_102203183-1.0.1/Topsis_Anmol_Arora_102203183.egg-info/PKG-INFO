@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: Topsis-Anmol-Arora-102203183
+Version: 1.0.1
+Summary: A Python package for performing TOPSIS analysis.
+Home-page: https://github.com/Anmol-Arora2309/Predictive-Analysis-Topsis
+Author: Anmol-Arora
+Author-email: aarora_be22@thapar.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Predictive-Analysis-Topsia
