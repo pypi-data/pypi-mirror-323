@@ -1,0 +1,55 @@
+[project]
+name = "PlaywrightCapture"
+version = "1.27.6"
+description = "A simple library to capture websites using playwright"
+authors = [
+    {name="Raphaël Vinot", email= "raphael.vinot@circl.lu"}
+]
+license = "BSD-3-Clause"
+repository = "https://github.com/Lookyloo/PlaywrightCapture"
+readme = "README.md"
+requires-python = ">=3.9"
+
+dynamic = [ "classifiers" ]
+
+dependencies = [
+    "playwright (>=1.49.1)",
+    "dateparser (>=1.2.0)",
+    "beautifulsoup4 [lxml,charset_normalizer] (>=4.12.3)",
+    "w3lib (>=2.2.1)",
+    "tzdata (>=2025.1)",
+    "playwright-stealth (>=1.0.6)",
+    "setuptools (>=75.8.0)",
+    "puremagic (>=1.28)",
+    "async-timeout (>=5.0.1) ; python_version < \"3.11\"",
+    "aiohttp [speedups] (>=3.11.11)",
+    "aiohttp-socks (>=0.10.1)"
+]
+
+
+[tool.poetry]
+classifiers=[
+    'Intended Audience :: Science/Research',
+    'Intended Audience :: Telecommunications Industry',
+    'Topic :: Security',
+    'Topic :: Internet',
+]
+
+
+[project.optional-dependencies]
+recaptcha = [
+    "pydub (>=0.25.1)",
+    "SpeechRecognition (>=3.14.1)"
+]
+
+[tool.poetry.group.dev.dependencies]
+types-beautifulsoup4 = "^4.12.0.20241020"
+pytest = "^8.3.4"
+mypy = "^1.14.1"
+types-dateparser = "^1.2.0.20240420"
+types-pytz = "^2024.2.0.20241221"
+
+
+[build-system]
+requires = ["poetry-core>=2.0"]
+build-backend = "poetry.core.masonry.api"
