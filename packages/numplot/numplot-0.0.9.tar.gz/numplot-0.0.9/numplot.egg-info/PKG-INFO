@@ -1,0 +1,44 @@
+Metadata-Version: 2.2
+Name: numplot
+Version: 0.0.9
+Summary: Extension for math
+Home-page: https://github.com/EgorZhizhlo/TASK_CONTROL
+Author: amogusbazed
+Author-email: amogusbazed@gmail.com
+Project-URL: GitHub, https://github.com/EgorZhizhlo/TASK_CONTROL
+Keywords: files speedfiles
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Numplot File Library #
+
+## What is this? ##
+The module allows you to work with files in just one line of code, without the need to manually open and close the file each time
+
+## Quick Guide ##
+The module is based on the following structure:
+
+    
+    f = open('data.txt')
+    data = f.readlines()
+    f.close()
+    
+Which Python provides by standard.
+
+
+----------
