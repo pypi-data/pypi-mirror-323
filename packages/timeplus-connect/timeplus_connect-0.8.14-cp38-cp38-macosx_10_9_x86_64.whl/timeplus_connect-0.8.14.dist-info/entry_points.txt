@@ -1,0 +1,3 @@
+[sqlalchemy.dialects]
+timeplusdb = timeplus_connect.cc_sqlalchemy.dialect:ClickHouseDialect
+timeplusdb.connect = timeplus_connect.cc_sqlalchemy.dialect:ClickHouseDialect
