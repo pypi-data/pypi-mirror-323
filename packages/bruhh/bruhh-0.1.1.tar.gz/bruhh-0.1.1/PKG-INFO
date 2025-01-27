@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: bruhh
+Version: 0.1.1
+Summary: 
+Author: abi_jey
+Author-email: abi-jey@users.noreply.github.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pydantic (>=2.10.0)
+Requires-Dist: rich
+Requires-Dist: typer (>=0.14.0)
+Description-Content-Type: text/markdown
+
+# bruhh
+Just some LLM agent for LLM enjoyers :>
+
+## Installation
+```bash
+python -m pip install bruhh
+```
+
