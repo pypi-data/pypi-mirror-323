@@ -1,0 +1,3 @@
+[console_scripts]
+r2s = repo2string.cli:main
+repo2string = repo2string.cli:main
