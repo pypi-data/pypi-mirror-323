@@ -1,0 +1,311 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+"""
+ ___  ___  ________     ___    ___ ___  ___  ________     ___    ___ ___    ___  _______  ________
+|\  \|\  \|\   __  \   |\  \  /  /|\  \|\  \|\   __  \   |\  \  /  /|\  \  /  /|/  ___  \|\_____  \
+\ \  \\\  \ \  \|\  \  \ \  \/  / | \  \\\  \ \  \|\  \  \ \  \/  / | \  \/  / /__/|_/  /\|____|\ /_
+ \ \   __  \ \   __  \  \ \    / / \ \   __  \ \   __  \  \ \    / / \ \    / /|__|//  / /     \|\  \
+  \ \  \ \  \ \  \ \  \  /     \/   \ \  \ \  \ \  \ \  \  /     \/   /     \/     /  /_/__   __\_\  \
+   \ \__\ \__\ \__\ \__\/  /\   \    \ \__\ \__\ \__\ \__\/  /\   \  /  /\   \    |\________\|\_______\
+    \|__|\|__|\|__|\|__/__/ /\ __\    \|__|\|__|\|__|\|__/__/ /\ __\/__/ /\ __\    \|_______|\|_______|
+                       |__|/ \|__|                       |__|/ \|__||__|/ \|__|
+
+
+"""
+
+#***************************************************************
+#******    Functions used in the main program morph.py    ******
+#******    auth: Estefano Muñoz-Moya                      ******
+#******    webPage: https://estefano23.github.io/         ******
+#******    github: estefano23                             ******
+#******    email: estefano.munoz.moya@gmail.com           ******
+#***************************************************************
+
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# introduction
+# ------------
+
+#libraries
+from __future__ import print_function
+import os
+import csv
+import subprocess
+import numpy as np
+import math
+from statistics import *
+###
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# define functions for rigid and non-rigid registrations
+
+# Rigid
+
+
+def defFuncRigid(targetFile, sourceFile, outPutFileName, nLoops, lenTarget, lenSource):
+
+    nLoops = str(nLoops)
+    lenTarget = str(lenTarget)
+    lenSource = str(lenSource)
+
+    if int(lenTarget) == int(lenSource):
+        funcBCPD = ["$bcpd/bcpd", "-x", targetFile, "-y", sourceFile, "-o", outPutFileName, "-l", "1e9", "-b", "2.0", "-w", "0.1", "-J", "300", "-K", "70",
+                    "-p", "-d", "5", "-e", "0.3", "-f", "0.3", "-g", "3", "-c", "1e-15", "-n", nLoops, "-ux", "-Db," + lenTarget + ",1", "-L", "300", "-sY"]
+    else:
+        funcBCPD = ["$bcpd/bcpd", "-x", targetFile, "-y", sourceFile, "-o", outPutFileName, "-l", "1e9", "-b", "2.0", "-w", "0.1", "-J", "300", "-K", "70", "-p", "-d",
+                    "5", "-e", "0.3", "-f", "0.3", "-g", "3", "-c", "1e-15", "-n", nLoops, "-ux", "-Dx," + lenTarget + ",1", "-Dy," + lenSource + ",1", "-L", "300", "-sY"]
+
+    return funcBCPD
+
+
+# non-Rigid
+def defFuncNonRigid(targetFile, sourceFile, outPutFileName, lambdaVal, betaVal, nLoops, lenTarget, lenSource):
+
+    lambdaVal = str(lambdaVal)
+    betaVal = str(betaVal)
+    nLoops = str(nLoops)
+    lenTarget = str(lenTarget)
+    lenSource = str(lenSource)
+
+    if int(lenTarget) == int(lenSource):
+        funcBCPD = ["$bcpd/bcpd", "-x", targetFile, "-y", sourceFile, "-o", outPutFileName, "-l", lambdaVal, "-b", betaVal, "-w", "0.0000001", "-J", "300", "-K",
+                    "70", "-p", "-d", "7", "-e", "0.15", "-f", "0.2", "-g", "0.1", "-c", "1e-15", "-n", nLoops, "-uy", "-Db," + lenTarget + ",1", "-L", "300", "-sY"]
+    else:
+        funcBCPD = ["$bcpd/bcpd", "-x", targetFile, "-y", sourceFile, "-o", outPutFileName, "-l", lambdaVal, "-b", betaVal, "-w", "0.0000001", "-J", "300", "-K", "70", "-p",
+                    "-d", "7", "-e", "0.15", "-f", "0.2", "-g", "0.1", "-c", "1e-15", "-n", nLoops, "-uy", "-Dx," + lenTarget + ",1", "-Dy," + lenSource + ",1", "-L", "300", "-sY"]
+
+    return funcBCPD
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# excecuting the BCPD registrations
+
+# Rigid
+
+
+def defRigid(nameMorph, numberIVD, patientID, funcRigid, outPutFileName, pathOut):
+    print('-------------------------------------------------------------------------------')
+    print("")
+    print("Rigid registratio of the " + nameMorph +
+          ": " + numberIVD + " " + patientID)
+    print("")
+    #print the bcpd function
+    print(funcRigid)
+    print("")
+    morphingFunc = subprocess.run(funcRigid)
+    print('-------------------------------------------------------------------------------')
+    print(' ')
+    #moving the temporal file to pathOut folder
+    files = [filename for filename in os.listdir(
+        '.') if filename.startswith(outPutFileName)]
+    for filename in files:
+        morphingFunc = subprocess.run(["mv", filename, pathOut])
+    print("The rigid files of the " + nameMorph + " were move to: " + pathOut)
+    print('')
+
+# non-Rigid
+
+
+def defNonRigid(nameMorph, numberIVD, patientID, funcNonRigid, outPutFileName, pathOut):
+    print('-------------------------------------------------------------------------------')
+    print("")
+    print("Non-Rigid registratio of the " +
+          nameMorph + ": " + numberIVD + " " + patientID)
+    print("")
+    print(funcNonRigid)
+    print("")
+    morphingFunc = subprocess.run(funcNonRigid)
+    print('-------------------------------------------------------------------------------')
+    print(' ')
+    #moving the temporal file to pathOut folder
+    files = [filename for filename in os.listdir(
+        '.') if filename.startswith(outPutFileName)]
+    for filename in files:
+        morphingFunc = subprocess.run(["mv", filename, pathOut])
+    print("The " + nameMorph + " files were move to: " + pathOut)
+    print('')
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# obtaining the coordinates of the node 71143 from the morphed file without indexing
+
+
+def ObtainCentroid(fileIn, pathIn, nodes):
+    print('-------------------------------------------------------------------------------')
+    print("Obtaining the coordinates of the node 71143 of the morphed model")
+    print("")
+
+    nodesCoord = dict()
+
+    with open(pathIn + "/" + fileIn, 'r') as f:
+        reader = csv.reader(f, delimiter='\t')
+        count = 0
+        for row in reader:
+            nodesCoord[nodes[count]] = row
+            count += 1
+    f.close()
+
+    coordCentralNode = nodesCoord[71143]
+
+    return coordCentralNode
+
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# creating inputs files (.inp)
+
+
+def createInpFile(nameMorph, numberIVD, patientID, fileIn, fileOut, pathIn, pathOut, inpTemplatePath, nodes, stringFormat, coordCentralNode):
+    print('-------------------------------------------------------------------------------')
+    print("Creating " + nameMorph + " model in a .inp file of " +
+          numberIVD + " " + patientID)
+    print("")
+
+    nodesCoord = dict()
+
+    with open(pathIn + "/" + fileIn, 'r') as f:
+        reader = csv.reader(f, delimiter='\t')
+        count = 0
+        for row in reader:
+            nodesCoord[nodes[count]] = row
+            count += 1
+    f.close()
+
+    # store the coordinates and the index in the dictionary nodesCoord and rest the value of coordCentralNode
+
+    for key, value in nodesCoord.items():
+        nodesCoord[key] = [float(value[0]) - float(coordCentralNode[0]), float(
+            value[1]) - float(coordCentralNode[1]), float(value[2]) - float(coordCentralNode[2])]
+
+    nodesOn3dFileOutPath = os.path.join(pathOut, fileOut)
+
+    with open(nodesOn3dFileOutPath, "w") as filenodesOn3dOut:
+        with open(inpTemplatePath) as f:
+            lines = f.readlines()
+        count = 1
+        for line in lines:
+            if count == 10:
+                for inode in sorted(nodes):
+                    filenodesOn3dOut.write(
+                        stringFormat.format(inode, *nodesCoord[inode]))
+            filenodesOn3dOut.write(line)
+            count += 1
+    filenodesOn3dOut.close()
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Cheking failed elements in the final .inp file
+
+
+def checkFailedElem(outPutFileFailedElem, outPutFileMorphedIVD, pathInp, numberIVD, patientID, gap):
+
+    nameDic = list()
+    cwd = os.getcwd()
+    nodesOn3dFileOutPath = cwd + "/" + pathInp + "/" + outPutFileMorphedIVD
+    name = outPutFileMorphedIVD.split(".")[0]
+    nameDic.append(nodesOn3dFileOutPath)
+    nameDic.append(name)
+    nameDicFile = numberIVD + '_' + patientID + '_' + 'nameDicFile.txt'
+
+    lenFailedElem = int()
+
+    with open(nameDicFile, "w") as filenameDicOut:
+        for line in nameDic:
+            filenameDicOut.write(line+'\n')
+    filenameDicOut.close()
+
+    #funcFailedElem = ['LANG=en_US.utf8 abaqus cae noGUI="failedElem.py"']
+    funcFailedElem = ['abaqus', 'cae', 'noGUI={}'.format(
+        cwd + "/sources/functions/failedElem.py"), '--', nameDicFile]
+
+    print('-------------------------------------------------------------------------------')
+    print("")
+    print("Cheking if there are failed elements in " +
+          numberIVD + " " + patientID)
+    print("")
+    print(funcFailedElem)
+    print("")
+    morphingFunc = subprocess.run(funcFailedElem)
+    print("")
+
+    lenFailedElem = int()
+
+    with open(nameDicFile, "r") as filenodesOn3dOut:
+        for line in filenodesOn3dOut:
+            lenFailedElem = int(line)
+
+    if lenFailedElem == 0:
+        print("The .inp file doesn't have failed elements, it's ready to be simulated")
+
+    elif lenFailedElem > 0:
+        print("There are " + str(lenFailedElem) + " failed elements")
+        print("the morphed process for the merged file need to be repeated")
+    print('')
+
+    morphingFunc = subprocess.run(["rm", nameDicFile])
+
+    #file with the name of the inp file on the input folder that contains the number of failed elements and the gap value
+    header = "NfailedElem, gap"
+
+    with open(pathInp + "/" + outPutFileFailedElem, "w") as filenodesOn3dOut:
+        filenodesOn3dOut.write(header + "\n")
+        filenodesOn3dOut.write(str(lenFailedElem) + ',' + str(gap))
+
+    return lenFailedElem
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Cheking the accuracy of the morphing process
+# Hausdorff distance between 3D grids (Euclidean distance)
+
+
+def bbox(array, point, radius):
+    a = array[np.where(np.logical_and(
+        array[:, 0] >= point[0] - radius, array[:, 0] <= point[0] + radius))]
+    b = a[np.where(np.logical_and(a[:, 1] >= point[1] -
+                   radius, a[:, 1] <= point[1] + radius))]
+    c = b[np.where(np.logical_and(b[:, 2] >= point[2] -
+                   radius, b[:, 2] <= point[2] + radius))]
+    return c
+
+
+def hausdorff(surface_a, surface_b):
+
+    # Taking two arrays as input file, the function is searching for the Hausdorff distane of "surface_a" to "surface_b"
+    dists = []
+
+    l = len(surface_a)
+    print("the model has " + str(l) + " nodes")
+    print("")
+    try:
+        # Python 2
+        xrange
+    except NameError:
+        # Python 3, xrange is now named range
+        xrange = range
+
+    for i in xrange(l):
+
+        # walking through all the points of surface_a
+        dist_min = 1000.0
+        radius = 0
+        b_mod = np.empty(shape=(0, 0, 0))
+
+        # increasing the cube size around the point until the cube contains at least 1 point
+        while b_mod.shape[0] == 0:
+            b_mod = bbox(surface_b, surface_a[i], radius)
+            radius += 0.5
+
+        # to avoid getting false result (point is close to the edge, but along an axis another one is closer),
+        # increasing the size of the cube
+        b_mod = bbox(surface_b, surface_a[i], radius * math.sqrt(3))
+
+        for j in range(len(b_mod)):
+            # walking through the small number of points to find the minimum distance
+            dist = np.linalg.norm(surface_a[i] - b_mod[j])
+            if dist_min > dist:
+                dist_min = dist
+
+        dists.append(dist_min)
+
+        maxDist = np.max(dists)
+        avg = mean(dists)
+        meanVal = median(dists)
+
+    return maxDist, avg, meanVal
