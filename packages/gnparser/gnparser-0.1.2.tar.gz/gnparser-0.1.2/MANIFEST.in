@@ -1,0 +1,3 @@
+include gnparser/libgnparser.so
+include gnparser/libgnparser.dylib
+include gnparser/libgnparser.dll

@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+gnparser/__init__.py
+gnparser/libgnparser.dylib
+gnparser/libgnparser.so
+gnparser.egg-info/PKG-INFO
+gnparser.egg-info/SOURCES.txt
+gnparser.egg-info/dependency_links.txt
+gnparser.egg-info/top_level.txt
