@@ -1,0 +1,73 @@
+Metadata-Version: 2.3
+Name: omnisolver
+Version: 0.0.4
+Summary: Extensible framework for creating and running Binary Quadratic Model solvers and samplers.
+License: Apache-2.0
+Author: Konrad Jałowiecki
+Author-email: dexter2206@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Dist: dimod (>=0.12,<0.13)
+Requires-Dist: numpy (>=2.0.0,<3.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Description-Content-Type: text/markdown
+
+
+![Logo](https://raw.githubusercontent.com/euro-hpc-pl/omnisolver/master/logo.png)
+*Omnisolver is a collection of Binary Quadratic Model solvers and a framework for implementing them.*
+
+[![Build Status](https://travis-ci.org/omnisolver/omnisolver.svg?branch=master)](https://travis-ci.org/omnisolver/omnisolver)
+[![Documentation Status](https://readthedocs.org/projects/omnisolver/badge/?version=latest)](https://omnisolver.readthedocs.io/en/latest/?badge=latest)
+
+
+
+## Installation and getting started
+
+Installing this package alone won't give you much benefit, unless of course you want to develop new omnisolver plugins. In that case, you can install `omnisolver` from pip:
+
+```shell
+pip install omnisolver
+```
+
+Algorithms for solving QUBO and Ising models are implemented in Omnisolver *plugins*. For instance, to use parallel tempering algorithm you need to install the `omnisolver-pt` package:
+
+```shell
+pip install omnisolver-pt
+```
+
+You can run the `omnisolver pt -h` command to see the command line usage.
+
+## Citing
+
+If you used the package or one of its plugins, please cite:
+
+```text
+@misc{https://doi.org/10.48550/arxiv.2112.11131,
+  doi = {10.48550/ARXIV.2112.11131},
+  
+  url = {https://arxiv.org/abs/2112.11131},
+  
+  author = {Jałowiecki, Konrad and Pawela, Łukasz},
+  
+  keywords = {Software Engineering (cs.SE), Quantum Physics (quant-ph), FOS: Computer and information sciences, FOS: Computer and information sciences, FOS: Physical sciences, FOS: Physical sciences},
+  
+  title = {Omnisolver: an extensible interface to Ising spin glass solvers},
+  
+  publisher = {arXiv},
+  
+  year = {2021},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+```
+

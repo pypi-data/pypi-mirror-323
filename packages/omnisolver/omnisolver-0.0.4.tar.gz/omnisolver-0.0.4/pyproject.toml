@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "omnisolver"
+version = "0.0.4"
+description = "Extensible framework for creating and running Binary Quadratic Model solvers and samplers."
+authors = ["Konrad Jałowiecki <dexter2206@gmail.com>", "Łukasz Pawela <lukasz.pawela@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+classifiers = [
+    "Intended Audience :: Other Audience",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Physics"
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+dimod = "^0.12"
+numpy = "^2.0.0"
+pandas = "^2.2.2"
+pyyaml = "^6.0.1"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.7.1"
+black = "^23.11.0"
+isort = "^5.12.0"
+pandas-stubs = "^2.1.1.230928"
+flake8 = "^6.1.0"
+pytest = "^8.0.0"
+pytest-mock = "^3.12.0"
+pytest-cov = "^4.1.0"
+
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+mike = "^2.0.0"
+mkdocs-material = "^9.4.14"
+termynal = "^0.11.1"
+mkdocs-with-pdf = "^0.9.3"
+beautifulsoup4 = "~4.9.3"
+weasyprint = "^57"
+mkdocstrings = "^0.24.0"
+mkdocstrings-python = "^1.7.5"
+
+[tool.poetry.scripts]
+omnisolver = "omnisolver.common.cmd:main"
+
+
+[tool.poetry.plugins."omnisolver"]
+random = "omnisolver.random"
+
+
+[tool.poetry-dynamic-versioning]
+enable = false
+pattern = "default-unprefixed"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.mypy]
+namespace_packages = true
+explicit_package_bases = true
+mypy_path = "src/"
