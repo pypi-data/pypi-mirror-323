@@ -1,0 +1,6 @@
+flet_desktop/__init__.py,sha256=GU-Yzy2hPK_b7ZGzZYpHLh75C1tU-zqDAIXeNI2wdxE,8527
+flet_desktop/version.py,sha256=UnfM5XWCBfCj8s_jXZBuXu8MGePC4lTKjbMTTKrtOTE,19
+flet_desktop/app/flet-linux-arm64.tar.gz,sha256=3ZhC94hbvuZGmeXolIAuPcCpUBXFwVs39ptIwgiHpSw,14799888
+flet_desktop_light-0.26.0.dist-info/METADATA,sha256=oKcYO5iEZGdFxRGxCZ1bFobGSz7dOoGH1H_AM8PHreI,886
+flet_desktop_light-0.26.0.dist-info/WHEEL,sha256=R0vVg5g3jLhxJR_-mceRGK4eICI7d9r8flwNiAf-sz8,106
+flet_desktop_light-0.26.0.dist-info/RECORD,,
