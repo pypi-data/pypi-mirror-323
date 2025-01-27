@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+swisslandstats/__init__.py
+swisslandstats/dataframe.py
+swisslandstats/geometry.py
+swisslandstats/plotting.py
+swisslandstats/settings.py
+swisslandstats/utils.py
+swisslandstats_geopy.egg-info/PKG-INFO
+swisslandstats_geopy.egg-info/SOURCES.txt
+swisslandstats_geopy.egg-info/dependency_links.txt
+swisslandstats_geopy.egg-info/requires.txt
+swisslandstats_geopy.egg-info/top_level.txt
+tests/test_sls.py
