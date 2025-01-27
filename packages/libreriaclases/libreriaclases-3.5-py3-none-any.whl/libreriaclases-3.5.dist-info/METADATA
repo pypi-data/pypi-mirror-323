@@ -1,0 +1,76 @@
+Metadata-Version: 2.4
+Name: libreriaclases
+Version: 3.5
+Summary: Libreria preproceso
+Project-URL: Homepage, https://github.com/uxueballarin/PBLgrupo6
+Project-URL: Bug Tracker, https://github.com/uxueballarin/PBLgrupo6/issues
+Author-email: uxueballarin <uxue.ballarin@alumni.mondragon.edu>
+License: MIT License
+        
+        Copyright (c) 2025 uxueballarin
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# PBLgrupo6
+# Preprocessing library PBL group 6
+
+### Prerequisites
+
+For this code, the following libreries are required:
+ - numpy
+ - pandas
+ - scipy
+ - sys
+ - time
+
+
+
+### How to use
+These are the steps you need to follow to clean your dataset:
+1. Introduce your path in the class. --> ex:  Variable = libreria.DataAnalysis(path).
+2. Read your data with pandas:
+- CSV: use the function Variable.csv().
+- Excel: usa the function Variable.excel().
+3. Start cleaning your dataset using Variable.analyze().
+4. Visualize the dataframe using the function Variable.visualize()
+5. Save the dataframe using Variable.save()
+
+If you want to see this information while running the code, use the function Variable.info()
+
+Extra:
+These analysis criteria can be changed:
+- variable 1 = Percentage of empty data to recommend deleting the column (0.3 by default) 
+- variable 2 = Normal distribution displacement to assume skewed distribution (0.05 by default)
+To do so, create a file named 'values.txt' with the values separated with commas and without any space. Example: '0.3,0.05'
+
+## Code example:
+
+import libreriaclases as lb
+
+Data1=lb.DataAnalysis('example.csv')
+
+Data1.csv()
+
+Data1.analyse()
