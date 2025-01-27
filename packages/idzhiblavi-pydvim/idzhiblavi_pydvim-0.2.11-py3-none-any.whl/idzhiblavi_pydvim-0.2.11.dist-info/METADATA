@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: idzhiblavi_pydvim
+Version: 0.2.11
+Summary: Neovim wrapper
+Author-email: Ibragim Dzhiblavi <dzhiblavi@gmail.com>
+License-File: LICENSE
+Requires-Dist: setuptools==69.1.0
+Requires-Dist: click==8.1.7
