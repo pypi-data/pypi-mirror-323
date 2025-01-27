@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: simple_photo_organizer
+Version: 0.1.2.1
+Summary: A CLI tool for sorting photos into folders according to their modification date and numbering them. Needs exiftool to work and asks for permission to install it, if it is not found.
+Home-page: https://github.com/Quaesius/Simple-Photo-Organizer
+Author: Quaesius
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Simple Photo Organizer
+
+Beginner project: A simple CLI tool for sorting photos into folders according to their modification date and numbering them. Needs exiftool to work and asks for permission to install it, if it is not found.
+
+Takes a source folder with images (or technically anything) inside and an ideally empty destination folder, in which the images are moved, sorted into folders and numbered (YYYY-number, YYYY-MM-number or YYYY-MM-DD-number) based on the modification date in their Metadata.
+
+
