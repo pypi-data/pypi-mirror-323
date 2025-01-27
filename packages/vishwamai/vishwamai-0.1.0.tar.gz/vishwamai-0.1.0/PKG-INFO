@@ -1,0 +1,107 @@
+Metadata-Version: 2.2
+Name: vishwamai
+Version: 0.1.0
+Summary: A math-focused machine learning library with efficient quantization and advanced tokenization
+Home-page: https://github.com/kasinadhsarma/VishwamAI
+Author: Kasinadh Sarma
+Author-email: kasinadhsarma@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.1.0
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: pandas>=2.1.0
+Requires-Dist: matplotlib>=3.5.0
+Requires-Dist: seaborn>=0.13.0
+Requires-Dist: transformers>=4.30.0
+Requires-Dist: datasets>=2.14.0
+Requires-Dist: pyarrow>=14.0.1
+Requires-Dist: triton>=2.1.0
+Requires-Dist: pytest>=8.0.0
+Requires-Dist: sentencepiece>=0.2.0
+Requires-Dist: tqdm>=4.65.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# VishwamAI
+
+VishwamAI is a sophisticated machine learning library focusing on efficient model quantization, advanced tokenization, and mathematical reasoning capabilities.
+
+## Features
+
+- **Advanced Tokenization**: Conceptual tokenizer with semantic clustering and special token handling
+- **Efficient Quantization**: Support for FP8 and BF16 quantization
+- **Mathematical Reasoning**: Integration with GSM8K dataset for advanced mathematical problem-solving
+- **Model Architecture**: Flexible transformer-based architecture with configurable parameters
+- **Training Utilities**: Support for distributed training, mixed precision, and gradient accumulation
+
+## Installation
+
+```bash
+pip install -e .
+```
+
+## Quick Start
+
+```python
+from vishwamai.model import VishwamaiModel
+from vishwamai.conceptual_tokenizer import ConceptualTokenizer
+
+# Initialize tokenizer and model
+tokenizer = ConceptualTokenizer()
+model = VishwamaiModel()
+
+# Example usage
+text = "Solve: If John has 5 apples and gives 2 to Mary, how many does he have left?"
+tokens = tokenizer.encode(text)
+output = model.generate(tokens)
+```
+
+## Testing
+
+Run the test suite:
+
+```bash
+pytest -v
+```
+
+## Requirements
+
+- Python >= 3.8
+- PyTorch >= 2.1.0
+- CUDA toolkit (for GPU support)
+- Additional dependencies listed in setup.py
+
+## Project Structure
+
+```
+vishwamai/
+├── conceptual_tokenizer.py   # Advanced tokenization implementation
+├── kernel.py                 # CUDA kernels and quantization
+├── model.py                 # Core model architecture
+├── training.py              # Training utilities
+└── configs/                 # Model configurations
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contributing
+
+Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
