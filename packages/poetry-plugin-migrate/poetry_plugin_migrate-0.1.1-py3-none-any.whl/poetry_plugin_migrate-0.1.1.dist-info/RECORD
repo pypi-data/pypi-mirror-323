@@ -1,0 +1,9 @@
+poetry_plugin_migrate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+poetry_plugin_migrate/command.py,sha256=YiFnDNPqmrlbDaQHtPX4VlagHEU7qZmajaLy7mA765I,4280
+poetry_plugin_migrate/migrator.py,sha256=jA06CgZ2lmycklp7XCsbqCiKqMnnldRNxMe43ZYJMB4,34633
+poetry_plugin_migrate/plugin.py,sha256=XlPSD2-alAwDzOafQ3-aPxwdoGl7pAcMJ-Gk84W0sE0,329
+poetry_plugin_migrate-0.1.1.dist-info/LICENSE,sha256=WgaKQX2uPPMAmSveQA8RGhrpjrQCEQJBqXX5KApFSiY,1063
+poetry_plugin_migrate-0.1.1.dist-info/METADATA,sha256=rOBX1KDVWZuOwEHnTGUJ6hJZmtQPdrZWHAmNYJyMGmA,17437
+poetry_plugin_migrate-0.1.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+poetry_plugin_migrate-0.1.1.dist-info/entry_points.txt,sha256=29PXrfNpQQp9K4vEcXeVCLY-BFqkKUBhHhIQKfM09E4,105
+poetry_plugin_migrate-0.1.1.dist-info/RECORD,,
