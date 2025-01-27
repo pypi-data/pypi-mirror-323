@@ -1,0 +1,3 @@
+[console_scripts]
+zmap = Zmap.Zmap:main_Zmap
+
