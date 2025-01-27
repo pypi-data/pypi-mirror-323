@@ -1,0 +1,49 @@
+Metadata-Version: 2.2
+Name: hecstac
+Version: 0.1.0rc1
+Summary: Create stac objects and metadata from HEC modeling software.
+Maintainer-email: Seth Lawler <slawler@dewberry.com>
+Project-URL: repository, https://github.com/fema-ffrd/hecstac
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fiona==1.9.6
+Requires-Dist: geopandas==1.0.1
+Requires-Dist: matplotlib==3.9.0
+Requires-Dist: pystac==1.10.0
+Requires-Dist: rasterio==1.3.10
+Requires-Dist: requests==2.32.3
+Requires-Dist: shapely==2.0.5
+Requires-Dist: xarray==2024.11.0
+Requires-Dist: rioxarray==0.18.1
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-json-report; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: numpydoc; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: sphinx_design; extra == "docs"
+Requires-Dist: pydata-sphinx-theme; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+
+# hecstac
+[![CI](https://github.com/dewberry/hecstac/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/dewberry/hecstac/actions/workflows/ci.yaml)
+[![Documentation Status](https://readthedocs.org/projects/hecstac/badge/?version=latest)](https://hecstac.readthedocs.io/en/latest/?badge=latest)
+[![Release](https://github.com/dewberry/hecstac/actions/workflows/release.yaml/badge.svg)](https://github.com/dewberry/hecstac/actions/workflows/release.yaml)
+[![PyPI version](https://badge.fury.io/py/hecstac.svg)](https://badge.fury.io/py/hecstac)
+
+Utilities for creating STAC items from HEC models
+
+**hecstac** is an open-source Python library designed to mine metadata from HEC model simulations for use in the development of catalogs documenting probabilistic flood studies. This project automates the generation of STAC Items and Assets from HEC-HMS and HEC-RAS model files, enabling improved data and metadata management. 
+
