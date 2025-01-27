@@ -1,0 +1,67 @@
+regex,group,category,comments
+error.* username.*password|password.*login failed.*unauthorized|unauthorized.*authentication required|token provided is invalid or expired,unauthorized_access,container_platform_auth_failure,container push issue credentials must be set
+fatal: unable to access .*git.* error. 403,unauthorized_access,repository_access_denied, https://stackoverflow.com/questions/40006690/gitlab-runner-the-requested-url-returned-error-403 could be due to not being member of the project
+Error.* cannot patch.* with kind Secret.* is invalid|Error.* is forbidden. User.* cannot list resource .* in API group .* in the namespace,infrastructure_issues,helm_resource_error, could also be ci_infrastructure_issues
+
+pod status is failed|pod .* status is .?failed.?,infrastructure_issues,runner_pod_failure,
+ERROR.*Job failed.*pods .* not found,infrastructure_issues,runner_pod_not_found
+system failure.*unable to upgrade connection.*,infrastructure_issues,runner_instance_error, could be unauthorized or other errors
+Unable to continue with .* in namespace .* exists|UPGRADE FAILED.*field is immutable,infrastructure_issues,helm_resource_error, TO BE REVIEWED: https://stackoverflow.com/questions/62964532/helm-not-creating-the-resources
+Job failed.*image pull failed,infrastructure_issues,runner_image_pull_failure,https://stackoverflow.com/questions/69611221/gitlab-job-failed-image-pull-failed by Bruce Lau
+
+exit code 8|curl.*22.*the requested URL returned error.*404|curl.*tar.*\n.*This does not look like a tar archive|proxy_existence_code=404,remote_resource_errors,http_resource_not_found,
+jq.*has no keys|error.*gcloud.*Could not read json file|.*is not a valid JSON Schema|Swagger.* validation failed|error.* failed to parse|parse error.*|JSONError.*\n.*Unexpected token,remote_resource_errors,external_file_invalid_format,
+api(.|\n)*(FAILURE_STATUS_CODE|APP_EXISTENCE_CODE.*404)|deployment api is failed|undeploy file failed|Product creation pipeline failed|zip file validate API is failed|api(.|\n)*exit (status|code) 3|curl.*22.*the requested URL returned error.*409,remote_resource_errors,api_gateway_deployment_error,
+failed to get destination image.*no such image|error.* initializing source .* reading manifest .* unknown|error.*no such image|error.*image not known|invalid.*flag.*no such image,remote_resource_errors,image_not_found, TBD
+500.*internal server error.*registry.*|failed to read from destination repository.*internal server error|error.* pushing.* invalid status code from registry|received unexpected HTTP status. 500,remote_resource_errors,container_registry_server_error,https://access.redhat.com/solutions/6339661 | https://gitlab.com/gitlab-org/gitlab/-/issues/404326 | do a retry
+ERROR.*504 Gateway Time-out|expected response .* but got 503,remote_resource_errors,service_unavailable
+
+system failure.*cannot connect to the docker daemon,container_issues,docker_daemon_connection_failure, either start docker daemon on current host or client is attempting to connect daemon on a different host which is unreachable.
+Unable to open root: Permission denied,container_issues,image_build_permission_denied
+Error in push. Cannot overwrite digest,container_issues,image_push_write_error,due to concurrent docker requests https://github.com/docker/for-linux/issues/727
+Vulnerability threshold check results: FAIL,container_issues,image_security_scan_failure, only case found in sample 1 was a silent failure of twistcli  https://gitlab.tinaa.osc.tac.net/tinaa/tinaa-biz-srv/cs-app/evpn-svc-controller/-/jobs/382645
+error retrieving label for image .*|error.*writing blob.*during read,container_issues,image_build_read_error,https://github.com/containers/podman/issues/7424 + could be due to VPN or proxy issues https://github.com/containers/podman/issues/12962 https://github.com/containers/podman/issues/18168
+no such container|no container found for service,container_issues,container_not_found,
+ERROR.*Renaming a container with the same name as its current name,container_issues,container_already_exists
+
+ERROR.*could not install deps|Error.*No matching distribution found for .*|ERROR. unable to select packages|Failed building wheel for .*|safe thing yum can do is fail|The command.*install.*returned a non-zero code|error.* Command errored out with exit status 128.* git clone,dependency_issues,dependency_installation_failure, pip install command errored out with exit status 128
+npm ERR.* code ELIFECYCLE,dependency_issues,dependencies_conflict_error,
+error.*InvocationError for command.*code 2,dependency_issues,buggy_dependency, TBD potentially flaky test?
+go: command not found,dependency_issues,os_cmd_execution_error
+
+(?m)wget \$(\n|.)*?wget: missing URL|cat \$.*\n.*?no such file or directory|error.* expected one argument|required env var .* is not set|^PLEASE SET .* IN CICD VARIABLE SECTION,environment_variables,misconfigured_env_variable,
+env.*valueFrom: Invalid value: "",environment_variables,misconfigured_env_variable,https://github.com/kubernetes/kubernetes/issues/46861
+ci_scripts/security_test.sh.*\n.*?invalid reference format|Environment is neither .* nor .*|error parsing reference.*\$.*invalid reference format,environment_variables,misconfigured_env_variable,(error.*invalid reference format) https://gitlab.tinaa.osc.tac.net/tinaa-platform/deployment/production-push-pipeline/-/jobs/141601 + docker pull failed with invalid ref format https://stackoverflow.com/questions/45682010/docker-invalid-reference-format
+
+/bin/bash.* No such file or directory|ENOENT|FileNotFoundError,internal_repository_issues,repository_file_not_found,Include CI files or actual code dependencies.
+could not lock config file .* Permission denied|directory failed.*due to a permissions problem|can't cd to .* no such file or directory,internal_repository_issues,repository_file_access_error,https://gitlab.com/gitlab-org/gitlab-runner/-/issues/37408 or drupal site installation failed
+
+Release file for .* is not valid yet,internal_os_issues,apt_timezone_issue,https://askubuntu.com/questions/1096930/sudo-apt-update-error-release-file-is-not-yet-valid
+sed. bad option in substitution expression,internal_os_issues,os_cmd_execution_error, TDB seems not intermittent
+
+fatal: unable to access .*git.* (error. 500|Empty reply from server)|fatal.*expected.*packfile|error.* RPC failed.* HTTP 500 curl 22|error.*cannot lock ref .* is at .* but expected,transient_vcs_errors,git_transient_error, include git_server_error + git_cloning_error https://forum.gitlab.com/t/gitlab-runner-unreliable-when-cloning-repository/14810 + git_pull_error https://stackoverflow.com/questions/11796580/git-pull-error-error-remote-ref-is-at-but-expected
+
+killed .* sonar-scanner,memory_issues,static_analysis_tool_oom_error,https://github.com/travis-ci/travis-ci/issues/6903
+No space left on device,memory_issues,testing_device_oom_error,
+error.*job failed.*exit code 137,memory_issues,container_oom_error,https://refine.dev/blog/kubernetes-exit-code-137/#meaning-and-implications-of-exit-code-137
+
+requests.exceptions.JSONDecodeError. Expecting value(\n|.)*?short test summary info,flaky_test,flaky_test,flaky test https://stackoverflow.com/questions/46433492/sporadic-jsondecodeerror-during-api-request
+AssertionError: expected call not found|TypeError.* cannot read propert.* of .*|HeadlessChrome.*Executed.*ERROR|Device .* is invalid or failed|Failing scenarios.*\n.*features,flaky_test,flaky_test, incorrect_datetime_check e.g. https://gitlab.tinaa.osc.tac.net/tinaa/netapps/ip-top-up/ipt-controller/-/jobs/319165 + ui_testing_issues rendering not done before test + dependent_resource_failed
+
+UndefinedTable.* relation .* does not exist,database_issues,db_table_undefined,
+
+exceptions.AMQPConnectionError,networking_issues,broker_connection_failure,
+error.*get.*EOF|(error|fatal).*transfer closed with outstanding read data remaining|SSL_read: SSL_ERROR_SYSCALL.* errno 104|fatal: the remote end hung up unexpectedly|StreamLostError.*Transport indicated EOF|Connection broken.*IncompleteRead|(error|fatal).*connection reset by peer,networking_issues,connection_closed_reset_broken,broken reset closd
+(error|failed).*Connection refused,networking_issues,connection_refused
+Error.*Temporary failure in name resolution|error.*connect.* no route to host|error.* dial tcp: lookup .* on .* server misbehaving|error during connect.*lookup docker on .* no such host|Could not resolve host,networking_issues,host_resolution_failure, unknown host
+curl.*35.*SSL_connect. SSL_ERROR_SYSCALL in connection,networking_issues,ssl_connection_error
+
+timed out waiting for pod,limits_exceeded,runner_pod_waiting_timeout,
+wait time.*exceeded|Job failed: execution took longer than .* seconds,limits_exceeded,job_execution_timeout,already identified by GitLab | error on the very last line of log
+error.*gcloud\.auth.* refreshing .* current auth tokens|ERROR.*gcloud.*Max retries exceeded with url.*token,limits_exceeded,cloud_token_limit_exceeded,https://stackoverflow.com/questions/75455856/error-gcloud-auth-activate-service-account-there-was-a-problem-refreshing-you
+TimeoutError: Operation timed out|.*Client\.Timeout exceeded while awaiting headers|[Get|Post] .*https.*audit.*tlabs.ca.* dial tcp: i/o timeout|TLS handshake timeout|read (operation|connection) timed out,limits_exceeded,remote_call_timeout
+toomanyrequests: You have reached your pull rate limit,limits_exceeded,docker_pull_limit_reached,
+
+x509.*certificate.*unknown authority|SSLCertVerificationError|ssl.*certificate verify failed,unauthorized_access,certificate_verification_failure, just retry
+
+500 Server Error for http.*docker.*images,remote_resource_errors,container_registry_server_error
