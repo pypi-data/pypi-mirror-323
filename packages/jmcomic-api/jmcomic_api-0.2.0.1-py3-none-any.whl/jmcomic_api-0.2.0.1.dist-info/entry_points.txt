@@ -1,0 +1,2 @@
+[console_scripts]
+jmcomic_api = jmcomic_api.__main__:main
