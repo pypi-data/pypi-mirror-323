@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: gaclw
+Version: 0.1.3
+Summary: Wrapper for Google API Client Library
+License: MIT
+Author: aYukiYoshida
+Author-email: yuki.yoshida@access-company.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: google-api-python-client (>=2.159.0,<3.0.0)
+Requires-Dist: google-auth-httplib2 (>=0.2.0,<0.3.0)
+Requires-Dist: google-auth-oauthlib (>=1.2.1,<2.0.0)
+Requires-Dist: pydantic (>=2.10.5,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.7.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Wrapper for Google API Client Library
+
+Wrapper for Google API Client Library
+
+## 準備
+
+1. Google Drive API のドキュメントの[環境をセットアップする](https://developers.google.com/drive/api/quickstart/python?hl=ja#set_up_your_environment)に記載された以下の項目に記載された内容を実施する。
+
+    - [API の有効化](https://developers.google.com/drive/api/quickstart/python?hl=ja#enable_the_api)
+    - [OAuth 同意画面を構成する](https://developers.google.com/drive/api/quickstart/python?hl=ja#configure_the_oauth_consent_screen)
+    - [デスクトップ アプリケーションの認証情報を承認する](https://developers.google.com/drive/api/quickstart/python?hl=ja#authorize_credentials_for_a_desktop_application)
+
+2. 「デスクトップ アプリケーションの認証情報を承認する」の手順でダウンロードした `credentials.json` を以下のディレクトリに配置する。
+
+    ```plaintext
+    <PATH_TO_YOUR_PROJECT_ROOT>/secrets
+    ```
+
