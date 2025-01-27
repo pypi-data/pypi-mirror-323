@@ -1,0 +1,38 @@
+"""Combined player model."""
+
+from ..player_model import PlayerModel
+
+
+def create_combined_player_model(
+    player_models: list[PlayerModel], identifier: str
+) -> PlayerModel:
+    """Create a player model by combining many player models."""
+    jersey = None
+    kicks = None
+    fumbles = None
+    fumbles_lost = None
+    field_goals = None
+    for player_model in player_models:
+        player_model_jersey = player_model.jersey
+        if player_model_jersey is not None:
+            jersey = player_model_jersey
+        player_model_kicks = player_model.kicks
+        if player_model_kicks is not None:
+            kicks = player_model_kicks
+        player_model_fumbles = player_model.fumbles
+        if player_model_fumbles is not None:
+            fumbles = player_model_fumbles
+        player_model_fumbles_lost = player_model.fumbles_lost
+        if player_model_fumbles_lost is not None:
+            fumbles_lost = player_model_fumbles_lost
+        player_model_field_goals = player_model.field_goals
+        if player_model_field_goals is not None:
+            field_goals = player_model_field_goals
+    return PlayerModel(
+        identifier=identifier,
+        jersey=jersey,
+        kicks=kicks,
+        fumbles=fumbles,
+        fumbles_lost=fumbles_lost,
+        field_goals=field_goals,
+    )
