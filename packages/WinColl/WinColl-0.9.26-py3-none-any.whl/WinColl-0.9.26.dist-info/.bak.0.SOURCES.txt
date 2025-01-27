@@ -1,0 +1,45 @@
+README.md
+pyproject.toml
+WinColl.egg-info/PKG-INFO
+WinColl.egg-info/SOURCES.txt
+WinColl.egg-info/dependency_links.txt
+WinColl.egg-info/entry_points.txt
+WinColl.egg-info/requires.txt
+WinColl.egg-info/top_level.txt
+wincoll/__init__.py
+wincoll/__main__.py
+wincoll/wincoll_game.py
+wincoll/levels/01 A gentle introduction.tmx
+wincoll/levels/02 Hi! from Pav.tmx
+wincoll/levels/03 On a Coconut Island.tmx
+wincoll/levels/04 Not a rip-off.tmx
+wincoll/levels/05 Long way round.tmx
+wincoll/levels/06 Spiral Galaxy.tmx
+wincoll/levels/07 Fuzzy.tmx
+wincoll/levels/08 Which key.tmx
+wincoll/levels/09 Escape from Pompeii.tmx
+wincoll/levels/10 Riddle me this.tmx
+wincoll/levels/11 Doctor Jones, I presume.tmx
+wincoll/levels/12 Stairway to Hell.tmx
+wincoll/levels/13 Round and round.tmx
+wincoll/levels/14 Race to the top.tmx
+wincoll/levels/Blob.png
+wincoll/levels/Brick.png
+wincoll/levels/Collect.wav
+wincoll/levels/Diamond.png
+wincoll/levels/Die.png
+wincoll/levels/Die.wav
+wincoll/levels/Earth.png
+wincoll/levels/Gap.png
+wincoll/levels/Hero.png
+wincoll/levels/Key.png
+wincoll/levels/Rock.png
+wincoll/levels/Safe.png
+wincoll/levels/Slide.wav
+wincoll/levels/Unlock.wav
+wincoll/levels/WinColl.tsx
+wincoll/levels/acorn-mode-1.ttf
+wincoll/levels/app-icon.png
+wincoll/levels/title.png
+wincoll/locale/el/LC_MESSAGES/wincoll.mo
+wincoll/locale/fr/LC_MESSAGES/wincoll.mo
