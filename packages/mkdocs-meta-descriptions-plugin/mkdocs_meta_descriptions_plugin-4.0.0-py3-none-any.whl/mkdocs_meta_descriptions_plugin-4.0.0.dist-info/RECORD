@@ -1,0 +1,11 @@
+mkdocs_meta_descriptions_plugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_meta_descriptions_plugin/checker.py,sha256=Eb5wXy2MbXdYNrgU8f8Vktt0Ylf3Y4sc5L5EPR1_jqs,2460
+mkdocs_meta_descriptions_plugin/common.py,sha256=mcoEMro5qvgF1j5ZjFNmY7r9DX9VO6cw1H98CVkYsN4,1428
+mkdocs_meta_descriptions_plugin/export.py,sha256=2gZGj7MJxyptU5wXNm-nYCPDVCll85AJu7pLORyo7wY,2278
+mkdocs_meta_descriptions_plugin/plugin.py,sha256=RRqSC08lWpQqJN1JN7N2CHDohxnMowlmxfWrDWGohAk,3771
+mkdocs_meta_descriptions_plugin-4.0.0.dist-info/LICENSE,sha256=1JaVyaFaWRfe_xF6dBhFMlgCsRkRGDaowfMvJrKsCls,1070
+mkdocs_meta_descriptions_plugin-4.0.0.dist-info/METADATA,sha256=zFweW6iHeuV_3f-AGKFtRiW3KF0Eel99nKAI0Tc_iLo,7097
+mkdocs_meta_descriptions_plugin-4.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+mkdocs_meta_descriptions_plugin-4.0.0.dist-info/entry_points.txt,sha256=SWeyqom891pri22fFP98HqyHLF061ChjEy2xwGFGGz0,92
+mkdocs_meta_descriptions_plugin-4.0.0.dist-info/top_level.txt,sha256=xMFAmgL4melyDBcmbtR9TngkmyrqLUl3JpoJ4o6dhvg,32
+mkdocs_meta_descriptions_plugin-4.0.0.dist-info/RECORD,,
