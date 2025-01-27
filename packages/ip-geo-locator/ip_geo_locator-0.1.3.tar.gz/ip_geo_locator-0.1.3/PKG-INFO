@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ip_geo_locator
+Version: 0.1.3
+Summary: A Python SDK for IP Finder
+Home-page: https://github.com/Three-mavericks/ip_finder_python.git
+Author: ip_geo_locator
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# IP API Service
+
+A Python SDK that fetches IP information using a given IP address and an API key.
+
+## Installation
+
+To install the package locally:
+
+```bash
+pip install ip-geo-locator

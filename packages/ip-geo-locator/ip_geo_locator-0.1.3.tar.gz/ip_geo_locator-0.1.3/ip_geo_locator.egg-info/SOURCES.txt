@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+ip_geo_locator/_init_.py
+ip_geo_locator/ip_api.py
+ip_geo_locator.egg-info/PKG-INFO
+ip_geo_locator.egg-info/SOURCES.txt
+ip_geo_locator.egg-info/dependency_links.txt
+ip_geo_locator.egg-info/requires.txt
+ip_geo_locator.egg-info/top_level.txt
+tests/test_ip_api.py
