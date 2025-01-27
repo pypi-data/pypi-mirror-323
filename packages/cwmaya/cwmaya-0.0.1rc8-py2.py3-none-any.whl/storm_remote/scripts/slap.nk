@@ -1,0 +1,98 @@
+#! /Applications/Nuke15.0v4/Nuke15.0v4.app/Contents/MacOS/libnuke-15.0.4.dylib -nx
+#write_info Write1 file:"/Volumes/xhf/dev/cio/cwmaya/example_projects/siggraph/storm/comp/output.mp4" format:"960 540 1" chans:":rgba.red:rgba.green:rgba.blue:" framerange:"1 50" fps:"0" colorspace:"default (Gamma2.2)" datatype:"unknown" transfer:"unknown" views:"main" colorManagement:"Nuke"
+version 15.0 v4
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="25" w="3360" h="1752" maximized="1" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="2308" stretch="1"/>
+            <splitter orientation="2">
+                <split size="1017"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="715"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="1004"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+                <page id="Scenegraph.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name /Volumes/xhf/dev/cio/cwmaya/storm_remote/scripts/slap.nk
+ last_frame 50
+ lock_range true
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy true
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ monitorOutLUT rec709
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Viewer {
+ inputs 0
+ frame 1
+ frame_range 1-50
+ monitorOutNDISenderName "Nuke - untitled - Viewer1"
+ monitorOutOutputTransform rec709
+ name Viewer1
+ xpos -40
+ ypos -9
+}
+Read {
+ inputs 0
+ file_type exr
+ file /Volumes/xhf/dev/cio/cwmaya/example_projects/siggraph/images/out.####.exr
+ format "960 540 0 0 960 540 1 "
+ last 50
+ origlast 50
+ origset true
+ name Read1
+ xpos 48
+ ypos -249
+}
+Write {
+ file /Volumes/xhf/dev/cio/cwmaya/example_projects/siggraph/storm/comp/output.mp4
+ file_type mov
+ mov64_format "mp4 (MP4 (MPEG-4 Part 14))"
+ mov64_codec appr
+ mov_h264_codec_profile "High 4:2:0 8-bit"
+ mov64_pixel_format {{0}}
+ mov64_quality High
+ mov64_fast_start true
+ mov64_write_timecode true
+ mov64_gop_size 12
+ mov64_b_frames 0
+ mov64_bitrate 20000
+ mov64_bitrate_tolerance 4000000
+ mov64_quality_min 1
+ mov64_quality_max 3
+ checkHashOnRead false
+ ocioColorspace scene_linear
+ display default
+ view sRGB
+ name Write1
+ xpos 48
+ ypos -161
+}
