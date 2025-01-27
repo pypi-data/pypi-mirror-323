@@ -1,0 +1,17 @@
+[project]
+name = "nonebot-plugin-groups-aichat"
+version = "0.1.2r1"
+description = ""
+authors = [{ name = "KarisAya", email = "1048827424@qq.com" }]
+readme = "README.md"
+requires-python = ">=3.12,<4.0.0"
+dependencies = [
+    "nonebot2 (>=2.4.1,<3.0.0)",
+    "nonebot-plugin-clovers[onebot] (>=0.2.3,<0.3.0)",
+    "clovers-aichat (>=0.2.0.post1,<0.3.0)",
+]
+
+
+[build-system]
+srequires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
