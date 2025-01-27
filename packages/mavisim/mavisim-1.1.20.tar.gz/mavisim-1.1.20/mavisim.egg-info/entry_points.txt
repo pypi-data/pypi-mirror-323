@@ -1,0 +1,2 @@
+[console_scripts]
+mavisim = mavisim.__main__:main
