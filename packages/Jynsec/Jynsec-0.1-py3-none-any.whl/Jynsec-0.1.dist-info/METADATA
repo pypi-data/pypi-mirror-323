@@ -1,0 +1,1679 @@
+Metadata-Version: 2.1
+Name: Jynsec
+Version: 0.1
+Summary: JynPopMod Python Module
+Home-page: https://github.com/Jynoqtra/JynPopMod
+Author: Jynoqtra
+Author-email: Jynoqtra@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: qrcode[pil]
+Requires-Dist: Pillow
+Requires-Dist: better-profanity
+Provides-Extra: email_support
+Requires-Dist: smtplib; extra == "email-support"
+
+STRING/INTAGER-NUMBER-MATH util: from JynPopMod.utils.stringnum_utils import *
+
+### 1. **Base64 Encoding**
+Encodes a string into Base64 format. Useful for encoding binary data to be transmitted in text form.
+
+**Example Usage:**
+```python
+encoded = encode_base64("Hello, world!")  # Encodes the string to Base64
+```
+
+---
+
+### 2. **Base64 Decoding**
+Decodes a Base64 encoded string back to its original form.
+
+**Example Usage:**
+```python
+decoded = decode_base64("SGVsbG8sIHdvcmxkIQ==")  # Decodes a Base64 string to original text
+```
+
+---
+
+### 3. **String Reversal**
+Reverses the characters of a string.
+
+**Example Usage:**
+```python
+reversed_str = reverse_string("Hello")  # Returns "olleH"
+```
+
+---
+
+### 4. **Factorial Calculation**
+Calculates the factorial of a number recursively.
+
+**Example Usage:**
+```python
+fact = calculate_factorial(5)  # Returns 120 (5 * 4 * 3 * 2 * 1)
+```
+
+---
+
+### 5. **Generate Random String**
+Generates a random string of a specified length, using alphanumeric characters and special symbols.
+
+**Example Usage:**
+```python
+random_str = generate_random_string(10)  # Returns a random 10-character string
+```
+
+---
+
+### 6. **Swap Values**
+Swaps the values of two variables.
+
+**Example Usage:**
+```python
+a, b = swap_values(5, 10)  # Swaps the values: a = 10, b = 5
+```
+
+---
+
+### 7. **Replace String**
+Replaces all occurrences of a substring with another substring within a string.
+
+**Example Usage:**
+```python
+new_str = replace("Hello, world!", "world", "there")  # Replaces "world" with "there"
+```
+
+---
+
+### 8. **Find Maximum Value**
+Finds the maximum value from a list of numbers.
+
+**Example Usage:**
+```python
+max_value = find_maximum([1, 2, 3, 4, 5])  # Returns 5
+```
+
+---
+
+### 9. **Find Minimum Value**
+Finds the minimum value from a list of numbers.
+
+**Example Usage:**
+```python
+min_value = find_minimum([1, 2, 3, 4, 5])  # Returns 1
+```
+
+---
+
+### 10. **Get Random Choice**
+Returns a random element from a given list.
+
+**Example Usage:**
+```python
+random_choice = get_random_choice([1, 2, 3, 4, 5])  # Returns a random element from the list
+```
+
+---
+
+### 11. **Generate Unique ID**
+Generates a unique identifier (UUID).
+
+**Example Usage:**
+```python
+unique_id = generate_unique_id()  # Returns a unique UUID
+```
+
+---
+
+### 12. **Concatenate Lists**
+Concatenates two lists into one.
+
+**Example Usage:**
+```python
+concatenated = concatenate_lists([1, 2], [3, 4])  # Returns [1, 2, 3, 4]
+```
+
+---
+
+### 13. **Contains Swears**
+Checks if a string contains any profane language.
+
+**Example Usage:**
+```python
+contains = contains_swears("This is bad!")  # Returns True if profane words are found
+```
+
+---
+
+### 14. **Filter Swears in Text**
+Censors any profane language in a string.
+
+**Example Usage:**
+```python
+censored_text = filter_swears_in_text("This is bad!")  # Censors bad words in the text
+```
+
+---
+
+### 15. **Uppercase List**
+Converts all strings in a list to uppercase.
+
+**Example Usage:**
+```python
+uppercase_list = uppercase_list(["apple", "banana"])  # Returns ['APPLE', 'BANANA']
+```
+
+---
+
+### 16. **Remove Duplicates**
+Removes duplicate values from a list.
+
+**Example Usage:**
+```python
+unique_list = remove_duplicates([1, 2, 3, 3, 4])  # Returns [1, 2, 3, 4]
+```
+
+---
+
+### 17. **Find Index of Element**
+Finds the index of an element in a list. Returns -1 if the element is not found.
+
+**Example Usage:**
+```python
+index = find_index([1, 2, 3], 2)  # Returns 1
+```
+
+---
+
+### 18. **Random Element from List**
+Selects a random element from a list.
+
+**Example Usage:**
+```python
+random_element = random_element([1, 2, 3, 4, 5])  # Randomly returns one element from the list
+```
+
+---
+
+### 19. **Validate Email**
+Validates an email address format using regex.
+
+**Example Usage:**
+```python
+is_valid = validate_email("test@example.com")  # Returns True if valid
+```
+
+---
+
+### 20. **Split Text into Chunks**
+Splits a string into smaller chunks of a specified size.
+
+**Example Usage:**
+```python
+chunks = split_into_chunks("HelloWorld", 3)  # Returns ['Hel', 'loW', 'orl', 'd']
+```
+
+---
+
+### 21. **Generate Password (Weak, Medium, Strong)**
+Generates a password of varying strength levels based on the parameter.
+
+**Example Usage:**
+```python
+weak_pass = genpass("Weak")  # Generates a weak password
+medium_pass = genpass("Medium")  # Generates a medium password
+strong_pass = genpass("Strong")  # Generates a strong password
+```
+
+---
+
+### 22. **Unique Elements**
+Removes duplicate elements from a list and returns unique values.
+
+**Example Usage:**
+```python
+unique_values = unique_elements([1, 2, 2, 3])  # Returns [1, 2, 3]
+```
+
+---
+
+### 23. **Sum of List**
+Calculates the sum of a list of numbers.
+
+**Example Usage:**
+```python
+total = sum_list([1, 2, 3, 4])  # Returns 10
+```
+
+---
+
+### 24. **Reverse List**
+Reverses the order of a list.
+
+**Example Usage:**
+```python
+reversed_lst = reverse_list([1, 2, 3])  # Returns [3, 2, 1]
+```
+
+---
+
+### 25. **Check if Prime**
+Checks if a number is prime.
+
+**Example Usage:**
+```python
+is_prime_number = is_prime(7)  # Returns True if the number is prime
+```
+
+---
+
+### 26. **Shorten Text**
+Shortens text to a specified length, appending "..." if it exceeds the length.
+
+**Example Usage:**
+```python
+short_text = shorten_text("This is a long text.", 10)  # Returns "This is a..."
+```
+
+---
+
+### 27. **Word Count**
+Counts the number of words in a string.
+
+**Example Usage:**
+```python
+word_count = word_count("Hello world!")  # Returns 2
+```
+
+---
+
+### 28. **Validate Phone Number**
+Validates a phone number format using regex.
+
+**Example Usage:**
+```python
+is_valid_phone = is_valid_phone_number("+1234567890")  # Returns True if valid
+```
+
+---
+
+### 29. **Clean Null Values**
+Removes null values (None, empty strings, etc.) from a list or dictionary.
+
+**Example Usage:**
+```python
+cleaned_data = clean_null([None, "", "Hello", 0])  # Returns ["Hello"]
+```
+
+---
+
+### 30. **Calculate Average**
+Calculates the average of numbers in a list.
+
+**Example Usage:**
+```python
+average = calculate_average([1, 2, 3, 4, 5])  # Returns 3
+```
+
+---
+
+### 31. **Calculate Median**
+Calculates the median of a list of numbers.
+
+**Example Usage:**
+```python
+median = calculate_median([1, 3, 3, 6, 7, 8, 9])  # Returns 6
+```
+
+---
+
+### 32. **Count Words**
+Counts the number of words in a text.
+
+**Example Usage:**
+```python
+words = count_words("This is a sentence.")  # Returns 5
+```
+
+---
+
+### 33. **Count Sentences**
+Counts the number of sentences in a text.
+
+**Example Usage:**
+```python
+sentences = count_sentences("This is one sentence. This is another.")  # Returns 2
+```
+
+---
+
+### 34. **Word Frequencies**
+Counts the frequency of each word in a text.
+
+**Example Usage:**
+```python
+freq = word_frequencies("apple apple banana orange apple")  # Returns {'apple': 3, 'banana': 1, 'orange': 1}
+```
+
+---
+
+### 35. **Common Words Between Texts**
+Finds common words between two texts.
+
+**Example Usage:**
+```python
+common = common_words("I love programming", "I love coding")  # Returns ['I', 'love']
+```
+
+---
+
+### 36. **Extract Keywords**
+Extracts the top `n` keywords from a text using TF-IDF.
+
+**Example Usage:**
+```python
+keywords = extract_keywords("This is a sample text for keyword extraction.", 5)  # Returns top 5 keywords
+```
+
+---
+
+### 37. **Evaluate Text Length**
+Calculates the average word and sentence lengths in a text.
+
+**Example Usage:**
+```python
+avg_word_length, avg_sentence_length = evaluate_text_length("This is a sentence. This is another.")  # Returns (3.8, 5)
+```
+
+---
+
+### 38. **Sentiment Analysis**
+Analyzes the sentiment (positive, negative, or neutral) of a text.
+
+**Example Usage:**
+```python
+sentiment = sentiment_analysis("I love this product!")  # Returns "Positive"
+```
+
+---
+
+### 39. **Contains Specific String**
+Checks if a string contains any of the characters in a specified list.
+
+**Example Usage:**
+```python
+contains = containsstr("Hello world!", "aeiou")  # Returns True if vowels are found
+```
+
+---
+
+### 40. **Remove Alphabet**
+Removes all alphabetic characters from a string.
+
+**Example Usage:**
+```python
+non_alpha = rem_alphabet("Hello 123!")  # Returns " 123!"
+```
+
+---
+
+### 41. **Copy to Clipboard**
+Copies text to the clipboard.
+
+**Example Usage:**
+```python
+copy_to_clipboard("This text is copied!")  # Copies the text to clipboard
+```
+
+---
+
+### 42. **Paste from Clipboard**
+Pastes the text from the clipboard.
+
+**Example
+
+ Usage:**
+```python
+text = paste_from_clipboard()  # Returns the clipboard text
+```
+
+---
+
+### 43. **String Case Count**
+Counts the number of uppercase and lowercase letters in a string.
+
+**Example Usage:**
+```python
+uppercase, lowercase = string_case_count("Hello World!")  # Returns (2, 8)
+```
+
+CAMERA/WEBCAM-CAM utils: from JynPopMod.utils.camera_utils import *
+
+### 1. **JynPopMod**
+This function simply prints a message that provides information about "JynPopMod," linking to the relevant GitHub repository.
+
+**Example Usage:**
+```python
+JynPopMod()  # Outputs the message with a GitHub link
+```
+
+---
+
+### 2. **capture_photo**
+This function captures a photo using your computer's webcam. It uses OpenCV to access the webcam and save a captured frame as an image file (in this case, as "captured_photo.jpg").
+
+**Example Usage:**
+```python
+capture_photo()  # Captures a photo and saves it as "captured_photo.jpg"
+```
+
+---
+
+### 3. **record_video**
+This function records a video from your computer's webcam for a specified duration (default is 10 seconds). It writes the video to a file (`recorded_video.avi`) using OpenCV. The video recording can also be stopped manually by pressing the 'q' key.
+
+**Example Usage:**
+```python
+record_video(15)  # Records a video for 15 seconds
+```
+
+---
+
+### 4. **get_camera_resolution**
+This function gets and prints the resolution of your webcam (width x height).
+
+**Example Usage:**
+```python
+get_camera_resolution()  # Prints the current camera resolution
+```
+
+---
+
+### 5. **camera_zoom**
+This function zooms in on the camera feed by a specified factor. It enlarges the image by resizing the video frame from the webcam.
+
+**Example Usage:**
+```python
+camera_zoom(3.0)  # Zooms in by a factor of 3 on the webcam feed
+```
+
+---
+
+### 6. **capture_screenshot**
+This function captures a screenshot of your screen and saves it to the specified output path (like a file on your computer).
+
+**Example Usage:**
+```python
+capture_screenshot("screenshot.png")  # Saves a screenshot as "screenshot.png"
+```
+
+GUI/INTERFACE utils: from JynPopMod.utils.gui_utils import *
+
+### **1. `show_error_messagebox`**
+
+This function creates and displays an error message in a `Tkinter` `messagebox`.
+
+**Example Usage:**
+```python
+show_error_messagebox("An error occurred!")
+```
+
+---
+
+### **2. `Jwin` Class**
+
+The `Jwin` class allows you to create a customizable window with widgets like buttons, labels, and more, arranged based on a grid layout.
+
+**Example Usage:**
+```python
+layout = """
++--------+--------+  
+|12345678|12345678|  
+|12345678|12345678|  
+|12345678|12345678|  
++--------+--------+  
+"""
+widgets_config = [
+    {"type": "button", "position": (0, 0), "options": {"text": "Click Me", "id": "button1"}},
+    {"type": "label", "position": (1, 0), "options": {"text": "Hello"}}
+]
+app = Jwin(layout, widgets_config)
+app.run()
+```
+
+---
+
+### **3. `JynPopMod`**
+
+This function outputs a message about the JynPopMod project created by Jynoqtra.
+
+**Example Usage:**
+```python
+JynPopMod()  # Outputs message about JynPopMod
+```
+
+---
+
+### **4. `switch_case`**
+
+This function simulates a switch-case behavior using a dictionary to map conditions to corresponding actions, like functions or values.
+
+**Example Usage:**
+```python
+result = switch_case("option1", {"option1": lambda: "Selected option 1", "option2": lambda: "Selected option 2"})
+print(result)  # Outputs: "Selected option 1"
+```
+
+---
+
+### **5. `pop`**
+
+This function creates a simple pop-up window with the message passed to it.
+
+**Example Usage:**
+```python
+pop("This is an information pop-up!")
+```
+
+---
+
+### **6. `popinp`**
+
+This function prompts the user to input text through a pop-up input dialog.
+
+**Example Usage:**
+```python
+user_input = popinp("Enter your name:")
+print(user_input)  # Outputs the input provided by the user
+```
+
+---
+
+### **7. `pop_with_image`**
+
+This function shows a message in a pop-up along with an image (specified by a file path).
+
+**Example Usage:**
+```python
+pop_with_image("Message with image", "path/to/image.png")
+```
+
+---
+
+### **8. `set_theme`**
+
+This function changes the window theme between "light" and "dark", adjusting the background color accordingly.
+
+**Example Usage:**
+```python
+set_theme(root, "dark")  # Sets the theme of the window to dark
+```
+
+---
+
+### **9. `track_interaction`**
+
+This function allows tracking interactions with widgets, such as clicks or key presses, and logs the event.
+
+**Example Usage:**
+```python
+track_interaction("button1", "clicked")  # Outputs: "Interaction with button1: clicked"
+```
+
+---
+
+### **10. `main_win`**
+
+This function creates and returns the main Tkinter window, ready to be customized further.
+
+**Example Usage:**
+```python
+root = main_win()  # Creates the main window
+```
+
+---
+
+### **11. Window Management Functions**
+
+These functions enable window customization, such as setting the size, title, icon, and opacity.
+
+**Example Usage:**
+```python
+set_window_size(root, width=500, height=400)  # Resizes the window
+set_window_title(root, "New Title")  # Sets the window title
+```
+
+---
+
+### **12. `show_info_messagebox`**
+
+This function shows an informational message in a messagebox.
+
+**Example Usage:**
+```python
+show_info_messagebox("This is an informational message.")
+```
+
+---
+
+### **13. `show_warning_messagebox`**
+
+This function displays a warning message in a messagebox.
+
+**Example Usage:**
+```python
+show_warning_messagebox("This is a warning message.")
+```
+
+---
+
+### **14. `ask_yes_no_question`**
+
+This function prompts the user with a yes/no question in a messagebox and returns the answer.
+
+**Example Usage:**
+```python
+response = ask_yes_no_question("Do you want to continue?")
+print(response)  # True for 'Yes', False for 'No'
+```
+
+---
+
+### **15. `create_checkbox_widget`**
+
+This function creates a checkbox widget in a window, allowing the user to check or uncheck it.
+
+**Example Usage:**
+```python
+checkbox = create_checkbox_widget(root, "Accept terms", default=True)
+```
+
+---
+
+### **16. `validate_input`**
+
+This function validates user input based on the specified type (e.g., integer, float, etc.) and prompts the user for correct input if necessary.
+
+**Example Usage:**
+```python
+valid_age = validate_input("Enter your age:", "int")  # Ensures input is an integer
+```
+
+---
+
+### **17. `animate_widget`**
+
+This function animates a widget by smoothly transitioning it from one position to another within a specified duration.
+
+**Example Usage:**
+```python
+animate_widget(button, 0, 0, 200, 200, duration=1000)  # Moves button over 1 second
+```
+
+WEB/INTERNET utils: from JynPopMod.utils.web_utils import *
+
+### **1. `start_http_server`**
+
+This function starts a simple HTTP server that listens on the specified IP and port. The default IP is `0.0.0.0` (listens on all available network interfaces), and the default port is `8000`.
+
+**Example Usage:**
+```python
+start_http_server(ip="127.0.0.1", port=8080)  # Starts the server on localhost at port 8080
+```
+
+---
+
+### **2. `stop_http_server`**
+
+This function stops the running HTTP server by calling `exit(0)`, which will terminate the process.
+
+**Example Usage:**
+```python
+stop_http_server()  # Stops the server
+```
+
+---
+
+### **3. `get_server_status`**
+
+This function checks the status of the server by sending a `GET` request to a specified URL (default is `http://localhost:8000`). It prints the server status based on the response code.
+
+**Example Usage:**
+```python
+get_server_status(url="http://localhost:8000")  # Checks if the server is up and running
+```
+
+---
+
+### **4. `set_server_timeout`**
+
+This function sets a timeout for server connections using `socket.setdefaulttimeout()`. The default timeout is 10 seconds.
+
+**Example Usage:**
+```python
+set_server_timeout(timeout=5)  # Sets the connection timeout to 5 seconds
+```
+
+---
+
+### **5. `upload_file_to_server`**
+
+This function uploads a file to the server via a POST request. The file path and server URL are required.
+
+**Example Usage:**
+```python
+upload_file_to_server(file_path="example.txt", url="http://localhost:8000/upload")  # Uploads a file to the server
+```
+
+---
+
+### **6. `download_file_from_server`**
+
+This function downloads a file from the server at the given URL and saves it to the specified path.
+
+**Example Usage:**
+```python
+download_file_from_server(file_url="http://localhost:8000/example.txt", save_path="downloaded_example.txt")  # Downloads the file
+```
+
+---
+
+### **7. `CustomRequestHandler` (Class)**
+
+A custom subclass of `SimpleHTTPRequestHandler` that provides specialized handling of GET requests. It serves custom responses for paths `/` and `/status`.
+
+**Example Usage:**
+```python
+start_custom_http_server(ip="127.0.0.1", port=8080)  # Starts a custom HTTP server
+```
+
+---
+
+### **8. `start_custom_http_server`**
+
+This function starts a custom HTTP server that uses `CustomRequestHandler` to handle requests. It listens on the given IP and port.
+
+**Example Usage:**
+```python
+start_custom_http_server(ip="0.0.0.0", port=8080)  # Starts a custom server that handles `/` and `/status`
+```
+
+---
+
+### **9. `set_server_access_logs`**
+
+This function enables server access logging to a specified log file. Logs are written with timestamps and message details.
+
+**Example Usage:**
+```python
+set_server_access_logs(log_file="server_access.log")  # Starts logging server access
+```
+
+---
+
+### **10. `get_server_logs`**
+
+This function reads and prints the server logs from a specified log file.
+
+**Example Usage:**
+```python
+get_server_logs(log_file="server_access.log")  # Prints logs from the server access log file
+```
+
+---
+
+### **11. `restart_http_server`**
+
+This function restarts the HTTP server by re-running the script using `os.execv`.
+
+**Example Usage:**
+```python
+restart_http_server()  # Restarts the HTTP server
+```
+
+---
+
+### **12. `open_url`**
+
+This function opens a URL in the default web browser using the `subprocess.run()` method.
+
+**Example Usage:**
+```python
+open_url("http://localhost:8000")  # Opens the specified URL in the browser
+```
+
+---
+
+### **13. `download_image_from_url`**
+
+This function downloads an image from a given URL and saves it to a specified path.
+
+**Example Usage:**
+```python
+download_image_from_url(image_url="http://example.com/image.png", save_path="image.png")  # Downloads an image
+```
+
+---
+
+### **14. `check_internet_connection`**
+
+This function checks the system's internet connection by pinging `google.com`. It returns `True` if the connection is active, otherwise `False`.
+
+**Example Usage:**
+```python
+is_connected = check_internet_connection()
+print(is_connected)  # Prints True if connected, False if not
+```
+
+---
+
+### **15. `create_web_server`**
+
+This function creates a basic web server that serves files from a specified directory. It uses `SimpleHTTPRequestHandler` to serve static content.
+
+**Example Usage:**
+```python
+create_web_server(directory="/path/to/directory", port=8080)  # Serves files from the specified directory
+```
+
+---
+
+### **16. `create_custom_web_server`**
+
+This function creates a custom web server that serves a specific HTML content at a given port.
+
+**Example Usage:**
+```python
+html_content = "<html><body><h1>Hello, World!</h1></body></html>"
+create_custom_web_server(html=html_content, port=8080)  # Serves the custom HTML content
+```
+
+---
+
+### **17. `send_http_request`**
+
+This function sends an HTTP request to a specified URL using either the `GET` or `POST` method. Optionally, you can send data with a POST request.
+
+**Example Usage:**
+```python
+response = send_http_request("http://localhost:8000", method="GET")  # Sends a GET request
+```
+
+AUDIO/MIC utils: from JynPopMod.utils.audio_utils import *
+
+Hereâ€™s a complete example-based guide for **all functions** in your code, written in a consistent style:
+
+---
+
+### **1. Text-to-Speech**
+#### **`play_audio`**
+Converts a given text into speech using the `pyttsx3` library.
+
+**Example Usage:**
+```python
+play_audio("Hello! How can I help you?")
+# The program will audibly say: "Hello! How can I help you?"
+```
+
+---
+
+### **2. Record Audio**
+#### **`record_audio`**
+Listens for audio input via a microphone and converts it to text using the Google Speech Recognition API.
+
+**Example Usage:**
+```python
+text = record_audio()
+print(f"You said: {text}")
+# You say: "I love coding!" -> Output: "You said: I love coding!"
+```
+
+**Error Handling:**
+- If the input is not recognized: *"Sorry, I couldn't understand that."*
+- If there's a network issue: *"Could not request results; check your network connection."*
+
+---
+
+### **3. Filter Profanity**
+#### **`filter_swears_in_text`**
+Cleans a given string by censoring offensive words using the `better_profanity` library.
+
+**Example Usage:**
+```python
+filtered_text = filter_swears_in_text("This is a damn test.")
+print(filtered_text)
+# Output: "This is a test."
+```
+
+---
+
+### **4. Speech-to-Text with Profanity Filtering**
+#### **`speech_to_text_with_filter`**
+Captures audio input, converts it to text, and censors any offensive words.
+
+**Example Usage:**
+```python
+filtered_text = speech_to_text_with_filter()
+print(f"Filtered text: {filtered_text}")
+# You say: "This is a damn test." -> Output: "This is a test"
+```
+
+**Error Handling:**
+- If the audio isn't recognized: *"Sorry, I couldn't understand what you said."*
+- If there's a network issue: *"Error with the speech recognition service."*
+
+---
+
+### **5. Simple Speech-to-Text**
+#### **`speech_to_text`**
+Captures audio input and converts it to text without any additional processing.
+
+**Example Usage:**
+```python
+text = speech_to_text()
+print(f"You said: {text}")
+# You say: "It's a sunny day!" -> Output: "You said: It's a sunny day!"
+```
+
+**Error Handling:**
+- If the input isn't recognized: *"Could not understand audio."*
+- If there's a network issue: *"Could not request results."*
+
+SECURTY utils: from JynPopMod.utils.securty_utils import *
+
+### **1. `popinp`**
+
+This function creates a simple input dialog using the `Tkinter` library to collect user input.
+
+**Parameters:**
+- `_p` (str): Prompt text for the input dialog.
+- `_t` (str): Title of the input dialog (default is `"Input"`).
+
+**Example Usage:**
+```python
+name = popinp("What's your name?", "Name Input")  # Prompts for the user's name
+```
+
+---
+
+### **2. `genSK`**
+
+Generates a time-based one-time password (TOTP) using the provided secret key. Useful for 2FA (Two-Factor Authentication).
+
+**Parameters:**
+- `secret_key` (str): Base32 encoded secret key.
+- `time_step` (int): Time step in seconds (default is 30).
+- `digits` (int): Number of digits in the generated OTP (default is 6).
+
+**Example Usage:**
+```python
+otp = genSK("JBSWY3DPEHPK3PXP")  # Generates a 6-digit OTP
+```
+
+---
+
+### **3. `generate_qr`**
+
+Generates a QR code for TOTP authentication and saves it as `qrcode.png`.
+
+**Parameters:**
+- `secret_key` (str): Base32 encoded secret key.
+- `app_name` (str): Name of the application.
+- `user_name` (str): Name of the user.
+
+**Example Usage:**
+```python
+generate_qr("JBSWY3DPEHPK3PXP", "MyApp", "User123")  # Generates a QR code
+```
+
+---
+
+### **4. `verify_code`**
+
+Verifies the user-provided OTP against the generated TOTP.
+
+**Parameters:**
+- `secret_key` (str): Base32 encoded secret key.
+- `func` (callable): Function to call upon successful verification.
+- `result_label` (`Tk.Label`): Label widget to display the verification result.
+- `window` (`Tk`): The parent window for the dialog.
+
+**Example Usage:**
+```python
+verify_code("JBSWY3DPEHPK3PXP", some_function, result_label, main_window)  # Verifies OTP
+```
+
+---
+
+### **5. `show_qr`**
+
+Displays a QR code for TOTP setup and allows the user to verify their code through a GUI.
+
+**Parameters:**
+- `func` (callable): Function to execute after successful verification.
+- `app_name` (str): Application name.
+- `user_name` (str): User name.
+
+**Example Usage:**
+```python
+show_qr(my_function, "MyApp", "User123")  # Displays a QR code and allows OTP verification
+```
+
+---
+
+### **6. `Jynauth`**
+
+A wrapper for the TOTP authentication process. It integrates the QR code display and verification in one function.
+
+**Parameters:**
+- `func` (callable): Function to execute after successful verification.
+- `user_name` (str): Name of the user.
+- `app_name` (str): Name of the application.
+
+**Example Usage:**
+```python
+Jynauth(my_function, "User123", "MyApp")  # Initiates TOTP authentication
+```
+
+---
+
+### **7. `Jctb`**
+
+Converts a string into a binary representation where each character is encoded as a 10-bit binary value.
+
+**Parameters:**
+- `input_string` (str): The string to convert.
+
+**Example Usage:**
+```python
+binary_string = Jctb("Hello World")
+print(binary_string)  # Outputs the binary representation
+```
+
+---
+
+### **8. `Jbtc`**
+
+Converts a binary string (generated by `Jctb`) back into its original text form.
+
+**Parameters:**
+- `binary_input` (str): Binary string to decode.
+
+**Example Usage:**
+```python
+original_string = Jbtc(binary_string)
+print(original_string)  # Outputs the original text
+```
+
+PC/COMPUTER utils: from JynPopMod.utils.pc_utils import *
+
+### **1. `find_files_by_extension`**
+Finds files with a specified extension in a directory.
+
+**Parameters:**
+- `directory` (str): Path to the directory.
+- `extension` (str): File extension to look for.
+
+**Example Usage:**
+```python
+txt_files = find_files_by_extension("/path/to/dir", ".txt")
+```
+
+---
+
+### **2. `get_curr_dir`**
+Returns the current working directory.
+
+**Example Usage:**
+```python
+cwd = get_curr_dir()
+```
+
+---
+
+### **3. `ccc`**
+Executes a function while limiting the process to specified CPU cores.
+
+**Parameters:**
+- `core_count` (int): Number of cores to use.
+- `function` (callable): Function to execute.
+- `*args, **kwargs`: Arguments for the function.
+
+**Example Usage:**
+```python
+result = ccc(2, sum, [1, 2, 3])
+```
+
+---
+
+### **4. `check_if_file_exists`**
+Checks if a file exists.
+
+**Parameters:**
+- `file_path` (str): Path to the file.
+
+**Example Usage:**
+```python
+exists = check_if_file_exists("/path/to/file.txt")
+```
+
+---
+
+### **5. `monitor_new_files`**
+Monitors a directory for new files and triggers a callback.
+
+**Parameters:**
+- `directory` (str): Path to the directory.
+- `callback` (callable): Function to call when new files are detected.
+
+**Example Usage:**
+```python
+monitor_new_files("/path/to/dir", lambda files: print("New files:", files))
+```
+
+---
+
+### **6. `get_system_uptime`**
+Returns the system uptime in seconds.
+
+**Example Usage:**
+```python
+uptime = get_system_uptime()
+```
+
+---
+
+### **7. `get_cpu_templinux`**
+Gets the CPU temperature on Linux systems.
+
+**Example Usage:**
+```python
+cpu_temp = get_cpu_templinux()
+```
+
+---
+
+### **8. `monitor_file_changes`**
+Monitors a file for changes and triggers a callback.
+
+**Parameters:**
+- `file_path` (str): Path to the file.
+- `callback` (callable): Function to call when changes are detected.
+
+**Example Usage:**
+```python
+monitor_file_changes("/path/to/file.txt", lambda: print("File changed!"))
+```
+
+---
+
+### **9. `write_to_file`**
+Writes content to a file.
+
+**Parameters:**
+- `filename` (str): Path to the file.
+- `content` (str): Content to write.
+
+**Example Usage:**
+```python
+write_to_file("output.txt", "Hello, World!")
+```
+
+---
+
+### **10. `read_from_file`**
+Reads the content of a file.
+
+**Parameters:**
+- `filename` (str): Path to the file.
+
+**Example Usage:**
+```python
+content = read_from_file("input.txt")
+```
+
+---
+
+### **11. `parse_json`**
+Parses a JSON string into a Python object.
+
+**Parameters:**
+- `json_string` (str): JSON string.
+
+**Example Usage:**
+```python
+data = parse_json('{"key": "value"}')
+```
+
+---
+
+### **12. `create_file_if_not_exists`**
+Creates an empty file if it does not exist.
+
+**Parameters:**
+- `filename` (str): Path to the file.
+
+**Example Usage:**
+```python
+create_file_if_not_exists("new_file.txt")
+```
+
+---
+
+### **13. `create_directory`**
+Creates a directory if it does not exist.
+
+**Parameters:**
+- `directory` (str): Path to the directory.
+
+**Example Usage:**
+```python
+create_directory("/path/to/new_dir")
+```
+
+---
+
+### **14. `track_mouse_position`**
+Tracks mouse position and calls a callback with the coordinates.
+
+**Parameters:**
+- `callback` (callable): Function to call with x, y coordinates.
+
+**Example Usage:**
+```python
+track_mouse_position(lambda x, y: print(f"Mouse moved to {x}, {y}"))
+```
+
+---
+
+### **15. `get_cpu_usage`**
+Returns CPU usage as a percentage.
+
+**Example Usage:**
+```python
+cpu_usage = get_cpu_usage()
+```
+
+---
+
+### **16. `get_memory_usage`**
+Returns memory usage as a percentage.
+
+**Example Usage:**
+```python
+memory_usage = get_memory_usage()
+```
+
+---
+
+### **17. `create_zip_file`**
+Creates a ZIP archive of a directory.
+
+**Parameters:**
+- `source_dir` (str): Directory to compress.
+- `output_zip` (str): Output ZIP file name.
+
+**Example Usage:**
+```python
+create_zip_file("/path/to/dir", "archive")
+```
+
+---
+
+### **18. `extract_zip_file`**
+Extracts a ZIP archive.
+
+**Parameters:**
+- `zip_file` (str): Path to the ZIP file.
+- `extract_dir` (str): Directory to extract to.
+
+**Example Usage:**
+```python
+extract_zip_file("archive.zip", "/path/to/extract")
+```
+
+---
+
+### **19. `move_file`**
+Moves a file to a new location.
+
+**Parameters:**
+- `source` (str): Path to the file.
+- `destination` (str): Destination path.
+
+**Example Usage:**
+```python
+move_file("source.txt", "destination.txt")
+```
+
+---
+
+### **20. `copy_file`**
+Copies a file to a new location.
+
+**Parameters:**
+- `source` (str): Path to the file.
+- `destination` (str): Destination path.
+
+**Example Usage:**
+```python
+copy_file("source.txt", "destination.txt")
+```
+
+---
+
+### **21. `show_file_properties`**
+Returns file properties like size and last modified time.
+
+**Parameters:**
+- `file_path` (str): Path to the file.
+
+**Example Usage:**
+```python
+properties = show_file_properties("/path/to/file.txt")
+```
+
+---
+
+### **22. `run_shell_command`**
+Runs a shell command and returns its output and errors.
+
+**Parameters:**
+- `command` (str): Shell command to execute.
+
+**Example Usage:**
+```python
+stdout, stderr = run_shell_command("ls -l")
+```
+
+MAIN: from JynPopMod.module import *
+
+Here's an overview and breakdown of the functions provided, grouped by purpose, along with usage explanations and examples:
+
+---
+
+### **1. Timing and Delays**
+#### **`wait`**
+Pauses execution for a specified duration in seconds, minutes, or hours.
+
+**Parameters:**
+- `key` (str): 's' for seconds, 'm' for minutes, 'h' for hours.
+- `num` (int): Number of units to wait.
+
+**Example Usage:**
+```python
+wait("m", 2)  # Waits for 2 minutes.
+```
+
+#### **`timer_function`**
+Runs a function after a delay.
+
+**Parameters:**
+- `func` (callable): Function to run.
+- `seconds` (int): Delay in seconds.
+
+**Example Usage:**
+```python
+timer_function(lambda: print("Time's up!"), 5)
+```
+
+#### **`start_timer`**
+Starts a timer and executes a callback after the timer ends.
+
+**Parameters:**
+- `seconds` (int): Duration of the timer.
+- `callback` (callable): Function to execute after the timer.
+
+**Example Usage:**
+```python
+start_timer(3, lambda: print("Timer completed!"))
+```
+
+---
+
+### **2. Conditional Function Calls**
+#### **`iftrue`**
+Calls a function if a condition is true.
+
+**Parameters:**
+- `Var` (bool): Condition to check.
+- `function` (callable): Function to call if true.
+
+**Example Usage:**
+```python
+iftrue(3 > 1, lambda: print("Condition is true!"))
+```
+
+#### **`iffalse`**
+Calls a function if a condition is false.
+
+**Example Usage:**
+```python
+iffalse(3 > 5, lambda: print("Condition is false!"))
+```
+
+#### **`oncondit`**
+Calls one of two functions based on a condition.
+
+**Parameters:**
+- `condition` (bool): Condition to check.
+- `function_true` (callable): Function to call if true.
+- `function_false` (callable): Function to call if false.
+
+**Example Usage:**
+```python
+oncondit(5 > 3, lambda: print("True!"), lambda: print("False!"))
+```
+
+---
+
+### **3. Looping**
+#### **`until`**
+Runs a block repeatedly until a condition becomes true.
+
+**Parameters:**
+- `function` (callable): Function that returns a boolean to break the loop.
+- `whattodo`: Code block to execute in the loop.
+
+**Example Usage:**
+```python
+until(lambda: 1 == 1, print("This will run only once."))
+```
+
+#### **`repeat`**
+Runs a function a specified number of times.
+
+**Parameters:**
+- `function` (callable): Function to repeat.
+- `times` (int): Number of repetitions.
+
+**Example Usage:**
+```python
+repeat(lambda: print("Repeated!"), 3)
+```
+
+#### **`repeat_forever`**
+Continuously runs a function in an infinite loop.
+
+**Example Usage:**
+```python
+repeat_forever(lambda: print("Infinite loop!"))
+```
+
+---
+
+### **4. Utility**
+#### **`ifnull`**
+Replaces `None` or empty values with a default.
+
+**Parameters:**
+- `_v`: Value to check.
+- `_d`: Default value.
+
+**Example Usage:**
+```python
+value = ifnull(None, "Default Value")
+```
+
+#### **`switch_case`**
+Implements a switch-case structure.
+
+**Parameters:**
+- `_v`: Value to check.
+- `_c`: Dictionary mapping values to results or functions.
+- `d`: Default value.
+
+**Example Usage:**
+```python
+result = switch_case(2, {1: "One", 2: lambda: "Two"}, "Default")
+```
+
+---
+
+### **5. String and File Operations**
+#### **`replace`**
+Replaces occurrences of a substring in a string.
+
+**Example Usage:**
+```python
+new_string = replace("hello world", "world", "Python")
+```
+
+#### **`generate_random_string`**
+Generates a random string of specified length.
+
+**Parameters:**
+- `length` (int): Length of the string.
+
+**Example Usage:**
+```python
+random_string = generate_random_string(10)
+```
+
+#### **`gs`**
+Gets the source code of a function.
+
+**Example Usage:**
+```python
+print(gs(switch_case))
+```
+
+---
+
+### **6. Task Management**
+#### **`parallel`**
+Runs multiple functions in parallel.
+
+**Parameters:**
+- `*functions`: Functions to run.
+
+**Example Usage:**
+```python
+parallel(lambda: print("Task 1"), lambda: print("Task 2"))
+```
+
+#### **`start_background_task`**
+Starts a task in a background thread.
+
+**Example Usage:**
+```python
+start_background_task(lambda: print("Running in the background!"))
+```
+
+---
+
+### **7. Networking and Input**
+#### **`get_ip_address`**
+Returns the current IP address of the machine.
+
+**Example Usage:**
+```python
+ip_address = get_ip_address()
+```
+
+#### **`send_email`**
+Sends an email using SMTP.
+
+**Parameters:**
+- `subject` (str): Email subject.
+- `body` (str): Email body.
+- `to_email` (str): Recipient email.
+- `mailname` (str): Sender email.
+- `mailpass` (str): Sender's email password.
+
+**Example Usage:**
+```python
+send_email("Test Subject", "Hello, World!", "to@example.com", "your_email@gmail.com", "your_password")
+```
+
+#### **`get_weather`**
+Fetches weather information for a city.
+
+**Parameters:**
+- `city` (str): City name.
+- `api_key` (str): API key for OpenWeatherMap.
+
+**Example Usage:**
+```python
+weather = get_weather("New York", "your_api_key")
+```
+
+---
+
+### **8. Image Processing**
+#### **`convert_image_to_grayscale`**
+Converts an image to grayscale.
+
+**Parameters:**
+- `image_path` (str): Path to the image.
+- `output_path` (str): Path to save the grayscale image.
+
+**Example Usage:**
+```python
+convert_image_to_grayscale("color.jpg", "grayscale.jpg")
+```
+
+---
+
+### **9. Hotkey and Keypress**
+#### **`hotdog`**
+Triggers a sequence of hotkeys.
+
+**Example Usage:**
+```python
+hotdog("ctrl", "c")  # Copies the current selection.
+```
+
+#### **`keypress`**
+Simulates a keypress.
+
+**Example Usage:**
+```python
+keypress("enter")
+```
+
+---
+
+### **10. Error Handling**
+#### **`safe_run`**
+Runs a function safely, catching exceptions.
+
+**Example Usage:**
+```python
+safe_run(lambda: 1 / 0)
+```
+
+#### **`nocrash`**
+Decorator to handle exceptions in functions.
+
+**Example Usage:**
+```python
+def risky_function():
+    return 1 / 0
+nocrash(risky_function) # More effective for gui/interface.
+``` 
+
+MIC
