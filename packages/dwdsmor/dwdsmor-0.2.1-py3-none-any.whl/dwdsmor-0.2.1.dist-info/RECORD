@@ -1,0 +1,15 @@
+dwdsmor/__init__.py,sha256=gYC04_1CUyZZSAcpbV62A3Bs7dzSgC9hyNQYyZJ8Ynk,130
+dwdsmor/automaton.py,sha256=zi13jxzN_wpkM80mO_9Io3i6BnLqkQnVsotKrgKugh0,7495
+dwdsmor/cli.py,sha256=EEXny5Utjb8tic3eg5cNXWdYvp4ThY9GEnXNLjoedJw,5040
+dwdsmor/log.py,sha256=4-kdENVe4VOsrXs-YNmmeVk9-Z-GpHOrh_OxAaXSlG8,295
+dwdsmor/spacy.py,sha256=11JYiyExdIrDB8wdifgsbZTIXXsZ4KBt1AjeapG4a2E,1424
+dwdsmor/traversal.py,sha256=QIg-Me5xQh7_zKyasC9vetPkZuXQo3xXEEG3XdEn4WI,2318
+dwdsmor/version.py,sha256=HfjVOrpTnmZ-xVFCYSVmX50EXaBQeJteUHG-PD6iQs8,22
+dwdsmor/tag/__init__.py,sha256=t55f5w1q5NW15nw_atldnIMIKGDRHWwpapIyxrqLR0I,3644
+dwdsmor/tag/hdt.py,sha256=-MO-GsAlc4_fDPlaTd1OCwSopa_mT58rO1_h3QvYkPg,2689
+dwdsmor-0.2.1.dist-info/COPYING,sha256=7a72Msu2Q-TnoiFxemxEGkwafJGObk1W3rw9hzmyM_Y,17984
+dwdsmor-0.2.1.dist-info/METADATA,sha256=QKKI_-4xFC5tHa4LPsu6Ok5njDv_0nBSElH7id0OfPg,16913
+dwdsmor-0.2.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+dwdsmor-0.2.1.dist-info/entry_points.txt,sha256=_GxfEXWgcElYNTtQkrQfQyAWHyBccgMfmj0AUp15HfE,45
+dwdsmor-0.2.1.dist-info/top_level.txt,sha256=DwHRv9pyWIXzezrpzw_AnmpaQwegfb3T4kKkYu9V37w,8
+dwdsmor-0.2.1.dist-info/RECORD,,
