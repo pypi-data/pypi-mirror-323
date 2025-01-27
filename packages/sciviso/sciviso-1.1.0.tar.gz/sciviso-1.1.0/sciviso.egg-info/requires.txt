@@ -1,0 +1,11 @@
+sciutil
+pandas
+numpy
+matplotlib
+statannot
+seaborn
+adjustText
+wordcloud
+networkx
+dash
+kaleido

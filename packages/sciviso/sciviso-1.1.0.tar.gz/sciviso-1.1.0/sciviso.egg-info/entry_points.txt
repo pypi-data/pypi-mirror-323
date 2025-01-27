@@ -1,0 +1,2 @@
+[console_scripts]
+sciviso = sciviso.__main__:main
