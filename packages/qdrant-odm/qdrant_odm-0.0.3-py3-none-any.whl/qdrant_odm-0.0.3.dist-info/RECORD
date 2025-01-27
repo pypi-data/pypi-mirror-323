@@ -1,0 +1,11 @@
+qdrant_odm/__init__.py,sha256=-m3bcL1-kx_MygEX-_e_kiHRACFYPRl3DcFW80ff0OQ,233
+qdrant_odm/crud.py,sha256=bV1j8-s-WOfCi4k-mGa8_0Nct5NUhC7O4GTu9b60lDU,10514
+qdrant_odm/dataclass.py,sha256=Ugqt-EO3-Gf7hcuSrvKfaUwGPBGbUN9JARQiD7xzAFg,1285
+qdrant_odm/model.py,sha256=Rm4iiXFLoX7Xt2VvMtPrsxCmjRr1kVLzHBzPfeaYu6Q,7190
+qdrant_odm/index/__init__.py,sha256=ajqtQGUc2uDnGdbgpeOfoINsrVUe1cfKICWxNIFHKkk,333
+qdrant_odm/index/payload.py,sha256=_dkAbaoQWKZMv-nSKnKluF0hJAApkMIO7VLkQQLsyxQ,6914
+qdrant_odm/index/vectors.py,sha256=NuygDQ_sD77h1rQ21-ab6YJ5KIDvHoNf0pEyj3F-2fc,3617
+qdrant_odm-0.0.3.dist-info/METADATA,sha256=Y8qsO2jglC77yLhazONvc6aUHtFB1uz3nua4_tnOzpc,331
+qdrant_odm-0.0.3.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+qdrant_odm-0.0.3.dist-info/top_level.txt,sha256=-pdO4PMK88QKprNrPUoXRSICxpB9QP34tztrbVrkvYg,11
+qdrant_odm-0.0.3.dist-info/RECORD,,
