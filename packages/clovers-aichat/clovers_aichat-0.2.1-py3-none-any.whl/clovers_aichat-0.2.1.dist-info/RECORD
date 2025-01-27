@@ -1,0 +1,12 @@
+clovers_AIchat/__init__.py,sha256=FXNkPZphtU-MtgGIGvwfPpNF8HA8TavBFUfgV9o2RgI,2710
+clovers_AIchat/ai/gemini.py,sha256=48WFfKLnwUxsdZATK6X4aywEZwK_oNpsvxFgcN0ZcVc,2208
+clovers_AIchat/ai/hunyuan.py,sha256=UsHlLhcim5mNv8I24Df3b61K-6ERzVuy2AebVdK0gA0,3446
+clovers_AIchat/ai/main.py,sha256=zi7T_WBWSyFywkGqktH-79_5tEa5iQ2C11b54SJYeUI,2688
+clovers_AIchat/ai/mix.py,sha256=5cakjO7T5WEEMU0bJkUa3iQRHQN1bTkgnVghtLfdpy4,3220
+clovers_AIchat/ai/openai.py,sha256=4XHew-ksyD5njCpixo0jklXTXcf42QF-Jk4IHQQscy4,1787
+clovers_AIchat/clovers.py,sha256=gESTeC0hs11DfdV-tMmWctMxGEJ9GMoSrJOl0yendfU,717
+clovers_AIchat/config.py,sha256=9E75GWbJms9AdQZSsZkLo8gfQQQMEmAkuZj0PROJczw,3035
+clovers_aichat-0.2.1.dist-info/LICENSE,sha256=3SjpXqYssTh9JM5UdfdG8TblJh-BO0V1KOCFm75P1Wo,1093
+clovers_aichat-0.2.1.dist-info/METADATA,sha256=NwS_u5Oxntwmx_EAC6YdZeOkqtLRteE82U1m38CQYhs,5897
+clovers_aichat-0.2.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+clovers_aichat-0.2.1.dist-info/RECORD,,
