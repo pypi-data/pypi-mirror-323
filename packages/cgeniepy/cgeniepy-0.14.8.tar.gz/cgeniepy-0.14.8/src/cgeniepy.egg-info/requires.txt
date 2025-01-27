@@ -1,0 +1,13 @@
+xarray
+numpy
+pandas
+matplotlib
+cartopy
+netCDF4
+scipy
+regionmask
+geopandas
+
+[extra]
+pangaeapy
+gwspy
