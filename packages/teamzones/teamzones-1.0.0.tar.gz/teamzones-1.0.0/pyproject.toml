@@ -1,0 +1,19 @@
+[project]
+name = "teamzones"
+version = "1.0.0"
+description = ""
+authors = [{ name = "Paul Chiu", email = "paulchiu@gmail.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "typer (>=0.15.1,<0.16.0)",
+    "python-dateutil (>=2.9.0.post0,<3.0.0)",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+tz = "teamzones.app:app"

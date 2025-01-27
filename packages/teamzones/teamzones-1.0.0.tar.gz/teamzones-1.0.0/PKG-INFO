@@ -1,0 +1,62 @@
+Metadata-Version: 2.3
+Name: teamzones
+Version: 1.0.0
+Summary: 
+License: MIT
+Author: Paul Chiu
+Author-email: paulchiu@gmail.com
+Requires-Python: >=3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: python-dateutil (>=2.9.0.post0,<3.0.0)
+Requires-Dist: typer (>=0.15.1,<0.16.0)
+Description-Content-Type: text/markdown
+
+# Teamzones
+
+Given a set of time zones and a time, print the time in different timezones.
+
+## Usage
+
+```shell
+tz at [--time-format=...] [--separator=...] <CSV of time zones> [time to get]
+```
+
+Example
+
+```shell
+❯ tz at 'Australia/Melbourne,Australia/Brisbane' 3pm
+4pm AEDT / 3pm AEST
+```
+
+To find the list of valid time zones, run the command
+
+```shell
+tz list-timezones
+```
+
+## Development
+
+### Set up
+
+To install dependencies, do
+
+```shell
+poetry install --no-root
+```
+
+### Dev loop
+
+```shell
+poetry sync
+python teamzones
+```
+
+### Install loop
+
+```shell
+poetry install
+tz --help
+```
+
