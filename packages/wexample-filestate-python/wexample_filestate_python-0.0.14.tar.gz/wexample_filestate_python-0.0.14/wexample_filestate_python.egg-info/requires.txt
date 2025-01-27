@@ -1,0 +1,7 @@
+pip-tools
+pydantic
+pytest
+python-dotenv
+wexample-app==0.0.19
+wexample-filestate-git==0.0.14
+wexample-filestate==0.0.22
