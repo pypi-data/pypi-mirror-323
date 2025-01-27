@@ -1,0 +1,300 @@
+Metadata-Version: 2.1
+Name: JynPopMod
+Version: 2.6
+Summary: JynPopMod Python Module
+Home-page: https://github.com/Jynoqtra/JynPopMod
+Author: Jynoqtra
+Author-email: Jynoqtra@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: opencv-python
+Requires-Dist: requests
+Requires-Dist: pyautogui
+Provides-Extra: email-support
+Requires-Dist: smtplib; extra == "email-support"
+
+MAIN: from JynPopMod import *
+
+### **1. Timing and Delays**
+#### **`wait`**
+Pauses execution for a specified duration in seconds, minutes, or hours.
+
+**Parameters:**
+- `key` (str): 's' for seconds, 'm' for minutes, 'h' for hours.
+- `num` (int): Number of units to wait.
+
+**Example Usage:**
+```python
+wait("m", 2)  # Waits for 2 minutes.
+```
+
+#### **`timer_function`**
+Runs a function after a delay.
+
+**Parameters:**
+- `func` (callable): Function to run.
+- `seconds` (int): Delay in seconds.
+
+**Example Usage:**
+```python
+timer_function(lambda: print("Time's up!"), 5)
+```
+
+#### **`start_timer`**
+Starts a timer and executes a callback after the timer ends.
+
+**Parameters:**
+- `seconds` (int): Duration of the timer.
+- `callback` (callable): Function to execute after the timer.
+
+**Example Usage:**
+```python
+start_timer(3, lambda: print("Timer completed!"))
+```
+
+---
+
+### **2. Conditional Function Calls**
+#### **`iftrue`**
+Calls a function if a condition is true.
+
+**Parameters:**
+- `Var` (bool): Condition to check.
+- `function` (callable): Function to call if true.
+
+**Example Usage:**
+```python
+iftrue(3 > 1, lambda: print("Condition is true!"))
+```
+
+#### **`iffalse`**
+Calls a function if a condition is false.
+
+**Example Usage:**
+```python
+iffalse(3 > 5, lambda: print("Condition is false!"))
+```
+
+#### **`oncondit`**
+Calls one of two functions based on a condition.
+
+**Parameters:**
+- `condition` (bool): Condition to check.
+- `function_true` (callable): Function to call if true.
+- `function_false` (callable): Function to call if false.
+
+**Example Usage:**
+```python
+oncondit(5 > 3, lambda: print("True!"), lambda: print("False!"))
+```
+
+---
+
+### **3. Looping**
+#### **`until`**
+Runs a block repeatedly until a condition becomes true.
+
+**Parameters:**
+- `function` (callable): Function that returns a boolean to break the loop.
+- `whattodo`: Code block to execute in the loop.
+
+**Example Usage:**
+```python
+until(lambda: 1 == 1, print("This will run only once."))
+```
+
+#### **`repeat`**
+Runs a function a specified number of times.
+
+**Parameters:**
+- `function` (callable): Function to repeat.
+- `times` (int): Number of repetitions.
+
+**Example Usage:**
+```python
+repeat(lambda: print("Repeated!"), 3)
+```
+
+#### **`repeat_forever`**
+Continuously runs a function in an infinite loop.
+
+**Example Usage:**
+```python
+repeat_forever(lambda: print("Infinite loop!"))
+```
+
+---
+
+### **4. Utility**
+#### **`ifnull`**
+Replaces `None` or empty values with a default.
+
+**Parameters:**
+- `_v`: Value to check.
+- `_d`: Default value.
+
+**Example Usage:**
+```python
+value = ifnull(None, "Default Value")
+```
+
+#### **`switch_case`**
+Implements a switch-case structure.
+
+**Parameters:**
+- `_v`: Value to check.
+- `_c`: Dictionary mapping values to results or functions.
+- `d`: Default value.
+
+**Example Usage:**
+```python
+result = switch_case(2, {1: "One", 2: lambda: "Two"}, "Default")
+```
+
+---
+
+### **5. String and File Operations**
+#### **`replace`**
+Replaces occurrences of a substring in a string.
+
+**Example Usage:**
+```python
+new_string = replace("hello world", "world", "Python")
+```
+
+#### **`generate_random_string`**
+Generates a random string of specified length.
+
+**Parameters:**
+- `length` (int): Length of the string.
+
+**Example Usage:**
+```python
+random_string = generate_random_string(10)
+```
+
+#### **`gs`**
+Gets the source code of a function.
+
+**Example Usage:**
+```python
+print(gs(switch_case))
+```
+
+---
+
+### **6. Task Management**
+#### **`parallel`**
+Runs multiple functions in parallel.
+
+**Parameters:**
+- `*functions`: Functions to run.
+
+**Example Usage:**
+```python
+parallel(lambda: print("Task 1"), lambda: print("Task 2"))
+```
+
+#### **`start_background_task`**
+Starts a task in a background thread.
+
+**Example Usage:**
+```python
+start_background_task(lambda: print("Running in the background!"))
+```
+
+---
+
+### **7. Networking and Input**
+#### **`get_ip_address`**
+Returns the current IP address of the machine.
+
+**Example Usage:**
+```python
+ip_address = get_ip_address()
+```
+
+#### **`send_email`**
+Sends an email using SMTP.
+
+**Parameters:**
+- `subject` (str): Email subject.
+- `body` (str): Email body.
+- `to_email` (str): Recipient email.
+- `mailname` (str): Sender email.
+- `mailpass` (str): Sender's email password.
+
+**Example Usage:**
+```python
+send_email("Test Subject", "Hello, World!", "to@example.com", "your_email@gmail.com", "your_password")
+```
+
+#### **`get_weather`**
+Fetches weather information for a city.
+
+**Parameters:**
+- `city` (str): City name.
+- `api_key` (str): API key for OpenWeatherMap.
+
+**Example Usage:**
+```python
+weather = get_weather("New York", "your_api_key")
+```
+
+---
+
+### **8. Image Processing**
+#### **`convert_image_to_grayscale`**
+Converts an image to grayscale.
+
+**Parameters:**
+- `image_path` (str): Path to the image.
+- `output_path` (str): Path to save the grayscale image.
+
+**Example Usage:**
+```python
+convert_image_to_grayscale("color.jpg", "grayscale.jpg")
+```
+
+---
+
+### **9. Hotkey and Keypress**
+#### **`hotdog`**
+Triggers a sequence of hotkeys.
+
+**Example Usage:**
+```python
+hotdog("ctrl", "c")  # Copies the current selection.
+```
+
+#### **`keypress`**
+Simulates a keypress.
+
+**Example Usage:**
+```python
+keypress("enter")
+```
+
+---
+
+### **10. Error Handling**
+#### **`safe_run`**
+Runs a function safely, catching exceptions.
+
+**Example Usage:**
+```python
+safe_run(lambda: 1 / 0)
+```
+
+#### **`nocrash`**
+Decorator to handle exceptions in functions.
+
+**Example Usage:**
+```python
+def risky_function():
+    return 1 / 0
+nocrash(risky_function) # More effective for gui/interface.
+``` 
