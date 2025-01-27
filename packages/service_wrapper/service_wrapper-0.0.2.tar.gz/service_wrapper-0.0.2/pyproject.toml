@@ -1,0 +1,49 @@
+[project]
+name = "service_wrapper"
+version = "0.0.2"
+description = "Making services easy"
+authors = [
+    { name = "Ofek Engel", email = "ofek.engel@gmail.com" },
+]
+dependencies = [
+    "pywin32>=308",
+    "typing-extensions>=4.12.2",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+keywords = [
+    "services",
+    "windows",
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Topic :: System",
+    "Topic :: System :: Operating System",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.build]
+run-setuptools = true
+
+[dependency-groups]
+lint = [
+    "black>=24.10.0",
+    "isort>=5.13.2",
+]
