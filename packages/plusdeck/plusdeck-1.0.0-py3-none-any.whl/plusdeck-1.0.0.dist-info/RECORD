@@ -1,0 +1,13 @@
+plusdeck/__init__.py,sha256=LD7KfCbCOV4NpDdKIU9g3PYik_AmSethHpUq_FvIKCs,518
+plusdeck/cli.py,sha256=ncBIYmnEWHcFCQiSIEuKxhooRTmOGwAtA9EGVW1KnrI,9048
+plusdeck/client.py,sha256=uJKA_Tu6g6eREwAC4KIWEIBBE1FT6AHhBLX8qJYpY6Q,14045
+plusdeck/config.py,sha256=D1-ST2s8Xo9kSd1-CiaLNVachbQx6WzcZeT5p2uPjmc,745
+plusdeck/jupyter.py,sha256=O4ap0VhZVURsMyi8gT3Ue09M4JQkZt7FF4dtjFnkO0A,3815
+plusdeck/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plusdeck/test.py,sha256=g9gNMbxjemsbmJsVSOBTw2PEOb_jPsTn8sjVtNrn4IY,2445
+plusdeck-1.0.0.dist-info/LICENSE,sha256=omZrXUSYEYnKiv4PJkfFD9w73_7zlDDOslQ_A1-chnA,1070
+plusdeck-1.0.0.dist-info/METADATA,sha256=Eibdd4EG_SzfYm3lIHxPc6HtEZwgfdhItA2nJ60db-g,6559
+plusdeck-1.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+plusdeck-1.0.0.dist-info/entry_points.txt,sha256=3g8kL4kU6S5fOBXt_9DQeo-S1fJ1xLIZ7h60cBpqnVo,47
+plusdeck-1.0.0.dist-info/top_level.txt,sha256=92HZ0oxUOYlXEjT_L6LzOUAE8Q-xDpylaQ-yhphCMJ4,9
+plusdeck-1.0.0.dist-info/RECORD,,
