@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: aip-sdk
+Version: 0.0.1
+Summary: AI Pipelines (AIP) SDK Python Package
+Project-URL: homepage, https://github.com/patrikkj/aip
+Project-URL: repository, https://github.com/patrikkj/aip
+Author-email: Patrik Kjaerran <patrikkja@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Requires-Dist: aiohttp>=3.11.11
+Requires-Dist: nest-asyncio>=1.6.0
+Requires-Dist: polars>=1.20.0
+Requires-Dist: pydantic>=2.10.6
+Description-Content-Type: text/markdown
+
+# ...
+
+...
