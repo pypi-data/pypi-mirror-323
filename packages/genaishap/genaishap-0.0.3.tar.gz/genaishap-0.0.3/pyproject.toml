@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "genaishap"
+version = "0.0.3"
+authors = [
+    { name="Gustavo Pabon", email="gustavo.pabon@microsoft.com" },
+]
+description = "SHAP (SHapley Additive exPlanations) for Generative AI (LLMs and SMLs) based solutions."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Debuggers",
+    "Development Status :: 2 - Pre-Alpha",
+]
+dependencies = [
+    "pydantic==2.10.5",
+    "pandas==2.2.3",
+    "openai==1.59.7",
+    "xgboost==2.1.3",
+    "scikit-learn==1.5.2",
+    "statsmodels==0.14.4",
+    "shap==0.46.0",
+    "scipy==1.13.1"
+]
+packages = [
+    { include = "genaishap", from = "src" },
+]
+
+[project.urls]
+Homepage = "https://github.com/microsoft/dstoolkit-genai-shap"
+Issues = "https://github.com/microsoft/dstoolkit-genai-shap/issues"
