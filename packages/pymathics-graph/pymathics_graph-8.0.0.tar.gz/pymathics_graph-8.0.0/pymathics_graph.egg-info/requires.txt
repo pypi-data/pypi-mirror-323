@@ -1,0 +1,5 @@
+Mathics3>=8.0.0
+networkx>=3.0.0
+pydot
+matplotlib
+scipy>=1.10.0
