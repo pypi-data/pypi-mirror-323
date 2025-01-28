@@ -1,0 +1,7 @@
+README.md
+license
+setup.py
+brookspdf.egg-info/PKG-INFO
+brookspdf.egg-info/SOURCES.txt
+brookspdf.egg-info/dependency_links.txt
+brookspdf.egg-info/top_level.txt
