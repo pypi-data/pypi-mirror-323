@@ -1,0 +1,2 @@
+[console_scripts]
+dj = djazz_cli.main:app
