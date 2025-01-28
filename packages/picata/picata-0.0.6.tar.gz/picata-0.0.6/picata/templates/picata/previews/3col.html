@@ -1,0 +1,73 @@
+{% extends "picata/3_column.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block aside %}
+  <ul><li>Published 2024-12-10 at 09:21 AM (AWST)</li>
+  <ul><li>Updated 2024-12-10 at 09:22 AM (AWST)</li>
+{% endblock %}
+
+{% block nav %}
+<h4>Page contents</h4>
+<ul>
+  <li><a href="#what-is-lorem-ipsum">What is Lorem Ipsum?</a></li>
+  <li><a href="#where-does-it-come-from">Where does it come from?</a></li>
+  <li><a href="#why-do-we-use-it">Why do we use it?</a></li>
+  <li><a href="#where-can-i-get-some">Where can I get some?</a></li>
+  <li><a href="#what-is-lorem-ipsum">What is Lorem Ipsum?</a></li>
+  <li><a href="#where-does-it-come-from">Where does it come from?</a></li>
+  <li><a href="#why-do-we-use-it">Why do we use it?</a></li>
+  <li><a href="#where-can-i-get-some">Where can I get some??</a></li>
+</ul>
+{% endblock %}
+
+{% block article %}
+  <h1>Typography Showcase</h1>
+
+  <!-- Standard Serif -->
+  <section>
+    <h2>Zilla Slab (Regular)</h2>
+    <p>
+      This is a paragraph set in <strong>Zilla Slab (Bold)</strong>.
+    </p>
+    <p>Donec tincidunt eros justo, sit amet luctus mauris condimentum eu. Nam posuere ultrices turpis, ut facilisis velit ultricies in. Sed at risus sed purus pellentesque aliquam sed nec est. Sed non nisi id neque bibendum bibendum at vitae ligula. Integer eget dapibus velit, eu pulvinar nisl. Duis lobortis arcu ex. Aenean fermentum maximus interdum. Curabitur sit amet bibendum nisi, a cursus risus. Curabitur at <strong>metus eget nibh consequat</strong> viverra. Cras rhoncus finibus urna, efficitur viverra tellus molestie et. Sed nec vulputate erat. Vestibulum nec nunc condimentum, <span class="highlight">ultrices ipsum</span> in, hendrerit quam. Integer felis erat, placerat eget libero eu, mollis sagittis mauris. Aenean sed lacus id orci accumsan porttitor. Etiam aliquet nunc et consectetur scelerisque.</p>
+  </section>
+
+  <!-- Highlighted Serif -->
+  <section>
+    <h2>Zilla Slab Highlight</h2>
+    <p>
+      This is <span class="highlight">highlighted text</span> using the regular weight of
+      <span class="highlight">Zilla Slab Highlight</span>.
+    </p>
+    <p>
+      Here’s the <span class="highlight-strong">bold version</span>.
+    </p>
+  </section>
+
+  <!-- Cursive Headings -->
+  <section>
+    <h2>Sacramento Cursive</h2>
+    <h3>“Elegant Cursive for Headlines”</h3>
+  </section>
+
+  <!-- Monospaced Code -->
+  <section>
+    <h2>Fira Code (Light & SemiBold)</h2>
+    <p>
+      Inline code snippet: <code>let x = 42;</code>
+    </p>
+    <pre>
+      <code class="strong">
+        function example() {
+          return "Fira Code SemiBold!";
+        }
+      </code>
+    </pre>
+  </section>
+
+  <h1>What is Lorem Ipsum?</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo, dapibus non ultricies sit amet, sagittis a mauris. Aliquam nec dolor arcu. Nullam sollicitudin venenatis commodo. Morbi aliquet venenatis felis, et condimentum sem sodales nec. Etiam at risus tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam et lobortis purus. Vestibulum nisi sem, feugiat eget auctor vel, scelerisque et dui.</p>
+  <p>Donec tincidunt eros justo, sit amet luctus mauris condimentum eu. Nam posuere ultrices turpis, ut facilisis velit ultricies in. Sed at risus sed purus pellentesque aliquam sed nec est. Sed non nisi id neque bibendum bibendum at vitae ligula. Integer eget dapibus velit, eu pulvinar nisl. Duis lobortis arcu ex. Aenean fermentum maximus interdum. Curabitur sit amet bibendum nisi, a cursus risus. Curabitur at metus eget nibh consequat viverra. Cras rhoncus finibus urna, efficitur viverra tellus molestie et. Sed nec vulputate erat. Vestibulum nec nunc condimentum, ultrices ipsum in, hendrerit quam. Integer felis erat, placerat eget libero eu, mollis sagittis mauris. Aenean sed lacus id orci accumsan porttitor. Etiam aliquet nunc et consectetur scelerisque.</p>
+  <p>Donec ac urna quis justo mollis porta. Nunc sit amet risus at nulla vestibulum mattis. Donec sit amet ante bibendum, elementum elit nec, congue arcu. Fusce eu porttitor justo. Pellentesque feugiat nunc id neque tristique hendrerit eu porta orci. Aenean et magna aliquam nibh elementum pharetra. Donec ornare, dui eget blandit semper, risus est hendrerit nulla, vulputate eleifend felis augue vitae diam. Proin suscipit eros turpis, et mattis libero sollicitudin non. Mauris iaculis est sed neque volutpat, vel posuere dui cursus.</p>
+{% endblock %}

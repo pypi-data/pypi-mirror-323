@@ -1,0 +1,5 @@
+{% for page in menu_pages %}
+  <a {% if page == current_section %}class="current" {% endif %}href="{{ page.url }}">
+    {{ page.title }}{% if not page.live %} (not live){% endif %}
+  </a>
+{% endfor %}
