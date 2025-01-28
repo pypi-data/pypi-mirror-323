@@ -1,0 +1,60 @@
+# Code-Time: A Reusable Timer Utility for Python Scripts
+
+time-checker is a lightweight and reusable Python package for measuring the execution time of scripts, functions, and code blocks. It's perfect for developers who want to profile their Python code quickly.
+
+## Features
+- **Function Timing**: Use a decorator to measure the execution time of any function.
+- **Code Block Timing**: Use a context manager to time specific blocks of code.
+
+## Installation
+Install Time-Checker using pip:
+```bash
+pip install time-checker
+```
+
+## Usage
+
+### 1. Timing Code Blocks
+Use the `time_block` context manager to measure the time taken by a specific block of code:
+
+```python
+from time_checker.timer import time_block
+
+with time_block("Processing Loop"):
+    for _ in range(10**6):
+        pass
+```
+**Output:**
+```
+Processing Loop executed in 0.1234 seconds
+```
+
+### 2. Timing Functions
+Use the `time_function` decorator to measure the time taken by any function:
+
+```python
+from time_checker.timer import time_function
+
+@time_function
+def example_function():
+    for _ in range(10**7):
+        pass
+
+example_function()
+```
+**Output:**
+```
+Function 'example_function' executed in 0.4567 seconds
+```
+
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## Author
+- **Deep Korat**  
+  [GitHub Profile](https://github.com/deepkorat) | [Email](mailto:deepkorat13@gmail.com)
