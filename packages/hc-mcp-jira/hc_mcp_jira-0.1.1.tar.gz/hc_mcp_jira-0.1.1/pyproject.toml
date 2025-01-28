@@ -1,0 +1,20 @@
+[project]
+name = "hc-mcp-jira"
+version = "0.1.1"
+description = "MCP server for Jira integration"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2.0",
+    "jira>=3.5.1",
+]
+[[project.authors]]
+name = "Erik Meinders"
+email = "erik@easytocloud.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+hc-mcp-jira = "hc_mcp_jira:main"
