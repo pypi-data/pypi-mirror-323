@@ -1,0 +1,14 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pip_agents_core/__init__.py
+pip_agents_core.egg-info/PKG-INFO
+pip_agents_core.egg-info/SOURCES.txt
+pip_agents_core.egg-info/dependency_links.txt
+pip_agents_core.egg-info/requires.txt
+pip_agents_core.egg-info/top_level.txt
+pip_agents_core.egg-info/zip-safe
+pip_agents_core/content/__init__.py
