@@ -1,0 +1,9 @@
+langchain_deepseek/__init__.py,sha256=RXS0YZxv3zdbch8Cp5k9-uxk0Q-XDl3omBEkRbsx8-Y,147
+langchain_deepseek/api.py,sha256=tt9H6-bp96BUnCkYAXX4eykIB7k2SV4NoaVW4N8Rhjs,2585
+langchain_deepseek/base.py,sha256=Lf9o4thVkUn2rZ-adTGZNSwHDWz6msT8Le2_fnrZyuU,6491
+langchain_deepseek/const.py,sha256=9-C6Mp2ROCcobxxVO_l2YySnhYHehO7RkHPh9lGeafE,109
+langchain_deepseek/exceptions.py,sha256=yFNdz03EUWiPJTrgThZ5zWx8m7hgBxWY7XH6YMN_ss8,1696
+langchain_deepseek/tools.py,sha256=lVL4VPz3c4kWCgjPtL4uuQLNmgwK92q1ffAsv5El02k,25
+langchain_deepseek-0.0.1.dist-info/METADATA,sha256=WiRoMY9Tr3iuyKdBal7M9NLFGOwQyVVnKnwDc8tEMAQ,1895
+langchain_deepseek-0.0.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+langchain_deepseek-0.0.1.dist-info/RECORD,,
