@@ -1,0 +1,31 @@
+[project]
+name = "miro-to-mermaid"
+version = "1.0.3"
+description = "Miro to Mermaid diagram converter"
+authors = [
+    { name = "tadeasf", email = "business@tadeasfort.com" },
+]
+dependencies = [
+    "pandas>=2.2.3",
+    "pathlib>=1.0.1",
+    "pdfplumber>=0.11.5",
+    "pdf2image>=1.17.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.pdm.build]
+package-dir = "src"
+includes = [
+    "miro_to_mermaid",
+]

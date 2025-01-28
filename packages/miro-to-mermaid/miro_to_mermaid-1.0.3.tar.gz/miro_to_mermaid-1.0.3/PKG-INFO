@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: miro-to-mermaid
+Version: 1.0.3
+Summary: Miro to Mermaid diagram converter
+Author-Email: tadeasf <business@tadeasfort.com>
+Requires-Python: >=3.8
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pathlib>=1.0.1
+Requires-Dist: pdfplumber>=0.11.5
+Requires-Dist: pdf2image>=1.17.0
+Description-Content-Type: text/markdown
+
+# miro-to-mermaid
+
+Describe your project here.
