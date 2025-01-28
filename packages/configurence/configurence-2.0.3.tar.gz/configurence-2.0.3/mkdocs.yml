@@ -1,0 +1,8 @@
+site_name: configurence
+
+theme:
+  name: readthedocs
+
+plugins:
+  - include-markdown
+  - mkdocstrings
