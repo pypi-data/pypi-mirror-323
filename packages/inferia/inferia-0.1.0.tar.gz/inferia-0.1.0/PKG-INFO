@@ -1,0 +1,61 @@
+Metadata-Version: 2.2
+Name: inferia
+Version: 0.1.0
+Summary: Inferia is a Python module designed to streamline the creation and deployment of inference services. It provides tools and abstractions to wrap machine learning models and expose them as robust, production-ready APIs with minimal effort.
+Author-email: freepik-company/tech-avengers <aivengers@freepik.com>
+Project-URL: Homepage, https://github.com/freepik-company/fc-py-inferia
+Project-URL: Issues, https://github.com/freepik-company/fc-py-inferia/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click>=8.1.8
+Requires-Dist: fastapi>=0.115.6
+Requires-Dist: jinja2>=3.1.5
+Requires-Dist: pydantic>=2.10.5
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: structlog>=25.1.0
+Requires-Dist: uvicorn>=0.34.0
+
+# Freepik Company inferia
+
+Inferia is a versatile Python module aimed at simplifying the development and deployment of inference services. 
+It allows users to wrap machine learning models or any computational logic into APIs effortlessly. 
+With inferia, you can focus on your core algorithmic functionality while the module takes care of the heavy lifting, 
+including API structure, request handling, error management, and scalability.
+
+Key features include:
+- Ease of Use: Simplifies the process of converting your models into production-ready APIs with minimal boilerplate code.
+- Customizable API: Provides flexibility to define endpoints, input/output formats, and pre- / post-processing logic.
+- Scalability: Optimized to handle high-throughput scenarios with support for modern server frameworks.
+- Extensibility: Easily integrates with third-party libraries, monitoring tools, or cloud services.
+- Error Handling: Built-in mechanisms to catch and handle runtime issues gracefully.
+
+## Development
+
+### Build the local development environment
+
+```sh
+make build
+```
+
+## Installation
+
+### Using pip
+Then, you can install the package:
+```sh
+pip install inferia
+```
+
+## Run example application
+
+```sh
+cd examples
+python app.py
+```
+
+## Usage
+
+*Put here any information about how to use this amazing library*
