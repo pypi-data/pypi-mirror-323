@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: near-py-tool
+Version: 0.1.2
+Summary: Python NEAR contract build/deploy tool
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: toml
+Requires-Dist: sh
+Requires-Dist: packaging
+Requires-Dist: randomname
+Requires-Dist: click
+Requires-Dist: rich_click
+Requires-Dist: questionary
