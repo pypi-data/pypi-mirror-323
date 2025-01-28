@@ -1,0 +1,13 @@
+PyGithub
+pytz
+pyyaml
+
+[ci]
+website-build-tools[style,test]
+
+[style]
+ruff
+mypy
+
+[test]
+pytest
