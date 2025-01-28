@@ -1,0 +1,49 @@
+Metadata-Version: 2.2
+Name: lesslines
+Version: 0.0.2
+Summary: explore python with less lines of code
+Home-page: https://github.com/dudung/lesslines
+Author: Sparisoma Viridi
+Author-email: dudung@gmail.com
+License: MIT
+Project-URL: Repository, https://github.com/dudung/lesslines
+Project-URL: Documentation, https://dudung.github.io/lesslines/docs/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: matplotlib>=3.8.4
+Requires-Dist: pandas>=2.2.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# lesslines
+explore python with less lines of code
+
+
+## install
+From PyPI
+
+```
+pip install lesslines
+```
+
+or from GitHub
+
+```
+pip install lesslines@git+https://github.com/dudung/lesslines
+```
+
+for unreleased version.
