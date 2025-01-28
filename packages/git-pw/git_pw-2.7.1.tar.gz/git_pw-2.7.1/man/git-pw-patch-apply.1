@@ -1,0 +1,19 @@
+.TH "GIT-PW PATCH APPLY" "1" "2024-10-23" "2.7.0" "git-pw patch apply Manual"
+.SH NAME
+git-pw\-patch\-apply \- Apply patch.
+.SH SYNOPSIS
+.B git-pw patch apply
+[OPTIONS] PATCH_ID [ARGS]...
+.SH DESCRIPTION
+Apply patch.
+.PP
+    Apply a patch locally using the 'git-am' command. Any additional ARGS
+    provided will be passed to the 'git-am' command.
+
+.SH OPTIONS
+.TP
+\fB\-\-series\fP SERIES
+Series to include dependencies from. Defaults to latest.
+.TP
+\fB\-\-deps\fP / \-\-no\-deps
+When applying the patch, include series dependencies if available. Dependencies are retrieved from the most recent series by default. Defaults to the value of 'git config pw applyPatchDeps' else 'true'.
