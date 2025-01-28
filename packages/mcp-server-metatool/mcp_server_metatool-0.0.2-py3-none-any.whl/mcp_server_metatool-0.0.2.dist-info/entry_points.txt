@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-metatool = mcp_server_metatool:main
