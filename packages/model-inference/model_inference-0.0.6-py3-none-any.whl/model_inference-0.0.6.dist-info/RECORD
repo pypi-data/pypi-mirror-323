@@ -1,0 +1,10 @@
+model_inference/Inference.py,sha256=vNtNAkQBKPbmEnc5mRyNgJITyHB0ICiiLmVvAJRa1jw,16591
+model_inference/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+model_inference/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+model_inference/models/models_list.py,sha256=bjqBCMR_qx95Yl50kNHf-atRKOKwRzaD1JW847GXWmI,3544
+model_inference/torch_install.py,sha256=FXxLQQtEPt6_RMZzgT345WuhbuSg9zKb_K-k-DNUSaA,563
+model_inference/utils.py,sha256=pHOWCjiy2xfxg-_kfLLfVQVEOeDd-jqxIZI4NED-JHE,2020
+model_inference/version.py,sha256=vzRTqOUueszJfER_MNZZlWqxzwElOkXDEsbv8aBaJ_A,149
+model_inference-0.0.6.dist-info/METADATA,sha256=pUI1Z8LYycLQD-D7c-PhZn9H_zWPLjrWPGDp7LmSJU8,4270
+model_inference-0.0.6.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+model_inference-0.0.6.dist-info/RECORD,,
