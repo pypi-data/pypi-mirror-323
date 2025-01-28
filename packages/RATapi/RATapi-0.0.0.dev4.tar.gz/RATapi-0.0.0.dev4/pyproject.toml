@@ -1,0 +1,19 @@
+[build-system]
+requires = [
+    'setuptools>=61',
+    'wheel',
+    'pybind11>=2.4',
+]
+build-backend = 'setuptools.build_meta'
+
+[tool.ruff]
+line-length = 120
+extend-exclude = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "UP", "B", "SIM", "I"]
+ignore = ["SIM103", "SIM108"]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
