@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "nitra_telegram-python"
+version = "0.1.0"
+description = "A Python package for sending Telegram messages or messages to a table during non-working hours"
+authors = ["Tatiana <durachevska@ukr.net>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.32.3"
+poethepoet = "^0.32.2"
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+packages = [{include = "nitra_telegram-python"}]
+
+[tool.setuptools.packages]
+find = {exclude = ["demo"]}
+

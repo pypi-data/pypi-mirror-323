@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: nitra_telegram-python
+Version: 0.1.0
+Summary: A Python package for sending Telegram messages or messages to a table during non-working hours
+Author: Tatiana
+Author-email: durachevska@ukr.net
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: poethepoet (>=0.32.2,<0.33.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+poetry add nitra_telegram_python
+
+cd demo
+poe demo
+
