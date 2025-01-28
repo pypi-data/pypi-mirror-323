@@ -1,0 +1,13 @@
+octoprint_mfa_totp/__init__.py,sha256=ld9n3NQFC9to1XJSny-XZrQhjmwnuxhr3JXgpObpqvM,9168
+octoprint_mfa_totp/static/clientjs/mfa_totp.js,sha256=XQ0izqEtz5n2ydcW80H_SphWjh7guXYGxXXkiDruGiA,1068
+octoprint_mfa_totp/static/js/mfa_totp.js,sha256=IMDgeisD4hszKbU2s4Cbiw_JXFnI0P-hxVVQCwED2Vo,4253
+octoprint_mfa_totp/templates/mfa_totp.jinja2,sha256=PqXH3NZwVO8DnFRGpnJHze8SwNlusYptGgnWTOv6tJQ,3645
+octoprint_mfa_totp/templates/mfa_totp_mfa_login.jinja2,sha256=czsg2x9au8zoBbG8xRZDA-2u7loiYUcm94EVqF-eI98,392
+octoprint_mfa_totp/templates/mfa_totp_usersettings_mfa.jinja2,sha256=fHuQNOiK8qKHQFe0DWy-y8DzL5MMkglc_I0-fJemj_Q,1113
+octoprint_mfa_totp/translations/de/LC_MESSAGES/messages.mo,sha256=ytB34dkg8tfyRCF8tvLmaFJeUd56iBDuQxdBeIDd6yA,3480
+octoprint_mfa_totp/translations/de/LC_MESSAGES/messages.po,sha256=GdJspUhIv9T6Hb8FvjPJOhjCMTMN3c8WcxeF5lrljNw,5315
+OctoPrint_MfaTotp-1.0.0.dist-info/METADATA,sha256=LUKy6KBECaRw0e7YarJuby1dJCFYHc4x70-2N_ZlYhg,487
+OctoPrint_MfaTotp-1.0.0.dist-info/WHEEL,sha256=9Hm2OB-j1QcCUq9Jguht7ayGIIZBRTdOXD1qg9cCgPM,109
+OctoPrint_MfaTotp-1.0.0.dist-info/entry_points.txt,sha256=72lG7yloa4BBIzURHMvwSctc-Os2T1_4agfV4eDR9fY,49
+OctoPrint_MfaTotp-1.0.0.dist-info/top_level.txt,sha256=z0QyMV_E4RVmykPUEiM9VcaHwENFmNEf68ZLPfhsCA8,19
+OctoPrint_MfaTotp-1.0.0.dist-info/RECORD,,
