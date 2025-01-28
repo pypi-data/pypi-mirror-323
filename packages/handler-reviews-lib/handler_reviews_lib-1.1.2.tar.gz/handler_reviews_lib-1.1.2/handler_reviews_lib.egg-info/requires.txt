@@ -1,0 +1,6 @@
+requests>=2.25.1
+openai>=1.40.3
+httpx>=0.28.1
+tiktoken>=0.7.0
+pydantic>=2.8.2
+setuptools>=72.1.0
