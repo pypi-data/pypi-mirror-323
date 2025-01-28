@@ -1,0 +1,4 @@
+media-tagging[api,llm]
+media-similarity
+garf-youtube-data-api==0.0.4
+google-ads-api-report-fetcher==1.15.4
