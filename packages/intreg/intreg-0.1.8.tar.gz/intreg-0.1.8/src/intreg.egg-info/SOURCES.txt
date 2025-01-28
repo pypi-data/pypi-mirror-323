@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/intreg/__init__.py
+src/intreg/intreg.py
+src/intreg/meintreg.py
+src/intreg.egg-info/PKG-INFO
+src/intreg.egg-info/SOURCES.txt
+src/intreg.egg-info/dependency_links.txt
+src/intreg.egg-info/requires.txt
+src/intreg.egg-info/top_level.txt
+src/tests/__init__.py
+src/tests/test_IntReg.py
+src/tests/test_MeIntReg.py
