@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: bagua-python-sdk
+Version: 1.0.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Summary: 八卦量化库
+Author: <husky-wealths> <husky@wealths.app
+Author-email: <husky-wealths> <husky@wealths.app
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/BaguaQuantify/bagua
+
+# bagua (八卦量化)
+
