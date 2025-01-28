@@ -1,0 +1,8 @@
+setup.py
+pysparksqlt/__init__.py
+pysparksqlt/main.py
+pysparksqlt.egg-info/PKG-INFO
+pysparksqlt.egg-info/SOURCES.txt
+pysparksqlt.egg-info/dependency_links.txt
+pysparksqlt.egg-info/requires.txt
+pysparksqlt.egg-info/top_level.txt

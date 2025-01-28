@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: pysparksqlt
+Version: 0.1.0
+Summary: PySpark SQL Tutorial Package
+Author: Your Name
+Requires-Python: >=3.6
+Requires-Dist: pyspark>=3.0.0
