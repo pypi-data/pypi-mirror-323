@@ -1,0 +1,11 @@
+intreg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+intreg/intreg.py,sha256=OKHT0xy6Ysp_u9TJzij9_HNz1YvQqufcMw_eRnaP35A,5747
+intreg/meintreg.py,sha256=yTHNKiZmGKoSSiem0z-E3f5EAXs3dM_dgnYxCPzKE5U,8092
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_IntReg.py,sha256=ofNRM5O3b4C78uFq-RKjkGmO3c6hkD9kbd7BgfJmpuM,6410
+tests/test_MeIntReg.py,sha256=wElIdvIGZxrsfa6b08ipeYMykE_y7S2nCv3E8cR2KLk,6724
+intreg-0.1.8.dist-info/LICENSE,sha256=dQ5CwvYEfzkz1MKqqJoH6BJCJUHZg0aKEZCbMyn2RRI,1079
+intreg-0.1.8.dist-info/METADATA,sha256=MerWWaReto6IDrNUqJQ8VG99o-YYXEtrH9RjnMbGUsg,1178
+intreg-0.1.8.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+intreg-0.1.8.dist-info/top_level.txt,sha256=8BOukLiz3CtPk-GSx6D4aITReX75ibyMCnprhoQNvlI,13
+intreg-0.1.8.dist-info/RECORD,,
