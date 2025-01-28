@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: keyring-proxy-socket
+Version: 0.1.19
+Summary: Socket backend
+Project-URL: Repository, https://github.com/KalleDK/py-keyring-proxy-socket
+Author-email: "Kalle M. Aagaard" <git@k-moeller.dk>
+License: MIT
+Requires-Python: >=3.12
+Requires-Dist: keyring-proxy>=0.2.31
+Description-Content-Type: text/markdown
+
+# keyring-proxy-socket
