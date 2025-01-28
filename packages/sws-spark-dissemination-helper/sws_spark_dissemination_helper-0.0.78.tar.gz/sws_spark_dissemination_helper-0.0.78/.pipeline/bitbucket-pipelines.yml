@@ -1,0 +1,69 @@
+image: python:3.12  # Choose the base image with Python
+
+pipelines:
+  default: 
+    - step:
+        name: Run Tests
+        caches:
+          - pip
+        script:
+          - curl -sSL https://install.python-poetry.org | python3 -  # Install Poetry
+          - export PATH="$HOME/.local/bin:$PATH"  # Add Poetry to PATH
+          - poetry install  # Install your dependencies
+          - poetry run pytest --cov=sws_api_client --cov-report=xml # Run your tests with coverage
+
+  branches:
+    main:
+      - step:
+          name: Run Tests and Version
+          caches:
+            - pip
+          script:
+            - curl -sSL https://install.python-poetry.org | python3 -  # Install Poetry
+            - export PATH="$HOME/.local/bin:$PATH"  # Add Poetry to PATH
+            - poetry install  # Install your dependencies
+            - poetry run pytest  # Run your tests
+            - export BB_TOKEN=$BITBUCKET_APP_PASSWORD  # Set Bitbucket token
+            - export BB_USERNAME=$BITBUCKET_USERNAME  # Set Bitbucket username
+            - poetry run semantic-release version --no-vcs-release # Run semantic release
+
+    feature/*:
+      - step:
+          name: Run Tests and Version
+          caches:
+            - pip
+          script:
+            - curl -sSL https://install.python-poetry.org | python3 -  # Install Poetry
+            - export PATH="$HOME/.local/bin:$PATH"  # Add Poetry to PATH
+            - poetry install  # Install your dependencies
+            - poetry run pytest  # Run your tests
+            - export BB_TOKEN=$BITBUCKET_APP_PASSWORD  # Set Bitbucket token
+            - export BB_USERNAME=$BITBUCKET_USERNAME  # Set Bitbucket username
+            - poetry run semantic-release version --no-vcs-release --no-tag # Run semantic release
+
+    dev:
+      - step:
+          name: Run Tests and Version
+          caches:
+            - pip
+          script:
+            - curl -sSL https://install.python-poetry.org | python3 -  # Install Poetry
+            - export PATH="$HOME/.local/bin:$PATH"  # Add Poetry to PATH
+            - poetry install  # Install your dependencies
+            - poetry run pytest  # Run your tests
+            - export BB_TOKEN=$BITBUCKET_APP_PASSWORD  # Set Bitbucket token
+            - export BB_USERNAME=$BITBUCKET_USERNAME  # Set Bitbucket username
+            - poetry run semantic-release version --no-vcs-release --no-tag # Run semantic release
+
+  tags:
+    v*.*.*:  # Trigger on version tags like v1.0.0, v2.1.0, etc.
+      - step:
+          name: Publish to PyPI
+          caches:
+            - pip
+          script:
+            - curl -sSL https://install.python-poetry.org | python3 -  # Install Poetry
+            - export PATH="$HOME/.local/bin:$PATH"  # Add Poetry to PATH
+            - poetry install --no-dev  # Install dependencies without dev dependencies
+            - poetry config pypi-token.pypi $PYPI_TOKEN  # Set the PyPI token
+            - poetry publish --build  # Build and publish the package to PyPI. force is needed because I already uploaded pypi version till 0.0.7

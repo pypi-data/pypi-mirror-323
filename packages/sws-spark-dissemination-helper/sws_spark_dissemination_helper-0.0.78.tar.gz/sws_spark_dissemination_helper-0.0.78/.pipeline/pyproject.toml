@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "sws-spark-dissemination-helper"
+version = "0.0.49"
+description = "A Python helper package providing streamlined Spark functions for efficient data dissemination processes"
+authors = ["Daniele Mansillo <danielemansillo@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+annotated-types = "0.7.0"
+boto3 = "1.34.147"
+botocore = "1.34.147"
+certifi = "2024.7.4"
+charset-normalizer = "3.3.2"
+idna = "3.7"
+jmespath = "1.0.1"
+py4j = "0.10.9.7"
+pydantic = "2.8.2"
+pydantic-core = "2.20.1"
+pyspark = "3.5.1"
+python-dateutil = "2.9.0.post0"
+python-dotenv = "1.0.1"
+requests = "2.32.3"
+s3transfer = "0.10.2"
+six = "1.16.0"
+sws-api-client = "1.0.7b0"
+typing-extensions = "4.12.2"
+urllib3 = "1.26.19"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
