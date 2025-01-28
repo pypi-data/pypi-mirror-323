@@ -1,0 +1,77 @@
+{
+  "order": [
+    "TypeKnownBlocks",
+    "TypeDefaultBlocks",
+    "Spacer"
+  ],
+  "TypeKnownBlocks": {
+    "order": [
+      "BlockGpawEnergyContributions",
+      "BlockGpawIcon",
+      "BlueprintParagraphStartsWith"
+    ],
+    "BlockGpawEnergyContributions": {
+      "p_type": "Block",
+      "p_subtype": "BlockGpawEnergyContributions",
+      "pattern": "^((?:[ \\t]*Energy contributions relative to reference atoms:[ \\t]*\\(reference[ \\t]*=[ \\t]*[+|-]?\\d+.\\d+\\)[ \\t]*\\n)(?:^[ \\t]*\\n)?(?:^(?!^[ \\t]*$).*\\n)*)",
+      "flags": [
+        "MULTILINE"
+      ],
+      "comment": "Searching for the first line of gpaw icon, assuming that the icon ends at the first empty line or block pattern."
+    },
+    "BlockGpawIcon": {
+      "p_type": "Block",
+      "p_subtype": "BlockGpawIcon",
+      "pattern": "^((?:[ \\t]*___ ___ ___ _ _ _[ \\t]*\\n)(?:[ \\t]*\\|   \\|   \\|_  \\| \\| \\| \\|[ \\t]*\\n)(?:^(?!^[ \\t]*$).*\\n)*)",
+      "flags": [
+        "MULTILINE"
+      ],
+      "comment": "Searching for the first 2 lines of gpaw icon, assuming that the icon ends at the first empty line or block pattern."
+    },
+    "BlueprintParagraphStartsWith": {
+      "order": [
+        "BlockGpawDipole",
+        "BlockGpawConvergedAfter",
+        "BlockGpawOrbitalEnergies",
+        "BlockGpawTiming"
+      ],
+      "pattern_structure": {
+        "beginning": "^([ \\t]*",
+        "ending": ".*?\\n(?:^(?!^[ \\t]*$).*\\n)*)",
+        "flags": [
+          "MULTILINE"
+        ]
+      },
+      "pattern_texts": {
+        "BlockGpawDipole": "Dipole moment:",
+        "BlockGpawConvergedAfter": "Converged after",
+        "BlockGpawOrbitalEnergies": "Up[ \\t]+Down",
+        "BlockGpawTiming": "Timing:"
+      },
+      "comment": "Blueprint: Paragraph with the line that starts with specified text."
+    }
+  },
+  "TypeDefaultBlocks": {
+    "order": [
+      "BlockGpawUnrecognized"
+    ],
+    "BlockGpawUnrecognized": {
+      "p_type": "Block",
+      "p_subtype": "BlockGpawUnrecognized",
+      "pattern": "((?:^(?!^[ \\t]*$).*\\n)+)",
+      "flags": [
+        "MULTILINE"
+      ],
+      "comment": "Paragraph"
+    }
+  },
+  "Spacer": {
+    "p_type": "Spacer",
+    "p_subtype": "Spacer",
+    "pattern": "^(\\s*\\n)",
+    "flags": [
+      "MULTILINE"
+    ],
+    "comment": "Just some empty lines, may have tabs and spaces"
+  }
+}
