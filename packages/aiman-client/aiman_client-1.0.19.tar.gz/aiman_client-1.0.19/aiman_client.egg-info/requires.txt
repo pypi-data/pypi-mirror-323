@@ -1,0 +1,11 @@
+pyjwt
+requests
+setuptools
+
+[dev]
+pylint
+toml
+yapf
+
+[test]
+pytest-cov

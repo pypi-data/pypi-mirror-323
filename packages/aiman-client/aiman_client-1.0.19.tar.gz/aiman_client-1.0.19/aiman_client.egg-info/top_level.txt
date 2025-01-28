@@ -1,0 +1,6 @@
+aiman
+build
+dist
+htmlcov
+tests
+venv
