@@ -1,0 +1,17 @@
+ansible_compat/__init__.py,sha256=cd3LwbEncCquHlqOMm_I6NG6DbpIdoEb6WdrZfTtUpo,247
+ansible_compat/_version.py,sha256=BJCP0VY4H9GYpV_uPPTmaDtQ15XBwYlzpVkM6-qYUKQ,413
+ansible_compat/config.py,sha256=1DuGKGmdqNMleyqPgpTgcjt3cHzpREdL5pJETUpr5EY,21786
+ansible_compat/constants.py,sha256=MBECLHbSI7nFcL8Bzn-dnBDNZotF85Fo7JV4_L0DNtE,1582
+ansible_compat/errors.py,sha256=8E-shY-x8Zkufvw0QN5kDH2AYGG7iUDHW5Va_fgE-nA,1594
+ansible_compat/loaders.py,sha256=q3fY4ARgIC3fjIxovwHwZ_Q3Db7mGAAF8-f9o86DEwE,941
+ansible_compat/ports.py,sha256=HYBmbh4E5M_3pMlKmNcyMRvDk9ZU2CYzedBUuhiuk3g,113
+ansible_compat/prerun.py,sha256=s_Tc4D4pDk0OgheO31zGqh2bzE0V8zTRN3QiK30-8FM,983
+ansible_compat/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ansible_compat/runtime.py,sha256=KSHEYadbSsZptaPh8f7P6yLk0NuplrCxq3c2dDVFeFk,40215
+ansible_compat/schema.py,sha256=JQbNoh_LdMNg7nIm0hvqLmNVTC_yqLph5fstuTSw40Y,3394
+ansible_compat/types.py,sha256=czoEAXeA7hEmAeBNl5C-FS-q-dCmtvgNcDEEYWYHSxU,372
+ansible_compat-25.1.0.dist-info/LICENSE,sha256=vLWDbva9WmMZndPU516xr3LFj1aGIWTXuYAchcTL_Jo,1095
+ansible_compat-25.1.0.dist-info/METADATA,sha256=uPt2soPEeuRRwaBsVkTI1--1mI2q5ZSNRDRdb-Wro2Q,3895
+ansible_compat-25.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+ansible_compat-25.1.0.dist-info/top_level.txt,sha256=n0Ofr57_b4i03HK4jOKgN8o5A_hznu62yZknV0mxRJM,15
+ansible_compat-25.1.0.dist-info/RECORD,,
