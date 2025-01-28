@@ -1,0 +1,44 @@
+# automagically generated parameter file
+
+[driver]
+tmax = 5.0    ; maximum simulation time to evolve
+max_steps = 25    ; maximum number of steps to take
+fix_dt = -1.0
+init_tstep_factor = 0.01    ; first timestep = init_tstep_factor * CFL timestep
+max_dt_change = 2.0    ; max amount the timestep can change between steps
+verbose = 0    ; verbosity
+cfl = 0.8
+
+[incompressible]
+limiter = 2    ; limiter (0 = none, 1 = 2nd order, 2 = 4th order)
+proj_type = 2    ; what are we projecting? 1 includes -Gp term in U*
+
+[incompressible_viscous]
+viscosity = 0.0025    ; kinematic viscosity of the fluid (units L^2/T)
+
+[io]
+basename = cavity_n64_Re400_    ; basename for output files
+dt_out = 1    ; simulation time between writing output files
+n_out = 25    ; number of timesteps between writing output files
+do_io = 0    ; do we output at all?
+
+[mesh]
+xmin = 0.0    ; domain minimum x-coordinate
+xmax = 1.0    ; domain maximum x-coordinate
+ymin = 0.0    ; domain minimum y-coordinate
+ymax = 1.0    ; domain maximum y-coordinate
+xlboundary = dirichlet    ; minimum x BC ('reflect', 'outflow', or 'periodic')
+xrboundary = dirichlet    ; maximum x BC ('reflect', 'outflow', or 'periodic')
+ylboundary = dirichlet    ; minimum y BC ('reflect', 'outflow', or 'periodic')
+yrboundary = moving_lid    ; maximum y BC ('reflect', 'outflow', or 'periodic')
+nx = 64    ; number of zones in the x-direction
+ny = 64    ; number of zones in the y-direction
+
+[particles]
+do_particles = 0    ; include particles? (1=yes, 0=no)
+n_particles = 100    ; number of particles
+particle_generator = grid    ; how do we generate particles? (random, grid)
+
+[vis]
+dovis = 0    ; runtime visualization? (1=yes, 0=no)
+store_images = 0    ; store vis images to files (1=yes, 0=no)

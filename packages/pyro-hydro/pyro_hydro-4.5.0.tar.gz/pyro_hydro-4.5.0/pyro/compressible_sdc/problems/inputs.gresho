@@ -1,0 +1,34 @@
+# simple inputs files for the unsplit CTU hydro scheme
+
+[driver]
+max_steps = 50000
+tmax = 1
+cfl = 0.8
+
+
+[io]
+basename = lm_gresho_128_
+dt_out = 0.2
+
+
+[mesh]
+nx = 40
+ny = 40
+xmax = 1.0
+ymax = 1.0
+
+xlboundary = periodic
+xrboundary = periodic
+
+ylboundary = periodic
+yrboundary = periodic
+
+
+[gresho]
+r = 0.2
+rho0 = 1.0
+mach = 0.1
+t_r = 1.0
+
+[compressible]
+grav = 0
