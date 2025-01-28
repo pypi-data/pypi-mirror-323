@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: cbltooling
+Version: 0.0.1
+Summary: Python tooling for the Computational Biomechanics Lab at TU Delft
+Project-URL: Homepage, https://github.com/ComputationalBiomechanicsLab/cbltooling
+Project-URL: Documentation, https://computationalbiomechanicslab.github.io/cbltooling
+Author-email: Adam Kewley <a.kewley@tudelft.nl>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: numpy
+Description-Content-Type: text/markdown
+
+# `cbltools`
+
+> Python tooling for the Computational Biomechanics Lab
+
+This repository is intended to collect, organize, and document various
+scripts and tools that the [Computational Biomechanics Lab at TU Delft](https://www.tudelft.nl/me/over/afdelingen/biomechanical-engineering/research/biomechatronics-human-machine-control/computational-biomechanics-lab) uses.
+
+Read [📖 the documentation](https://computationalbiomechanicslab.github.io/cbltooling) for
+more info.
+
+# Build notes
+
+```bash
+python -m pip install --upgrade build
+python -m build
+# test upload:
+# python3 -m twine upload --repository testpypi dist/*
+```
+
