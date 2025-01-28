@@ -1,0 +1,17 @@
+.*.swp
+env/
+AUTHORS
+ChangeLog
+MANIFEST
+build
+coverage
+dist
+nosetests.xml
+*.pyc
+*.egg-info
+.venv*
+.tox
+.eggs
+.coverage
+venv/
+tags
