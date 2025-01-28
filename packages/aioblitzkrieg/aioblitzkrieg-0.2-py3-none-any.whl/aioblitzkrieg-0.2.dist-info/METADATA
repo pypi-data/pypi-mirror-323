@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: aioblitzkrieg
+Version: 0.2
+Summary: @BlitzkriegAutobot asynchronous api wrapper
+Home-page: https://github.com/bblitzKrieg/aioblitzkrieg
+Author: Blitzkrieg
+Author-email: blitzkriegdev@blitzkrieg.space
+License: BSD 2-clause
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
+Requires-Dist: aiofiles
+Requires-Dist: aiohappyeyeballs
+Requires-Dist: aiohttp
+Requires-Dist: aiosignal
+Requires-Dist: annotated-types
+Requires-Dist: async-timeout
+Requires-Dist: attrs
+Requires-Dist: backports.tarfile
+Requires-Dist: build
+Requires-Dist: certifi
+Requires-Dist: charset-normalizer
+Requires-Dist: colorama
+Requires-Dist: docutils
+Requires-Dist: frozenlist
+Requires-Dist: idna
+Requires-Dist: importlib-metadata
+Requires-Dist: jaraco.classes
+Requires-Dist: jaraco.context
+Requires-Dist: jaraco.functools
+Requires-Dist: keyring
+Requires-Dist: markdown-it-py
+Requires-Dist: mdurl
+Requires-Dist: more-itertools
+Requires-Dist: multidict
+Requires-Dist: nh3
+Requires-Dist: packaging
+Requires-Dist: pkginfo
+Requires-Dist: pydantic
+Requires-Dist: pydantic-core
+Requires-Dist: Pygments
+Requires-Dist: pyproject-hooks
+Requires-Dist: pywin32-ctypes
+Requires-Dist: readme-renderer
+Requires-Dist: requests
+Requires-Dist: requests-toolbelt
+Requires-Dist: rfc3986
+Requires-Dist: rich
+Requires-Dist: tomli
+Requires-Dist: twine
+Requires-Dist: typing-extensions
+Requires-Dist: urllib3
+Requires-Dist: yarl
+Requires-Dist: zipp
+
+## **[@BlitzkriegAutobot](https://t.me/BlitzkriegAutobot) asynchronous api wrapper**
+
+**Docs:** https://blitzkriegpublicapi.readme.io/
+
+**Install**
+
+```bash
+pip install aioblitzkrieg
+```
+
+**Basic methods**
+
+```python
+from aioblitzkrieg import AioBlitzkrieg
+
+client = AioBlitzkrieg(api_key='863...e12')
+
+me = await client.get_me()
+archives = await client.get_archives()
+report = await client.report_archive(archive_id_id=1)
+prices = await client.get_prices('usd')
+
+print(me, archives, report, prices, sep='\n')
+```
+
+**Upload archive method**
+
+```python
+from aioblitzkrieg import AioBlitzkrieg
+
+client = AioBlitzkrieg(api_key='863...e12')
+
+path = "sample.zip"
+
+result = await client.upload_archive(
+    file_path=path
+)
+print(result)
+
+# Upload archive via unique identifier of the referral partner
+
+ref_id = 'MY_SERVICE_REF_ID'
+
+result = await client.upload_archive(
+    file_path=path,
+    ref_id=ref_id
+)
+print(result)
+```
