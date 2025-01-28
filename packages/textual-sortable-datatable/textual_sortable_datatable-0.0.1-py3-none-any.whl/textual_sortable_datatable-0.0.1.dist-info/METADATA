@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: textual-sortable-datatable
+Version: 0.0.1
+Summary: Add your description here
+Project-URL: Homepage, https://lkeb.nl
+Project-URL: Repository, https://gitlab.com/lkeb/slurm_viewer
+Project-URL: Issues, https://gitlab.com/lkeb/slurm_viewer/issues
+Project-URL: Changelog, https://gitlab.com/lkeb/slurm_viewer/blob/master/CHANGELOG.md
+Author-email: Patrick de Koning <pjhdekoning@lumc.nl>
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: Pydantic
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Requires-Dist: pandas>=2.0
+Requires-Dist: textual>=1.0
