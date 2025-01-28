@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: dlubal.api
+Version: 2.9.3rc3
+Summary: Python Client Library for Dlubal Software APIs powered by gRPC
+Author: Dlubal Software
+Author-email: api@dlubal.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+Requires-Dist: grpcio==1.68.0
+Requires-Dist: grpcio-tools==1.68.0
+Requires-Dist: pandas==2.2.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# Dlubal API 2.0
+The dlubal.api library represents the next generation of interaction for engineers and developers to deliver a faster, simpler, and more efficient way to work with Dlubal programs like RFEM 6, with upcoming support for RSTAB 9 and RSECTION 1.
+
+Powered by modern gRPC technology, it accelerates local or remote client-server communication, enabling rapid task automation and seamless integration into your workflows.

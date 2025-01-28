@@ -1,0 +1,955 @@
+from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import message as _message
+from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Optional, Union as _Union
+
+DESCRIPTOR: _descriptor.FileDescriptor
+
+class MaterialMaterialType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_MATERIAL_TYPE_BASIC: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_ALUMINUM: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_CONCRETE: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_FABRIC: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_FIBER_CONCRETE: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_FOIL: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_GAS: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_GLASS: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_MASONRY: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_METAL: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_PRESTRESSING_STEEL: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_REINFORCING_STEEL: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_SOIL: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_STEEL: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_TIMBER: _ClassVar[MaterialMaterialType]
+    MATERIAL_MATERIAL_TYPE_VIRTUAL_JOIST_GIRDER: _ClassVar[MaterialMaterialType]
+
+class MaterialMaterialModel(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_LINEAR_ELASTIC: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_E_MATERIAL_MODEL_ISOTROPIC_SOIL_PLASTIC_MODIFIED_HARDENING_SOIL_3D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ANISOTROPIC_DAMAGE: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_DAMAGE_2D_3D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_MASONRY_PLASTIC_2D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_NONLINEAR_ELASTIC_1D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_NONLINEAR_ELASTIC_2D_3D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_PLASTIC_1D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_PLASTIC_2D_3D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_ROCK_PLASTIC_HOEK_BROWN_3D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_SOIL_NONLINEAR_ELASTIC_3D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_SOIL_PLASTIC_3D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_TIMBER_LINEAR_ELASTIC_1D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_2D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_3D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_FABRIC_NONLINEAR_ELASTIC_2D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_MASONRY_PLASTIC_2D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_PLASTIC_2D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_PLASTIC_3D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_TIMBER_LINEAR_ELASTIC_2D: _ClassVar[MaterialMaterialModel]
+    MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_WELD_PLASTIC_2D: _ClassVar[MaterialMaterialModel]
+
+class MaterialApplicationContext(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_APPLICATION_CONTEXT_INVALID: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_ALUMINUM_DESIGN: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_COMBINATION_WIZARD: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_CONCRETE_DESIGN: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_CONCRETE_FOUNDATION_DESIGN: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_CRANEWAY_DESIGN: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_DYNAMIC_ANALYSIS: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_GEOTECHNICAL_ANALYSIS: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_GLASS_DESIGN: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_LOAD_WIZARD: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_MASONRY_DESIGN: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_PIPING_DESIGN: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_STEEL_DESIGN: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_STEEL_DESIGN_COLD_FORMED: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_STEEL_JOINT_DESIGN: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_TIMBER_DESIGN: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_TIMBER_JOINT_DESIGN: _ClassVar[MaterialApplicationContext]
+    MATERIAL_APPLICATION_CONTEXT_TOWER_DESIGN: _ClassVar[MaterialApplicationContext]
+
+class MaterialDiagramType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_DIAGRAM_TYPE_BASIC: _ClassVar[MaterialDiagramType]
+    MATERIAL_DIAGRAM_TYPE_BILINEAR: _ClassVar[MaterialDiagramType]
+    MATERIAL_DIAGRAM_TYPE_STRESS_STRAIN_DIAGRAM: _ClassVar[MaterialDiagramType]
+
+class MaterialDefinitionType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_DEFINITION_TYPE_DERIVED_NU: _ClassVar[MaterialDefinitionType]
+    MATERIAL_DEFINITION_TYPE_DERIVED_G: _ClassVar[MaterialDefinitionType]
+    MATERIAL_DEFINITION_TYPE_E_G_NO_NU: _ClassVar[MaterialDefinitionType]
+    MATERIAL_DEFINITION_TYPE_E_G_NU: _ClassVar[MaterialDefinitionType]
+    MATERIAL_DEFINITION_TYPE_NONE: _ClassVar[MaterialDefinitionType]
+
+class MaterialStressFailureHypothesis(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_STRESS_FAILURE_HYPOTHESIS_VON_MISES: _ClassVar[MaterialStressFailureHypothesis]
+    MATERIAL_STRESS_FAILURE_HYPOTHESIS_DRUCKER_PRAGER: _ClassVar[MaterialStressFailureHypothesis]
+    MATERIAL_STRESS_FAILURE_HYPOTHESIS_MOHR_COULOMB: _ClassVar[MaterialStressFailureHypothesis]
+    MATERIAL_STRESS_FAILURE_HYPOTHESIS_OEDOMETRIC_CONDITIONS: _ClassVar[MaterialStressFailureHypothesis]
+    MATERIAL_STRESS_FAILURE_HYPOTHESIS_OEDOMETRIC_CONDITIONS_WITH_SMALL_STRAIN_STIFFNESS: _ClassVar[MaterialStressFailureHypothesis]
+    MATERIAL_STRESS_FAILURE_HYPOTHESIS_TRESCA: _ClassVar[MaterialStressFailureHypothesis]
+
+class MaterialStiffnessModificationType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_STIFFNESS_MODIFICATION_TYPE_DIVISION: _ClassVar[MaterialStiffnessModificationType]
+    MATERIAL_STIFFNESS_MODIFICATION_TYPE_MULTIPLICATION: _ClassVar[MaterialStiffnessModificationType]
+
+class MaterialMembersWeightUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_MEMBERS_WEIGHT_UNIT_UNKNOWN: _ClassVar[MaterialMembersWeightUnit]
+    MATERIAL_MEMBERS_WEIGHT_UNIT_GRAM: _ClassVar[MaterialMembersWeightUnit]
+    MATERIAL_MEMBERS_WEIGHT_UNIT_HUNDREDWEIGHT: _ClassVar[MaterialMembersWeightUnit]
+    MATERIAL_MEMBERS_WEIGHT_UNIT_KILOGRAM: _ClassVar[MaterialMembersWeightUnit]
+    MATERIAL_MEMBERS_WEIGHT_UNIT_METRIC_TON: _ClassVar[MaterialMembersWeightUnit]
+    MATERIAL_MEMBERS_WEIGHT_UNIT_OUNCE: _ClassVar[MaterialMembersWeightUnit]
+    MATERIAL_MEMBERS_WEIGHT_UNIT_POUND: _ClassVar[MaterialMembersWeightUnit]
+    MATERIAL_MEMBERS_WEIGHT_UNIT_SHORT_TON: _ClassVar[MaterialMembersWeightUnit]
+    MATERIAL_MEMBERS_WEIGHT_UNIT_SLUG: _ClassVar[MaterialMembersWeightUnit]
+
+class MaterialMembersVolumeUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_MEMBERS_VOLUME_UNIT_UNKNOWN: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_CENTIMETER: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_FOOT: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_INCH: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_METER: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_MILIMETER: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_YARD: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_FLUID_OUNCE: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_IMPERIAL_GALLON: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_LITER: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_PINT: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_QUART: _ClassVar[MaterialMembersVolumeUnit]
+    MATERIAL_MEMBERS_VOLUME_UNIT_US_LIQUID_GALLON: _ClassVar[MaterialMembersVolumeUnit]
+
+class MaterialMembersSurfaceUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_MEMBERS_SURFACE_UNIT_UNKNOWN: _ClassVar[MaterialMembersSurfaceUnit]
+    MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_CENTIMETER: _ClassVar[MaterialMembersSurfaceUnit]
+    MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_FOOT: _ClassVar[MaterialMembersSurfaceUnit]
+    MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_INCH: _ClassVar[MaterialMembersSurfaceUnit]
+    MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_METER: _ClassVar[MaterialMembersSurfaceUnit]
+    MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_MILIMETER: _ClassVar[MaterialMembersSurfaceUnit]
+    MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_YARD: _ClassVar[MaterialMembersSurfaceUnit]
+
+class MaterialSurfacesWeightUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_SURFACES_WEIGHT_UNIT_UNKNOWN: _ClassVar[MaterialSurfacesWeightUnit]
+    MATERIAL_SURFACES_WEIGHT_UNIT_GRAM: _ClassVar[MaterialSurfacesWeightUnit]
+    MATERIAL_SURFACES_WEIGHT_UNIT_HUNDREDWEIGHT: _ClassVar[MaterialSurfacesWeightUnit]
+    MATERIAL_SURFACES_WEIGHT_UNIT_KILOGRAM: _ClassVar[MaterialSurfacesWeightUnit]
+    MATERIAL_SURFACES_WEIGHT_UNIT_METRIC_TON: _ClassVar[MaterialSurfacesWeightUnit]
+    MATERIAL_SURFACES_WEIGHT_UNIT_OUNCE: _ClassVar[MaterialSurfacesWeightUnit]
+    MATERIAL_SURFACES_WEIGHT_UNIT_POUND: _ClassVar[MaterialSurfacesWeightUnit]
+    MATERIAL_SURFACES_WEIGHT_UNIT_SHORT_TON: _ClassVar[MaterialSurfacesWeightUnit]
+    MATERIAL_SURFACES_WEIGHT_UNIT_SLUG: _ClassVar[MaterialSurfacesWeightUnit]
+
+class MaterialSurfacesVolumeUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_SURFACES_VOLUME_UNIT_UNKNOWN: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_CENTIMETER: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_FOOT: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_INCH: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_METER: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_MILIMETER: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_YARD: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_FLUID_OUNCE: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_IMPERIAL_GALLON: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_LITER: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_PINT: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_QUART: _ClassVar[MaterialSurfacesVolumeUnit]
+    MATERIAL_SURFACES_VOLUME_UNIT_US_LIQUID_GALLON: _ClassVar[MaterialSurfacesVolumeUnit]
+
+class MaterialSurfacesTopFaceUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_SURFACES_TOP_FACE_UNIT_UNKNOWN: _ClassVar[MaterialSurfacesTopFaceUnit]
+    MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_CENTIMETER: _ClassVar[MaterialSurfacesTopFaceUnit]
+    MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_FOOT: _ClassVar[MaterialSurfacesTopFaceUnit]
+    MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_INCH: _ClassVar[MaterialSurfacesTopFaceUnit]
+    MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_METER: _ClassVar[MaterialSurfacesTopFaceUnit]
+    MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_MILIMETER: _ClassVar[MaterialSurfacesTopFaceUnit]
+    MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_YARD: _ClassVar[MaterialSurfacesTopFaceUnit]
+
+class MaterialSurfacesAreaUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_SURFACES_AREA_UNIT_UNKNOWN: _ClassVar[MaterialSurfacesAreaUnit]
+    MATERIAL_SURFACES_AREA_UNIT_SQUARED_CENTIMETER: _ClassVar[MaterialSurfacesAreaUnit]
+    MATERIAL_SURFACES_AREA_UNIT_SQUARED_FOOT: _ClassVar[MaterialSurfacesAreaUnit]
+    MATERIAL_SURFACES_AREA_UNIT_SQUARED_INCH: _ClassVar[MaterialSurfacesAreaUnit]
+    MATERIAL_SURFACES_AREA_UNIT_SQUARED_METER: _ClassVar[MaterialSurfacesAreaUnit]
+    MATERIAL_SURFACES_AREA_UNIT_SQUARED_MILIMETER: _ClassVar[MaterialSurfacesAreaUnit]
+    MATERIAL_SURFACES_AREA_UNIT_SQUARED_YARD: _ClassVar[MaterialSurfacesAreaUnit]
+
+class MaterialSurfacesBottomFaceUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_SURFACES_BOTTOM_FACE_UNIT_UNKNOWN: _ClassVar[MaterialSurfacesBottomFaceUnit]
+    MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_CENTIMETER: _ClassVar[MaterialSurfacesBottomFaceUnit]
+    MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_FOOT: _ClassVar[MaterialSurfacesBottomFaceUnit]
+    MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_INCH: _ClassVar[MaterialSurfacesBottomFaceUnit]
+    MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_METER: _ClassVar[MaterialSurfacesBottomFaceUnit]
+    MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_MILIMETER: _ClassVar[MaterialSurfacesBottomFaceUnit]
+    MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_YARD: _ClassVar[MaterialSurfacesBottomFaceUnit]
+
+class MaterialSolidsWeightUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_SOLIDS_WEIGHT_UNIT_UNKNOWN: _ClassVar[MaterialSolidsWeightUnit]
+    MATERIAL_SOLIDS_WEIGHT_UNIT_GRAM: _ClassVar[MaterialSolidsWeightUnit]
+    MATERIAL_SOLIDS_WEIGHT_UNIT_HUNDREDWEIGHT: _ClassVar[MaterialSolidsWeightUnit]
+    MATERIAL_SOLIDS_WEIGHT_UNIT_KILOGRAM: _ClassVar[MaterialSolidsWeightUnit]
+    MATERIAL_SOLIDS_WEIGHT_UNIT_METRIC_TON: _ClassVar[MaterialSolidsWeightUnit]
+    MATERIAL_SOLIDS_WEIGHT_UNIT_OUNCE: _ClassVar[MaterialSolidsWeightUnit]
+    MATERIAL_SOLIDS_WEIGHT_UNIT_POUND: _ClassVar[MaterialSolidsWeightUnit]
+    MATERIAL_SOLIDS_WEIGHT_UNIT_SHORT_TON: _ClassVar[MaterialSolidsWeightUnit]
+    MATERIAL_SOLIDS_WEIGHT_UNIT_SLUG: _ClassVar[MaterialSolidsWeightUnit]
+
+class MaterialSolidsVolumeUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_SOLIDS_VOLUME_UNIT_UNKNOWN: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_CENTIMETER: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_FOOT: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_INCH: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_METER: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_MILIMETER: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_YARD: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_FLUID_OUNCE: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_IMPERIAL_GALLON: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_LITER: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_PINT: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_QUART: _ClassVar[MaterialSolidsVolumeUnit]
+    MATERIAL_SOLIDS_VOLUME_UNIT_US_LIQUID_GALLON: _ClassVar[MaterialSolidsVolumeUnit]
+
+class MaterialSolidsAreaUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_SOLIDS_AREA_UNIT_UNKNOWN: _ClassVar[MaterialSolidsAreaUnit]
+    MATERIAL_SOLIDS_AREA_UNIT_SQUARED_CENTIMETER: _ClassVar[MaterialSolidsAreaUnit]
+    MATERIAL_SOLIDS_AREA_UNIT_SQUARED_FOOT: _ClassVar[MaterialSolidsAreaUnit]
+    MATERIAL_SOLIDS_AREA_UNIT_SQUARED_INCH: _ClassVar[MaterialSolidsAreaUnit]
+    MATERIAL_SOLIDS_AREA_UNIT_SQUARED_METER: _ClassVar[MaterialSolidsAreaUnit]
+    MATERIAL_SOLIDS_AREA_UNIT_SQUARED_MILIMETER: _ClassVar[MaterialSolidsAreaUnit]
+    MATERIAL_SOLIDS_AREA_UNIT_SQUARED_YARD: _ClassVar[MaterialSolidsAreaUnit]
+
+class MaterialEmissionsMembersWeightUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_UNKNOWN: _ClassVar[MaterialEmissionsMembersWeightUnit]
+    MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_GRAM: _ClassVar[MaterialEmissionsMembersWeightUnit]
+    MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_HUNDREDWEIGHT: _ClassVar[MaterialEmissionsMembersWeightUnit]
+    MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_KILOGRAM: _ClassVar[MaterialEmissionsMembersWeightUnit]
+    MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_METRIC_TON: _ClassVar[MaterialEmissionsMembersWeightUnit]
+    MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_OUNCE: _ClassVar[MaterialEmissionsMembersWeightUnit]
+    MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_POUND: _ClassVar[MaterialEmissionsMembersWeightUnit]
+    MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_SHORT_TON: _ClassVar[MaterialEmissionsMembersWeightUnit]
+    MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_SLUG: _ClassVar[MaterialEmissionsMembersWeightUnit]
+
+class MaterialEmissionsMembersVolumeUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_UNKNOWN: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_CENTIMETER: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_FOOT: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_INCH: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_METER: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_MILIMETER: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_YARD: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_FLUID_OUNCE: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_IMPERIAL_GALLON: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_LITER: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_PINT: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_QUART: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+    MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_US_LIQUID_GALLON: _ClassVar[MaterialEmissionsMembersVolumeUnit]
+
+class MaterialEmissionsMembersSurfaceUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_UNKNOWN: _ClassVar[MaterialEmissionsMembersSurfaceUnit]
+    MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_CENTIMETER: _ClassVar[MaterialEmissionsMembersSurfaceUnit]
+    MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_FOOT: _ClassVar[MaterialEmissionsMembersSurfaceUnit]
+    MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_INCH: _ClassVar[MaterialEmissionsMembersSurfaceUnit]
+    MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_METER: _ClassVar[MaterialEmissionsMembersSurfaceUnit]
+    MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_MILIMETER: _ClassVar[MaterialEmissionsMembersSurfaceUnit]
+    MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_YARD: _ClassVar[MaterialEmissionsMembersSurfaceUnit]
+
+class MaterialEmissionsSurfacesWeightUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_UNKNOWN: _ClassVar[MaterialEmissionsSurfacesWeightUnit]
+    MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_GRAM: _ClassVar[MaterialEmissionsSurfacesWeightUnit]
+    MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_HUNDREDWEIGHT: _ClassVar[MaterialEmissionsSurfacesWeightUnit]
+    MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_KILOGRAM: _ClassVar[MaterialEmissionsSurfacesWeightUnit]
+    MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_METRIC_TON: _ClassVar[MaterialEmissionsSurfacesWeightUnit]
+    MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_OUNCE: _ClassVar[MaterialEmissionsSurfacesWeightUnit]
+    MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_POUND: _ClassVar[MaterialEmissionsSurfacesWeightUnit]
+    MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_SHORT_TON: _ClassVar[MaterialEmissionsSurfacesWeightUnit]
+    MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_SLUG: _ClassVar[MaterialEmissionsSurfacesWeightUnit]
+
+class MaterialEmissionsSurfacesVolumeUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_UNKNOWN: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_CENTIMETER: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_FOOT: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_INCH: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_METER: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_MILIMETER: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_YARD: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_FLUID_OUNCE: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_IMPERIAL_GALLON: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_LITER: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_PINT: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_QUART: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+    MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_US_LIQUID_GALLON: _ClassVar[MaterialEmissionsSurfacesVolumeUnit]
+
+class MaterialEmissionsSurfacesTopFaceUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_UNKNOWN: _ClassVar[MaterialEmissionsSurfacesTopFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_CENTIMETER: _ClassVar[MaterialEmissionsSurfacesTopFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_FOOT: _ClassVar[MaterialEmissionsSurfacesTopFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_INCH: _ClassVar[MaterialEmissionsSurfacesTopFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_METER: _ClassVar[MaterialEmissionsSurfacesTopFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_MILIMETER: _ClassVar[MaterialEmissionsSurfacesTopFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_YARD: _ClassVar[MaterialEmissionsSurfacesTopFaceUnit]
+
+class MaterialEmissionsSurfacesAreaUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_UNKNOWN: _ClassVar[MaterialEmissionsSurfacesAreaUnit]
+    MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_CENTIMETER: _ClassVar[MaterialEmissionsSurfacesAreaUnit]
+    MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_FOOT: _ClassVar[MaterialEmissionsSurfacesAreaUnit]
+    MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_INCH: _ClassVar[MaterialEmissionsSurfacesAreaUnit]
+    MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_METER: _ClassVar[MaterialEmissionsSurfacesAreaUnit]
+    MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_MILIMETER: _ClassVar[MaterialEmissionsSurfacesAreaUnit]
+    MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_YARD: _ClassVar[MaterialEmissionsSurfacesAreaUnit]
+
+class MaterialEmissionsSurfacesBottomFaceUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_UNKNOWN: _ClassVar[MaterialEmissionsSurfacesBottomFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_CENTIMETER: _ClassVar[MaterialEmissionsSurfacesBottomFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_FOOT: _ClassVar[MaterialEmissionsSurfacesBottomFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_INCH: _ClassVar[MaterialEmissionsSurfacesBottomFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_METER: _ClassVar[MaterialEmissionsSurfacesBottomFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_MILIMETER: _ClassVar[MaterialEmissionsSurfacesBottomFaceUnit]
+    MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_YARD: _ClassVar[MaterialEmissionsSurfacesBottomFaceUnit]
+
+class MaterialEmissionsSolidsWeightUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_UNKNOWN: _ClassVar[MaterialEmissionsSolidsWeightUnit]
+    MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_GRAM: _ClassVar[MaterialEmissionsSolidsWeightUnit]
+    MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_HUNDREDWEIGHT: _ClassVar[MaterialEmissionsSolidsWeightUnit]
+    MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_KILOGRAM: _ClassVar[MaterialEmissionsSolidsWeightUnit]
+    MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_METRIC_TON: _ClassVar[MaterialEmissionsSolidsWeightUnit]
+    MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_OUNCE: _ClassVar[MaterialEmissionsSolidsWeightUnit]
+    MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_POUND: _ClassVar[MaterialEmissionsSolidsWeightUnit]
+    MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_SHORT_TON: _ClassVar[MaterialEmissionsSolidsWeightUnit]
+    MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_SLUG: _ClassVar[MaterialEmissionsSolidsWeightUnit]
+
+class MaterialEmissionsSolidsVolumeUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_UNKNOWN: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_CENTIMETER: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_FOOT: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_INCH: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_METER: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_MILIMETER: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_YARD: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_FLUID_OUNCE: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_IMPERIAL_GALLON: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_LITER: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_PINT: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_QUART: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+    MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_US_LIQUID_GALLON: _ClassVar[MaterialEmissionsSolidsVolumeUnit]
+
+class MaterialEmissionsSolidsAreaUnit(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_UNKNOWN: _ClassVar[MaterialEmissionsSolidsAreaUnit]
+    MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_CENTIMETER: _ClassVar[MaterialEmissionsSolidsAreaUnit]
+    MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_FOOT: _ClassVar[MaterialEmissionsSolidsAreaUnit]
+    MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_INCH: _ClassVar[MaterialEmissionsSolidsAreaUnit]
+    MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_METER: _ClassVar[MaterialEmissionsSolidsAreaUnit]
+    MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_MILIMETER: _ClassVar[MaterialEmissionsSolidsAreaUnit]
+    MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_YARD: _ClassVar[MaterialEmissionsSolidsAreaUnit]
+
+class MaterialUseOfMaterialModelOrientation(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_USE_OF_MATERIAL_MODEL_ORIENTATION_PARALLEL: _ClassVar[MaterialUseOfMaterialModelOrientation]
+    MATERIAL_USE_OF_MATERIAL_MODEL_ORIENTATION_PERPENDICULAR: _ClassVar[MaterialUseOfMaterialModelOrientation]
+
+class MaterialUseOfMaterialModelAlignment(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    MATERIAL_USE_OF_MATERIAL_MODEL_ALIGNMENT_EDGEWISE: _ClassVar[MaterialUseOfMaterialModelAlignment]
+    MATERIAL_USE_OF_MATERIAL_MODEL_ALIGNMENT_FLATWISE: _ClassVar[MaterialUseOfMaterialModelAlignment]
+MATERIAL_MATERIAL_TYPE_BASIC: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_ALUMINUM: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_CONCRETE: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_FABRIC: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_FIBER_CONCRETE: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_FOIL: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_GAS: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_GLASS: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_MASONRY: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_METAL: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_PRESTRESSING_STEEL: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_REINFORCING_STEEL: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_SOIL: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_STEEL: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_TIMBER: MaterialMaterialType
+MATERIAL_MATERIAL_TYPE_VIRTUAL_JOIST_GIRDER: MaterialMaterialType
+MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_LINEAR_ELASTIC: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_E_MATERIAL_MODEL_ISOTROPIC_SOIL_PLASTIC_MODIFIED_HARDENING_SOIL_3D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ANISOTROPIC_DAMAGE: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_DAMAGE_2D_3D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_MASONRY_PLASTIC_2D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_NONLINEAR_ELASTIC_1D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_NONLINEAR_ELASTIC_2D_3D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_PLASTIC_1D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_PLASTIC_2D_3D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_ROCK_PLASTIC_HOEK_BROWN_3D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_SOIL_NONLINEAR_ELASTIC_3D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_SOIL_PLASTIC_3D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_TIMBER_LINEAR_ELASTIC_1D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_2D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_3D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_FABRIC_NONLINEAR_ELASTIC_2D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_MASONRY_PLASTIC_2D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_PLASTIC_2D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_PLASTIC_3D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_TIMBER_LINEAR_ELASTIC_2D: MaterialMaterialModel
+MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_WELD_PLASTIC_2D: MaterialMaterialModel
+MATERIAL_APPLICATION_CONTEXT_INVALID: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_ALUMINUM_DESIGN: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_COMBINATION_WIZARD: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_CONCRETE_DESIGN: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_CONCRETE_FOUNDATION_DESIGN: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_CRANEWAY_DESIGN: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_DYNAMIC_ANALYSIS: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_GEOTECHNICAL_ANALYSIS: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_GLASS_DESIGN: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_LOAD_WIZARD: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_MASONRY_DESIGN: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_PIPING_DESIGN: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_STEEL_DESIGN: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_STEEL_DESIGN_COLD_FORMED: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_STEEL_JOINT_DESIGN: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_TIMBER_DESIGN: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_TIMBER_JOINT_DESIGN: MaterialApplicationContext
+MATERIAL_APPLICATION_CONTEXT_TOWER_DESIGN: MaterialApplicationContext
+MATERIAL_DIAGRAM_TYPE_BASIC: MaterialDiagramType
+MATERIAL_DIAGRAM_TYPE_BILINEAR: MaterialDiagramType
+MATERIAL_DIAGRAM_TYPE_STRESS_STRAIN_DIAGRAM: MaterialDiagramType
+MATERIAL_DEFINITION_TYPE_DERIVED_NU: MaterialDefinitionType
+MATERIAL_DEFINITION_TYPE_DERIVED_G: MaterialDefinitionType
+MATERIAL_DEFINITION_TYPE_E_G_NO_NU: MaterialDefinitionType
+MATERIAL_DEFINITION_TYPE_E_G_NU: MaterialDefinitionType
+MATERIAL_DEFINITION_TYPE_NONE: MaterialDefinitionType
+MATERIAL_STRESS_FAILURE_HYPOTHESIS_VON_MISES: MaterialStressFailureHypothesis
+MATERIAL_STRESS_FAILURE_HYPOTHESIS_DRUCKER_PRAGER: MaterialStressFailureHypothesis
+MATERIAL_STRESS_FAILURE_HYPOTHESIS_MOHR_COULOMB: MaterialStressFailureHypothesis
+MATERIAL_STRESS_FAILURE_HYPOTHESIS_OEDOMETRIC_CONDITIONS: MaterialStressFailureHypothesis
+MATERIAL_STRESS_FAILURE_HYPOTHESIS_OEDOMETRIC_CONDITIONS_WITH_SMALL_STRAIN_STIFFNESS: MaterialStressFailureHypothesis
+MATERIAL_STRESS_FAILURE_HYPOTHESIS_TRESCA: MaterialStressFailureHypothesis
+MATERIAL_STIFFNESS_MODIFICATION_TYPE_DIVISION: MaterialStiffnessModificationType
+MATERIAL_STIFFNESS_MODIFICATION_TYPE_MULTIPLICATION: MaterialStiffnessModificationType
+MATERIAL_MEMBERS_WEIGHT_UNIT_UNKNOWN: MaterialMembersWeightUnit
+MATERIAL_MEMBERS_WEIGHT_UNIT_GRAM: MaterialMembersWeightUnit
+MATERIAL_MEMBERS_WEIGHT_UNIT_HUNDREDWEIGHT: MaterialMembersWeightUnit
+MATERIAL_MEMBERS_WEIGHT_UNIT_KILOGRAM: MaterialMembersWeightUnit
+MATERIAL_MEMBERS_WEIGHT_UNIT_METRIC_TON: MaterialMembersWeightUnit
+MATERIAL_MEMBERS_WEIGHT_UNIT_OUNCE: MaterialMembersWeightUnit
+MATERIAL_MEMBERS_WEIGHT_UNIT_POUND: MaterialMembersWeightUnit
+MATERIAL_MEMBERS_WEIGHT_UNIT_SHORT_TON: MaterialMembersWeightUnit
+MATERIAL_MEMBERS_WEIGHT_UNIT_SLUG: MaterialMembersWeightUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_UNKNOWN: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_CENTIMETER: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_FOOT: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_INCH: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_METER: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_MILIMETER: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_CUBIC_YARD: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_FLUID_OUNCE: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_IMPERIAL_GALLON: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_LITER: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_PINT: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_QUART: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_VOLUME_UNIT_US_LIQUID_GALLON: MaterialMembersVolumeUnit
+MATERIAL_MEMBERS_SURFACE_UNIT_UNKNOWN: MaterialMembersSurfaceUnit
+MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_CENTIMETER: MaterialMembersSurfaceUnit
+MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_FOOT: MaterialMembersSurfaceUnit
+MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_INCH: MaterialMembersSurfaceUnit
+MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_METER: MaterialMembersSurfaceUnit
+MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_MILIMETER: MaterialMembersSurfaceUnit
+MATERIAL_MEMBERS_SURFACE_UNIT_SQUARED_YARD: MaterialMembersSurfaceUnit
+MATERIAL_SURFACES_WEIGHT_UNIT_UNKNOWN: MaterialSurfacesWeightUnit
+MATERIAL_SURFACES_WEIGHT_UNIT_GRAM: MaterialSurfacesWeightUnit
+MATERIAL_SURFACES_WEIGHT_UNIT_HUNDREDWEIGHT: MaterialSurfacesWeightUnit
+MATERIAL_SURFACES_WEIGHT_UNIT_KILOGRAM: MaterialSurfacesWeightUnit
+MATERIAL_SURFACES_WEIGHT_UNIT_METRIC_TON: MaterialSurfacesWeightUnit
+MATERIAL_SURFACES_WEIGHT_UNIT_OUNCE: MaterialSurfacesWeightUnit
+MATERIAL_SURFACES_WEIGHT_UNIT_POUND: MaterialSurfacesWeightUnit
+MATERIAL_SURFACES_WEIGHT_UNIT_SHORT_TON: MaterialSurfacesWeightUnit
+MATERIAL_SURFACES_WEIGHT_UNIT_SLUG: MaterialSurfacesWeightUnit
+MATERIAL_SURFACES_VOLUME_UNIT_UNKNOWN: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_CENTIMETER: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_FOOT: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_INCH: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_METER: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_MILIMETER: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_CUBIC_YARD: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_FLUID_OUNCE: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_IMPERIAL_GALLON: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_LITER: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_PINT: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_QUART: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_VOLUME_UNIT_US_LIQUID_GALLON: MaterialSurfacesVolumeUnit
+MATERIAL_SURFACES_TOP_FACE_UNIT_UNKNOWN: MaterialSurfacesTopFaceUnit
+MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_CENTIMETER: MaterialSurfacesTopFaceUnit
+MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_FOOT: MaterialSurfacesTopFaceUnit
+MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_INCH: MaterialSurfacesTopFaceUnit
+MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_METER: MaterialSurfacesTopFaceUnit
+MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_MILIMETER: MaterialSurfacesTopFaceUnit
+MATERIAL_SURFACES_TOP_FACE_UNIT_SQUARED_YARD: MaterialSurfacesTopFaceUnit
+MATERIAL_SURFACES_AREA_UNIT_UNKNOWN: MaterialSurfacesAreaUnit
+MATERIAL_SURFACES_AREA_UNIT_SQUARED_CENTIMETER: MaterialSurfacesAreaUnit
+MATERIAL_SURFACES_AREA_UNIT_SQUARED_FOOT: MaterialSurfacesAreaUnit
+MATERIAL_SURFACES_AREA_UNIT_SQUARED_INCH: MaterialSurfacesAreaUnit
+MATERIAL_SURFACES_AREA_UNIT_SQUARED_METER: MaterialSurfacesAreaUnit
+MATERIAL_SURFACES_AREA_UNIT_SQUARED_MILIMETER: MaterialSurfacesAreaUnit
+MATERIAL_SURFACES_AREA_UNIT_SQUARED_YARD: MaterialSurfacesAreaUnit
+MATERIAL_SURFACES_BOTTOM_FACE_UNIT_UNKNOWN: MaterialSurfacesBottomFaceUnit
+MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_CENTIMETER: MaterialSurfacesBottomFaceUnit
+MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_FOOT: MaterialSurfacesBottomFaceUnit
+MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_INCH: MaterialSurfacesBottomFaceUnit
+MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_METER: MaterialSurfacesBottomFaceUnit
+MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_MILIMETER: MaterialSurfacesBottomFaceUnit
+MATERIAL_SURFACES_BOTTOM_FACE_UNIT_SQUARED_YARD: MaterialSurfacesBottomFaceUnit
+MATERIAL_SOLIDS_WEIGHT_UNIT_UNKNOWN: MaterialSolidsWeightUnit
+MATERIAL_SOLIDS_WEIGHT_UNIT_GRAM: MaterialSolidsWeightUnit
+MATERIAL_SOLIDS_WEIGHT_UNIT_HUNDREDWEIGHT: MaterialSolidsWeightUnit
+MATERIAL_SOLIDS_WEIGHT_UNIT_KILOGRAM: MaterialSolidsWeightUnit
+MATERIAL_SOLIDS_WEIGHT_UNIT_METRIC_TON: MaterialSolidsWeightUnit
+MATERIAL_SOLIDS_WEIGHT_UNIT_OUNCE: MaterialSolidsWeightUnit
+MATERIAL_SOLIDS_WEIGHT_UNIT_POUND: MaterialSolidsWeightUnit
+MATERIAL_SOLIDS_WEIGHT_UNIT_SHORT_TON: MaterialSolidsWeightUnit
+MATERIAL_SOLIDS_WEIGHT_UNIT_SLUG: MaterialSolidsWeightUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_UNKNOWN: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_CENTIMETER: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_FOOT: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_INCH: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_METER: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_MILIMETER: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_CUBIC_YARD: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_FLUID_OUNCE: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_IMPERIAL_GALLON: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_LITER: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_PINT: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_QUART: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_VOLUME_UNIT_US_LIQUID_GALLON: MaterialSolidsVolumeUnit
+MATERIAL_SOLIDS_AREA_UNIT_UNKNOWN: MaterialSolidsAreaUnit
+MATERIAL_SOLIDS_AREA_UNIT_SQUARED_CENTIMETER: MaterialSolidsAreaUnit
+MATERIAL_SOLIDS_AREA_UNIT_SQUARED_FOOT: MaterialSolidsAreaUnit
+MATERIAL_SOLIDS_AREA_UNIT_SQUARED_INCH: MaterialSolidsAreaUnit
+MATERIAL_SOLIDS_AREA_UNIT_SQUARED_METER: MaterialSolidsAreaUnit
+MATERIAL_SOLIDS_AREA_UNIT_SQUARED_MILIMETER: MaterialSolidsAreaUnit
+MATERIAL_SOLIDS_AREA_UNIT_SQUARED_YARD: MaterialSolidsAreaUnit
+MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_UNKNOWN: MaterialEmissionsMembersWeightUnit
+MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_GRAM: MaterialEmissionsMembersWeightUnit
+MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_HUNDREDWEIGHT: MaterialEmissionsMembersWeightUnit
+MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_KILOGRAM: MaterialEmissionsMembersWeightUnit
+MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_METRIC_TON: MaterialEmissionsMembersWeightUnit
+MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_OUNCE: MaterialEmissionsMembersWeightUnit
+MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_POUND: MaterialEmissionsMembersWeightUnit
+MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_SHORT_TON: MaterialEmissionsMembersWeightUnit
+MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_SLUG: MaterialEmissionsMembersWeightUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_UNKNOWN: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_CENTIMETER: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_FOOT: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_INCH: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_METER: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_MILIMETER: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_CUBIC_YARD: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_FLUID_OUNCE: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_IMPERIAL_GALLON: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_LITER: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_PINT: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_QUART: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_US_LIQUID_GALLON: MaterialEmissionsMembersVolumeUnit
+MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_UNKNOWN: MaterialEmissionsMembersSurfaceUnit
+MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_CENTIMETER: MaterialEmissionsMembersSurfaceUnit
+MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_FOOT: MaterialEmissionsMembersSurfaceUnit
+MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_INCH: MaterialEmissionsMembersSurfaceUnit
+MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_METER: MaterialEmissionsMembersSurfaceUnit
+MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_MILIMETER: MaterialEmissionsMembersSurfaceUnit
+MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_SQUARED_YARD: MaterialEmissionsMembersSurfaceUnit
+MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_UNKNOWN: MaterialEmissionsSurfacesWeightUnit
+MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_GRAM: MaterialEmissionsSurfacesWeightUnit
+MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_HUNDREDWEIGHT: MaterialEmissionsSurfacesWeightUnit
+MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_KILOGRAM: MaterialEmissionsSurfacesWeightUnit
+MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_METRIC_TON: MaterialEmissionsSurfacesWeightUnit
+MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_OUNCE: MaterialEmissionsSurfacesWeightUnit
+MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_POUND: MaterialEmissionsSurfacesWeightUnit
+MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_SHORT_TON: MaterialEmissionsSurfacesWeightUnit
+MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_SLUG: MaterialEmissionsSurfacesWeightUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_UNKNOWN: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_CENTIMETER: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_FOOT: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_INCH: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_METER: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_MILIMETER: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_CUBIC_YARD: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_FLUID_OUNCE: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_IMPERIAL_GALLON: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_LITER: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_PINT: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_QUART: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_US_LIQUID_GALLON: MaterialEmissionsSurfacesVolumeUnit
+MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_UNKNOWN: MaterialEmissionsSurfacesTopFaceUnit
+MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_CENTIMETER: MaterialEmissionsSurfacesTopFaceUnit
+MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_FOOT: MaterialEmissionsSurfacesTopFaceUnit
+MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_INCH: MaterialEmissionsSurfacesTopFaceUnit
+MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_METER: MaterialEmissionsSurfacesTopFaceUnit
+MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_MILIMETER: MaterialEmissionsSurfacesTopFaceUnit
+MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_SQUARED_YARD: MaterialEmissionsSurfacesTopFaceUnit
+MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_UNKNOWN: MaterialEmissionsSurfacesAreaUnit
+MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_CENTIMETER: MaterialEmissionsSurfacesAreaUnit
+MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_FOOT: MaterialEmissionsSurfacesAreaUnit
+MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_INCH: MaterialEmissionsSurfacesAreaUnit
+MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_METER: MaterialEmissionsSurfacesAreaUnit
+MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_MILIMETER: MaterialEmissionsSurfacesAreaUnit
+MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_SQUARED_YARD: MaterialEmissionsSurfacesAreaUnit
+MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_UNKNOWN: MaterialEmissionsSurfacesBottomFaceUnit
+MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_CENTIMETER: MaterialEmissionsSurfacesBottomFaceUnit
+MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_FOOT: MaterialEmissionsSurfacesBottomFaceUnit
+MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_INCH: MaterialEmissionsSurfacesBottomFaceUnit
+MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_METER: MaterialEmissionsSurfacesBottomFaceUnit
+MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_MILIMETER: MaterialEmissionsSurfacesBottomFaceUnit
+MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_SQUARED_YARD: MaterialEmissionsSurfacesBottomFaceUnit
+MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_UNKNOWN: MaterialEmissionsSolidsWeightUnit
+MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_GRAM: MaterialEmissionsSolidsWeightUnit
+MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_HUNDREDWEIGHT: MaterialEmissionsSolidsWeightUnit
+MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_KILOGRAM: MaterialEmissionsSolidsWeightUnit
+MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_METRIC_TON: MaterialEmissionsSolidsWeightUnit
+MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_OUNCE: MaterialEmissionsSolidsWeightUnit
+MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_POUND: MaterialEmissionsSolidsWeightUnit
+MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_SHORT_TON: MaterialEmissionsSolidsWeightUnit
+MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_SLUG: MaterialEmissionsSolidsWeightUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_UNKNOWN: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_CENTIMETER: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_FOOT: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_INCH: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_METER: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_MILIMETER: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_CUBIC_YARD: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_FLUID_OUNCE: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_IMPERIAL_GALLON: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_LITER: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_PINT: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_QUART: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_US_LIQUID_GALLON: MaterialEmissionsSolidsVolumeUnit
+MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_UNKNOWN: MaterialEmissionsSolidsAreaUnit
+MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_CENTIMETER: MaterialEmissionsSolidsAreaUnit
+MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_FOOT: MaterialEmissionsSolidsAreaUnit
+MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_INCH: MaterialEmissionsSolidsAreaUnit
+MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_METER: MaterialEmissionsSolidsAreaUnit
+MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_MILIMETER: MaterialEmissionsSolidsAreaUnit
+MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_SQUARED_YARD: MaterialEmissionsSolidsAreaUnit
+MATERIAL_USE_OF_MATERIAL_MODEL_ORIENTATION_PARALLEL: MaterialUseOfMaterialModelOrientation
+MATERIAL_USE_OF_MATERIAL_MODEL_ORIENTATION_PERPENDICULAR: MaterialUseOfMaterialModelOrientation
+MATERIAL_USE_OF_MATERIAL_MODEL_ALIGNMENT_EDGEWISE: MaterialUseOfMaterialModelAlignment
+MATERIAL_USE_OF_MATERIAL_MODEL_ALIGNMENT_FLATWISE: MaterialUseOfMaterialModelAlignment
+
+class Material(_message.Message):
+    __slots__ = ("no", "material_type", "material_model", "application_context", "diagram_type", "user_defined_name_enabled", "name", "user_defined", "definition_type", "stress_failure_hypothesis", "is_temperature_dependent", "is_dynamic_increase_factor", "has_cost_estimation", "optimization", "has_emissions_estimation", "reference_temperature", "temperature_properties_sorted", "temperature", "stiffness_matrix_editable", "stiffness_modification", "stiffness_modification_type", "has_linear_elastic_with_nonlinear_criteria", "comment", "is_generated", "generating_object_info", "members_weight_active", "members_weight_unit_cost", "members_weight_unit", "members_weight_quantity", "members_weight_cost", "members_volume_active", "members_volume_unit_cost", "members_volume_unit", "members_volume_quantity", "members_volume_cost", "members_surface_active", "members_surface_unit_cost", "members_surface_unit", "members_surface_quantity", "members_surface_cost", "surfaces_weight_active", "surfaces_weight_unit_cost", "surfaces_weight_unit", "surfaces_weight_quantity", "surfaces_weight_cost", "surfaces_volume_active", "surfaces_volume_unit_cost", "surfaces_volume_unit", "surfaces_volume_quantity", "surfaces_volume_cost", "surfaces_top_face_active", "surfaces_top_face_unit_cost", "surfaces_top_face_unit", "surfaces_top_face_quantity", "surfaces_top_face_cost", "surfaces_area_active", "surfaces_area_unit_cost", "surfaces_area_unit", "surfaces_area_quantity", "surfaces_area_cost", "surfaces_bottom_face_active", "surfaces_bottom_face_unit_cost", "surfaces_bottom_face_unit", "surfaces_bottom_face_quantity", "surfaces_bottom_face_cost", "solids_weight_active", "solids_weight_unit_cost", "solids_weight_unit", "solids_weight_quantity", "solids_weight_cost", "solids_volume_active", "solids_volume_unit_cost", "solids_volume_unit", "solids_volume_quantity", "solids_volume_cost", "solids_area_active", "solids_area_unit_cost", "solids_area_unit", "solids_area_quantity", "solids_area_cost", "sum_weight", "weight_percentage", "cost_percentage", "sum_cost", "total_cost", "emissions_members_weight_active", "emissions_members_weight_unit_emission", "emissions_members_weight_unit", "emissions_members_weight_quantity", "emissions_members_weight_emission", "emissions_members_volume_active", "emissions_members_volume_unit_emission", "emissions_members_volume_unit", "emissions_members_volume_quantity", "emissions_members_volume_emission", "emissions_members_surface_active", "emissions_members_surface_unit_emission", "emissions_members_surface_unit", "emissions_members_surface_quantity", "emissions_members_surface_emission", "emissions_surfaces_weight_active", "emissions_surfaces_weight_unit_emission", "emissions_surfaces_weight_unit", "emissions_surfaces_weight_quantity", "emissions_surfaces_weight_emission", "emissions_surfaces_volume_active", "emissions_surfaces_volume_unit_emission", "emissions_surfaces_volume_unit", "emissions_surfaces_volume_quantity", "emissions_surfaces_volume_emission", "emissions_surfaces_top_face_active", "emissions_surfaces_top_face_unit_emission", "emissions_surfaces_top_face_unit", "emissions_surfaces_top_face_quantity", "emissions_surfaces_top_face_emission", "emissions_surfaces_area_active", "emissions_surfaces_area_unit_emission", "emissions_surfaces_area_unit", "emissions_surfaces_area_quantity", "emissions_surfaces_area_emission", "emissions_surfaces_bottom_face_active", "emissions_surfaces_bottom_face_unit_emission", "emissions_surfaces_bottom_face_unit", "emissions_surfaces_bottom_face_quantity", "emissions_surfaces_bottom_face_emission", "emissions_solids_weight_active", "emissions_solids_weight_unit_emission", "emissions_solids_weight_unit", "emissions_solids_weight_quantity", "emissions_solids_weight_emission", "emissions_solids_volume_active", "emissions_solids_volume_unit_emission", "emissions_solids_volume_unit", "emissions_solids_volume_quantity", "emissions_solids_volume_emission", "emissions_solids_area_active", "emissions_solids_area_unit_emission", "emissions_solids_area_unit", "emissions_solids_area_quantity", "emissions_solids_area_emission", "emissions_percentage", "emissions_sum", "emissions_total", "use_of_material_model_orientation", "use_of_material_model_alignment", "id_for_export_import", "metadata_for_export_import")
+    NO_FIELD_NUMBER: _ClassVar[int]
+    MATERIAL_TYPE_FIELD_NUMBER: _ClassVar[int]
+    MATERIAL_MODEL_FIELD_NUMBER: _ClassVar[int]
+    APPLICATION_CONTEXT_FIELD_NUMBER: _ClassVar[int]
+    DIAGRAM_TYPE_FIELD_NUMBER: _ClassVar[int]
+    USER_DEFINED_NAME_ENABLED_FIELD_NUMBER: _ClassVar[int]
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    USER_DEFINED_FIELD_NUMBER: _ClassVar[int]
+    DEFINITION_TYPE_FIELD_NUMBER: _ClassVar[int]
+    STRESS_FAILURE_HYPOTHESIS_FIELD_NUMBER: _ClassVar[int]
+    IS_TEMPERATURE_DEPENDENT_FIELD_NUMBER: _ClassVar[int]
+    IS_DYNAMIC_INCREASE_FACTOR_FIELD_NUMBER: _ClassVar[int]
+    HAS_COST_ESTIMATION_FIELD_NUMBER: _ClassVar[int]
+    OPTIMIZATION_FIELD_NUMBER: _ClassVar[int]
+    HAS_EMISSIONS_ESTIMATION_FIELD_NUMBER: _ClassVar[int]
+    REFERENCE_TEMPERATURE_FIELD_NUMBER: _ClassVar[int]
+    TEMPERATURE_PROPERTIES_SORTED_FIELD_NUMBER: _ClassVar[int]
+    TEMPERATURE_FIELD_NUMBER: _ClassVar[int]
+    STIFFNESS_MATRIX_EDITABLE_FIELD_NUMBER: _ClassVar[int]
+    STIFFNESS_MODIFICATION_FIELD_NUMBER: _ClassVar[int]
+    STIFFNESS_MODIFICATION_TYPE_FIELD_NUMBER: _ClassVar[int]
+    HAS_LINEAR_ELASTIC_WITH_NONLINEAR_CRITERIA_FIELD_NUMBER: _ClassVar[int]
+    COMMENT_FIELD_NUMBER: _ClassVar[int]
+    IS_GENERATED_FIELD_NUMBER: _ClassVar[int]
+    GENERATING_OBJECT_INFO_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_WEIGHT_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_WEIGHT_UNIT_COST_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_WEIGHT_UNIT_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_WEIGHT_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_WEIGHT_COST_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_VOLUME_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_VOLUME_UNIT_COST_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_VOLUME_UNIT_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_VOLUME_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_VOLUME_COST_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_SURFACE_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_SURFACE_UNIT_COST_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_SURFACE_UNIT_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_SURFACE_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    MEMBERS_SURFACE_COST_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_WEIGHT_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_WEIGHT_UNIT_COST_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_WEIGHT_UNIT_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_WEIGHT_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_WEIGHT_COST_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_VOLUME_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_VOLUME_UNIT_COST_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_VOLUME_UNIT_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_VOLUME_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_VOLUME_COST_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_TOP_FACE_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_TOP_FACE_UNIT_COST_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_TOP_FACE_UNIT_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_TOP_FACE_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_TOP_FACE_COST_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_AREA_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_AREA_UNIT_COST_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_AREA_UNIT_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_AREA_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_AREA_COST_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_BOTTOM_FACE_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_BOTTOM_FACE_UNIT_COST_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_BOTTOM_FACE_UNIT_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_BOTTOM_FACE_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    SURFACES_BOTTOM_FACE_COST_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_WEIGHT_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_WEIGHT_UNIT_COST_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_WEIGHT_UNIT_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_WEIGHT_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_WEIGHT_COST_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_VOLUME_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_VOLUME_UNIT_COST_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_VOLUME_UNIT_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_VOLUME_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_VOLUME_COST_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_AREA_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_AREA_UNIT_COST_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_AREA_UNIT_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_AREA_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    SOLIDS_AREA_COST_FIELD_NUMBER: _ClassVar[int]
+    SUM_WEIGHT_FIELD_NUMBER: _ClassVar[int]
+    WEIGHT_PERCENTAGE_FIELD_NUMBER: _ClassVar[int]
+    COST_PERCENTAGE_FIELD_NUMBER: _ClassVar[int]
+    SUM_COST_FIELD_NUMBER: _ClassVar[int]
+    TOTAL_COST_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_WEIGHT_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_WEIGHT_UNIT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_WEIGHT_UNIT_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_WEIGHT_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_WEIGHT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_VOLUME_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_VOLUME_UNIT_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_VOLUME_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_VOLUME_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_SURFACE_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_SURFACE_UNIT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_SURFACE_UNIT_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_SURFACE_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_MEMBERS_SURFACE_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_WEIGHT_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_WEIGHT_UNIT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_WEIGHT_UNIT_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_WEIGHT_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_WEIGHT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_VOLUME_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_VOLUME_UNIT_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_VOLUME_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_VOLUME_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_TOP_FACE_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_TOP_FACE_UNIT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_TOP_FACE_UNIT_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_TOP_FACE_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_TOP_FACE_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_AREA_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_AREA_UNIT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_AREA_UNIT_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_AREA_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_AREA_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_BOTTOM_FACE_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_BOTTOM_FACE_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SURFACES_BOTTOM_FACE_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_WEIGHT_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_WEIGHT_UNIT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_WEIGHT_UNIT_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_WEIGHT_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_WEIGHT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_VOLUME_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_VOLUME_UNIT_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_VOLUME_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_VOLUME_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_AREA_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_AREA_UNIT_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_AREA_UNIT_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_AREA_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SOLIDS_AREA_EMISSION_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_PERCENTAGE_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_SUM_FIELD_NUMBER: _ClassVar[int]
+    EMISSIONS_TOTAL_FIELD_NUMBER: _ClassVar[int]
+    USE_OF_MATERIAL_MODEL_ORIENTATION_FIELD_NUMBER: _ClassVar[int]
+    USE_OF_MATERIAL_MODEL_ALIGNMENT_FIELD_NUMBER: _ClassVar[int]
+    ID_FOR_EXPORT_IMPORT_FIELD_NUMBER: _ClassVar[int]
+    METADATA_FOR_EXPORT_IMPORT_FIELD_NUMBER: _ClassVar[int]
+    no: int
+    material_type: MaterialMaterialType
+    material_model: MaterialMaterialModel
+    application_context: MaterialApplicationContext
+    diagram_type: MaterialDiagramType
+    user_defined_name_enabled: bool
+    name: str
+    user_defined: bool
+    definition_type: MaterialDefinitionType
+    stress_failure_hypothesis: MaterialStressFailureHypothesis
+    is_temperature_dependent: bool
+    is_dynamic_increase_factor: bool
+    has_cost_estimation: bool
+    optimization: bool
+    has_emissions_estimation: bool
+    reference_temperature: float
+    temperature_properties_sorted: bool
+    temperature: ArrayOfMaterialTemperature
+    stiffness_matrix_editable: bool
+    stiffness_modification: bool
+    stiffness_modification_type: MaterialStiffnessModificationType
+    has_linear_elastic_with_nonlinear_criteria: bool
+    comment: str
+    is_generated: bool
+    generating_object_info: str
+    members_weight_active: bool
+    members_weight_unit_cost: float
+    members_weight_unit: MaterialMembersWeightUnit
+    members_weight_quantity: float
+    members_weight_cost: float
+    members_volume_active: bool
+    members_volume_unit_cost: float
+    members_volume_unit: MaterialMembersVolumeUnit
+    members_volume_quantity: float
+    members_volume_cost: float
+    members_surface_active: bool
+    members_surface_unit_cost: float
+    members_surface_unit: MaterialMembersSurfaceUnit
+    members_surface_quantity: float
+    members_surface_cost: float
+    surfaces_weight_active: bool
+    surfaces_weight_unit_cost: float
+    surfaces_weight_unit: MaterialSurfacesWeightUnit
+    surfaces_weight_quantity: float
+    surfaces_weight_cost: float
+    surfaces_volume_active: bool
+    surfaces_volume_unit_cost: float
+    surfaces_volume_unit: MaterialSurfacesVolumeUnit
+    surfaces_volume_quantity: float
+    surfaces_volume_cost: float
+    surfaces_top_face_active: bool
+    surfaces_top_face_unit_cost: float
+    surfaces_top_face_unit: MaterialSurfacesTopFaceUnit
+    surfaces_top_face_quantity: float
+    surfaces_top_face_cost: float
+    surfaces_area_active: bool
+    surfaces_area_unit_cost: float
+    surfaces_area_unit: MaterialSurfacesAreaUnit
+    surfaces_area_quantity: float
+    surfaces_area_cost: float
+    surfaces_bottom_face_active: bool
+    surfaces_bottom_face_unit_cost: float
+    surfaces_bottom_face_unit: MaterialSurfacesBottomFaceUnit
+    surfaces_bottom_face_quantity: float
+    surfaces_bottom_face_cost: float
+    solids_weight_active: bool
+    solids_weight_unit_cost: float
+    solids_weight_unit: MaterialSolidsWeightUnit
+    solids_weight_quantity: float
+    solids_weight_cost: float
+    solids_volume_active: bool
+    solids_volume_unit_cost: float
+    solids_volume_unit: MaterialSolidsVolumeUnit
+    solids_volume_quantity: float
+    solids_volume_cost: float
+    solids_area_active: bool
+    solids_area_unit_cost: float
+    solids_area_unit: MaterialSolidsAreaUnit
+    solids_area_quantity: float
+    solids_area_cost: float
+    sum_weight: float
+    weight_percentage: float
+    cost_percentage: float
+    sum_cost: float
+    total_cost: float
+    emissions_members_weight_active: bool
+    emissions_members_weight_unit_emission: float
+    emissions_members_weight_unit: MaterialEmissionsMembersWeightUnit
+    emissions_members_weight_quantity: float
+    emissions_members_weight_emission: float
+    emissions_members_volume_active: bool
+    emissions_members_volume_unit_emission: float
+    emissions_members_volume_unit: MaterialEmissionsMembersVolumeUnit
+    emissions_members_volume_quantity: float
+    emissions_members_volume_emission: float
+    emissions_members_surface_active: bool
+    emissions_members_surface_unit_emission: float
+    emissions_members_surface_unit: MaterialEmissionsMembersSurfaceUnit
+    emissions_members_surface_quantity: float
+    emissions_members_surface_emission: float
+    emissions_surfaces_weight_active: bool
+    emissions_surfaces_weight_unit_emission: float
+    emissions_surfaces_weight_unit: MaterialEmissionsSurfacesWeightUnit
+    emissions_surfaces_weight_quantity: float
+    emissions_surfaces_weight_emission: float
+    emissions_surfaces_volume_active: bool
+    emissions_surfaces_volume_unit_emission: float
+    emissions_surfaces_volume_unit: MaterialEmissionsSurfacesVolumeUnit
+    emissions_surfaces_volume_quantity: float
+    emissions_surfaces_volume_emission: float
+    emissions_surfaces_top_face_active: bool
+    emissions_surfaces_top_face_unit_emission: float
+    emissions_surfaces_top_face_unit: MaterialEmissionsSurfacesTopFaceUnit
+    emissions_surfaces_top_face_quantity: float
+    emissions_surfaces_top_face_emission: float
+    emissions_surfaces_area_active: bool
+    emissions_surfaces_area_unit_emission: float
+    emissions_surfaces_area_unit: MaterialEmissionsSurfacesAreaUnit
+    emissions_surfaces_area_quantity: float
+    emissions_surfaces_area_emission: float
+    emissions_surfaces_bottom_face_active: bool
+    emissions_surfaces_bottom_face_unit_emission: float
+    emissions_surfaces_bottom_face_unit: MaterialEmissionsSurfacesBottomFaceUnit
+    emissions_surfaces_bottom_face_quantity: float
+    emissions_surfaces_bottom_face_emission: float
+    emissions_solids_weight_active: bool
+    emissions_solids_weight_unit_emission: float
+    emissions_solids_weight_unit: MaterialEmissionsSolidsWeightUnit
+    emissions_solids_weight_quantity: float
+    emissions_solids_weight_emission: float
+    emissions_solids_volume_active: bool
+    emissions_solids_volume_unit_emission: float
+    emissions_solids_volume_unit: MaterialEmissionsSolidsVolumeUnit
+    emissions_solids_volume_quantity: float
+    emissions_solids_volume_emission: float
+    emissions_solids_area_active: bool
+    emissions_solids_area_unit_emission: float
+    emissions_solids_area_unit: MaterialEmissionsSolidsAreaUnit
+    emissions_solids_area_quantity: float
+    emissions_solids_area_emission: float
+    emissions_percentage: float
+    emissions_sum: float
+    emissions_total: float
+    use_of_material_model_orientation: MaterialUseOfMaterialModelOrientation
+    use_of_material_model_alignment: MaterialUseOfMaterialModelAlignment
+    id_for_export_import: str
+    metadata_for_export_import: str
+    def __init__(self, no: _Optional[int] = ..., material_type: _Optional[_Union[MaterialMaterialType, str]] = ..., material_model: _Optional[_Union[MaterialMaterialModel, str]] = ..., application_context: _Optional[_Union[MaterialApplicationContext, str]] = ..., diagram_type: _Optional[_Union[MaterialDiagramType, str]] = ..., user_defined_name_enabled: bool = ..., name: _Optional[str] = ..., user_defined: bool = ..., definition_type: _Optional[_Union[MaterialDefinitionType, str]] = ..., stress_failure_hypothesis: _Optional[_Union[MaterialStressFailureHypothesis, str]] = ..., is_temperature_dependent: bool = ..., is_dynamic_increase_factor: bool = ..., has_cost_estimation: bool = ..., optimization: bool = ..., has_emissions_estimation: bool = ..., reference_temperature: _Optional[float] = ..., temperature_properties_sorted: bool = ..., temperature: _Optional[_Union[ArrayOfMaterialTemperature, _Mapping]] = ..., stiffness_matrix_editable: bool = ..., stiffness_modification: bool = ..., stiffness_modification_type: _Optional[_Union[MaterialStiffnessModificationType, str]] = ..., has_linear_elastic_with_nonlinear_criteria: bool = ..., comment: _Optional[str] = ..., is_generated: bool = ..., generating_object_info: _Optional[str] = ..., members_weight_active: bool = ..., members_weight_unit_cost: _Optional[float] = ..., members_weight_unit: _Optional[_Union[MaterialMembersWeightUnit, str]] = ..., members_weight_quantity: _Optional[float] = ..., members_weight_cost: _Optional[float] = ..., members_volume_active: bool = ..., members_volume_unit_cost: _Optional[float] = ..., members_volume_unit: _Optional[_Union[MaterialMembersVolumeUnit, str]] = ..., members_volume_quantity: _Optional[float] = ..., members_volume_cost: _Optional[float] = ..., members_surface_active: bool = ..., members_surface_unit_cost: _Optional[float] = ..., members_surface_unit: _Optional[_Union[MaterialMembersSurfaceUnit, str]] = ..., members_surface_quantity: _Optional[float] = ..., members_surface_cost: _Optional[float] = ..., surfaces_weight_active: bool = ..., surfaces_weight_unit_cost: _Optional[float] = ..., surfaces_weight_unit: _Optional[_Union[MaterialSurfacesWeightUnit, str]] = ..., surfaces_weight_quantity: _Optional[float] = ..., surfaces_weight_cost: _Optional[float] = ..., surfaces_volume_active: bool = ..., surfaces_volume_unit_cost: _Optional[float] = ..., surfaces_volume_unit: _Optional[_Union[MaterialSurfacesVolumeUnit, str]] = ..., surfaces_volume_quantity: _Optional[float] = ..., surfaces_volume_cost: _Optional[float] = ..., surfaces_top_face_active: bool = ..., surfaces_top_face_unit_cost: _Optional[float] = ..., surfaces_top_face_unit: _Optional[_Union[MaterialSurfacesTopFaceUnit, str]] = ..., surfaces_top_face_quantity: _Optional[float] = ..., surfaces_top_face_cost: _Optional[float] = ..., surfaces_area_active: bool = ..., surfaces_area_unit_cost: _Optional[float] = ..., surfaces_area_unit: _Optional[_Union[MaterialSurfacesAreaUnit, str]] = ..., surfaces_area_quantity: _Optional[float] = ..., surfaces_area_cost: _Optional[float] = ..., surfaces_bottom_face_active: bool = ..., surfaces_bottom_face_unit_cost: _Optional[float] = ..., surfaces_bottom_face_unit: _Optional[_Union[MaterialSurfacesBottomFaceUnit, str]] = ..., surfaces_bottom_face_quantity: _Optional[float] = ..., surfaces_bottom_face_cost: _Optional[float] = ..., solids_weight_active: bool = ..., solids_weight_unit_cost: _Optional[float] = ..., solids_weight_unit: _Optional[_Union[MaterialSolidsWeightUnit, str]] = ..., solids_weight_quantity: _Optional[float] = ..., solids_weight_cost: _Optional[float] = ..., solids_volume_active: bool = ..., solids_volume_unit_cost: _Optional[float] = ..., solids_volume_unit: _Optional[_Union[MaterialSolidsVolumeUnit, str]] = ..., solids_volume_quantity: _Optional[float] = ..., solids_volume_cost: _Optional[float] = ..., solids_area_active: bool = ..., solids_area_unit_cost: _Optional[float] = ..., solids_area_unit: _Optional[_Union[MaterialSolidsAreaUnit, str]] = ..., solids_area_quantity: _Optional[float] = ..., solids_area_cost: _Optional[float] = ..., sum_weight: _Optional[float] = ..., weight_percentage: _Optional[float] = ..., cost_percentage: _Optional[float] = ..., sum_cost: _Optional[float] = ..., total_cost: _Optional[float] = ..., emissions_members_weight_active: bool = ..., emissions_members_weight_unit_emission: _Optional[float] = ..., emissions_members_weight_unit: _Optional[_Union[MaterialEmissionsMembersWeightUnit, str]] = ..., emissions_members_weight_quantity: _Optional[float] = ..., emissions_members_weight_emission: _Optional[float] = ..., emissions_members_volume_active: bool = ..., emissions_members_volume_unit_emission: _Optional[float] = ..., emissions_members_volume_unit: _Optional[_Union[MaterialEmissionsMembersVolumeUnit, str]] = ..., emissions_members_volume_quantity: _Optional[float] = ..., emissions_members_volume_emission: _Optional[float] = ..., emissions_members_surface_active: bool = ..., emissions_members_surface_unit_emission: _Optional[float] = ..., emissions_members_surface_unit: _Optional[_Union[MaterialEmissionsMembersSurfaceUnit, str]] = ..., emissions_members_surface_quantity: _Optional[float] = ..., emissions_members_surface_emission: _Optional[float] = ..., emissions_surfaces_weight_active: bool = ..., emissions_surfaces_weight_unit_emission: _Optional[float] = ..., emissions_surfaces_weight_unit: _Optional[_Union[MaterialEmissionsSurfacesWeightUnit, str]] = ..., emissions_surfaces_weight_quantity: _Optional[float] = ..., emissions_surfaces_weight_emission: _Optional[float] = ..., emissions_surfaces_volume_active: bool = ..., emissions_surfaces_volume_unit_emission: _Optional[float] = ..., emissions_surfaces_volume_unit: _Optional[_Union[MaterialEmissionsSurfacesVolumeUnit, str]] = ..., emissions_surfaces_volume_quantity: _Optional[float] = ..., emissions_surfaces_volume_emission: _Optional[float] = ..., emissions_surfaces_top_face_active: bool = ..., emissions_surfaces_top_face_unit_emission: _Optional[float] = ..., emissions_surfaces_top_face_unit: _Optional[_Union[MaterialEmissionsSurfacesTopFaceUnit, str]] = ..., emissions_surfaces_top_face_quantity: _Optional[float] = ..., emissions_surfaces_top_face_emission: _Optional[float] = ..., emissions_surfaces_area_active: bool = ..., emissions_surfaces_area_unit_emission: _Optional[float] = ..., emissions_surfaces_area_unit: _Optional[_Union[MaterialEmissionsSurfacesAreaUnit, str]] = ..., emissions_surfaces_area_quantity: _Optional[float] = ..., emissions_surfaces_area_emission: _Optional[float] = ..., emissions_surfaces_bottom_face_active: bool = ..., emissions_surfaces_bottom_face_unit_emission: _Optional[float] = ..., emissions_surfaces_bottom_face_unit: _Optional[_Union[MaterialEmissionsSurfacesBottomFaceUnit, str]] = ..., emissions_surfaces_bottom_face_quantity: _Optional[float] = ..., emissions_surfaces_bottom_face_emission: _Optional[float] = ..., emissions_solids_weight_active: bool = ..., emissions_solids_weight_unit_emission: _Optional[float] = ..., emissions_solids_weight_unit: _Optional[_Union[MaterialEmissionsSolidsWeightUnit, str]] = ..., emissions_solids_weight_quantity: _Optional[float] = ..., emissions_solids_weight_emission: _Optional[float] = ..., emissions_solids_volume_active: bool = ..., emissions_solids_volume_unit_emission: _Optional[float] = ..., emissions_solids_volume_unit: _Optional[_Union[MaterialEmissionsSolidsVolumeUnit, str]] = ..., emissions_solids_volume_quantity: _Optional[float] = ..., emissions_solids_volume_emission: _Optional[float] = ..., emissions_solids_area_active: bool = ..., emissions_solids_area_unit_emission: _Optional[float] = ..., emissions_solids_area_unit: _Optional[_Union[MaterialEmissionsSolidsAreaUnit, str]] = ..., emissions_solids_area_quantity: _Optional[float] = ..., emissions_solids_area_emission: _Optional[float] = ..., emissions_percentage: _Optional[float] = ..., emissions_sum: _Optional[float] = ..., emissions_total: _Optional[float] = ..., use_of_material_model_orientation: _Optional[_Union[MaterialUseOfMaterialModelOrientation, str]] = ..., use_of_material_model_alignment: _Optional[_Union[MaterialUseOfMaterialModelAlignment, str]] = ..., id_for_export_import: _Optional[str] = ..., metadata_for_export_import: _Optional[str] = ...) -> None: ...
+
+class ArrayOfMaterialTemperature(_message.Message):
+    __slots__ = ()
+    def __init__(self) -> None: ...

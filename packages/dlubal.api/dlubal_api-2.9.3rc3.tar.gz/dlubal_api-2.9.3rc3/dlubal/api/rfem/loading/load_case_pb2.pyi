@@ -1,0 +1,489 @@
+from dlubal.api.common import common_pb2 as _common_pb2
+from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import message as _message
+from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Optional, Union as _Union
+
+DESCRIPTOR: _descriptor.FileDescriptor
+
+class LoadCaseAnalysisType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_ANALYSIS_TYPE_UNKNOWN: _ClassVar[LoadCaseAnalysisType]
+    LOAD_CASE_ANALYSIS_TYPE_CREEP_AND_SHRINKAGE: _ClassVar[LoadCaseAnalysisType]
+    LOAD_CASE_ANALYSIS_TYPE_CUTTING_PATTERN: _ClassVar[LoadCaseAnalysisType]
+    LOAD_CASE_ANALYSIS_TYPE_MODAL: _ClassVar[LoadCaseAnalysisType]
+    LOAD_CASE_ANALYSIS_TYPE_RESPONSE_SPECTRUM: _ClassVar[LoadCaseAnalysisType]
+    LOAD_CASE_ANALYSIS_TYPE_STATIC: _ClassVar[LoadCaseAnalysisType]
+    LOAD_CASE_ANALYSIS_TYPE_TIME_DEPENDENT: _ClassVar[LoadCaseAnalysisType]
+    LOAD_CASE_ANALYSIS_TYPE_TIME_HISTORY: _ClassVar[LoadCaseAnalysisType]
+    LOAD_CASE_ANALYSIS_TYPE_TIME_HISTORY_TIME_DIAGRAM: _ClassVar[LoadCaseAnalysisType]
+    LOAD_CASE_ANALYSIS_TYPE_WIND_SIMULATION: _ClassVar[LoadCaseAnalysisType]
+
+class LoadCaseInitialStateDefinitionType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_FINAL_STATE: _ClassVar[LoadCaseInitialStateDefinitionType]
+    LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_STIFFNESS: _ClassVar[LoadCaseInitialStateDefinitionType]
+    LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_STRAINS: _ClassVar[LoadCaseInitialStateDefinitionType]
+    LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_STRAINS_WITH_USER_DEFINED_FACTORS: _ClassVar[LoadCaseInitialStateDefinitionType]
+
+class LoadCaseFactorPhi(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_FACTOR_PHI_1: _ClassVar[LoadCaseFactorPhi]
+    LOAD_CASE_FACTOR_PHI_2: _ClassVar[LoadCaseFactorPhi]
+    LOAD_CASE_FACTOR_PHI_3: _ClassVar[LoadCaseFactorPhi]
+
+class LoadCaseSpecificationForLoadCaseGr1a(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR1A_TS1: _ClassVar[LoadCaseSpecificationForLoadCaseGr1a]
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR1A_PEDESTRIAN_AND_CYCLE_TRACK: _ClassVar[LoadCaseSpecificationForLoadCaseGr1a]
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR1A_UDL: _ClassVar[LoadCaseSpecificationForLoadCaseGr1a]
+
+class LoadCaseSpecificationForLoadCaseGr2(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR2_HORIZONTAL_FORCES_BRAKING_AND_ACCELERATION: _ClassVar[LoadCaseSpecificationForLoadCaseGr2]
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR2_HORIZONTAL_FORCES_CENTRIFUGAL_FORCES: _ClassVar[LoadCaseSpecificationForLoadCaseGr2]
+
+class LoadCaseSpecificationForLoadCaseGr5(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR5_SPECIAL_VEHICLE: _ClassVar[LoadCaseSpecificationForLoadCaseGr5]
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR5_TS: _ClassVar[LoadCaseSpecificationForLoadCaseGr5]
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR5_UDL: _ClassVar[LoadCaseSpecificationForLoadCaseGr5]
+
+class LoadCaseSpecificationForLoadCaseGr6(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_TS: _ClassVar[LoadCaseSpecificationForLoadCaseGr6]
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_HORIZONTAL_FORCES_BRAKING_AND_ACCELERATION: _ClassVar[LoadCaseSpecificationForLoadCaseGr6]
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_HORIZONTAL_FORCES_CENTRIFUGAL_FORCES: _ClassVar[LoadCaseSpecificationForLoadCaseGr6]
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_PEDESTRIAN_AND_CYCLE_TRACK: _ClassVar[LoadCaseSpecificationForLoadCaseGr6]
+    LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_UDL: _ClassVar[LoadCaseSpecificationForLoadCaseGr6]
+
+class LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_COMBO_FLOOR_LIVE_LOAD: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo]
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_COMBO_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo]
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_COMBO_PARTITIONS: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo]
+
+class LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CYTHYE_COMBO_FLOOR_LIVE_LOAD: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo]
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CYTHYE_COMBO_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo]
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CYTHYE_COMBO_PARTITIONS: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo]
+
+class LoadCaseLiveloadConsiderDesignSituationSeismicWeightCombo(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_WEIGHT_COMBO_FLOOR_LOADS_UP_TO_3: _ClassVar[LoadCaseLiveloadConsiderDesignSituationSeismicWeightCombo]
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_WEIGHT_COMBO_FLOOR_LOADS_ABOVE_3: _ClassVar[LoadCaseLiveloadConsiderDesignSituationSeismicWeightCombo]
+
+class LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_COMBO_LOAD_CALCULATED_ACCORDING_ACTUAL_CONDITIONS: _ClassVar[LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo]
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_COMBO_LOAD_CALCULATED_ACCORDING_EQUIVALENT_UNIFORM_LIBRARY_ARCHIVES: _ClassVar[LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo]
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_COMBO_LOAD_CALCULATED_ACCORDING_EQUIVALENT_UNIFORM_OTHER_CIVIL_BUILDINGS: _ClassVar[LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo]
+
+class LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_ACI_COMBO_FLOOR_LIVE_LOAD: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo]
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_ACI_COMBO_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo]
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_ACI_COMBO_PARTITIONS: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo]
+
+class LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_IBC_COMBO_FLOOR_LIVE_LOAD: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo]
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_IBC_COMBO_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo]
+    LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_IBC_COMBO_PARTITIONS: _ClassVar[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo]
+
+class LoadCaseFlatRoofSnowLoadCategory(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_FLAT_ROOF_SNOW_LOAD_CATEGORY_SNOW_LOADS_OF_30PSF_OR_LESS: _ClassVar[LoadCaseFlatRoofSnowLoadCategory]
+    LOAD_CASE_FLAT_ROOF_SNOW_LOAD_CATEGORY_SNOW_LOADS_EXCEEDING_30PSF: _ClassVar[LoadCaseFlatRoofSnowLoadCategory]
+
+class LoadCaseDistinguishDifferentOverstrengthFactorInDirectionXyCombo(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_DISTINGUISH_DIFFERENT_OVERSTRENGTH_FACTOR_IN_DIRECTION_XY_COMBO_X: _ClassVar[LoadCaseDistinguishDifferentOverstrengthFactorInDirectionXyCombo]
+    LOAD_CASE_DISTINGUISH_DIFFERENT_OVERSTRENGTH_FACTOR_IN_DIRECTION_XY_COMBO_Y: _ClassVar[LoadCaseDistinguishDifferentOverstrengthFactorInDirectionXyCombo]
+
+class LoadCaseLoadDurationSp(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_LOAD_DURATION_SP_LONG: _ClassVar[LoadCaseLoadDurationSp]
+    LOAD_CASE_LOAD_DURATION_SP_SHORT: _ClassVar[LoadCaseLoadDurationSp]
+
+class LoadCaseGroundWaterElevation(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_GROUND_WATER_ELEVATION_MAXIMUM: _ClassVar[LoadCaseGroundWaterElevation]
+    LOAD_CASE_GROUND_WATER_ELEVATION_MINIMUM: _ClassVar[LoadCaseGroundWaterElevation]
+
+class LoadCaseTypeOfImposedActions(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_RESIDENTIAL: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_BALUSTRADES: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_DOMESTIC_HOUSING: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_FLOORS_OFFICES: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_MACHINERY: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_OTHER_ROOFS: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_ROOFS: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_STORAGE: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_OFFICES: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_OTHER: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_PARKING: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_RETAIL: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_STORAGE: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_OTHER_ROOFS: _ClassVar[LoadCaseTypeOfImposedActions]
+    LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_ROOFS: _ClassVar[LoadCaseTypeOfImposedActions]
+LOAD_CASE_ANALYSIS_TYPE_UNKNOWN: LoadCaseAnalysisType
+LOAD_CASE_ANALYSIS_TYPE_CREEP_AND_SHRINKAGE: LoadCaseAnalysisType
+LOAD_CASE_ANALYSIS_TYPE_CUTTING_PATTERN: LoadCaseAnalysisType
+LOAD_CASE_ANALYSIS_TYPE_MODAL: LoadCaseAnalysisType
+LOAD_CASE_ANALYSIS_TYPE_RESPONSE_SPECTRUM: LoadCaseAnalysisType
+LOAD_CASE_ANALYSIS_TYPE_STATIC: LoadCaseAnalysisType
+LOAD_CASE_ANALYSIS_TYPE_TIME_DEPENDENT: LoadCaseAnalysisType
+LOAD_CASE_ANALYSIS_TYPE_TIME_HISTORY: LoadCaseAnalysisType
+LOAD_CASE_ANALYSIS_TYPE_TIME_HISTORY_TIME_DIAGRAM: LoadCaseAnalysisType
+LOAD_CASE_ANALYSIS_TYPE_WIND_SIMULATION: LoadCaseAnalysisType
+LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_FINAL_STATE: LoadCaseInitialStateDefinitionType
+LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_STIFFNESS: LoadCaseInitialStateDefinitionType
+LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_STRAINS: LoadCaseInitialStateDefinitionType
+LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_STRAINS_WITH_USER_DEFINED_FACTORS: LoadCaseInitialStateDefinitionType
+LOAD_CASE_FACTOR_PHI_1: LoadCaseFactorPhi
+LOAD_CASE_FACTOR_PHI_2: LoadCaseFactorPhi
+LOAD_CASE_FACTOR_PHI_3: LoadCaseFactorPhi
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR1A_TS1: LoadCaseSpecificationForLoadCaseGr1a
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR1A_PEDESTRIAN_AND_CYCLE_TRACK: LoadCaseSpecificationForLoadCaseGr1a
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR1A_UDL: LoadCaseSpecificationForLoadCaseGr1a
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR2_HORIZONTAL_FORCES_BRAKING_AND_ACCELERATION: LoadCaseSpecificationForLoadCaseGr2
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR2_HORIZONTAL_FORCES_CENTRIFUGAL_FORCES: LoadCaseSpecificationForLoadCaseGr2
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR5_SPECIAL_VEHICLE: LoadCaseSpecificationForLoadCaseGr5
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR5_TS: LoadCaseSpecificationForLoadCaseGr5
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR5_UDL: LoadCaseSpecificationForLoadCaseGr5
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_TS: LoadCaseSpecificationForLoadCaseGr6
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_HORIZONTAL_FORCES_BRAKING_AND_ACCELERATION: LoadCaseSpecificationForLoadCaseGr6
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_HORIZONTAL_FORCES_CENTRIFUGAL_FORCES: LoadCaseSpecificationForLoadCaseGr6
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_PEDESTRIAN_AND_CYCLE_TRACK: LoadCaseSpecificationForLoadCaseGr6
+LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_UDL: LoadCaseSpecificationForLoadCaseGr6
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_COMBO_FLOOR_LIVE_LOAD: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_COMBO_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_COMBO_PARTITIONS: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CYTHYE_COMBO_FLOOR_LIVE_LOAD: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CYTHYE_COMBO_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CYTHYE_COMBO_PARTITIONS: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_WEIGHT_COMBO_FLOOR_LOADS_UP_TO_3: LoadCaseLiveloadConsiderDesignSituationSeismicWeightCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_WEIGHT_COMBO_FLOOR_LOADS_ABOVE_3: LoadCaseLiveloadConsiderDesignSituationSeismicWeightCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_COMBO_LOAD_CALCULATED_ACCORDING_ACTUAL_CONDITIONS: LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_COMBO_LOAD_CALCULATED_ACCORDING_EQUIVALENT_UNIFORM_LIBRARY_ARCHIVES: LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_COMBO_LOAD_CALCULATED_ACCORDING_EQUIVALENT_UNIFORM_OTHER_CIVIL_BUILDINGS: LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_ACI_COMBO_FLOOR_LIVE_LOAD: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_ACI_COMBO_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_ACI_COMBO_PARTITIONS: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_IBC_COMBO_FLOOR_LIVE_LOAD: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_IBC_COMBO_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo
+LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_IBC_COMBO_PARTITIONS: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo
+LOAD_CASE_FLAT_ROOF_SNOW_LOAD_CATEGORY_SNOW_LOADS_OF_30PSF_OR_LESS: LoadCaseFlatRoofSnowLoadCategory
+LOAD_CASE_FLAT_ROOF_SNOW_LOAD_CATEGORY_SNOW_LOADS_EXCEEDING_30PSF: LoadCaseFlatRoofSnowLoadCategory
+LOAD_CASE_DISTINGUISH_DIFFERENT_OVERSTRENGTH_FACTOR_IN_DIRECTION_XY_COMBO_X: LoadCaseDistinguishDifferentOverstrengthFactorInDirectionXyCombo
+LOAD_CASE_DISTINGUISH_DIFFERENT_OVERSTRENGTH_FACTOR_IN_DIRECTION_XY_COMBO_Y: LoadCaseDistinguishDifferentOverstrengthFactorInDirectionXyCombo
+LOAD_CASE_LOAD_DURATION_SP_LONG: LoadCaseLoadDurationSp
+LOAD_CASE_LOAD_DURATION_SP_SHORT: LoadCaseLoadDurationSp
+LOAD_CASE_GROUND_WATER_ELEVATION_MAXIMUM: LoadCaseGroundWaterElevation
+LOAD_CASE_GROUND_WATER_ELEVATION_MINIMUM: LoadCaseGroundWaterElevation
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_RESIDENTIAL: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_BALUSTRADES: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_DOMESTIC_HOUSING: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_FLOORS_OFFICES: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_MACHINERY: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_OTHER_ROOFS: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_ROOFS: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_CONCENTRACED_STORAGE: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_OFFICES: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_OTHER: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_PARKING: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_RETAIL: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_FLOORS_STORAGE: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_OTHER_ROOFS: LoadCaseTypeOfImposedActions
+LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_DISTRIBUTED_ROOFS: LoadCaseTypeOfImposedActions
+
+class LoadCase(_message.Message):
+    __slots__ = ("no", "analysis_type", "name", "calculate_critical_load", "static_analysis_settings", "stability_analysis_settings", "modal_analysis_settings", "spectral_analysis_settings", "consider_imperfection", "imperfection_case", "consider_initial_state", "initial_state_case", "initial_state_definition_type", "individual_factors_of_selected_objects_table", "consider_construction_stage", "construction_stage_case", "to_solve", "action_category", "self_weight_active", "self_weight_factors", "self_weight_factor_x", "self_weight_factor_y", "self_weight_factor_z", "factor_phi", "load_duration", "loading_start", "time_being_investigated", "import_masses_from", "import_modal_analysis_from", "response_spectrum_is_enabled_in_any_direction", "response_spectrum_is_enabled_in_direction_x", "response_spectrum_is_enabled_in_direction_y", "response_spectrum_is_enabled_in_direction_z", "response_spectrum_in_direction_x", "response_spectrum_in_direction_y", "response_spectrum_in_direction_z", "response_spectrum_scale_factor_in_direction_x", "response_spectrum_scale_factor_in_direction_y", "response_spectrum_scale_factor_in_direction_z", "response_spectrum_rotation_angle", "response_spectrum_consider_accidental_torsion", "response_spectrum_eccentricity_for_x_direction_absolute", "response_spectrum_eccentricity_for_y_direction_absolute", "response_spectrum_eccentricity_for_x_direction_relative", "response_spectrum_eccentricity_for_y_direction_relative", "response_spectrum_building_length_in_x", "response_spectrum_building_length_in_y", "response_spectrum_eccentricity_for_x_direction_is_defined_as_relative", "response_spectrum_eccentricity_for_y_direction_is_defined_as_relative", "response_spectrum_user_defined_building_lengths", "selection_of_modes_mode_activation_table", "selection_of_modes_deselect_modes_according_to_criterion_is_enabled", "selection_of_modes_deselect_modes_modes_according_to_criterion_value", "selection_of_modes_total_effective_modal_mass_factor_f_mex", "selection_of_modes_total_effective_modal_mass_factor_f_mey", "selection_of_modes_total_effective_modal_mass_factor_f_mez", "comment", "is_generated", "generating_object_info", "structure_modification_enabled", "structure_modification", "possibility_of_crowds", "specification_for_load_case_gr1a", "specification_for_load_case_gr2", "specification_for_load_case_gr5", "specification_for_load_case_gr6", "liveload_less_equal_100", "liveload_consider_design_situation_effective_seismic_weight_check", "liveload_consider_design_situation_effective_seismic_weight_combo", "liveload_consider_design_situation_effective_seismic_weight_CYTHYE_check", "liveload_consider_design_situation_effective_seismic_weight_CYTHYE_combo", "liveload_consider_design_situation_seismic_weight_check", "liveload_consider_design_situation_seismic_weight_combo", "liveload_consider_design_situation_seismic_mass_check", "liveload_consider_design_situation_seismic_mass_combo", "consider_design_situation_effective_seismic_weight", "liveload_less_equal_48", "liveload_consider_design_situation_effective_seismic_weight_aci_check", "liveload_consider_design_situation_effective_seismic_weight_aci_combo", "liveload_less_equal_100_ibc", "liveload_consider_design_situation_effective_seismic_weight_ibc_check", "liveload_consider_design_situation_effective_seismic_weight_ibc_combo", "cranehookload_nocombined_roofliveload", "roof_configurations_that_do_not_shed_snow", "flat_roof_snow_load", "flat_roof_snow_load_category", "deadload_factor_shall_be_increased", "deadload_factor_shall_be_increased1", "deadload_factor_shall_be_increased2", "dead_no_effective_seismic_weight_NBC05", "dead_no_effective_seismic_weight_NBC15", "liveload_principal_factor_may_be_reduced1", "liveload_companion_factor_may_be_increased1", "liveload_principal_factor_may_be_reduced2", "liveload_companion_factor_may_be_increased2", "consider_design_situation_effective_seismic_weight_NBC05", "consider_design_situation_effective_seismic_weight_NBC15", "dead_no_effective_seismic_weight", "longtermload_tp_considered_in_limit_state_of_serviceability", "greater_intensity_than_4", "distinguish_different_overstrength_factor_in_direction_xy_check", "distinguish_different_overstrength_factor_in_direction_xy_combo", "load_duration_sp", "ground_water_elevation", "direction_x_check", "direction_y_check", "consider_inclusive_load_case", "inclusive_load_case", "consider_design_situation_seismic_mass_combination", "type_of_imposed_actions", "wind_simulation_wind_direction_angle", "wind_simulation_wind_tunnel_depth_minus_coefficient", "wind_simulation_wind_tunnel_depth_plus_coefficient", "wind_simulation_wind_tunnel_width_minus_coefficient", "wind_simulation_wind_tunnel_width_plus_coefficient", "wind_simulation_wind_tunnel_height_plus_coefficient", "wind_simulation_construction_bounding_box_depth_coefficient", "wind_simulation_construction_bounding_box_height_coefficient", "wind_simulation_construction_bounding_box_width_coefficient", "wind_simulation_wind_tunnel_depth_coefficient", "wind_simulation_wind_tunnel_width_coefficient", "wind_simulation_wind_tunnel_height_coefficient", "wind_simulation_wind_profile", "wind_simulation_analysis_settings", "wind_simulation_wind_tunnel_depth_minus_length", "wind_simulation_wind_tunnel_depth_plus_length", "wind_simulation_wind_tunnel_width_minus_length", "wind_simulation_wind_tunnel_width_plus_length", "wind_simulation_wind_tunnel_height_plus_length", "wind_simulation_construction_bounding_box_depth", "wind_simulation_construction_bounding_box_height", "wind_simulation_construction_bounding_box_width", "wind_simulation_wind_tunnel_depth", "wind_simulation_wind_tunnel_width", "wind_simulation_wind_tunnel_height", "geotechnical_analysis_reset_small_strain_history", "id_for_export_import", "metadata_for_export_import")
+    NO_FIELD_NUMBER: _ClassVar[int]
+    ANALYSIS_TYPE_FIELD_NUMBER: _ClassVar[int]
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    CALCULATE_CRITICAL_LOAD_FIELD_NUMBER: _ClassVar[int]
+    STATIC_ANALYSIS_SETTINGS_FIELD_NUMBER: _ClassVar[int]
+    STABILITY_ANALYSIS_SETTINGS_FIELD_NUMBER: _ClassVar[int]
+    MODAL_ANALYSIS_SETTINGS_FIELD_NUMBER: _ClassVar[int]
+    SPECTRAL_ANALYSIS_SETTINGS_FIELD_NUMBER: _ClassVar[int]
+    CONSIDER_IMPERFECTION_FIELD_NUMBER: _ClassVar[int]
+    IMPERFECTION_CASE_FIELD_NUMBER: _ClassVar[int]
+    CONSIDER_INITIAL_STATE_FIELD_NUMBER: _ClassVar[int]
+    INITIAL_STATE_CASE_FIELD_NUMBER: _ClassVar[int]
+    INITIAL_STATE_DEFINITION_TYPE_FIELD_NUMBER: _ClassVar[int]
+    INDIVIDUAL_FACTORS_OF_SELECTED_OBJECTS_TABLE_FIELD_NUMBER: _ClassVar[int]
+    CONSIDER_CONSTRUCTION_STAGE_FIELD_NUMBER: _ClassVar[int]
+    CONSTRUCTION_STAGE_CASE_FIELD_NUMBER: _ClassVar[int]
+    TO_SOLVE_FIELD_NUMBER: _ClassVar[int]
+    ACTION_CATEGORY_FIELD_NUMBER: _ClassVar[int]
+    SELF_WEIGHT_ACTIVE_FIELD_NUMBER: _ClassVar[int]
+    SELF_WEIGHT_FACTORS_FIELD_NUMBER: _ClassVar[int]
+    SELF_WEIGHT_FACTOR_X_FIELD_NUMBER: _ClassVar[int]
+    SELF_WEIGHT_FACTOR_Y_FIELD_NUMBER: _ClassVar[int]
+    SELF_WEIGHT_FACTOR_Z_FIELD_NUMBER: _ClassVar[int]
+    FACTOR_PHI_FIELD_NUMBER: _ClassVar[int]
+    LOAD_DURATION_FIELD_NUMBER: _ClassVar[int]
+    LOADING_START_FIELD_NUMBER: _ClassVar[int]
+    TIME_BEING_INVESTIGATED_FIELD_NUMBER: _ClassVar[int]
+    IMPORT_MASSES_FROM_FIELD_NUMBER: _ClassVar[int]
+    IMPORT_MODAL_ANALYSIS_FROM_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_IS_ENABLED_IN_ANY_DIRECTION_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_IS_ENABLED_IN_DIRECTION_X_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_IS_ENABLED_IN_DIRECTION_Y_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_IS_ENABLED_IN_DIRECTION_Z_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_IN_DIRECTION_X_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_IN_DIRECTION_Y_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_IN_DIRECTION_Z_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_SCALE_FACTOR_IN_DIRECTION_X_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_SCALE_FACTOR_IN_DIRECTION_Y_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_SCALE_FACTOR_IN_DIRECTION_Z_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_ROTATION_ANGLE_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_CONSIDER_ACCIDENTAL_TORSION_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_ECCENTRICITY_FOR_X_DIRECTION_ABSOLUTE_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_ECCENTRICITY_FOR_Y_DIRECTION_ABSOLUTE_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_ECCENTRICITY_FOR_X_DIRECTION_RELATIVE_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_ECCENTRICITY_FOR_Y_DIRECTION_RELATIVE_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_BUILDING_LENGTH_IN_X_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_BUILDING_LENGTH_IN_Y_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_ECCENTRICITY_FOR_X_DIRECTION_IS_DEFINED_AS_RELATIVE_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_ECCENTRICITY_FOR_Y_DIRECTION_IS_DEFINED_AS_RELATIVE_FIELD_NUMBER: _ClassVar[int]
+    RESPONSE_SPECTRUM_USER_DEFINED_BUILDING_LENGTHS_FIELD_NUMBER: _ClassVar[int]
+    SELECTION_OF_MODES_MODE_ACTIVATION_TABLE_FIELD_NUMBER: _ClassVar[int]
+    SELECTION_OF_MODES_DESELECT_MODES_ACCORDING_TO_CRITERION_IS_ENABLED_FIELD_NUMBER: _ClassVar[int]
+    SELECTION_OF_MODES_DESELECT_MODES_MODES_ACCORDING_TO_CRITERION_VALUE_FIELD_NUMBER: _ClassVar[int]
+    SELECTION_OF_MODES_TOTAL_EFFECTIVE_MODAL_MASS_FACTOR_F_MEX_FIELD_NUMBER: _ClassVar[int]
+    SELECTION_OF_MODES_TOTAL_EFFECTIVE_MODAL_MASS_FACTOR_F_MEY_FIELD_NUMBER: _ClassVar[int]
+    SELECTION_OF_MODES_TOTAL_EFFECTIVE_MODAL_MASS_FACTOR_F_MEZ_FIELD_NUMBER: _ClassVar[int]
+    COMMENT_FIELD_NUMBER: _ClassVar[int]
+    IS_GENERATED_FIELD_NUMBER: _ClassVar[int]
+    GENERATING_OBJECT_INFO_FIELD_NUMBER: _ClassVar[int]
+    STRUCTURE_MODIFICATION_ENABLED_FIELD_NUMBER: _ClassVar[int]
+    STRUCTURE_MODIFICATION_FIELD_NUMBER: _ClassVar[int]
+    POSSIBILITY_OF_CROWDS_FIELD_NUMBER: _ClassVar[int]
+    SPECIFICATION_FOR_LOAD_CASE_GR1A_FIELD_NUMBER: _ClassVar[int]
+    SPECIFICATION_FOR_LOAD_CASE_GR2_FIELD_NUMBER: _ClassVar[int]
+    SPECIFICATION_FOR_LOAD_CASE_GR5_FIELD_NUMBER: _ClassVar[int]
+    SPECIFICATION_FOR_LOAD_CASE_GR6_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_LESS_EQUAL_100_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CHECK_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_COMBO_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CYTHYE_CHECK_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CYTHYE_COMBO_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_WEIGHT_CHECK_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_WEIGHT_COMBO_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_CHECK_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_COMBO_FIELD_NUMBER: _ClassVar[int]
+    CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_LESS_EQUAL_48_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_ACI_CHECK_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_ACI_COMBO_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_LESS_EQUAL_100_IBC_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_IBC_CHECK_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_IBC_COMBO_FIELD_NUMBER: _ClassVar[int]
+    CRANEHOOKLOAD_NOCOMBINED_ROOFLIVELOAD_FIELD_NUMBER: _ClassVar[int]
+    ROOF_CONFIGURATIONS_THAT_DO_NOT_SHED_SNOW_FIELD_NUMBER: _ClassVar[int]
+    FLAT_ROOF_SNOW_LOAD_FIELD_NUMBER: _ClassVar[int]
+    FLAT_ROOF_SNOW_LOAD_CATEGORY_FIELD_NUMBER: _ClassVar[int]
+    DEADLOAD_FACTOR_SHALL_BE_INCREASED_FIELD_NUMBER: _ClassVar[int]
+    DEADLOAD_FACTOR_SHALL_BE_INCREASED1_FIELD_NUMBER: _ClassVar[int]
+    DEADLOAD_FACTOR_SHALL_BE_INCREASED2_FIELD_NUMBER: _ClassVar[int]
+    DEAD_NO_EFFECTIVE_SEISMIC_WEIGHT_NBC05_FIELD_NUMBER: _ClassVar[int]
+    DEAD_NO_EFFECTIVE_SEISMIC_WEIGHT_NBC15_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_PRINCIPAL_FACTOR_MAY_BE_REDUCED1_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_COMPANION_FACTOR_MAY_BE_INCREASED1_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_PRINCIPAL_FACTOR_MAY_BE_REDUCED2_FIELD_NUMBER: _ClassVar[int]
+    LIVELOAD_COMPANION_FACTOR_MAY_BE_INCREASED2_FIELD_NUMBER: _ClassVar[int]
+    CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_NBC05_FIELD_NUMBER: _ClassVar[int]
+    CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_NBC15_FIELD_NUMBER: _ClassVar[int]
+    DEAD_NO_EFFECTIVE_SEISMIC_WEIGHT_FIELD_NUMBER: _ClassVar[int]
+    LONGTERMLOAD_TP_CONSIDERED_IN_LIMIT_STATE_OF_SERVICEABILITY_FIELD_NUMBER: _ClassVar[int]
+    GREATER_INTENSITY_THAN_4_FIELD_NUMBER: _ClassVar[int]
+    DISTINGUISH_DIFFERENT_OVERSTRENGTH_FACTOR_IN_DIRECTION_XY_CHECK_FIELD_NUMBER: _ClassVar[int]
+    DISTINGUISH_DIFFERENT_OVERSTRENGTH_FACTOR_IN_DIRECTION_XY_COMBO_FIELD_NUMBER: _ClassVar[int]
+    LOAD_DURATION_SP_FIELD_NUMBER: _ClassVar[int]
+    GROUND_WATER_ELEVATION_FIELD_NUMBER: _ClassVar[int]
+    DIRECTION_X_CHECK_FIELD_NUMBER: _ClassVar[int]
+    DIRECTION_Y_CHECK_FIELD_NUMBER: _ClassVar[int]
+    CONSIDER_INCLUSIVE_LOAD_CASE_FIELD_NUMBER: _ClassVar[int]
+    INCLUSIVE_LOAD_CASE_FIELD_NUMBER: _ClassVar[int]
+    CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_COMBINATION_FIELD_NUMBER: _ClassVar[int]
+    TYPE_OF_IMPOSED_ACTIONS_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_DIRECTION_ANGLE_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_DEPTH_MINUS_COEFFICIENT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_DEPTH_PLUS_COEFFICIENT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_WIDTH_MINUS_COEFFICIENT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_WIDTH_PLUS_COEFFICIENT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_HEIGHT_PLUS_COEFFICIENT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_CONSTRUCTION_BOUNDING_BOX_DEPTH_COEFFICIENT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_CONSTRUCTION_BOUNDING_BOX_HEIGHT_COEFFICIENT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_CONSTRUCTION_BOUNDING_BOX_WIDTH_COEFFICIENT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_DEPTH_COEFFICIENT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_WIDTH_COEFFICIENT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_HEIGHT_COEFFICIENT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_PROFILE_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_ANALYSIS_SETTINGS_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_DEPTH_MINUS_LENGTH_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_DEPTH_PLUS_LENGTH_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_WIDTH_MINUS_LENGTH_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_WIDTH_PLUS_LENGTH_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_HEIGHT_PLUS_LENGTH_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_CONSTRUCTION_BOUNDING_BOX_DEPTH_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_CONSTRUCTION_BOUNDING_BOX_HEIGHT_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_CONSTRUCTION_BOUNDING_BOX_WIDTH_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_DEPTH_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_WIDTH_FIELD_NUMBER: _ClassVar[int]
+    WIND_SIMULATION_WIND_TUNNEL_HEIGHT_FIELD_NUMBER: _ClassVar[int]
+    GEOTECHNICAL_ANALYSIS_RESET_SMALL_STRAIN_HISTORY_FIELD_NUMBER: _ClassVar[int]
+    ID_FOR_EXPORT_IMPORT_FIELD_NUMBER: _ClassVar[int]
+    METADATA_FOR_EXPORT_IMPORT_FIELD_NUMBER: _ClassVar[int]
+    no: int
+    analysis_type: LoadCaseAnalysisType
+    name: str
+    calculate_critical_load: bool
+    static_analysis_settings: int
+    stability_analysis_settings: int
+    modal_analysis_settings: int
+    spectral_analysis_settings: int
+    consider_imperfection: bool
+    imperfection_case: int
+    consider_initial_state: bool
+    initial_state_case: int
+    initial_state_definition_type: LoadCaseInitialStateDefinitionType
+    individual_factors_of_selected_objects_table: ArrayOfLoadCaseIndividualFactorsOfSelectedObjectsTable
+    consider_construction_stage: bool
+    construction_stage_case: int
+    to_solve: bool
+    action_category: str
+    self_weight_active: bool
+    self_weight_factors: _common_pb2.Vector3d
+    self_weight_factor_x: float
+    self_weight_factor_y: float
+    self_weight_factor_z: float
+    factor_phi: LoadCaseFactorPhi
+    load_duration: str
+    loading_start: float
+    time_being_investigated: float
+    import_masses_from: int
+    import_modal_analysis_from: int
+    response_spectrum_is_enabled_in_any_direction: bool
+    response_spectrum_is_enabled_in_direction_x: bool
+    response_spectrum_is_enabled_in_direction_y: bool
+    response_spectrum_is_enabled_in_direction_z: bool
+    response_spectrum_in_direction_x: int
+    response_spectrum_in_direction_y: int
+    response_spectrum_in_direction_z: int
+    response_spectrum_scale_factor_in_direction_x: float
+    response_spectrum_scale_factor_in_direction_y: float
+    response_spectrum_scale_factor_in_direction_z: float
+    response_spectrum_rotation_angle: float
+    response_spectrum_consider_accidental_torsion: bool
+    response_spectrum_eccentricity_for_x_direction_absolute: float
+    response_spectrum_eccentricity_for_y_direction_absolute: float
+    response_spectrum_eccentricity_for_x_direction_relative: float
+    response_spectrum_eccentricity_for_y_direction_relative: float
+    response_spectrum_building_length_in_x: float
+    response_spectrum_building_length_in_y: float
+    response_spectrum_eccentricity_for_x_direction_is_defined_as_relative: bool
+    response_spectrum_eccentricity_for_y_direction_is_defined_as_relative: bool
+    response_spectrum_user_defined_building_lengths: bool
+    selection_of_modes_mode_activation_table: ArrayOfLoadCaseSelectionOfModesModeActivationTable
+    selection_of_modes_deselect_modes_according_to_criterion_is_enabled: bool
+    selection_of_modes_deselect_modes_modes_according_to_criterion_value: float
+    selection_of_modes_total_effective_modal_mass_factor_f_mex: float
+    selection_of_modes_total_effective_modal_mass_factor_f_mey: float
+    selection_of_modes_total_effective_modal_mass_factor_f_mez: float
+    comment: str
+    is_generated: bool
+    generating_object_info: str
+    structure_modification_enabled: bool
+    structure_modification: int
+    possibility_of_crowds: bool
+    specification_for_load_case_gr1a: LoadCaseSpecificationForLoadCaseGr1a
+    specification_for_load_case_gr2: LoadCaseSpecificationForLoadCaseGr2
+    specification_for_load_case_gr5: LoadCaseSpecificationForLoadCaseGr5
+    specification_for_load_case_gr6: LoadCaseSpecificationForLoadCaseGr6
+    liveload_less_equal_100: bool
+    liveload_consider_design_situation_effective_seismic_weight_check: bool
+    liveload_consider_design_situation_effective_seismic_weight_combo: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo
+    liveload_consider_design_situation_effective_seismic_weight_CYTHYE_check: bool
+    liveload_consider_design_situation_effective_seismic_weight_CYTHYE_combo: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo
+    liveload_consider_design_situation_seismic_weight_check: bool
+    liveload_consider_design_situation_seismic_weight_combo: LoadCaseLiveloadConsiderDesignSituationSeismicWeightCombo
+    liveload_consider_design_situation_seismic_mass_check: bool
+    liveload_consider_design_situation_seismic_mass_combo: LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo
+    consider_design_situation_effective_seismic_weight: bool
+    liveload_less_equal_48: bool
+    liveload_consider_design_situation_effective_seismic_weight_aci_check: bool
+    liveload_consider_design_situation_effective_seismic_weight_aci_combo: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo
+    liveload_less_equal_100_ibc: bool
+    liveload_consider_design_situation_effective_seismic_weight_ibc_check: bool
+    liveload_consider_design_situation_effective_seismic_weight_ibc_combo: LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo
+    cranehookload_nocombined_roofliveload: bool
+    roof_configurations_that_do_not_shed_snow: bool
+    flat_roof_snow_load: bool
+    flat_roof_snow_load_category: LoadCaseFlatRoofSnowLoadCategory
+    deadload_factor_shall_be_increased: bool
+    deadload_factor_shall_be_increased1: bool
+    deadload_factor_shall_be_increased2: bool
+    dead_no_effective_seismic_weight_NBC05: bool
+    dead_no_effective_seismic_weight_NBC15: bool
+    liveload_principal_factor_may_be_reduced1: bool
+    liveload_companion_factor_may_be_increased1: bool
+    liveload_principal_factor_may_be_reduced2: bool
+    liveload_companion_factor_may_be_increased2: bool
+    consider_design_situation_effective_seismic_weight_NBC05: bool
+    consider_design_situation_effective_seismic_weight_NBC15: bool
+    dead_no_effective_seismic_weight: bool
+    longtermload_tp_considered_in_limit_state_of_serviceability: bool
+    greater_intensity_than_4: bool
+    distinguish_different_overstrength_factor_in_direction_xy_check: bool
+    distinguish_different_overstrength_factor_in_direction_xy_combo: LoadCaseDistinguishDifferentOverstrengthFactorInDirectionXyCombo
+    load_duration_sp: LoadCaseLoadDurationSp
+    ground_water_elevation: LoadCaseGroundWaterElevation
+    direction_x_check: bool
+    direction_y_check: bool
+    consider_inclusive_load_case: bool
+    inclusive_load_case: int
+    consider_design_situation_seismic_mass_combination: bool
+    type_of_imposed_actions: LoadCaseTypeOfImposedActions
+    wind_simulation_wind_direction_angle: float
+    wind_simulation_wind_tunnel_depth_minus_coefficient: float
+    wind_simulation_wind_tunnel_depth_plus_coefficient: float
+    wind_simulation_wind_tunnel_width_minus_coefficient: float
+    wind_simulation_wind_tunnel_width_plus_coefficient: float
+    wind_simulation_wind_tunnel_height_plus_coefficient: float
+    wind_simulation_construction_bounding_box_depth_coefficient: float
+    wind_simulation_construction_bounding_box_height_coefficient: float
+    wind_simulation_construction_bounding_box_width_coefficient: float
+    wind_simulation_wind_tunnel_depth_coefficient: float
+    wind_simulation_wind_tunnel_width_coefficient: float
+    wind_simulation_wind_tunnel_height_coefficient: float
+    wind_simulation_wind_profile: int
+    wind_simulation_analysis_settings: int
+    wind_simulation_wind_tunnel_depth_minus_length: float
+    wind_simulation_wind_tunnel_depth_plus_length: float
+    wind_simulation_wind_tunnel_width_minus_length: float
+    wind_simulation_wind_tunnel_width_plus_length: float
+    wind_simulation_wind_tunnel_height_plus_length: float
+    wind_simulation_construction_bounding_box_depth: float
+    wind_simulation_construction_bounding_box_height: float
+    wind_simulation_construction_bounding_box_width: float
+    wind_simulation_wind_tunnel_depth: float
+    wind_simulation_wind_tunnel_width: float
+    wind_simulation_wind_tunnel_height: float
+    geotechnical_analysis_reset_small_strain_history: bool
+    id_for_export_import: str
+    metadata_for_export_import: str
+    def __init__(self, no: _Optional[int] = ..., analysis_type: _Optional[_Union[LoadCaseAnalysisType, str]] = ..., name: _Optional[str] = ..., calculate_critical_load: bool = ..., static_analysis_settings: _Optional[int] = ..., stability_analysis_settings: _Optional[int] = ..., modal_analysis_settings: _Optional[int] = ..., spectral_analysis_settings: _Optional[int] = ..., consider_imperfection: bool = ..., imperfection_case: _Optional[int] = ..., consider_initial_state: bool = ..., initial_state_case: _Optional[int] = ..., initial_state_definition_type: _Optional[_Union[LoadCaseInitialStateDefinitionType, str]] = ..., individual_factors_of_selected_objects_table: _Optional[_Union[ArrayOfLoadCaseIndividualFactorsOfSelectedObjectsTable, _Mapping]] = ..., consider_construction_stage: bool = ..., construction_stage_case: _Optional[int] = ..., to_solve: bool = ..., action_category: _Optional[str] = ..., self_weight_active: bool = ..., self_weight_factors: _Optional[_Union[_common_pb2.Vector3d, _Mapping]] = ..., self_weight_factor_x: _Optional[float] = ..., self_weight_factor_y: _Optional[float] = ..., self_weight_factor_z: _Optional[float] = ..., factor_phi: _Optional[_Union[LoadCaseFactorPhi, str]] = ..., load_duration: _Optional[str] = ..., loading_start: _Optional[float] = ..., time_being_investigated: _Optional[float] = ..., import_masses_from: _Optional[int] = ..., import_modal_analysis_from: _Optional[int] = ..., response_spectrum_is_enabled_in_any_direction: bool = ..., response_spectrum_is_enabled_in_direction_x: bool = ..., response_spectrum_is_enabled_in_direction_y: bool = ..., response_spectrum_is_enabled_in_direction_z: bool = ..., response_spectrum_in_direction_x: _Optional[int] = ..., response_spectrum_in_direction_y: _Optional[int] = ..., response_spectrum_in_direction_z: _Optional[int] = ..., response_spectrum_scale_factor_in_direction_x: _Optional[float] = ..., response_spectrum_scale_factor_in_direction_y: _Optional[float] = ..., response_spectrum_scale_factor_in_direction_z: _Optional[float] = ..., response_spectrum_rotation_angle: _Optional[float] = ..., response_spectrum_consider_accidental_torsion: bool = ..., response_spectrum_eccentricity_for_x_direction_absolute: _Optional[float] = ..., response_spectrum_eccentricity_for_y_direction_absolute: _Optional[float] = ..., response_spectrum_eccentricity_for_x_direction_relative: _Optional[float] = ..., response_spectrum_eccentricity_for_y_direction_relative: _Optional[float] = ..., response_spectrum_building_length_in_x: _Optional[float] = ..., response_spectrum_building_length_in_y: _Optional[float] = ..., response_spectrum_eccentricity_for_x_direction_is_defined_as_relative: bool = ..., response_spectrum_eccentricity_for_y_direction_is_defined_as_relative: bool = ..., response_spectrum_user_defined_building_lengths: bool = ..., selection_of_modes_mode_activation_table: _Optional[_Union[ArrayOfLoadCaseSelectionOfModesModeActivationTable, _Mapping]] = ..., selection_of_modes_deselect_modes_according_to_criterion_is_enabled: bool = ..., selection_of_modes_deselect_modes_modes_according_to_criterion_value: _Optional[float] = ..., selection_of_modes_total_effective_modal_mass_factor_f_mex: _Optional[float] = ..., selection_of_modes_total_effective_modal_mass_factor_f_mey: _Optional[float] = ..., selection_of_modes_total_effective_modal_mass_factor_f_mez: _Optional[float] = ..., comment: _Optional[str] = ..., is_generated: bool = ..., generating_object_info: _Optional[str] = ..., structure_modification_enabled: bool = ..., structure_modification: _Optional[int] = ..., possibility_of_crowds: bool = ..., specification_for_load_case_gr1a: _Optional[_Union[LoadCaseSpecificationForLoadCaseGr1a, str]] = ..., specification_for_load_case_gr2: _Optional[_Union[LoadCaseSpecificationForLoadCaseGr2, str]] = ..., specification_for_load_case_gr5: _Optional[_Union[LoadCaseSpecificationForLoadCaseGr5, str]] = ..., specification_for_load_case_gr6: _Optional[_Union[LoadCaseSpecificationForLoadCaseGr6, str]] = ..., liveload_less_equal_100: bool = ..., liveload_consider_design_situation_effective_seismic_weight_check: bool = ..., liveload_consider_design_situation_effective_seismic_weight_combo: _Optional[_Union[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo, str]] = ..., liveload_consider_design_situation_effective_seismic_weight_CYTHYE_check: bool = ..., liveload_consider_design_situation_effective_seismic_weight_CYTHYE_combo: _Optional[_Union[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo, str]] = ..., liveload_consider_design_situation_seismic_weight_check: bool = ..., liveload_consider_design_situation_seismic_weight_combo: _Optional[_Union[LoadCaseLiveloadConsiderDesignSituationSeismicWeightCombo, str]] = ..., liveload_consider_design_situation_seismic_mass_check: bool = ..., liveload_consider_design_situation_seismic_mass_combo: _Optional[_Union[LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo, str]] = ..., consider_design_situation_effective_seismic_weight: bool = ..., liveload_less_equal_48: bool = ..., liveload_consider_design_situation_effective_seismic_weight_aci_check: bool = ..., liveload_consider_design_situation_effective_seismic_weight_aci_combo: _Optional[_Union[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo, str]] = ..., liveload_less_equal_100_ibc: bool = ..., liveload_consider_design_situation_effective_seismic_weight_ibc_check: bool = ..., liveload_consider_design_situation_effective_seismic_weight_ibc_combo: _Optional[_Union[LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo, str]] = ..., cranehookload_nocombined_roofliveload: bool = ..., roof_configurations_that_do_not_shed_snow: bool = ..., flat_roof_snow_load: bool = ..., flat_roof_snow_load_category: _Optional[_Union[LoadCaseFlatRoofSnowLoadCategory, str]] = ..., deadload_factor_shall_be_increased: bool = ..., deadload_factor_shall_be_increased1: bool = ..., deadload_factor_shall_be_increased2: bool = ..., dead_no_effective_seismic_weight_NBC05: bool = ..., dead_no_effective_seismic_weight_NBC15: bool = ..., liveload_principal_factor_may_be_reduced1: bool = ..., liveload_companion_factor_may_be_increased1: bool = ..., liveload_principal_factor_may_be_reduced2: bool = ..., liveload_companion_factor_may_be_increased2: bool = ..., consider_design_situation_effective_seismic_weight_NBC05: bool = ..., consider_design_situation_effective_seismic_weight_NBC15: bool = ..., dead_no_effective_seismic_weight: bool = ..., longtermload_tp_considered_in_limit_state_of_serviceability: bool = ..., greater_intensity_than_4: bool = ..., distinguish_different_overstrength_factor_in_direction_xy_check: bool = ..., distinguish_different_overstrength_factor_in_direction_xy_combo: _Optional[_Union[LoadCaseDistinguishDifferentOverstrengthFactorInDirectionXyCombo, str]] = ..., load_duration_sp: _Optional[_Union[LoadCaseLoadDurationSp, str]] = ..., ground_water_elevation: _Optional[_Union[LoadCaseGroundWaterElevation, str]] = ..., direction_x_check: bool = ..., direction_y_check: bool = ..., consider_inclusive_load_case: bool = ..., inclusive_load_case: _Optional[int] = ..., consider_design_situation_seismic_mass_combination: bool = ..., type_of_imposed_actions: _Optional[_Union[LoadCaseTypeOfImposedActions, str]] = ..., wind_simulation_wind_direction_angle: _Optional[float] = ..., wind_simulation_wind_tunnel_depth_minus_coefficient: _Optional[float] = ..., wind_simulation_wind_tunnel_depth_plus_coefficient: _Optional[float] = ..., wind_simulation_wind_tunnel_width_minus_coefficient: _Optional[float] = ..., wind_simulation_wind_tunnel_width_plus_coefficient: _Optional[float] = ..., wind_simulation_wind_tunnel_height_plus_coefficient: _Optional[float] = ..., wind_simulation_construction_bounding_box_depth_coefficient: _Optional[float] = ..., wind_simulation_construction_bounding_box_height_coefficient: _Optional[float] = ..., wind_simulation_construction_bounding_box_width_coefficient: _Optional[float] = ..., wind_simulation_wind_tunnel_depth_coefficient: _Optional[float] = ..., wind_simulation_wind_tunnel_width_coefficient: _Optional[float] = ..., wind_simulation_wind_tunnel_height_coefficient: _Optional[float] = ..., wind_simulation_wind_profile: _Optional[int] = ..., wind_simulation_analysis_settings: _Optional[int] = ..., wind_simulation_wind_tunnel_depth_minus_length: _Optional[float] = ..., wind_simulation_wind_tunnel_depth_plus_length: _Optional[float] = ..., wind_simulation_wind_tunnel_width_minus_length: _Optional[float] = ..., wind_simulation_wind_tunnel_width_plus_length: _Optional[float] = ..., wind_simulation_wind_tunnel_height_plus_length: _Optional[float] = ..., wind_simulation_construction_bounding_box_depth: _Optional[float] = ..., wind_simulation_construction_bounding_box_height: _Optional[float] = ..., wind_simulation_construction_bounding_box_width: _Optional[float] = ..., wind_simulation_wind_tunnel_depth: _Optional[float] = ..., wind_simulation_wind_tunnel_width: _Optional[float] = ..., wind_simulation_wind_tunnel_height: _Optional[float] = ..., geotechnical_analysis_reset_small_strain_history: bool = ..., id_for_export_import: _Optional[str] = ..., metadata_for_export_import: _Optional[str] = ...) -> None: ...
+
+class ArrayOfLoadCaseIndividualFactorsOfSelectedObjectsTable(_message.Message):
+    __slots__ = ()
+    def __init__(self) -> None: ...
+
+class ArrayOfLoadCaseSelectionOfModesModeActivationTable(_message.Message):
+    __slots__ = ()
+    def __init__(self) -> None: ...
