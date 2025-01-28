@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+handler_reviews_lib/__init__.py
+handler_reviews_lib.egg-info/PKG-INFO
+handler_reviews_lib.egg-info/SOURCES.txt
+handler_reviews_lib.egg-info/dependency_links.txt
+handler_reviews_lib.egg-info/requires.txt
+handler_reviews_lib.egg-info/top_level.txt
+handler_reviews_lib/handler_reviews/__init__.py
+handler_reviews_lib/handler_reviews/enums_type.py
+handler_reviews_lib/handler_reviews/gpt_reviews_handler.py
+handler_reviews_lib/handler_reviews/handler_reviews.py
+handler_reviews_lib/handler_reviews/template_reviews_handler.py
+handler_reviews_lib/interfaces/__init__.py
+handler_reviews_lib/interfaces/interface_handler_reviews.py
+handler_reviews_lib/interfaces/interface_reviews_handler_factory.py
