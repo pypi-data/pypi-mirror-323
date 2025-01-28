@@ -1,0 +1,8 @@
+supadata/__init__.py,sha256=WGivCY37oobbgYiaT_n2yIKAom4oSYmqzsJztMcMR9E,484
+supadata/client.py,sha256=7QK6-97w44MFWheqoGF4jiA5cZtZiHZ410eCc8satRA,5061
+supadata/errors.py,sha256=ZYu0_Oct-RRwLTdwFPvVcZxU7-CIkYI_qTtJFsP9O2Y,946
+supadata/types.py,sha256=nv9bHtkKQbAkmtDjoilr5kcnnCPPjpXb3p0zpGMff4E,2233
+supadata-1.0.0.dist-info/METADATA,sha256=U13nUhUqnEeI2fCu9OfJuJ5vs-jVtqtm-XTxhbDCqlk,2907
+supadata-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+supadata-1.0.0.dist-info/licenses/LICENSE,sha256=4seIJwn6dIRxlztdqzABm1UPhKry1yVgRb66J-KzznI,1065
+supadata-1.0.0.dist-info/RECORD,,
