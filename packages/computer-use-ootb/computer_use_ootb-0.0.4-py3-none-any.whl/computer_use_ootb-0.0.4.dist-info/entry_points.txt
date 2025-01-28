@@ -1,0 +1,2 @@
+[console_scripts]
+computer-use-ootb = computer_use_ootb.app:launch_app
