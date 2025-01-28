@@ -1,0 +1,17 @@
+npycomp/__init__.py,sha256=jmTYaxJp3NPqauStQdiaS-PTTVd5frCmyJZkRFzLXEM,239
+npycomp/_include/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npycomp/_include/_graph.py,sha256=2GHcZthHAWa3Hrvd1N0_BhwedH2h6Qvl3QbmGSowKk4,630
+npycomp/problems/__init__.py,sha256=HlyiDA7yH_AMn-JHo30lEpqHiwev0gCuB45aoKhCx_w,333
+npycomp/problems/_clique.py,sha256=0NxXnUciasmMbAVwUtI9YmwUm9MmYdYPqNli2923OlI,1829
+npycomp/problems/_ilp.py,sha256=vEs2t3bCJfcMSzgD_31uQoXwAWlXLeokABdvnQD8Kn4,591
+npycomp/problems/_problem.py,sha256=rvto9CztmXnz4ebgACzw1a6cNKbGg-dPiD8ws6jPpGI,1245
+npycomp/problems/_sat.py,sha256=I52ZDEgF9bfdv5ihdf8P2ok8DcElPb84aM53Dw_0chw,3029
+npycomp/problems/_sat_solver.py,sha256=hlcMq3Nsu_1JN1XoWFcsZejjVxG6fkf9y4rBuxcEzjM,6096
+npycomp/reductions/__init__.py,sha256=nu03_I0OewMD9Ty32RUYW7I0Di54F77axeANEoWDqo0,339
+npycomp/reductions/_clique_to_sat.py,sha256=64h_sjmRIraJ9t71h0g_HFFcuA6JQMbWK8sLI94AsS8,1939
+npycomp/reductions/_directory.py,sha256=BDsdpg3PnquYFUTKAyoipaIXQZLRPJf7zhjgBTII_IU,932
+npycomp-0.0.0.dist-info/LICENSE,sha256=LpOOlnGXW2Tl5n3KszIX3TFBa5YkwUcUivedBJva23M,1058
+npycomp-0.0.0.dist-info/METADATA,sha256=LmWm2510G55C0g6WpC7S8AwfaNfbFo5A5hLyLuCBrfc,1684
+npycomp-0.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+npycomp-0.0.0.dist-info/top_level.txt,sha256=3nHT1EnV-RBGUiTpCjjKo1IQ5eWEoN6u2iYQc3PqWHY,8
+npycomp-0.0.0.dist-info/RECORD,,
