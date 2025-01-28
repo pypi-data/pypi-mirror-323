@@ -1,0 +1,17 @@
+django-otp>=1.5.1
+fido2<2.0,>=1.1.3
+
+[docs]
+readthedocs-sphinx-search==0.1.0
+Sphinx==4.0.3
+sphinx-rtd-theme==0.5.2
+
+[kleides-mfa]
+kleides-mfa>=0.2.2
+
+[test]
+coverage
+factory-boy
+pytest
+pytest-cov
+pytest-django

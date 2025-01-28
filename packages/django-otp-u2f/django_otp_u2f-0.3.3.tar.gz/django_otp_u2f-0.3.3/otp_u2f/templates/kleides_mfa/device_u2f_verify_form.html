@@ -1,0 +1,84 @@
+{% extends "kleides_mfa/device_verify_form.html" %}
+
+{% load i18n static %}
+
+{% block extra_js %}{{ block.super }}
+<script src="{% static 'js/base64url-arraybuffer.js' %}"></script>
+<script src="{% static 'js/cbor.js' %}"></script>
+<script type="text/javascript">
+jQuery(function ($) {
+    var form = $('#kleides-mfa-verify-form').on('submit', authenticate_start);
+    var try_again_button = $('<button class="btn btn-primary" type="submit"/>')
+        .text('{{ _('Try again')|escapejs }}')
+        .insertAfter('#kleides-mfa-alternate-methods');
+
+    function authenticate_start(event) {
+        event.preventDefault();
+        try_again_button.hide();
+        fetch('{% url "otp_u2f:authenticate" %}', {
+            method: 'POST',
+            headers: {'X-CSRFToken': $('[name=csrfmiddlewaretoken]').val()}
+        }).then(function (response) {
+            if (response.ok) return response.text();
+            throw new Error('Failed to get authentication challenge');
+        }).then(B64_AB.decode).then(CBOR.decode).then(function (options) {
+            return navigator.credentials.get(options);
+        }).then(function(assertion) {
+            $('#id_otp_token').val(B64_AB.encode(CBOR.encode({
+              'credentialId': new Uint8Array(assertion.rawId),
+              'authenticatorData': new Uint8Array(assertion.response.authenticatorData),
+              'clientDataJSON': new Uint8Array(assertion.response.clientDataJSON),
+              'signature': new Uint8Array(assertion.response.signature)
+            })));
+            form.off('submit').submit();
+        }).catch(function (error) {
+            $('#u2f-authentication-error').show();
+            try_again_button.show();
+            console.debug(error);
+        });
+    }
+
+    if (!window.PublicKeyCredential) {
+        $('#u2f-support-warning').show();
+    } else if (form.find('.alert').length > 0) {
+        try_again_button.show();
+    } else {
+        form.submit();
+    }
+});
+</script>
+{% endblock extra_js %}
+
+{% block form_description %}
+<div id='u2f-authentication-error' class='alert alert-danger' style='display: none;'>
+{% trans 'Unable to authenticate U2F device. Reload the page to try again.' %}
+</div>
+<div id='u2f-timeout' class='alert alert-danger' style='display: none;'>
+{% trans 'Timeout while waiting for U2F response. Reload the page to try again.' %}
+</div>
+<div id='u2f-not-registered' class='alert alert-danger' style='display: none;'>
+{% trans 'This U2F device is not registered for this account.' %}
+</div>
+
+<div id='u2f-support-warning' style='display: none;'>
+<div class='alert alert-danger'>
+{% trans 'You must be using a compatible browser to use a U2F security key.' %}
+</div>
+<p>
+{% blocktrans %}
+The following browsers currently support the use of web authentication security keys:
+<ul>
+<li>Firefox, version 60 and later.</li>
+<li>Chrome, version 67 and later.</li>
+<li>Edge, version 18 and later.</li>
+<li>Opera, version 54 and later.</li>
+<li>Safari, version 13 and later.</li>
+</ul>
+{% endblocktrans %}
+</p>
+</div>
+
+<p>
+{% trans 'Connect your U2F device and press the button to verify access to this account.' %}
+</p>
+{% endblock form_description %}

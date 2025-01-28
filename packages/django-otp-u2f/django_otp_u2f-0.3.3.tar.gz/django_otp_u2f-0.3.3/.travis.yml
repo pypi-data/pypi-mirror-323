@@ -1,0 +1,19 @@
+language: python
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.9"
+matrix:
+  include:
+    - python: "3.9"
+      env: TOXENV=flake8
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libusb-1.0-0-dev libudev-dev
+  - sudo pip install -U pip setuptools
+  - pip --version
+  # For python <=3.6 the cffi build requires rust/cargo.
+  - sudo apt-get install -y cargo rustc
+install: pip install tox-travis
+script: tox
