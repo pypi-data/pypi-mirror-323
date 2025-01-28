@@ -1,0 +1,39 @@
+Metadata-Version: 2.2
+Name: nkululeko
+Version: 0.93.13
+Summary: Machine learning audio prediction experiments based on templates
+Home-page: https://github.com/felixbur/nkululeko
+Author: Felix Burkhardt
+Author-email: fxburk@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: audeer
+Requires-Dist: audformat
+Requires-Dist: audinterface
+Requires-Dist: audiofile
+Requires-Dist: audiomentations
+Requires-Dist: audmetric
+Requires-Dist: audonnx
+Requires-Dist: confidence_intervals
+Requires-Dist: datasets
+Requires-Dist: imageio
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: opensmile
+Requires-Dist: pandas
+Requires-Dist: praat-parselmouth
+Requires-Dist: scikit_learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: sounddevice
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: transformers
+Requires-Dist: umap-learn
+Requires-Dist: xgboost
+Requires-Dist: pylatex
