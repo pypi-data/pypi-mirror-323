@@ -1,0 +1,2 @@
+[console_scripts]
+gitpuller = nbgitpuller.pull:main
