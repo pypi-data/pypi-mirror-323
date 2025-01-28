@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: aioblitzkrieg
+Version: 0.2
+Summary: @BlitzkriegAutobot asynchronous api wrapper
+Home-page: https://github.com/bblitzKrieg/aioblitzkrieg
+Author: Blitzkrieg
+Author-email: blitzkriegdev@blitzkrieg.space
+License: BSD 2-clause
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
+
+## **[@BlitzkriegAutobot](https://t.me/BlitzkriegAutobot) asynchronous api wrapper**
+
+**Docs:** https://blitzkriegpublicapi.readme.io/
+
+**Install**
+
+```bash
+pip install aioblitzkrieg
+```
+
+**Basic methods**
+
+```python
+from aioblitzkrieg import AioBlitzkrieg
+
+client = AioBlitzkrieg(api_key='863...e12')
+
+me = await client.get_me()
+archives = await client.get_archives()
+report = await client.report_archive(archive_id_id=1)
+prices = await client.get_prices('usd')
+
+print(me, archives, report, prices, sep='\n')
+```
+
+**Upload archive method**
+
+```python
+from aioblitzkrieg import AioBlitzkrieg
+
+client = AioBlitzkrieg(api_key='863...e12')
+
+path = "sample.zip"
+
+result = await client.upload_archive(
+    file_path=path
+)
+print(result)
+
+# Upload archive via unique identifier of the referral partner
+
+ref_id = 'MY_SERVICE_REF_ID'
+
+result = await client.upload_archive(
+    file_path=path,
+    ref_id=ref_id
+)
+print(result)
+```
