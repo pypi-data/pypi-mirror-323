@@ -1,0 +1,1 @@
+This is a utility library for my personal project. I published it on PyPI to be able to update it seamlessly in PyCharm.
