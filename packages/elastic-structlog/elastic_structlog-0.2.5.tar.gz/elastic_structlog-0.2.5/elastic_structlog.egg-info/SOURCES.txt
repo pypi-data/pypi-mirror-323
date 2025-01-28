@@ -1,0 +1,16 @@
+README.md
+setup.py
+elastic_structlog/__init__.py
+elastic_structlog/elastic_extension.py
+elastic_structlog/elastic_processor.py
+elastic_structlog/elastic_structlog_serializer.py
+elastic_structlog.egg-info/PKG-INFO
+elastic_structlog.egg-info/SOURCES.txt
+elastic_structlog.egg-info/dependency_links.txt
+elastic_structlog.egg-info/requires.txt
+elastic_structlog.egg-info/top_level.txt
+example/__init__.py
+example/main.py
+tests/__init__.py
+tests/es_struct_log_test.py
+tests/service_test.py
