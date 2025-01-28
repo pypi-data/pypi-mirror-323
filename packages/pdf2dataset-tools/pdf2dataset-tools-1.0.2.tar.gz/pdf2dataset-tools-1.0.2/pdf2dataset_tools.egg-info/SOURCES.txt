@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+pdf2dataset/__init__.py
+pdf2dataset/distributor.py
+pdf2dataset/downloader.py
+pdf2dataset/logger.py
+pdf2dataset/main.py
+pdf2dataset/reader.py
+pdf2dataset/writer.py
+pdf2dataset_tools.egg-info/PKG-INFO
+pdf2dataset_tools.egg-info/SOURCES.txt
+pdf2dataset_tools.egg-info/dependency_links.txt
+pdf2dataset_tools.egg-info/entry_points.txt
+pdf2dataset_tools.egg-info/requires.txt
+pdf2dataset_tools.egg-info/top_level.txt
