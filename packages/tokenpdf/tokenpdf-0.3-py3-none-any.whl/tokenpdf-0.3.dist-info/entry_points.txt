@@ -1,0 +1,2 @@
+[console_scripts]
+tokenpdf = tokenpdf.__main__:main

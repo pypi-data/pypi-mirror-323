@@ -1,0 +1,80 @@
+# General configuration
+output = "tokens_output.pdf"
+verbose = true
+system = "D&D 5e"
+compress = true
+
+# Paper settings
+page_size = "A2"
+orientation = "portrait"
+margin = 0.05
+
+# Layout settings
+rotation = false
+
+# Global Token settings
+[token]
+#margin = 0.01
+rect_border_color = "black"
+#rect_border_thickness = 1
+standing_margin = 0.1
+
+
+# Monster configurations
+
+
+[monsters.orc]
+name = "Orc"
+size = "Medium"
+type = "Humanoid"
+image_url = "https://picsum.photos/200/500"
+thumbnail_url = "https://picsum.photos/75"
+tokens = [
+    #{ type = "standing", size = "medium", count = 3},
+    #{ type = "stand_sides", size = "medium", count = 4},
+    { type = "stand_tops", size = "medium", sides=1, count = 1},
+    { type = "stand_tops", size = "medium", sides=2, count = 1},
+    { type = "stand_tops", size = "medium", sides=3, count = 1},
+    { type = "stand_tops", size = "medium", sides=4, count = 1},
+    { type = "stand_sides", size = "medium", sides=1, count = 1},
+    { type = "stand_sides", size = "medium", sides=2, count = 1},
+    { type = "stand_sides", size = "medium", sides=3, count = 1},
+    { type = "stand_sides", size = "medium", sides=4, count = 1},
+    { type = "circle", size = "medium", count = 5},
+    { type = "circle", size = "large", count = 5},
+    #{ type = "circle", size = "medium", count = 15}
+]
+
+[monsters.goblin]
+name = "Goblin"
+size = "Small"
+type = "Humanoid"
+images_url = ["https://picsum.photos/200", "https://picsum.photos/300",
+                "https://picsum.photos/400", "https://picsum.photos/500"]
+
+                
+thumbnail_url = "https://picsum.photos/50"
+tokens = [
+    #{ type = "circle", size = "small", count = 12},
+    #{ type = "circle", size = "medium", count = 12},
+    #{ type = "stand_sides", sides=4, count = 2}
+]
+
+
+[monsters.hobgoblin]
+name = "Hobgoblin"
+size = "Medium"
+type = "Humanoid"
+image_url = "https://picsum.photos/300/300"
+thumbnail_url = "https://picsum.photos/75"
+tokens = [
+    #{ type = "standing", size="small", count = 6},
+    #{ type = "circle", count = 7},
+]
+
+#[maps.street]
+#name = "Town Street"
+#image_url = "https://picsum.photos/2400/2400"
+#dpi = 100
+#add_grid = true
+#text_margin = 0.05
