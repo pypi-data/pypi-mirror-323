@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "coresight_sdk"
+version = "1.0.2"
+description = "Python SDK for the CoreSight API"
+authors = ["Daniel García <info@iamdgarcia.com>"]
+license = "MIT"
+readme = "README.md"
+
+# Defines what folders/files Poetry will consider part of this package
+packages = [
+    { include = "coresight_sdk" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+requests = "^2.20"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^6.2"
+pytest-mock = "^3.14.0"
+
+[build-system]
+requires = ["poetry-core>=1.3.0"]
+build-backend = "poetry.core.masonry.api"
