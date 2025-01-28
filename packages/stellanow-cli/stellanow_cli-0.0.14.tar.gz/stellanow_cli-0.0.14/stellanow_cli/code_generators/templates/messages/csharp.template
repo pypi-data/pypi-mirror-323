@@ -1,0 +1,19 @@
+{% include 'messages/.header.template' %}
+
+using StellaNowSDK.Messages;
+{% if has_model_fields %}
+using {{ namespace }}.Models;
+{% endif %}
+
+namespace {{ namespace }};
+
+public record {{ className }}Message(
+    {%- for entity in entities %}
+    [property: Newtonsoft.Json.JsonIgnore] string {{ entity.csharp_name }},
+    {%- endfor %}
+    {%- for field in fields %}
+    [property: Newtonsoft.Json.JsonProperty("{{ field.original_name }}")] {{ field.type }} {{ field.csharp_name }}{{ "," if not loop.last }}
+    {%- endfor %}
+    ) : StellaNowMessageBase("{{ eventName }}", new List<EntityType>{ {{ entitiesList }} });
+
+{% include 'messages/.footer.template' %}

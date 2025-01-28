@@ -1,0 +1,12 @@
+{% include 'models/.header.template' %}
+
+
+namespace {{ namespace }}.Models;
+
+public record {{ className }}Model(
+    {%- for field in fields %}
+    [property: Newtonsoft.Json.JsonProperty("{{ field.original_name }}")] {{ field.type }} {{ field.csharp_name }}{{ "," if not loop.last }}
+    {%- endfor %}
+    );
+
+{% include 'models/.footer.template' %}
