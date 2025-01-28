@@ -1,0 +1,34 @@
+Metadata-Version: 2.2
+Name: brightdata
+Version: 0.0.0
+Summary: A module to use brightdata utils 
+Author: Enes Kuzucu
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# Brightdata Utils
+
+To use the webunlocker you must have a brightdata account and use it to create a  webunlocker scraper (zone) in admin panel and get these credentials. And put them in .env file. 
+
+
+BRIGHTDATA_WEBUNCLOKCER_BEARER
+BRIGHTDATA_WEBUNCLOKCER_APP_ZONE_STRING
