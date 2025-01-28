@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: lavaru_capital
+Version: 0.1.2
+Summary: De la megavaru pentru veri
+Author: megavaru
+Author-email: anon@anon.anon
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: pandas_ta
+Requires-Dist: pandas
+Requires-Dist: ccxt
+Requires-Dist: numpy
+Requires-Dist: plotly

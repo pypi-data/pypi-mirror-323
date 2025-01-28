@@ -1,0 +1,5 @@
+pandas_ta
+pandas
+ccxt
+numpy
+plotly
