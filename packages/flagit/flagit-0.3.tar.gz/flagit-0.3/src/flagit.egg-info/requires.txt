@@ -1,0 +1,8 @@
+setuptools
+numpy
+scipy
+pandas
+
+[testing]
+pytest
+pytest-cov
