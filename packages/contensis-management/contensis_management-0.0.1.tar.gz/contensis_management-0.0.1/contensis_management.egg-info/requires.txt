@@ -1,0 +1,16 @@
+httpx
+requests
+
+[dev]
+black
+debugpy
+python-dotenv
+ipykernel
+mypy
+pre-commit
+pydantic
+pytest
+pytest-cov
+ruff
+sourcery
+types-requests
