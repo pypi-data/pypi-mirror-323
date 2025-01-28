@@ -1,0 +1,37 @@
+#:schema https://json.schemastore.org/pyproject.json
+
+[project]
+name = "keyring-proxy"
+version = "0.2.31.1"
+description = "Proxy Base for pypi keyring"
+authors = [{ name = "Kalle M. Aagaard", email = "git@k-moeller.dk" }]
+dependencies = [
+    "keyring>=25.5.0",
+    "pydantic>=2.9.2",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.urls]
+Repository = "https://github.com/KalleDK/py-keyring-proxy"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.pyright]
+include = ["src", "tests"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+tools = [
+    "pyright>=1.1.391",
+    "ruff>=0.8.6",
+]
+dev = [
+    "keyrings-alt>=5.0.2",
+]
