@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "async-py-bus"
+version = "0.1.6"
+authors = [
+    { "name" = "Andrei Samofalov", "email" = "andrei.e.samofalov@gmail.com" }
+]
+maintainers = [
+    { "name" = "Andrei Samofalov", "email" = "andrei.e.samofalov@gmail.com" }
+]
+description = "Async message bus framework designed for event-driven, cqrs python projects"
+keywords = [
+    "python",
+    "async",
+    "bus",
+    "edd",
+    "cqrs",
+]
+
+readme = "README.md"
+
+requires-python = ">=3.11"
+license-files = ['MITLicense']
+dependencies = []
+
+[project.scripts]
+readthedocs = "readthedocs:main"
+
+[project.urls]
+Repository = "https://github.com/andrei-samofalov/async-py-bus"
+Issues = "https://github.com/andrei-samofalov/async-py-bus/issues"
+
+[dependency-groups]
+dev = [
+    "pytest-coverage>=0.0",
+    "pytest>=8.3.4",
+    "ruff>=0.9.2",
+    "isort>=5.13.2",
+]
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pybus"]
+
+[tool.coverage.report]
+exclude_also = [
+    "def __repr__",
+    "if settings.debug",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+[tool.isort]
+line_length = 88
+include_trailing_comma = true
+multi_line_output = 3
