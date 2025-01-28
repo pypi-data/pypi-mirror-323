@@ -1,0 +1,7 @@
+pycuda
+numpy
+six
+matplotlib
+seaborn
+pandas
+cupy-cuda10x
