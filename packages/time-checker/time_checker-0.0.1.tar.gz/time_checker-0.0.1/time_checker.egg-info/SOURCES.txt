@@ -1,0 +1,8 @@
+README.md
+setup.py
+code-time-checker/__init__.py
+code-time-checker/timer_checker.py
+time_checker.egg-info/PKG-INFO
+time_checker.egg-info/SOURCES.txt
+time_checker.egg-info/dependency_links.txt
+time_checker.egg-info/top_level.txt
