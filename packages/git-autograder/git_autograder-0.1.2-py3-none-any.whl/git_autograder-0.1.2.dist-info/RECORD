@@ -1,0 +1,9 @@
+git_autograder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_autograder/diff.py,sha256=FOS8lAMAvmnTDNEw5oKPhGlAwTNaQ-668I1xH8YawFc,2239
+git_autograder/encoder.py,sha256=r7AHpdP01OoieKRwxvaDuk1wdN-ugiMyws1Xa1HM5G0,253
+git_autograder/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_autograder/repo.py,sha256=Wz9Q9HIl32wrbljwkFwjXJYgdd9C30IrcLu1Uc9azUo,3322
+git_autograder-0.1.2.dist-info/METADATA,sha256=cY1J1UdBqLiwYzGh4chHMWUgp4-9kq4k4tmy-HQo57c,2005
+git_autograder-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+git_autograder-0.1.2.dist-info/licenses/LICENSE,sha256=PYTzSn0FvFXnOqFNonfE5cYVSOyJ0Ou4S1yCswtIikQ,1068
+git_autograder-0.1.2.dist-info/RECORD,,
