@@ -1,0 +1,56 @@
+# automagically generated parameter file
+
+[acoustic_pulse]
+rho0 = 1.4
+drho0 = 0.14
+
+[compressible]
+use_flattening = 1    ; apply flattening at shocks (1)
+z0 = 0.75    ; flattening z0 parameter
+z1 = 0.85    ; flattening z1 parameter
+delta = 0.33    ; flattening delta parameter
+cvisc = 0.1    ; artificial viscosity coefficient
+limiter = 2    ; limiter (0 = none, 1 = 2nd order, 2 = 4th order)
+temporal_method = RK4    ; integration method (see mesh/integration.py)
+grav = 0.0    ; gravitational acceleration (in y-direction)
+riemann = CGF
+
+[driver]
+tmax = 0.24    ; maximum simulation time to evolve
+max_steps = 5000    ; maximum number of steps to take
+fix_dt = 0.0015
+init_tstep_factor = 0.01    ; first timestep = init_tstep_factor * CFL timestep
+max_dt_change = 2.0    ; max amount the timestep can change between steps
+verbose = 0    ; verbosity
+cfl = 0.8
+
+[eos]
+gamma = 1.4    ; pres = rho ener (gamma - 1)
+
+[io]
+basename = acoustic_pulse_    ; basename for output files
+dt_out = 0.03    ; simulation time between writing output files
+n_out = 10000    ; number of timesteps between writing output files
+do_io = 0    ; do we output at all?
+
+[mesh]
+grid_type = Cartesian2d    ; Geometry of the Grid ('Cartesian2d' or 'SphericalPolar')
+xmin = 0.0    ; domain minimum x-coordinate
+xmax = 1.0    ; domain maximum x-coordinate
+ymin = 0.0    ; domain minimum y-coordinate
+ymax = 1.0    ; domain maximum y-coordinate
+xlboundary = periodic    ; minimum x BC ('reflect', 'outflow', or 'periodic')
+xrboundary = periodic    ; maximum x BC ('reflect', 'outflow', or 'periodic')
+ylboundary = periodic    ; minimum y BC ('reflect', 'outflow', or 'periodic')
+yrboundary = periodic    ; maximum y BC ('reflect', 'outflow', or 'periodic')
+nx = 128    ; number of zones in the x-direction
+ny = 128    ; number of zones in the y-direction
+
+[particles]
+do_particles = 0    ; include particles? (1=yes, 0=no)
+n_particles = 100    ; number of particles
+particle_generator = random    ; how do we generate particles? (random, grid)
+
+[vis]
+dovis = 0    ; runtime visualization? (1=yes, 0=no)
+store_images = 0    ; store vis images to files (1=yes, 0=no)
