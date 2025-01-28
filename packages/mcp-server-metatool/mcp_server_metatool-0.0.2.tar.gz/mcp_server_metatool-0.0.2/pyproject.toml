@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-server-metatool"
+version = "0.0.2"
+description = "Metatool MCP Server"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+    {name = "James Zhang", email = "james@jczstudio.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+    "mcp",
+]
+
+[project.urls]
+homepage = "https://github.com/metatool-ai/mcp-server-metatool"
+repository = "https://github.com/metatool-ai/mcp-server-metatool"
+
+[tool.uv]
+dev-dependencies = [
+  "build",
+  "twine",
+  "wheel",
+]
+
+[project.scripts]
+mcp-server-metatool = "mcp_server_metatool:main"
+
+[tool.setuptools]
+py-modules = ["mcp_server_metatool"]

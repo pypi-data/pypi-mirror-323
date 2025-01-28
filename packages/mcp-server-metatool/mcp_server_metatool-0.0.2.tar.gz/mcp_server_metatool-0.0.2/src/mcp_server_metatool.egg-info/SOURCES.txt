@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/mcp_server_metatool/__init__.py
+src/mcp_server_metatool/__main__.py
+src/mcp_server_metatool/server.py
+src/mcp_server_metatool.egg-info/PKG-INFO
+src/mcp_server_metatool.egg-info/SOURCES.txt
+src/mcp_server_metatool.egg-info/dependency_links.txt
+src/mcp_server_metatool.egg-info/entry_points.txt
+src/mcp_server_metatool.egg-info/requires.txt
+src/mcp_server_metatool.egg-info/top_level.txt
