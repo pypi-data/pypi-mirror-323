@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "jax-apiutils"
+version = "0.2.0a3"
+description = "Utilities to simplify API development."
+authors = ["Alexander Berger <alexander.berger@jax.org>"]
+readme = "README.md"
+packages = [
+    { from = "src", include = "jax/apiutils" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = { version = ">=2.0.0", optional = true }
+fastapi = { version = ">=0.100.0", optional = true }
+pyjwt = { version = "^2.9.0", optional = true }
+requests = { version = "^2.32.3", optional = true }
+
+[tool.poetry.extras]
+fastapi = ["fastapi"]
+schemas = ["pydantic"]
+jwt = ["pyjwt", "requests"]
+all = ["fastapi", "pydantic", "pyjwt", "requests"]
+
+[tool.poetry.group.format.dependencies]
+black = "^24.8.0"
+ruff = "^0.6.5"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pact-python = "^2.2.2"
+
+[tool.ruff.lint]
+select = ['F', 'E', 'W', 'A', 'C90', 'N', 'B', 'ANN', 'D', 'I', 'ERA', 'PD', 'NPY', 'PT']
+ignore = ["D203", "D213", "F403"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ANN001", "ANN201", "D100", "D104", "D103"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

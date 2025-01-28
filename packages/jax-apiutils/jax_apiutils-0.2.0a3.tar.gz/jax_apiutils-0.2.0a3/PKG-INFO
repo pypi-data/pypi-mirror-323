@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: jax-apiutils
+Version: 0.2.0a3
+Summary: Utilities to simplify API development.
+Author: Alexander Berger
+Author-email: alexander.berger@jax.org
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: all
+Provides-Extra: fastapi
+Provides-Extra: jwt
+Provides-Extra: schemas
+Requires-Dist: fastapi (>=0.100.0) ; extra == "fastapi" or extra == "all"
+Requires-Dist: pydantic (>=2.0.0) ; extra == "schemas" or extra == "all"
+Requires-Dist: pyjwt (>=2.9.0,<3.0.0) ; extra == "jwt" or extra == "all"
+Requires-Dist: requests (>=2.32.3,<3.0.0) ; extra == "jwt" or extra == "all"
+Description-Content-Type: text/markdown
+
+# JAX API Utilities
+
+This repository contains a collection of utilities for working with the JAX RESTful 
+APIs. The utilities are written in Python and are designed to be easy to use and 
+flexible.
+
+```
+poetry add "jax-apiutils"
+```
+
+```
+fro
+```
