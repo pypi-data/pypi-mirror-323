@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: zalfmas-fbp
+Version: 0.1.2
+Summary: 
+Author: Michael Berg-Mohnicke
+Author-email: michael.berg@zalf.de
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: zalfmas-capnp-schemas (>=0.1.8,<0.2.0)
+Requires-Dist: zalfmas-common (>=0.1.7,<0.2.0)
+Description-Content-Type: text/markdown
+
+
