@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "model-inference"
+version = "0.0.6"
+description = "package for inferencing models developed at phosphene"
+authors = ["Sanjith Kumar R <sanjith.kumar@phospheneai.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+matplotlib = "^3.10.0"
+identity-clustering = "^0.1.5"
+poethepoet = "^0.15.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+install_cuda = """pip install torch==2.4.1+cu118 torchvision==0.19.1+cu118 --index-url https://download.pytorch.org/whl/cu118"""
