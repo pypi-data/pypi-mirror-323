@@ -1,0 +1,8 @@
+README.md
+setup.py
+my_package/__init__.py
+my_package/module.py
+my_package_test_for_learn.egg-info/PKG-INFO
+my_package_test_for_learn.egg-info/SOURCES.txt
+my_package_test_for_learn.egg-info/dependency_links.txt
+my_package_test_for_learn.egg-info/top_level.txt
