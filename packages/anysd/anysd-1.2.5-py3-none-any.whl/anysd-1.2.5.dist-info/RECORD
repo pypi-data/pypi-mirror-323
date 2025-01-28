@@ -1,0 +1,10 @@
+publish.sh,sha256=jBnfpz6svGiDOeRBJVhPJvbCpI_dEiNFPFbpkYhJYs8,39
+anysd/__init__.py,sha256=xGmtEiMhp9V0VZbJLc7RNkJeixzTBOsYZSR6pGpuRII,21
+anysd/conf.py,sha256=YPngbTDMPcwdGUhHYlbhmmKAo3IlXhj-BJnqRHXSNuk,1733
+anysd/config.toml,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anysd/main.py,sha256=Y772lJ0q7eyOJexqT4STaC4kdw4REdv7sFYzF1mheUk,32643
+anysd/utils.py,sha256=AE09Gr1RZ7vdOq8haSahGk1rFjwPGGv1hFO1rRGb24E,124
+anysd-1.2.5.dist-info/LICENSE,sha256=AbWk078fBtp2WhR3gMGOFBJgcKhQ54PbaWQJO_i-YfM,1061
+anysd-1.2.5.dist-info/METADATA,sha256=-Iyrhr29BHU063bHjyawM9h7FN8GwFLQbXI8cyO5LE8,7674
+anysd-1.2.5.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+anysd-1.2.5.dist-info/RECORD,,
