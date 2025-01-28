@@ -1,0 +1,12 @@
+gini_py/__init__.py,sha256=XvrYFr4OFD39s2FLRUyle7FLFGZDgbuYjJRbHZkQRR8,44
+gini_py/client.py,sha256=xLyX_YabX622lItUB5SUBX_OynhcBNPEDDmvlX_2ZtI,2514
+gini_py/models.py,sha256=QDW9IZByCrKgVQaRLwy5IfK1QaHthyDYY_R3hzB_zfE,1204
+gini_py/crypto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gini_py/crypto/encryption.py,sha256=-ZgcsLBAbKhzLgZYQW_JfTb5B8EPYl11_vKa-QWicso,1583
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_client.py,sha256=zwEHVfzo4Ip-Q4esfyrjPrcQqVZNRNlwnuAIfMMkmDA,1814
+gini_py-0.1.7.dist-info/LICENSE,sha256=j0yaDkS4b0BCQRhV1VUFxYLdETKNfjFzgGJB-8xraxk,9248
+gini_py-0.1.7.dist-info/METADATA,sha256=59KSsYHFNXFMJBLzWx_FIswAD4nX57R8hJsBVVjHzA8,1169
+gini_py-0.1.7.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+gini_py-0.1.7.dist-info/top_level.txt,sha256=Bx82IqI_wBILR9tEYOhFYk4arWxAshOC5SJBPVZYoss,13
+gini_py-0.1.7.dist-info/RECORD,,
