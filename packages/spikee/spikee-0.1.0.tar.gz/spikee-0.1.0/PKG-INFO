@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: spikee
+Version: 0.1.0
+Summary: SPIKEE - Simple Prompt Injection Kit for Evaluation and Exploitation
+Author-email: WithSecure Consulting <donato.capitella@withsecure.com>
+License: Apache-2.0
+Keywords: prompt-injection,LLM,cyber-security,pentesting
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE-2.0.txt
+Requires-Dist: tqdm
+Requires-Dist: six
+Requires-Dist: toml
+Requires-Dist: openai
+Requires-Dist: huggingface_hub
+Requires-Dist: langchain
+Requires-Dist: langchain_openai
+Requires-Dist: langchain-google_genai
+Requires-Dist: langchain-anthropic
+Requires-Dist: langchain-together
+Requires-Dist: langchain-groq
+Requires-Dist: langchain-aws
+Requires-Dist: langchain-huggingface
+Requires-Dist: tabulate
+Requires-Dist: jinja2
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: boto3
+Requires-Dist: azure-ai-inference
+Requires-Dist: python-dotenv
