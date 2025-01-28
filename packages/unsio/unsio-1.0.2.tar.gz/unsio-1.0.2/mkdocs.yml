@@ -1,0 +1,76 @@
+site_name: unsio
+site_url : https://simutools.docs.lam.fr/unsio
+site_dir: public
+repo_url: https://gitlab.lam.fr/simutools/unsio
+nav:
+  - Home:
+    - index.md
+  - Installation :
+    - Python wrapper : Installation/python.md
+    - C++/C/Fortran library : Installation/libcpp.md
+  - User Guide :
+    - Python :
+      - Reading: Guide/python_guide_reading.md
+      - Writing: Guide/python_guide_writing.md
+      - Example : Examples/py_example_complete.md
+    - C++/C :
+      - Reading : Guide/cpp_guide_reading.md
+      - Writing : Guide/cpp_guide_writing.md
+      - Example : Examples/cpp_example.md
+    - Fortran :
+      - Reading : Guide/fortran_guide_reading.md
+      - Writing : Guide/fortran_guide_writing.md
+      - Example : Examples/fortran_example.md
+    - Sqlite3 database : Guide/sqlite3_database.md
+# plugins :
+  
+
+markdown_extensions :
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins :
+  - include-markdown
+
+theme:
+  name: material
+
+  features:
+    - navigation.instant
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - content.tooltips
+    - content.code.copy
+    - content.code.select
+  
+  palette: 
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
