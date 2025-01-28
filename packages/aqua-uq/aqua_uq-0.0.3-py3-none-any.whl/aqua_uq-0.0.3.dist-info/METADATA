@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: aqua-uq
+Version: 0.0.3
+Summary: Python version of the Artificial Quantification for Uncertainty Anomalies (AQUA) algorithm.
+Project-URL: Homepage, https://github.com/andinoboerst/AQUA_UQ
+Project-URL: Issues, https://github.com/andinoboerst/AQUA_UQ/issues
+Author-email: Andino Börst <borst.andino@estudiantat.upc.edu>
+License-Expression: GPL-3.0
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# AQUA UQ
+Python version of the  Artificial Quantification for Uncertainty Anomalies (AQUA) algorithm.
