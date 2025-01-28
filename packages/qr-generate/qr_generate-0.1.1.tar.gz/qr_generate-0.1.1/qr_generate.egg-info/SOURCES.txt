@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+generate/__init__.py
+generate/__main__.py
+generate/folder.py
+generate/nodes.py
+generate/parser.py
+generate/py.typed
+generate/substitute.py
+qr_generate.egg-info/PKG-INFO
+qr_generate.egg-info/SOURCES.txt
+qr_generate.egg-info/dependency_links.txt
+qr_generate.egg-info/requires.txt
+qr_generate.egg-info/top_level.txt
+test/test_code_from_readme.py
+test/test_import.py
