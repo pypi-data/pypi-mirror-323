@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+perfreport/__init__.py
+perfreport/__main__.py
+perfreport/__version__.py
+perfreport.egg-info/PKG-INFO
+perfreport.egg-info/SOURCES.txt
+perfreport.egg-info/dependency_links.txt
+perfreport.egg-info/top_level.txt
