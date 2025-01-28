@@ -1,0 +1,10 @@
+pykdtree/render_template.py,sha256=03T6Si5fsOMXqtiH9EZ-tVBcg3e6QdOcwMycJXXr03M,187
+pykdtree/__init__.py,sha256=HQb8NfsOuZGPELeWHYsfHRdF5dLKl8olzNAR9brDE_E,619
+pykdtree/test_tree.py,sha256=1JveU-dkofkH0bzR0jxmwMpnkYssDaOD0QmGPl9ukPs,17137
+pykdtree/kdtree.cpython-39-x86_64-linux-gnu.so,sha256=LvRgpyXNzwpEN0eSoVj-1I46yAQm2a5vJBMKLN5kARA,1012305
+pykdtree.libs/libgomp-a34b3233.so.1.0.0,sha256=On6uznIxkRvi-7Gz58tMtcLg-E4MK7c3OUcrWh_uyME,168193
+pykdtree-1.4.0.dist-info/WHEEL,sha256=hP2N_hS4PKw-M4krXQgMGtCEsQMkokQDIc5uU4EZO1Y,147
+pykdtree-1.4.0.dist-info/top_level.txt,sha256=E6qEju5ocMB6juu2j0U7AlEW1nkkHA6W7_N7H72Z0eQ,9
+pykdtree-1.4.0.dist-info/METADATA,sha256=rkPkGWNNRuhSdx10RgdhVnS0Umr3N3Dz3fJ9PKBlM4U,8801
+pykdtree-1.4.0.dist-info/LICENSE.txt,sha256=iFKRuEmwnDAmKn_cVXbWCZOU0sSRhmuOTN_pzpXoz8k,7657
+pykdtree-1.4.0.dist-info/RECORD,,
