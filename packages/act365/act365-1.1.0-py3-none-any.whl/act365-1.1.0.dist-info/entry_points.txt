@@ -1,0 +1,3 @@
+[console_scripts]
+act365cli=act365.client:run
+

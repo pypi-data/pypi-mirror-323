@@ -1,0 +1,8 @@
+act365/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+act365/booking.py,sha256=kOPpn8TwOu87LtiH5wMMj3Ckz_U_fHsbpwHqOOKDc_I,2138
+act365/cardholder.py,sha256=WOyQX2VHAh9bckoCII79qKE5t_ag4uZ_LIbgW5MKdJw,2422
+act365/client.py,sha256=TQ6NpGgf5f0wsPjy0rhVeoG7GMUfBGKEODqLkLdcc5U,7294
+act365-1.1.0.dist-info/METADATA,sha256=ex8tTttlOseWZ-vpzVrlUa6xOU_S7hTPMF41ObvUd1E,517
+act365-1.1.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+act365-1.1.0.dist-info/entry_points.txt,sha256=6ahC5jfJv-eC9gvbKriGTRZGABm-DSlW6GQY8tLCMMo,47
+act365-1.1.0.dist-info/RECORD,,
