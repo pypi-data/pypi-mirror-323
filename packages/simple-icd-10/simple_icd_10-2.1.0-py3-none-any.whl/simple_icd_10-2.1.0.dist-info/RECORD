@@ -1,0 +1,9 @@
+simple_icd_10/__init__.py,sha256=7aE_sbip0xmY6RDBgCGtpORK4jgU28Q59wdENnQcNzM,28
+simple_icd_10/simple_icd_10.py,sha256=Xlfw2W0BHf3zKH3io_KALFMI_qaMO5fa2ccXUPPbfYk,6700
+simple_icd_10/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_icd_10/data/icd_10_v2019.xml,sha256=djHqna-PLKCgyBxqVpEbLSM7QWX-g2mrVy2eetxF75U,1859127
+simple_icd_10-2.1.0.dist-info/LICENSE,sha256=9Ofzc7m5lpUDN-jUGkopOcLZC3cl6brz1QhKInF60yg,7169
+simple_icd_10-2.1.0.dist-info/METADATA,sha256=lvbY6I1teqq_NZeARfSvfyzI_6kTJLn6YjnnI-I0JgU,14680
+simple_icd_10-2.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+simple_icd_10-2.1.0.dist-info/top_level.txt,sha256=HIHjz-c1ncEDTzfyGEICvize4tg-V1qtwEqExzA83RY,14
+simple_icd_10-2.1.0.dist-info/RECORD,,
