@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+trek10-grant/__init__.py
+trek10_grant.egg-info/PKG-INFO
+trek10_grant.egg-info/SOURCES.txt
+trek10_grant.egg-info/dependency_links.txt
+trek10_grant.egg-info/top_level.txt

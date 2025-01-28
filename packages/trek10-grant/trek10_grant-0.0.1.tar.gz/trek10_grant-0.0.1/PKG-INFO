@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: trek10-grant
+Version: 0.0.1
+Summary: An Empty Python package to park the name
+Author-email: "Trek10 Inc." <support@trek10.com>
+License: Proprietary
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Empty Package
+
+This is an empty Python package created to park the package name.

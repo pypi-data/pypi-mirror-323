@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trek10-grant"
+version = "0.0.1"
+description = "An Empty Python package to park the name"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "Proprietary"}
+authors = [
+    {name = "Trek10 Inc.", email = "support@trek10.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Topic :: Utilities",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["trek10-grant*"]
