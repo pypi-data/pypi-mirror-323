@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+sliding_puzzles/__init__.py
+sliding_puzzles/env.py
+sliding_puzzles/wrappers.py
+sliding_puzzles.egg-info/PKG-INFO
+sliding_puzzles.egg-info/SOURCES.txt
+sliding_puzzles.egg-info/dependency_links.txt
+sliding_puzzles.egg-info/entry_points.txt
+sliding_puzzles.egg-info/requires.txt
+sliding_puzzles.egg-info/top_level.txt
+tests/test_env.py
+tests/test_wrappers.py
