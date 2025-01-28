@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling>=1.22.2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rusta-crawler"
+version = "0.1.6"
+dependencies = ["scrapy", "snowflake-connector-python", "rusta_tools"]
+authors = [
+  { name="David Momeni", email="dav.momeni@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
