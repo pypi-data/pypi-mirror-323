@@ -1,0 +1,7 @@
+README.md
+setup.py
+python_unsio.egg-info/PKG-INFO
+python_unsio.egg-info/SOURCES.txt
+python_unsio.egg-info/dependency_links.txt
+python_unsio.egg-info/requires.txt
+python_unsio.egg-info/top_level.txt
