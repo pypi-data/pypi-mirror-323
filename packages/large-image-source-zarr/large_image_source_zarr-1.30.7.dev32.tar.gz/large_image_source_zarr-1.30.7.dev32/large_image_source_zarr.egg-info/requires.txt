@@ -1,0 +1,10 @@
+large-image>=1.30.7.dev32
+zarr<3
+numcodecs
+imagecodecs-numcodecs!=2024.9.22
+
+[all]
+large-image-converter
+
+[girder]
+girder-large-image>=1.30.7.dev32
