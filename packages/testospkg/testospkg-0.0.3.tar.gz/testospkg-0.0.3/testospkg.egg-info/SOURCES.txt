@@ -1,0 +1,7 @@
+setup.py
+testospkg/__init__.py
+testospkg/hello.py
+testospkg.egg-info/PKG-INFO
+testospkg.egg-info/SOURCES.txt
+testospkg.egg-info/dependency_links.txt
+testospkg.egg-info/top_level.txt

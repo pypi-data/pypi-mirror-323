@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: testospkg
+Version: 0.0.3
+Summary: A simple Python package to say hello
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
