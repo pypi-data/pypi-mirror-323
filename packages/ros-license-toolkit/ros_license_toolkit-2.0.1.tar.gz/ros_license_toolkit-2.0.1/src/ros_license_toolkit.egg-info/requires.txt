@@ -1,0 +1,13 @@
+gitpython
+rospkg
+scancode-toolkit>=32.0.8
+spdx-tools>=0.7.0rc0
+
+[dev]
+pytest
+pytest-cov
+pycodestyle
+flake8
+mypy
+isort
+bumpver
