@@ -1,0 +1,2 @@
+include README.md
+include onepage_tools/_internal/api_logic.pyx
