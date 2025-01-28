@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: helpful-pys
+Version: 0.1.3
+Summary: A helper package to use common functions
+Author: Lawrence Chin
+Author-email: lawrence.chin@gusto.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: redshift-connector>=2.1.3
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: gspread>=6.1.3
+
+# Helpful Helper
+A (so far) little package that contains commonly used and useful functions. Good for team morale as they say.
+
+# About
+Contents include functions for connecting to redshift and using gspread, a py library for writing and reading from google sheets. For help with what functions are available, please run help()
+
+# Installation
+To install functional-functions, you can install it using pip:
+````python
+pip install helpful-pys
+````
+
+# Additional Prequisites
+The package will install `gspread` but will require further setup to get it running. I recommend using the [gspread documentation for Authentication](https://docs.gspread.org/en/v6.1.3/oauth2.html) which will allow you to authorize the google sheets API and generate a service account key.
+
+Don't forget the client-email in your key, it will be constantly needed to give share access to sheets for usage with gspread.
+
+I have included a creds.py.sample file in the package to allow the user to input their personal creds to use. If there are better access/security storage policies like AWS Secrets Manager, this repo can be updated to accommodate such.
+
+# Usage
+This package is intended for usage with local py setups and local jupyter notebook/lab setups. It is not intended for production script usage.
