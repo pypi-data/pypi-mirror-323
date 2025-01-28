@@ -1,0 +1,10 @@
+qwgraph-0.3.0.dist-info/METADATA,sha256=0yptPQbEt1ay0GlADvd1w6Mz7-QAuAAKElYSuqIO07Y,1363
+qwgraph-0.3.0.dist-info/WHEEL,sha256=sU8_Tc9kxjXV3czvC3KzhaU1_RvW7LJkgvSdRAufvxo,129
+qwgraph-0.3.0.dist-info/licenses/LICENSE,sha256=n-k4_M3Mvde95bHqZp6Zg8xxIohOOvIR9Vee2Cvt2mI,1070
+qwgraph/coins.py,sha256=cQlMs0YiZiHK0ZRSAUtMdu9bluJP4FVmyCzAS8AHVRM,2580
+qwgraph/__pycache__/__init__.cpython-310.pyc,sha256=YcdoXe-M_MGxTsZRP_0MPA3yaKkY7k-QbOIva28MvNc,219
+qwgraph/__pycache__/qwsearch.cpython-310.pyc,sha256=H7FcARAAVbk-oP6_xx1QRadElaIAqTeWOd3AyP34KYU,25256
+qwgraph/qwsearch.py,sha256=z2bqWT8s9bhU8fE_5Ik2cRHIrbKSkf2vMjvkUbeV80o,38662
+qwgraph/__init__.py,sha256=vyExJv_cGkMpnNkUYOTlyfFigB244ZegBiPNLWcVeaM,184
+qwgraph/qwgraph.cpython-312-arm-linux-gnueabihf.so,sha256=4wTBgM1_jO1SuwhV31oTEXbaY4cjvXe_hEK4qIDAXR8,737436
+qwgraph-0.3.0.dist-info/RECORD,,
