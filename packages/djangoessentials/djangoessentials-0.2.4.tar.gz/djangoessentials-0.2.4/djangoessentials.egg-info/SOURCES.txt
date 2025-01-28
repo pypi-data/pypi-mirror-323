@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+djangoessentials/__init__.py
+djangoessentials/apps.py
+djangoessentials/djangoessentials.py
+djangoessentials/models.py
+djangoessentials/repository.py
+djangoessentials/service.py
+djangoessentials.egg-info/PKG-INFO
+djangoessentials.egg-info/SOURCES.txt
+djangoessentials.egg-info/dependency_links.txt
+djangoessentials.egg-info/requires.txt
+djangoessentials.egg-info/top_level.txt
+djangoessentials/migrations/__init__.py
