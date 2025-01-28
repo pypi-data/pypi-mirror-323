@@ -1,0 +1,11 @@
+envserv/__init__.py,sha256=w5wObLleqUu4fwV76Yd-Vxf-YjO_4IndVRdibEamO2Q,69
+envserv/errors.py,sha256=yjoJJQ-NPrm9qdqRvNZUzFiX5BebrwDqsrkZfGEEh30,687
+envserv/get/base.py,sha256=nc_T-c129fTvVJgO-8kbd5TVt9d3Hn7F2e55IRnteis,3836
+envserv/get/variables.py,sha256=xniXFPbOo0kOXL8-C2FlA08Adf_csqiM2u11D3ZsMEo,1205
+envserv/typing/__init__.py,sha256=-LQghv7E_zN4ZBPkpBzJKNHUKsXFIqZaQeGvHYsJMAs,40
+envserv/typing/variable.py,sha256=69AP10oHyaGtXGU6TRoxab2otWhef2KxVL_uyCXT1u4,536
+envserv-1.0.7.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+envserv-1.0.7.dist-info/METADATA,sha256=Tj-q94z-QToU1DgIgc6xgofXSQFDuOyd30Fwge4sJvM,3654
+envserv-1.0.7.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+envserv-1.0.7.dist-info/top_level.txt,sha256=YVw9FDcLBNGprG11TwrOVyi3l5c04CWlKVYb7HBHCac,8
+envserv-1.0.7.dist-info/RECORD,,
