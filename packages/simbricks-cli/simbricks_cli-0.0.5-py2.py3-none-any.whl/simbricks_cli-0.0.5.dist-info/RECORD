@@ -1,0 +1,17 @@
+simbricks/cli/__init__.py,sha256=6hiIuD-IAb4conIbIrLaFIWRP8ucPbm16rms-6cM29o,1158
+simbricks/cli/__main__.py,sha256=_932aAc5FL29IH1OjqdLv55d2aCmotzYI4Lr0j6oU-A,2210
+simbricks/cli/commands/admin.py,sha256=FZIMAEwX3GEcnrcUkcAFk3BmF7Gci-LiMbSfubnpC88,2498
+simbricks/cli/commands/audit.py,sha256=kVNGFjlfKES1OB0CCV7BBN3w7Yw9EYCX8u8MRciCY68,1352
+simbricks/cli/commands/instantiations.py,sha256=Mbeu1hhlaeay2Kc6FD--g6pcgvlTEzRyia8ko_m2leE,2087
+simbricks/cli/commands/namespaces.py,sha256=eTfhpyDEFdtQ5VoOwyPa9hjGj4rV9Y8acRqYPtls9iU,3193
+simbricks/cli/commands/org.py,sha256=MSngvYNPDDXyr-MrVJ0ZYH9fBgziKeyTlqsmhwCHAY4,1928
+simbricks/cli/commands/rg.py,sha256=Fo01wwL3i82VQtqdErWfp_V58ea0KkGIC7GydwTzXOc,2436
+simbricks/cli/commands/runners.py,sha256=kjemn_0e8gQlZWUBOJ-QYTn78t_oA9yTnsJZyDqOfzs,4969
+simbricks/cli/commands/runs.py,sha256=knT2HFkuqrFI5ZzFwzK4QCWDadr194BRT1p0TsN8_X8,5186
+simbricks/cli/commands/simulations.py,sha256=8lGlCimRwAbbdjM7vr69w7-4OUQxLsyuxR5Wqaq3K1k,2027
+simbricks/cli/commands/systems.py,sha256=-5scJv4Ga0F2IjUV4vVy5mt5ET7bMNyN97cwxbxWPEk,1969
+simbricks/cli/utils.py,sha256=LJqzEIl5YFw__Jt8lN7h9ZccpvfYcz4v7vBHoJ5AaxE,2243
+simbricks_cli-0.0.5.dist-info/METADATA,sha256=w7J9-mj_bOo__2sC0oI_PL4RrxqR7YZTlm9muuVqJu8,1004
+simbricks_cli-0.0.5.dist-info/WHEEL,sha256=iAMR_6Qh95yyjYIwRxyjpiFq4FhDPemrEV-SyWIQB3U,92
+simbricks_cli-0.0.5.dist-info/entry_points.txt,sha256=aBjLBbnoJF7rJwzyYdrLorxyOcirGRTrrJ9E-yrTjsQ,61
+simbricks_cli-0.0.5.dist-info/RECORD,,
