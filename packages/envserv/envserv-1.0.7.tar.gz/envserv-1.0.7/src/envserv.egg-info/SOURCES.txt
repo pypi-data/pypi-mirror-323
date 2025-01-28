@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/envserv/__init__.py
+src/envserv/errors.py
+src/envserv.egg-info/PKG-INFO
+src/envserv.egg-info/SOURCES.txt
+src/envserv.egg-info/dependency_links.txt
+src/envserv.egg-info/requires.txt
+src/envserv.egg-info/top_level.txt
+src/envserv/get/base.py
+src/envserv/get/variables.py
+src/envserv/typing/__init__.py
+src/envserv/typing/variable.py
