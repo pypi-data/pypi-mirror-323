@@ -1,0 +1,17 @@
+charset-normalizer
+numpy
+packaging
+resampy
+scipy
+soundfile
+
+[PyTorch]
+torch
+
+[testing]
+pandas
+pytest-cov
+pytest-mock
+pytest-xdist
+pytest
+torch
