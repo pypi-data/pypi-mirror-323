@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/aysch/__init__.py
+src/aysch/example.py
+src/aysch.egg-info/PKG-INFO
+src/aysch.egg-info/SOURCES.txt
+src/aysch.egg-info/dependency_links.txt
+src/aysch.egg-info/top_level.txt
