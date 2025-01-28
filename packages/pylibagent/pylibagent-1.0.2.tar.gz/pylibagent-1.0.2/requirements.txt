@@ -1,0 +1,4 @@
+aiohttp>=3.11.11
+colorlog>=6.8.2
+msgpack>=1.1.0
+setproctitle>=1.3.3
