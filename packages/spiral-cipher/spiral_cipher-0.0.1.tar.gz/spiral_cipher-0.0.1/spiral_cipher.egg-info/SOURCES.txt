@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+spiral-cipher/__init__.py
+spiral_cipher.egg-info/PKG-INFO
+spiral_cipher.egg-info/SOURCES.txt
+spiral_cipher.egg-info/dependency_links.txt
+spiral_cipher.egg-info/requires.txt
+spiral_cipher.egg-info/top_level.txt
