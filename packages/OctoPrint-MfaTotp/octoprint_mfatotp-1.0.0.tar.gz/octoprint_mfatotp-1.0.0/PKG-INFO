@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: OctoPrint-MfaTotp
+Version: 1.0.0
+Summary: Plugin to support TOTP based Two Factor Authentication in OctoPrint.
+Home-page: https://github.com/OctoPrint/OctoPrint-MfaTotp
+Author: Gina Häußge
+Author-email: gina@octoprint.org
+License: AGPLv3
+Requires-Python: >=3,<4
+Requires-Dist: OctoPrint
+Requires-Dist: pyotp<3,>=2.9.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
