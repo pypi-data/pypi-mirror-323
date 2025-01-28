@@ -1,0 +1,9 @@
+more-itertools
+typing_extensions
+
+[dev]
+check-manifest
+
+[test]
+pytest
+coverage
