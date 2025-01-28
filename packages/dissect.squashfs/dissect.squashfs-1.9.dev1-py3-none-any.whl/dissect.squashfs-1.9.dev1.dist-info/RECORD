@@ -1,0 +1,11 @@
+dissect/squashfs/__init__.py,sha256=0r11uxPa7Kc7RERcLPA0qOTPDtYa6Z8tr2F3NFvvCwI,380
+dissect/squashfs/c_squashfs.py,sha256=C3eNRu_D4-BEEkAPW0wnJgT_zAspnwtYVWL9TaK199Y,10423
+dissect/squashfs/compression.py,sha256=7oT-V0P9fnp1xFGMDgaG3NmB9OTBPzZbvh0lWQVeMlY,2607
+dissect/squashfs/exceptions.py,sha256=79sQXtWhLuDUx79PJuztAxIi0H4Hrug_AyTugz4D4Uc,302
+dissect/squashfs/squashfs.py,sha256=uDlRJwsWN_6BU3NTIBROcNEL9xn8QAefvj7s_5eeLCQ,16394
+dissect.squashfs-1.9.dev1.dist-info/COPYRIGHT,sha256=3dbAiQU_Sdat9vgX7x4d_3ZbSlYHUdMSK5Qugcs3lcE,303
+dissect.squashfs-1.9.dev1.dist-info/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+dissect.squashfs-1.9.dev1.dist-info/METADATA,sha256=hFyeqoqCQ1mh3qZXgub5Lijxr1VpyqC71texc8rxnM8,4110
+dissect.squashfs-1.9.dev1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+dissect.squashfs-1.9.dev1.dist-info/top_level.txt,sha256=Mn-CQzEYsAbkxrUI0TnplHuXnGVKzxpDw_po_sXpvv4,8
+dissect.squashfs-1.9.dev1.dist-info/RECORD,,
