@@ -1,0 +1,36 @@
+Metadata-Version: 2.2
+Name: cyvoreos
+Version: 0.2.0.7b0
+Summary: Next-Gen email threat prevention
+Home-page: https://cyvore.com
+Download-URL: https://github.com/cyvore/cyvoreos/archive/refs/tags/v0.2.0.7-beta.tar.gz
+Author: Cyvore
+Author-email: info@cyvore.com
+License: MIT
+Keywords: Anti-Phishing,Email-Scanner,Optical-Recognition
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: levenshtein==0.18.1
+Requires-Dist: requests==2.27.1
+Requires-Dist: colorama==0.4.6
+Requires-Dist: future==0.18.2
+Requires-Dist: urlextract==1.5.0
+Requires-Dist: blockcypher==1.0.93
+Requires-Dist: urlexpander==0.0.37
+Requires-Dist: python-whois==0.9.4
+Requires-Dist: eml_parser==1.17.5
+Requires-Dist: python-magic==0.4.27
+Requires-Dist: extract_msg==0.40.0
+Requires-Dist: vt-py==0.14.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
