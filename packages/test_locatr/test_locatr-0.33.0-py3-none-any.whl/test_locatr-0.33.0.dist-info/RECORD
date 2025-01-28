@@ -1,0 +1,11 @@
+locatr/__init__.py,sha256=hY4WJOAcaJyOvNMPAkqADc1NU-hm-NdXrvuwZv6699c,254
+locatr/_constants.py,sha256=huXSIIff1zp3VraFTMIUZIsOD5q4RShdkODN_ZmOkPE,195
+locatr/_locatr.py,sha256=0ZRKP8fmEaAGQYNuHNfz5Vhs_GoThNHs1peEEbw0jkw,4659
+locatr/_utils.py,sha256=kRPdG83RNwmL8MpomtL8FKgk7VYyYz-_LqDwF_8HSyM,4892
+locatr/exceptions.py,sha256=LuV2FuCxPiulbv4Ezgezv9FjZ_Xsa8l3ERivl0DK2Dc,1172
+locatr/schema.py,sha256=-nyF2jlUngODk7LNUj9yk2nNmS_WHq0AjQEZVBqn92A,1940
+locatr/bin/locatr.bin,sha256=aAZ_2TGOtGS20CIogmdcow6TyYa3dafqoJ9963kt2PI,13019269
+test_locatr-0.33.0.dist-info/METADATA,sha256=OFAsUA2Vou5FMUREwjaMxabvpIAZp69yD81LVr9Po4Q,4512
+test_locatr-0.33.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+test_locatr-0.33.0.dist-info/licenses/LICENSE,sha256=ER2sUidekXgz9yHwPbgDxf_rKNB09wiDhgS5TqyXYhU,1107
+test_locatr-0.33.0.dist-info/RECORD,,
