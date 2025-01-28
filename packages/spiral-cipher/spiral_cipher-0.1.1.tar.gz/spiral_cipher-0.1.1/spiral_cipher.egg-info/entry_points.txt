@@ -1,0 +1,2 @@
+[console_scripts]
+spiral-cipher = spiral_cipher.cli:main
