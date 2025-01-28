@@ -1,0 +1,4 @@
+[console_scripts]
+chem_parse=pychemparse.scripts:chem_parse_cli
+chem_to_html=pychemparse.scripts:chem_to_html_cli
+
