@@ -1,0 +1,14 @@
+exasol/bucketfs/__init__.py,sha256=ffYbIxcMqF9gocn1TwJGjuoOmXSFz-mE1B9vqMHUxC0,1860
+exasol/bucketfs/_buckets.py,sha256=u37thbGC8ZAfyQp7ZxUPpF5_sOo2Z_OMjLhSDflKCNc,17664
+exasol/bucketfs/_convert.py,sha256=pvOdQ_24MyVfJPTjiLY1wvosiQaBcB1JspalYwvN1Zo,2776
+exasol/bucketfs/_error.py,sha256=Y-yKy78qY4zMpvcipYSBbx2I7U_YaSXACp0C-g5zTdI,224
+exasol/bucketfs/_logging.py,sha256=xhEuVRicOvwogXynUwOz6DjnzIIZ-k7VHfgqHPxOv7I,98
+exasol/bucketfs/_path.py,sha256=eWtG5TsXTKj_Fp5SBRU_O3R04y6m-8MoN0Q9JK8MGLs,18824
+exasol/bucketfs/_service.py,sha256=FJkbWNWuWySwWtUvb1R5ljY2hTDER4Fwb2EifM_cjmE,2883
+exasol/bucketfs/_shared.py,sha256=IHZCjRp8XvSj9lNlL97zuRp-0AkaRGtwUNuSSi_AB8k,1125
+exasol/bucketfs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+exasol/bucketfs/version.py,sha256=6INFvnj_bwfFV-PcXOCvUwVk05oQvAyy8AY5WCB_8gY,412
+exasol_bucketfs-1.0.1.dist-info/LICENSE,sha256=d1RyGoDvN-hLIbsaGmLWCJ3isTU1R6UxqJ_9y9Y4pw4,1063
+exasol_bucketfs-1.0.1.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+exasol_bucketfs-1.0.1.dist-info/METADATA,sha256=tTBePWnQRSs_bb2ctfB6kGtRxFZOjnzevh1vEo_v3S4,2513
+exasol_bucketfs-1.0.1.dist-info/RECORD,,
