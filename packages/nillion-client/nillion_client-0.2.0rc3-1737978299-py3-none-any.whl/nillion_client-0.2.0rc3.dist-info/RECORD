@@ -1,0 +1,14 @@
+nillion_client/__init__.py,sha256=IzAKAXN-69LmUt-Fy8afyuspcOZ5uKL_Ofxn0OSSn_o,1414
+nillion_client/auth.py,sha256=cXV1BSzCXdm0njzatuLWznXlJGmzIf4OyFpVWrZsC2w,2298
+nillion_client/client.py,sha256=DpMuakaS6HcjxCwg6qXbgHKTpM6sfjhBAQwTdaylgDs,48319
+nillion_client/client_retry.py,sha256=kw0SOGMVJnCvJgzPb6qr_cjunmSABQV9sFP50Bk5_Ag,2189
+nillion_client/ids.py,sha256=OfB3el5OzdGMjja3hUV0i4uQgEG18NF7VsXkqWU9W4w,2976
+nillion_client/network.py,sha256=QKM--uaeGCwBx2zMo2sQHYLWi8ibbRXvYSTUaDXhZl4,3155
+nillion_client/payer.py,sha256=3VhGXi9JF93mX7gHA1YN05_cSl5lo4EBZjGnlMTa_p4,5364
+nillion_client/permissions.py,sha256=30Axe24bwN4pBLuMFWTyvIFlHJmumrT6LR4iKU9LLL8,6686
+nillion_client/values.py,sha256=X3fKR1aw3La1DJtdFxfuKn35rHEIoZtoma1DfpkGkww,9665
+nillion_client/vm_operation.py,sha256=-ASrjcZVMO6H6vmNXrh1pLHwliHm0EkpXkYakPyXxME,14549
+nillion_client-0.2.0rc3.dist-info/METADATA,sha256=C7zcU6up6f7S7YVznc1UmPQYXcP5WTDGgX_h8ml2i5k,1082
+nillion_client-0.2.0rc3.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+nillion_client-0.2.0rc3.dist-info/top_level.txt,sha256=0bhCklX4h6EMnOZH-b6ja14Se8BlQdDmYtADAeZ8Ylo,15
+nillion_client-0.2.0rc3.dist-info/RECORD,,
