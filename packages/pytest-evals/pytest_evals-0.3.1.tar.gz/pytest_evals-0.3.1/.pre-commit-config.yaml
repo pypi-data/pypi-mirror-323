@@ -1,0 +1,31 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.3.0
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.392.post0
+    hooks:
+      - id: pyright
+
+  - repo: local
+    hooks:
+      - id: uv-sync
+        name: UV sync dependencies
+        entry: uv sync --all-extras --dev
+        language: system
+        pass_filenames: false
+
+      - id: pytest
+        name: Run tests with coverage
+        entry: coverage run --source=pytest_evals -m pytest
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]
+        types: [python]
+
+default_install_hook_types: [pre-commit, commit-msg]
+default_stages: [pre-commit, pre-push]

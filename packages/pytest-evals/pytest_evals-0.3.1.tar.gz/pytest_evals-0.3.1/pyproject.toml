@@ -1,0 +1,89 @@
+[project]
+name = "pytest-evals"
+version = "0.3.1"
+description = "A pytest plugin for running and analyzing LLM evaluation tests"
+authors = [
+    { name = "Almog Baku", email = "almog.baku@gmail.com" },
+]
+dependencies = [
+    "pytest>=7.0.0",
+    "pytest-harvest>=1.0.0",
+    "cloudpickle>=2.0.0",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+license = "MIT"
+keywords = ["pytest", "evaluations", "llm", "eval", "openai", "anthropic", "gpt", "pytest-evals"]
+
+[project.urls]
+Homepage = "https://github.com/AlmogBaku/pytest-evals"
+Repository = "https://github.com/AlmogBaku/pytest-evals"
+Issues = "https://github.com/AlmogBaku/pytest-evals/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.entry-points.pytest11]
+evals = "pytest_evals.plugin"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pytest_evals"]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q --cov-report=term-missing"
+testpaths = ["tests"]
+
+filterwarnings = [
+    "ignore::pytest.PytestDeprecationWarning:pytest_harvest.*",
+]
+
+[dependency-groups]
+dev = [
+    "ipytest>=0.14.2",
+    "matplotlib>=3.9.4",
+    "notebook>=7.3.2",
+    "openai>=1.59.6",
+    "pandas>=2.2.3",
+    "pytest-cov>=6.0.0",
+    "pytest-xdist>=3.6.1",
+    "seaborn>=0.13.2",
+]
+
+[tool.coverage.report]
+exclude_also = [
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+    "pragma: no cover",
+    "import *",
+    "@dataclass",
+    "@dataclasses.dataclass",
+    "class .*\\(BaseModel\\):",
+    "class .*\\(Enum\\):",
+    "class .*\\(enum\\.Enum\\):",
+    "class .*\\(pydantic\\.BaseModel\\):",
+    # 1. Exclude an except clause of a specific form:
+    "except ValueError:\\n\\s*assume\\(False\\)",
+    # 2. Comments to turn coverage on and off:
+    "no cover: start(?s:.)*?no cover: stop",
+    # 3. A pragma comment that excludes an entire file:
+    "\\A(?s:.*# pragma: exclude file.*)\\Z",
+    "@pytest\\.fixture.*",
+    "@pytest\\.mark.*",
+]
+
+omit = [
+    "tests/*",
+    "/tmp/*",
+    "/private/*",
+    "*/temporary/*"
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
