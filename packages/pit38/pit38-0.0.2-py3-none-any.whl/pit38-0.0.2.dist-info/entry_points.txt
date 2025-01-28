@@ -1,0 +1,3 @@
+[console_scripts]
+pit38=pit38.cli:app
+
