@@ -1,0 +1,59 @@
+Metadata-Version: 2.2
+Name: web_operator
+Version: 0.1.1
+Summary: A library for automating web tasks
+Author: Dhanoop Karunakaran
+Project-URL: Homepage, https://github.com/dkarunakaran/browse-bot
+Project-URL: Bug Tracker, https://github.com/dkarunakaran/browse-bot/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google-api-python-client==2.159.0
+Requires-Dist: google-auth==2.37.0
+Requires-Dist: google-auth-httplib2==0.2.0
+Requires-Dist: google-auth-oauthlib==1.2.0
+Requires-Dist: beautifulsoup4~=4.12.3
+Requires-Dist: lxml==5.3.0
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: langchain==0.3.14
+Requires-Dist: langchain-chroma==0.2.0
+Requires-Dist: langchain-ollama==0.2.2
+Requires-Dist: langchain-huggingface==0.1.2
+Requires-Dist: langchain_community==0.3.14
+Requires-Dist: langchain-openai==0.3.0
+Requires-Dist: langgraph==0.2.60
+Requires-Dist: langgraph-checkpoint-sqlite==2.0.1
+Requires-Dist: google-generativeai==0.8.4
+Requires-Dist: langchain-google-community==2.0.4
+Requires-Dist: pytest-playwright==0.6.2
+Requires-Dist: playwright==1.49.1
+Requires-Dist: pandas==2.2.3
+Requires-Dist: python-dotenv==1.0.1
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+
+# Broswe-bot
+
+A library for automating web tasks
+
+To learn more about the library, check out the [documentation 📕]
+
+# Instruction to start
+
+With pip:
+
+```bash
+python -m pip install web-operator
+```
+
+install playwright:
+
+```bash
+playwright install
+
+```
+
+# Quick code
