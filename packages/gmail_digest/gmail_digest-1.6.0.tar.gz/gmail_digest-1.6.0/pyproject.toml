@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "gmail_digest"
+version = "1.6.0"
+description = "A tool to generate a daily digest of your Gmail inbox. Helpful if you have agents working on your behalf."
+authors = ["Michael Bianco <mike@mikebian.co>"]
+license = "MIT"
+readme = "readme.md"
+homepage = "https://github.com/iloveitaly/gmail-digest"
+keywords = ["gmail", "email", "gmail-api", "llm", "ai", "digest"]
+
+[project.urls]
+'Changelog' = 'https://github.com/iloveitaly/gmail-digest/blob/master/CHANGELOG.md'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+google-api-python-client = "^2.142.0"
+python-decouple = "^3.8"
+google-auth-httplib2 = "^0.2.0"
+google-auth-oauthlib = "^1.2.1"
+click = "^8.1.7"
+markdown = "^3.7"
+funcy-pipe = "^0.11.1"
+openai = "^1.42.0"
+structlog = "^24.4.0"
+apscheduler = "^3.10.4"
+autoflake = "^2.3.1"
+backoff = "^2.2.1"
+
+[tool.poetry.scripts]
+gmail-digest = "gmail_digest:main"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
+exclude = '''
+/(
+  .venv
+  | node_modules
+  | migrations
+)/
+'''
+
+# when changing this config, you need to restart your vscode isort server
+[tool.isort]
+profile = "black"
+float_to_top = true
+multi_line_output = 3
+sections = "FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
