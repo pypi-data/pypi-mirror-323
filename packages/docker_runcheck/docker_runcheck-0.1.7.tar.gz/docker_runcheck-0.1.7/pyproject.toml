@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "docker_runcheck"
+version = "0.1.7"
+description = "An application to parse Dockerfiles and determine whether all called binaries are able to run (are either present in the base image or are installed by a package manager)"
+authors = ["Paulo Aragao <paulo.aragao.dev@gmail.com>"]
+license = "MIT License"
+readme = "README.md"
+packages = [{include = "docker_runcheck"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+docker = "^7.1.0"
+dockerfile = "^3.2.0"
+rich = "^13.9.4"
+typer="^0.15.1"
+[tool.poetry.scripts]
+docker_runcheck = "docker_runcheck.app:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
