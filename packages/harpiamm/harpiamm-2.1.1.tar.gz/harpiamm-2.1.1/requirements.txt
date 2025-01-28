@@ -1,0 +1,6 @@
+numpy>=1.24,<2
+lightcon>=1.5.5
+spinnaker-python>=4.0.0.0
+lkcom>=0.5.0
+lkfit>=0.3.1
+scikit-image
