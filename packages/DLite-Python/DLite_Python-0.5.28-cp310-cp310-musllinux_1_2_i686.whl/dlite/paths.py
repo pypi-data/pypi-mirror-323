@@ -1,0 +1,13 @@
+dlite_INSTALL_ROOT = '/project/python/build/temp.linux-i686-cpython-310/{project}/python/build/lib.manylinux2014_x86_64-3.10'
+dlite_BUILD_ROOT = '/project/python/build/temp.linux-i686-cpython-310'
+
+dlite_PATH = ''
+dlite_LD_LIBRARY_PATH = '/project/python/build/temp.linux-i686-cpython-310/src;/project/python/build/temp.linux-i686-cpython-310/src/utils;/project/python/build/temp.linux-i686-cpython-310/src/pyembed'
+dlite_PYTHONPATH = '/project/python/build/temp.linux-i686-cpython-310/bindings/python/tmp/pip-build-env-c77lrbqt/site'
+dlite_STORAGE_PLUGINS = '/project/python/build/temp.linux-i686-cpython-310/storages/json;/project/python/build/temp.linux-i686-cpython-310/storages/rdf;/project/python/build/temp.linux-i686-cpython-310/storages/python'
+dlite_MAPPING_PLUGINS = ''
+dlite_PYTHON_STORAGE_PLUGINS = '/project/storages/python/python-storage-plugins'
+dlite_PYTHON_MAPPING_PLUGINS = '/project/bindings/python/python-mapping-plugins'
+dlite_PYTHON_PROTOCOL_PLUGINS = '/project/bindings/python/python-protocol-plugins'
+dlite_TEMPLATES = '/project/tools/templates'
+dlite_STORAGES = '/project/examples/storages/*.json'
