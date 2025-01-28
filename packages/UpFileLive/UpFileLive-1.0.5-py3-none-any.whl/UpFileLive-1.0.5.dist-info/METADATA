@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: UpFileLive
+Version: 1.0.5
+Summary: A Python tool for interacting with upfile.live for file sharing.
+Home-page: https://github.com/N791/UpFileLive
+Author: MoeN791
+Author-email: a15345506127@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: playwright
+Requires-Dist: loguru
+
