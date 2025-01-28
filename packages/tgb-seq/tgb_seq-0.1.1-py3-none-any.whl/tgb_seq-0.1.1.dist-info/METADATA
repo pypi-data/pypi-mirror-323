@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tgb_seq
+Version: 0.1.1
+Summary: Temporal Graph Benchmark with Sequential Dynamics
+Author: Lu Yi
+Author-email: yilu@ruc.edu.cn
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: datetime (>=5.5,<6.0)
+Requires-Dist: huggingface-hub (>=0.26.0,<0.27.0)
+Requires-Dist: numpy (<2.0)
+Requires-Dist: pandas (>=2.2.2)
+Requires-Dist: torch (>=2.3.0,<3.0.0)
