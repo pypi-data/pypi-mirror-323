@@ -1,0 +1,11 @@
+pyproject.toml
+setup.py
+/home/runner/work/dlite/dlite/bindings/python/scripts/dlite-validate
+/home/runner/work/dlite/dlite/cmake/patch-activate.sh
+DLite-Python/__init__.py
+DLite_Python.egg-info/PKG-INFO
+DLite_Python.egg-info/SOURCES.txt
+DLite_Python.egg-info/dependency_links.txt
+DLite_Python.egg-info/not-zip-safe
+DLite_Python.egg-info/requires.txt
+DLite_Python.egg-info/top_level.txt
