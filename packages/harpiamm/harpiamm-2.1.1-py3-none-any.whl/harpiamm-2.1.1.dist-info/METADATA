@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: harpiamm
+Version: 2.1.1
+Summary: A Python library for the HARPIA microscopy module.
+Author-email: Lukas Kontenis <lukas.kontenis@lightcon.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy<2,>=1.24
+Requires-Dist: lightcon>=1.5.5
+Requires-Dist: spinnaker-python>=4.0.0.0
+Requires-Dist: lkcom>=0.5.0
+Requires-Dist: lkfit>=0.3.1
+Requires-Dist: scikit-image
+
+
+harpiamm is a Python library for the microscopy module of the [HARPIA](https://lightcon.com/products/spectroscopy-systems/) transient absorption spectrometer developed by [LIGHT CONVERSION](https://lightcon.com).
+
+## Install
+harpiamm is available via [PyPI](https://pypi.python.org/pypi/harpiamm/).
+Install using `pip`:
+```
+  python -m pip install harpiamm
+ ```
+Copyright 2019-2024 Light Conversion
+
+Contact: support@lightcon.com
