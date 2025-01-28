@@ -1,0 +1,11 @@
+unitycatalog_migrate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unitycatalog_migrate/coro.py,sha256=fZ2BfVw-SRRhgknITLkMyWAq6d5Q4vTbjyZiIDk9gkk,2294
+unitycatalog_migrate/main.py,sha256=xdyRCaI9-PRo3E8gGydNwbh_fqiGAQPZNTECx6mMoV0,2393
+unitycatalog_migrate/output.py,sha256=lSaSCzwG1aAzLW0tk9crpawaw4B_Oy8J0yCtJ3QEX58,915
+unitycatalog_migrate/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unitycatalog_migrate/uc.py,sha256=WrdUhGSL-e4g_B7QGfCIevSfJo3RsoW4Z3L95GnvM0s,2786
+unitycatalog_migrate-0.1.1.dist-info/METADATA,sha256=tjhKbHjPpxFe15Izisw9eidSOvPsN2HLPgJyE2eK4XQ,4431
+unitycatalog_migrate-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+unitycatalog_migrate-0.1.1.dist-info/entry_points.txt,sha256=oJMO_U-lS3gbGWDwThuFtBxGcwrLmcDyY4mJ34x36_w,55
+unitycatalog_migrate-0.1.1.dist-info/licenses/LICENSE,sha256=J1UryPUBR8jcaxOsq3HoRyhLdprkly1PR7RYHbuimYg,1068
+unitycatalog_migrate-0.1.1.dist-info/RECORD,,
