@@ -1,0 +1,8 @@
+jax
+flax
+
+[dev]
+black
+pre-commit
+jaxgl
+pygame
