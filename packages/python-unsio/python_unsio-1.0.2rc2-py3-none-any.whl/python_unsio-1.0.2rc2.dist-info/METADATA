@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: python-unsio
+Version: 1.0.2rc2
+Summary: python-unsio is now unsio
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
+Requires-Dist: unsio
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+# python-unsio is now unsio
+
+This package has been renamed. Use `pip install unsio` instead.
+
+New package: https://pypi.org/project/unsio/
