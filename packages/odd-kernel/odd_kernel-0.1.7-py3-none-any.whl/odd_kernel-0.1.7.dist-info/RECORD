@@ -1,0 +1,13 @@
+odd_kernel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odd_kernel/util/__init__.py,sha256=pA15Aey9YEj5Qj0kCqa-Jgcyncn4f3ZyE14m8fI0RhE,125
+odd_kernel/util/charts.py,sha256=1UWM6J0j8ObdfJvJUaj__pFL1qSF9ge1mIGXzUz0ggU,125
+odd_kernel/util/general.py,sha256=c6Xh3r5bLdrz5ahE0nAHYRzCbaVYr9vQsCVPOSKv9CY,208
+odd_kernel/util/mailing.py,sha256=7Po9sTqO1JOYQdhadU16YyyDQyE5dWIImpkTkgDdLso,1550
+odd_kernel/util/misc.py,sha256=WX6Ek0IvPEKvapGNkK_8TLjC2Wyr5ykYQXFM1qUlwZM,857
+odd_kernel/util/assets/ding.wav,sha256=nQq3RxsvXcfHl9dW4_0QodNOFHGvX2tazXPT1wVsDrE,795902
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_util_misc.py,sha256=xexE6QJ3rSwy3L5MCJTZOm5obIdNAzevXYj0nISPP6k,200
+odd_kernel-0.1.7.dist-info/METADATA,sha256=zOskntX9lF-yjD0YqxCA6I5smSGlHFnkpcHj-ZVit8Y,583
+odd_kernel-0.1.7.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+odd_kernel-0.1.7.dist-info/top_level.txt,sha256=DxUDtiB2NBpCi7uCdXVrFLAoQSLdW4vCMZHEIw9hzlM,17
+odd_kernel-0.1.7.dist-info/RECORD,,
