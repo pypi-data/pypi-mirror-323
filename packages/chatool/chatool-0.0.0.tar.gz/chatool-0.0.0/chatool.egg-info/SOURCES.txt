@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+chatool/__init__.py
+chatool/version.py
+chatool.egg-info/PKG-INFO
+chatool.egg-info/SOURCES.txt
+chatool.egg-info/dependency_links.txt
+chatool.egg-info/requires.txt
+chatool.egg-info/top_level.txt
