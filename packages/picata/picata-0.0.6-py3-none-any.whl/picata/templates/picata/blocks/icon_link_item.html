@@ -1,0 +1,7 @@
+{% load static %}
+<li>
+    {% if value.href %}<a href="{{ value.href }}" target="_blank" rel="noopener noreferrer">{% endif %}
+    {% if value.icon %}<svg><use href="static/icons.svg#{{ value.icon }}" /></svg>{% endif %}
+    <span>{{ value.label }}</span>
+    {% if value.href %}</a>{% endif %}
+</li>
