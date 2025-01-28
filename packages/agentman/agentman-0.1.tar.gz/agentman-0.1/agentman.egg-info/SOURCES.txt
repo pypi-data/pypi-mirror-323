@@ -1,0 +1,8 @@
+README.md
+setup.py
+agentman/__init__.py
+agentman/dec.py
+agentman.egg-info/PKG-INFO
+agentman.egg-info/SOURCES.txt
+agentman.egg-info/dependency_links.txt
+agentman.egg-info/top_level.txt
