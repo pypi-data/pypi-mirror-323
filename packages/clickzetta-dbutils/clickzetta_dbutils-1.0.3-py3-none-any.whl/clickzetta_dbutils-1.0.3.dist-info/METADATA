@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: clickzetta-dbutils
+Version: 1.0.3
+Summary: clickzetta dbutils
+Author-email: "lin.zhang" <lin.zhang@clickzetta.com>
+Project-URL: documentation, https://www.yunqi.tech/
+Platform: Posix
+Platform: MacOS X
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.7
+Requires-Dist: sqlalchemy<2.0.0,>=1.4.0
+Requires-Dist: numpy==1.24.4
+Requires-Dist: psycopg2
+Requires-Dist: mysql-connector-python
+Provides-Extra: dev
+Requires-Dist: pytest==8.2.1; extra == "dev"
+Requires-Dist: sqlparse; extra == "dev"
+Requires-Dist: grpcio; extra == "dev"
+Requires-Dist: grpcio-tools; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: pytest-xdist; extra == "dev"
+Requires-Dist: pytz; extra == "dev"
+Requires-Dist: apache-superset==4.0.2; extra == "dev"
+Provides-Extra: cliclzetta
+Requires-Dist: clickzetta-connector; extra == "cliclzetta"
+Requires-Dist: clickzetta-sqlalchemy; extra == "cliclzetta"
