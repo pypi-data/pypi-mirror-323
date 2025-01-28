@@ -1,0 +1,5 @@
+media-tagging[api,llm]
+igraph
+pandas
+numpy
+pydantic
