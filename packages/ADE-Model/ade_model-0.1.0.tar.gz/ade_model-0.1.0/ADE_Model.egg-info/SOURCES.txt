@@ -1,0 +1,9 @@
+README.md
+setup.py
+ADE_Model.egg-info/PKG-INFO
+ADE_Model.egg-info/SOURCES.txt
+ADE_Model.egg-info/dependency_links.txt
+ADE_Model.egg-info/requires.txt
+ADE_Model.egg-info/top_level.txt
+my_model_package/__init__.py
+my_model_package/model.py
