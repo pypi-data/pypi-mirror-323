@@ -1,0 +1,10 @@
+wrapt<2,>=1.10
+
+[dev]
+tox
+PyTest
+PyTest-Cov
+bump2version<1
+
+[dev:python_version >= "3.12"]
+setuptools
