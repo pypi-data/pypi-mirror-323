@@ -1,0 +1,12 @@
+generate/__init__.py,sha256=rsE5jjTo93DYM_LZizq_VTQcgSSQjNTeIXvTNBgDh70,138
+generate/__main__.py,sha256=jDkFaUj9egZAbhcaxcyh0o4lpONLBfp4_Z-RRN9A8rE,1471
+generate/folder.py,sha256=OPQntzyaoJEooEglCn29lmmSnyUalJDDkKGxnCxQYMI,3894
+generate/nodes.py,sha256=fdGq7JX7BuLRIBn7mNYjmeCuSaG-raM5HuZlj5gNmc0,3710
+generate/parser.py,sha256=cSzfXRgg_RZ_PztsPSrZZyxsBk-SB1-B0VMEtW0Vs-k,1795
+generate/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+generate/substitute.py,sha256=zXZ7utKyso5KABciM04-d7tDB0c2n0tnTJx3IE8Q3BI,2382
+qr_generate-0.1.1.dist-info/LICENSE,sha256=2yfSoRqcK5auE2pfzVIYTlv54b9SxTLkAobUB165Tv4,1071
+qr_generate-0.1.1.dist-info/METADATA,sha256=HKRJmWqSKdF6rHhRN_zdbyrHhY0MqAGQQuAiqErqZes,3869
+qr_generate-0.1.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+qr_generate-0.1.1.dist-info/top_level.txt,sha256=1KWgPSZajJVfIC8faVu5fa4zPkPLV69POeLdSErreTM,9
+qr_generate-0.1.1.dist-info/RECORD,,

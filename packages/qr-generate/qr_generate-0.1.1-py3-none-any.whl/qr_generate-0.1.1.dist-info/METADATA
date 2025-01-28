@@ -1,0 +1,133 @@
+Metadata-Version: 2.2
+Name: qr-generate
+Version: 0.1.1
+Summary: generate files from templates
+Author-email: Matthew Scroggs <generate@mscroggs.co.uk>
+License: MIT License
+        Copyright (c) 2025 Matthew Scroggs
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: homepage, https://github.com/quadraturerules/generate
+Project-URL: repository, https://github.com/quadraturerules/generate
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml
+Provides-Extra: style
+Requires-Dist: ruff; extra == "style"
+Requires-Dist: mypy; extra == "style"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Provides-Extra: ci
+Requires-Dist: qr-generate[style,test]; extra == "ci"
+
+# Generate files from templates
+
+This code can be used to generate plain text files from templates.
+
+## Installing
+
+To install the latest release from PyPI, run:
+
+```bash
+pip install qr-generate
+```
+
+To install the latest code from GitHub, run:
+
+```bash
+pip install git+https://github.com/quadraturerules/generate.git
+```
+
+## Examples
+
+### Looping in a file
+To generate a file that prints each value in a list, the following template can be written:
+
+```python
+template = """{{for v in values}}
+print({{v}})
+{{end for}}"""
+```
+
+A python script can then be used to generate the file:
+
+```python
+import generate
+
+t = generate.parse(template)
+values = [
+    generate.substitute.Float(i)
+    for i in [1.0, 4.0, 6.0]
+]
+print(t.substitute(loop_targets={"values": values}))
+```
+
+The items in the list `values` passed in as a loop target must be a subclass of
+[Substitutor](generator/substitute.py).
+
+### Templating with a folder
+
+Alternatively, you could create a folder called `input_code` and create a file inside it containing the file `code.py` with contents:
+
+```python
+{{for v in values}}
+print({{v}})
+{{end for}}
+```
+
+and create a file in the directory called `__gen__.py` with contents:
+
+```python
+import generate
+loop_targets = {"values": [
+    generate.substitute.Float(i)
+    for i in [1.0, 4.0, 6.0]
+]}
+```
+
+You can then run:
+
+```bash
+python -m generate input_code output_code
+```
+
+This would create a directory called `output_code` containing a file `code.py` with the template replacements having been made.
+
+### Generating multiple files from a .template file
+
+When templating using a folder, a file for each entry in a list can be created by using a .template file. For example, if a file called
+`p.template` was added to the `input_code` directory with the contents
+
+```python
+--
+template: v in values
+filename: p-{{v}}.py
+--
+print({{v}})
+```
+
+You can then run:
+
+```bash
+python -m generate input_code output_code
+```
+
+This would generate files called `p-1.0.py`, `p-4.0py`, and `p-6.0.py`.
