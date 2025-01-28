@@ -1,0 +1,8 @@
+clang_repl/__init__.py,sha256=laKIxEYr1KHCOhHPZ8VIN42Lr5Xghy7S3ePYsJWwXoA,59
+clang_repl/__main__.py,sha256=03XPRqylB8rGk_f6WZPb2G6S9Dk17z30A1VEujclT-4,133
+clang_repl/clrepl.py,sha256=uT_I0y4QlktIfWmeQGVRPkk05h9mi-axZTWyjcojUqo,8414
+clang_repl/kernel.py,sha256=zmLeFiFq4cLC-Zs7ymLocwScNEszr7j1hGziikP9sh4,1183
+clang_repl-1.0.1.data/data/share/jupyter/kernels/clang_repl/kernel.json,sha256=qgX8gyCzzoVv57XBPtjbPRvxMJcsWF1fmeKjmRdAEN8,116
+clang_repl-1.0.1.dist-info/METADATA,sha256=h9Zcm_6Xysc7mDGF4LoimMr6wg3DYtzrUUpkJaB2cvs,3722
+clang_repl-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+clang_repl-1.0.1.dist-info/RECORD,,

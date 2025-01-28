@@ -1,0 +1,1 @@
+{"argv": ["python", "-m", "clang_repl", "-f", "{connection_file}"], "display_name": "clang_repl", "language": "c++"}
