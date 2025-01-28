@@ -1,0 +1,27 @@
+name: pre-commit
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout [${{ github.repository }}]
+        uses: actions/checkout@v4
+
+      - uses: cvxgrp/.github/actions/uv/coverage@v2.0.8
+        with:
+          source-folder: 'pyhrp'
+
+
+
+  deptry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout [${{ github.repository }}]
+        uses: actions/checkout@v4
+
+      - uses: cvxgrp/.github/actions/uv/deptry@v2.0.8
+        with:
+          source-folder: 'pyhrp'
