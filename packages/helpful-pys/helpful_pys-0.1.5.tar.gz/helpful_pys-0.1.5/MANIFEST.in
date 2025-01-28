@@ -1,0 +1,5 @@
+include README.md
+include requirements.txt
+exclude helpful-pys/creds.py
+include helpful-pys/creds.py.sample
+# recursive-include helpful-pys *.py
