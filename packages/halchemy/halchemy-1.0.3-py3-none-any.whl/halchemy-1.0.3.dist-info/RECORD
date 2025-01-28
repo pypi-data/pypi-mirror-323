@@ -1,0 +1,15 @@
+halchemy/__init__.py,sha256=ckzAcd6WlzwEgKWsiH99POnUIfboAPjhzeiFvXL8dCM,22
+halchemy/api.py,sha256=tM2c3VH5V5AWO-jIhxSfugsiBz9Vjpq_aJcw5PUTUQc,6564
+halchemy/configuration.py,sha256=w-EZZac6_ZjagNRSqM7jfebx2SdXPClHC2Zzczjsr8o,2882
+halchemy/error_handling.py,sha256=Dc8wcVRNW2SKkf6hNjuclUmbK2Mcyom7gfEs78_qP8A,501
+halchemy/follower.py,sha256=xVo5f5j6stzdvnOgjwCXcXuA_a902SE7hx-Gg6HUZPk,545
+halchemy/http_model.py,sha256=z65_W7xKqSIuqyiUWQTkmYyC-DdCLNGcA4m-m3C-R_g,478
+halchemy/json_type.py,sha256=jkrC5A_WFb3O6Nz9Zt2730hOwRsf7LBteyY6boxyz4o,461
+halchemy/requester.py,sha256=JYF61YwPros1xM-BHpy659qPKujEvvUm_Ji_IeUzfEI,6026
+halchemy/requests_helper.py,sha256=fR3aL4qIDzkrbdVB0dfp0H9jmJESMw_zyQ5m9NvKoJc,2629
+halchemy/resource.py,sha256=TjLgSjwuveITwdmyEsjSs3Ykz45ewZBWibF6UjCoDEs,2735
+halchemy/status_codes.py,sha256=VP3nlVsUMoa25WjZ8qXnnlpxU9G58GdYK47FgjugV8M,2477
+halchemy-1.0.3.dist-info/METADATA,sha256=Djb3TMQQyPakeRe9URu_7qXZ-Vc6J9dGQH2k_YJn-6Q,1787
+halchemy-1.0.3.dist-info/WHEEL,sha256=R06PA3UVYHThwHvxuRWMqaGcr-PuniXahwjmQRFMEkY,91
+halchemy-1.0.3.dist-info/top_level.txt,sha256=QDAX4T2q2TC09LWO_LgEyuEBr-lPTU86p48miwnpfzw,9
+halchemy-1.0.3.dist-info/RECORD,,
