@@ -1,0 +1,13 @@
+coresight_sdk/__init__.py,sha256=J-j-u0itpEFT6irdmWmixQqYMadNl1X91TxUmoiLHMI,22
+coresight_sdk/client.py,sha256=fu3EJpJxKGOM1j0VIpbJUfsnEIof0xpihlr3A0OFvik,1351
+coresight_sdk/exceptions.py,sha256=021NXR6Ia7r5zxGoYPqMr689RWKmZQP3EgPoTvPaSo4,219
+coresight_sdk/feedback.py,sha256=jaJTksPt2FGDXvPRaGfz5B5mTm3xjbPKXlAISWPta-c,745
+coresight_sdk/messages.py,sha256=bR4UIJdACMTCLuI7qJR_CvbJ4-HaURXJ4_8GQQg27RI,735
+coresight_sdk/projects.py,sha256=mZ-h0o6PJSgYfSKxxeWBBxQ9ZpIsqjARdG35aN8bKtw,1234
+coresight_sdk/subscriptions.py,sha256=XOl96SnfuDaWcKoW2woAhqVkq4zXzEBwKVUI2AUJuTQ,868
+coresight_sdk/threads.py,sha256=RlhLbP_uU5K0qMGHlpPunSh4CdFMxCjvDev_ZfwOVmY,837
+coresight_sdk/users.py,sha256=atR5GnRMaAy8RfqoGlYF_sy08Vl-K0sjjxyqOvLVAt4,1097
+coresight_sdk/utils.py,sha256=doANAZ4BQ1PhKA5yZuqMHdCF7k29OeH5Gy2hB1vkQTE,1597
+coresight_sdk-1.0.1.dist-info/METADATA,sha256=ugMGZ_oXXbljFYfBDYXC2237rwy6wH1GDtHAiWNRIVk,3720
+coresight_sdk-1.0.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+coresight_sdk-1.0.1.dist-info/RECORD,,
