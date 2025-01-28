@@ -1,0 +1,11 @@
+.gitignore
+README.md
+requirements.txt
+setup.py
+comwatt_client_legacy/__init__.py
+comwatt_client_legacy/client.py
+comwatt_client_legacy.egg-info/PKG-INFO
+comwatt_client_legacy.egg-info/SOURCES.txt
+comwatt_client_legacy.egg-info/dependency_links.txt
+comwatt_client_legacy.egg-info/requires.txt
+comwatt_client_legacy.egg-info/top_level.txt
