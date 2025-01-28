@@ -1,0 +1,61 @@
+{% extends 'generic/object.html' %}
+{% load render_table from django_tables2 %}
+
+{% block content %}
+    <div class="row mb-3">
+        <div class="col col-md-6">
+            <div class="card">
+                <h5 class="card-header">Extra DNS name</h5>
+                <div class="card-body">
+                    <table class="table table-hover attr-table">
+                        <tr>
+                            <th scope="row">Name</th>
+                            <td>{{ object.name }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">IP Address</th>
+                            <td>
+                                <a href="{{ object.ip_address.get_absolute_url }}">{{ object.ip_address }}</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Last update</th>
+                            <td>{{ object.last_update|isodatetime }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Forward DNS</th>
+                            <td>
+                                {% if object.forward_action is not None %}
+                                    {{ object.get_forward_action_display }}:
+                                    {{ object.get_forward_rcode_html_display }} {% else %}
+                                    <span class="text-muted">Not created</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <h5 class="card-header">Managed by</h5>
+                <div class="card-body">
+                    <table class="table table-hover attr-table">
+                        <tr>
+                            <th scope="row">DDNS Server</th>
+                            <td>
+                                <a href="{{ server.get_absolute_url }}">{{ server }}</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Zone</th>
+                            <td>
+                                <a href="{{ zone.get_absolute_url }}">{{ zone }}</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            {% include 'inc/panels/custom_fields.html' %}
+        </div>
+        <div class="col col-md-6">{% include 'inc/panels/tags.html' %}</div>
+    </div>
+{% endblock content %}
