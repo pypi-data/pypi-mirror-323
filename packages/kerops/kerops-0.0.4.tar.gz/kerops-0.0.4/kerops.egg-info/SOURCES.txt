@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+kerops/__init__.py
+kerops/__version__.py
+kerops/utils.py
+kerops.egg-info/PKG-INFO
+kerops.egg-info/SOURCES.txt
+kerops.egg-info/dependency_links.txt
+kerops.egg-info/requires.txt
+kerops.egg-info/top_level.txt
