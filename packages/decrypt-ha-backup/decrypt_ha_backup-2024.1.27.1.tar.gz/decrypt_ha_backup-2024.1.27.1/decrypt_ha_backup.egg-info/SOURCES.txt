@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+decrypt-ha-backup/__init__.py
+decrypt-ha-backup/__main__.py
+decrypt-ha-backup/decrypted_stream.py
+decrypt_ha_backup.egg-info/PKG-INFO
+decrypt_ha_backup.egg-info/SOURCES.txt
+decrypt_ha_backup.egg-info/dependency_links.txt
+decrypt_ha_backup.egg-info/requires.txt
+decrypt_ha_backup.egg-info/top_level.txt
