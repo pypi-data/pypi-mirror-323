@@ -1,0 +1,9 @@
+selenium
+undetected-chromedriver
+selenium-stealth
+requests
+pyautogui
+setuptools
+opencv-python
+pyscreeze
+Pillow
