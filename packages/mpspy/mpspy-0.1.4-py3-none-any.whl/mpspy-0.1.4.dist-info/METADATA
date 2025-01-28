@@ -1,0 +1,40 @@
+Metadata-Version: 2.3
+Name: mpspy
+Version: 0.1.4
+Summary: 
+Author: Christoph Hansknecht
+Author-email: christoph.hansknecht@tu-clausthal.de
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=2.0)
+Requires-Dist: scipy (>=1.14)
+Description-Content-Type: text/markdown
+
+# mpspy
+
+A simple implementation to read MPS files containing the definitions
+of mixed-integer programs such as found in
+[MIPLIB](https://miplib.zib.de/index.html).
+
+## Usage:
+
+```python
+import mpspy
+
+# Read instance
+instance = mpspy.read_mps('instance.mps')
+
+# Access instance
+
+print(instance.var_lb)
+print(instance.var_ub)
+print(instance.coeffs)
+
+```
+
+Note: This implementation is designed to read MIPLIB instances only.
+
