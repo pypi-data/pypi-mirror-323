@@ -1,0 +1,8 @@
+requests
+
+[docs]
+sphinx
+sphinx-autoapi
+
+[test]
+Flask>3.0.0
