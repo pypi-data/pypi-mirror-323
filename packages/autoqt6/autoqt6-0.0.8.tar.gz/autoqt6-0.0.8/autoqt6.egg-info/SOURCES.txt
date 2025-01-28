@@ -1,0 +1,8 @@
+LICENSE
+README.md
+autoqt6.py
+setup.py
+autoqt6.egg-info/PKG-INFO
+autoqt6.egg-info/SOURCES.txt
+autoqt6.egg-info/dependency_links.txt
+autoqt6.egg-info/top_level.txt
