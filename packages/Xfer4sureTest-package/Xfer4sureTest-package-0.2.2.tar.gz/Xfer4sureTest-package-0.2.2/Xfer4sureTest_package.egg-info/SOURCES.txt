@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+Xfer4sureTest_package.egg-info/PKG-INFO
+Xfer4sureTest_package.egg-info/SOURCES.txt
+Xfer4sureTest_package.egg-info/dependency_links.txt
+Xfer4sureTest_package.egg-info/entry_points.txt
+Xfer4sureTest_package.egg-info/top_level.txt
+Xfer4sureTest_package/__pycache__/__init__.cpython-312.pyc
+Xfer4sureTest_package/__pycache__/script.cpython-312.pyc
