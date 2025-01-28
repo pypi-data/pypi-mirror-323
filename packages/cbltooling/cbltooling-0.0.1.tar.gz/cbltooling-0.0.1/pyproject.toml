@@ -1,0 +1,29 @@
+[project]
+name = "cbltooling"
+description = "Python tooling for the Computational Biomechanics Lab at TU Delft"
+version = "0.0.1"
+authors = [
+    { name = "Adam Kewley", email = "a.kewley@tudelft.nl" }
+]
+dependencies = [
+    "numpy"
+]
+readme = "README.md"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://github.com/ComputationalBiomechanicsLab/cbltooling"
+Documentation = "https://computationalbiomechanicslab.github.io/cbltooling"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
