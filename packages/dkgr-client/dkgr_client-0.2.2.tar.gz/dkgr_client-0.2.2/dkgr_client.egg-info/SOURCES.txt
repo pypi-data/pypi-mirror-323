@@ -1,0 +1,9 @@
+README.md
+setup.py
+dkgr_client/__init__.py
+dkgr_client/client.py
+dkgr_client.egg-info/PKG-INFO
+dkgr_client.egg-info/SOURCES.txt
+dkgr_client.egg-info/dependency_links.txt
+dkgr_client.egg-info/requires.txt
+dkgr_client.egg-info/top_level.txt
