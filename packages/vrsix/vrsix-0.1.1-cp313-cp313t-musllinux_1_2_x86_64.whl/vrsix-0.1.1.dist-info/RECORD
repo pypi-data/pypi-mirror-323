@@ -1,0 +1,11 @@
+vrsix-0.1.1.dist-info/METADATA,sha256=MUVtWao_wm7hSb1JMUhaWrhDVTE-H1P7u_5QXAK1wA0,3515
+vrsix-0.1.1.dist-info/WHEEL,sha256=XCMH4B7X4BoXItygeRfFFnnxSpA3N1vp-GL3p4Z6Mvg,108
+vrsix-0.1.1.dist-info/entry_points.txt,sha256=1xmUSnqAt6UkuxSEoeuitvNGtHvcADzpJGKDtsbMxns,38
+vrsix-0.1.1.dist-info/licenses/LICENSE,sha256=i8uJ14dehBnrxdoRmcXxHelksXpaL4SHgQ7PPykPffs,1128
+vrsix.libs/libgcc_s-1e52349c.so.1,sha256=Ani0u_W_tB8ESsFePO4D2mn2lrgWLhyFdw6RETxBTYM,437537
+vrsix/load.py,sha256=_tI9NTimPeNe6rtKX6QkMJx1z8zTFDBHlF-DgF7_B2Y,1109
+vrsix/sqlite.py,sha256=Gow8ahElC2J6kUtt-zqej9j_ECquXqp52PqHPcpDD2M,211
+vrsix/__init__.py,sha256=9vnstZCjKbV5Mh5IAgOk4QtrDTujgJJyrjfoa_V39CM,95
+vrsix/cli.py,sha256=Dqwvefvm0ZKotaS7_97fnfcy4KRszeRCVsccXFcTLwE,1621
+vrsix/_core.cpython-313t-x86_64-linux-musl.so,sha256=0tUGvBgIhmqWxuq5zFv10wNUf7zsIyrcYTH03S-GQ3c,4898089
+vrsix-0.1.1.dist-info/RECORD,,
