@@ -1,0 +1,2 @@
+[console_scripts]
+inferia-cli = inferia.cli:main
