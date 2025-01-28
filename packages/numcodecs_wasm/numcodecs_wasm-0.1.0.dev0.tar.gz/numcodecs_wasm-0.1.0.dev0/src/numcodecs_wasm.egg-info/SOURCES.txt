@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/numcodecs_wasm/__init__.py
+src/numcodecs_wasm.egg-info/PKG-INFO
+src/numcodecs_wasm.egg-info/SOURCES.txt
+src/numcodecs_wasm.egg-info/dependency_links.txt
+src/numcodecs_wasm.egg-info/requires.txt
+src/numcodecs_wasm.egg-info/top_level.txt
