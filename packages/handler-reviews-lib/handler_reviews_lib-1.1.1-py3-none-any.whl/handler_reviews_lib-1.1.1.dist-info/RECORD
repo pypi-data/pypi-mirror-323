@@ -1,0 +1,13 @@
+handler_reviews_lib/__init__.py,sha256=DbvB3inWBE_tclRj1pRujEYJsntTa2m9dnqIUW_lx0k,486
+handler_reviews_lib/handler_reviews/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+handler_reviews_lib/handler_reviews/enums_type.py,sha256=-TFsIao858nTXu9_g6HpQhcGYdl7vgszwWUHxLEo8k4,189
+handler_reviews_lib/handler_reviews/gpt_reviews_handler.py,sha256=XDfwzoa8dLMVzkwKy9AVAucGXw65XxmJjJyEAnQj2qA,2189
+handler_reviews_lib/handler_reviews/handler_reviews.py,sha256=y4iu2KwH16l-x07vimgM1htJ-I9fIyQh5RoL1sMJdJ4,867
+handler_reviews_lib/handler_reviews/template_reviews_handler.py,sha256=9W2HP1xEEvRxh_wfvf-cg2AHh7GycD4j9Cw5NcB-GW0,1549
+handler_reviews_lib/interfaces/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+handler_reviews_lib/interfaces/interface_handler_reviews.py,sha256=4o_8wezj9ffxHNbZYrklzMAuOSdIdUWd7r4j6dDgT7g,144
+handler_reviews_lib/interfaces/interface_reviews_handler_factory.py,sha256=eyCsuIR2GCAbM15aGn7qGDNH9sqYnX8EnHkZ9ykzeD4,275
+handler_reviews_lib-1.1.1.dist-info/METADATA,sha256=7q7vyxaJLeCOnoRkruQvXWlKGxx4NotCVZQE9HDlyKY,1941
+handler_reviews_lib-1.1.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+handler_reviews_lib-1.1.1.dist-info/top_level.txt,sha256=Vk29uwfG2MB2OtaJSmOltuFi5yjRXK6N3ZKaJgcCxCo,20
+handler_reviews_lib-1.1.1.dist-info/RECORD,,
