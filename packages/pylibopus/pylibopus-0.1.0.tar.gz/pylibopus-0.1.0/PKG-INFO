@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pylibopus
+Version: 0.1.0
+Summary: 
+Author: alma
+Author-email: alma.lindborg@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: flake8 (>=7.1.1,<8.0.0)
+Requires-Dist: mypy (>=1.14.1,<2.0.0)
+Requires-Dist: pylint (>=3.3.3,<4.0.0)
+Requires-Dist: twine (>=6.1.0,<7.0.0)
+Description-Content-Type: text/markdown
+
+pylibopus
+===========
+
+Python bindings to the libopus, IETF low-delay audio codec.
+
+**This fork also implements the Opus multichannel encoder and decoder.**
+
+
+Testing
+--------
+
+Run tests with a python setup.py test command.
+
+
+Contributing
+-------------
+
+If you want to contribute, follow the [pep8](http://www.python.org/dev/peps/pep-0008/) guideline, and include the tests.
+

@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "pylibopus"
+version = "0.1.0"
+description = ""
+authors = ["alma <alma.lindborg@gmail.com>"]
+readme = "README.md"
+include = ["scripts/install_opus.sh"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flake8 = "^7.1.1"
+pylint = "^3.3.3"
+twine = "^6.1.0"
+mypy = "^1.14.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.plugins."poetry.core.masonry.api"]
+"build" = "scripts.build:build"
+
