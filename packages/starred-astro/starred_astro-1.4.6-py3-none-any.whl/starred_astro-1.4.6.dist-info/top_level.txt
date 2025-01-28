@@ -1,0 +1,5 @@
+docs
+notebooks
+scripts
+starred
+tests
