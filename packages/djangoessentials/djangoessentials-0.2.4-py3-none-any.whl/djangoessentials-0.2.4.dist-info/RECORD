@@ -1,0 +1,12 @@
+djangoessentials/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+djangoessentials/apps.py,sha256=p9zitTnsgWtW9pf3fmai95kbMBMQ539oicokhMPeiVo,164
+djangoessentials/djangoessentials.py,sha256=cop0Gi_nYBi_dRXLS-hjbdsQGistpMvLc-j2I5lAoVM,268
+djangoessentials/models.py,sha256=D5GAPHHwMxCTPz1mAn4QhUk50-YFTRmF77QRDOCOUag,293
+djangoessentials/repository.py,sha256=Bw4LvQIJjAY0Qwjj9jX33RByr2JvFEWkd4guEpF4J-E,3410
+djangoessentials/service.py,sha256=0sgiRr9qS45TB6GjHzWrpFKWVJmZ1Sz0DPfONuTTvTs,2402
+djangoessentials/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoessentials-0.2.4.dist-info/LICENSE,sha256=PqOXYue1A9bOmgClfRm3WoQpm9bUe9r_xrqITx452Ps,1075
+djangoessentials-0.2.4.dist-info/METADATA,sha256=AVIjjYxvMYou-nCUSpQqJt_jZg5LWpuY21yGz5mi6FU,7450
+djangoessentials-0.2.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+djangoessentials-0.2.4.dist-info/top_level.txt,sha256=hkRPjUotWqKm0suI6OaHTgXfy9q8xcOAQGWOdeu2oJk,17
+djangoessentials-0.2.4.dist-info/RECORD,,
