@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+scala_option/__init__.py
+scala_option/exceptions.py
+scala_option/none_option.py
+scala_option/option.py
+scala_option/some_option.py
+scala_option.egg-info/PKG-INFO
+scala_option.egg-info/SOURCES.txt
+scala_option.egg-info/dependency_links.txt
+scala_option.egg-info/requires.txt
+scala_option.egg-info/top_level.txt
