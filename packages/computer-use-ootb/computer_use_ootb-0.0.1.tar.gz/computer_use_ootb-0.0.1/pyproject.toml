@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "computer-use-ootb"
+version = "0.0.1"
+description = "Computer Use OOTB"
+authors = [{ name = "Siyuan Hu", email = "siyuan.hu.sg@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = [
+    "gradio>=5.13.1",
+    "gradio_client>=1.6.0",
+    "numpy>=2.2.2",
+    "pandas>=2.2.3",
+    "pillow>=11.1.0",
+    "torch>=2.5.1",
+    "torchvision>=0.20.1",
+    "transformers>=4.48.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.6.7",
+    "pytest>=8.3.3",
+    "pytest-asyncio>=0.23.6",
+]
+
+[project.scripts]
+computer-use-ootb = "computer_use_ootb.app:launch_app"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.hatch.metadata]
+allow-direct-references = true
