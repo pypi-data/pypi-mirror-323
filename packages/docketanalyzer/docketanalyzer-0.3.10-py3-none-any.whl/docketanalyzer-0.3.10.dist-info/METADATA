@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: docketanalyzer
+Version: 0.3.10
+Home-page: https://github.com/docketanalyzer/docketanalyzer
+Author: Nathan Dahlberg
+License-File: LICENSE
+Requires-Dist: anthropic
+Requires-Dist: awscli
+Requires-Dist: boto3
+Requires-Dist: bs4
+Requires-Dist: click
+Requires-Dist: cohere
+Requires-Dist: elasticsearch
+Requires-Dist: gradio
+Requires-Dist: groq
+Requires-Dist: juriscraper
+Requires-Dist: openai
+Requires-Dist: pandas
+Requires-Dist: pathlib
+Requires-Dist: pdfplumber
+Requires-Dist: peewee
+Requires-Dist: psycopg2-binary
+Requires-Dist: pydantic
+Requires-Dist: pytesseract
+Requires-Dist: python-dotenv
+Requires-Dist: python-magic
+Requires-Dist: regex
+Requires-Dist: requests
+Requires-Dist: simplejson
+Requires-Dist: tiktoken
+Requires-Dist: toolz
+Requires-Dist: tqdm
+Requires-Dist: twine
+Provides-Extra: all
+Requires-Dist: transformers ; extra == 'all'
+Requires-Dist: sentencepiece ; extra == 'all'
+Requires-Dist: torch ; extra == 'all'
+Requires-Dist: flash-attn ; extra == 'all'
+Requires-Dist: scikit-learn ; extra == 'all'
+Requires-Dist: datasets ; extra == 'all'
+Requires-Dist: tensorboard ; extra == 'all'
+Requires-Dist: accelerate ; extra == 'all'
+Provides-Extra: ml
+Requires-Dist: accelerate ; extra == 'ml'
+Requires-Dist: datasets ; extra == 'ml'
+Requires-Dist: flash-attn ; extra == 'ml'
+Requires-Dist: scikit-learn ; extra == 'ml'
+Requires-Dist: sentencepiece ; extra == 'ml'
+Requires-Dist: tensorboard ; extra == 'ml'
+Requires-Dist: torch ; extra == 'ml'
+Requires-Dist: transformers ; extra == 'ml'
+
