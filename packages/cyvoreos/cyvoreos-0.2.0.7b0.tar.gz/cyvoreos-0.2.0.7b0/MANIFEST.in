@@ -1,0 +1,3 @@
+include cyvoreos/interfaces/*
+include cyvoreos/plugins/*
+include cyvoreos/resources/*
