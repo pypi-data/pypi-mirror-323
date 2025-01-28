@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tap-shopify
+Version: 2.0.1
+Summary: Singer.io tap for extracting Shopify data
+Home-page: http://github.com/singer-io/tap-shopify
+Author: Stitch
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.5.2
+License-File: LICENSE
+Requires-Dist: ShopifyAPI==12.6.0
+Requires-Dist: singer-python==6.0.0
+Provides-Extra: dev
+Requires-Dist: pylint==3.0.3; extra == "dev"
+Requires-Dist: ipdb; extra == "dev"
+Requires-Dist: requests==2.20.0; extra == "dev"
+Requires-Dist: nose; extra == "dev"
