@@ -1,0 +1,13 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "uac-cli"
+authors = [{name = "Extensions Team", email = "support@stonebranch.com"}]
+dynamic = ["version", "description"]
+
+[project.urls]
+Homepage = "https://github.com"
+Issues = "https://github.com"
+Documentation = "https://readthedocs.io" 
