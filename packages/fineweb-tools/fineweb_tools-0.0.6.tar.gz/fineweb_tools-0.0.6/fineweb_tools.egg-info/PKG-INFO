@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: fineweb-tools
+Version: 0.0.6
+Summary: Tools for preprocessing, analyzing, and distilling FineWeb data.
+Home-page: https://github.com/user/Lone-Wolfgang
+Author: Jordan Wolfgang Klein
+Author-email: jwklein14@gmail.com
+License: Apache V2
+Keywords: FineWeb
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+Requires-Dist: polars
+Requires-Dist: huggingface-hub
+Requires-Dist: tld
+Requires-Dist: typing
+Requires-Dist: beautifulsoup4
+Requires-Dist: selenium
+Requires-Dist: datasets
