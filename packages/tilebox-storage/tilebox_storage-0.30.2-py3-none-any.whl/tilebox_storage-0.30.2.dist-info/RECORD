@@ -1,0 +1,7 @@
+tilebox/storage/__init__.py,sha256=_6zp6xwCpkUxdaFblrdz_3vSC_danbTg_MYi30_y8JM,2510
+tilebox/storage/aio.py,sha256=Jhs8ic5Xs83o8qvmc-hRjbkgohxN2us6afw6y3Of_oo,27106
+tilebox/storage/granule.py,sha256=Jwss4aNEKOdlfe4cPmwVfnAzQqwKdt36FwIw-X_qbi0,3415
+tilebox/storage/providers.py,sha256=EwFKyQT8RZ8Ldsj_Tu-rfEnkv4dIOsIyZxmE44fVbag,2697
+tilebox_storage-0.30.2.dist-info/METADATA,sha256=rPAeF9QY9iz-Qdf9kVq45dS8eBxhxfHTGNQI1_gMAA0,3512
+tilebox_storage-0.30.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tilebox_storage-0.30.2.dist-info/RECORD,,
