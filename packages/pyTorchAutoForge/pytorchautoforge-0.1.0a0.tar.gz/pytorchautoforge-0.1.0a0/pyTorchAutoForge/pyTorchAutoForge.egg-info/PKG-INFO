@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: pyTorchAutoForge
+Version: 0.1.0a0
+Summary: PyTorchAutoForge library is based on raw PyTorch and designed to automate DNN development, model tracking and deployment, tightly integrated with MLflow and Optuna. It also supports spiking networks libraries (WIP). Model optimization and deployment can be performed using ONNx, pyTorch facilities or TensorRT (WIP). The library also aims to be compatible with Jetson Orin Nano Jetpack rev6.1.
+Author-email: "Pietro Califano (PC)" <petercalifano.gs@gmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch-tb-profiler<=0.4.3
+Requires-Dist: scikit-learn<=1.6.1
+Requires-Dist: scipy<=1.16.1
+Requires-Dist: numpy<=2.2.1
+Requires-Dist: onnx<=1.17.0
+Requires-Dist: onnxscript<=0.1.0.dev20240609
+Requires-Dist: optuna<=4.1.1
+Requires-Dist: mlflow<=2.19.1
+Requires-Dist: kornia<=0.7.4
+Requires-Dist: albumentations<=1.4.25
+Requires-Dist: pytest<=8.3.5
+Requires-Dist: seaborn<=0.13.3
+Requires-Dist: matplotlib<=3.10.0
+Requires-Dist: colorama<=0.4.6
+
+# pyTorchAutoForge
+Custom library based on raw PyTorch to automate DNN development, tracking and deployment, tightly integrated with MLflow and Optuna. The package also includes functions to export and load models to/from ONNx format, as well as a MATLAB wrapper class for model evaluation.
+
+# Quick installation (bash)
+1) Clone the repository
+2) Create a virtual environment using python >= 3.10 (tested with 3.11), using `python -m venv <your_venv_name>`
+3) Activate the virtual environment using `source <your_venv_name>/bin/activate` on Linux 
+4) Install the requirements using `pip install -r requirements.txt`
+5) Install the package using `pip install .` in the root folder of the repository
