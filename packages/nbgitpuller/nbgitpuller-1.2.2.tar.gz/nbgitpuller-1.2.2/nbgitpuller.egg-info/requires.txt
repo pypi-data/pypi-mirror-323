@@ -1,0 +1,2 @@
+jupyter_server>=1.10.1
+tornado
