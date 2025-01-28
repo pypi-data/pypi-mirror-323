@@ -1,0 +1,2 @@
+[console_scripts]
+pookie = pookie.shell:main

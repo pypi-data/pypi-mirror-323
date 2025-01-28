@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pookie/__init__.py
+pookie/shell.py
+pookie.egg-info/PKG-INFO
+pookie.egg-info/SOURCES.txt
+pookie.egg-info/dependency_links.txt
+pookie.egg-info/entry_points.txt
+pookie.egg-info/top_level.txt

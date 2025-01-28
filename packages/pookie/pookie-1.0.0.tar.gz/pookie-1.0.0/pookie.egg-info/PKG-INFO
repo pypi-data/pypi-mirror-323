@@ -1,0 +1,33 @@
+Metadata-Version: 2.2
+Name: pookie
+Version: 1.0.0
+Summary: A simple Python shell application
+Author: TeeWrath
+Author-email: subroto.2003@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+# Basic Python Shell for linux
+
+pookie: A simple Python shell.
+        Supports basic commands like
+        - cd 
+        - pwd 
+        - ls 
+        - clear
+        - pookie
+        - help 
+        and external programs.
