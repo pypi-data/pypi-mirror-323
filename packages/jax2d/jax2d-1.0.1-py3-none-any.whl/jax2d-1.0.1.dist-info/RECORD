@@ -1,0 +1,12 @@
+jax2d/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jax2d/collision.py,sha256=OQpJ-zmlAbFsX3X-EDmdhXv_FgRU3-0Ch16_cVsxNXk,20522
+jax2d/engine.py,sha256=3D7jUISsnOu05JLxeNBWflKbOQzBzMjjo01gWBVvF74,45212
+jax2d/joint.py,sha256=fyPt4u71rEZcUQIceqUOwMRGFp6q7SbXH1rBOx-YN9Y,6830
+jax2d/maths.py,sha256=QDs7cRO8rEtY-WMJBVRM0spqcZ_rccOfGWruEr-TLfM,414
+jax2d/scene.py,sha256=JWQmc3-PY2nNnzNat5-ngHAaM9noXhwl2JIgecMK8_s,17093
+jax2d/sim_state.py,sha256=NPI34xnPxXaUlavwclgK5YUQ3-TEYulSt7WdDqmpfJc,6660
+jax2d-1.0.1.dist-info/LICENSE,sha256=_4TCcXcLOyZuBqG_xQuB4F37mBG1Xpz7VGhTyFGQvu8,1059
+jax2d-1.0.1.dist-info/METADATA,sha256=5wuHEh0lnYI9ZdK8gm3K7xUG-j62iBwHkBvQd-De4fY,7120
+jax2d-1.0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+jax2d-1.0.1.dist-info/top_level.txt,sha256=eD03wOQ0Zrirrrm2B5KQRYB9HyBtJ9NpA8LzlTp-ARg,6
+jax2d-1.0.1.dist-info/RECORD,,
