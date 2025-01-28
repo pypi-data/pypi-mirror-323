@@ -1,0 +1,420 @@
+Metadata-Version: 2.2
+Name: geoclide
+Version: 1.0.0
+Author-email: Mustapha Moulana <mm@hygeos.com>
+License: 
+        # GEOCLIDE SOFTWARE
+        # TERMS OF USE
+        
+        
+        *version 1.0, Last modified: January 27, 2025*
+        
+        
+        **Quick Summary**
+        The GEOCLIDE software can be used for free for non-commercial purposes. If you
+        want to use the software for commercial purposes, please contact us.
+        
+        -----
+        
+        
+        The GEOCLIDE SOFTWARE is a service made available by HYGEOS, a company organised
+        and existing under the laws of France with an issued share capital of 84 850,- €
+        with its registered office at 165 Avenue de Bretagne – Parc Euratechnologies
+        – 59000 LILLE (France), registered at Lille Métropole under number 439 051 472,
+        hereinafter referred to as “Hygeos” By using the GEOCLIDE SOFTWARE, you are
+        agreeing these Terms of Use.  Hygeos agrees to grant a license to the User on
+        the Software and the User undertake to comply with these Terms of Use.  Before
+        accepting These Terms of Use, the User made sure that:
+        * The Software fits with its needs and expectations,
+        * its information system has the necessary and sufficient technical
+        specifications and requirements for the installation and the operation of the
+        Software.
+        
+        The User is informed and accepts that Hygeos can amend or modify these Terms of
+        Use at any moment. Any amendment or modification to these Terms of Use will be
+        made available on https://github.com/hygeos/geoclide. The User undertakes to
+        check regularly the last modified version Terms of Use in force made available
+        on the HYGEOS git GEOCLIDE repository at https://github.com/hygeos/geoclide 
+        and recognizes and accepts to be bound by it.
+        
+        ## SECTION 1. DEFINITIONS
+        “Terms of Use” shall mean the present document, and all modifications and
+        additions to these documents made available to the User by publishing on
+        https://github.com/hygeos/geoclide.
+        
+        “Effective Date” shall mean the date on which these Terms of Use enter in force
+        between the User and Hygeos as defined in Section 4.
+        
+        “Contact Email” shall mean the email addresses identified in Section 17 by
+        which notifications between the User and Hygeos can be done.
+        
+        “Software” shall mean the GEOCLIDE SOFTWARE both in object code or source code
+        format, including accompanying documentation, and any upgrades, enhancements
+        and corrections made available on https://github.com/hygeos/geoclide
+        or made by the User. The Software allows geometric calculations in the
+        three-dimentional space with Python.
+        
+        “Territory” shall mean geographic areas where these Terms of Use applies and
+        identified in Section 3, which may be amended in writing upon mutual agreement
+        of the Parties to include additional geographic areas.
+        
+        “User” shall mean the user of the Software who has accepted these Terms of Use.
+        
+        ## SECTION 2. RIGHT OF USE
+        Subject to the terms and conditions of these Terms of Use, Hygeos grants to the
+        User a personal, non-exclusive, non-transferable license to use the Software
+        for the exclusive purpose of scientific research excluding any commercial
+        purpose (hereinafter, the “Non-Commercial Purpose”).  The User may use the
+        Software in its source code format for its own use, and may translate or modify
+        the Software or incorporate them into other software. The User may not,
+        however, transfer or sublicense the Software to any third party, in whole or in
+        part, in any form, whether modified or unmodified. 
+        
+        ## SECTION 3. TERRITORY
+        The right of use of the Software described in Section 2 above shall be granted
+        for the country where the User is established.
+        
+        ## SECTION 4. TERM
+        These Terms of Use shall enter in force upon the User has accepted these Terms
+        of Use (the “Effective Date”). It shall be ended at any moment by one Party by
+        notification through the Contact Email.
+        
+        ## SECTION 5. DELIVERY OF THE SOFTWARE 
+        Hygeos will make available to the User the Software both in its source code
+        form the Effective Date and no later than five (5) days after the Effective
+        Date. The delivery shall be done by electronic means.
+        
+        Hygeos authorizes the User to use or modify the source code of the Software
+        solely for the purpose to ensure the interoperability of the Software with its
+        information system or to enhance the Software or for scientific research. The
+        User shall notify Hygeos of each modification done by it to the source code of
+        the Software.
+        
+        ## SECTION 6. COPIES 
+        User may make copies of the Software both form as necessary for use by the User
+        and for backup or archive purposes. The User agrees to maintain records of the
+        location and use of each copy, in whole or in part, of the Software. Each copy
+        of the Software is copyrighted by Hygeos. The User agrees to reproduce and
+        apply the copyright notice and proprietary notice of Hygeos to all copies made
+        hereunder, in whole or in part and in any form, of Software. 
+        
+        ## SECTION 7. SUPPORT AND MAINTENANCE 
+        Hygeos will provide support and maintenance services according to this
+        Section 7.  Hygeos will provide adequate online support for the first installation of
+        the Software. Hygeos will also provide the following support and maintenance
+        services:
+        (i) If the User notifies Hygeos of a substantial program error
+        respecting the Software, or Hygeos has reason to believe that error exists in
+        the Software and so notifies the User, Hygeos shall at its own expense verify
+        and attempt to correct such error within thirty (30) days after the date of
+        notification. If the User is not satisfied with the correction, then the User
+        may terminate these Terms of Use, without any indemnification to the User.
+        (ii) In the case that the User has technical questions in the use of the
+        Software, the User may submit those questions to Hygeos.
+        
+        ## SECTION 8. PRICES AND PAYMENTS
+        These Terms of Use are subscribed for Non-Commercial Purpose as stated in
+        Section 2, and the use of the Software to this end is granted free of charge.
+        
+        ## SECTION 9. OWNERSHIP 
+        The original and any copies of the Software, made by the User, including
+        translations, compilations, partial copies, modifications, and updates, are the
+        exclusive property of Hygeos. 
+        
+        ## SECTION 10. PROPRIETARY RIGHTS 
+        The User recognizes that Hygeos regards the Software as its proprietary
+        information and as confidential trade secrets of great value. The User agrees
+        not to provide or to otherwise make available in any form the Software, or any
+        portion thereof, to any person other than employees of the User without the
+        prior written consent of Hygeos.
+        The User shall not disclose or copy to a third party the Software or any part
+        thereof.
+        The User further agrees to treat the Software with at least the same degree of
+        care with which the User treats its own confidential information and in no
+        event with less care than is reasonably required to protect the confidentiality
+        of the Software. 
+        
+        ## SECTION 11. DATA
+        The User is responsible of all data processed through the Software. Hygeos
+        shall not assume any responsibility toward:
+        * the ownership and rights on any data processed through the Software, and
+        * the fitness, the accuracy, the quality, the completeness of any data
+        processed through the Software.
+        
+        The User ensures that it has sufficient rights to use and process the data. The
+        User warrants Hygeos against any claim from any third party regarding the data
+        it processed through the Software, including but not limited to ownership,
+        infringement, unfair competition. 
+        
+        ## SECTION 12. TERMINATION 
+        Hygeos may terminate these Terms of Use if User is in default of any of the
+        terms and conditions of these Terms of Use and fails to correct such default
+        within ten (10) days after written notice thereof from Hygeos. 
+        
+        ## SECTION 13. TERMINATION CERTIFICATE 
+        In the event of termination for whatever reason, the User shall:
+        * immediately stop use of the Software,
+        * provide on demand to Hygeos, within one (1) month, a certificate certifying
+        that the original and all copies of the Software, in whole or in part and in
+        any form, have been destroyed.
+        
+        After termination of these Terms of Use for whatever reason, provisions of
+        Sections 9, 10, 11, 15 to 17, and 19 hereof shall survive. 
+        
+        ## SECTION 14. WARRANTY DISCLAIMER 
+        The User acknowledges and accepts, the Software "AS IS." HYGEOS PROVIDES NO
+        WARRANTIES AS TO THE FUNCTION OR USE OF THE SOFTWARE, WHETHER EXPRESS, IMPLIED,
+        OR STATUTORY, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF
+        MERCHANTABILITY OR FITNESS FOR PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE
+        QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH THE USER. HYGEOS DOES NOT
+        WARRANT THAT THE FUNCTIONS CONTAINED IN THE SOFTWARE WILL MEET USER’S
+        REQUIREMENTS OR THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED OR
+        ERROR FREE. 
+        
+        ## SECTION 15. PATENT AND COPYRIGHT INDEMNITY 
+        Hygeos will defend at its own expense any action brought against the User to
+        the extent it is based on a claim that the Software used within the scope of
+        the right of use granted hereunder infringe a patent, copyright or other
+        proprietary right of a third party. Hygeos will pay any costs, damages or
+        attorney fees finally awarded against the User in such action which are
+        attributable to such claim, provided Hygeos is promptly notified in writing of
+        such claim, may control the defense and/or settlement of such claim, and is
+        provided with all requested assistance, information and authority.
+        
+        In the event that the Software becomes, or in Hygeos’ opinion is likely to become, the
+        subject of a claim of infringement of a patent, copyright or trade secret,
+        Hygeos may at its option either secure the User’s right to continue using the
+        Software, replace or modify the Software to make them not infringing. Hygeos
+        shall have no liability for any claim of patent, copyright or trade secret
+        infringement based on the use of the Software in any form other than the
+        original, unmodified form provided to the User or the use of a combination of
+        the Software with hardware, software or data not agreed by Hygeos where the
+        used Software alone in their original, unmodified form would not constitute an
+        infringement. The foregoing states the User's entire liability for infringement
+        or claims of infringement of patents, copyrights or other intellectual property
+        right. 
+        
+        ## SECTION 16. LIMITATION OF LIABILITY 
+        HYGEOS’ ANNUAL LIABILITY TO USER UNDER ANY PROVISIONS OF THIS AGREEMENT FOR
+        DAMAGES FINALLY AWARDED SHALL BE LIMITED TO THE AMOUNTS PAID IN THE YEAR
+        CONCERNED BY THE USER TO HYGEOS. IN NO EVENT SHALL HYGEOS BE LIABLE FOR
+        INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOSS OF USE,
+        LOSS OF DATA AND LOSS OF PROFITS OR INTERRUPTION OF BUSINESS, HOWEVER CAUSED OR
+        ON ANY THEORY OF LIABILITY. 
+        
+        ## SECTION 17. NOTICES 
+        All notices in connection with this Agreement shall be in writing and may be
+        given by registered mail or personally delivered at the address set forth on
+        the front page. Notices by email shall be deemed effective if sent to the
+        Hygeos’ and User’s Contact Email. 
+        
+        ## SECTION 18. SEVERABILITY 
+        In the event any provision of these Terms of Use is determined to be invalid or
+        unenforceable, the remainder of these Terms of Use shall remain in force as if
+        such provision were not a part. 
+        
+        ## SECTION 19. GOVERNING LAW
+        These Terms of Use shall be governed and interpreted by the laws of FRANCE and
+        Lille shall be the appropriate venue and jurisdiction for the resolution of any
+        disputes hereunder. Both Parties hereby consent to such personal and exclusive
+        jurisdiction. 
+        
+        ## SECTION 20. NON-ASSIGNMENT 
+        These Terms of Use and the right of use granted by it may not be assigned,
+        sublicensed, or otherwise transferred by the User without the prior written
+        consent of Hygeos.
+        
+        
+        
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: Free for non-commercial use
+Classifier: License :: Other/Proprietary License
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: xarray
+Requires-Dist: pytest
+
+# Geoclide
+
+The python package for geometric calculations in the three-dimentional Euclidian space
+
+Mustapha Moulana  
+[HYGEOS](https://hygeos.com/en/)
+
+-----------------------------------------
+
+## Installation
+The installation can be performed using the following command:
+```shell
+$ pip install git+https://github.com/hygeos/geoclide.git
+```
+
+## Testing
+Run the command `pytest tests/ -s -v` to check that everything is running correctly.
+
+## Available classes/functions
+| Class/Function | Type | Description |
+| -------------- | ---- | ----------- |
+| `Vector`| class | vector with x, y and z components |
+| `Point` | class | point with x, y and z components |
+| `Normal` | class | normal with x, y and z components |
+| `Ray` | class | the ray: r(t) = o + t*d, with 'o' a Point, 'd' a vector and t ∈ [0,inf[ |
+| `BBox` | class | Bounding box |
+| `Sphere` | class | sphere object |
+| `Triangle` | class | triangle object |
+| `TriangleMesh` | class | triangle mesh object |
+| `Transform` | class | transformation to translate and/or rotate every objects except a BBox |
+| `calc_intersection` | Function | intersection test between a shape and a ray and returns dataset |
+| `get_common_vertices` | Function | gives the vertices of BBox b1 which are common to another BBox b2 |
+| `get_common_face` | Function | same as `get_common_vertices` but with faces |
+| `dot` | Function | dot product (only vector or normal) |
+| `cross` | Function | cross product (only vector or normal) |
+| `normalize` | Function | normalize a vector/normal |
+| `coordinate_system` | Function | from a vector v1 compute vectors v2 and v3 such that v1, v2 and v3 are unit vectors of an orthogonal coordinate system |
+| `distance` | Function | compute the distance between 2 points |
+| `face_forward` | Function | ensure a vector/normal is in the same hemipherical direction than another given vector/normal |
+| `vmax` | Function | largest component value of the vector/point/normal |
+| `vmin` | Function | smallest component value of the vector/point/normal |
+| `vargmax` | Function | index of the vector/point/normal component with the largest value |
+| `vargmin` | Function | index of the vector/point/normal component with the smallest value |
+| `vabs` | Function | absolute value of each components of the vector/point/normal |
+| `permute` | Function | permutes the vector/point/normal values according to the given indices |
+| `clamp` | Function | clamp a value into the range [val_min, val_max] |
+| `quadratic` | Function | resolve the quadratic polynomial: ax**2 + bx + c |
+| `gamma_f32` | Function | gamma function from pbrt v3 |
+| `gamma_f64` | Function | gamma function from pbrt v3 but in double precision |
+| `get_inverse_tf` | Function | get the inverse transform from a another transform |
+| `get_translate_tf` | Function | get the translate transfrom from a given vector |
+| `get_scale_tf` | Function | get scale transform giving factors in x, y and z |
+| `get_rotateX_tf` | Function | get the rotate (arount x axis) transform from scalar in degrees |
+| `get_rotateY_tf` | Function | get the rotate (arount y axis) transform from scalar in degrees |
+| `get_rotateZ_tf` | Function | get the rotate (arount z axis) transform from scalar in degrees |
+| `get_rotate_tf` | Function | get the rotate transform around a given vector/normal |
+
+
+
+## Examples
+### Basic exemple
+```python
+>>> import geoclide as gc
+>>> import numpy as np
+>>> # Some basics
+>>> p1 = gc.Point(0., 0., 0.) # create a point
+>>> v1 = gc.normalize(gc.Vector(0.5, 0.5, 0.1)) # create a vector and normalize it
+>>> v1
+Vector(0.4082482904638631, 0.4082482904638631, 0.8164965809277261)
+>>> # With a point and a vector we can create a ray
+>>> r1 = gc.Ray(o=p1, d=v1)
+>>> r1
+r(t) = (0.0, 0.0, 0.0) + t*(0.4082482904638631, 0.4082482904638631, 0.8164965809277261) with t ∈ [0,inf[
+>>> # Let's create a triangle mesh with 2 triangles
+>>> # We have 4 vertices
+>>> p0 = gc.Point(-5, -5, 0.)
+>>> p1 = gc.Point(5, -5, 0.)
+>>> p2 = gc.Point(-5, 5, 0.)
+>>> p3 = gc.Point(5, 5, 0.)
+>>> v = np.array([p0, p1, p2, p3], dtype=gc.Point)
+>>> # Get the vertices indices of each triangle
+>>> vid_t0 = np.array([0, 1, 2]) # the vertices indices of triangle 0
+>>> vid_t1 = np.array([2, 3, 1]) # the vertices indices of triangle 1
+>>> vi = np.concatenate((vid_t0, vid_t1)) # regroup everything
+>>> # Here if we create the triangle mesh, it would be a square of dimension 10*10
+>>> # centered at origin (0.,0.,0.) and parallel to the xy plane
+>>> # We can create a transformation to translate and rotate it
+>>> translate = gc.get_translate_tf(gc.Vector(2.5, 0., 0.)) # translation of 2.5 in x axis
+>>> rotate = gc.get_rotateY_tf(-90.) # rotation of -90 degrees around the y axis
+>>> oTw = translate*rotate # object to world transformation to apply to the triangle mesh
+>>> tri_mesh = gc.TriangleMesh(vi, v, oTw=oTw) # create the triangle mesh
+>>> ds = gc.calc_intersection(tri_mesh, r1) # see if the ray r1 intersect the triangle mesh
+>>> ds
+<xarray.Dataset> Size: 801B
+Dimensions:          (xyz: 3, nvertices: 4, ntriangles: 2, p0p1p2: 3, dim_0: 4,
+                      dim_1: 4)
+Coordinates:
+  * xyz              (xyz) int64 24B 0 1 2
+Dimensions without coordinates: nvertices, ntriangles, p0p1p2, dim_0, dim_1
+Data variables: (12/14)
+    is_intersection  bool 1B True
+    o                (xyz) float64 24B 0.0 0.0 0.0
+    d                (xyz) float64 24B 0.7001 0.7001 0.14
+    mint             int64 8B 0
+    maxt             float64 8B inf
+    v                (nvertices, xyz) float64 96B -5.0 -5.0 0.0 ... 5.0 5.0 0.0
+    ...               ...
+    wTo_mInv         (dim_0, dim_1) float64 128B 6.123e-17 0.0 -1.0 ... 0.0 1.0
+    oTw_m            (dim_0, dim_1) float64 128B 6.123e-17 0.0 -1.0 ... 0.0 1.0
+    oTw_mInv         (dim_0, dim_1) float64 128B 6.123e-17 0.0 1.0 ... 0.0 1.0
+    thit             float64 8B 3.571
+    phit             (xyz) float64 24B 2.5 2.5 0.5
+    nhit             (xyz) float64 24B 1.0 0.0 -8.882e-17
+Attributes:
+    shape:       TriangleMesh
+    ntriangles:  2
+    nvertices:   4
+    date:        2025-01-27
+    version:     1.0.0
+>>> # Here there is intersection, see more detail on intersection point phit
+>>> ds['phit']
+<xarray.DataArray 'phit' (xyz: 3)> Size: 24B
+array([2.5, 2.5, 0.5])
+Coordinates:
+  * xyz      (xyz) int64 24B 0 1 2
+Attributes:
+    type:         Point
+    description:  the x, y and z components of the intersection point
+>>> # We can convert it into a point object
+>>> phit = gc.Point(ds['phit'].values)
+>>> phit
+Point(2.5, 2.5, 0.5)
+```
+
+### Example for remote sensing applications
+```python
+import geoclide as gc
+import math
+
+# Find satellite x an y positions knowing its altitude and its viewing zenith and azimuth angles
+vza = 45. # viewing zenith angle in degrees
+vaa = 45. # viewing azimuth angle in degrees
+sat_altitude = 700.  # satellite altitude in kilometers
+origin = gc.Point(0., 0., 0.) # origin is the viewer seeing the satellite
+# The vaa start from north going clockwise.
+# Let's assume that in our coordinate system the x axis is in the north direction
+# Then theta (zenith) angle = vza and phi (azimuth) angle = -vaa
+theta = vza
+phi = -vaa
+
+# Find the direction from ground to the satellite
+dir_to_sat = gc.Vector(0., 0., 1.)  # start facing nadir
+dir_to_sat = gc.get_rotateY_tf(theta)[dir_to_sat] # perform a rotation around y axis to consider vza
+dir_to_sat = gc.get_rotateZ_tf(phi)[dir_to_sat]   # then a rotation around z axis to consider vaa
+ray = gc.Ray(o=origin, d=dir_to_sat) # create the ray, starting from origin going in dir_to_sat direction
+
+# Here without considering the sphericity of the earth
+b1 = gc.BBox(p1=gc.Point(-math.inf, -math.inf, 0.), p2=gc.Point(math.inf, math.inf, sat_altitude))
+ds_pp = gc.calc_intersection(b1, ray) # return an xarray dataset
+
+# Here with the consideration of the sphericity of the earth
+earth_radius = 6378. # the equatorial earth radius in kilometers
+oTw = gc.get_translate_tf(gc.Vector(0., 0., -earth_radius))
+sphere_sat_alti = gc.Sphere(radius=earth_radius+sat_altitude, oTw=oTw)  # apply oTw to move the sphere center to earth center
+ds_sp = gc.calc_intersection(sphere_sat_alti, ray) # return an xarray dataset
+
+print ("Satellite position (pp case) :", ds_pp['phit'].values)
+print ("Satellite position (sp case) ", ds_sp['phit'].values)
+```

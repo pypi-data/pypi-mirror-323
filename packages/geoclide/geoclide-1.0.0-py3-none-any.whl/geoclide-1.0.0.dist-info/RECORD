@@ -1,0 +1,15 @@
+geoclide/__init__.py,sha256=qofYwn6YjXkuMnN0IVjN7aNraKm6aIdVhvKIhOR9vDk,724
+geoclide/basic.py,sha256=DnMfXEq9bZBu3fScTpGu_yQURSuA1zitS-hyyJQ27wA,25851
+geoclide/constante.py,sha256=42oNVsPfNP3OcsgqB9gDVd_CGdjjLZX9ZmA5hsMbEac,275
+geoclide/intersection.py,sha256=DQT83kzfPaK_3p6JKg5Cht7zofh5NglCXyIVLHdBoP8,8024
+geoclide/mathope.py,sha256=AnIq_9Qq89FNrNwZY69AIVoV3aruEKD5Njz4qQSzHkk,2503
+geoclide/quadrics.py,sha256=tC7tfX2Ity4ij2c-s3GpwWvUb8ASnX05UdafTKdWqPE,9160
+geoclide/shapes.py,sha256=wCiAGthgPLUw9RQSxxrqXQDzkQ1g3pj4m4J4jvZaStk,2383
+geoclide/transform.py,sha256=5dxaH6G_ArvXcYaXapV1T0z1T8x-NK_82CQu-fHAuEY,13642
+geoclide/trianglemesh.py,sha256=OkT260Yvzr4Gq8XBuv92TEbTHyJuzhaC532wHCIn420,21605
+geoclide/vecope.py,sha256=0KcGdGp2v3gjVZ0h8bNbNqw-QSEW-A-VxTnyJXvLj5M,11545
+geoclide-1.0.0.dist-info/LICENSE.txt,sha256=kRCdA3XeKBziozvJVkLu5yYrCWiiw8luOsSenvQk8ms,11524
+geoclide-1.0.0.dist-info/METADATA,sha256=poagsvoC0_OhhX1tEvqTfelSgrr9K9F9uI2tb8mofAQ,22676
+geoclide-1.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+geoclide-1.0.0.dist-info/top_level.txt,sha256=7HfdikSng72bnhfgbpH8AovZ1oInbWI3NS2GkiJKRoI,9
+geoclide-1.0.0.dist-info/RECORD,,
