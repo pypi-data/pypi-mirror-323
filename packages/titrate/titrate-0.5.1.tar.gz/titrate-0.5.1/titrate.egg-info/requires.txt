@@ -1,0 +1,9 @@
+numpy
+scipy
+matplotlib
+gammapy==1.2
+astropy<6.0
+h5py
+
+[tests]
+pytest
