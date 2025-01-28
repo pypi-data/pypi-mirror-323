@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "psychopy-cedrus"
+version = "0.0.12"
+description = "Extension package for PsychoPy which adds support for various hardware devices by the Cedrus Corporation."
+readme = "README.md"
+requires-python = ">= 3.7"
+license = { text = "GNU General Public License v3 (GPLv3)" }
+authors = [
+  { name = "Jon Peirce", email = "jon@opensceincetools.org" },
+  { name = "Matthew Cutone", email = "mcutone@opensceincetools.org" },
+  { name = "Todd Parsons", email = "todd@opensceincetools.org" },
+]
+classifiers = [
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+urls.homepage = "https://psychopy.github.io/psychopy-cedrus"
+urls.changelog = "https://github.com/psychopy/psychopy-cedrus/blob/main/CHANGELOG.txt"
+
+dependencies = [
+  "pyxid2"
+]
+
+[project.optional-dependencies]
+# dependencies for building the docs
+docs = [
+  "psychopy",
+  "sphinx",
+  "furo",
+]
+# dependencies for running the test suite
+tests = [
+  "psychopy",
+  "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["",]
+
+[tool.setuptools.package-data]
+"*" = ["*.png",]
+
+[project.entry-points."psychopy.experiment.components"]
+# old Component
+CedrusButtonBoxComponent = "psychopy_cedrus.components.cedrusBox:CedrusButtonBoxComponent"
+# button backends
+RBButtonBoxBackend = "psychopy_cedrus.components.rb:RBButtonBoxBackend"
+RipondaButtonBoxBackend = "psychopy_cedrus.components.riponda:RipondaButtonBoxBackend"
+StimTrackerButtonBoxBackend = "psychopy_cedrus.components.stimtracker:StimTrackerButtonBoxBackend"
+LuminaButtonBoxBackend = "psychopy_cedrus.components.lumina:LuminaButtonBoxBackend"
+# photodiode backends
+RBPhotodiodeValidatorBackend = "psychopy_cedrus.components.rb:RBPhotodiodeValidatorBackend"
+RipondaPhotodiodeValidatorBackend = "psychopy_cedrus.components.riponda:RipondaPhotodiodeValidatorBackend"
+StimTrackerPhotodiodeValidatorBackend = "psychopy_cedrus.components.stimtracker:StimTrackerPhotodiodeValidatorBackend"
+
+[project.entry-points."psychopy.hardware.cedrus"]
+# RB series
+RBDevice = "psychopy_cedrus.rb:RBDevice"
+RBPhotodiodeGroup = "psychopy_cedrus.rb:RBPhotodiodeGroup"
+RBButtonGroup = "psychopy_cedrus.rb:RBButtonGroup"
+RBVoiceKey = "psychopy_cedrus.rb:RBVoiceKeyGroup"
+# Riponda series
+RipondaDevice = "psychopy_cedrus.riponda:RipondaDevice"
+RipondaPhotodiodeGroup = "psychopy_cedrus.riponda:RipondaPhotodiodeGroup"
+RipondaButtonGroup = "psychopy_cedrus.riponda:RipondaButtonGroup"
+RipondaVoiceKey = "psychopy_cedrus.riponda:RipondaVoiceKeyGroup"
+# Riponda series
+StimTrackerDevice = "psychopy_cedrus.stimtracker:StimTrackerDevice"
+StimTrackerPhotodiodeGroup = "psychopy_cedrus.stimtracker:StimTrackerPhotodiodeGroup"
+StimTrackerButtonGroup = "psychopy_cedrus.stimtracker:StimTrackerButtonGroup"
+StimTrackerVoiceKey = "psychopy_cedrus.stimtracker:StimTrackerVoiceKeyGroup"
+# Lumina series
+LuminaDevice = "psychopy_cedrus.lumina:LuminaDevice"
+LuminaButtonGroup = "psychopy_cedrus.lumina:LuminaButtonGroup"

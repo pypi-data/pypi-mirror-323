@@ -1,0 +1,25 @@
+[psychopy.experiment.components]
+CedrusButtonBoxComponent = psychopy_cedrus.components.cedrusBox:CedrusButtonBoxComponent
+LuminaButtonBoxBackend = psychopy_cedrus.components.lumina:LuminaButtonBoxBackend
+RBButtonBoxBackend = psychopy_cedrus.components.rb:RBButtonBoxBackend
+RBPhotodiodeValidatorBackend = psychopy_cedrus.components.rb:RBPhotodiodeValidatorBackend
+RipondaButtonBoxBackend = psychopy_cedrus.components.riponda:RipondaButtonBoxBackend
+RipondaPhotodiodeValidatorBackend = psychopy_cedrus.components.riponda:RipondaPhotodiodeValidatorBackend
+StimTrackerButtonBoxBackend = psychopy_cedrus.components.stimtracker:StimTrackerButtonBoxBackend
+StimTrackerPhotodiodeValidatorBackend = psychopy_cedrus.components.stimtracker:StimTrackerPhotodiodeValidatorBackend
+
+[psychopy.hardware.cedrus]
+LuminaButtonGroup = psychopy_cedrus.lumina:LuminaButtonGroup
+LuminaDevice = psychopy_cedrus.lumina:LuminaDevice
+RBButtonGroup = psychopy_cedrus.rb:RBButtonGroup
+RBDevice = psychopy_cedrus.rb:RBDevice
+RBPhotodiodeGroup = psychopy_cedrus.rb:RBPhotodiodeGroup
+RBVoiceKey = psychopy_cedrus.rb:RBVoiceKeyGroup
+RipondaButtonGroup = psychopy_cedrus.riponda:RipondaButtonGroup
+RipondaDevice = psychopy_cedrus.riponda:RipondaDevice
+RipondaPhotodiodeGroup = psychopy_cedrus.riponda:RipondaPhotodiodeGroup
+RipondaVoiceKey = psychopy_cedrus.riponda:RipondaVoiceKeyGroup
+StimTrackerButtonGroup = psychopy_cedrus.stimtracker:StimTrackerButtonGroup
+StimTrackerDevice = psychopy_cedrus.stimtracker:StimTrackerDevice
+StimTrackerPhotodiodeGroup = psychopy_cedrus.stimtracker:StimTrackerPhotodiodeGroup
+StimTrackerVoiceKey = psychopy_cedrus.stimtracker:StimTrackerVoiceKeyGroup
