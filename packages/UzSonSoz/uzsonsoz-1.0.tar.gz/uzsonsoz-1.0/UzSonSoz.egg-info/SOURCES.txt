@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+UzSonSoz/UzSonSoz.py
+UzSonSoz/__init__.py
+UzSonSoz.egg-info/PKG-INFO
+UzSonSoz.egg-info/SOURCES.txt
+UzSonSoz.egg-info/dependency_links.txt
+UzSonSoz.egg-info/top_level.txt
