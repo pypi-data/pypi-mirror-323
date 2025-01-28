@@ -1,0 +1,2 @@
+[gui_scripts]
+pywerami = pywerami.mainapp:main

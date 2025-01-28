@@ -1,0 +1,16 @@
+pywerami/__init__.py,sha256=YhHPllsJhPdK4gyWmLDwKWatHvniuOVzUcrI2DrmOEI,88
+pywerami/api.py,sha256=Fh0UGuc0cqYKtMG--f-ISPUrhlxa1b0671bCNMOC0x4,4725
+pywerami/mainapp.py,sha256=bAEj3KIQoSEKuiUWwh8fOaOx8pVyRZph7u2VRHqvXDU,33595
+pywerami/ui_pywerami.py,sha256=n5KO-AJBya9StW8HdJ8HjowjfHdo9d2DRIsmSjQmgtU,22706
+pywerami/images/pywerami.png,sha256=kmc_F0MO3TDXSY5y78KtzGc0mPmtHMAMpY9Q5YmmtvU,11600
+pywerami/samples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pywerami/samples/in17a_1.tab,sha256=lVVV2qkC3rO282S2O8pG52SSJPaDesmzaaFJ_2xmcBI,760366
+pywerami/samples/luca3_1.tab,sha256=2qytbqBRRUEDHUB0zzQMRFWM3975ks0OjFrgi_3QD8E,600346
+pywerami/ui/compile_ui.sh,sha256=fLHrauB2LaG-hVIvdKHDSIR-S5VEVnjrZg3bdOAfIF4,40
+pywerami/ui/pywerami.ui,sha256=4QFHxMHibWBWmemVEGZR6A-lSjenVOM-FQxj_KzRgUU,21233
+pywerami-0.3.0.dist-info/METADATA,sha256=UfoIFqqGZ0DZE-8lCaFUdiaIeSVwcG9SwZh1wPDe00g,6111
+pywerami-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pywerami-0.3.0.dist-info/entry_points.txt,sha256=RaYRn9yH5ur2jvfzjH-Y9hYyIUS8m-eEE-PyRknmgWc,47
+pywerami-0.3.0.dist-info/licenses/AUTHORS.md,sha256=su7za5uTJ1fbPjn3Sr9QDill12pveW6jNQvwCFP5XL0,120
+pywerami-0.3.0.dist-info/licenses/LICENSE,sha256=RzGckYGaRWWwrBwoJzA5naemlUrLyYtxp-8Sg_YQzBQ,1148
+pywerami-0.3.0.dist-info/RECORD,,
