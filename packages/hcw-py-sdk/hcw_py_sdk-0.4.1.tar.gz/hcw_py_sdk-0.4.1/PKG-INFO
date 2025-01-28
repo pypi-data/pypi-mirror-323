@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: hcw_py_sdk
+Version: 0.4.1
+Summary: SDK Package for communication with HCW@Home API
+Author-email: Olivier Bitsch <olivier.b@iabsis.com>
+Maintainer-email: Olivier Bitsch <olivier.b@iabsis.com>
+Project-URL: Homepage, https://hcw-at-home.com
+Project-URL: Documentation, https://hcw-home.github.io/hcw-docs/
+Project-URL: Repository, https://projects.iabsis.com/git/hcw-py-sdk
+Project-URL: Bug Tracker, https://projects.iabsis.com/projects/hcw-py-sdk
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: JavaScript
+Classifier: Intended Audience :: Healthcare Industry
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# HCW Py SDK
+
+Healthcare worker @Home SDK, the Open Source Telehealth. This package provide SDK for more easy integration with HCW, especially for form builder.
+
+* Website: [https://hcw-at-home.com](https://hcw-at-home.com)
+* SDK documentation: [https://hcw-home.github.io/hcw-docs/python/](https://hcw-home.github.io/hcw-docs/python/)
+
+# Build and publish this package
+
+```
+python -m build
+twine upload -r pypi dist/*
+```
+
+# This add test on HCW as well
+
+simply configure your .env and run with
+
+```
+pytest test.py
+```

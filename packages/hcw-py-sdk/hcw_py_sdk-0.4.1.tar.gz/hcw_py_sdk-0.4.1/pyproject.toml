@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hcw_py_sdk"
+version = "0.4.1"
+dependencies = [
+  "requests"
+]
+requires-python = ">= 3.8"
+authors = [
+  {name = "Olivier Bitsch", email = "olivier.b@iabsis.com"},
+]
+maintainers = [
+  {name = "Olivier Bitsch", email = "olivier.b@iabsis.com"}
+]
+description = "SDK Package for communication with HCW@Home API"
+classifiers=[
+    'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+    'Programming Language :: JavaScript',
+    'Intended Audience :: Healthcare Industry',
+]
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://hcw-at-home.com"
+Documentation = "https://hcw-home.github.io/hcw-docs/"
+Repository = "https://projects.iabsis.com/git/hcw-py-sdk"
+"Bug Tracker" = "https://projects.iabsis.com/projects/hcw-py-sdk"
+
+[tool.setuptools]
+py-modules = []

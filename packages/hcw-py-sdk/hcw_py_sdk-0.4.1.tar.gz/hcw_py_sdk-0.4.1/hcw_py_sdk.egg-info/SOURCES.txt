@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+hcw_py_sdk/__init__.py
+hcw_py_sdk/consultations.py
+hcw_py_sdk/invites.py
+hcw_py_sdk/messages.py
+hcw_py_sdk/queues.py
+hcw_py_sdk/req.py
+hcw_py_sdk/sdk.py
+hcw_py_sdk/users.py
+hcw_py_sdk.egg-info/PKG-INFO
+hcw_py_sdk.egg-info/SOURCES.txt
+hcw_py_sdk.egg-info/dependency_links.txt
+hcw_py_sdk.egg-info/requires.txt
+hcw_py_sdk.egg-info/top_level.txt
