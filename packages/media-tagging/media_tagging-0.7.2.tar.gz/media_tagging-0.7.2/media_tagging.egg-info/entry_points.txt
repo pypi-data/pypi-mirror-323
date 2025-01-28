@@ -1,0 +1,5 @@
+[console_scripts]
+media-tagger = media_tagging.entrypoints.cli:main
+
+[creative_assistant]
+media-tagger = media_tagging.tools
