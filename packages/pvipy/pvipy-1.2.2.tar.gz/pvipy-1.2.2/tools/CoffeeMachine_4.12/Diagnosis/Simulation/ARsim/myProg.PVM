@@ -1,0 +1,19 @@
+WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=myProg 
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=311 Scope=60 Force=60 Index=8 ASCIIString=0
+                                    name                                     type force                                                            value level type len format place expand specs
+                         myComplexStruct                      myComplexStructType    0 "                                                               *"    0   24    1    0    1    1         
+                    positionDataElements                MC_ENDLESS_POSITION[0..0]    0 "                                                               *"    1   24    1    0    0    1    a,2,2
+                 positionDataElements[0]                      MC_ENDLESS_POSITION    0 "                                                               *"    2   24    1    0    0    1         
+                     EndlessPositionData           MC_ENDLESS_POSITION_DATA[0..1]    0 "                                                               *"    3   24    2    0    0    1         
+                  EndlessPositionData[0]                 MC_ENDLESS_POSITION_DATA    0 "                                                               *"    4   24    1    0    0    1         
+                                 MTPhase                                     DINT    0 "                                                              22"    5    4    1   10    0    0         
+                           MTDiffInteger                                     DINT    0 "                                                               0"    5    4    1   10    0    0         
+                             MTDiffFract                                     DINT    0 "                                                               0"    5    4    1   10    0    0         
+                               RefOffset                                     DINT    0 "                                                               2"    5    4    1   10    0    0         
+                                Checksum                                    UDINT    0 "                                                               0"    5    7    1   10    0    0         
+                  EndlessPositionData[1]                 MC_ENDLESS_POSITION_DATA    0 "                                                               *"    4   24    1    0    0    1         
+                                 MTPhase                                     DINT    0 "                                                               0"    5    4    1   10    0    0         
+                           MTDiffInteger                                     DINT    0 "                                                               0"    5    4    1   10    0    0         
+                             MTDiffFract                                     DINT    0 "                                                               0"    5    4    1   10    0    0         
+                               RefOffset                                     DINT    0 "                                                              33"    5    4    1   10    0    0         
+                                Checksum                                    UDINT    0 "                                                               0"    5    7    1   10    0    0         
