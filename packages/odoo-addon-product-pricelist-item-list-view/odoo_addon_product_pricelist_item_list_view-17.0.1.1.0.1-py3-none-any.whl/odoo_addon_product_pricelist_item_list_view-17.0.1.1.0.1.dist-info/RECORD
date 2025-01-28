@@ -1,0 +1,15 @@
+odoo/addons/product_pricelist_item_list_view/README.rst,sha256=3waMLs2tCEnc33g6r-Ku7QnkdzSmNCXysyHq3zDctqQ,1705
+odoo/addons/product_pricelist_item_list_view/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo/addons/product_pricelist_item_list_view/__manifest__.py,sha256=mnMz2-sKnf45e7t5QH8ZmK-4i46UKRMzJd1FfMvvJyc,757
+odoo/addons/product_pricelist_item_list_view/i18n/ca.po,sha256=7muP8RFOJHaG9WUFoixNVJjtxskCuW8Ntk6iRoDM8_o,1777
+odoo/addons/product_pricelist_item_list_view/i18n/de.po,sha256=MmJ5Jewy4Mg-dvgiMCD8FRPh4LB1xJWt2wmf1k4w5qc,1775
+odoo/addons/product_pricelist_item_list_view/i18n/es.po,sha256=T7fBD0UwnhsDBMhLNYFOJzj7MmIgDGZR7So374857fo,1887
+odoo/addons/product_pricelist_item_list_view/i18n/fr.po,sha256=U6bCU7abjjZru38Axd6DleMH2KMsafqJcX9sBory3Xo,1858
+odoo/addons/product_pricelist_item_list_view/i18n/it.po,sha256=FFIU8-pQbzaao-q1jYoAmaa69FXO5GjzTtBxBqm1Opo,1663
+odoo/addons/product_pricelist_item_list_view/i18n/product_pricelist_item_list_view.pot,sha256=OO0nzH3mrn0HKjEZ3QmEJcPA5BcS1wwMbPthMYZ5ddg,1434
+odoo/addons/product_pricelist_item_list_view/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/product_pricelist_item_list_view/views/pricelist_view.xml,sha256=JSyLthTyNDYZbR7tXyiqS-lgnTXlp7ZiSndwT1hhShk,2678
+odoo_addon_product_pricelist_item_list_view-17.0.1.1.0.1.dist-info/METADATA,sha256=ktID-Zdwmwex0Lcizp-NQnt7LGLpHviqpeZ4KBynDfI,2348
+odoo_addon_product_pricelist_item_list_view-17.0.1.1.0.1.dist-info/WHEEL,sha256=9fEMia4zL7ZuZbnCOrcYogUhmn4XFIVaJ8G4YGI31xc,81
+odoo_addon_product_pricelist_item_list_view-17.0.1.1.0.1.dist-info/top_level.txt,sha256=QE6RBQ0QX5f4eFuUcGgU5Kbq1A_qJcDs-e_vpr6pmfU,4
+odoo_addon_product_pricelist_item_list_view-17.0.1.1.0.1.dist-info/RECORD,,
