@@ -1,0 +1,22 @@
+LICENSE
+README.md
+pyproject.toml
+src/web_operator/__init__.py
+src/web_operator/simple_test.py
+src/web_operator/supervisor.py
+src/web_operator/utils.py
+src/web_operator.egg-info/PKG-INFO
+src/web_operator.egg-info/SOURCES.txt
+src/web_operator.egg-info/dependency_links.txt
+src/web_operator.egg-info/requires.txt
+src/web_operator.egg-info/top_level.txt
+src/web_operator/agent_tools/__init__.py
+src/web_operator/agent_tools/custom_get_message.py
+src/web_operator/agent_tools/custom_gmail_toolkit.py
+src/web_operator/agent_tools/custom_playwright_click.py
+src/web_operator/agent_tools/custom_playwright_fill.py
+src/web_operator/agent_tools/custom_playwright_toolkit.py
+src/web_operator/agents/ __init__.py
+src/web_operator/agents/agent_state.py
+src/web_operator/agents/browser_agent.py
+src/web_operator/agents/gmail_agent.py
