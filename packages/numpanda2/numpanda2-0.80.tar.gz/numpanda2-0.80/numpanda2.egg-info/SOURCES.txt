@@ -1,0 +1,7 @@
+setup.py
+numpanda2/__init__.py
+numpanda2/main.py
+numpanda2.egg-info/PKG-INFO
+numpanda2.egg-info/SOURCES.txt
+numpanda2.egg-info/dependency_links.txt
+numpanda2.egg-info/top_level.txt
