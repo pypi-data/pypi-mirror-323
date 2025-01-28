@@ -1,0 +1,15 @@
+py2pack/__init__.py,sha256=pfBJRaEUo7VzQ1fWKPMHtInFaTpRf0LzB0bfExicmCQ,21563
+py2pack/requires.py,sha256=FSCOGw5fiV37wb_hLWKTXhiCTIgbzU6jTTG53rNN9YE,3656
+py2pack/spdx_license_map.json,sha256=7eRtKUVh3JZNAjRkuZ3EOPWYByWNoXXOkgoQSVf1H58,21839
+py2pack/utils.py,sha256=IJzcz6ccO4GmiLgAUstnr6iF_9w-jFITGSu_0ekKEwA,6700
+py2pack/version.py,sha256=GAVpdz5tjT-LUV1NpUKjRD6BDlA4j5JPMomWTiujs84,732
+py2pack/templates/fedora.spec,sha256=JYpSpDijMUuByx6yBlnE_4u0QI8TD_YFR0NTMENiTzc,3142
+py2pack/templates/mageia.spec,sha256=1df88IJZ3L9xoI28uMQRa_tM3RL1YI5ejwcdpT-k1SY,1313
+py2pack/templates/opensuse-legacy.spec,sha256=LkCXuTsz_ok_irze8pfjFOv38suMqj3ssy1NHYr-wiU,3290
+py2pack/templates/opensuse.dsc,sha256=f_Jbr3iL4JC8Iv34h2Bk6_LcHzBTLFVabaILTWN0eW0,922
+py2pack/templates/opensuse.spec,sha256=MF1y0k4aloeI4I-x2rnKjhqJVVSiOAlNapvFZpS7WqQ,4485
+py2pack-0.9.1.dist-info/METADATA,sha256=LL1raPhCNOY-uE5EDAkOcTrTTp281wSaF9nNB-oCjJw,17034
+py2pack-0.9.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+py2pack-0.9.1.dist-info/entry_points.txt,sha256=jMCW4GK0Dap527ZwP1Lf-rCAymsI5M7JMTmjFXREqvQ,41
+py2pack-0.9.1.dist-info/licenses/LICENSE,sha256=XfKg2H1sVi8OoRxoisUlMqoo10TKvHmU_wU39ks7MyA,10143
+py2pack-0.9.1.dist-info/RECORD,,
