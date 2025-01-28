@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+src/PhenoQC.egg-info/PKG-INFO
+src/PhenoQC.egg-info/SOURCES.txt
+src/PhenoQC.egg-info/dependency_links.txt
+src/PhenoQC.egg-info/entry_points.txt
+src/PhenoQC.egg-info/requires.txt
+src/PhenoQC.egg-info/top_level.txt
+tests/test_batch_processing.py
+tests/test_input.py
+tests/test_mapping.py
+tests/test_missing_data.py
+tests/test_recursive_scanning.py
+tests/test_reporting.py
+tests/test_validation.py
