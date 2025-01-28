@@ -1,0 +1,36 @@
+from setuptools import setup, find_packages
+
+with open('README.rst', encoding='utf-8') as readme_file:
+    long_description = readme_file.read()
+
+with open('CHANGELOG.txt', encoding='utf-8') as changelog_file:
+    long_description += '\n\n' + changelog_file.read()
+
+setup(
+    name="PyAwaish",
+    version="1.0",
+    author="Abu Awaish",
+    author_email="abuawaish7@gmail.com",
+    description="A Python package for building dynamic MySQL-powered web applications with template support",
+    long_description=long_description,
+    long_description_content_type="text/x-rst",  # Use RST for README and changelog
+    url="https://github.com/abuawaish/Crud_app",
+    packages=find_packages(),
+    include_package_data=True,  # Include non-code files specified in MANIFEST.in
+    package_data={
+        "PyAwaish": ["templates/**/*"],  # Include all files in templates and subdirectories
+    },
+    license="MIT",
+    license_files=['LICENSE.txt'],  # Explicitly include the license file
+    install_requires=[
+        'Flask',
+        'Flask-MySQLdb',
+    ],
+    keywords="web application flask mysql dynamic templates",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.6",  # Specify the minimum Python version
+)

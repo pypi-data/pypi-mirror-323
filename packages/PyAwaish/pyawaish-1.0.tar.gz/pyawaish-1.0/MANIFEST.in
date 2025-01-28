@@ -1,0 +1,22 @@
+# Include important project metadata and configuration files
+include README.rst
+include LICENSE.txt       # Explicitly mention the extension
+include setup.py
+include pyproject.toml
+include requirements.txt
+include CHANGELOG.txt
+
+# Include all files in the templates directory (and subdirectories)
+recursive-include PyAwaish/templates *
+
+# Include all Python source files in the package
+recursive-include PyAwaish *.py
+
+# Exclude compiled Python files and cache directories
+global-exclude *.pyc
+global-exclude __pycache__/
+
+# Exclude log and temporary files
+global-exclude *.log
+global-exclude *.tmp
+global-exclude .idea/

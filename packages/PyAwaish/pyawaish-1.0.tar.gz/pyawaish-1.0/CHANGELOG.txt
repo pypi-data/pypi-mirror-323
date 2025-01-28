@@ -1,0 +1,15 @@
+CHANGELOG
+=========
+
+Version 1.0 (2025-01-27)
+---------------------------
+
+- Initial release of PyAwaish.
+- Added dynamic MySQL configuration through a web interface.
+- Implemented template rendering for `config_mysql.html` and `home.html`.
+- Developed `/execute_query` endpoint for executing MySQL queries.
+- Supported CRUD operations: insert, delete, update, fetch_data.
+- Enabled secure database connection using environment variables.
+- Provided RESTFul API design for interaction with MySQL.
+- Fixed the code markdown in readme.rst file
+- Added warning messages

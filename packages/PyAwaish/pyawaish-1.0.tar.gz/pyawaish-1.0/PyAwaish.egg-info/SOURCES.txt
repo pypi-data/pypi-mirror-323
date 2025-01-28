@@ -1,0 +1,16 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+requirements.txt
+setup.py
+PyAwaish/MysqlApplication.py
+PyAwaish/__init__.py
+PyAwaish.egg-info/PKG-INFO
+PyAwaish.egg-info/SOURCES.txt
+PyAwaish.egg-info/dependency_links.txt
+PyAwaish.egg-info/requires.txt
+PyAwaish.egg-info/top_level.txt
+PyAwaish/templates/config_mysql.html
+PyAwaish/templates/home.html
