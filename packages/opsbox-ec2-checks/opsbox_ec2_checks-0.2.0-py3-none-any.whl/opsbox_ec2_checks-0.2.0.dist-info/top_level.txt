@@ -1,0 +1,4 @@
+ec2_old_snapshots
+idle_instances
+stray_ebs
+unattached_eips
