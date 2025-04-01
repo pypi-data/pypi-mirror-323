@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+testing-package-upload/__init__.py
+testing_package_upload.egg-info/PKG-INFO
+testing_package_upload.egg-info/SOURCES.txt
+testing_package_upload.egg-info/dependency_links.txt
+testing_package_upload.egg-info/requires.txt
+testing_package_upload.egg-info/top_level.txt
