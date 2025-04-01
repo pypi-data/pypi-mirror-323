@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "dataclouder-tts"
+version = "0.0.6"
+description = "TTS library for Dataclouder"
+license = "MIT"
+authors = ["adamo jordan <adamo.figueroa@gmail.com>"]
+readme = "README.md"
+
+packages = [
+    { include = "dataclouder_tts", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+fastapi = ">=0.104.0"
+pydantic = ">=2.4.2"
+openai = ">=1.3.0"
+
+[tool.poetry.group.dev.dependencies]
+build = ">=1.0.0"
+twine = ">=6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
+
