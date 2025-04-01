@@ -1,0 +1,3 @@
+[console_scripts]
+zhis=zhis.main:cli
+
