@@ -1,0 +1,12 @@
+requests
+numpy
+pandas
+matplotlib
+plotly
+pymatgen
+fortranformat
+nbformat
+kaleido
+
+[:python_version < "3.12"]
+importlib-metadata
