@@ -1,0 +1,90 @@
+[tool.black]
+# bump the dev dependency version when updating this
+# also bump black version in the pre-commit config
+required-version = "24.10.0"
+line-length = 119
+# fast disables black AST (covered by bandit pre-commit plugin)
+fast = true
+# preview required for unstable features
+preview = true
+# check these with `black --help` when updating required-version
+enable-unstable-feature = [
+    "string_processing",
+    "hug_parens_with_braces_and_square_brackets",
+    "wrap_long_dict_values_in_parens",
+    "multiline_string_handling",
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--strict-markers --strict-config"
+asyncio_mode = "auto"
+norecursedirs = [".git", ".tox", ".env", ".venv"]
+testpaths = ["pytests"]
+timeout = 60
+pythonpath = ["pysrc"]
+
+[tool.poetry]
+name = "fernet-encrypt"
+version = "1.0.5rc2"
+description = "Fernet Encryption CLI tool"
+authors = ["Tyson Holub <tyson@tysonholub.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "fernet_encrypt", from = "pysrc" }]
+include = ["README.md", "LICENSE.md"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+cryptography = "^39.0.2"
+typer = "^0.13"
+
+[tool.poetry.group.dev.dependencies]
+black = "24.10.0"
+coverage = "^7"
+pytest = "^8"
+pytest-asyncio = "^0.24"
+pytest-timeout = "^2"
+
+[tool.poetry.scripts]
+fernet-encrypt = { callable = "fernet_encrypt.app:cli" }
+
+[tool.isort]
+line_length = 119
+use_parentheses = true
+multi_line_output = 3
+include_trailing_comma = true
+src_paths = ["pysrc", "pytests"]
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_also = [
+    # Don't complain about missing debug-only code:
+    "def __repr__",
+    "if self\\.debug",
+
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise AssertionError",
+    "raise NotImplementedError",
+
+    # Don't complain if non-runnable code isn't run:
+    "if 0:",
+    "if __name__ == .__main__.:",
+
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
+]
+
+[tool.pylint.'FORMAT']
+max-line-length = 119
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = ["wrong-import-position"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
