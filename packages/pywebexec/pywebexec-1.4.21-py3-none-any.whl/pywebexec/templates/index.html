@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/images/favicon.svg" type="image/svg+xml">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/xterm.css">
+</head>
+<body>
+    <div id="dimmer" class="dimmer">
+        <div class="dimmer-text">Server not available</div>
+    </div>
+    <h2><span class="status-icon title-icon"></span>{{ title }}</h2>
+    <form id="launchForm" class="form-inline">
+        <label for="commandName">Command</label>
+        <div class="input-group">
+            <input type="text" id="commandName" name="commandName" size=5 autocomplete="off" style="width: 100px;" autofocus>
+            <div id="showCommandListButton" class="show-command-list-button">
+                <span class="arrow">&#9660;</span>
+            </div>
+            <select id="commandList" class="command-list" size="20"></select>
+            <input type="text" id="params" name="params" oninput="this.style.width = ((this.value.length + 1) * 8) + 'px';">
+        </div>
+        <button type="submit">Run</button>
+    </form>
+    <div class="table-container" id="tableContainer">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Start Time</th>
+                    <th>Duration</th>
+                    <th>Command</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                    <th>Output</th>
+                </tr>
+            </thead>
+            <tbody id="commands"></tbody>
+        </table>
+    </div>
+    <div class="resizer-container">
+        <div class="resizer" id="resizer"></div>
+    </div>
+    <div id="output" class="output"></div>
+    <div class="slider-container">
+        <input type="range" id="outputSlider" min="0" max="100" value="100">
+        <label for="outputSlider"><span id="outputPercentage">100%</span></label>
+    </div>
+    <script src="/static/js/xterm/ansi_up.min.js"></script>
+    <script src="/static/js/xterm/xterm.js"></script>
+    <script src="/static/js/xterm/xterm-addon-fit.js"></script>
+    <script type="text/javascript" src="/static/js/script.js"></script>
+    <script type="text/javascript" src="/static/js/commands.js"></script>
+</body>
+</html>
