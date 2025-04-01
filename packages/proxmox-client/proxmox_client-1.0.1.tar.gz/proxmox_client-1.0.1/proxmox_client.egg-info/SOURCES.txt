@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+proxmox_client/__init__.py
+proxmox_client/client.py
+proxmox_client.egg-info/PKG-INFO
+proxmox_client.egg-info/SOURCES.txt
+proxmox_client.egg-info/dependency_links.txt
+proxmox_client.egg-info/not-zip-safe
+proxmox_client.egg-info/requires.txt
+proxmox_client.egg-info/top_level.txt
