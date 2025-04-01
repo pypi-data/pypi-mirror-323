@@ -1,0 +1,10 @@
+supadata/__init__.py,sha256=WGivCY37oobbgYiaT_n2yIKAom4oSYmqzsJztMcMR9E,484
+supadata/client.py,sha256=_aEnRvIeATV99A5FM4dID_sc9Ng2LR9RpN-j-dyQwe4,2778
+supadata/errors.py,sha256=ZYu0_Oct-RRwLTdwFPvVcZxU7-CIkYI_qTtJFsP9O2Y,946
+supadata/types.py,sha256=nv9bHtkKQbAkmtDjoilr5kcnnCPPjpXb3p0zpGMff4E,2233
+supadata/web.py,sha256=7WwQGozdrNUWT9RYci70PqhSXHdkuRU_NxrfkCiRBeU,1192
+supadata/youtube.py,sha256=gmny27kxEB1NGkfwtd8CyI7iAYFI1kpepYUezzA6LaE,2747
+supadata-1.0.4.dist-info/METADATA,sha256=LnBbDU4oVi6FVkFtNwD8bhbOFhlhvNbjzif2FwW_OA8,2919
+supadata-1.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+supadata-1.0.4.dist-info/licenses/LICENSE,sha256=4seIJwn6dIRxlztdqzABm1UPhKry1yVgRb66J-KzznI,1065
+supadata-1.0.4.dist-info/RECORD,,
