@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: slgps
+Version: 0.0.1
+Summary: NN assisted chemistry reduction of mechanism based on Global Pathway Selection algorithm
+Author-email: Rohit Mishra <rohitmishranitrr@gmail.com>
+Project-URL: Homepage, https://github.com/ctftamu/SL-GPS
+Project-URL: Issues, https://github.com/ctftamu/SL-GPS/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
