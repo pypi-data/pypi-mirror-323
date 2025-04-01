@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Latest/__init__.py
+Latest/example.py
+Latest/gitbase.py
+gitbase/__init__.py
+gitbase/dataSystem.py
+gitbase/example.py
+gitbase/gitbase.py
+gitbase/playerDataSystem.py
+gitbase.egg-info/PKG-INFO
+gitbase.egg-info/SOURCES.txt
+gitbase.egg-info/dependency_links.txt
+gitbase.egg-info/requires.txt
+gitbase.egg-info/top_level.txt
