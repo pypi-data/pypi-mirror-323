@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+src/utopia_pipeline_tools/__init__.py
+src/utopia_pipeline_tools/analysis_tools.py
+src/utopia_pipeline_tools/azure_blob_tools.py
+src/utopia_pipeline_tools/classified_to_seabass.py
+src/utopia_pipeline_tools/cnn_tools.py
+src/utopia_pipeline_tools/ifcb_data_tools.py
+src/utopia_pipeline_tools/pivot_ingestion_tools.py
+src/utopia_pipeline_tools.egg-info/PKG-INFO
+src/utopia_pipeline_tools.egg-info/SOURCES.txt
+src/utopia_pipeline_tools.egg-info/dependency_links.txt
+src/utopia_pipeline_tools.egg-info/requires.txt
+src/utopia_pipeline_tools.egg-info/top_level.txt
