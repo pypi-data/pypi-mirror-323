@@ -1,0 +1,30 @@
+name: Build docs
+on:
+  workflow_call:
+    inputs:
+      python-version:
+        required: true
+        type: string
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v3
+      - uses: mamba-org/setup-micromamba@v2.0.3
+        with:
+          environment-file: ./environment-dev.yml
+          init-shell: bash
+          create-args: --verbose
+            python=${{ inputs.python-version }}
+          cache-environment: true
+          cache-downloads: false
+
+      - name: "Build docs"
+        shell: bash -el {0}
+        run: |
+          micromamba activate ultraplot-dev
+          pip install .
+          cd docs
+          make html
