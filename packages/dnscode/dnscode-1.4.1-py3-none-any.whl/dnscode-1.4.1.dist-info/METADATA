@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: dnscode
+Version: 1.4.1
+Summary: Simplifying DNS Zone Management
+Project-URL: Homepage, https://code.minecraftchest1.us/minecraftchest1/dnscode
+Project-URL: Issues, https://code.minecraftchest1.us/minecraftchest1/dnscode/issues
+Author-email: Minecraftchest1 <me@minec1.us>
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: Name Service (DNS)
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Requires-Dist: dnspython==2.7.0
+Requires-Dist: fqdn==1.5.1
+Description-Content-Type: text/markdown
+
+# DNScode
+## Simplifying DNS Zone management
+
+---
+
+## About
+
+DNScode is a project to help simplify DNS zone management, when using plain text files with servers like BIND and NSD. It provides a framework for programmatically generating zone
+files with Python, allowing for more flexability, compared to other DNS as code solutions.
+
+## Installation
+
+DNSCode is a single Python3 script, with very few dependencies, intented to be used as a module inside of another script. Just drop main.py into your project 
