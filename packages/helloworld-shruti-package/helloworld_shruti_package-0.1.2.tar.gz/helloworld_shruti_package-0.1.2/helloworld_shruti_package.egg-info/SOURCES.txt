@@ -1,0 +1,8 @@
+setup.py
+helloworld/__init__.py
+helloworld/hello.py
+helloworld_shruti_package.egg-info/PKG-INFO
+helloworld_shruti_package.egg-info/SOURCES.txt
+helloworld_shruti_package.egg-info/dependency_links.txt
+helloworld_shruti_package.egg-info/not-zip-safe
+helloworld_shruti_package.egg-info/top_level.txt
