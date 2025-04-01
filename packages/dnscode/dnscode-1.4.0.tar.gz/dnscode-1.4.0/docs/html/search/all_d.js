@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['target_0',['target',['../classdnscode_1_1dnscode_1_1SRV.html#a38043b18f8f888d9ab78479cd194076a',1,'dnscode::dnscode::SRV']]],
+  ['ttl_1',['ttl',['../classdnscode_1_1dnscode_1_1Record.html#a875d04fc6789b0e36e0b56dbfa8aa7b8',1,'dnscode.dnscode.Record.ttl'],['../classdnscode_1_1dnscode_1_1A.html#ac48289ec4dd4f287fa5fd93dd537d974',1,'dnscode.dnscode.A.ttl'],['../classdnscode_1_1dnscode_1_1AAAA.html#abd8ff53d71d8ae9e1801b562d384c3a3',1,'dnscode.dnscode.AAAA.ttl'],['../classdnscode_1_1dnscode_1_1CNAME.html#aa5ecf670a1c88f92991280aedb5ad322',1,'dnscode.dnscode.CNAME.ttl'],['../classdnscode_1_1dnscode_1_1MX.html#a44e80917859f828710a43ff3f0dbe8ed',1,'dnscode.dnscode.MX.ttl'],['../classdnscode_1_1dnscode_1_1NS.html#a80316c5453f699b87891e868458e0541',1,'dnscode.dnscode.NS.ttl'],['../classdnscode_1_1dnscode_1_1PTR.html#a388098f988ab7eff6d30811b4ed8758f',1,'dnscode.dnscode.PTR.ttl'],['../classdnscode_1_1dnscode_1_1SOA.html#a3f98e8ca93d98290d26e595b9e1d5841',1,'dnscode.dnscode.SOA.ttl'],['../classdnscode_1_1dnscode_1_1SRV.html#ab793ceda5d5a11c0030b230a1edfeda5',1,'dnscode.dnscode.SRV.ttl']]]
+];
