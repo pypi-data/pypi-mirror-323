@@ -1,0 +1,18 @@
+[project]
+name = "dqt"
+version = "0.1.6"
+description = "A tool to check and monitor the quality of your data."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "ascii>=3.6",
+    "click>=8.1.8",
+    "loguru>=0.7.3",
+]
+
+[project.scripts]
+dqt = "dqt.cli:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
