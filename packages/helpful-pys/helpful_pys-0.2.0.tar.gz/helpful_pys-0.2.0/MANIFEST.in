@@ -1,0 +1,4 @@
+include README.md
+include requirements.txt
+exclude helpful_pys/creds.py
+include helpful_pys/creds.py.sample
