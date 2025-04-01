@@ -1,0 +1,59 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "bambu-cli"
+dynamic = []
+description = "CLI tool for use with Bambu Printers"
+authors = [
+    { name = "Andrew Todd", email = "thegeektechworkshop@gmail.com" },
+]
+dependencies = [
+    "paho-mqtt>=2.1.0",
+    "ftputil>=5.1.0",
+    "enlighten>=1.12.4",
+    "sshkeyboard>=2.3.1",
+    "rich>=13.9.4",
+    "cloudscraper>=1.2.71",
+    "certifi>=2024.8.30",
+    "ngrok>=1.4.0",
+    "ssdp>=1.3.0",
+    "untangle>=1.2.1",
+    "ipaddress>=1.0.23",
+]
+requires-python = "~=3.12"
+readme = "README.md"
+version = "0.5.10"
+
+[project.license]
+text = "GPL3"
+
+[project.scripts]
+bambu = "bambucli.cli:main"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.version]
+source = "file"
+path = "src/bambucli/version.py"
+
+[tool.pdm.options]
+add = [
+    "--no-self",
+]
+install = [
+    "--no-self",
+]
+remove = [
+    "--no-self",
+]
+
+[tool.pdm.scripts._]
+working_dir = "src"
+
+[tool.pdm.scripts.bambu]
+call = "bambucli.cli:main"
