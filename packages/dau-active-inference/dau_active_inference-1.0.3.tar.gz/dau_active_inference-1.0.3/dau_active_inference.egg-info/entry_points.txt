@@ -1,0 +1,2 @@
+[console_scripts]
+dau-active-inference = dau_active_inference.dau_active_inference:main

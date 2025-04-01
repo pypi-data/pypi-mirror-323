@@ -1,0 +1,4 @@
+pymdp
+numpy
+matplotlib
+inferactively-pymdp
