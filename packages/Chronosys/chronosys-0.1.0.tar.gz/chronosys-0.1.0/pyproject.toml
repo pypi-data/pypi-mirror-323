@@ -1,0 +1,28 @@
+[project]
+name = "Chronosys"
+version = "0.1.0"
+description = "A Python library for creating and managing JSON files for information storage and retrieval."
+authors = [
+    { name = "Jacob Allen", email = "jacob@shredbox.com" }
+]
+readme = "README.md"
+keywords = ["json", "storage"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+requires-python = ">=3.8"
+
+[dependencies]
+jsonschema = "^4.0.0"
+filelock = "3.17.0"
+
+[build-system]
+requires = ["setuptools>=75.6.0", "wheel>=0.45.1", "pip>=24.3.1"]
+build-backend = "setuptools.build_meta"
