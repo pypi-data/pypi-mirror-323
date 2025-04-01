@@ -1,0 +1,265 @@
+# ducktools-pythonfinder
+# MIT License
+# 
+# Copyright (c) 2013-2014 David C Ellis
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+from __future__ import annotations
+
+import os
+import sys
+
+
+from ducktools.classbuilder.prefab import Prefab
+from ducktools.lazyimporter import LazyImporter, FromImport, ModuleImport
+
+from .shared import (
+    PythonInstall,
+    get_install_details,
+    version_str_to_tuple,
+    version_tuple_to_str,
+)
+
+
+_laz = LazyImporter(
+    [
+        ModuleImport("re"),
+        ModuleImport("json"),
+        FromImport("pathlib", "Path"),
+        FromImport("subprocess", "run"),
+    ]
+)
+
+VENV_CONFIG_NAME = "pyvenv.cfg"
+
+
+# VIRTUALENV can make some invalid regexes that are just the tuple with dots.
+VIRTUALENV_PY_VER_RE = (
+    r"(?P<major>\d+)\.(?P<minor>\d+)\.?(?P<micro>\d*)\.(?P<releaselevel>.+)\.(?P<serial>\d*)?"
+)
+
+
+class InvalidVEnvError(Exception):
+    pass
+
+
+class PythonPackage(Prefab):
+    name: str
+    version: str
+
+
+class PythonVEnv(Prefab):
+    folder: str
+    executable: str
+    version: tuple[int, int, int, str, int]
+    parent_path: str
+
+    @property
+    def version_str(self) -> str:
+        return version_tuple_to_str(self.version)
+
+    @property
+    def parent_executable(self) -> str:
+        if sys.platform == "win32":
+            return os.path.join(self.parent_path, "python.exe")
+        else:
+            return os.path.join(self.parent_path, "python")
+
+    @property
+    def parent_exists(self) -> bool:
+        return os.path.exists(self.parent_executable)
+
+    def get_parent_install(self, cache: list[PythonInstall] | None = None) -> PythonInstall | None:
+        install = None
+        cache = [] if cache is None else cache
+
+        if self.parent_exists:
+            exe = self.parent_executable
+
+            # Python installs may be cached, can skip querying exe.
+            for inst in cache:
+                if os.path.samefile(inst.executable, exe):
+                    install = inst
+                    break
+
+            if install is None:
+                install = get_install_details(exe)
+
+        return install
+
+    def list_packages(self):
+        if not self.parent_exists:
+            raise FileNotFoundError(
+                f"Parent Python at \"{self.parent_executable}\" does not exist."
+            )
+
+        # Should probably use sys.executable and have pip as a dependency
+        # We would need to look at possibly changing how ducktools-env works for that however.
+
+        data = _laz.run(
+            [
+                self.parent_executable,
+                "-m", "pip",
+                "--python", self.executable,
+                "list",
+                "--format", "json"
+            ],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+
+        raw_packages = _laz.json.loads(data.stdout)
+
+        packages = [
+            PythonPackage(
+                name=p["name"],
+                version=p["version"],
+            )
+            for p in raw_packages
+        ]
+
+        return packages
+
+    @classmethod
+    def from_cfg(cls, cfg_path):
+        """
+        Get a PythonVEnv instance from the path to a config file
+
+        :param cfg_path:
+        :return:
+        """
+        parent_path, version_str = None, None
+        venv_base = cfg_path.parent
+
+        with cfg_path.open() as f:
+            for line in f:
+                key, value = (item.strip() for item in line.split("="))
+
+                if key == "home":
+                    parent_path = value
+                elif key in {"version", "version_info"}:
+                    # venv and uv use different key names :)
+                    version_str = value
+
+                if parent_path and version_str:
+                    break
+            else:
+                # Not a valid venv, ignore
+                raise InvalidVEnvError(f"Path and version not defined in {cfg_path}")
+
+        if sys.platform == "win32":
+            venv_exe = os.path.join(venv_base, "Scripts", "python.exe")
+        else:
+            venv_exe = os.path.join(venv_base, "bin", "python")
+
+        try:
+            version_tuple = version_str_to_tuple(version_str)
+        except ValueError:  # pragma: no cover
+            # Might be virtualenv putting in incorrect versions
+            parsed_version = _laz.re.fullmatch(VIRTUALENV_PY_VER_RE, version_str)
+            if parsed_version:
+                major, minor, micro, releaselevel, serial = parsed_version.groups()
+                version_tuple = (
+                    int(major),
+                    int(minor),
+                    int(micro) if micro else 0,
+                    releaselevel,
+                    int(serial if serial != "" else 0),
+                )
+            else:
+                raise InvalidVEnvError(
+                    f"Could not determine version from venv version string {version_str}"
+                )
+
+        return cls(
+            folder=venv_base,
+            executable=venv_exe,
+            version=version_tuple,
+            parent_path=parent_path
+        )
+
+
+def get_python_venvs(base_dir=None, recursive=False, search_parent_folders=False):
+    """
+    Yield discoverable python virtual environment information
+
+    If recursive=True then search_parent_folders is ignored.
+
+    If you're in a project directory and are looking for a potential venv
+    search_parent_folders=True will search parents and yield installs discovered.
+
+    If you're in a folder of source trees and want to find venvs inside any subfolders
+    then use recursive=True.
+
+    :param base_dir: Base directory to search venvs
+    :param recursive: Also check subfolders of the base directory
+    :param search_parent_folders: Also search parent folders
+    :yield: PythonVEnv details.
+    """
+    base_dir = _laz.Path.cwd() if base_dir is None else _laz.Path(base_dir)
+
+    search_folders = [base_dir]
+
+    # Recursive searches don't also search parent folders.
+    if recursive:
+        pattern = f"**/{VENV_CONFIG_NAME}"
+    else:
+        pattern = f"*/{VENV_CONFIG_NAME}"
+        if search_parent_folders:
+            search_folders.extend(base_dir.parents)
+
+    for f in search_folders:
+        try:
+            for conf in f.glob(pattern):
+                try:
+                    env = PythonVEnv.from_cfg(conf)
+                except InvalidVEnvError:
+                    continue
+
+                yield env
+        except OSError as e:
+            # MacOS can error on searching up folders with an invalid argument
+            # On Python 3.11 or earlier.
+            if e.errno == 22:
+                continue
+
+
+def list_python_venvs(
+    base_dir=None,
+    recursive=False,
+    search_parent_folders=False,
+) -> list[PythonVEnv]:
+    """
+    Get a list of discoverable python virtual environment information
+
+    If recursive=True then search_parent_folders is ignored.
+
+    :param base_dir: Base directory to search venvs
+    :param recursive: Also check subfolders of the base directory
+    :param search_parent_folders: Also search parent folders
+    :returns: List of Python VEnv details.
+    """
+    return list(
+        get_python_venvs(
+            base_dir=base_dir,
+            recursive=recursive,
+            search_parent_folders=search_parent_folders,
+        )
+    )
