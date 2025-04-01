@@ -1,0 +1,5 @@
+requests
+cryptography
+altcolor>=0.0.3
+mutagen
+pygame
