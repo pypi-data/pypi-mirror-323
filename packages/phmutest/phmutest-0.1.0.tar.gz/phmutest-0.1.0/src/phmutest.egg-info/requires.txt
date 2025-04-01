@@ -1,0 +1,38 @@
+
+[:python_version < "3.11"]
+tomli>=1.0.0
+
+[color]
+pygments
+
+[color:os_name != "nt"]
+colorama>=0.4.4
+
+[color:os_name == "nt"]
+colorama>=0.4.6
+
+[dev]
+pygments
+pytest>=6.2.5
+pytest-subtests
+stackprinter
+coverage
+flake8
+pep8-naming
+mkdocs
+mypy
+black
+isort
+
+[dev:os_name != "nt"]
+colorama>=0.4.4
+
+[dev:os_name == "nt"]
+colorama>=0.4.6
+
+[pytest]
+pytest>=6.2.5
+pytest-subtests
+
+[traceback]
+stackprinter

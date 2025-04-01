@@ -1,0 +1,13 @@
+[build-system]
+# These are the assumed default build requirements from pip:
+# https://pip.pypa.io/en/stable/reference/pip/#pep-517-and-518-support
+# See https://github.com/pypa/sampleproject/
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+minversion = "6.2.5"
+python_files = [
+    "tests/test_*.py",
+    "tests/py/generated*.py"
+]
