@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/BmpLib_Ai/__init__.py
+src/BmpLib_Ai/bmp_func.py
+src/BmpLib_Ai.egg-info/PKG-INFO
+src/BmpLib_Ai.egg-info/SOURCES.txt
+src/BmpLib_Ai.egg-info/dependency_links.txt
+src/BmpLib_Ai.egg-info/requires.txt
+src/BmpLib_Ai.egg-info/top_level.txt

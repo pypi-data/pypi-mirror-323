@@ -1,0 +1,14 @@
+setuptools
+wheel
+twine
+ipywidgets
+transformers
+openai
+python-dotenv
+spacy
+gTTS
+pandas
+ipykernel
+requests
+openpyxl
+mlx-lm
