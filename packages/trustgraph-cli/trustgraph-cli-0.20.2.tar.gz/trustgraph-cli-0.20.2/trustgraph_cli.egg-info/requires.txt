@@ -1,0 +1,7 @@
+msgpack
+pulsar-client
+rdflib
+requests
+tabulate
+trustgraph-base<0.21,>=0.20
+websockets
