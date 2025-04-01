@@ -1,0 +1,15 @@
+logikal_browser/__init__.py,sha256=es9n64CFDY983a-DQYjhjCGH1GQDLp0SBIUooLj_VBg,152
+logikal_browser/browser.py,sha256=0qrDSCp1sCY3BT9kamA8pJ4jNG7COqVoeEvOWmXzHzA,9598
+logikal_browser/chrome.py,sha256=nkTYMa8lx2CBq181Y_7Gz9pReVQNQfuoMGKWevBS8p0,1505
+logikal_browser/chromium.py,sha256=wW4wy4tG64i3qSfCGpWzXhITdKJO4LRLvM2a5k-Yhek,2775
+logikal_browser/config.py,sha256=RggZLbkxd_MnyA9IoEpfs6wxRk8XrwGfASeQ7BdgY1w,604
+logikal_browser/edge.py,sha256=5PClexfgZY50Gux25psDIZ_xRciBznKghZZMF1GbcSo,1797
+logikal_browser/install.py,sha256=KutptDXc6ka9aeHw7JQlHA8ILkyLvCl4HiwFilBklfs,2045
+logikal_browser/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logikal_browser/scenarios.py,sha256=4yNihM4fKYJ8az1zJyXd4R8GTrXIn0uAhA_QXEoFPR4,1723
+logikal_browser/utils.py,sha256=q2i0AqAdhTITAO_SW8_lxv9xgZnz4TDzK4nQ55biUbM,3524
+logikal_browser-1.0.1.dist-info/LICENSE.txt,sha256=fDvjX0r4kkuT2LSvE1UW1Ge88OrT1kCmaJPZeaVRVI4,1052
+logikal_browser-1.0.1.dist-info/METADATA,sha256=hTPftNvPzW_wbuRxwmILzH6TUI9kYcVi8m1L56YOD4g,2616
+logikal_browser-1.0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+logikal_browser-1.0.1.dist-info/top_level.txt,sha256=JLON8umD-HwV1wj-5f0yVIvdi00_Wn8J39D-IKTyeFQ,16
+logikal_browser-1.0.1.dist-info/RECORD,,
