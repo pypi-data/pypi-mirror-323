@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: aeque
+Version: 0.1.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Rust
+Classifier: Topic :: Adaptive Technologies
+Classifier: Topic :: Other/Nonlisted Topic
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: System :: Benchmark
+Classifier: Topic :: Text Editors :: Text Processing
+Classifier: Topic :: Text Processing
+License-File: LICENSE
+Summary: Oxidized regular expression library for Python written in Rust
+Keywords: expression,fancy,fancy-regex,oxidized,pyo3,regex,regular,regular expression,rust
+Author-email: Sitt Guruvanich <aekazitt+github@gmail.com>
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# Aeque
+
+## Oxidized regular expression library for Python written in Rust
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![Aeque Banner](./static/aeque-banner.svg)](https://github.com/aekasitt/aeque/blob/master/static/aeque-banner.svg)
+
+## Contributions
+
+TBD;
+
+## Project structure
+
+```
+aeque/
+│
+├── benchmark/
+│   └── bench.py            # Benchmarks against standard library
+│
+├── src/
+│   └── lib.rs              # Implementation
+│
+├── tests/
+│   ├── __init__.py         # 
+│   └── search.py           # Compile and search tests
+│
+├── Cargo.toml              # Project dependencies
+├── Cargo.lock              # Lockfile to rust dependencies
+├── LICENSE                 # Details of MIT Licensk
+├── README.md               # Descriptions and roadmap
+├── aeque.pyi               # Python interface to Rust Implementation
+├── pyproject.toml          # Project dependencies
+└── uv.lock                 # Lockfile to uv package manager
+```
+
+## License
+
+This project is licensed under the MIT License.
+
