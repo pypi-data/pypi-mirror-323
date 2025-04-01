@@ -1,0 +1,5 @@
+setup.py
+queryx.qx.egg-info/PKG-INFO
+queryx.qx.egg-info/SOURCES.txt
+queryx.qx.egg-info/dependency_links.txt
+queryx.qx.egg-info/top_level.txt
