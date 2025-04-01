@@ -1,0 +1,9 @@
+pytest
+scipy
+numpy
+pandas
+matplotlib
+networkx
+colorlog
+tabulate
+IPython
