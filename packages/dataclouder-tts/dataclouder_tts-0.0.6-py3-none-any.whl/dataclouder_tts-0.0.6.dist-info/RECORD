@@ -1,0 +1,10 @@
+dataclouder_tts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataclouder_tts/google_tts_service.py,sha256=cAxjNGIat-DQ5WtddXcdmh9YfWjwCmMC12tC74pUcLo,4622
+dataclouder_tts/models/tts_models.py,sha256=jug6wQrqrZSn6ZQXe2ruNPjygyMeqfNU8ZKGge_dBvc,1726
+dataclouder_tts/models.py,sha256=oafYEPpGXTbPcY9ANNPnOBAGzjYGGj1YEVP_UfXaU4A,7224
+dataclouder_tts/speech.py,sha256=IrcFSKMYTyJpRwAvcXo6q6PWJwoyr93weY0bkSJpWsM,1082
+dataclouder_tts/tts_controller.py,sha256=u4hw_1vPhMubIKNG2u08uOFhzIyVxAzZZKKLo4KNEUg,1945
+dataclouder_tts/tts_service_base.py,sha256=eD7pRJLQGbzcuomKrXTgBYnZkuNOZVXgliQza6eLFOY,962
+dataclouder_tts-0.0.6.dist-info/METADATA,sha256=KEi7jnXiBLHv9Htg3Br0aE2Eyb1fa2EFrA4bxAb-AG4,913
+dataclouder_tts-0.0.6.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+dataclouder_tts-0.0.6.dist-info/RECORD,,
