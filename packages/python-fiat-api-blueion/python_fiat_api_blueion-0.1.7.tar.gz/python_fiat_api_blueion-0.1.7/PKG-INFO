@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: python-fiat-api-blueion
+Version: 0.1.7
+Summary: Fiat API client for Python
+Home-page: https://github.com/Blueion76/pyfiat/
+Author: blueion
+Author-email: blueion@blueion.dev
+License: MIT license
+Keywords: fiat,jeep,dodge,ram,alfa,romeo,maserati,chrysler,api,cloud
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Requires-Dist: boto3>=1.35.96
+Requires-Dist: requests>=2.32.3
+Requires-Dist: requests-auth-aws-sigv4>=0.7
+Requires-Dist: dataclasses_json>=0.6.7
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Python client for accessing FIAT cloud API
