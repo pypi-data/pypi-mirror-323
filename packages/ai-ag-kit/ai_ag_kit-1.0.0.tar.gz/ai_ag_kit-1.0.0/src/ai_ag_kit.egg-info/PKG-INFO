@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: ai_ag_kit
+Version: 1.0.0
+Summary: A simple Python package
+Author: Anon
+Author-email: anon@protonmail.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Ignore the package. Will be deleted soon.
