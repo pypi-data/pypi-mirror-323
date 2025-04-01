@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+helpful_pys/__init__.py
+helpful_pys/creds.py.sample
+helpful_pys/helper.py
+helpful_pys.egg-info/PKG-INFO
+helpful_pys.egg-info/SOURCES.txt
+helpful_pys.egg-info/dependency_links.txt
+helpful_pys.egg-info/requires.txt
+helpful_pys.egg-info/top_level.txt
