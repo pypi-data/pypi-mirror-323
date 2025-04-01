@@ -1,0 +1,84 @@
+Metadata-Version: 2.2
+Name: asdfile
+Version: 0.0.1
+Summary: Flat file format for multi-tabular data storage using ASCII separator characters.
+Author: Hemant Nikam
+Author-email: nikhemant@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: itertools
+Requires-Dist: io
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# ASCII Separated Data
+## Flat file format for multi-tabular data storage using ASCII separator characters
+
+Flat/Text file (e.g. comma-separated, tab-separated, fixed-width, etc.) is by far the most common file format used for tabular data by data analysts in any industry. Flat files store structured data using specific column/row separator like comma, newline and data qualifier characters like double quotation.  
+There are few major issues present in the existing flat file formats: The separator and qualifier characters are commonly present in the data itself which makes it difficult to parse the file. Also, multiple tables are not supported by most of the existing file formats.  
+.asd flat file format/structure eliminates above listed and other issues in existing flat file formats. The presented file format uses existing ASCII separator characters (which are almost obsolete considering present day usage and may not appear in actual data) instead of common characters like comma, tab, pipe, etc.  
+This improves the quality and efficiency of data processing and allows multi-tabular data in a single flat file. I have named it ASCII Separated Data (ASD) with .asd as file extension.
+
+## Characters used
+
+| DEC       | OCT       | HEX       | BIN             | Symbol     | Description               |
+|-----------|-----------|-----------|-----------------|------------|---------------------------|
+|     1     |     1     |     01    |     00000001    |     SOH    |     Start of   Heading    |
+|     2     |     2     |     02    |     00000010    |     STX    |     Start of Text         |
+|     3     |     3     |     03    |     00000011    |     ETX    |     End of Text           |
+|     28    |     34    |     1C    |     00011100    |     FS     |     File   Separator      |
+|     29    |     35    |     1D    |     00011101    |     GS     |     Group   Separator     |
+|     30    |     36    |     1E    |     00011110    |     RS     |     Record   Separator    |
+|     31    |     37    |     1F    |     00011111    |     US     |     Unit   Separator      |
+
+
+## Basic Structure of .asd file
+[FILE GROUP LEVEL METADATA (only one in a single .asd file)]
+
+   [FILE LEVEL METADATA]
+      [DATASET/TABLE LEVEL METADATA]
+         [DATA TABLE SEPARATED BY (US) AND (RS)]
+      [GROUP SEPARATOR CHARACTER (GS)]
+      [DATASET/TABLE LEVEL METADATA]
+         [DATA TABLE SEPARATED BY (US) AND (RS)]
+
+   [FILE SEPARATOR CHARACTER (FS)]
+
+   [FILE LEVEL METADATA]
+      [DATASET/TABLE LEVEL METADATA]
+         [DATA TABLE SEPARATED BY (US) AND (RS)]
+      [GROUP SEPARATOR CHARACTER (GS)]
+      [DATASET/TABLE LEVEL METADATA
+         [DATA TABLE SEPARATED BY (US) AND (RS)]
+      [GROUP SEPARATOR CHARACTER (GS)]
+      [DATASET/TABLE LEVEL METADATA]
+         [DATA TABLE SEPARATED BY (US) AND (RS)]
+
+   [FILE SEPARATOR CHARACTER (FS)]
+
+   [FILE LEVEL METADATA]
+      [DATASET/TABLE LEVEL METADATA]
+         [DATA TABLE SEPARATED BY (US) AND (RS)]
+      [GROUP SEPARATOR CHARACTER (GS)]
+      [DATASET/TABLE LEVEL METADATA]
+         [DATA TABLE SEPARATED BY (US) AND (RS)]
+
+
+- **Note**: newline characters are used for readability and will not appear in default .asd format
+## Installation
+pip install asdfile
+
+
+## Usage
+import asdfile as asd
+
+### Functions
+- read_asd()
+- write_asd()
