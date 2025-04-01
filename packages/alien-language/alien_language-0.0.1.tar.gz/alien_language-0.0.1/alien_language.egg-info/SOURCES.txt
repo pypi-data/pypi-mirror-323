@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+alien-language/__init__.py
+alien_language.egg-info/PKG-INFO
+alien_language.egg-info/SOURCES.txt
+alien_language.egg-info/dependency_links.txt
+alien_language.egg-info/requires.txt
+alien_language.egg-info/top_level.txt
