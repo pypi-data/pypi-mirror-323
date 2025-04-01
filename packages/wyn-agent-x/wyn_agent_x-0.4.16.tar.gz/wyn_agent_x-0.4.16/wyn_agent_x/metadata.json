@@ -1,0 +1,211 @@
+{
+    "send_sms": {
+        "trigger_word": [
+            "send a message", 
+            "set a demo", 
+            "set up a demo", 
+            "send sms", 
+            "appointment", 
+            "schedule a demo", 
+            "send a text", 
+            "notify via SMS", 
+            "text someone", 
+            "arrange a demo",
+            "send an SMS", 
+            "text a friend", 
+            "initiate a message", 
+            "deliver a text", 
+            "message someone", 
+            "arrange a meeting", 
+            "book an appointment", 
+            "notify someone", 
+            "send a notification", 
+            "remind via text"
+        ],
+        "sample_payload": {
+            "name": "string",
+            "message body": "string"
+        },
+        "prerequisite": null
+    },
+    "google_search": {
+        "trigger_word": [
+            "search on Google", 
+            "google search", 
+            "find information", 
+            "look up", 
+            "search web", 
+            "browse the internet", 
+            "google it", 
+            "find details online", 
+            "search for info", 
+            "do a web search",
+            "check online", 
+            "find resources", 
+            "get information", 
+            "online search", 
+            "look up information", 
+            "find data", 
+            "internet lookup", 
+            "get search results", 
+            "web query", 
+            "explore online"
+        ],
+        "sample_payload": {
+            "engine": "string",
+            "query": "string",
+            "location": "string",
+            "num": "string"
+        },
+        "prerequisite": null
+    },
+    "generate_financial_report": {
+        "trigger_word": [
+            "generate company report",
+            "summarize stock performance",
+            "compile financial insights",
+            "create market analysis",
+            "get company overview",
+            "review stock trends",
+            "build financial summary",
+            "generate portfolio report",
+            "view financial breakdown",
+            "fetch financial summary",
+            "analyze stock performance",
+            "report on company data",
+            "produce stock summary",
+            "compile stock metrics",
+            "obtain financial overview",
+            "show company performance",
+            "prepare investment summary",
+            "check stock movement report",
+            "generate profit analysis",
+            "overview of financial stats"
+        ],
+        "sample_payload": {
+            "ticker": "string",
+            "save_pdf": "bool",
+            "send_email": "bool",
+            "to_email": "string"
+        },
+        "prerequisite": null
+    },
+    "generate_word_document": {
+        "trigger_word": [
+            "create a document",
+            "generate a report",
+            "make a word file",
+            "write a letter",
+            "build a document",
+            "prepare a report",
+            "write a document",
+            "generate a letter",
+            "make a report",
+            "write a report",
+            "build a report",
+            "prepare a letter",
+            "generate a document",
+            "make a letter",
+            "write a file",
+            "build a letter",
+            "prepare a file",
+            "generate a file",
+            "make a file",
+            "write a document"
+        ],
+        "sample_payload": {
+            "header": "string",
+            "paragraph": "string",
+            "save_docx": "bool",
+            "send_email": "bool",
+            "to_email": "string"
+        },
+        "prerequisite": null
+    },
+    "read_screen": {
+        "trigger_word": [
+            "take a screenshot",
+            "capture a screenshot",
+            "read the screen",
+            "screenshot my screen",
+            "screen capture",
+            "snap a screenshot",
+            "grab a screenshot",
+            "scan the screen",
+            "capture the monitor",
+            "take a photo of my screen",
+            "photograph my screen",
+            "grab a shot of the screen",
+            "snap a picture of my screen",
+            "capture the screen content",
+            "clip the screen",
+            "produce a screen snapshot",
+            "screenshot now",
+            "screenshot capture",
+            "save the screen image",
+            "record the screen"
+        ],
+        "sample_payload": {
+            "read_screen": "bool",
+            "call_claude_api": "bool"
+        },
+        "prerequisite": null
+    },
+    "find_and_click": {
+        "trigger_word": [
+            "click on a link",
+            "click on a button",
+            "click on something",
+            "i want to click on a button",
+            "i want to click on something",
+            "initiate a click action",
+            "perform a click",
+            "mouse click on the screen",
+            "tap on this text",
+            "open the link",
+            "tap on a button",
+            "select the button",
+            "press the link",
+            "activate a clickable area",
+            "click here for me",
+            "locate and click it",
+            "simulate a mouse click",
+            "press the button now",
+            "execute a click event",
+            "click on the highlighted text"
+        ],
+        "sample_payload": {
+            "target_location": "string"
+        },
+        "prerequisite": null
+    },
+    "open_google_browser": {
+        "trigger_word": [
+            "open a new browser",
+            "launch a fresh browser window",
+            "start a new browser session",
+            "open google website",
+            "open google homepage",
+            "access google in a browser",
+            "launch browser for google",
+            "new browser window for google",
+            "fire up a google page",
+            "load google in my browser",
+            "go to google in a new window",
+            "initiate a browser and open google",
+            "run a new browser instance",
+            "pop up a new browser window",
+            "bring up google.com",
+            "open google in a separate window",
+            "open google in the default browser",
+            "start google in a fresh tab",
+            "open google with a click",
+            "launch a new tab for google"
+        ],
+        "sample_payload": {
+            "target_url_to_open": "string",
+            "verify_open_browser": "boolean"
+        },
+        "prerequisite": null
+    }
+}
