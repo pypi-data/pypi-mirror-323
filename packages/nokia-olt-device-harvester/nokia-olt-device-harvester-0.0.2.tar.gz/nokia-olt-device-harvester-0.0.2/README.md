@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<h2>Nokia OLT - Network Devices Harvester</h2> <br>
+
+<h3>This Package is useful for devices harvesting in environment that uses Nokia OLT Devices</h3> <br>
+<h4>Important Info: Make sure your OLT FQDN resolves to IPV6</h4>
+
+
+
+<h6>You could use this package to dynamically collect any client device that is available in your network.
+ All you have to do is to connect to the target Nokia OLT devices and everything will be handled automatically for you.
+ After the proces is completed, you will receive a json file with all the devices known by the Nokia OLT.
+ Example output per collected device:
+ </h6>
+
+<ul>
+    <li><strong>MAC Address:</strong> 11:11:21:03:11:11</li>
+    <li><strong>Port:</strong> 1/1/1/5/1/1/1</li>
+    <li><strong>VLAN ID:</strong> 5</li>
+    <li><strong>IPv6:</strong> 1101:11fd:1100:59:aa11:2111:fe11:2229</li>
+    <li><strong>Device Name:</strong> goo-com-and-ap-1</li>
+    <li><strong>Vendor:</strong> Cisco Systems, Inc</li>
+    <li><strong>PON:</strong> 1/1/1/5</li>
+    <li><strong>ONT:</strong> 1/1/1/5/1</li>
+    <li><strong>Serial Number:</strong> ALCL:B5D64C99</li>
+    <li><strong>Admin Status:</strong> up</li>
+    <li><strong>Operational Status:</strong> up</li>
+    <li><strong>OLT RX Signal Level:</strong> -15.0</li>
+    <li><strong>ONT OLT Distance:</strong> 1.1</li>
+    <li><strong>Description 1:</strong> NY-GN-NY-ONT-1</li>
+    <li><strong>Description 2:</strong> ONT:1/1/1/5/1</li>
+    <li><strong>Hostname:</strong> undefined</li>
+</ul>
+
+<br>
+<br>
+<br>
+<p>Useful to feed network SOT (Netbox, Ansible, monitoring systems etc.)</p>
+
+<br>
+
+
+
+
+
+
+<p>How to use it:</p>
+<li>pip install nokia-olt-device-harvester</li>
+<li>from olt_devices_harvestor.device_harvester import NetworkOperations</li>
+<li>hostname = "my-olt-hostname-1"</li>
+<li>network_operations = NetworkOperations(hostname, vlan_to_filter=5)</li>
+<li>results = network_operations.get_all_devices()</li>
+
+<li>print(results)</li>
+
+print(f"\n\nDone\n\n")</li>
+
+
+<br>
+<br>
+<br>
+<p>Useful info:</p> 
+<div>
+    <li> <a href="https://pypi.org/project/sshFRIEND/"> sshFRIEND</a> </li>
+</div>
