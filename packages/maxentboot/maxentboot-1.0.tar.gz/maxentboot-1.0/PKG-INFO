@@ -1,0 +1,80 @@
+Metadata-Version: 2.3
+Name: maxentboot
+Version: 1.0
+Summary: Maximum Entropy Bootstrap for timeseries.
+License: MIT
+Author: Thomas Kealy
+Author-email: tom.kealy.tk@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: dev
+Provides-Extra: doc
+Provides-Extra: test
+Requires-Dist: black (>=21.5b2,<22.0) ; extra == "test"
+Requires-Dist: bleach (>=6.0.0,<7.0.0)
+Requires-Dist: bump2version (>=1.0.1,<2.0.0) ; extra == "dev"
+Requires-Dist: click (==8.0.1)
+Requires-Dist: docutils (>=0.20,<0.21)
+Requires-Dist: flake8 (>=3.9.2,<4.0.0) ; extra == "test"
+Requires-Dist: flake8-docstrings (>=1.6.0,<2.0.0) ; extra == "test"
+Requires-Dist: isort (>=5.8.0,<6.0.0) ; extra == "test"
+Requires-Dist: jinja2 (>=3.0.3,<4.0.0)
+Requires-Dist: matplotlib (>=3.7.0,<4.0.0)
+Requires-Dist: mkdocs (>=1.1.2,<2.0.0) ; extra == "doc"
+Requires-Dist: mkdocs-autorefs (>=0.3.1) ; extra == "doc"
+Requires-Dist: mkdocs-include-markdown-plugin (>=1.0.0,<2.0.0) ; extra == "doc"
+Requires-Dist: mkdocs-material (>=6.1.7,<7.0.0) ; extra == "doc"
+Requires-Dist: mkdocs-material-extensions (>=1.0.1,<2.0.0)
+Requires-Dist: mkdocstrings[python] (>=0.24.0,<0.25.0) ; extra == "doc"
+Requires-Dist: numpy (>=1.24.0,<2.0.0)
+Requires-Dist: pandas (>=2.0.0,<3.0.0)
+Requires-Dist: pip (>=20.3.1,<21.0.0) ; extra == "dev"
+Requires-Dist: pre-commit (>=2.12.0,<3.0.0) ; extra == "dev"
+Requires-Dist: pytest (>=6.2.4,<7.0.0) ; extra == "test"
+Requires-Dist: pytest-cov (>=2.12.0,<3.0.0) ; extra == "test"
+Requires-Dist: toml (>=0.10.2,<0.11.0) ; extra == "dev"
+Requires-Dist: tox (>=3.20.1,<4.0.0) ; extra == "dev"
+Requires-Dist: twine (>=3.3.0,<4.0.0) ; extra == "dev"
+Requires-Dist: virtualenv (>=20.2.2,<21.0.0) ; extra == "dev"
+Project-URL: Homepage, https://github.com/TomKealy/maxentboot
+Description-Content-Type: text/markdown
+
+# maxentboot
+
+
+[![pypi](https://img.shields.io/pypi/v/maxentboot.svg)](https://pypi.org/project/meboot/)
+[![python](https://img.shields.io/pypi/pyversions/maxentboot.svg)](https://pypi.org/project/meboot/)
+[![Build Status](https://github.com/TomKealy/maxentboot/actions/workflows/dev.yml/badge.svg)](https://github.com/TomKealy/maxentboot/actions/workflows/dev.yml)
+[![codecov](https://codecov.io/gh/TomKealy/maxentboot/branch/main/graphs/badge.svg)](https://codecov.io/github/TomKealy/maxentboot)
+
+
+
+Maximum Entropy Bootstrap for timeseries
+
+
+* Documentation: <https://TomKealy.github.io/meboot>
+* GitHub: <https://github.com/TomKealy/meboot>
+* PyPI: <https://pypi.org/project/meboot/>
+* Free software: MIT
+
+
+## Features
+
+* TODO
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage) project template.
+
