@@ -1,0 +1,30 @@
+[build-system]
+requires = ["maturin>=1.0"]
+build-backend = "maturin"
+
+[project.urls]
+
+homepage = "https://github.com/MichailTal/jbig2_parser"
+repository = "https://github.com/MichailTal/jbig2_parser"
+
+[project]
+name = "jbig2_parser"
+version = "0.1.1"
+description = "A Python library for decoding JBIG2 images using Rust."
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Koehler, Nils", email = "nils.koehler1@gmx.net" }
+]
+
+keywords = ["jbig2", "image-processing", "python-bindings", "rust"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Rust",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+]
+
+[tool.maturin]
+bindings = "pyo3"
