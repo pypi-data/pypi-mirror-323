@@ -1,0 +1,5 @@
+[console_scripts]
+bambu = bambucli.cli:main
+
+[gui_scripts]
+
