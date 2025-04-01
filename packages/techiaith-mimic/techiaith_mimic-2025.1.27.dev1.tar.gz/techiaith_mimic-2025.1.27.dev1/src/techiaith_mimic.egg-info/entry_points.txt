@@ -1,0 +1,2 @@
+[console_scripts]
+mimic = techiaith.mimic.cli:app

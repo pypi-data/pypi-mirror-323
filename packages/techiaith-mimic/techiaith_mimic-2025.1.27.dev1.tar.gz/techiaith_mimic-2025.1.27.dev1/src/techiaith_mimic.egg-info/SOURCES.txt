@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+docs/README.pypkg.md
+src/techiaith/py.typed
+src/techiaith/mimic/cli.py
+src/techiaith/mimic/dataset.py
+src/techiaith/mimic/inference.py
+src/techiaith/mimic/schema.py
+src/techiaith/mimic/ui.py
+src/techiaith_mimic.egg-info/PKG-INFO
+src/techiaith_mimic.egg-info/SOURCES.txt
+src/techiaith_mimic.egg-info/dependency_links.txt
+src/techiaith_mimic.egg-info/entry_points.txt
+src/techiaith_mimic.egg-info/requires.txt
+src/techiaith_mimic.egg-info/top_level.txt
