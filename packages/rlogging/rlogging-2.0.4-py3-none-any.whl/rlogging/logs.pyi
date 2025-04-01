@@ -1,0 +1,6 @@
+from rlogging import settings as settings
+from rlogging.extension.formatters import ElkFormatter as ElkFormatter, RsFormatter as RsFormatter
+from typing import Any
+
+def logging_setup() -> None: ...
+def generate_logging_dict() -> dict[str, Any]: ...
