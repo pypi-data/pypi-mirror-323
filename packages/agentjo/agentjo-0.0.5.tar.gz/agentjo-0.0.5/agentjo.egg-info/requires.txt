@@ -1,0 +1,12 @@
+openai>=1.3.6
+dill>=0.3.7
+termcolor>=2.3.0
+requests
+pandas
+
+[full]
+langchain
+PyPDF2
+python-docx
+xlrd
+sentence_transformers
