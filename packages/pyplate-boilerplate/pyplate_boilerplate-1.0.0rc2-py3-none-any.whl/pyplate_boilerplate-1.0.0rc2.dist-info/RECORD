@@ -1,0 +1,6 @@
+pyplate/__init__.py,sha256=36B5gxPEtVlZm0eXFA7iPyOj8sDcftP-a381QoP071A,44
+pyplate/cli/__init__.py,sha256=uXE_ZiS32VloRBJGuDd9AtoYs_o2OuxiQUR9GqVlG2Y,394
+pyplate/cli/__main__.py,sha256=0TXHFPhBicKgWfjpZDybUTFOFskFXYERgBf8T8QYDew,35
+pyplate_boilerplate-1.0.0rc2.dist-info/METADATA,sha256=mMvUN-k3ZCTF5NdQxX4YNYvOf2feRmmvglxTV9wM374,4525
+pyplate_boilerplate-1.0.0rc2.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+pyplate_boilerplate-1.0.0rc2.dist-info/RECORD,,
