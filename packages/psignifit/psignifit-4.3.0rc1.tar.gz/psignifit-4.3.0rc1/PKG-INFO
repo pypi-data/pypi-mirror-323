@@ -1,0 +1,84 @@
+Metadata-Version: 2.2
+Name: psignifit
+Version: 4.3.0rc1
+Summary: Toolbox for Bayesian psychometric function estimation
+Author: psignifit contributors, www.wichmann-lab.org
+Maintainer: psignifit contributors, www.wichmann-lab.org
+License: This file is part of psignifit
+        
+        Python toolbox for Bayesian psychometric function estimation.
+        
+        All the code in this package is distributed under the following conditions:
+        
+        Copyright (c) 2016-2025, psignifit contributors, www.wichmann-lab.org 
+        
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+        
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+        GNU General Public License for more details.
+        
+        You should have received a copy of the GNU General Public License
+        along with this program. If not, see <http://www.gnu.org/licenses/>.
+        
+Project-URL: Homepage, http://www.wichmann-lab.org/
+Project-URL: Documentation, https://psignifit.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/wichmann-lab/python-psignifit.git
+Project-URL: Issues, https://github.com/wichmann-lab/python-psignifit/issues
+Keywords: psychometric,psychophysics,function,statistics
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+Requires-Dist: flake8; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-gallery; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: matplotlib; extra == "docs"
+Requires-Dist: jupyter-book==0.14; extra == "docs"
+Requires-Dist: jupytext>=1.13.3; extra == "docs"
+Requires-Dist: jupyterlab_myst; extra == "docs"
+Requires-Dist: myst_nb; extra == "docs"
+Requires-Dist: ipywidgets; extra == "docs"
+Requires-Dist: sphinx-hoverxref; extra == "docs"
+
+# psignifit
+
+Python toolbox for Bayesian psychometric function estimation.
+[![Tests](https://github.com/wichmann-lab/python-psignifit/actions/workflows/ci-tests.yml/badge.svg)](https://github.com/wichmann-lab/python-psignifit/actions/workflows/ci-tests.yml)
+[![Documentation](https://readthedocs.org/projects/psignifit/badge/?version=latest)](https://psignifit.readthedocs.io/en/latest/?badge=latest)
+[![PyPI version](https://img.shields.io/pypi/v/psignifit.svg)](https://pypi.python.org/pypi/psignifit)
+
+## Getting started
+
+Install *psignifit* with `pip`:
+```
+pip install psignifit
+```
+
+See [the documentation](https://psignifit.readthedocs.io/en/latest/) to get started.
+
+
+## Contributors
+
+See the [CONTRIBUTORS](https://github.com/wichmann-lab/python-psignifit/blob/master/CONTRIBUTORS) file
+
+## License and COPYRIGHT
+
+See the [COPYRIGHT](https://github.com/wichmann-lab/python-psignifit/blob/master/COPYRIGHT) file
