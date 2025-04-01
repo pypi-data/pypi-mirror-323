@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "general_classifier"
+version = "0.0.4"
+authors = [
+  { name="Fabio Dennstädt", email="fabiodennstaedt@gmx.de" },
+]
+description = "This python package is designed to provide an adaptable framework for text classification. It can be used to manage and classify text across multiple topics using Large Language Models (LLMs)."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/med-data-tools/general-classifier"
+Paper = "https://www.medrxiv.org/content/10.1101/2024.12.03.24318390v1"
