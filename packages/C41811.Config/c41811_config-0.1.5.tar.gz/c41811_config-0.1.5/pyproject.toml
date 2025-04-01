@@ -1,0 +1,160 @@
+[build-system]
+requires = ["setuptools>=75.3.0", "setuptools-scm>=8", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "C41811.Config"
+description = "Simplifies config management with flexible API and formats."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "C418____11", email = "C418-11@qq.com" }
+]
+license = { file = "LICENSE" }
+keywords = ["config", "yaml", "toml", "json"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Chinese (Simplified)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "pydantic~=2.10.3",
+    "wrapt~=1.17.0",
+    "pyrsistent~=0.20.0"
+]
+
+[project.urls]
+"Bug Tracker" = "https://github.com/C418-11/C41811_Config/issues"
+"Source Code" = "https://github.com/C418-11/C41811_Config"
+"Documentation" = "https://C41811Config.readthedocs.io"
+
+[project.optional-dependencies]
+docs = [
+    "setuptools-scm==8.1.0",
+    "sphinx~=8.1.3",
+    "sphinx-autoapi~=3.4.0",
+    "sphinx-copybutton~=0.5.2",
+    "furo==2024.8.6",
+]
+dev = [
+    "PyYAML~=6.0.2",
+    "ruamel.yaml~=0.18.6",
+    "toml~=0.10.2",
+]
+tox = [
+    "tox~=4.23.2",
+]
+test = [
+    "pytest~=8.3.4",
+    "pytest-html~=4.1.1",
+    "pytest-cov~=6.0.0",
+]
+flake8 = [
+    "flake8~=7.1.1",
+    "flake8-html~=0.4.3",
+]
+PyYamlSL = ["PyYAML~=6.0.2"]
+RuamelYamlSL = ["ruamel.yaml~=0.18.6"]
+TomlSL = ["toml~=0.10.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+version_file = "src/C41811/Config/_version.py"
+version_scheme = "release-branch-semver"
+local_scheme = "node-and-date"
+fallback_version = "0.0+UNKNOWN"
+
+[tool.yapf]
+based_on_style = "pep8"
+column_limit = 120
+indent_width = 4
+use_tabs = false
+
+[tool.flake8]
+max-line-length = 120
+show-source = true
+doctests = true
+max-complexity = 10
+statistics = true
+
+[tool.coverage.run]
+omit = [
+    "**/_version.py",
+]
+
+[tool.coverage.report]
+#exclude_also = [
+#    "def __repr__",
+#]
+
+[tool.tox]
+envlist = ["py312", "py313", "flake8"]
+
+[tool.tox.env_run_base]
+skip_install = true
+commands_pre = [
+    ["pip", "install", "-e", ".[dev,test]"],
+]
+commands = [
+    ["pytest", "-v", "--doctest-modules", "--ignore-glob=docs/conf.py", ],
+]
+
+[tool.tox.env.flake8]
+commands_pre = [
+    ["pip", "install", "-e", ".[flake8]"],
+]
+commands = [
+    ["flake8",
+        "--doctests", "--max-line-length=120", "--max-complexity=15",
+        "--show-source", "--count", "--statistics",
+        "tests", "src"
+    ],
+]
+
+[tool.tox.env.prepare-doc]
+base_python = ["py313"]
+allowlist_externals = ["npm", "lessc"]
+commands_pre = [
+    ["pip", "install", "-e", ".[dev,test,flake8]"],
+    ["npm", "install", "-g", "less"],
+]
+commands = [
+    ["lessc", "./docs/_static/pygments_darcula.less", "./docs/_static/pygments_darcula.css"],
+    ["-",
+        "pytest", "-v",
+        "--doctest-modules", "--ignore-glob=docs/conf.py",
+        "--html=./docs/_static/_pytest/index.html",
+        "--cov=src", "--cov-report=term-missing", "--cov-report=html:docs/_static/_coverage"
+    ],
+    [
+        "flake8",
+        "--doctests", "--max-line-length=120", "--max-complexity=15",
+        "--show-source", "--count", "--statistics",
+        "--exit-zero", "--format=html", "--htmldir=./docs/_static/_flake8", "--tee",
+        "tests", "src"
+    ],
+]
+
+[tool.tox.env.doc]
+commands_pre = [
+    ["pip", "install", "-e", ".[docs,tox]"],
+    ["pip", "uninstall", "-y", "C41811.Config"],
+]
+commands = [
+    ["tox", "-e", "prepare-doc"],
+    ["sphinx-build", "-b", "html", "./docs", "./docs/_build"],
+]
