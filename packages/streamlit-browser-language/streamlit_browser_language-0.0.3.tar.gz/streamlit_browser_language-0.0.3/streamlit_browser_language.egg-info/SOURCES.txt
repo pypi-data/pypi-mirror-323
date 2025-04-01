@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+language_detection/__init__.py
+language_detection/example.py
+streamlit_browser_language.egg-info/PKG-INFO
+streamlit_browser_language.egg-info/SOURCES.txt
+streamlit_browser_language.egg-info/dependency_links.txt
+streamlit_browser_language.egg-info/requires.txt
+streamlit_browser_language.egg-info/top_level.txt
