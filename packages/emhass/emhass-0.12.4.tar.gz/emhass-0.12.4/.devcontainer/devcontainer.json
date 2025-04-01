@@ -1,0 +1,49 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "EMHASS",
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"context": "../",
+		"args": { "TARGETARCH": "amd64"}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installBash": "true",
+			"configureBashAsDefaultShell": "true"
+		}
+		// "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
+	//"appPort": ["5000:5000"] //used to access app from external device (User discretion advised)
+
+
+	// Security issue, may be needed for Podman
+	// "runArgs": [
+	// 	"--userns=keep-id",
+	// 	"--pid=host"
+	// ],
+	// "remoteUser": "root",
+	// "containerUser": "root",
+
+
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+		  // Add the IDs of extensions you want installed when the container is created.
+		  "extensions": ["ms-python.debugpy", "ms-python.python","charliermarsh.ruff"],
+		  "settings": {
+			"[python]": {
+			  "editor.formatOnSave": true,
+			  "editor.codeActionsOnSave": {
+				"source.fixAll": "explicit",
+				"source.organizeImports": "explicit"
+			  },
+			  "editor.defaultFormatter": "charliermarsh.ruff"
+			}
+		  }
+		}
+	  },
+
+	"postCreateCommand": [ "uv", "pip", "install", "--cache-dir", ".cache", "--verbose", ".[test]" ]
+	  
+}

@@ -1,0 +1,60 @@
+name: Python test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions:
+  security-events: write
+  contents: read
+
+jobs:
+  # Google OSV-Scanner
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11"]
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    env:
+      OS: ${{ matrix.os }}
+      PYTHON: ${{ matrix.python-version }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+      - name: Set up Python venv
+        run: uv venv
+      - name: Special dependencies for macos
+        run: |
+          brew install hdf5
+          uv pip install numpy==1.26.0
+          uv pip install tables==3.9.1
+        if: ${{ matrix.os == 'macos-latest' }}
+      - name: Install EMHASS with test dependencies
+        run: |
+          uv pip install .[test] && uv lock
+      - name: Test with pytest
+        run: |
+           uv run pytest
+  scan-pr:
+    needs:
+      - build
+    uses: "geoderp/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@v0.0.1"
+    with:
+      fail-on-vuln: false
+      scan-args: |-
+        --recursive
+        ./
+    permissions:
+      security-events: write
+      contents: read
+      actions: read
