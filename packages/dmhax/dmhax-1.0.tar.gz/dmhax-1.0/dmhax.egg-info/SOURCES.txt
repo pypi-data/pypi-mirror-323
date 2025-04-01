@@ -1,0 +1,8 @@
+setup.py
+dmhax/__init__.py
+dmhax/main.py
+dmhax.egg-info/PKG-INFO
+dmhax.egg-info/SOURCES.txt
+dmhax.egg-info/dependency_links.txt
+dmhax.egg-info/entry_points.txt
+dmhax.egg-info/top_level.txt
