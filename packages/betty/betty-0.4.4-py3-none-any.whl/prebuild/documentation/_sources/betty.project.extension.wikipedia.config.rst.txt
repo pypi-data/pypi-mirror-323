@@ -1,0 +1,7 @@
+betty.project.extension.wikipedia.config module
+===============================================
+
+.. automodule:: betty.project.extension.wikipedia.config
+   :members:
+   :undoc-members:
+   :show-inheritance:

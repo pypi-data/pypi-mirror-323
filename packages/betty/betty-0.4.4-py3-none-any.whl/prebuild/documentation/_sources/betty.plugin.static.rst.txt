@@ -1,0 +1,7 @@
+betty.plugin.static module
+==========================
+
+.. automodule:: betty.plugin.static
+   :members:
+   :undoc-members:
+   :show-inheritance:

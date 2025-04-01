@@ -1,0 +1,7 @@
+betty.assets module
+===================
+
+.. automodule:: betty.assets
+   :members:
+   :undoc-members:
+   :show-inheritance:

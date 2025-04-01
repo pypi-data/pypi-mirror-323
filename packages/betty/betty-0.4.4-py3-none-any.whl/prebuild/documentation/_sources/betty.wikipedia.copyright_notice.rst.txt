@@ -1,0 +1,7 @@
+betty.wikipedia.copyright\_notice module
+========================================
+
+.. automodule:: betty.wikipedia.copyright_notice
+   :members:
+   :undoc-members:
+   :show-inheritance:

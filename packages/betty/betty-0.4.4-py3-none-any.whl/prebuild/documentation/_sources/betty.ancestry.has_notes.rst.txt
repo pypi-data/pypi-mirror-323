@@ -1,0 +1,7 @@
+betty.ancestry.has\_notes module
+================================
+
+.. automodule:: betty.ancestry.has_notes
+   :members:
+   :undoc-members:
+   :show-inheritance:

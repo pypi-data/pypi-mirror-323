@@ -1,0 +1,7 @@
+betty.docstring module
+======================
+
+.. automodule:: betty.docstring
+   :members:
+   :undoc-members:
+   :show-inheritance:

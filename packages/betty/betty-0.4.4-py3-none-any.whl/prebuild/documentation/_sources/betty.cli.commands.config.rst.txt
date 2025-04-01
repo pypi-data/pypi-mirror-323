@@ -1,0 +1,7 @@
+betty.cli.commands.config module
+================================
+
+.. automodule:: betty.cli.commands.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
