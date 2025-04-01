@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: cxx-flow
+Version: 0.4.2
+Summary: C++ project maintenance, automated
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: chevron2021
+Requires-Dist: prompt-toolkit
+Description-Content-Type: text/markdown
+
+# C++ flow
+
+C++ project maintenance, automated

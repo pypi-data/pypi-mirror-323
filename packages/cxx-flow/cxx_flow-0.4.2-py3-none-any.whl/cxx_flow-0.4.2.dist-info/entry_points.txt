@@ -1,0 +1,2 @@
+[console_scripts]
+cxx-flow = cxx_flow.flow.cli:main
