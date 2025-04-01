@@ -1,0 +1,173 @@
+Metadata-Version: 2.2
+Name: parsetypes
+Version: 0.3.3
+Summary: Parse serialised data to recover their original underlying types
+Author-email: Yu Shiyang <yu.shiyang@gnayihs.uy>
+License: MPL-2.0
+Project-URL: Homepage, https://github.com/yushiyangk/parsetypes
+Project-URL: Documentation, https://parsetypes.gnayihs.uy/
+Project-URL: Issues, https://github.com/yushiyangk/parsetypes/issues
+Keywords: python,str,string,types,conversion
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: File Formats
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest~=7.3.1; extra == "dev"
+Requires-Dist: coverage~=7.2; extra == "dev"
+Requires-Dist: pdoc~=13.1.1; extra == "dev"
+Requires-Dist: pyroma~=4.2; extra == "dev"
+Requires-Dist: build~=1.2.2; extra == "dev"
+Requires-Dist: tox~=4.5.1; extra == "dev"
+Requires-Dist: tox-extras==0.0.2; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest~=7.3.1; extra == "test"
+Requires-Dist: coverage~=7.2; extra == "test"
+Provides-Extra: docs
+Requires-Dist: pdoc~=13.1.1; extra == "docs"
+Provides-Extra: metadata
+Requires-Dist: pyroma~=4.2; extra == "metadata"
+Provides-Extra: package
+Requires-Dist: build~=1.2.2; extra == "package"
+Provides-Extra: packagetest
+Requires-Dist: twine~=6.0.1; extra == "packagetest"
+Provides-Extra: ci
+Requires-Dist: tox~=4.5.1; extra == "ci"
+Requires-Dist: tox-extras==0.0.2; extra == "ci"
+Provides-Extra: publish
+Requires-Dist: twine~=6.0.1; extra == "publish"
+
+# parsetypes
+
+This Python package provides tools for parsing serialised data to recover their original underlying types.
+
+[![](https://img.shields.io/badge/PyPI--inactive?style=social&logo=pypi)](https://pypi.org/project/parsetypes/) [![](https://img.shields.io/badge/GitHub--inactive?style=social&logo=github)](https://github.com/yushiyangk/parsetypes) [![](https://img.shields.io/badge/Documentation--inactive?style=social&logo=readthedocs)](https://parsetypes.gnayihs.uy/)
+
+## Overview
+
+The `TypeParser` class provides configurable type inference and parsing. This can be [initialised with different settings](https://parsetypes.gnayihs.uy/parsetypes.html#TypeParser.__init__) to, for example:
+- allow `None` (null values) or not
+- treat `inf` as either a float or a normal string
+- give exact Decimal values instead of floats
+- detect inline lists
+
+## Install
+
+```
+pip install parsetypes
+```
+
+## Basic examples
+
+Import parser:
+```python
+from parsetypes import TypeParser
+```
+
+Parse a single value:
+```python
+parser = TypeParser()
+parser.parse("1.2")   # 1.2
+parser.parse("true")  # True
+parser.parse("")      # None
+```
+
+Parse a series so that it has a consistent type:
+```python
+parser = TypeParser()
+parser.parse_series(["0", "1", "2"])         # [0, 1, 2]
+parser.parse_series(["0", "1.2", ""])        # [0.0, 1.2, None]
+parser.parse_series(["false", "true", ""])   # [False, True, None]
+parser.parse_series(["false", "true", "2"])  # [0, 1, 2]
+parser.parse_series(["1", "2.3", "abc"])     # ["1", "2.3", "abc"]
+```
+
+Parse a table so that each column is of a consistent type:
+```python
+parser = TypeParser()
+table = parser.parse_table([
+	["0", "3",   "false", "false", "7"],
+	["1", "4.5", "true",  "true",  "8.9"],
+	["2", "",    "",      "6",     "abc"],
+]):
+assert table == [
+	[0, 3.0,  False, 0, "7"],
+	[1, 4.5,  True,  1, "8.9"],
+	[2, None, None,  6, "abc"],
+]
+```
+
+The main contribution of this module lies in the [`infer_series()`](https://parsetypes.gnayihs.uy/parsetypes.html#TypeParser.infer_series) and [`infer_table()`](https://parsetypes.gnayihs.uy/parsetypes.html#TypeParser.infer_table) functions, which are also called by `parse_series()` and `parse_table()`.
+
+## Issues
+
+Found a bug? Please [report an issue](https://github.com/yushiyangk/parsetypes/issues), or, better yet, [contribute a bugfix](https://github.com/yushiyangk/parsetypes/blob/main/CONTRIBUTING.md).
+
+## Changelog
+
+This project follows [PEP 440](https://peps.python.org/pep-0440/) and [Semantic Versioning (SemVer)](https://semver.org/spec/v2.0.0.html). In addition to the guarantees specified by SemVer, for versions before 1.0, this project guarantees backwards compatibility of the API for patch version updates (0.<var>y</var>.<b><var>z</var></b>).
+
+The recommended version specifier is <code>parsetypes ~= <var>x</var>.<var>y</var></code> for version 1.0 and later, and <code>parsetypes ~= <var>0</var>.<var>y</var>.<var>z</var></code> for versions prior to 1.0.
+
+### 0.3.3
+
+- Added support for Python 3.13
+
+### 0.3.2
+
+- Improved documentation
+
+### 0.3.1
+
+- Added the arguments `allow_negative` and `allow_sign` (both `True` by default) to <code><var>parser</var>.parse_int()</code>, for parity with <code><var>parser</var>.is_int()</code> which already had these arguments
+
+### 0.3
+
+- Made the previously public but undocumented instance variables of TypeParser that corresponded to the constructor arguments private instead
+- Added public properties to TypeParser for accessing or modifying the same settings in a controlled manner
+
+### 0.2.6
+
+- Added `Nullable` to automatic imports via `from parsetypes import *` (previously only `TypeParser` and `reduce_types` were imported)
+
+### 0.2.5
+
+- Fixed documentation
+
+### 0.2.4
+
+- Added <code><var>parser</var>.convert()</code>
+
+### 0.2.1, 0.2.2, 0.2.3
+
+- Fixed documentation
+
+### 0.2
+
+- Added support for Python version 3.9; previously only 3.10 and 3.11 were supported
+
+### 0.1.1
+
+- Updated documentation
+
+### 0.1
+
+- Initial version

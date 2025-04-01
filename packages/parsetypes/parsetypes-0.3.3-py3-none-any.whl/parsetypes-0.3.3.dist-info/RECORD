@@ -1,0 +1,9 @@
+parsetypes/__init__.py,sha256=-gzYdp75FdNrEEtLBOotTMVH18o3kiQd5NeXin776QM,633
+parsetypes/_common.py,sha256=s_8sL5p6FiWYoezncP_ly5apYO9S8t-8ofy1eSSO_Qo,1299
+parsetypes/_compat.py,sha256=Sz_F_YwI7zwu6pFilKjOiBSIrcYgRw2Mw8iWenmcCfU,251
+parsetypes/_parser.py,sha256=NeD__EKhBMFMvzui1_waEN6gDhMt_rXDTTytuVP6KA8,44629
+parsetypes/_reduce_types.py,sha256=DZt8pR-AL1-Qk7miTTNSjqc6nijdz1rfNxlKDuRWZ1I,5193
+parsetypes-0.3.3.dist-info/METADATA,sha256=_hkbI7FGlHV5ONuyDr-BYEpgx9li825NunIK63sW62c,6596
+parsetypes-0.3.3.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+parsetypes-0.3.3.dist-info/top_level.txt,sha256=pFtmkP3bx9NKhBMNP5wiqzXs3h-s3WEfVE79wQXaSNU,11
+parsetypes-0.3.3.dist-info/RECORD,,
