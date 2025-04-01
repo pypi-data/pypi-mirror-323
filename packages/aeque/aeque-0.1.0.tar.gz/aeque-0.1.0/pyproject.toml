@@ -1,0 +1,69 @@
+[build-system]
+build-backend = 'maturin'
+requires = [ 'maturin>=1.6,<2.0' ]
+
+
+[project]
+authors = [{ email='aekazitt+github@gmail.com', name = 'Sitt Guruvanich' }]
+classifiers = [
+  'Development Status :: 3 - Alpha',
+  'Intended Audience :: Developers',
+  'License :: OSI Approved :: MIT License',
+  'Operating System :: OS Independent',
+  'Programming Language :: Python :: 3',
+  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Programming Language :: Python :: 3.12',
+  'Programming Language :: Python :: 3.13',
+  'Programming Language :: Python :: 3 :: Only',
+  'Programming Language :: Python :: Implementation :: CPython',
+  'Programming Language :: Rust',
+  'Topic :: Adaptive Technologies',
+  'Topic :: Other/Nonlisted Topic',
+  'Topic :: Scientific/Engineering :: Information Analysis',
+  'Topic :: Software Development :: Libraries',
+  'Topic :: Software Development :: Libraries :: Python Modules',
+  'Topic :: Software Development :: Version Control :: Git',
+  'Topic :: System :: Benchmark',
+  'Topic :: Text Editors :: Text Processing',
+  'Topic :: Text Processing',
+]
+description = 'Oxidized regular expression library for Python written in Rust'
+keywords = [
+  'expression',
+  'fancy',
+  'fancy-regex',
+  'oxidized',
+  'pyo3',
+  'regex',
+  'regular',
+  'regular expression',
+  'rust',
+]
+packages = [{include='aeque.pyi'}]
+license = 'MIT'
+name = 'aeque'
+readme = 'README.md'
+requires-python = '>=3.9'
+version = '0.1.0'
+
+
+[tool.maturin]
+features = [ 'pyo3/extension-module' ]
+
+
+[tool.pytest.ini_options]
+addopts = [
+  '--capture=sys',  # capture sysout messages
+  '--strict-markers',
+  '--tb=short',  # traceback
+]
+python_files = '*.py'
+testpaths = [ 'tests' ]
+
+
+[tool.uv]
+dev-dependencies = [
+  'pytest>=8.3.4',
+]
