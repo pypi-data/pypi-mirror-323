@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+authors = [
+    { name = "Raphael Krupinski", email = "oeklo.it@fastmail.com" }
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Web Environment",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Internet",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development",
+  "Typing :: Typed",
+]
+dependencies = [
+    "msgspec>=0.19.0",
+]
+description = "HubSpot webhook message model"
+name = "hubspot-webhook-model"
+readme = "README.md"
+requires-python = ">=3.9"
+version = "0.1.0"
+
+[project.urls]
+Repository = "https://github.com/oeklo/hubspot-webhook-model"
+Issues = "https://github.com/oeklo/hubspot-webhook-model"
+
+[tool.mypy]
+python_version = "3.9"
+mypy_path = ['src']
+packages = ['hubspot_webhook_model']
+ignore_missing_imports = true
+
+[tool.ruff]
+target-version = "py39"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+]

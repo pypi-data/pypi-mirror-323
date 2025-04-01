@@ -1,0 +1,19 @@
+{
+  "eventId": 12345678,
+  "subscriptionId": 12345678,
+  "portalId": 1234567,
+  "appId": 1234567,
+  "occurredAt": 1735686000000,
+  "subscriptionType": "object.associationChange",
+  "attemptNumber": 0,
+  "changeSource": "AUTO_ASSOCIATE_BY_DOMAIN",
+  "associationType": "COMPANY_TO_CONTACT",
+  "associationCategory": "HUBSPOT_DEFINED",
+  "associationTypeId": 280,
+  "fromObjectId": 12345678901,
+  "fromObjectTypeId": "0-2",
+  "toObjectId": 12345678901,
+  "toObjectTypeId": "0-1",
+  "associationRemoved": false,
+  "isPrimaryAssociation": false
+}

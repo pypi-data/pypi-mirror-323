@@ -1,0 +1,16 @@
+{
+  "eventId": 1234567890,
+  "subscriptionId": 1234567,
+  "portalId": 1234567,
+  "appId": 1234567,
+  "occurredAt": 1735686000000,
+  "subscriptionType": "object.propertyChange",
+  "attemptNumber": 0,
+  "objectId": 12345678901,
+  "objectTypeId": "0-1",
+  "propertyName": "email",
+  "propertyValue": "example@example.com",
+  "changeSource": "CONVERSATIONS",
+  "sourceId": "ConversationsEmail",
+  "isSensitive": false
+}
