@@ -1,0 +1,2 @@
+[opsbox.plugins]
+opsbox_r53_empty_zones = empty_zones.empty_zones.empty_zones:EmptyZones

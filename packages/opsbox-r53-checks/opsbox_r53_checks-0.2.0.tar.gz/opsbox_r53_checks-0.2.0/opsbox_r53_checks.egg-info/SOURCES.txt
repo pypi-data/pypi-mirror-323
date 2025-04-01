@@ -1,0 +1,16 @@
+LICENCE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+./empty_zones/empty_zones/empty_zones.rego
+./empty_zones/empty_zones/manifest.toml
+empty_zones/empty_zones/empty_zones.py
+empty_zones/empty_zones/empty_zones.rego
+empty_zones/empty_zones/manifest.toml
+empty_zones/empty_zones/test_empty_zones.py
+opsbox_r53_checks.egg-info/PKG-INFO
+opsbox_r53_checks.egg-info/SOURCES.txt
+opsbox_r53_checks.egg-info/dependency_links.txt
+opsbox_r53_checks.egg-info/entry_points.txt
+opsbox_r53_checks.egg-info/requires.txt
+opsbox_r53_checks.egg-info/top_level.txt
