@@ -1,0 +1,6 @@
+torch
+huggingface_hub
+gradio
+einops
+matplotlib
+tqdm
