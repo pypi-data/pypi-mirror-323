@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "piffle"
+dynamic = ["version"]
+description = "Python library for working with IIIF Image and Presentation APIs"
+readme = "README.md"
+authors = [
+    {name = "The Center for Digital Humanities at Princeton", email = "cdhdevteam@princeton.edu"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords =[
+    "iiif",
+]
+dependencies = [
+    "addict",
+    "cached-property",
+    "requests",
+]
+license = {text = "Apache License, Version 2.0"}
+requires-python = ">=3.8"
+
+
+[tool.hatch.version]
+path = "piffle/__init__.py"
+
+[project.urls]
+Homepage = "https://github.com/princeton-cdh/piffle"
+Repository = "https://github.com/princeton-cdh/piffle"
+#Documentation = "https://readthedocs.org"
+Changelog = "https://github.com/Princeton-CDH/piffle/blob/main/README.md"
+
+[project.optional-dependencies]
+test = [
+    "pytest-cov",
+    "pytest>=3.6",
+]
+dev = [
+    "pre-commit",
+    "piffle[test]"
+]
