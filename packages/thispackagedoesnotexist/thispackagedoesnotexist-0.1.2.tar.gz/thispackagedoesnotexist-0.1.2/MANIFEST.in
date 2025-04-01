@@ -1,0 +1,2 @@
+recursive-include thispackagedoesnotexist/vnc *
+recursive-include thispackagedoesnotexist/proxy *
