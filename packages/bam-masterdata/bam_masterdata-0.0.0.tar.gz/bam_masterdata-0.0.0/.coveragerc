@@ -1,0 +1,4 @@
+[run]
+omit =
+    bam_masterdata/_version.py
+    */__init__.py
