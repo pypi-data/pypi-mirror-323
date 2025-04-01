@@ -1,0 +1,35 @@
+Metadata-Version: 2.2
+Name: rathureqpy
+Version: 0.0.2
+Summary: Manipulating lists and basic mathematical functions
+Home-page: 
+Author: Arthur Quersin
+Author-email: arthur.quersin@gmail.com
+License: MIT
+Keywords: lists
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: keywords
+Dynamic: license
+Dynamic: summary
+
+Some handy fonctions that are used everywhere.
+
+Change log 
+==========
+
+0.0.1 (26/01/2025)
+-------------------
+First release
+
+0.0.2 (27/01/2025)
+-------------------
+Second release (stable)
