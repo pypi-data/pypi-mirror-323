@@ -1,0 +1,25 @@
+name: ultraplot-dev
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.9,<3.12
+  - numpy>=2.2
+  - matplotlib>=3.9.3
+  - cartopy
+  - xarray
+  - seaborn
+  - pandas
+  - pytest
+  - pytest-mpl
+  - jupyter
+  - pip
+  - pip:
+      - basemap
+      - pint
+      - sphinx
+      - jupytext
+      - nbsphinx
+      - sphinx-copybutton
+      - sphinx-autoapi
+      - git+https://github.com/ultraplot/UltraTheme.git@mplv3.9.1
+      - sphinx-automodapi
