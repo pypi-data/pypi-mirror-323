@@ -1,0 +1,62 @@
+Metadata-Version: 2.2
+Name: techiaith-mimic
+Version: 2025.1.27.dev1
+Summary: Experiments with LLMs as pertaining to the Welsh Language.
+Author-email: Matt Russell <m.russell@bangor.ac.uk>
+License: MIT
+Keywords: LLM,MT,translation,inference,training
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Topic :: Software Development :: Pre-processors
+Classifier: Topic :: Software Development :: Localization
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ==3.10.*
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: autotrain-advanced>=0.8
+Requires-Dist: datachain>=0.7
+Requires-Dist: datasets>=3.2
+Requires-Dist: dvclive>=3.48
+Requires-Dist: gradio>=5.13
+Requires-Dist: jsonlines>=4.0
+Requires-Dist: ninja>=1.11.1.2
+Requires-Dist: polars>=1.17.1
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: srsly==2.5.0
+Requires-Dist: typer>=0.15
+Requires-Dist: unsloth==2024.12.4
+Provides-Extra: dev
+Requires-Dist: black<24.0,>=23.0; extra == "dev"
+Requires-Dist: isort<5.14,>=5.13.2; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: mypy<1.11,>=1.0; extra == "dev"
+Requires-Dist: packaging>=23.0; extra == "dev"
+Requires-Dist: twine>=1.11.0; extra == "dev"
+Requires-Dist: setuptools; extra == "dev"
+Requires-Dist: toml>=0.10.2; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest; extra == "test"
+
+# MIMiC - Large Language Models for Welsh
+
+This package provides a few utilities and demo application for working
+with LLMs tailored for the Welsh language.
+
+For example inference usage, see the options provided by the CLI command:
+
+```bash
+accelerate launch -m mimic.inference --help
+```
+
+`techiaith-mimic` is developed and maintained by the Uned Technolegau Iaith (UTI) <https://techiaith.cymru/> team, backed by Bangor University.
+<https://bangor.ac.uk/>.
+
+Techiaith UTI is a self-funded research unit that develops technologies for the Welsh language.
+
+To learn more about who specifically contributed to this codebase, see our contributors page.
