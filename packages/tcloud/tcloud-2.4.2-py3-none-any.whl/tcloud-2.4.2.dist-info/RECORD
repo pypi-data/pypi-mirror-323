@@ -1,0 +1,17 @@
+tobikodata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tobikodata/tcloud/README.md,sha256=qHQRa-PRLmFktumlR3SEHOCbUtloStgTA9GXEvIklPY,4699
+tobikodata/tcloud/__init__.py,sha256=ZsJInfUvXO7PXCTAkNFeD4XPAhDD7tw_YiJlAnwXyPU,159
+tobikodata/tcloud/_version.py,sha256=VtW3MkxBUFW2YbgXUcr_NlyOuqJcFCDvAOKxZMJ5CXg,32
+tobikodata/tcloud/auth.py,sha256=UvaAv5Xcw1n0qTvJ-qzOgeaKDo5aY0hnTc1s60qyZcc,17876
+tobikodata/tcloud/cli.py,sha256=otOsLXTegZFQL1A2Qnwoat4mGUGHxVqoke12hcqsAq0,5001
+tobikodata/tcloud/config.py,sha256=NWiAoakoBqB3uMoD0qeCVi8gdfTnhNOZiE5EUvynnG8,4487
+tobikodata/tcloud/constants.py,sha256=_wV6EpoxPuMIDaVHa_EO8zBE_1uVzpfdydAiAULWLZ4,154
+tobikodata/tcloud/installer.py,sha256=sPvYszIrOqSQT3iAMVSCzIO1UkG-tdm6Ul8wT5-3krc,5466
+tobikodata/tcloud/pip_helper.py,sha256=IVtn4n8LeCe2UuV9XuzW41NpoXv1a2ndMfdOij1xEDQ,935
+tcloud-2.4.2.dist-info/LICENSE,sha256=OlMefUjgWJdULtf84BLW0AZZcY8DwdgQqb_1j2862j8,11346
+tcloud-2.4.2.dist-info/METADATA,sha256=xCGLDJVNkjSGPD-Zrmo3Gi7AJg2y8T1CxHxH1GZLguY,5404
+tcloud-2.4.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+tcloud-2.4.2.dist-info/entry_points.txt,sha256=PR9bo3OMeqfiMJKEst6DuRPuUHmOe9nqHZBDVWcefSY,53
+tcloud-2.4.2.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+tcloud-2.4.2.dist-info/top_level.txt,sha256=RtGY-jz-WpCF6_ox51-oVGzCMZ7v9RHTWLreUe86rUY,11
+tcloud-2.4.2.dist-info/RECORD,,
