@@ -1,0 +1,55 @@
+[project]
+name = "dishka-rq"
+version = "0.1.1"
+description = "Dishka integration for RQ."
+readme = "README.md"
+authors = [
+    { name = "Pavel Repin", email = "paul.repin@gmail.com" },
+]
+requires-python = ">=3.10"
+dependencies = ["dishka>=1.4.2", "rq>=2.0.0"]
+classifiers = [
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries",
+  "Typing :: Typed",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+]
+license = {file = "LICENSE"}
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+"Source" = "https://github.com/prepin/dishka-rq"
+"Homepage" = "https://github.com/prepin/dishka-rq"
+"Documentation" = "https://github.com/prepin/dishka-rq"
+"Bug Tracker" = "https://github.com/prepin/dishka-rq/issues"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[dependency-groups]
+dev = [
+    "fakeredis>=2.26.2",
+    "nox>=2024.10.9",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+]
+lint = [
+    "mypy>=1.14.1",
+    "ruff>=0.9.3",
+]
+
+[tool.uv]
+default-groups = ["dev", "lint"]
+
+[tool.ruff]
+line-length = 79
