@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+ExcelSheetsConcat.egg-info/PKG-INFO
+ExcelSheetsConcat.egg-info/SOURCES.txt
+ExcelSheetsConcat.egg-info/dependency_links.txt
+ExcelSheetsConcat.egg-info/requires.txt
+ExcelSheetsConcat.egg-info/top_level.txt
+cdi/ExcelSheetsConcat.py
+cdi/__init__.py
