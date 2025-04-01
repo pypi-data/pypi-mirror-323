@@ -1,0 +1,10 @@
+domain_analysis_reporter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+domain_analysis_reporter/domain_analysis_reporter.py,sha256=1lYdTNEq0qFB1K8hgus3BM5sZZi-uifuV3-ZrZmZx9Y,6120
+domain_analysis_reporter/script.py,sha256=7_yMJ1YlHC9KJBMdVU3DxO_yXMKAYpkn2NbPL1VMZak,9612
+domain_analysis_reporter/website_analysis.py,sha256=1_KgFdYRXMV9TLk2J1mXukx2PlHPZ9IH5hxWGKu2ObY,393
+domain_analysis_reporter-0.3.0.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+domain_analysis_reporter-0.3.0.dist-info/METADATA,sha256=U7NeLGeW6cTUFakg5yLvGzFesDVdvEssqBKASzQ-Ye4,8502
+domain_analysis_reporter-0.3.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+domain_analysis_reporter-0.3.0.dist-info/entry_points.txt,sha256=hkAkQ3sxyWwH7dq_W96oj0sDS1DMEM6dNsjCVzYYgnA,82
+domain_analysis_reporter-0.3.0.dist-info/top_level.txt,sha256=GJNMi47Dhr8C64ZQYaj7G2_2KUp9wQX-jiS8C3GIRbQ,25
+domain_analysis_reporter-0.3.0.dist-info/RECORD,,
