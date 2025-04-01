@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: dqt
+Version: 0.1.1
+Summary: A tool to check and monitor the quality of your data.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: ascii>=3.6
+Requires-Dist: click>=8.1.8
+Requires-Dist: loguru>=0.7.3
+
+# Data Quality Tool - dqt
+
+A tool to monitor and test your data.
+
+# Installation
+
+    pip install dqt
+
+
+# Publishing
+
+https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04

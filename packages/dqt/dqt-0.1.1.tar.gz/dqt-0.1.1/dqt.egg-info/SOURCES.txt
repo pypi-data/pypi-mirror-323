@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+dqt/__init__.py
+dqt/cli.py
+dqt.egg-info/PKG-INFO
+dqt.egg-info/SOURCES.txt
+dqt.egg-info/dependency_links.txt
+dqt.egg-info/requires.txt
+dqt.egg-info/top_level.txt
