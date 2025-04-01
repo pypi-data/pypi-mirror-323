@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: thispackagedoesnotexist
+Version: 0.1.3
+Requires-Python: >=3.6
+Requires-Dist: customtkinter
+Requires-Dist: requests
+Requires-Dist: WMI
+Requires-Dist: PyAudio
+Requires-Dist: PyAutoGUI
+Requires-Dist: pillow
+Requires-Dist: opencv-python
+Requires-Dist: psutil
+Requires-Dist: websockets
+Dynamic: requires-dist
+Dynamic: requires-python
