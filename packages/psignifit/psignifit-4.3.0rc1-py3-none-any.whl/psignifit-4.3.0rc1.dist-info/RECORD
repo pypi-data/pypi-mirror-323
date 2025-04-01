@@ -1,0 +1,17 @@
+psignifit/__init__.py,sha256=UjcIIbpOZ--Z-QvvUov1DOVaPMmxQTIXFC7fk55X2uA,354
+psignifit/_confidence.py,sha256=GBr9284PrXSg1emUU0iu-pYUFuN6zc-yEqD44l6Sdso,4924
+psignifit/_configuration.py,sha256=FvCRzHygm8aITqZo72stY_yZWpDHGPRRNH71h2fyDcA,12647
+psignifit/_parameter.py,sha256=QFDNPc8PQmG8omLzv4f1TOm9IGillHeYah6ge3ylm0s,4543
+psignifit/_posterior.py,sha256=6euQPefGdu086SHeOXwkrtfEYl0kIl9_6zyDkqOjArA,12492
+psignifit/_priors.py,sha256=-UlpigfAS7Y4J513KzXy0ID10l732whls98PPX0tPXw,6665
+psignifit/_result.py,sha256=O3wM6p8nhfinzCFFEiMhIJpts4fEPnnpS8oHZCZfeFg,13020
+psignifit/_typing.py,sha256=mZiBGEP4-72VKaDp5Z6oDCFpHZ4qIPuNfiCP1ZV0Dj0,903
+psignifit/_utils.py,sha256=Q89_4pqhI4_fm2bdWXGAbjMd1Yc-RwLmMZ9domWj-I0,2054
+psignifit/psignifit.py,sha256=4gQCtRvopuac7PF5ldgGarSoRCRslqigGdjBvUf8jpw,15152
+psignifit/psigniplot.py,sha256=beq2Wn2hQDie1qrATX0NEciAQTEC5CL7548omHMI1_4,30786
+psignifit/sigmoids.py,sha256=xEPScTQ_mFbdJ585ZvaWV6Jmus_ffHrfp2es2_kIrCM,17131
+psignifit/tools.py,sha256=G2OoWYfwkt4H1nF8tUFfrb5CQkIMFN3iAzRLb_w84vg,3844
+psignifit-4.3.0rc1.dist-info/METADATA,sha256=HNqqEPFYpM31oyCgyLshj3Jpp79a90zmDMwqqHh8n9M,3697
+psignifit-4.3.0rc1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+psignifit-4.3.0rc1.dist-info/top_level.txt,sha256=m4WGGEWUnKCHShav2vz_mWTPn3-aKLi-QaSWoYAavhw,10
+psignifit-4.3.0rc1.dist-info/RECORD,,
