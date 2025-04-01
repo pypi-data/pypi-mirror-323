@@ -1,0 +1,12 @@
+defaults:
+  - _self_
+  - action_config: default_action_config
+  - slurm: default_slurm
+  - aim: default_aim
+
+hydra:
+  sweep:
+    dir: '.runs/${action_name}/${now:%Y-%m-%d}_${now:%H-%M-%S}_multirun'
+
+action_name: ???
+debug: ???
