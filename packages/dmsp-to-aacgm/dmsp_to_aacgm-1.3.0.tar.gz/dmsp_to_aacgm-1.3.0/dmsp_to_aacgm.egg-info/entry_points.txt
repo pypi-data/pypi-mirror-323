@@ -1,0 +1,2 @@
+[console_scripts]
+dmsp-to-aacgm = dmsp_to_aacgm.cli:cli
