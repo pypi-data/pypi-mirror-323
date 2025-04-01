@@ -1,0 +1,2 @@
+recursive-include browser_detection/frontend/build *
+include README.md
