@@ -1,0 +1,13 @@
+Latest/__init__.py,sha256=84_qjwjXTZMeOcJvFoswDD5ohK9p9b_hnvu27ofw0gw,152
+Latest/example.py,sha256=pflrvRVrzwHNdl24MeoyeHLFYYwuKM-wSHILNqpeAJY,1935
+Latest/gitbase.py,sha256=aFBkNaVA8XJUCgItUxnA8H9BMqGQkCf8QCgFAS01S_w,22953
+gitbase/__init__.py,sha256=OdfxBc_9UQ3OgT1Q2nKR7ZPFQhIXjuPZU-Q2e5jg6os,221
+gitbase/dataSystem.py,sha256=nUWkeQGXKJZP1yeFnyFgCYtf6z59at89XtUc2xlifT0,11298
+gitbase/example.py,sha256=eeufFS_OYMcvybScuoiAIt7fudv2t7Kqds2cFjXvsPo,2667
+gitbase/gitbase.py,sha256=Yz-P33J_W5v7eFPqishXMd9GLvgRGoJHJw-n3-nEqSM,6706
+gitbase/playerDataSystem.py,sha256=4m6uf9CNwBBJizq5HNikZRuHtBzpN5oVa_4wh1QB3vQ,12173
+gitbase-0.4.2.dist-info/LICENSE,sha256=C6DAxnvO5OeArgAi8_wTqKOq-4VbbVE6ABGN5aZD1fE,1092
+gitbase-0.4.2.dist-info/METADATA,sha256=3cT5iKy1-ulaPJpHhZdcM6JHzOD3uOV160PC5pItcVc,4889
+gitbase-0.4.2.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+gitbase-0.4.2.dist-info/top_level.txt,sha256=ecuPg-5VxoHXysV1hF6ztBxGthwNChvGPYrp2THh0cI,15
+gitbase-0.4.2.dist-info/RECORD,,
