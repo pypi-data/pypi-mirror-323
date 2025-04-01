@@ -1,0 +1,7 @@
+betty.plugin.proxy module
+=========================
+
+.. automodule:: betty.plugin.proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:

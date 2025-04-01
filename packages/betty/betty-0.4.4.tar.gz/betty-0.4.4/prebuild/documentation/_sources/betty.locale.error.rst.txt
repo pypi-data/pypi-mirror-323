@@ -1,0 +1,7 @@
+betty.locale.error module
+=========================
+
+.. automodule:: betty.locale.error
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+betty.tests\_playwright.conftest module
+=======================================
+
+.. automodule:: betty.tests_playwright.conftest
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+betty.ancestry.place module
+===========================
+
+.. automodule:: betty.ancestry.place
+   :members:
+   :undoc-members:
+   :show-inheritance:

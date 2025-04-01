@@ -1,0 +1,7 @@
+betty.model.config module
+=========================
+
+.. automodule:: betty.model.config
+   :members:
+   :undoc-members:
+   :show-inheritance:

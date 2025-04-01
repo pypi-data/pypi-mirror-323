@@ -1,0 +1,7 @@
+betty.cli.commands.new module
+=============================
+
+.. automodule:: betty.cli.commands.new
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,18 @@
+betty.tests\_playwright package
+===============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 999
+
+   betty.tests_playwright.conftest
+
+Module contents
+---------------
+
+.. automodule:: betty.tests_playwright
+   :members:
+   :undoc-members:
+   :show-inheritance:

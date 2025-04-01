@@ -1,0 +1,7 @@
+betty.assertion.error module
+============================
+
+.. automodule:: betty.assertion.error
+   :members:
+   :undoc-members:
+   :show-inheritance:
