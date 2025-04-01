@@ -1,0 +1,152 @@
+name: CI/CD
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lint:
+    name: Run Linters
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.9", "3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/checkout@v4
+      - name: Install uv and set the python version
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+      - name: Install the project
+        run: uv sync --all-extras --dev
+      - name: Lint
+        run: make lint
+
+  test:
+    name: Run Tests
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # test python versions
+          - python: "3.9"
+            os: ubuntu-latest
+          - python: "3.10"
+            os: ubuntu-latest
+          - python: "3.11"
+            os: ubuntu-latest
+          - python: "3.12"
+            os: ubuntu-latest
+          - python: "3.13"
+            os: ubuntu-latest
+          # test OSs
+          - python: "3.13"
+            os: macos-latest
+          - python: "3.13"
+            os: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv and set the python version
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+      - name: Install the project
+        run: uv sync --all-extras --dev
+      - name: Test
+        run: |
+          uv run coverage run -m pytest -v tests
+          uv run coverage xml
+
+  version-check:
+    name: Check Version Bump
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: current
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+      - uses: actions/checkout@v4
+      - name: Install uv and set the python version
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.13"
+          enable-cache: true
+      - name: Check version bump
+        run: |
+          cd $GITHUB_WORKSPACE/current
+          NEW_VERSION=$(python setup.py --version)
+          cd $GITHUB_WORKSPACE/main
+          OLD_VERSION=$(python setup.py --version)
+          uv run python -c "from packaging import version;assert version.parse(\"${NEW_VERSION}\") > version.parse(\"${OLD_VERSION}\"), \"❌ Bad version bump detected: you must bump the version in setup.py\""
+          uv run python -c "print(\"✅ Version will be bumped from ${OLD_VERSION} to ${NEW_VERSION}\")"
+
+  # https://github.com/marketplace/actions/alls-green#why used for branch protection checks
+  check:
+    if: always()
+    needs: ["lint", "test", "version-check"]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Decide whether the needed jobs succeeded or failed
+        uses: re-actors/alls-green@release/v1
+        with:
+          allowed-skips: ${{ github.ref == 'refs/heads/main' && 'version-check' }}
+          jobs: ${{ toJSON(needs) }}
+
+  pypi:
+    if: github.ref == 'refs/heads/main'
+    name: 🚀 PyPi Release 📦
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+    needs: ["check"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv and set the python version
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.13"
+          enable-cache: true
+      - name: Build and publish
+        id: pypi
+        continue-on-error: true  # allow pushes to main that don't release
+        run: |
+          PACKAGE_VERSION=$(grep -m 1 version pyproject.toml | tr -s ' ' | tr -d '"' | tr -d "'" | cut -d' ' -f3)
+          echo "package_version=$PACKAGE_VERSION" >> $GITHUB_ENV
+          printf "\nSee this release on GitHub: [v$PACKAGE_VERSION](https://github.com/$GITHUB_REPOSITORY/releases/tag/$PACKAGE_VERSION)\n" >> README.md
+          uv build
+          uv publish
+      - name: 🚀 Create GitHub Release 😺
+        uses: ncipollo/release-action@v1
+        if: steps.pypi.outcome == 'success'
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ env.package_version }}
+          generateReleaseNotes: true
