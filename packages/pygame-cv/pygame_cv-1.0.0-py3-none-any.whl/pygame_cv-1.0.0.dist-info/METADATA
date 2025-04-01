@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: pygame-cv
+Version: 1.0.0
+Summary: PygameCV module is a set of functions helping game developpers using pygame to apply some transformations on their surfaces using CV.
+Home-page: https://github.com/Tanguy-ddv/pygameCV
+Author: Tanguy Dugas du Villard
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Games/Entertainment
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# pygameCV
+PygameCV module is a set of functions helping game developper using pygame to apply some transformation on their surfaces using CV.

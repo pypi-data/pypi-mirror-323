@@ -1,0 +1,9 @@
+pygamecv/__init__.py,sha256=OBiKl9MysKucujHLASMBCyNkE-Ps2Jg6N47GE5c5NOg,88
+pygamecv/common.py,sha256=DQjjQoeSRX20nURZtvh_615tST5o0FS_pl1Cl1kgRXQ,1405
+pygamecv/decorator.py,sha256=CQzVJqc2qL10R-lXmX2ID8V_piSuBIhflRgKM8oCpws,2159
+pygamecv/drawing.py,sha256=hbUr_SHsrdRsgh0I-99FrRxARn4ES_IJaKG1OQ9JTSA,11995
+pygame_cv-1.0.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+pygame_cv-1.0.0.dist-info/METADATA,sha256=Opxb2Q0enLRsgrkOeZQbiRRve3blYq8iefYOOTSUca8,916
+pygame_cv-1.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+pygame_cv-1.0.0.dist-info/top_level.txt,sha256=PPnrx_zY52FHJjnl2K_Y8kyexs8Dr_pflOGwhvbUsQY,9
+pygame_cv-1.0.0.dist-info/RECORD,,
