@@ -1,0 +1,8 @@
+README.md
+setup.py
+AcademiCLI.egg-info/PKG-INFO
+AcademiCLI.egg-info/SOURCES.txt
+AcademiCLI.egg-info/dependency_links.txt
+AcademiCLI.egg-info/entry_points.txt
+AcademiCLI.egg-info/requires.txt
+AcademiCLI.egg-info/top_level.txt

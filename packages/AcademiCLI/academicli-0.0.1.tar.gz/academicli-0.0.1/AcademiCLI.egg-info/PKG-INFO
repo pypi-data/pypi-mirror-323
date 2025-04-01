@@ -1,0 +1,44 @@
+Metadata-Version: 2.2
+Name: AcademiCLI
+Version: 0.0.1
+Summary: CLI tool to fetch Google Scholar metrics
+Home-page: https://github.com/ahmadpanah/AcademiCLI
+Author: Seyed Hossein Ahmadpanah
+Author-email: djalicrt@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: scholarly
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# AcademiCLI
+
+A CLI tool to fetch Google Scholar metrics for researchers.
+
+## Installation
+```bash
+pip install academiCLI
+```
+
+## Usage
+```bash
+academiCLI --name "Albert Einstein"
+```
+
+## Features
+- Get h-index and citation counts
+- Interactive author selection
+- Multiple results handling
