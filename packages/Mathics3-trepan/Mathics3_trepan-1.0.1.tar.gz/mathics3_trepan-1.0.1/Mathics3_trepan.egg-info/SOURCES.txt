@@ -1,0 +1,9 @@
+COPYING.txt
+README.rst
+pyproject.toml
+setup.py
+Mathics3_trepan.egg-info/PKG-INFO
+Mathics3_trepan.egg-info/SOURCES.txt
+Mathics3_trepan.egg-info/dependency_links.txt
+Mathics3_trepan.egg-info/requires.txt
+Mathics3_trepan.egg-info/top_level.txt
