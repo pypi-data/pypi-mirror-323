@@ -1,0 +1,13 @@
+from _typeshed import Incomplete
+from collections.abc import Callable as Callable
+from typing import Any
+
+class LazyStrCallable:
+    target: Incomplete
+    args: Incomplete
+    kwargs: Incomplete
+    def __init__(self, target_func: Callable[[Any], Any], *args: Any, **kwargs: Any) -> None: ...
+    def __call__(self, *args: Any, **kwds: Any) -> Any: ...
+
+def custom_json_default(obj: Any) -> str: ...
+def flatten_dict(dict_data: dict, parent_key: str = '', sep: str = '.'): ...
