@@ -1,0 +1,10 @@
+# required dependencies:
+matplotlib
+plotly
+numpy
+pymatgen
+pandas
+fortranformat
+nbformat
+kaleido
+sphinx_book_theme
