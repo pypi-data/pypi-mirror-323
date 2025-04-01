@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: fast-pl-py
+Version: 0.3.2
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Summary: Python bindings to compute topological data analysis persistence landscapes using the fastest algorithm currently avalible: https://github.com/tph5595/rpls
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# Python bindings for fast_pl 
+
