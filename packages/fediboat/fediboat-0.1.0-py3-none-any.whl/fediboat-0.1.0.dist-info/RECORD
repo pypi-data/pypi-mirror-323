@@ -1,0 +1,16 @@
+fediboat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fediboat/__main__.py,sha256=qjnJC-tWD-8eKc4Gxzq5Wtaka1CsmWDFRdMobPeU7uU,67
+fediboat/cli.py,sha256=PoM9OIxw6gY9RxvQmfvqfWDYLqPC-q6EAHJib782RSs,3691
+fediboat/entities.py,sha256=mwFc44AuzJmM54FwHQe38Af-Jdp6RCcE1_Fb5ZTYNBY,4846
+fediboat/screens.py,sha256=z9IC0l5VdyISKchfnXFXnxiehYqJ4BYxyKhH0BQQzBw,14224
+fediboat/settings.py,sha256=ia7794q-Knb-MJbMyxpZ-2XYiMZ56NxADHAVEttxGBE,3923
+fediboat/timeline.tcss,sha256=EjkKC3yUEEhEoACpccP8g1EIdstbCLkhmdugQDRkeek,813
+fediboat/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fediboat/api/auth.py,sha256=hPHMPc7dWpDledeEfXh0Qd5GqXQJ2ro3mn1TLF_ioHs,1516
+fediboat/api/timelines.py,sha256=va1lxQgJREQWBqe_AFCudL73v0RHUR_HI11jKbVxNeQ,7449
+fediboat-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fediboat-0.1.0.dist-info/METADATA,sha256=-GTpRKimGk3ppZOziBVAPKIsOo2b0cGMm4hCmytkdA0,794
+fediboat-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+fediboat-0.1.0.dist-info/entry_points.txt,sha256=tE7oGS0IioTT-c2ez8Gpb9w_kDekippQgrVGb0DLue0,46
+fediboat-0.1.0.dist-info/top_level.txt,sha256=9xOVufZBaEzYQUA21KS__Mu7u-QCGS5utzw8OzaVmHM,9
+fediboat-0.1.0.dist-info/RECORD,,
