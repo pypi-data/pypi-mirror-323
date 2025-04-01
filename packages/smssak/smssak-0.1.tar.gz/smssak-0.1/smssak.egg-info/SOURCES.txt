@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+smssak/__init__.py
+smssak/otp.py
+smssak.egg-info/PKG-INFO
+smssak.egg-info/SOURCES.txt
+smssak.egg-info/dependency_links.txt
+smssak.egg-info/requires.txt
+smssak.egg-info/top_level.txt
