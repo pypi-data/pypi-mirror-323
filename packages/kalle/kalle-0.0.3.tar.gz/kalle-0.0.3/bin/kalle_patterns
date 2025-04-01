@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# kalle
+# Copyright (C) 2024-2025 Wayland Holdings, LLC
+
+KALLE_ROOT=$(cat $HOME/.kalle_root) || exit 1
+
+if [ -d "~/Library/Application Support/kalle" ]; then
+  CONFIG_ROOT="~/Library/Application Support/kalle"
+else
+  CONFIG_ROOT=~/.config/kalle
+fi
+
+if [ -f "$CONFIG_ROOT/config.yml" ]; then
+  PATTERNS_ROOT=$(cat "$CONFIG_ROOT/config.yml" | grep "^patterns_dir" | sed "s/^patterns_dir: //")
+else
+  PATTERNS_ROOT=""
+fi
+
+if [ -z "$PATTERNS_ROOT" ]; then
+  PATTERNS_ROOT="$KALLE_ROOT/patterns"
+fi
+
+if [ -d "$PATTERNS_ROOT" ]; then
+  ls -1 $PATTERNS_ROOT | sed "s/\.yaml$//" | sort | uniq
+else
+  echo ""
+  exit 1
+fi
