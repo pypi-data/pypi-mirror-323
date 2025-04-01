@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: fediboat
+Version: 0.1.0
+Summary: Fediboat - Mastodon TUI client with a Newsboat-like interface.
+Author-email: LoRiot <lo_riot@riseup.net>
+Project-URL: Homepage, https://github.com/Lo-Riot/fediboat
+Project-URL: Issues, https://github.com/Lo-Riot/fediboat/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: textual~=1.0.0
+Requires-Dist: beautifulsoup4<5.0,>=4.12.3
+Requires-Dist: requests<3.0,>=2.32.3
+Requires-Dist: click~=8.1
+Requires-Dist: pydantic<3.0,>=2.10.4
+
+# Fediboat
+Fediboat - mastodon TUI client with a Newsboat-like interface.
