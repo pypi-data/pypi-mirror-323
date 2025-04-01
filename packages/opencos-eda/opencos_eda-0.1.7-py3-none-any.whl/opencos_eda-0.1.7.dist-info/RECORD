@@ -1,0 +1,17 @@
+opencos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opencos/deps_helpers.py,sha256=XMn8DOBUaVOAhm05Z_F6JyIr9MR1-BSNFBdwxikQ6zU,31146
+opencos/eda.py,sha256=j8ipgN8NTlkdr7B-PTYuAZXxRmxySihGWUJIfKQxqwY,187531
+opencos/invio_helpers.py,sha256=88TLuzsw15BPXBs_lbH3qX7G3oIW2Cln_ETCgzz4CF0,5934
+opencos/names.py,sha256=bAsj5DmqvjIQAhEwNR_zVohO5dUyYqlTAHYIj5l8l_g,1179
+opencos/oc_cli.py,sha256=VcV7dBNhm5Il8cR5yAE3SZKMJgwr4Cg9ybTkv-kwxWI,125407
+opencos/pcie.py,sha256=VUJljaZJYgScAAx5yn7F6GoA8K9eTcw24otYZbkMpYs,3035
+opencos/seed.py,sha256=8TA2uXhBuT_lOaQdAKqdReYvfBWi_KuyQCFJzA2rOVM,549
+opencos/target_packager.py,sha256=XB4fJLBBCjbu5W3jWiOXYJMkc-9Lb2rLBgzAcs_dRys,11659
+opencos/util.py,sha256=kM7W6bkE6inCGyVZeT9oUgKnKgKAMIdSc6tHl0mJAEU,18537
+opencos_eda-0.1.7.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+opencos_eda-0.1.7.dist-info/LICENSE.spdx,sha256=8gn1610RMP6eFgT3Hm6q9VKXt0RvdTItL_oxMo72jII,189
+opencos_eda-0.1.7.dist-info/METADATA,sha256=7jnisJc17BK1ztvDs04AB3kpe2cPbz8XwRf29kF5GpQ,437
+opencos_eda-0.1.7.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+opencos_eda-0.1.7.dist-info/entry_points.txt,sha256=5ygKGtdtF5MIOd_XY4f6oImPxivXdVN9S0xFtARXL1I,74
+opencos_eda-0.1.7.dist-info/top_level.txt,sha256=J4JDP-LpRyJqPNeh9bSjx6yrLz2Mk0h6un6YLmtqql4,8
+opencos_eda-0.1.7.dist-info/RECORD,,
