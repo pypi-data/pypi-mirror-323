@@ -1,0 +1,55 @@
+import click
+from anc.cli.load_test.load_testing_operator import LoadTestingOperator
+from anc.cli.load_test.backend_request_func import ASYNC_REQUEST_FUNCS
+import argparse
+
+@click.command()
+@click.option("--backend", default="vllm", type=click.Choice(list(ASYNC_REQUEST_FUNCS.keys())), help="Backend to use.")
+@click.option("--base-url", type=str, default=None, help="Server or API base url if not using http host and port.")
+@click.option("--host", type=str, default="localhost", help="Host address.")
+@click.option("--port", type=int, default=8000, help="Port number.")
+@click.option("--endpoint", type=str, default="/v1/completions", help="API endpoint.")
+@click.option("--dataset", type=str, default=None, help="Path to the ShareGPT dataset, will be deprecated in the next release.")
+@click.option("--dataset-name", type=click.Choice(["sharegpt", "sonnet", "random", "hf"]), default="sharegpt", help="Name of the dataset to benchmark on.")
+@click.option("--dataset-path", type=str, default=None, help="Path to the sharegpt/sonnet dataset or the huggingface dataset ID if using HF dataset.")
+@click.option("--max-concurrency", type=int, default=None, help="Maximum number of concurrent requests.")
+@click.option("--model", type=str, required=True, help="Name of the model.")
+@click.option("--tokenizer", type=str, help="Name or path of the tokenizer, if not using the default tokenizer.")
+@click.option("--best-of", type=int, default=1, help="Generates `best_of` sequences per prompt and returns the best one.")
+@click.option("--use-beam-search", is_flag=True, help="Use beam search.")
+@click.option("--num-prompts", type=int, default=1000, help="Number of prompts to process.")
+@click.option("--logprobs", type=int, default=None, help="Number of logprobs-per-token to compute & return as part of the request.")
+@click.option("--request-rate", type=float, default=float("inf"), help="Number of requests per second.")
+@click.option("--burstiness", type=float, default=1.0, help="Burstiness factor of the request generation.")
+@click.option("--seed", type=int, default=0, help="Random seed.")
+@click.option("--trust-remote-code", is_flag=True, help="Trust remote code from huggingface.")
+@click.option("--disable-tqdm", is_flag=True, help="Disable tqdm progress bar.")
+@click.option("--profile", is_flag=True, help="Use Torch Profiler.")
+@click.option("--save-result", is_flag=True, help="Save benchmark results to a json file.")
+@click.option("--metadata", type=str, multiple=True, help="Key-value pairs for metadata of this run.")
+@click.option("--result-dir", type=str, default=None, help="Directory to save benchmark json results.")
+@click.option("--result-filename", type=str, default=None, help="Filename to save benchmark json results.")
+@click.option("--ignore-eos", is_flag=True, help="Set ignore_eos flag when sending the benchmark request.")
+@click.option("--percentile-metrics", type=str, default="input_token,output_token,fs_token,ttft,ttfs,tpot,itl", help="Comma-separated list of selected metrics to report percentiles.")
+@click.option("--metric-percentiles", type=str, default="90", help="Comma-separated list of percentiles for selected metrics.")
+@click.option("--goodput", type=str, multiple=True, help="Specify service level objectives for goodput as `KEY:VALUE` pairs.")
+@click.option("--sonnet-input-len", type=int, default=550, help="Number of input tokens per request, used only for sonnet dataset.")
+@click.option("--sonnet-output-len", type=int, default=150, help="Number of output tokens per request, used only for sonnet dataset.")
+@click.option("--sonnet-prefix-len", type=int, default=200, help="Number of prefix tokens per request, used only for sonnet dataset.")
+@click.option("--sharegpt-output-len", type=int, default=None, help="Output length for each request. Overrides the output length from the ShareGPT dataset.")
+@click.option("--random-input-len", type=int, default=1024, help="Number of input tokens per request, used only for random sampling.")
+@click.option("--random-output-len", type=int, default=128, help="Number of output tokens per request, used only for random sampling.")
+@click.option("--random-range-ratio", type=float, default=1.0, help="Range of sampled ratio of input/output length, used only for random sampling.")
+@click.option("--random-prefix-len", type=int, default=0, help="Number of fixed prefix tokens before random context.")
+@click.option("--hf-subset", type=str, default=None, help="Subset of the HF dataset.")
+@click.option("--hf-split", type=str, default=None, help="Split of the HF dataset.")
+@click.option("--hf-output-len", type=int, default=None, help="Output length for each request. Overrides the output lengths from the sampled HF dataset.")
+@click.option("--tokenizer_mode", type=click.Choice(['auto', 'slow', 'mistral']), default="auto", help="The tokenizer mode.")
+def loadtest(**kwargs):
+    """Run load testing with the specified parameters."""
+    # Convert kwargs to argparse.Namespace
+    args = argparse.Namespace(**kwargs)
+    
+    # Example usage of args
+    op = LoadTestingOperator()
+    op.load_test(args)
