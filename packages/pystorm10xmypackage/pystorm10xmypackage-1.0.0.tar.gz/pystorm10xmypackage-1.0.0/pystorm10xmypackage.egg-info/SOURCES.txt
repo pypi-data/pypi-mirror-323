@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+pystorm10xmypackage.egg-info/PKG-INFO
+pystorm10xmypackage.egg-info/SOURCES.txt
+pystorm10xmypackage.egg-info/dependency_links.txt
+pystorm10xmypackage.egg-info/top_level.txt
+tests/test_module1.py
+tests/test_module2.py
