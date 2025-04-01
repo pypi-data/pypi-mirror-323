@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: tilpa_api_sdk
+Version: 0.0.1a0
+Summary: A library for building adaptive APIs
+Project-URL: Homepage, https://github.com/tilpa-dev/tilpa-api-sdk
+Project-URL: Issues, https://github.com/tilpa-dev/tilpa-api-sdk/issues
+Author-email: Carlos Guerrero <carlosguerreroa004@gmail.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Tilpa API SDK
+
+This is the official package for Tilpa's Adaptive API SDK. It provides a simple way to interact with the API.
+
+## Installation
+
+
+# This file includes code from OpenAI's SDK (Apache License 2.0).
+# See the LICENSE file for details.
