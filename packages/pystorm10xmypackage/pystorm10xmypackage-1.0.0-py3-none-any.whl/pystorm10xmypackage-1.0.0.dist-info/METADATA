@@ -1,0 +1,32 @@
+Metadata-Version: 2.2
+Name: pystorm10xmypackage
+Version: 1.0.0
+Summary: Пример Python-пакета
+Home-page: https://github.com/PyStorm10x/mypackage
+Author: PyStorm10x
+Author-email: staholos@mail.ru
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+# MyPackage
+
+MyPackage вЂ” СЌС‚Рѕ РїСЂРёРјРµСЂ Python-РїР°РєРµС‚Р° РґР»СЏ РјР°С‚РµРјР°С‚РёС‡РµСЃРєРёС… РѕРїРµСЂР°С†РёР№.
+
+## РЈСЃС‚Р°РЅРѕРІРєР°
+
+```bash
+pip install pystorm10xmypackage
