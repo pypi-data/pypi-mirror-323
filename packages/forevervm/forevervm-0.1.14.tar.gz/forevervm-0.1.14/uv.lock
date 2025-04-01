@@ -1,0 +1,7 @@
+version = 1
+requires-python = ">=3.12"
+
+[[package]]
+name = "forevervm"
+version = "0.1.13"
+source = { editable = "." }
