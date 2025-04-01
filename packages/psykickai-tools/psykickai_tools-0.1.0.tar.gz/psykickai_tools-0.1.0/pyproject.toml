@@ -1,0 +1,32 @@
+[project]
+name = "psykickai-tools"
+version = "0.1.0"
+description = "A collection of reusable Python tools and utilities (logging, etc.) designed to streamline project setup and provide out-of-the-box functionality for common development needs."
+authors = [
+    {name = "Gaurav Sharma",email = "psykickai@gmail.com"}
+]
+readme = "README.md"
+requires-python = "==3.12.8"
+dependencies = [
+    "pandas (>=2.2.3,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [
+    {include = "src"}
+]
+license = "MIT"
+homepage = "https://github.com/psykick-21/psykickai-tools"
+repository = "https://github.com/psykick-21/psykickai-tools"
+keywords = ["python", "tools", "utilities", "logging"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
