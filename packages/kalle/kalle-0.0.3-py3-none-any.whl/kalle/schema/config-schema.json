@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Kalle Config",
+  "type": "object",
+  "properties": {
+    "data_dir": {"type": "string"},
+    "default_conversation": {"type": "string"},
+    "patterns_dir": {"type": "string"},
+    "cache_dir": {"type": "string"},
+    "format_output": {"type": "boolean"},
+    "interactive_style": {"type": "string"},
+    "google_app_credentials_path": {"type": "string"},
+    "profiles": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "connector": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "url": {"type": "string"},
+              "key": {"type": "string"},
+              "project_id": {"type": "string"},
+              "region": {"type": "string"}
+            },
+            "required": ["name"],
+            "additionalProperties": false
+          },
+          "model": {"type": "string"},
+          "model_params": {
+            "type": "object",
+            "properties": {
+              "temperature": {"type": "number"},
+              "seed": {"type": "integer"}
+            }
+          }
+        },
+        "required": ["name", "connector", "model"]
+      }
+    },
+    "models_map": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "properties": {
+            "name": {"type": "string"},
+            "location": {"type": "string"},
+            "tokenizer": {"type": "string"},
+            "context_size": {"type": "integer"},
+            "path": {"type": "string"},
+            "repo_id": {"type": "string"},
+            "filename": {"type": "string"},
+            "model": {"type": "string"},
+            "publisher": {"type": "string"},
+            "params": {
+                "type": "object"
+            }
+          },
+          "required": ["location", "tokenizer", "context_size"],
+          "additionalProperties": false
+        }
+      }
+    },
+    "prompts": {
+      "type": "object",
+      "properties": {
+        "kalle_system_prompt": {"type": "string"},
+        "base_tool_prompt": {"type": "string"}
+      },
+      "required": ["kalle_system_prompt", "base_tool_prompt"],
+      "additionalProperties": false
+    },
+    "tools": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": false
+}
