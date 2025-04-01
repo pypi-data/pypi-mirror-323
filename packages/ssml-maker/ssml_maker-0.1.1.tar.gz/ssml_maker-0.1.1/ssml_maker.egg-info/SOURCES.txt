@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+python/__init__.py
+python/ssml_maker.py
+ssml_maker.egg-info/PKG-INFO
+ssml_maker.egg-info/SOURCES.txt
+ssml_maker.egg-info/dependency_links.txt
+ssml_maker.egg-info/top_level.txt
+tests/test_maker.py
