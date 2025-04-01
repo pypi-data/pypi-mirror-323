@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+features/
+.env
+serviceAccountKey.json
+dist/
+README_files/

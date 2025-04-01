@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tilpa_api_sdk"
+version = "0.0.1a"
+authors = [
+  { name="Carlos Guerrero", email="carlosguerreroa004@gmail.com" },
+]
+description = "A library for building adaptive APIs"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "Apache-2.0"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/tilpa-dev/tilpa-api-sdk"
+Issues = "https://github.com/tilpa-dev/tilpa-api-sdk/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tilpa_api_sdk"]
