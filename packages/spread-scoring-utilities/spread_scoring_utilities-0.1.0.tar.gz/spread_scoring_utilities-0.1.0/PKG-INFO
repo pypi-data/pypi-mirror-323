@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: spread_scoring_utilities
+Version: 0.1.0
+Summary: Sports scoring utility module
+Author: sporter better
+Author-email: sporterbetter@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.19.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+-----------------------------------------------------
+Sports Betting Algorithm (PyPy-ready)
+-----------------------------------------------------
+This module contains a a number of help functions
+to numerically and semantically manage sports
+score betting.
+-----------------------------------------------------
+

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+scoring_utils/__init__.py
+scoring_utils/scoring_utils.py
+spread_scoring_utilities.egg-info/PKG-INFO
+spread_scoring_utilities.egg-info/SOURCES.txt
+spread_scoring_utilities.egg-info/dependency_links.txt
+spread_scoring_utilities.egg-info/requires.txt
+spread_scoring_utilities.egg-info/top_level.txt
