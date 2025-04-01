@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+free_email_domains/__init__.py
+free_email_domains.egg-info/PKG-INFO
+free_email_domains.egg-info/SOURCES.txt
+free_email_domains.egg-info/dependency_links.txt
+free_email_domains.egg-info/top_level.txt
