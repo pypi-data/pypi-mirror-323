@@ -1,0 +1,47 @@
+Metadata-Version: 2.2
+Name: utopia_pipeline_tools
+Version: 0.3.25
+Summary: A Python package for managing data in the ifcbUTOPIA project
+Home-page: https://github.com/ifcb-utopia/data_pipeline
+Author: Claire Berschauer
+Author-email: ckb22@uw.edu
+License: GPLv3
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Scientific/Engineering :: Oceanography
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: jupyter
+Requires-Dist: ipykernel
+Requires-Dist: numpy>=1.2
+Requires-Dist: pandas>=1.4
+Requires-Dist: scikit-learn>=1.2
+Requires-Dist: matplotlib>=3.5
+Requires-Dist: imageio
+Requires-Dist: tensorflow==2.13.1
+Requires-Dist: pip
+Requires-Dist: tqdm
+Requires-Dist: pylint
+Requires-Dist: modAL
+Requires-Dist: azure-storage-blob
+Requires-Dist: azure-mgmt-compute
+Requires-Dist: azure-identity
+Requires-Dist: azure-mgmt-storage
+Requires-Dist: opencv-python
+Requires-Dist: pymssql>=2.2
+Requires-Dist: plotly
+Requires-Dist: umap-learn
+Requires-Dist: marimo
+Requires-Dist: seaborn
+Requires-Dist: IPython
+Requires-Dist: streamlit>=1.29
+Requires-Dist: keras
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
