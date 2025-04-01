@@ -1,0 +1,3 @@
+[console_scripts]
+keycloak-jwt-checker=keycloak_jwt_checker:cli
+
