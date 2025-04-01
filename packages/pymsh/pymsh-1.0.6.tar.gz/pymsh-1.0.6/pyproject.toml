@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pymsh"
+version = "1.0.6"
+authors = [
+  { name="Carlton Shepherd", email="carlton@linux.com" },
+]
+
+dependencies = ["sympy>=1.9"]
+keywords = ["hashing", "hash", "cryptography", "multi-set", "multiset"]
+description = "An implementation of multiset hashing"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Security :: Cryptography"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/cgshep/pymsh"
+"Issues" = "https://github.com/cgshep/pymsh/issues"
